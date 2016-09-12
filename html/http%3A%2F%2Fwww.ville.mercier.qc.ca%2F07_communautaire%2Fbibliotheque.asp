@@ -208,7 +208,7 @@ var mygallery=new fadeSlideShow({
 <a href="calendrier.asp" target="_self"><img src="menu/calendrier.png" width="35" height="35" hspace="5" vspace="0" border="0" align="left" />Calendrier<br/>communautaire</a></h3>
 
 <h3 class="menuheader expandable">
-<a href="programmes.asp" target="_self"><img src="menu/loisirs.png" width="35" height="35" hspace="5" vspace="0" border="0" align="left" />Loisirs, sports<br/>et vie communautaire</a></h3>
+<a href="programmes.asp" target="_self"><img src="menu/loisirs.png" width="35" height="35" hspace="5" vspace="0" border="0" align="left" />Loisirs, culture<br/>et vie communautaire</a></h3>
 <ul class="categoryitems">
 <li><a href="https://www.sport-plus-online.com/prmsinsc/Pages/accueil.aspx?VirId=92&ArrId=136" target="_blank">Inscription en ligne</a></li>
 <li><a href="modalites.asp">Carte-loisirs</a></li>
@@ -216,7 +216,6 @@ var mygallery=new fadeSlideShow({
 <li><a href="programmes.asp">Programme d'activit&eacute;s</a></li>
 <li><a href="politique.asp">Politique familiale municipale</a></li>
 <li><a href="servicesgarde.asp">Liste des services de garde</a></li>
-<li><a href="non-residants.asp">Formulaire<br>Demande de remboursement<br>des frais de non-r&eacute;sidant</a></li>
 </ul>
 
 <h3 class="menuheader expandable">
@@ -229,24 +228,15 @@ var mygallery=new fadeSlideShow({
 <li><a href="renseignements_camp.asp">Renseignements g&eacute;n&eacute;raux et calendriers des activit&eacute;s</a></li>
 </ul>
 
-<h3 class="menuheader expandable">
-<a href="culture.asp" target="_self"><img src="menu/patrimoine.png" width="35" height="35" hspace="5" vspace="0" border="0" align="left" />Culture et<br>
-patrimoine</a></h3>
-<ul class="categoryitems">
-<li><a href="liens_culturels.asp">Liens culturels</a></li>
-<li><a href="../../exposition/default.asp">Salle d'exposition Orise-Giroux</a></li>
-<li><a href="petit-theatre.asp">Petit th&eacute;&acirc;tre des villes voisines</a></li>
-</ul>
+
 
 <h3 class="menuheader expandable">
 <a href="bibliotheque.asp" target="_self"><img src="menu/biblio.png" width="35" height="35" hspace="5" vspace="0" border="0" align="absmiddle" />Biblioth&Egrave;que</a></h3>
 <ul class="categoryitems">
 <li><a href="bibliothequeenligne.asp">Biblioth&egrave;que en ligne</a></li>
-<li><a href="abonnement.asp">Abonnement et pr&ecirc;t</a></li>
+<li><a href="pdf/2016/depliant_biblio_reglements_16-01.pdf" target="_blank">Abonnement et pr&ecirc;t</a></li>
 <li><a href="biblio_horaire.asp">Horaire et adresse</a></li>
 <li><a href="bibliotheque.asp">Animation</a></li>
-
-<li><a href="../../exposition/default.asp">Salle d'exposition Orise-Giroux</a></li>
 </ul>
 
 
@@ -264,7 +254,7 @@ patrimoine</a></h3>
     450&nbsp;691-6090 poste 249<br />
   16, rue du Parc<br />
   <br />
-<a href="mailto:servicedesloisirs@ville.mercier.qc.ca">servicedesloisirs@ville.mercier.qc.ca</a><br />
+<a href="mailto:direction.loisirs@ville.mercier.qc.ca">direction.loisirs@ville.mercier.qc.ca</a><br />
 Horaire&nbsp;: <br /><br>
       Lundi au jeudi :<br />
       8 h 30 &agrave; 12 h et 13 h &agrave; 16 h 30<br /><br>
@@ -277,11 +267,15 @@ Horaire&nbsp;: <br /><br>
 <br />
 <a href="mailto:bibliotheque@ville.mercier.qc.ca">bibliotheque@ville.mercier.qc.ca</a><br>
 
-Horaire: <br /><br>
+<strong>Horaire d'été 2016: <br /><br>
+24 juin au 5 septembre 2016</strong><br>
+<br>
       Lundi, mardi et jeudi : <br>13 h à 20 h 30<br /><br>
 	  Mercredi et vendredi : <br>10 h à 12 h et 13 h à 17 h<br><br>
 	  Samedi : 11 h à 15 h<br>
-      Dimanche : 11 h à 15 h<br />
+      Dimanche : Fermé<br />
+
+
  
 
 

@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Alice Melnyk Library of Two Hills, Alberta, Canada" />
+<meta name="keywords" content="Alice, Melnyk, Library, Archives, Two Hills, Alberta, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Alice Melnyk Library of Two Hills, Alberta, Canada" />
-<meta name="keywords" content="Alice, Melnyk, Library, Archives, Two Hills, Alberta, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.twohillslibrary.ab.ca/" />
@@ -32,20 +36,18 @@
 	<meta property="og:locale" CONTENT="en_US" />
 	<meta property="fb:app_id" CONTENT="142916509104743" />
 	<meta property="og:type" CONTENT="website" />
-	<meta property="og:description" CONTENT=" "/>
 
 	
-		
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
 	<meta itemprop="name" CONTENT="Alice Melnyk Public Library (Home)">
-	<meta itemprop="description" CONTENT=" ">
+	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Alice Melnyk Public Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Alice Melnyk Public Library">
-	<meta name="twitter:text:description" CONTENT=" ">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -259,7 +261,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -267,6 +268,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -281,6 +294,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -301,9 +320,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -335,49 +353,28 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/152" class="blog_link active_page" title="News">News</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=152" class="blog_link active_page" title="News"><span>News</span></a>
+    </li>
+    <li  >
       <a href="/calendars/show/152" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/152" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=152" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/88" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
     <li>
       <a href="/careers/152/search">Career</a>
     </li>
-  
 </ul>
 
 		</nav>
@@ -404,10 +401,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -422,9 +419,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
-    <li class="MenuOpen" id="active"><a href="http://www.twohillslibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li class="drop MenuOpen"><a href="http://www.twohillslibrary.ab.ca/Book-Club" class="book_club_link parent_link" title="Book club"><span>Book Club</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Book-Club-History" title="Book club history"><span>Book Club History</span></a></li></ul></li></ul></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/About-Us-" class="about_us__link parent_link" title="About Us "><span>About Us </span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Library-Bylaws" title="Library bylaws"><span>Library Bylaws</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Our-Plan-of-Service" title="Our plan of service"><span>Our Plan of Service</span></a></li></ul></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Monthly" title="Monthly"><span>Monthly</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Weekly" title="Weekly"><span>Weekly</span></a></li></ul></li><li><a href="http://www.twohillslibrary.ab.ca/Fees-and-Services" title="Fees and services"><span>Fees and Services</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/New" class="new_link parent_link" title="New"><span>New</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/2016" title="2016"><span>2016</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Spring-2015" title="Spring 2015"><span>Spring 2015</span></a></li></ul></li><li><a href="http://www.twohillslibrary.ab.ca/Staff-Picks" title="Staff picks"><span>Staff Picks</span></a></li>
-  
+    <li class="MenuOpen" id="active"><a href="http://www.twohillslibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li class="drop MenuOpen"><a href="http://www.twohillslibrary.ab.ca/Book-Club" class="book_club_link parent_link" title="Book club"><span>Book Club</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Book-Club-History" title="Book club history"><span>Book Club History</span></a></li></ul></li></ul></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/About-Us-" class="about_us__link parent_link" title="About Us "><span>About Us </span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Library-Bylaws" title="Library bylaws"><span>Library Bylaws</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Our-Plan-of-Service" title="Our plan of service"><span>Our Plan of Service</span></a></li></ul></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Monthly" title="Monthly"><span>Monthly</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Weekly" title="Weekly"><span>Weekly</span></a></li></ul></li><li><a href="http://www.twohillslibrary.ab.ca/Fees-and-Services" title="Fees and services"><span>Fees and Services</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/New" class="new_link parent_link" title="New"><span>New</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/2016" title="2016"><span>2016</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Spring-2015" title="Spring 2015"><span>Spring 2015</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Summer-2016" title="Summer 2016"><span>Summer 2016</span></a></li></ul></li><li><a href="http://www.twohillslibrary.ab.ca/Staff-Picks" title="Staff picks"><span>Staff Picks</span></a></li>
 </ul>
 
 	</nav>
@@ -625,72 +620,51 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6164">				
-	  EASTER CLOSURE			 			
-        </a>
-        <p>&nbsp;We will be CLOSED from Good Friday, March 25 to Monday, March 28 inclusive. &nbsp;Enjoy your Easter Weekend!!
+          <a class="post_title" href="/blogs/show_entry/6978">
+	    kobo Winner!
+          </a>
+        <p>&nbsp;CONGRATULATIONS! Our Summer Reading Program winner of the kobo e-reader was Sara Morey. Enjoy your prize Sara :)
         <!--  --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6163">				
-	  Blizzard of Books Winners			 			
-        </a>
-        <p>Congratulations to Kyla Morris, our top reader! She won a kobe e-reader from our library. &nbsp;And to Judy Friesen, who won a gift card from the r...
-        <!-- <a href="/blogs/show_entry/6163">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6956">
+	    CLOSED for Labour Day
+          </a>
+        <p>&nbsp;We will be CLOSED on Monday, September 5 for the Labour Day holiday. Please use the book drop to return items if necessary. Wrap CDs And DVDs...
+        <!-- <a href="/blogs/show_entry/6956">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6028">				
-	  BLIZZARD OF BOOKS			 			
-        </a>
-        <p>&nbsp;If you are participating in the Winter Reading Program, please turn in your Reading logs, so you can be entered in the prize draws!!!
+          <a class="post_title" href="/blogs/show_entry/6953">
+	    NEW Comics
+          </a>
+        <p>&nbsp;New comics are in!! Archie, Simpsons, My Little Pony, Looney Tunes, The Mighty Thor, and more.
         <!--  --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5975">				
-	  Genealogy Seminar POSTPONED			 			
-        </a>
-        <p>&nbsp;The Alberta-Ukraine Genealogy Project How-to Seminar has been postponed due to shortage of Registrations. We have set up a tentative date for...
-        <!-- <a href="/blogs/show_entry/5975">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6944">
+	    Going PINK!!!
+          </a>
+        <p>&nbsp;The Wild Pink Yonder Trail Ride for breast cancer research is coming to Two Hills! Tomorrow, September 1st, please wear pink and/or display p...
+        <!-- <a href="/blogs/show_entry/6944">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5870">				
-	  Van Run			 			
-        </a>
-        <p>&nbsp;Until further notice, van run items will now be available for pick up Wednesday afternoon. This week, just in time for you to read to each ot...
-        <!-- <a href="/blogs/show_entry/5870">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6887">
+	    Summer Reading Club winding up
+          </a>
+        <p>&nbsp;As August draws to a close, remember to bring in your Summer Reading Club registration and the lists of the books you have read. Every regist...
+        <!-- <a href="/blogs/show_entry/6887">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/152">+ MORE</a></h6>
 </div>
@@ -701,54 +675,104 @@ if (typeof jQuery != 'undefined') {
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/152">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/152">Upcoming Events</a> 
-        <span class="latest_events_count">(2)</span>
+        <span class="latest_events_count">(8)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>19</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>15</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35013">Third Thursday Book Club</a>
+            <a href="/calendars/show_event/37421">Third Thursday Book Club</a>
+            <span class="upcoming_time_frame">
+              (in 4 days)
+                &nbsp;from 10:00 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>15</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37423">Presentation on Islam</a>
+            <span class="upcoming_time_frame">
+              (in 4 days)
+                &nbsp;from  6:00 PM
+                  &nbsp;to  8:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>16</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37343">Story Time</a>
+            <span class="upcoming_time_frame">
+              (in 5 days)
+                &nbsp;from 10:30 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>23</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37344">Story Time</a>
             <span class="upcoming_time_frame">
               (in 1 week)
-              
-                &nbsp;from 10:00 AM
-                
-              
+                &nbsp;from 10:30 AM
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>June</span> <span class='theDate'>16</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>30</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35014">Third Thursday Book Club</a>
+            <a href="/calendars/show_event/37345">Story Time</a>
             <span class="upcoming_time_frame">
-              (in 1 month)
-              
-                &nbsp;from 10:00 AM
-                
-              
+              (in 2 weeks)
+                &nbsp;from 10:30 AM
             </span>
           </li>
-        
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>07</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37346">Story Time</a>
+            <span class="upcoming_time_frame">
+              (in 3 weeks)
+                &nbsp;from 10:30 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>14</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37347">Story Time</a>
+            <span class="upcoming_time_frame">
+              (in 1 month)
+                &nbsp;from 10:30 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>20</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37422">Third Thursday Book Club</a>
+            <span class="upcoming_time_frame">
+              (in 1 month)
+                &nbsp;from 10:00 AM
+            </span>
+          </li>
       </ul>
       <h6 class="more"><a href="/calendars/table/152">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -756,69 +780,36 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_735">
-	      
-              
-	      
+	    <dd id="action_735">
 	        <img alt="Call (780) 657-3553" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 657-3553" />
 		
 		Call (780) 657-3553
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_736">
-	      
-              
-	      
+		    <dd id="action_736">
 	        <img alt="Fax (780) 657-3553" class="action_steps_image" src="/images/icons/fff/printer.png?1445483283" title="Fax (780) 657-3553" />
 		
 		Fax (780) 657-3553
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/152" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1498&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1498&amp;return_url=http%3A%2F%2Fwww.twohillslibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -829,12 +820,9 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="subNavigation" class="rightItem">
 			<h3>Links</h3>
-			
-
-<ul id="SubNav">
+			<ul id="SubNav">
   <li class="drop"><a href="http://www.twohillslibrary.ab.ca/Book-Club" class="book_club_link" target="" title="Book club"><span>Book Club</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Book-Club-History" class="book_club_history_link123" target="" title="Book club history"><span>Book Club History</span></a></li></ul></li>
 </ul>
-
 
 		</nav>
 		
@@ -845,35 +833,21 @@ if (typeof jQuery != 'undefined') {
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.townoftwohills.com" class="action_steps_link" target="_blank">Town of Two Hills</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.tracpac.ab.ca/" class="action_steps_link" target="_blank">TRAC</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.nlls.ab.ca/" class="action_steps_link" target="_blank">Northern Lights</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -890,17 +864,10 @@ if (typeof jQuery != 'undefined') {
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-<h1>&nbsp;</h1>
-<p>&nbsp;</p>
+  <script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 
 
 	</section>
@@ -912,12 +879,8 @@ if (typeof jQuery != 'undefined') {
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
-    
           <!-- LIQUID LAYOUT -->    
     <ul class="social">
-        
           <li id="facebook">
             <div id="fb-root"></div>
             <script>
@@ -950,24 +913,15 @@ if (typeof jQuery != 'undefined') {
             </script>
             <div class="fb-like" data-href="http://www.twohillslibrary.ab.ca/" data-width="180" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
           </li>
-        
-        
 
-        
 
-        
 
-        
           <li id="facebookshare">
             <div class="fb-share-button" data-layout="button_count" data-href="http://www.twohillslibrary.ab.ca/"></div>
           </li>
-        
     </ul>
 
-    
-    
 
-  
 </div>
 
  </span>
@@ -988,7 +942,7 @@ if (typeof jQuery != 'undefined') {
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
 			
 				
 			
@@ -999,7 +953,29 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
 			
 				
 			
@@ -1013,28 +989,6 @@ if (typeof jQuery != 'undefined') {
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
 			
 				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
-			
-				
 					</div> <!-- end book group of 5 -->
 					<div>
 				
@@ -1046,18 +1000,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
 			
 				
 			
@@ -1079,7 +1022,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
 			
 				
 			
@@ -1090,7 +1033,18 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -1104,29 +1058,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
 			
 				
 			
@@ -1151,6 +1083,28 @@ if (typeof jQuery != 'undefined') {
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
 			
 				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			
+				
 					</div> <!-- end book group of 5 -->
 					<div>
 				
@@ -1162,7 +1116,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
 			
 				
 			
@@ -1173,7 +1127,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
 			
 				
 					</div><!-- end book group -->
@@ -1196,7 +1150,7 @@ if (typeof jQuery != 'undefined') {
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1238,58 +1192,35 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
-    <li class="MenuOpen" id="active"><a href="http://www.twohillslibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li class="drop MenuOpen"><a href="http://www.twohillslibrary.ab.ca/Book-Club" class="book_club_link parent_link" title="Book club"><span>Book Club</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Book-Club-History" title="Book club history"><span>Book Club History</span></a></li></ul></li></ul></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/About-Us-" class="about_us__link parent_link" title="About Us "><span>About Us </span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Library-Bylaws" title="Library bylaws"><span>Library Bylaws</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Our-Plan-of-Service" title="Our plan of service"><span>Our Plan of Service</span></a></li></ul></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Monthly" title="Monthly"><span>Monthly</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Weekly" title="Weekly"><span>Weekly</span></a></li></ul></li><li><a href="http://www.twohillslibrary.ab.ca/Fees-and-Services" title="Fees and services"><span>Fees and Services</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/New" class="new_link parent_link" title="New"><span>New</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/2016" title="2016"><span>2016</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Spring-2015" title="Spring 2015"><span>Spring 2015</span></a></li></ul></li><li><a href="http://www.twohillslibrary.ab.ca/Staff-Picks" title="Staff picks"><span>Staff Picks</span></a></li>
-  
+    <li class="MenuOpen" id="active"><a href="http://www.twohillslibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li class="drop MenuOpen"><a href="http://www.twohillslibrary.ab.ca/Book-Club" class="book_club_link parent_link" title="Book club"><span>Book Club</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Book-Club-History" title="Book club history"><span>Book Club History</span></a></li></ul></li></ul></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/About-Us-" class="about_us__link parent_link" title="About Us "><span>About Us </span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Library-Bylaws" title="Library bylaws"><span>Library Bylaws</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Our-Plan-of-Service" title="Our plan of service"><span>Our Plan of Service</span></a></li></ul></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/Monthly" title="Monthly"><span>Monthly</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Weekly" title="Weekly"><span>Weekly</span></a></li></ul></li><li><a href="http://www.twohillslibrary.ab.ca/Fees-and-Services" title="Fees and services"><span>Fees and Services</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.twohillslibrary.ab.ca/New" class="new_link parent_link" title="New"><span>New</span></a><ul><li><a href="http://www.twohillslibrary.ab.ca/2016" title="2016"><span>2016</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Spring-2015" title="Spring 2015"><span>Spring 2015</span></a></li><li><a href="http://www.twohillslibrary.ab.ca/Summer-2016" title="Summer 2016"><span>Summer 2016</span></a></li></ul></li><li><a href="http://www.twohillslibrary.ab.ca/Staff-Picks" title="Staff picks"><span>Staff Picks</span></a></li>
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/152" class="blog_link active_page" title="News">News</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=152" class="blog_link active_page" title="News"><span>News</span></a>
+    </li>
+    <li  >
       <a href="/calendars/show/152" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/152" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=152" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/88" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
     <li>
       <a href="/careers/152/search">Career</a>
     </li>
-  
 </ul>
 
 		</nav>
@@ -1305,7 +1236,7 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1315,41 +1246,23 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/152" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1486,6 +1399,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1512,3 +1450,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

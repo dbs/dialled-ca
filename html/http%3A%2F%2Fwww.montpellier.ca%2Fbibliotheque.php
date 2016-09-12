@@ -723,15 +723,19 @@ function AC_GetArgs(args, ext, srcParamName, classid, mimeType){
       
       <br> 
       <br><br>
-      <strong><br>
-        <br>Services offerts : </strong>
+      <strong><br><br><br>
+        <br><div style="font-size:20px">Services offerts : </div></strong>
     </p>
-    <ul>
+  <div style="font-size:16px">  <ul>
       <li>
       
-      prÃªts de livres format papier et numÃ©riques, pÃ©riodiques, DVD, CD et CD ROM</li>
-    <li>chute Ã  livres de 8 h  Ã  16 h 30 (lundi, mercredi, jeudi et vendredi) 
+      prÃªts de livres format papier et numÃ©riques, pÃ©riodiques, DVD, CD et CD ROM, jeux vidÃ©os et laissez-passer donnant l'accÃ¨s gratuit dans diffÃ©rents musÃ©es</li>
+    
+      <li>revues numÃ©riques en ligne </li>
+      <li>ressource numÃ©rique GÃ©nÃ©alogie QuÃ©bec </li>
+      <li>chute Ã  livres de 8 h  Ã  16 h 30 (lundi, mercredi, jeudi et vendredi) 
       </li>
+      
     <li>
       4 postes informatiques reliÃ©s Ã  internet haute vitesse
       </li>
@@ -739,7 +743,7 @@ function AC_GetArgs(args, ext, srcParamName, classid, mimeType){
       </li>
     <li>photocopie ou impression effectuÃ©e depuis les postes informatiques (0,30$)
    </li>
-    <li>jeux de sociÃ©tÃ© pour jouer sur place</li><br>
+    <li>jeux de sociÃ©tÃ© pour jouer sur place</li></ul></div><br>
       
      
       <em>Pour joindre la bibliothÃ¨que municipale, veuillez composer<br> 
@@ -847,7 +851,7 @@ function AC_GetArgs(args, ext, srcParamName, classid, mimeType){
                     
                     <div onclick='window.location.href="webmasters.php";' style="cursor:pointer; color: #666;">
                     <br /><br />
-                    <strong>DerniÃ¨re mise Ã  jour : <strong></strong>26 avril 2016<br /> <br /></strong>
+                    <strong>DerniÃ¨re mise Ã  jour : <strong></strong>25 juillet 2016<br /> <br /></strong>
                    <br /></a>  <br />
                     </div>
 

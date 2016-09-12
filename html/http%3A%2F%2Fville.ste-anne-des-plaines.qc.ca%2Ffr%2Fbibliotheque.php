@@ -13,10 +13,9 @@
 <meta name="viewport" content="width=device-width" initial-scale="1.0">
 
 <link href="/css/commun/cBase2.0/cBase.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="/css/commun/screen.css?20160202" rel="stylesheet" type="text/css" media="screen" />
+<link href="/css/commun/screen.css?20160516" rel="stylesheet" type="text/css" media="screen" />
 <link href="/css/commun/ie.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="/css/fr/screen.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="/css/commun/screen.css?20160202" rel="stylesheet" type="text/css" media="screen" />
+<link href="/css/fr/screen.css?20160516" rel="stylesheet" type="text/css" media="screen" />
 
 <link href="/css/commun/tablet.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" />
 
@@ -121,25 +120,24 @@
 			<div id="pageColumn1">
 			<!-- pageColumn1 start here -->
 				<div id="Biblio">
-					<h3><span class="hide">BibliothÃ¨que publique</span></h3>
-					<!-- pageMenu start here -->
-		<div id="left_linklist">
+						<h3><span class="hide">BibliothÃ¨que municipale</span></h3>
+	<div id="left_linklist">
 		<ul>
 			<li><a href="/fr/bibliotheque.php" class="selected">Accueil</a></li>
-			<li><a href="/page-informations-generales.php" >Informations gÃ©nÃ©rales</a></li>
-			<li><a href="/page-historique.php" >Historique </a></li>
-			<li><a href="/page-services-et-collections.php" >Services et collections</a></li>
-			<li><a href="/page-reglements.php" >RÃ¨glements</a></li>
+			<li><a href="/fr/page-informations-generales.php" >Informations gÃ©nÃ©rales</a></li>
+			<li><a href="/fr/page-historique.php" >Historique </a></li>
+			<li><a href="/fr/page-services-et-collections.php" >Services et collections</a></li>
+			<li><a href="/fr/page-reglements.php" >RÃ¨glements</a></li>
 			<li><a href="/fr/bibliotheque-faq.php" >FAQ</a></li>
-			<li><a href="/page-activites.php" >ActivitÃ©s</a></li>
-			
-			<li><a href="/page-nouveautes.php" >NouveautÃ©s</a></li>
-			<li><a href="/page-coups-de-coeur.php" >Coups de coeur</a></li>
-			<li><a href="/page-biblio-aidants.php" >Biblio-Aidants</a></li>
+			<li><a href="/fr/page-activites.php" >ActivitÃ©s</a></li>
+
+			<li><a href="/fr/page-nouveautes.php" >NouveautÃ©s</a></li>
+			<li><a href="/fr/page-coups-de-coeur.php" >Coups de coeur</a></li>
+			<li><a href="/fr/page-biblio-aidants.php" >Biblio-Aidants</a></li>
 			<li><a href="/fr/bibliotheque-album-photo.php" >Album photo</a></li>
 			<li><a href="/fr/primeurs.php" title="Primeurs" >Primeurs</a></li>
-			<li><a href="/page-bibliographies-thematiques.php" title="Bibliographies thÃ©matiques" >Bibliographies thÃ©matiques</a></li>
-			<li><a href="/page-livres-en-serie.php" title="Livres en sÃ©rie" >Livres en sÃ©rie</a></li>
+			<li><a href="/fr/page-bibliographies-thematiques.php" title="Bibliographies thÃ©matiques" >Bibliographies thÃ©matiques</a></li>
+			<li><a href="/fr/page-livres-en-serie.php" title="Livres en sÃ©rie" >Livres en sÃ©rie</a></li>
 		</ul>
 	</div>
 	<div id="primeurs">
@@ -147,27 +145,26 @@
 		<ul>
 					<li>
 				<div class="couverturePrimeur">
-					                                    <a href="/fr/primeur-detail.php?id=996"><img src="/upload/images/thumbs/imgctrlthb_w50_h80_q100_rollins_u160426111410.jpg" alt="rollins_u160426111410.jpg" /></a>
+					                                    <a href="/fr/primeur-detail.php?id=1098"><img src="/upload/images/thumbs/imgctrlthb_w50_h66_q100_chat_u160830103447.jpg" alt="chat_u160830103447.jpg" /></a>
 											</div>
 				<div class="resumePrimeur">
-					<span class="primeurTitle">L'ordre des sanguinistes 2 - La derniÃ¨re tentation</span>
-					<div>De James Rollins					<a href="/fr/primeur-detail.php?id=996" class="primeurMore">[...]</a></div>
+					<span class="primeurTitle">50 recettes anti-croquettes pour mon chat</span>
+					<div>De Brigitte Bulard-Cordeau					<a href="/fr/primeur-detail.php?id=1098" class="primeurMore">[...]</a></div>
 				</div>
 			</li>
 						<li>
 				<div class="couverturePrimeur">
-					                                    <a href="/fr/primeur-detail.php?id=995"><img src="/upload/images/thumbs/imgctrlthb_w50_h82_q100_bizien_u160426111014.jpg" alt="bizien_u160426111014.jpg" /></a>
+					                                    <a href="/fr/primeur-detail.php?id=1096"><img src="/upload/images/thumbs/imgctrlthb_w50_h75_q100_gregory_u160830102649.jpg" alt="gregory_u160830102649.jpg" /></a>
 											</div>
 				<div class="resumePrimeur">
-					<span class="primeurTitle">La trilogie des tÃ©nÃ¨bres 3 - Le berceau des tÃ©nÃ¨bres</span>
-					<div>De Jean-Luc Bizien					<a href="/fr/primeur-detail.php?id=995" class="primeurMore">[...]</a></div>
+					<span class="primeurTitle">La guerre des Deux-Roses vol. 3 - la malÃ©diction du roi</span>
+					<div>De Philippa Gregory					<a href="/fr/primeur-detail.php?id=1096" class="primeurMore">[...]</a></div>
 				</div>
 			</li>
 			
 	</ul>
 	<a href="/fr/primeurs.php" title="Primeurs" id="btnVoirPrimeurs" class="btn"><span>Voir toutes les primeurs</span></a>
 </div>
-	<!-- pageMenu end here -->
 				</div>
 				<div>
 									</div>
@@ -186,7 +183,7 @@
 						<div class="latest-twit">
 								<blockquote class="twitter-tweet">
 								<p>
-																	<a href="https://twitter.com/BiblioSADP/status/725115527547510785" target="_blank">Atelier pour enfants de 5 Ã  12 ans:  Les mains dans la nature.  CrÃ©e ton propre terrarium le 8 juin Ã  18:30h https://t.co/d6POfgmJoV</a>
+																	<a href="https://twitter.com/BiblioSADP/status/771359273544740864" target="_blank">Retour Ã  l'horaire rÃ©gulier Ã  partir du 6 septembre Ã  13h. Mardi et jeudi de 13h Ã  20h30. Mercredi 10h Ã  20h30 Vendredi et samedi 10 Ã  15 h.</a>
 								 								</p>
 								</blockquote>
 								<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -241,12 +238,14 @@
 				<li><a href="/fr/faq.php">FAQ</a></li>
 				<li><a href="/fr/plan-site.php">Plan du site</a></li>
 				<li><a href="/fr/nous-joindre-adresse.php">Nous joindre</a></li>
-				<li><a href="/fr/ville-historique.php">La ville</a></li>
-				<li class="noBorder"><a href="/fr/conseil-municipal-message-citoyens.php">Conseil municipal</a></li>
-				<li><a href="/fr/services-citoyens-bulletin-programmation.php">Services aux citoyens</a></li>
-				<li><a href="/fr/services-municipaux.php">Services municipaux</a></li>
+				<li><a href="/fr/page-ville-historique.php">La ville</a></li>
+				<li><a href="/fr/page-conseil-message-aux-citoyens.php">Conseil municipal</a></li>
+				<li class="noBorder"><a href="/fr/services-municipaux.php">Services municipaux</a></li>
+				<li><a href="/fr/bibliotheque.php">BibliothÃ¨que</a></li>
+				<li><a href="/fr/page-loisirs-service-des-loisirs.php">Loisirs</a></li>
+				<li><a href="/fr/page-urbanisme-reglementation.php">Urbanisme</a></li>
 				<li><a href="/fr/bottin-ville-services.php">Bottin</a></li>
-			</ul>	
+			</ul>
 			<a href="#">Â© Service communications Ste-Anne-des-Plaines</a>
 			    <div id="signatureCyber">
                     <script type="text/javascript" src="/Commun/js/resolveSignature/2.js"></script>
@@ -289,11 +288,12 @@
 		<div id="mainMenu">
 			<h3><span>Menu</span></h3>
 			<ul>
-				<li><a class="menu01 " href="/fr/ville-historique.php"><span>La ville</span></a></li>
-				<li><a class="menu02 " href="/fr/conseil-municipal-message-citoyens.php"><span>Conseil municipal</span></a></li>
-				<li><a class="menu03 " href="/fr/services-citoyens-bulletin-programmation.php"><span>Services aux citoyens</span></a></li>
+				<li><a class="menu01 " href="/fr/page-ville-historique.php"><span>La ville</span></a></li>
+				<li><a class="menu02 " href="/fr/page-conseil-message-aux-citoyens.php"><span>Conseil municipal</span></a></li>
 				<li><a class="menu04 " href="/fr/services-municipaux.php"><span>Services Municipaux</span></a></li>
-				<li><a class="menu07 selected" href="/fr/bibliotheque.php"><span>Bibliothèque</span></a></li>
+				<li><a class="menu07 selected" href="/fr/bibliotheque.php"><span>BibliothÃ¨que</span></a></li>
+				<li><a class="menu08 " href="/fr/page-loisirs-service-des-loisirs.php"><span>Loisirs</span></a></li>
+				<li><a class="menu09 " href="/fr/page-urbanisme-urbanisme-et-environnement.php"><span>Urbanisme</span></a></li>
 				<li class="noBorder"><a class="menu05 " href="/fr/bottin-ville-services.php"><span>Bottin</span></a></li>
 			</ul>
 		</div>

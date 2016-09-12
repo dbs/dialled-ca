@@ -13,7 +13,99 @@
     
      <script type='text/javascript' src='/Scripts/date.js'></script>
  
-     <style type='text/css'>
+    
+	<!-- canada150 slider -->
+	
+	
+			
+		
+		
+		<!-- HOME PAGE SLIDER canada150 slider -->
+		
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='/infogrid.js'></script> 
+
+			<!-- HOME PAGE SLIDER canada150 slider -->
+		
+		
+		
+		
+		
+		<!-- SOCIAL MEDIA ICON SHARE -->
+			
+			<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "98fefb99-929f-41a8-9eb3-66408edfaebf", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+		
+	
+		
+		<!-- SOCIAL MEDIA ICON SHARE -->
+		
+		
+		
+		
+		
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+ <link id="ctl00_screen2" rel="Stylesheet" href="/Styles/letterslider/featuredcontentglider.css" type="text/css" media="screen" /><link id="ctl00_screen3" rel="Stylesheet" href="/Styles/letterslider/cssbuttonstoggler.css" type="text/css" media="screen" />
+    <script type='text/javascript' src='/featuredcontentglider.js'></script> 
+
+
+
+
+<!-- new slide show -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/Scripts/newslideshow/jquery.touchSwipe.min.js"></script>
+
+<script src="/Scripts/newslideshow/jkresponsivegallery.js"></script>	
+ 
+<link id="ctl00_screen4" rel="Stylesheet" href="/Styles/newslideshow/jkresponsivegallery.css" type="text/css" media="screen" />
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- END canada150 slider -->
+	
+	
+	<!-- HOME PAGE  TAB -->
+	
+	
+	
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script src="/jquery.accTabs.js"></script> 
+	
+	
+	
+	
+	<!-- END HOME PAGE  TAB -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 <style type='text/css'>
         .DateRange, .DateDiv { display: none; }
      </style>
  
@@ -162,6 +254,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 	
 	
+	
+	
+	
+	
+	
+	
 
 	
 <!-- Wrapper Start Here -->
@@ -302,9 +400,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
 				
 				<div class="feature" style="width:237px;">
-					<a href="http://www.youtube.com/ArchivesOfOntario"><img src="/images/icon_youtube_50.gif" width="50" height="50" alt="Youtube" /></a>&nbsp;
-					<a href="http://twitter.com/ArchivesOntario"><img src="/images/icon_twitter_50.gif" width="50" height="50" alt="Twitter" /></a>
+					<a href="http://www.youtube.com/ArchivesOfOntario"><img src="/images/icon_youtube_50.gif" width="50" height="50" alt="Archives of Ontario Youtube" /></a>&nbsp;
+					<a href="http://twitter.com/ArchivesOntario"><img src="/images/icon_twitter_50.gif" width="50" height="50" alt="rchives of Ontario Twitter English Page" /></a>
                     <a href="https://www.flickr.com/photos/archivesofontario/"><img src="/images/flicker_icon.gif" width="50" height="50" alt="Archives of Ontario Flicker Page " /></a>
+					<a href="https://www.facebook.com/ArchivesOntario"><img src="/images/icon_facebook_50.jpg" width="50" height="50" alt="Archives of Ontario Facebook English Page " /></a>
 				</div>
 			</div>
             
@@ -397,6 +496,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             guides and various Databases</a></p>
                 </div>
             </div>
+            
+
+            
         </div>
         <div class="row">
             <div class="header">
@@ -405,17 +507,96 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </div>
 
- 
+             
+
 
         
-                <div class="row"><strong>NOTICE </strong> </div>
+                
+          <!--<div class="row">
+            
+
+   
+         <div class="tabs demo" >
+  <h3 style=list-style-type: none;>Tabs title one</h3>
+  <div>
+    <p>Tabs Panel One</p>
+  </div>
+  <h3>Tabs title two</h3>
+  <div>
+    <p>Tabs Panel Two</p>
+  </div>
+  <h3>Tabs title three</h3>
+  <div>
+    <p>Tabs Panel Three</p>
+  </div>
+</div> 
+
+        
+        
+        
+        
+        
+        
+        
+        </div>-->
+         
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+      <div class="row"><strong>NOTICE </strong> </div>
+      
+      
+      
+     <div class="row">
+        <p><strong>Notice of fee increase for reproduction services: </strong></p>
+        <p>The Archives of Ontario is dedicated to making its resources and  services as widely accessible as possible. In order to continue offering  high-quality services, we are required to increase fees to reflect actual cost.  A price increase for all reproduction services will come into effect as of  September 1, 2016. </p>
+        <p>For a full list of our new 2016 fees, please see <strong>Guide 105 - Reproduction Services and Fees</strong>, available September 1 on the  <a href="http://www.archives.gov.on.ca/en/access/research_guides.aspx" title="Click here to access Guide 105">Archives&rsquo; website </a>and in the Archives&rsquo; Reading Room. </p>
+     </div> 
       
       
       
       
-<div class="row">
-   <p><strong>Please note that the Archives of Ontario will be closed Monday, May 23, Victoria Day.</strong> [<a href="about/prepare.aspx#holidaysList" title="More list of Holidays">More</a>] </p>
+      
+      
+      
+      
+     <div class="row">
+        <p><strong>Please note that the Archives of Ontario will be closed on Monday, October 10 for the Thanksgiving Day holiday.</strong> [<a href="about/prepare.aspx#holidaysList" title="More list of Holidays">More</a>] </p>
  </div>
+ 
+ 
+ 
 
 <!--    <div class="row">
         
@@ -431,34 +612,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>-->
         
         
-         <div class="row">
-
-            <div style="width: 90%" class="accessible-background">
- 
-                          <strong><a href="e_records/huronia.aspx" title="Click for Ontario Regional Centres Records">Ontario Regional Centres Records</a></strong><br />
-
-                      
-                            A settlement agreement reached in a class action lawsuit brought against Ontario
-                            by former residents of Huronia Regional Centre was approved in Superior Court on
-                  December 3, 2013.
-            </div>
         
-            <!--  table width="90%" border="0" cellpadding="8" cellspacing="0" class="table_class" summary="Ontario Regional Centres Records" >
-            
-                <tr>
-                    <td align="left" valign="top" class="accessible-background">
- 
-                          <strong><a href="e_records/huronia.aspx" title="Click for Ontario Regional Centres Records">Ontario Regional Centres Records</a></strong><br />
-
-                      
-                            A settlement agreement reached in a class action lawsuit brought against Ontario
-                            by former residents of Huronia Regional Centre was approved in Superior Court on
-                  December 3, 2013.</td>
-                </tr>
-            </table -->
-         
-          
-        </div>
 
        <!---------Row Break------------->
 
@@ -469,55 +623,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        
        
        
-            <!---------item------------->
-          <div class="grid_6">
-              <div class="header">
-                <h2><strong><a href="explore/online/soldiers/remembrance_day.aspx" title="Click for Eatons’ Soldiers Exhibit at Mackenzie House">Eatons’ Soldiers Exhibit at Mackenzie House </a></strong></h2>
-              </div>
-                <div class="grid_6">
-                  <div class="icon" style="margin: 6px; float: left;">
-                    <div class="photocap icon_top grey">
-                      </div>
-<img src="../images/aaw_men_story.jpg"
-                                alt="Eatons’ Soldiers" width="125" height="90" /><a href="about/archives_week.aspx"></a>
-                        <div class="photocap icon_bottom grey">
-                    </div>
-                  </div>
-Did your ancestor work for Eaton's and serve  in World War I? Share your story! <br />
-<br />
-Stories collected will form the basis of an  exhibit at Mackenzie House from September 2017 to January 2018.
-<div class="grid_6_content"></div>
-                </div>
-            </div>
-            <!-----end item----->
-
-
-       
-   
-       
-            <!---------item------------->
+           
+         
+                            <!---------item------------->
            <div class="grid_6">
              <div class="header">
                <h2>
-               <a href="explore/online/Robertson/index.aspx" title="In Good Hands:Lawrence Bruce Robertson, WWI Surgeon">In Good Hands: Lawrence Bruce Robertson, WWI Surgeon</a><br /></h2>
+               <a href="goac/moma_markovich.aspx" title="Click for The Artistry of Moma Markovich">Footpaths to Freeways: The Artistry of Moma Markovich</a><a href="explore/online/familyties/index.aspx" title="Click forNew Online Exhibit: Meet the Browns!"></a><br /></h2>
              </div>
                 
                 <div class="grid_6">
                 <div class="icon" style="margin: 6px; float: left;">
                   <div class="photocap icon_top grey">
-                    </div>
-<img src="../images/robertson_blurb_icon.jpg" width="125" height="90"
-                            alt="Lawrence Bruce Robertson, WWI Surgeon" />
+                  </div>
+<img src="../../images/goac/foothpath.jpg" width="125" height="90"
+                            alt="Footpaths to Freeways: The Artistry of Moma Markovich" />
                     <div class="photocap icon_bottom grey">
                     </div>
                 </div>
-                Dr. L. Bruce Robertson, a skilled and compassionate physician, saved the lives of many WWI soldiers through his innovative technique in blood transfusion.  View this exhibit, containing heartwarming letters from his patients and their families, to discover the lasting impact made by doctors and nurses during the First World War. 
-                <div class="grid_6_content"></div>
+                New  art exhibit coming this September!&nbsp;  Vibrant paintings by Moma Markovich depicting the historical development  and construction of Ontario roads and bridges will be on display at the John B.  Aird Gallery.
+<div class="grid_6_content"></div>
             </div>
           </div>
             <!-----end item----->
 
 
+
+  
+           
+           
+           
+           <!---------item------------->
+          <div class="grid_6">
+              <div class="header">
+                <h2><strong><a href="https://www.facebook.com/ArchivesOntario" title="Click for Archives of Ontario Facebook Page">We’re now on Facebook! </a></strong></h2>
+              </div>
+                <div class="grid_6">
+                  <div class="icon" style="margin: 6px; float: left;">
+                    <div class="photocap icon_top grey">
+                    </div>
+<img src="../images/facebook_blurb.jpg"
+                                alt="Archives of Ontario Facebook Page" width="125" height="90" /><a href="about/archives_week.aspx"></a>
+                        <div class="photocap icon_bottom grey">
+                    </div>
+                  </div>
+                 The Archives of Ontario has a <a href="https://www.facebook.com/ArchivesOntario" title="Click for Archives of Ontario Facebook Page">Facebook page</a>! Go ahead and  &ldquo;like&rdquo; us and check back for regular posts that explore the collections,  resources, services, and initiatives of the Archives of Ontario.&nbsp; 
+                  <div class="grid_6_content"></div>
+                </div>
+          </div>
+            <!-----end item----->
+
+
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+
+
+
+       
+   
+       
      
 
            
@@ -530,7 +708,100 @@ Stories collected will form the basis of an  exhibit at Mackenzie House from Sep
 
 
 
+        <div class="row">
+       
+       
+       
+           
+         
+                      
+           
+          
+  
+           
+                <!---------item------------->
+           <div class="grid_6">
+             <div class="header">
+               <h2>
+               <a href="explore/online/familyties/index.aspx" title="Click forNew Online Exhibit: Meet the Browns!">New Online Exhibit: Meet the Browns!</a><br /></h2>
+             </div>
+                
+                <div class="grid_6">
+                <div class="icon" style="margin: 6px; float: left;">
+                  <div class="photocap icon_top grey">
+                    </div>
+<img src="../images/browns_family_exhibit_blurb.jpg" width="125" height="90"
+                            alt="New Online Exhibit: Meet the Browns!" />
+                    <div class="photocap icon_bottom grey">
+                    </div>
+                </div>
+              Explore our newest online exhibit – “Meet the Browns: A Confederation Family” – to learn more about the family behind one of Canada’s “Fathers of Confederation,” and their importance in his life. This exhibit is part of the Archives’ celebration of the 150th anniversary of Confederation in Canada.
+                <div class="grid_6_content"></div>
+            </div>
+          </div>
+            <!-----end item----->
+
+
+
+
+
+  
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+            
+            <!---------item------------->
+          <div class="grid_6">
+              <div class="header">
+                <h2><strong><a href="explore/online/soldiers/remembrance_day.aspx" title="Click for Eatons’ Soldiers Exhibit at Mackenzie House">Eatons’ Soldiers Exhibit at Mackenzie House </a></strong></h2>
+              </div>
+                <div class="grid_6">
+                  <div class="icon" style="margin: 6px; float: left;">
+                    <div class="photocap icon_top grey">
+                    </div>
+<img src="../images/aaw_men_story.jpg"
+                                alt="Eatons’ Soldiers" width="125" height="90" /><a href="about/archives_week.aspx"></a>
+                        <div class="photocap icon_bottom grey">
+                    </div>
+                  </div>
+Did your ancestor work for Eaton's and serve  in World War I? Share your story! <br />
+Stories collected will form the basis of an  exhibit at Mackenzie House from September 2017 to January 2018.
+<div class="grid_6_content"></div>
+                </div>
+          </div>
+            <!-----end item----->
+
+
+       
+   
+       
+     
+
+           
         
+
+            
+      </div>
      
 
 
@@ -557,7 +828,9 @@ Stories collected will form the basis of an  exhibit at Mackenzie House from Sep
     </div>
 
 
-
+      <script>
+$(".demo").accTabs();
+</script>
 
    
         
@@ -674,10 +947,6 @@ Stories collected will form the basis of an  exhibit at Mackenzie House from Sep
       ga('send', 'pageview');
 
     </script>
-
-
-
-
 
 
 

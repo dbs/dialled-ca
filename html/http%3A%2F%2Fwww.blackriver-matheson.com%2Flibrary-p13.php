@@ -705,12 +705,12 @@ jQuery(document).ready(function ($) {
 <p>Winter Hours (October to March)</p>
 
 <p>Tuesday, Wednesday &amp; Thursday &nbsp; &nbsp;12:00pm to 7:00 pm<br />
-Friday, Saturday &nbsp; 10:00 am to 2:00 pm</p>
+Friday, Saturday &nbsp; 12:00 pm to 4:00 pm</p>
 
 <p>Summer Hours (April to September)</p>
 
 <p>Tuesday, Wednesday &amp; Thursday &nbsp;12:00 pm to 8:00 pm<br />
-Friday &amp; Saturday &nbsp;10:00 am to 2:00 pm</p>
+Friday &amp; Saturday &nbsp;12:00 pm to 4:00 pm</p>
 
 <p><br />
 <strong>Location: </strong><br />
@@ -719,10 +719,10 @@ Matheson, ON<br />
 (705) 273-2760<br />
 <br />
 <br />
-<span class="page_sub_subheader_title">Ramore</span>Tuesday 6:00pm-8:00pm<br />
-Thursday 1:00pm-5:00pm<br />
-<br />
-<strong>Location:</strong> Ferguson Avenue, beside the fire hall</p>
+<span class="page_sub_subheader_title">Ramore</span>Tuesday 1:00 pm to 4:00 pm<br />
+Thursday 4:00 pm to 7:00 pm</p>
+
+<p><strong>Location:</strong> 375 McIntyre Ave, Senior&#39;s Building</p>
 
                       	</div>
   </div>

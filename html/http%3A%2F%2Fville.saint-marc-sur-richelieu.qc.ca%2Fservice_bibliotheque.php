@@ -9,7 +9,7 @@
 <link rel="shortcut icon" href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2014/02/logo1.gif" /><link rel="apple-touch-icon" href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2014/02/logo1.gif" /><link rel="alternate" type="application/rss+xml" title="Ville Saint-Marc-sur-Richelieu &raquo; Flux" href="http://ville.saint-marc-sur-richelieu.qc.ca/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Ville Saint-Marc-sur-Richelieu &raquo; Flux des commentaires" href="http://ville.saint-marc-sur-richelieu.qc.ca/comments/feed/" />
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/ville.saint-marc-sur-richelieu.qc.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.3"}};
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/ville.saint-marc-sur-richelieu.qc.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.5"}};
 			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
@@ -26,7 +26,7 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='fsb-image-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/simple-full-screen-background-image/includes/fullscreen-image.css?ver=4.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fsb-image-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/simple-full-screen-background-image/includes/fullscreen-image.css?ver=4.4.5' type='text/css' media='all' />
 <link rel='stylesheet' id='wp-polls-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/wp-polls/polls-css.css?ver=2.72' type='text/css' media='all' />
 <style id='wp-polls-inline-css' type='text/css'>
 .wp-polls .pollbar {
@@ -41,20 +41,20 @@ img.emoji {
 </style>
 <link rel='stylesheet' id='jetpack_image_widget-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/jetpack/modules/widgets/image-widget/style.css?ver=20140808' type='text/css' media='all' />
 <link rel='stylesheet' id='mc4wp-form-themes-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/mailchimp-for-wp/assets/css/form-themes.min.css?ver=3.1.4' type='text/css' media='all' />
-<link rel='stylesheet' id='temperas-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/themes/tempera/style.css?ver=4.4.3' type='text/css' media='all' />
-<link rel='stylesheet' id='tempera_googlefontside-css'  href='//fonts.googleapis.com/css?family=Open+Sans&#038;ver=4.4.3' type='text/css' media='all' />
-<link rel='stylesheet' id='tempera_headingsgooglefont-css'  href='//fonts.googleapis.com/css?family=Open+Sans&#038;ver=4.4.3' type='text/css' media='all' />
-<link rel='stylesheet' id='jetpack_css-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/jetpack/css/jetpack.css?ver=3.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='temperas-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/themes/tempera/style.css?ver=4.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tempera_googlefontside-css'  href='//fonts.googleapis.com/css?family=Open+Sans&#038;ver=4.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tempera_headingsgooglefont-css'  href='//fonts.googleapis.com/css?family=Open+Sans&#038;ver=4.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/jetpack/css/jetpack.css?ver=3.9.7' type='text/css' media='all' />
 <link rel='stylesheet' id='jq_ui_css-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/ajax-event-calendar/css/jquery-ui-1.8.16.custom.css?ver=1.8.16' type='text/css' media='all' />
 <link rel='stylesheet' id='custom-css'  href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/ajax-event-calendar/css/custom.css?ver=1.0.4' type='text/css' media='all' />
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script><script>jQueryWP = jQuery;</script>
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-<script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/themes/tempera/js/frontend.js?ver=4.4.3'></script>
+<script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/themes/tempera/js/frontend.js?ver=4.4.5'></script>
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-includes/js/swfobject.js?ver=2.2-20120417'></script>
 <link rel='https://api.w.org/' href='http://ville.saint-marc-sur-richelieu.qc.ca/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ville.saint-marc-sur-richelieu.qc.ca/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.4.3" />
+<meta name="generator" content="WordPress 4.4.5" />
 <!-- <meta name="NextGEN" version="2.1.26" /> -->
 
 <!-- platinum seo pack 1.3.8 -->
@@ -188,7 +188,6 @@ window.onload = makeDoubleDelegate(window.onload, tempera_onload );
 	<li id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/comites-consultatifs/"><span>Comités consultatifs</span></a></li>
 	<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/seances-du-conseil-et-proces-verbaux/"><span>Séances du conseil et procès verbaux</span></a></li>
 	<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/avis-publics/"><span>Avis publics</span></a></li>
-	<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/gestion-et-administration-municipale/"><span>Gestion et administration municipale</span></a></li>
 	<li id="menu-item-3093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3093"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/politiques-municipales/"><span>Politiques municipales</span></a></li>
 	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/reglementation-municipale-et-permis/"><span>Réglementation municipale et permis</span></a></li>
 	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2014/12/prevision_budgetaire_2015_web.pdf"><span>Budget et taxation</span></a></li>
@@ -199,6 +198,7 @@ window.onload = makeDoubleDelegate(window.onload, tempera_onload );
 		<li id="menu-item-2332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2332"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2015/01/Politique-environnementale.pdf"><span>Politique environnementale</span></a></li>
 		<li id="menu-item-3936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3936"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/conferences/"><span>Conférences</span></a></li>
 		<li id="menu-item-4023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4023"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2016/03/Formulaire-de-demande-de-permis-pesticides-2016.docx"><span>Permis pesticides</span></a></li>
+		<li id="menu-item-4228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4228"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2016/06/guide_organisation_evenements_ecoresponsables.pdf"><span>Guide pour l&rsquo;organisation d&rsquo;événements écoresponsables</span></a></li>
 	</ul>
 </li>
 </ul>
@@ -210,8 +210,8 @@ window.onload = makeDoubleDelegate(window.onload, tempera_onload );
 	<li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/loisirs-et-vie-communautaire/"><span>Loisirs et vie communautaire</span></a></li>
 	<li id="menu-item-2267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2267"><a href="http://www.marche-noel-st-marc.com/"><span>Marché de Noël</span></a>
 	<ul class="sub-menu">
-		<li id="menu-item-3479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3479"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2015/09/Invitation_Artisans_MarcheNoel_StMarc_2015.pdf"><span>Invitation aux artisans</span></a></li>
-		<li id="menu-item-3475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3475"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2015/09/Formulaire_-inscription_MarcheNoelStMarc_2015.doc"><span>Formulaire d&rsquo;inscription &#8211; Artisans</span></a></li>
+		<li id="menu-item-3479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3479"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2016/09/invitation_artisans_2016.pdf"><span>Invitation aux artisans</span></a></li>
+		<li id="menu-item-3475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3475"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2016/09/Formulaire_-inscription_MarcheNoelStMarc_2016.doc"><span>Formulaire d&rsquo;inscription &#8211; Artisans</span></a></li>
 	</ul>
 </li>
 	<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/organismes/"><span>Organismes &#8211; Bottin</span></a></li>
@@ -249,7 +249,7 @@ window.onload = makeDoubleDelegate(window.onload, tempera_onload );
 	<li id="menu-item-3594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3594"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/produits-electroniques/"><span>Produits électroniques</span></a></li>
 	<li id="menu-item-1649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1649"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/ecocentre-marguerite-dyouville/"><span>Écocentre Marguerite-D&rsquo;Youville</span></a></li>
 	<li id="menu-item-3718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3718"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/matiere-residuelles/"><span>Informations et bilan</span></a></li>
-	<li id="menu-item-3527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3527"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2015/02/bottin-recuperateur_2015.pdf"><span>Bottin de récupération</span></a></li>
+	<li id="menu-item-3527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3527"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2016/06/bottin_recuperateur_2016.pdf"><span>Bottin de récupération</span></a></li>
 </ul>
 </li>
 <li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/nous-joindre/"><span>Nous joindre</span></a></li>
@@ -345,7 +345,7 @@ onfocus="if (this.value == 'Recherche')
 
 <p>
 	<input type="submit" value="Abonnez-vous" />
-</p><div style="display: none;"><input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></div><input type="hidden" name="_mc4wp_timestamp" value="1462803551" /><input type="hidden" name="_mc4wp_form_id" value="3998" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /></div><div class="mc4wp-response"></div></form><!-- / MailChimp for WordPress Plugin --></li><li id="image-3" class="widget-container widget_image"><div class="jetpack-image-container"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/"><img src="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2014/02/logo1.gif" title="Accueil" class="alignright" width="180" height="150" /></a></div>
+</p><div style="display: none;"><input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></div><input type="hidden" name="_mc4wp_timestamp" value="1473611481" /><input type="hidden" name="_mc4wp_form_id" value="3998" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /></div><div class="mc4wp-response"></div></form><!-- / MailChimp for WordPress Plugin --></li><li id="image-3" class="widget-container widget_image"><div class="jetpack-image-container"><a href="http://ville.saint-marc-sur-richelieu.qc.ca/"><img src="http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/uploads/2014/02/logo1.gif" title="Accueil" class="alignright" width="180" height="150" /></a></div>
 </li>					</ul>
 				</div><!-- #first .widget-area -->
 
@@ -424,14 +424,14 @@ var pollsL10n = {"ajax_url":"http:\/\/ville.saint-marc-sur-richelieu.qc.ca\/wp-a
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/wp-polls/polls-js.js?ver=2.72'></script>
-<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201619'></script>
-<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2016Mayaa'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201636'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2016Sepaa'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var WPGroHo = {"my_hash":""};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.4.3'></script>
+<script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.4.5'></script>
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/ajax-event-calendar/js/jquery.fullcalendar.min.js?ver=1.5.3'></script>
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/ajax-event-calendar/js/jquery.simplemodal.1.4.3.min.js?ver=1.4.3'></script>
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/ajax-event-calendar/js/jquery.mousewheel.min.js?ver=3.0.6'></script>
@@ -446,7 +446,7 @@ var custom = {"is_rtl":"","locale":"fr","start_of_week":"0","step_interval":"30"
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/ajax-event-calendar/js/jquery.init_show_calendar.js?ver=1.0.4'></script>
-<script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-includes/js/wp-embed.min.js?ver=4.4.3'></script>
+<script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-includes/js/wp-embed.min.js?ver=4.4.5'></script>
 <script type='text/javascript' src='http://ville.saint-marc-sur-richelieu.qc.ca/wp-content/plugins/ml-slider/assets/sliders/flexslider/jquery.flexslider-min.js?ver=3.3.6'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
@@ -465,10 +465,10 @@ function wo_map_console(url) {
 <!-- end visitor maps -->
 	<div style="display:none">
 	</div>
-<script type='text/javascript' src='http://stats.wp.com/e-201619.js' async defer></script>
+<script type='text/javascript' src='http://stats.wp.com/e-201636.js' async defer></script>
 <script type='text/javascript'>
 	_stq = window._stq || [];
-	_stq.push([ 'view', {v:'ext',j:'1:3.9.4',blog:'65172591',post:'0',tz:'-4',srv:'ville.saint-marc-sur-richelieu.qc.ca'} ]);
+	_stq.push([ 'view', {v:'ext',j:'1:3.9.7',blog:'65172591',post:'0',tz:'-4',srv:'ville.saint-marc-sur-richelieu.qc.ca'} ]);
 	_stq.push([ 'clickTrackerInit', '65172591', '0' ]);
 </script>
 <script type="text/javascript">(function() {function addEventListener(element,event,handler) {

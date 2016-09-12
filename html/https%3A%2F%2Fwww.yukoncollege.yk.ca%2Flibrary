@@ -19,10 +19,22 @@
 </head>
 <body>
 	<div id="wrapper">
-				<div id="head">
-			<div id="logo-wrap" style="margin-left: 24px;"><a href="/"><img id="logo" src="/themes/site_themes/yc/logo80.gif" /></a></div>			
+				<style type="text/css" media="screen">
+			.login-visible { display: block !important; }
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			function toggleLoginBox() {
+				if(document.getElementById('myyc-login').className.length > 0) {
+					document.getElementById('myyc-login').className = "";
+				} else {
+					document.getElementById('myyc-login').className = "login-visible";
+				}
+			}
+		</script>
+		<div id="head">
+			<div id="logo-wrap" style="margin-left: 24px;"><a href="/"><img id="logo" src="/themes/site_themes/yc/logo80.gif" /></a></div>
 			<div id="nav">
-			
+
 				<!-- <div id="nav"> -->
 					<div id="nav-links">
 					<a href="/programs" load="programs" class="main_nav" >Programs & Courses</a>
@@ -33,13 +45,20 @@
 					</div>
 				<!-- </div> -->
 			</div>
-		
+
 			<div id="search2">
-			
-				
-				<div id="links" style=" height: 45px; position: relative; width: 700px" >
-					<a href="/about/directory" class="qlink">Directory</a> | <a href="/about/employment" class="qlink">Careers</a> | <a href="/itlc" class="qlink">IT &amp; Learning Commons</a> | <a href="/library" class="qlink">Library</a> | <a href="/about/pages/faq" class="qlink">Questions?</a> | <a href="http://www.yukoncollege.yk.ca/myyc">MyYC</a> | <a href="https://yukoncollege.me">YUKONCOLLEGE.ME</a>
-					
+
+
+				<div id="links" style=" height: 45px; position: relative; width: 800px" >
+					<a href="/student_info/pages/security" style="color:#EF4638" class="qlink">Emergency Info</a> | <a href="/about/directory" class="qlink">Directory</a> | <a href="/about/employment" class="qlink">Careers</a> | <a href="/itlc" class="qlink">IT &amp; Learning Commons</a> | <a href="/library" class="qlink">Library</a> | <a href="/about/pages/faq" class="qlink">Questions?</a> | <a href="#" id="myyc-login-link" class="qlink" onclick="javascript:toggleLoginBox()">Login</a>
+
+					<div id="myyc-login" style="display: none;position: absolute; right: 0; background: #fff; border: 2px solid #ECEFD0; padding: .5em 1em; margin-top: .5em; line-height: 2em; text-align: left; z-index: 200;">
+						<ul style="margin: 0; padding: 0; list-style: none;">
+							<li><a href="http://my.yukoncollege.yk.ca">Office 365</a></li>
+							<li><a href="http://yukoncollege.me">My Courses</a></li>
+							<li><a href="http://prod.campuscruiser.com/q?pg=home_welcome&cp=359">Faculty and Staff</a></li>
+						</ul>
+					</div>
 					<div style="margin: 10px 0 0;">
 						<script>
 						  (function() {
@@ -56,9 +75,9 @@
 						<gcse:searchbox-only></gcse:searchbox-only>
 						<div style="clear: both;"></div>
 					</div>
-				
+
 				</div>
-	
+
 			</div>
 		</div>
 
@@ -152,7 +171,7 @@ window.onload = function(){
 	
 	<li><a href="/library/pages/other_resources">Other Resources</a></li>
 	
-	<li><a href="/library/pages/what_is_new">What is new</a></li>
+	<li><a href="/library/pages/scholarly_search_engines">Scholarly Search Engines</a></li>
 		
 	</ul>
 	
@@ -289,19 +308,19 @@ window.onload = function(){
 					
 					<p class="title" style="font-weight:400;"><br />Library Alerts</p>
 					
-						<p>Yukon College Library is now open summer hours (Mon-Fri: 8:30am-5:00pm).
+						<p>Library fall hours begin Wed., Sept. 7th, 2016. M-Th 8:30am-9pm; F 8:30am-5pm; Sat-Sun 1pm-5pm.
 						</p>
 					
-						<p>Yukon College Library will not be open for Good Friday or Easter Monday statutory holidays.
+						<p><a href="http://yukoncollege.yk.ca/library/databases/curio.ca" style="text-decoration: underline; color: #fff;">Looking for educational videos? Check out Curio.ca!</a>
 						</p>
 					
-						<p>Yukon College library will be open Saturday and Sunday Mar 26 and 27 from 1-5pm
+						<p>Yukon College library will reopen Tuesday, September 6 at 8:30am after the Labour Day weekend.
 						</p>
 					
-						<p>Library and IT helpdesk will be closed Sunday, Feb 28th, due to YTG network maintenance
+						<p>YC Library and the college will be closed August 25th (Fall Huddle). Services resume August 26th.
 						</p>
 					
-						<p>Yukon College Library will be closed Feb 26 for Heritage Day and Feb 28 for network maintenance.
+						<p>Yukon College Library will not be open Monday, May 23 for the Victoria Day statutory holiday
 						</p>
 					
 					
@@ -320,8 +339,9 @@ window.onload = function(){
 		</div>
 		<div style="clear:both"></div>
 		<div id="foot">
-			&copy; 2012 Yukon College | 500 College Drive, PO Box 2799, Whitehorse, Yukon Y1A 5K4 | (867) 668-8800 or 1-800-661-0504<br /><a href="/about/pages/contact_us">Contact Us</a> | <a href="/about/pages/privacy_policy">Privacy Policy</a><br />
+			&copy; 2012 Yukon College | 500 College Drive, PO Box 2799, Whitehorse, Yukon Y1A 5K4 | (867) 668-8800 or 1-800-661-0504<br /><a href="/about/pages/contact_us">Contact Us</a> | <a href="/about/pages/institutional_research_and_planning/privacy_policy">Privacy Statement</a><br />
 <a href="http://www.facebook.com/home.php#/pages/Whitehorse-YT/Yukon-College/59092218638"><img src="/themes/site_themes/yc/facebook_sm.gif" alt="facebook" /></a> <a href="http://www.twitter.com/yukoncollege"><img src="/themes/site_themes/yc/twitter.gif" alt="twitter" /></a>
+
 
 
 

@@ -2,28 +2,28 @@
 <html lang="fr-FR" dir="ltr">
 <head>                                                                                                   
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <base href="http://www.st-cuthbert.qc.ca/loisirs-et-culture/bibliotheque.html" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="author" content="Marie-Pier Lambert" />
-  <meta name="description" content="Saint-Cuthbert est une petite municipalité de 1 839 habitants située sur la rive Nord du fleuve Saint-Laurent, à environ 60 kilomètres à l'est de Montréal." />
-  <meta name="generator" content="Joomla! - Open Source Content Management" />
-  <title>Bibliothèque Municipale</title>
-  <link href="/templates/js_novitas/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-  <link rel="stylesheet" href="/templates/js_novitas/css/jui/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/templates/js_novitas/css/jui/bootstrap-responsive.min.css" type="text/css" />
-  <link rel="stylesheet" href="/templates/js_novitas/css/jui/bootstrap-extended.css" type="text/css" />
-  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
-  <link rel="stylesheet" href="http://www.st-cuthbert.qc.ca/templates/js_novitas/css/custom.css" type="text/css" />
-  <script src="/templates/js_novitas/js/jui/jquery.min.js" type="text/javascript"></script>
-  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
-  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
-  <script src="/media/system/js/caption.js" type="text/javascript"></script>
-  <script src="/templates/js_novitas/js/jui/bootstrap.min.js" type="text/javascript"></script>
-  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
-  <script src="/media/system/js/core.js" type="text/javascript"></script>
-  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
-  <script src="/media/system/js/modal.js" type="text/javascript"></script>
-  <script type="text/javascript">
+	<base href="http://www.st-cuthbert.qc.ca/loisirs-et-culture/bibliotheque.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Marie-Pier Lambert" />
+	<meta name="description" content="Saint-Cuthbert est une petite municipalité de 1 839 habitants située sur la rive Nord du fleuve Saint-Laurent, à environ 60 kilomètres à l'est de Montréal." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Bibliothèque Municipale</title>
+	<link href="/templates/js_novitas/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="/templates/js_novitas/css/jui/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="/templates/js_novitas/css/jui/bootstrap-responsive.min.css" type="text/css" />
+	<link rel="stylesheet" href="/templates/js_novitas/css/jui/bootstrap-extended.css" type="text/css" />
+	<link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+	<link rel="stylesheet" href="http://www.st-cuthbert.qc.ca/templates/js_novitas/css/custom.css" type="text/css" />
+	<script src="/templates/js_novitas/js/jui/jquery.min.js" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js" type="text/javascript"></script>
+	<script src="/templates/js_novitas/js/jui/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+	<script src="/media/system/js/core.js" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+	<script src="/media/system/js/modal.js" type="text/javascript"></script>
+	<script type="text/javascript">
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
 			});
@@ -33,10 +33,39 @@ jQuery(window).on('load',  function() {
 				parse: 'rel'
 			});
 		});
-		function jModalClose() {
+
+		window.jModalClose = function () {
 			SqueezeBox.close();
-		}
-  </script>
+		};
+		
+		// Add extra modal close functionality for tinyMCE-based editors
+		document.onreadystatechange = function () {
+			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+			{
+				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+				{	
+					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+					
+					jModalClose = function () {
+						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+		
+				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+				{
+					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+		
+					SqueezeBox.close = function () {
+						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+			}
+		};
+		
+	</script>
 
 
 </head>
@@ -91,20 +120,10 @@ jQuery(window).on('load',  function() {
                 <div id="above-content">
                     		<div class="moduletable_ms1">
 						<div class="bannergroup_ms1">
-	<h3 style="text-align: center;">P&eacute;tition d'opposition &agrave; l'a&eacute;rodrome</h3>
-<p style="text-align: center;"><strong>Acc&eacute;der &agrave; la p&eacute;tition en ligne :</strong> <a href="http://www.petitions24.net/opposition_aerodrome_st-cuthbert" target="_blank">http://www.petitions24.net/opposition_aerodrome_st-cuthbert</a></p><hr />
-<h3 style="text-align: center;">Projet de Plan de gestion des mati&egrave;res r&eacute;siduelles de la MRC de D'Autray 2016-2021</h3>
-<table style="width: 85%; margin-left: auto; margin-right: auto;">
-<tbody>
-<tr>
-<td style="width: 33%; text-align: center;"><span style="font-size: 12pt;"><strong><a href="http://st-cuthbert.qc.ca/documents-sp-528165058/role-d-evaluation-et-autres/629-avis-public-consultation-pgmr/file.html" target="_blank">Assembl&eacute;es publiques de consultation</a></strong></span></td>
-<td style="text-align: center;">
-<p style="text-align: center;"><img src="http://st-cuthbert.qc.ca/images/banners/BannieresTOP/image001.jpg" alt="" width="75" /></p>
-</td>
-<td style="width: 33%; text-align: center;"><span style="font-size: 12pt;"><strong><a href="http://st-cuthbert.qc.ca/documents-sp-528165058/role-d-evaluation-et-autres/630-sommaire-projet-pgmr/file.html" target="_blank">Sommaire du projet</a></strong></span></td>
-</tr>
-</tbody>
-</table>
+	<h3 style="text-align: center;"><a href="https://petitions.parl.gc.ca/fr/Petition/Details?Petition=e-450">Pétition électronique parrainée par la députée Ruth Ellen Brosseau afin que des changements soient faits rapidement dans la loi sur l’aéronautique</a></h3>
+<h3 style="text-align: center;"><em><strong><a href="http://www.st-cuthbert.qc.ca/documents-sp-528165058/role-d-evaluation-et-autres/656-un-aerodrome-incompatible-avec-le-respect-de-l-environnement-du-patrimoine-et-de-la-communaute-memoire-depose-a-l-attention-de-m-marc-garneau-ministre-des-transport/file.html">Un a&eacute;rodrome incompatible avec le respect de l&rsquo;environnement, du patrimoine et de la communaut&eacute;</a></strong></em></h3>
+<p style="text-align: center;">M&eacute;moire d&eacute;pos&eacute; &agrave; l&rsquo;attention de M. Marc Garneau, ministre des Transports du Canada, par le Comit&eacute; Vigilance de Saint-Cuthbert dans le cadre de la consultation initi&eacute;e par Gestion DGNE Inc. concernant l&rsquo;implantation d&rsquo;un a&eacute;rodrome et d&rsquo;un centre a&eacute;ro-r&eacute;cr&eacute;atif &agrave; Saint-Cuthbert.</p>
+<p style="text-align: center;">Adopt&eacute; le 23 mai 2016 par le conseil de la Municipalit&eacute; de Saint-Cuthbert.</p>
 <hr />
 <p><a href="http://www.desjardins.com/caissededautray/" target="_blank"> <img src="/images/banners/untitled-2.png" alt="" /></a></p>
 
@@ -144,17 +163,14 @@ jQuery(window).on('load',  function() {
 <div style="float:left;">
 <h3>Adresse</h3>
 
-<p>1891, rue Principale<br/>Saint-Cuthbert   J0K 2C0<br/>Téléphone:  450-836-4852, poste 3305<br/>Courriel: <span id="cloak2908">Cette adresse e-mail est protégée contre les robots spammeurs. Vous devez activer le JavaScript pour la visualiser.</span><script type='text/javascript'>
- //<!--
- document.getElementById('cloak2908').innerHTML = '';
- var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
- var path = 'hr' + 'ef' + '=';
- var addy2908 = 'b&#105;bl&#105;&#111;126' + '&#64;';
- addy2908 = addy2908 + 'r&#101;s&#101;&#97;&#117;b&#105;bl&#105;&#111;cqlm' + '&#46;' + 'qc' + '&#46;' + 'c&#97;';
- var addy_text2908 = 'b&#105;bl&#105;&#111;126' + '&#64;' + 'r&#101;s&#101;&#97;&#117;b&#105;bl&#105;&#111;cqlm' + '&#46;' + 'qc' + '&#46;' + 'c&#97;';
- document.getElementById('cloak2908').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy2908 + '\'>'+addy_text2908+'<\/a>';
- //-->
- </script></p>
+<p>1891, rue Principale<br/>Saint-Cuthbert   J0K 2C0<br/>Téléphone:  450-836-4852, poste 3305<br/>Courriel: <span id="cloakcdbd3d6aa21f7bd8d97502c679a2ad5e">Cette adresse e-mail est protégée contre les robots spammeurs. Vous devez activer le JavaScript pour la visualiser.</span><script type='text/javascript'>
+				document.getElementById('cloakcdbd3d6aa21f7bd8d97502c679a2ad5e').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addycdbd3d6aa21f7bd8d97502c679a2ad5e = 'b&#105;bl&#105;&#111;126' + '&#64;';
+				addycdbd3d6aa21f7bd8d97502c679a2ad5e = addycdbd3d6aa21f7bd8d97502c679a2ad5e + 'r&#101;s&#101;&#97;&#117;b&#105;bl&#105;&#111;cqlm' + '&#46;' + 'qc' + '&#46;' + 'c&#97;';
+				var addy_textcdbd3d6aa21f7bd8d97502c679a2ad5e = 'b&#105;bl&#105;&#111;126' + '&#64;' + 'r&#101;s&#101;&#97;&#117;b&#105;bl&#105;&#111;cqlm' + '&#46;' + 'qc' + '&#46;' + 'c&#97;';document.getElementById('cloakcdbd3d6aa21f7bd8d97502c679a2ad5e').innerHTML += '<a ' + path + '\'' + prefix + ':' + addycdbd3d6aa21f7bd8d97502c679a2ad5e + '\'>'+addy_textcdbd3d6aa21f7bd8d97502c679a2ad5e+'<\/a>';
+		</script></p>
 </div>
 
 <div style="clear:left;">

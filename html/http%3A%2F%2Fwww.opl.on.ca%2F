@@ -37,9 +37,7 @@
         <a href="./" class="logo"><img title="Oakville Public Library Home Page" alt="Oakville Public Library" src="./assets/gfx/biblio/logo.png" title=""></a>
 
         <div id="navAndSearch">
-			
-
-          <div id="userNav" class="clearfix">
+			          <div id="userNav" class="clearfix">
 
             <div class="defaultOptions" >
 
@@ -56,7 +54,7 @@
           <script type="text/javascript">var _baLocale = 'us', _baUseCookies = true, _baMode = 'Listen with BrowseAloud', _baHiddenMode = false, _baHideOnLoad = false;</script>
           <script type="text/javascript" src="//www.browsealoud.com/plus/scripts/ba.js"></script>
 
-          <form action="https://opl.bibliocommons.com/search" class="clearfix" id="globalSearch" method="get">
+         <!-- <form action="https://opl.bibliocommons.com/search" class="clearfix" id="globalSearch" method="get">
 		    <div style="display: inline;" >
             <label id="buttonlbl" for="button" class="inline">Search submit button</label>
 			<label id="selectlbl" for="type"  class="inline">select search type</label>
@@ -83,7 +81,23 @@
               //registrar.add_hook('autoSuggest', 'globalSearch');
               registrar.add_hook('placeHolder', 'q');
             </script>
-          </form>      
+          </form>
+         -->
+        <form accept-charset="UTF-8" action="https://opl.bibliocommons.com/search" autocomplete="off" class="clearfix" data-analytics="{ &quot;Feature&quot;: &quot;Search Bar&quot; }" id="globalSearch" method="get" onsubmit=""><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+          <h1 >Find books, music, movies, and more.<label for="t"></label></h1>
+          <select class="hideMe" id="t" name="t" testid="select_facet"><option value="smart">Keyword</option>
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="subject">Subject</option>
+            <option value="tag">Tag</option>
+            <option value="userlist">List</option>
+            <option value="user">User</option></select>
+          <input id="search_category" name="search_category" type="hidden" value="keyword" />
+          <input aria-label="Search Catalogue" autocomplete="off" class="header_search_input text" id="globalQuery" name="q" testid="field_search" type="text" />
+          <input alt="Search" class="search_button" name="commit" testid="button_search" title="Search"  value="Search" src="http://opl.on.ca/assets/gfx/biblio/button.search.png" alt="search submit button" type="image"/>
+         <br /><br /> <a href="https://opl.bibliocommons.com/search" class="moreSearch" testid="link_advancedsearch">Advanced Search</a>
+        </form>
+
         </div>
   
         <br class="clear">
@@ -156,9 +170,9 @@
 					<li class="dropDownItem"><a href="https://opl.bibliocommons.com/explore/index/newly_acquired" title="New Titles">New Titles</a></li>
 					<li class="dropDownItem"><a href="https://opl.bibliocommons.com/explore/index/awards" title="Awards">Awards</a></li>
 					<li class="dropDownItem"><a href="https://opl.bibliocommons.com/explore/index/best_sellers" title="Bestsellers">Bestsellers</a></li>
-					<li class="dropDownItem"><a href="./services/other-languages" title="Other Languages">Other Languages</a></li>
+					<!--<li class="dropDownItem"><a href="./services/other-languages" title="Other Languages">Other Languages</a></li>
 					<li class="dropDownItem"><a href="./services/staff-picks" title="Staff Picks">Staff Picks</a></li>
-                    <!--<li class="dropDownItem"><a href="./blog/jukepop/" title="JukePop Serials">JukePop Serials</a></li>-->
+                    <li class="dropDownItem"><a href="./blog/jukepop/" title="JukePop Serials">JukePop Serials</a></li>-->
 
                 </ul><div class="mainNavFooter"></div>
               </div>
@@ -230,6 +244,8 @@
 				  <li class="dropDownItem"><a href="./interests/teacher-resources">Teacher Resources</a></li>
 				  <li class="dropDownItem"><a href="./research/splash">Technology</a></li>
                   <li class="dropDownItem"><a href="./interests/onlineTutorial">Online Tutorials</a></li>
+                  <li class="dropDownItem"><a href="./services/other-languages" title="Other Languages">Other Languages</a></li>
+				  <li class="dropDownItem"><a href="./services/staff-picks" title="Staff Picks">Staff Picks</a></li>
                 </ul><div class="mainNavFooter"></div>
               </div>
             </li>
@@ -425,6 +441,7 @@
 			<option value="Iroquois Ridge">Iroquois Ridge</option>
 			<option value="Woodside">Woodside</option>
 			<option value="White Oaks">White Oaks</option>
+            <option title="Queen Elizabeth Park Community and Cultural Center Holds Depot - Coming Soon (Fall 2016)" value="QEPCCC">QEPCCC</option>
 	
 		</select>		
 	</form>
@@ -470,9 +487,9 @@
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 <div class="tout">
-	<a href="https://opl.bibliocommons.com/search?custom_query=2016Spring&suppress=true&custom_edit=true&title=Upcoming%20Bestsellers%20List%202016%20Spring" title="Upcoming Bestsellers List 2016 Winter" class="cont" onClick="javascript:pageTracker._trackPageview('/touts/upcomingFBestsellersUpcoming2015fall');">
+	<a href="https://opl.bibliocommons.com/search?custom_query=+2016Fall&suppress=true&custom_edit=true&title=Upcoming%20Bestsellers%20List%202016%20Fall" title="Upcoming Bestsellers List 2016 Fall" class="cont" onClick="javascript:pageTracker._trackPageview('/touts/upcomingFBestsellersUpcoming2016fall');">
 
-            <img src="./assets/gfx/ads/static/UpcomingBestsellers.jpg" alt="Upcoming Bestsellers List 2016 Spring">
+            <img src="./assets/gfx/ads/static/UpcomingBestsellers.jpg" alt="Upcoming Bestsellers List 2016 Fall">
 	</a>
 </div><div class="tout">
 	<a href="http://www.opl.on.ca/blog/3dprinter/" class="cont" title="3D Printer" >
@@ -504,18 +521,18 @@
 				<h2>OPL News</h2>
 				<br class="clearfix" style="line-height:0em;">
 						<div class="news_slide_item">
-				<a id="news1" href="http://www.opl.on.ca/blog/2015/05/writing-and-publishing-in-the-digital-age/" title="Writing & Publishing in the Digital Age. Thursday, May 19. Central Branch Auditorium. 7:00 to 8:30pm. 16Y+. Cost: $15/ticket. Tickets available at all branches starting April 21." onClick="javascript:pageTracker._trackPageview('/touts/big/home/Writing Publishing Digital Age');">
-					<img src="http://www.opl.on.ca/blog/wp-content/uploads/2016/04/WritingPublishing.jpg" alt="Writing & Publishing in the Digital Age. Thursday, May 19. Central Branch Auditorium. 7:00 to 8:30pm. 16Y+. Cost: $15/ticket. Tickets available at all branches starting April 21.">
+				<a id="news1" href="http://www.opl.on.ca/blog/2015/09/an-evening-with-emma-donoghue-2/" title="An Evening with Emma Donoghue. Wednesday, September 28. 7pm - 8:30pm. $15/ticket. Click for more information." onClick="javascript:pageTracker._trackPageview('/touts/big/home/Emma Donoghue');">
+					<img src="http://www.opl.on.ca/blog/wp-content/uploads/2016/09/Se28_16_EmmaDonoghueTout.jpg" alt="An Evening with Emma Donoghue. Wednesday, September 28. 7pm - 8:30pm. $15/ticket. Click for more information.">
 				</a>
 				</div>
 								<div class="news_slide_item">
-				<a id="news2" href="http://www.opl.on.ca/blog/1999/04/seniors-series-social-drop-in/" title="Seniors Series. Central Branch Auditorium. Every Wednesday. 10:30am - 12pm. Age: 55+. Cost: FREE. Click here for more information." onClick="javascript:pageTracker._trackPageview('/touts/big/home/Seniors Series 2016');">
-					<img src="http://www.opl.on.ca/blog/wp-content/uploads/2016/04/SeniorSeries_2016.jpg" alt="Seniors Series. Central Branch Auditorium. Every Wednesday. 10:30am - 12pm. Age: 55+. Cost: FREE. Click here for more information.">
+				<a id="news2" href="http://www.opl.on.ca/blog/2015/11/in-conversation-with-charlotte-gray/" title="In Converation with Charlotte Gray, author of The Promise of Canada. Monday, November 27. Oakville Centre for the Performing Arts. 7:00pm. $15 tickets available now. Click for more information." onClick="javascript:pageTracker._trackPageview('/touts/big/home/ICW with Charlotte Gray');">
+					<img src="http://www.opl.on.ca/blog/wp-content/uploads/2016/09/CharlotteGrayTout.png" alt="In Converation with Charlotte Gray, author of The Promise of Canada. Monday, November 27. Oakville Centre for the Performing Arts. 7:00pm. $15 tickets available now. Click for more information.">
 				</a>
 				</div>
 								<div class="news_slide_item">
-				<a id="news3" href="http://www.opl.on.ca/programs/kids" title="Come and learn how to design your own 3D printed item using our Makerbot 3D Printer!" onClick="javascript:pageTracker._trackPageview('/touts/big/home/3D Printing Generic Kids');">
-					<img src="http://www.opl.on.ca/blog/wp-content/uploads/2016/04/3D_Printing_Generic.jpg" alt="Come and learn how to design your own 3D printed item using our Makerbot 3D Printer!">
+				<a id="news3" href="http://www.opl.on.ca/blog/2015/09/evening-for-book-lovers-2/" title="An Evening for Book Lovers. Our librarians share their top picks at this popular event. Tickets on sale online and at all branches August 22, 2016.  Sept 19 / Oakville Centre for the Performing Arts / 7pm. Click for more info." onClick="javascript:pageTracker._trackPageview('/touts/big/home/Evening for book lovers 2016');">
+					<img src="http://www.opl.on.ca/blog/wp-content/uploads/2016/08/Se19_16_EveningforBookLoversTout.jpg" alt="An Evening for Book Lovers. Our librarians share their top picks at this popular event. Tickets on sale online and at all branches August 22, 2016.  Sept 19 / Oakville Centre for the Performing Arts / 7pm. Click for more info.">
 				</a>
 				</div>
 					</div>
@@ -564,51 +581,51 @@
 				</div>
 				<br class="clearfix" style="line-height:0em;">
 						<div class="oplStaffPicks_slide_item item">
-					<a href="https://opl.bibliocommons.com/list/share/68996138_libraryrosanna/627878087_a_little_bit_creepy" title="A Little Bit Creepy.">
-						<img width=108 src="https://secure.syndetics.com/index.aspx?isbn=9780061124297/LC.JPG&client=oakp1&type=xw12&oclc=" alt="A Little Bit Creepy." class="right">
+					<a href="https://opl.bibliocommons.com/list/share/68369006_oplreads/695342257_oakville_reads_room" title="Oakville Reads: Room">
+						<img width=108 src="https://secure.syndetics.com/index.aspx?isbn=9781554688326/MC.GIF&client=oakp1&type=xw12&oclc=" alt="Oakville Reads: Room" class="right">
 					</a>
 					<span class="newsTitle">
-						<a href="https://opl.bibliocommons.com/list/share/68996138_libraryrosanna/627878087_a_little_bit_creepy" title="A Little Bit Creepy.">
-							<h2>A Little Bit Creepy.</h2>
+						<a href="https://opl.bibliocommons.com/list/share/68369006_oplreads/695342257_oakville_reads_room" title="Oakville Reads: Room">
+							<h2>Oakville Reads: Room</h2>
 						</a>
 					</span>
 					<p>
-						Do you enjoy books that make you look over your shoulder? This list doesn't feature horror reads but these slightly creepy books might convince you to turn on an extra light at night.
-					</p>
-					<p>
-						<a href="https://opl.bibliocommons.com/lists/show/68996138_libraryrosanna" title="All Lists From This User">More Lists From This User</a>
-
-					</p>				</div>
-								<div class="oplStaffPicks_slide_item item">
-					<a href="https://opl.bibliocommons.com/list/share/71140095_katehillier/619005497_our_world_but_not" title="Our World But Not">
-						<img width=108 src="https://secure.syndetics.com/index.aspx?isbn=9780241951446/LC.JPG&client=oakp1&type=xw12&oclc=" alt="Our World But Not" class="right">
-					</a>
-					<span class="newsTitle">
-						<a href="https://opl.bibliocommons.com/list/share/71140095_katehillier/619005497_our_world_but_not" title="Our World But Not">
-							<h2>Our World But Not</h2>
-						</a>
-					</span>
-					<p>
-						Check out these titles that take place in a world like ours but just not quite right. Often this is a different version of London, England that we're visiting.
-					</p>
-					<p>
-						<a href="https://opl.bibliocommons.com/lists/show/71140095_katehillier" title="All Lists From This User">More Lists From This User</a>
-
-					</p>				</div>
-								<div class="oplStaffPicks_slide_item item">
-					<a href="https://opl.bibliocommons.com/list/share/68369006_oplreads/625002158" title="Oakville Reads: Big Magic">
-						<img width=108 src="https://secure.syndetics.com/index.aspx?isbn=9781594634710/MC.GIF&client=oakp1&type=xw12&oclc=" alt="Oakville Reads: Big Magic" class="right">
-					</a>
-					<span class="newsTitle">
-						<a href="https://opl.bibliocommons.com/list/share/68369006_oplreads/625002158" title="Oakville Reads: Big Magic">
-							<h2>Oakville Reads: Big Magic</h2>
-						</a>
-					</span>
-					<p>
-						Elizabeth Gilbert's Big Magic works to teach us how to be creative, beyond fear. Join our Goodreads online book club to follow along and contribute to our discussions, and take a look at this list for some similar books you may enjoy.
+						Emma Donaghue visits OPL on September 28 to discuss her new book, The Wonder. In the meantime, our online book club is talking about her bestseller, Room. Please join us!
 					</p>
 					<p>
 						<a href="https://opl.bibliocommons.com/lists/show/68369006_oplreads" title="All Lists From This User">More Lists From This User</a>
+
+					</p>				</div>
+								<div class="oplStaffPicks_slide_item item">
+					<a href="https://opl.bibliocommons.com/list/share/1583642_lms/698382559" title="For Romance Lovers - Ten from Booklist's Best 101">
+						<img width=108 src="https://secure.syndetics.com/index.aspx?isbn=9781619231542/MC.GIF&client=oakp1&type=xw12&oclc=" alt="For Romance Lovers - Ten from Booklist's Best 101" class="right">
+					</a>
+					<span class="newsTitle">
+						<a href="https://opl.bibliocommons.com/list/share/1583642_lms/698382559" title="For Romance Lovers - Ten from Booklist's Best 101">
+							<h2>For Romance Lovers - Ten from Booklist's Best 101</h2>
+						</a>
+					</span>
+					<p>
+						Here are 10 titles to borrow - from ''Booklists annual Spotlight on Romance'' from 2006 through 2015.
+					</p>
+					<p>
+						<a href="https://opl.bibliocommons.com/lists/show/1583642_lms" title="All Lists From This User">More Lists From This User</a>
+
+					</p>				</div>
+								<div class="oplStaffPicks_slide_item item">
+					<a href="https://opl.bibliocommons.com/list/share/1598578_anna/697548797_memoirs_by_indigenous_writers" title="Memoirs by Indigenous Writers">
+						<img width=108 src="https://secure.syndetics.com/index.aspx?isbn=9780889773684/MC.GIF&client=oakp1&type=xw12&oclc=" alt="Memoirs by Indigenous Writers" class="right">
+					</a>
+					<span class="newsTitle">
+						<a href="https://opl.bibliocommons.com/list/share/1598578_anna/697548797_memoirs_by_indigenous_writers" title="Memoirs by Indigenous Writers">
+							<h2>Memoirs by Indigenous Writers</h2>
+						</a>
+					</span>
+					<p>
+						Some great personal stories, all by Indigenous writers living in Canada and the United States. Curated by CBCBooks.
+					</p>
+					<p>
+						<a href="https://opl.bibliocommons.com/lists/show/1598578_anna" title="All Lists From This User">More Lists From This User</a>
 
 					</p>				</div>
 					</div>
@@ -645,16 +662,16 @@
           </div>
           
                   <div class="item">          
-                     <span class="date">Mon, 09 May 2016</span>
-                     <span class="title">Annual Spring Lunch and Show</span>
-                     <a href="./programs/events?e=62804" title="More information about this event." class="more">More &#187;</a>
+                     <span class="date">Sun, 11 Sep 2016</span>
+                     <span class="title">Expert Lecture Series: Our Life With Germs: A Tale of Love and Tolerance</span>
+                     <a href="./programs/events?e=63735" title="More information about this event." class="more">More &#187;</a>
                   </div>
 
 		  
                   <div class="item">          
-                     <span class="date">Mon, 09 May 2016</span>
-                     <span class="title">Volunteer Information Session</span>
-                     <a href="./programs/events?e=62935" title="More information about this event." class="more">More &#187;</a>
+                     <span class="date">Sun, 11 Sep 2016</span>
+                     <span class="title">The Oakville Mutt Strutt</span>
+                     <a href="./programs/events?e=64150" title="More information about this event." class="more">More &#187;</a>
                   </div>
 
 		  

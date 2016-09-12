@@ -45,7 +45,7 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="en" xml:lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- New Relic Header timing -->
-<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQcBWFFADAIFVVVRBw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(14),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,-1!==o.indexOf("dev")&&(s.dev=!0),-1!==o.indexOf("nr_dev")&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f?f.apply(this,a(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(15),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7);t("loader").features.stn=!0,t(6);var c=NREUM.o.EV;o.on("fn-start",function(t,e){var n=t[0];n instanceof c&&(this.bstStart=Date.now())}),o.on("fn-end",function(t,e){var n=t[0];n instanceof c&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),s.on("fn-start",function(){this.bstStart=Date.now()}),s.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on("pushState-start",function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on("pushState-end",function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",r,!1),document.addEventListener("keypress",r,!1),document.addEventListener("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(16)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(16)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(16)(r);e.exports=r,o.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(16)(i);e.exports=i,a.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),a.inPlace(window,["setInterval"],"setInterval-"),a.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),i.on("setInterval-start",r),i.on("setTimer-start",o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",s)}function i(t){w.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<w.length;t++)r([],w[t]);w.length&&(w=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(16)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],w=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;l>r;r++)t.removeEventListener(d[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return i(r)}function i(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}function a(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(11),u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(13),m=window.XMLHttpRequest;s.features.xhr=!0,t(9),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||10>h)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},a(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var a=i(r);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;l>s;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(t,e){return function(){o(t,[(new Date).getTime()].concat(a(arguments)),null,e)}}var o=t("handle"),i=t(14),a=t(15);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var s=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(s,function(t,e){newrelic[e]=r(f+e,"api")}),i(c,function(t,e){newrelic[e]=r(f+e)}),e.exports=newrelic,newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),o("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],14:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],15:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],16:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(15),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);var u=f[v[n]];return u&&u.push([w,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",v[n]=e,e in f||(f[e]=[])})}var m={},v={},w={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return w}function i(){return new r}var a="nr@context",s=t("gos"),c=t(14),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!m++){var t=h.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(l,function(e,n){t[e]||(t[e]=n)});var n="https"===d.split(":")[0]||t.sslForHttp;h.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=h.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(14),f=window,u=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var d=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-918.min.js"},p=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),h=e.exports={offset:a(),origin:d,features:{},xhrWrappable:p};u.addEventListener?(u.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(u.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),s("mark",["firstbyte",a()],null,"api");var m=0},{}]},{},["loader",2,10,4,3]);</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQcBWFFADAIFVVVRBw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-963.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script>
 <link rel="shortcut icon" href="//shard1.sears.ca/wcsstore/SearsSAS/images/icon-favicon.ico" mce_href="//shard1.sears.ca/wcsstore/SearsSAS/images/icon-favicon.ico"/>
 
 
@@ -81,7 +81,7 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="en" xml:lang="en">
 	var storeNLS = null;
 	var storeUserType = "G";
 	var ios = false;
-	var android = true;
+	var android = false;
 	var multiSessionEnabled = false;
 	
 	// Store the amount of time of inactivity before a re-login is required, this value is retrieved from wc-server.xml, default is 30 mins
@@ -545,17 +545,16 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="en" xml:lang="en">
 	
 	
 					<div class="tippy-top">
-<a href="/content/free-shipping?intid=HP_augwk22015_Tippy_Free_Shipping" target="_self">
-<span class="heading-red-md">FREE SHIPPING ON ORDERS OVER $99.</span>
-<span class="heading-blue-md">See details.</span>
+<a href="/content/free-shipping?intid=HP_sepwk22016_Tippy_Free_Shipping" target="_self">
+<span class="heading-red-md">GET FREE SHIPPING ON YOUR ORDER.</span>
+<span class="heading-blue-md">SEE DETAILS.</span>
 <span class="rightArrow"></span>
 </a>
 </div>
 
 <script>$(function(){if($('#searchFormLabel').text()!='') {$('#searchFormLabel').text('');  var $temp=$('#SimpleSearchForm_SearchTerm').attr('placeholder');
 if($('#languageToggle').text()=='English')	{if($temp.indexOf('Recherche')==-1)    $temp='Recherche '+$temp;}    else  {if($temp.indexOf('Search')==-1)
-$temp='Search '+$temp;}  $('#SimpleSearchForm_SearchTerm').attr('placeholder',$temp);}});
-</script>
+$temp='Search '+$temp;}  $('#SimpleSearchForm_SearchTerm').attr('placeholder',$temp);}});</script>
 				
 	
 </div>
@@ -1166,7 +1165,7 @@ $temp='Search '+$temp;}  $('#SimpleSearchForm_SearchTerm').attr('placeholder',$t
     <li class="dropit-trigger">
 		<a class="header-button" role="button" aria-haspopup="true" ><span>Catalogues</span></a>
 		<ul id="dropDownMenuFlyOver2" role="menu" class="headerEspot dropit-submenu" style="display:none;">
-			 <li id="view-catalogues"><a href="/content/publications/virtual-catalog">View our catalogues</a></li>
+			 <li id="view-catalogues"><a href="/content/publications/virtual-catalog?postal_code=M5B2C3">View our catalogues</a></li>
 		        <li id="view-catalogues"><a href="/catalog-request">Request a catalogue</a></li>
 		       <li id="view-catalogues"><a href="/order-from-catalogue">Order from catalogue</a></li>
 		</ul>
@@ -2852,137 +2851,111 @@ function togglecategory(thisobj){$('.subcategoryList1').not('.hide').not($(thiso
 	
 	
 					<style>
-.header_flyover{height: 425px; width: 710px;font-size:13px;font-family:Helvetica;} .header_flyover ul{list-style-type:none;padding:0px;margin:0px 20px 20px 0px;line-height:20px;width:150px;} .flyover-block{float:left;} .flyover-heading{color:#3a7cd2;} .categoryheading{ font-size: 35px;padding: 0;margin: 0;margin-top: 10px;margin-bottom: 10px;color: #8fbae2;font-weight:bold;} </style>
+.header_flyover{height: 380px; width: 710px;font-size:13px;font-family:Helvetica;overflow:hidden;} .header_flyover ul{list-style-type:none;padding:0px;margin:0px 20px 20px 0px;line-height:20px;width:150px;} .header_flyover .flyover-block{float:left;} .header_flyover .flyover-heading{color:#3a7cd2;} .categoryheading{font-size: 35px;padding: 0;margin: 0;margin-top: 10px;margin-bottom: 10px;color: #8fbae2;font-weight:bold;} .flyoverbrandlogos>div{display:inline;padding-right:20px;}  .flyoverbrandlogos img{height:50px;}</style>
+
 
 <div class="categoryheading">Appliances &amp; Electronics</div>
 
 <div class="header_flyover">
 <div class="flyover-block">
 <ul>
-      <li><a href="/catalog/appliances-en-wp-815">
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Major_Appliances');window.location='/catalog/appliances-en-wp-815?intid=HP_flyover_B_TEST_appliances_electronics_Major_Appliances';return false;" >
       <span class="flyover-heading"><strong>Major appliances</strong></span></a>
       </li>
-      <li><a href="/catalog/appliances-fridges-freezers-en-wp-2815">Fridges &amp; freezers</a></li>
-      <li><a href="/catalog/appliances-stoves-ovens-en-wp-859">Stoves &amp; ovens</a></li>
-      <li><a href="/catalog/appliances-dishwashers-en-wp-828">Dishwashers</a></li>
-      <li><a href="/catalog/appliances-washer-dryers-en-wp-3815">Washers &amp; dryers</a></li>
-      <li><a href="/catalog/appliances-en-wp-815">More major appliances...</a></li>
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Fridges');window.location='/catalog/appliances-fridges-freezers-refrigerators-en-wp-832?intid=HP_flyover_B_TEST_appliances_electronics_Fridges'; return false;">Fridges</a></li>
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Freezers');window.location='/catalog/appliances-fridges-freezers-freezers-en-wp-839?intid=HP_flyover_B_TEST_appliances_electronics_Freezers';return false;" >Freezers</a></li>
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Laundry_Pairs');window.location='/catalog/appliances-washer-dryers-laundry-pairs-en-wp-819?intid=HP_flyover_B_TEST_appliances_electronics_Laundry_Pairs';return false;" >Laundry pairs</a></li>
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Washers');window.location='/catalog/appliances-washer-dryers-washers-en-wp-816?intid=HP_flyover_B_TEST_appliances_electronics_Washers';return false;" >Washers</a></li>
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Dryers');window.location='/catalog/appliances-washer-dryers-dryers-en-wp-822?intid=HP_flyover_B_TEST_appliances_electronics_Dryers';return false;" >Dryers</a></li>
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Stoves');window.location='/catalog/appliances-stoves-ovens-stoves-en-wp-843?intid=HP_flyover_B_TEST_appliances_electronics_Stoves';return false;" >Stoves</a></li>
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Wall_Ovens');window.location='/catalog/appliances-stoves-ovens-wall-ovens-en-wp-32859?intid=HP_flyover_B_TEST_appliances_electronics_Wall ovens';return false;" >Wall ovens</a></li>      
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Cooktops');window.location='/catalog/appliances-stoves-ovens-cooktops-en-wp-2859?intid=HP_flyover_B_TEST_appliances_electronics_Cooktops';return false;" >Cooktops</a></li>
+      <li><a onClick="ga('send', 'event', 'Homepage', 'Flyover-1', 'Click', 'Dishwashers');window.location='/catalog/appliances-dishwashers-en-wp-828?intid=HP_flyover_B_TEST_appliances_electronics_Dishwashers';return false;" >Dishwashers</a></li>      
 </ul>
 
-<ul>
-      <li><a href="/catalog/appliances-en-wp-815">
-      <span class="flyover-heading"><strong>Clothing care</strong></span></a>
-      </li>
-      <li><a href="/catalog/appliances-irons-steamers-en-wp-1328">Irons &amp; steamers</a></li>
-      <li><a href="/catalog/appliances-sewing-machines-en-wp-1323">Sewing machines</a></li>
-</ul>
 
 <ul>
-      <li><a href="/catalog/appliances-vacuums-floor-care-en-wp-1316">
-      <span class="flyover-heading"><strong>Vacuums &amp; floor care</strong></span></a>
+      <li><a href="/catalog/appliances-vacuums-floor-care-en-wp-1316?intid=HP_flyover_B_TEST_appliances_electronics_Vacuums_Clothing_Care">
+      <span class="flyover-heading"><strong>Vacuums &amp; Clothing Care</strong></span></a>
       </li>
-      <li><a href="/catalog/appliances-vacuums-floor-care-canister-vacuums-en-wp-1317">Canister vacuums</a></li>
-      <li><a href="/catalog/appliances-vacuums-floor-care-upright-vacuums-en-wp-1318">Upright vacuums</a></li>
-      <li><a href="/catalog/appliances-vacuums-floor-care-en-wp-1316">More vacuums &amp; floor care...</a></li>
+      <li><a href="/catalog/appliances-vacuums-floor-care-canister-vacuums-en-wp-1317?intid=HP_flyover_B_TEST_appliances_electronics_Canister_vacuums">Canister vacuums</a></li>
+      <li><a href="/catalog/appliances-vacuums-floor-care-upright-vacuums-en-wp-1318?intid=HP_flyover_B_TEST_appliances_electronics_Upright_vacuums">Upright vacuums</a></li>
+      <li><a href="/catalog/appliances-vacuums-floor-care-central-vacuums-en-wp-1319?intid=HP_flyover_B_TEST_appliances_electronics_Central_vacuums">Central vacuums</a></li>
+      <li><a href="/catalog/appliances-irons-steamers-en-wp-1328?intid=HP_flyover_B_TEST_appliances_electronics_Irons_Steamers">Irons and steamers</a></li>
+      <li><a href="/catalog/appliances-sewing-machines-accessories-en-wp-1323?intid=HP_flyover_B_TEST_appliances_electronics_Sewing_Machines">Sewing machines</a></li>      
 </ul>
 
 </div>
 
 <div class="flyover-block">
 <ul>
-      <li><a href="/catalog/kitchen-small-appliances-en-wp-873">
-      <span class="flyover-heading"><strong>Small appliances</strong></span></a>
-      </li>
-				<li>
-					<a href="/catalog/kitchen-small-appliances-coffee-makers-en-wp-869198">Coffee makers</a>
-				</li><li>
-					<a href="/catalog/kitchen-small-appliances-mixers-stand-mixers-en-wp-887">Stand mixers</a>
-				</li><li>
-					<a href="/catalog/kitchen-small-appliances-blenders-juicers-en-wp-869191">Blenders</a>
-				    </li><li>
-					<a href="/catalog/appliances-microwaves-en-wp-857">Microwaves</a>
-				</li><li>
-                    <a  href="/catalog/kitchen-small-appliances-en-wp-873">More small appliances...</a>
-				</li>
+	  <li><a href="/catalog/kitchen-small-appliances-en-wp-873?intid=HP_flyover_B_TEST_appliances_electronics_Small_Appliances">
+      <span class="flyover-heading"><strong>Small Appliances</strong></span></a>      </li>
+      <li><a href="/catalog/appliances-microwaves-en-wp-857?intid=HP_flyover_B_TEST_appliances_electronics_Microwaves">Microwaves</a></li>
+      <li><a href="/catalog/kitchen-small-appliances-mixers-stand-mixers-en-wp-887?intid=HP_flyover_B_TEST_appliances_electronics_Stand_Mixers">Stand Mixers</a></li>
+      <li><a href="/catalog/kitchen-small-appliances-coffee-espresso-makers-en-wp-869198?intid=HP_flyover_B_TEST_appliances_electronics_Coffee_makers">Coffee makers</a></li>
+      <li><a href="/catalog/kitchen-small-appliances-food-prep-processors-en-wp-898?intid=HP_flyover_B_TEST_appliances_electronics_Food_Processors">Food prep &amp processors</a></li>
+      <li><a href="/catalog/kitchen-small-appliances-blenders-juicers-en-wp-869191?intid=HP_flyover_B_TEST_appliances_electronics_Blenders">Blenders</a></li>
+      <li><a href="/catalog/kitchen-small-appliances-toasters-toaster-ovens-en-wp-869290?intid=HP_flyover_B_TEST_appliances_electronics_Toasters_Ovens">Toasters &amp; toasters ovens</a></li>
+      <li><a href="/catalog/kitchen-small-appliances-slow-cookers-rice-cookers-en-wp-869284?intid=HP_flyover_B_TEST_appliances_electronics_Slow_cookers">Slow cookers</a></li>
+      <li><a href="/catalog/kitchen-small-appliances-bread-waffle-sandwich-makers-en-wp-869216?intid=HP_flyover_B_TEST_appliances_electronics_Bread_makers">Bread makers</a></li>
+      <li><a href="/catalog/kitchen-small-appliances-cooking-indoor-grills-en-wp-880?intid=HP_flyover_B_TEST_appliances_electronics_Indoor_grills">Indoor grills</a>         
 </ul>
 
 <ul>
-      <li><a href="/catalog/appliances-air-conditioning-heating-en-wp-1370">
-      <span class="flyover-heading"><strong>Cooling &amp; heating</strong></span></a>
+	  <li><a href="/catalog/appliances-air-conditioning-heating-en-wp-1370?intid=HP_flyover_B_TEST_appliances_electronics_Cooling_Heating">
+      <span class="flyover-heading"><strong>Cooling &amp; Heating</strong></span></a>
       </li>
-				<li>
-					<a href="/catalog/furniture-living-room-fireplaces-accessories-en-wp-1272">Fireplaces</a>
-                    </li><li>
-					<a href="/catalog/appliances-air-conditioning-heating-indoor-heaters-en-wp-1274">Indoor Heaters</a>
-					</li><li>
-					<a href="/catalog/appliances-air-conditioning-heating-humidifiers-en-wp-1386">Humidifiers</a>
-               		</li><li>
-					<a href="/catalog/appliances-air-conditioning-heating-air-cleaners-en-wp-1375">Air cleaners</a>
-					</li><li>
-					<a href="/catalog/appliances-air-conditioning-heating-en-wp-1370">More cooling &amp; heating...</a>
-				</li>
+      <li><a href="/catalog/appliances-air-conditioning-heating-portable-air-conditioners-en-wp-1372?intid=HP_flyover_B_TEST_appliances_electronics_Air_conditioning">Air conditioning</a></li>
+      <li><a href="/catalog/appliances-air-conditioning-heating-fans-en-wp-1383?intid=HP_flyover_B_TEST_appliances_electronics_Fans">Fans</a></li>
+      <li><a href="/catalog/appliances-air-conditioning-heating-dehumidifiers-en-wp-1379?intid=HP_flyover_B_TEST_appliances_electronics_Dehumidifiers">Dehumidifiers</a></li>
+      <li><a href="/catalog/appliances-air-conditioning-heating-air-cleaners-en-wp-1375?intid=HP_flyover_B_TEST_appliances_electronics_Air_cleaners">Air cleaners</a></li>
+      <li><a href="/catalog/appliances-air-conditioning-heating-outdoor-heaters-en-wp-21370?intid=HP_flyover_B_TEST_appliances_electronics_Outdoor_heaters">Outdoor heaters</a></li>     
 </ul>
-
-<ul>
-      <li><a href="/catalog/appliances-en-wp-815">
-      <span class="flyover-heading"><strong>See all appliances</strong></span></a>
-      </li>
-</ul>
-
 </div>
 
 <div class="flyover-block">
 <ul>
-      <li><a href="/catalog/electronics-tv-home-theatre-en-wp-914">
-      <span class="flyover-heading"><strong>TV &amp; home theatre</strong></span></a>
+	  <li><a href="/sears-canada-brands?storeId=10151&catalogId=10051&categoryId=12760&pageView=grid&langId=-1&intid=HP_flyover_B_TEST_appliances_electronics_Featured_brands">
+      <span class="flyover-heading"><strong>Featured brands</strong></span></a>
       </li>
-				<li>
-					<a href="/catalog/electronics-tv-home-theatre-televisions-en-wp-919">Televisions</a>
-				</li><li>
-					<a href="/catalog/electronics-tv-home-theatre-home-theatre-systems-en-wp-931">Home theatre</a>
-				</li><li>
-					<a href="/catalog/electronics-tv-home-theatre-blu-ray-players-en-wp-936">Blu-ray players</a>
-				</li><li>
-					<a  href="/catalog/electronics-tv-home-theatre-en-wp-914">More TV &amp; home theatre...</a>
-				</li>
+      <li><a href="/catalog/kenmore-canada-appliances?intid=HP_flyover_B_TEST_appliances_electronics_Kenmore">Kenmore</a></li>
+      <li><a href="/catalog/samsung-canada-appliances?intid=HP_flyover_B_TEST_appliances_electronics_Samsung">Samsung</a></li>
+      <li><a href="/catalog/lg-canada-appliances?intid=HP_flyover_B_TEST_appliances_electronics_LG">LG</a></li>
+      <li><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=12760&brand=%22KitchenAid%C2%AE%22&orderBy=0&intid=HP_flyover_B_TEST_appliances_electronics_KitchenAid">KitchenAid</a></li>
+      <li><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=12760&brand=%22Whirlpool%C2%AE%22&orderBy=0&intid=HP_flyover_B_TEST_appliances_electronics_Whirlpool">Whirlpool</a></li>
+      <li><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=12760&brand=%22GE%22&orderBy=0&intid=HP_flyover_B_TEST_appliances_electronics_GE">GE</a></li>
+      <li><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=12760&brand=%22Frigidaire%C2%AE%22&orderBy=0&intid=HP_flyover_B_TEST_appliances_electronics_Frigidaire">Frigidaire</a></li>
+      <li><a href="/catalog/bosch-canada-appliances?intid=HP_flyover_B_TEST_appliances_electronics_Bosch">Bosch</a></li>
+      <li><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=12760&manufacturer=dyson&orderBy=0&intid=HP_flyover_B_TEST_appliances_electronics_Dyson">Dyson</a></li>             
 </ul>
 
 <ul>
-      <li><a href="/catalog/electronics-en-wp-913">
-      <span class="flyover-heading"><strong>Electronics</strong></span></a>
-      </li>
-				<li>
-					<a href="/catalog/electronics-computers-tablets-en-wp-1001">Computers &amp; tablets</a>
-                       </li><li>
-					<a href="/catalog/electronics-cameras-video-en-wp-946">Cameras &amp; video</a>
-				</li><li>
-					<a href="/catalog/electronics-video-gaming-en-wp-1027">Video gaming</a>
-				</li><li>
-					<a href="/catalog/electronics-mp3-home-audio-en-wp-968">Portable &amp; home audio</a>
-				</li><li>
-					<a href="/catalog/electronics-phones-communication-en-wp-988">Phones &amp; communication</a>
-				</li><li>
-					<a href="/catalog/electronics-movies-music-en-wp-1020">Movies &amp; music</a>
-				</li><li>
-					<a href="/catalog/electronics-security-safety-en-wp-1415">Security &amp; safety</a>
-				</li>
-</ul>
-<ul>
-      <li><a href="/catalog/electronics-en-wp-913">
-      <span class="flyover-heading"><strong>See all electronics...</strong></span></a>
-      </li>
+	  <li><a href="/content/parts-and-service?intid=HP_flyover_B_TEST_appliances_electronics_Parts_Repair_Services"><span class="flyover-heading"><strong>Parts &amp; Repair services</strong></span></a></li>
+	  <li><a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=1&sType=SimpleSearch&metaData=&pageSize=24&manufacturer=&resultCatEntryType=2&catalogId=10051&pageView=grid&searchTerm=&facet=&minPrice=&urlLangId=-1&categoryId=12760&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_flyover_B_TEST_appliances_electronics_New_Arrivals"><span class="flyover-heading"><strong>New Arrivals</strong></span></a></li>
+	  <li><a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=1&sType=SimpleSearch&metaData=&pageSize=24&manufacturer=&resultCatEntryType=2&catalogId=10051&pageView=grid&searchTerm=&facet=&minPrice=&urlLangId=-1&categoryId=12760&storeId=10151&intid=HP_flyover_B_TEST_appliances_electronics_See_All_Appliances"><span class="flyover-heading"><strong>See all Appliances</strong></span></a></li>
+
+	<!--  <li><a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=1&sType=SimpleSearch&metaData=&pageSize=24&manufacturer=&resultCatEntryType=2&catalogId=10051&pageView=grid&searchTerm=&facet=&minPrice=&urlLangId=-1&categoryId=12837&storeId=10151&intid=HP_flyover_B_TEST_appliances_electronics_See_All_Electronics"><span class="flyover-heading"><strong>See all Electronics</strong></span></a></li>-->
+
+	<li><a href="/catalog/electronics-en-wp-913?intid=HP_flyover_B_TEST_appliances_electronics_See_All_Electronics"><span class="flyover-heading"><strong>See all Electronics</strong></span></a></li>
+
+	  <li><a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=1&sType=SimpleSearch&metaData=&pageSize=24&manufacturer=&resultCatEntryType=2&catalogId=10051&pageView=grid&searchTerm=&facet=&minPrice=&urlLangId=-1&categoryId=12760&storeId=10151#facet:&productBeginIndex:0&orderBy:7&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_flyover_B_TEST_appliances_electronics_Sale"><span class="flyover-heading" style="color:#F00;"><strong>Sale</strong></span></a></li>
+	  <li><a href="/outlet/catalog/appliances-en-wp-815?intid=HP_flyover_B_TEST_appliances_electronics_Clearance"><span class="flyover-heading" style="color:#F00;"><strong>Clearance</strong></span></a></li>                         
 </ul>
 </div>
 
 <div class="flyover-block">
-<ul><li><a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=1&sType=SimpleSearch&metaData=&pageSize=24&manufacturer=&resultCatEntryType=2&catalogId=10051&pageView=grid&searchTerm=&facet=&minPrice=&urlLangId=-1&categoryId=12760&storeId=10151#facet:&productBeginIndex:0&orderBy:7&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_marwk22016_appliances_electronics_flyover_major_appliances_on_sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/mar/marwk1/flyout/en/flyout-shop-sale-appliances-en.jpg" alt="Appliances & electronics" /></a></li></ul>
-
-<ul><li><a href="/outlet/catalog/appliances-en-wp-815#facet:&productBeginIndex:0&orderBy:7&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_marwk22016_appliances_electronics_flyover_major_appliances_clearance"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/mar/marwk1/flyout/en/flyout-clearance-appliances-en.jpg" alt="CLEARANCE" /></a></li></ul>
-
+<ul><li><a href="/content/pricematch?intid=HP_flyover_B_TEST_appliances_electronics_Espot1_Price_Match"><img  style="width:170px;"  src="/wcsstore/SearsSAS/images/content/prft_samples/price-match-content.png" alt="Price Match" /></a></li></ul>
 </div>
 
 </div>
 
+<div class="flyoverbrandlogos">
+<div><a href="/catalog/kenmore-canada-appliances?intid=HP_flyover_B_TEST_appliances_electronics_brandlogo_Kenmore"><img src="/wcsstore/SearsSAS/images/brands/brand-logo-kenmore.png" alt="Appliances - Kenmore" /></a></div>
+<div><a href="/catalog/samsung-canada-appliances?intid=HP_flyover_B_TEST_appliances_electronics_brandlogo_Samsung"><img src="/wcsstore/SearsSAS/images/brands/brand-logo-samsung.png" alt="Appliances - Samsung" /></a></div>
+<div><a href="/catalog/lg-canada-appliances?intid=HP_flyover_B_TEST_appliances_electronics_brandlogo_Lg"><img src="/wcsstore/SearsSAS/images/brands/brand-logo-lg.png" alt="Appliances - LG" /></a></div>
+<div><a href="/catalog/SearchDisplay?manufacturer=kitchenAid&catalogId=10051&categoryId=12760&langId=-1&storeId=10151&intid=HP_flyover_B_TEST_appliances_electronics_brandlogo_Kitchenaid"><img src="/wcsstore/SearsSAS/images/brands/brand-logo-kitchenaid.jpg" alt="Appliances - KitchenAid" /></a></div>
+</div>
 				
 	
 </div>
@@ -3116,6 +3089,9 @@ function togglecategory(thisobj){$('.subcategoryList1').not('.hide').not($(thiso
 				</li>
 				<li>
 					<a href="/catalog/fitness-recreation-cardio-training-exercise-bikes-rowers-en-wp-743">Exercise bikes</a>
+				</li>
+                <li>
+					<a href="/catalog/fitness-recreation-camping-recreation-bicycles-en-wp-701">Bicycles</a>
 				</li>
                 <li>
                          <a href="/catalog/fitness-recreation-games-room-en-wp-732">Games room</a>
@@ -3284,9 +3260,10 @@ function togglecategory(thisobj){$('.subcategoryList1').not('.hide').not($(thiso
 </div>
 
 <div class="flyover-block">
-<ul><li><a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=1&sType=SimpleSearch&metaData=&pageSize=24&manufacturer=&resultCatEntryType=2&catalogId=10051&pageView=grid&searchTerm=&facet=&minPrice=&urlLangId=-1&categoryId=13071&storeId=10151#facet:&productBeginIndex:0&orderBy:7&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_marwk22016_furniture_mattresses_flyover_mattresses_on_sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/mar/marwk1/flyout/en/flyout-shop-sale-furniture-en.jpg" alt="Furniture & Mattresses
-" /></a></li></ul>
-<ul><li><a href="/outlet/catalog/mattresses-mattress-only-en-wp-1197#facet:&productBeginIndex:0&orderBy:7&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_marwk22016_furniture_mattresses_flyover_mattresses_clearance"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/mar/marwk1/flyout/en/flyout-clearance-furniture-en.jpg" alt="CLEARANCE" /></a></li></ul>
+<!--<ul><li><a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=1&sType=SimpleSearch&metaData=&pageSize=24&manufacturer=&resultCatEntryType=2&catalogId=10051&pageView=grid&searchTerm=&facet=&minPrice=&urlLangId=-1&categoryId=13071&storeId=10151#facet:&productBeginIndex:0&orderBy:7&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_marwk22016_furniture_mattresses_flyover_mattresses_on_sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/mar/marwk1/flyout/en/flyout-shop-sale-furniture-en.jpg" alt="Furniture & Mattresses
+" /></a></li></ul>-->
+<ul><li><a href="/content/pricematch?intid=HP_flyover_Furniture_Mattress_Espot1_Price_Match"><img style="width:170px;" src="/wcsstore/SearsSAS/images/content/prft_samples/price-match-content.png" alt="Price Match"></a></li></ul>
+<ul><li><a href="/outlet/catalog/mattresses-en-wp-1195?intid=HP_marwk22016_furniture_mattresses_flyover_mattresses_clearance"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/mar/marwk1/flyout/en/flyout-clearance-furniture-en.jpg" alt="CLEARANCE" /></a></li></ul>
 </div>
 
 </div>
@@ -4070,8 +4047,11 @@ function togglecategory(thisobj){$('.subcategoryList1').not('.hide').not($(thiso
       <li><a href="/catalog/men-en-wp-134#brands">
       <span class="flyover-heading"><strong>Shop by brand</strong></span>
       </a></li>
+<li>
+<a href="/wayne-gretzky-collection">No. 99 Wayne Gretzky™</a>
+</li>
 				<li>
-					<a href="/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=24&searchTerm=point+zero%C2%AE+men%27s#facet:-7000000000000016007801111051101163290101114111174&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&">Point Zero&reg;</a>
+					<a href="/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=24&searchTerm=point+zero%C2%AE+men%27s#facet:-7000000000000016007801111051101163290101114111174&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&">Point Point Zero&reg;</a>
 				</li>
 				<li>
 					<a href="/catalog/SearchDisplay?manufacturer=arnold%20palmer&storeId=10151&categoryId=12133">Arnold Palmer&trade;</a>
@@ -4556,16 +4536,17 @@ function togglecategory(thisobj){$('.subcategoryList1').not('.hide').not($(thiso
 <div class="left_espot">
 	
 	
-					    <ul id="flyover-carousel-content" class="bxslider">
-	<li><a href="/onedaysales?intid=HP_maywk12016_hero_tab1_Today_Only_May_09" />
-	<img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/desktop-carousel/hero1b_maywk1_en.jpg" 
-	alt="Today Only" /></a></li>
-    
-<!-- Slide - 2A -->
-	<li><a href="/outdoor?intid=HP_maywk12016_hero_tab2_Outdoor_Style_Featuring_Debbie_Travis" />
-	<img src="/wcsstore/SearsSAS/images/content/2016/home-page/apr/aprwk4/desktop-carousel/hero2a_aprwk4_en_v2.jpg" 
-	alt="Outdoor Style featuring the DEBBIE TRAVIS Collection Exclusively at Sears, everything you need to set your scene. Shop now" /></a></li>
-	</ul>
+					<div style="text-align:center;margin-top:18px;"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/desktop-carousel/hero1a_septwk2_en.jpg" alt="Incredible deals Plus more items priced right" name="IncredibleDealsGraphicEn" width="725" height="385" usemap="#IncredibleDealsMapEn" id="IncredibleDealsGraphicEn" border="0" />
+  <map name="IncredibleDealsMapEn">
+    <area shape="rect" coords="21,231,204,261" href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22634410+%5BIncredible+Deals%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12760&amp;storeId=10151&amp;intid=HP_sepwk2_hero_tab_Incredible_Deals_Major_Appliances"634410+[Incredible+Deals]"&minPrice=&urlLangId=-1&categoryId=12760&storeId=10151&intid=HP_sepwk2_hero_tab1_Incredible_Deals_Major_Appliances" alt="Major appliances">
+    <area shape="rect" coords="229,231,412,261" href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22634410+%5BIncredible+Deals%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12992&amp;storeId=10151&amp;intid=HP_sepwk2_hero_tab_Incredible_Deals_Furniture" alt="Furniture" />
+    <area shape="rect" coords="21,279,204,309" href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A&quot;634410+[Incredible+Deals]&quot;&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=13071&amp;storeId=10151&amp;intid=HP_sepwk2_hero_tab_Incredible_Deals_Mattresses" alt="Mattresses" />
+    <area shape="rect" coords="229,279,412,309" href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%22634410+%5bIncredible+Deals%5d%22&amp;orderBy=16&amp;intid=HP_sepwk2_hero_tab_Incredible_Deals_Shop_All" alt="Shop All" />
+  </map>
+  <map name="GreatCanadianMapMapEn" id="GreatCanadianMapMapEn">
+    <area shape="rect" coords="191,254,359,283" href="#" />
+  </map>
+</div>
 				
 	
 </div>
@@ -4594,72 +4575,209 @@ function togglecategory(thisobj){$('.subcategoryList1').not('.hide').not($(thiso
 <div class="left_espot">
 	
 	
-					<div id="hpfeaturetab-v2" class="mobile-736max" style="margin-top: 0px;">
+					<div id="hpfeaturetab-v2" style="margin-top:-30px;">
 
-<!-- mobile-carousel -->
+<!-- Hero 1A -->
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%22634410+%5bIncredible+Deals%5d%22&amp;orderBy=16&amp;intid=HP_sepwk2_hero_tab_Incredible_Deals_Shop_All"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/desktop-carousel/hero1a_septwk2_mobile_en.jpg" alt="Incredible deals Plus more items priced right. Shop All" /></a>
+</div>
+</div>
+<!-- Hero 1A -->
 
-<div class="hp-feature-tab1"><a href="/onedaysales?intid=HP_maywk12016_feature_tab_Daily_Deals_May_09" /><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/mobile-homepage/hero1b_maywk1_mobile_en.jpg" alt="Love Your Mom 4 Days Only! May 5–8 Unbelievable Deals Just in Time for Mother's Day! up to 50% off selected items Shop now" /></a></div>
-    
-<div class="hp-feature-tab1"><a href="/content/outdoor-style?intid=HP_maywk12016_hero_tab2_Outdoor_Style_Featuring_Debbie_Travis" /><img src="/wcsstore/SearsSAS/images/content/2016/home-page/apr/aprwk4/mobile-homepage/hero2a_aprwk4_mobile_en_v2.jpg" alt="Outdoor Style featuring the DEBBIE TRAVIS Collection Exclusively at Sears, everything you need to set your scene. Shop now" /></a></div>
-
-<!--Featuretab Beginning--> <!-- MAY 9-11 -->
-
-<!--TAB3A-->
-<div class="hp-feature-tab5">
-<div><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_maywk1_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></div>
-<div style="margin-left:-12px;">
-<a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=0&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=&sType=SimpleSearch&metaData=&pageSize=&manufacturer=&resultCatEntryType=&catalogId=10051&pageView=grid&searchTerm=&facet=ads_f16533_ntk_cs%3A%221749603+%5BPrice+Alert%5D%22&minPrice=&urlLangId=-1&categoryId=12001&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:11px;width:90%;" src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_woman_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a>
-
-<a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=0&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=&sType=SimpleSearch&metaData=&pageSize=&manufacturer=&resultCatEntryType=&catalogId=10051&pageView=grid&searchTerm=&facet=ads_f16533_ntk_cs%3A%221749603+%5BPrice+Alert%5D%22&minPrice=&urlLangId=-1&categoryId=12133&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:-3px;width:90%;"  src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_men_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a>
-
-<a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=0&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=&sType=SimpleSearch&metaData=%5BLjava.lang.String%3B%40250e250e&pageSize=&manufacturer=&resultCatEntryType=&catalogId=10051&pageView=grid&searchTerm=&facet=ads_f16533_ntk_cs%3A%221749603+%5BPrice+Alert%5D%22&minPrice=&urlLangId=-1&categoryId=12355&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:-3px;width:90%;"  src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_toys_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a>
-
-<a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=0&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=&sType=SimpleSearch&metaData=%5BLjava.lang.String%3B%402fbf2fbf&pageSize=&manufacturer=&resultCatEntryType=&catalogId=10051&pageView=grid&searchTerm=&facet=ads_f16533_ntk_cs%3A%221749603+%5BPrice+Alert%5D%22&minPrice=&urlLangId=-1&categoryId=13276&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:-3px;width:90%;"  src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_bedding_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a>
-
-<a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221749603+%5bPrice+Alert%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:-3px;width:90%;" src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_shop_all_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a></div>
+<!-- Flash Sale -->
+<!--<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk1/feature-tab/tab1d_septwk1_en.jpg" /></div>
 </div>
 
-<!-- TAB 2E -->
-<div class="hp-feature-tab1 ">
-<div><a href="/content/vip-week?intid=HP_maywk12016_feature_tab_VIP_Week"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/mobile-homepage/tab2e_maywk1_mobile_en.jpg" alt="VIP Week May 5–11, 2016 Up to 60% off selected items, featuring major appliances, furniture, mattresses, fitness, outdoor living and more + items priced right Shop now" /></a></div>
+<div class="hp-feature-tab1 mobile-736max">
+<div><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk1/feature-tab/tab1d_septwk1_mobile_en.jpg" /></div>
+</div>-->
+<!-- Flash Sale -->
+
+<!-- TAGLINE 1 (TAB 1A) -->
+<div class="hp-feature-tab0">
+<div><p>Mattress Shop</p></div>
 </div>
+<!-- TAGLINE 1 (TAB 1A) -->
 
-<!-- TAB 5A -->
-<div class="hp-feature-tab1 ">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%22693458+%5bSpring+Best+Sellers%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Spring’s_Best_Sellers"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/mobile-homepage/tab5a_maywk1_mobile_en.jpg" alt="Spring’s Best Sellers Find great savings on selected items we know you love Shop now" /></a></div>
+<!-- TAB 2A --> <!-- TAB 3A -->
+<div class="hp-feature-tab6">
+<div><a href="/content/pricematch?intid=HP_sepwk22016_feature_tab_Price_Match_Guarantee"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab2a_septwk2_en.jpg" alt="Price Match Guarantee Sleep Sets &amp; Major Appliances We've checked the prices so you don't have to. Find it for less anywhere else and we'll BEAT it by 10% at time of purchase. Guaranteed. Details"></a></div>
+<div><a href="/catalog/mattresses-mattress-only-en-wp-1197?intid=HP_sepwk22016_feature_tab_Shop_All_Mattress"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab3a_septwk2_en.jpg" alt="Shop All Mattresses"></a></div>
 </div>
+<!-- TAB 2A --> <!-- TAB 3A -->
 
-<!-- TAB 7A -->  <!-- TAB 8A -->
-<div class="hp-feature-tab4 ">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221014807+%5bBed+Bath+and+Blinds+Sale%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Bed_Bath_Blinds_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab7a_maywk1_en_v3.jpg" alt="Up to 30% off selected window coverings Shop now" /></a></div>
-
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%22730932+%5bSpring+Home+Makeover%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Spring_Home_Makeover"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab8a_maywk1_en_v3.jpg" alt="Spring Home Makeover We can help with your reno projects up to 40% off selected items Shop now"  /></a></div>
+<!-- TAB 4A --> <!-- TAB 5A -->
+<div class="hp-feature-tab4">
+<div><a href="/product/posture-sleep-r-md-cardiff-tight-top-firm-foam-sleep-sets/601-24246-24246?intid=HP_sepwk22016_feature_tab_Mattress_1"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab4a_septwk2_en.jpg" alt="POSTURE SLEEP®/MD ‘Cardiff’ Tight -top Firm Foam Sleep Set, queen size $319.99 compare at $799.00 Buy now"></a></div>
+<div><a href="/product/sealy-piedra-tight-top-sleep-set/601-15817-15817?intid=HP_sepwk22016_feature_tab_Mattress_2"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab5a_septwk2_en.jpg" alt="Sealy® ’Piedra’ Tight-top Sleep Set, queen size $399.99 compare at $1398.00 Buy now"></a></div>
 </div>
+<!-- TAB 2A --> <!-- TAB 3A -->
 
-<!-- TAB 10A -->
-<div class="hp-feature-tab1 ">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%22737027+%5bSummer+Fashion+Sale%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Summer_Fashions_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/mobile-homepage/tab10a_maywk1_mobile_en_v2.jpg" alt="Summer Fashion Sale Up to 40% off selected items" /></a></div>
+<!-- TAGLINE 2 (TAB 6A) -->
+<div class="hp-feature-tab0">
+<div><p>Everything you need for your bed & bath</p></div>
 </div>
+<!-- TAGLINE 2 (TAB 6A) -->
 
-<!-- TAB 9A --> <!-- TAB 6A -->
-<div class="hp-feature-tab4 ">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%22691853+%5bNewborn+Nesting+Event%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Newborn_Nesting"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab9a_maywk1_en.jpg" alt="Newborn Nesting Event Find great deals on selected items for your bundle of joy Shop now" /></a></div>
-
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221345000+%5bGet+Outside+Sale%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Get_Outside"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab6a_maywk1_en_v2.jpg" alt="Get Outside Up to 50% off selected items Shop now"  /></a></div>
+<!-- TAB 7A --> <!-- TAB 8A --> <!-- TAB 9A -->
+<div class="hp-feature-tab8">
+<div><a href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%221839075+%5bBath%5d%22&amp;orderBy=16&amp;intid=HP_sepwk22016_feature_tab_Towel"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab7a_septwk2_en.jpg" alt="WholeHome®/MD 'Perfect' Collection Bath Sheet Save 30% Now $17.47 Reg. $24.97"></a></div>
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=%5BLjava.lang.String%3B%4015841584&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=13276&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Duvet"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab8a_septwk2_en.jpg" alt="WholeHome®/MD Dreamessence™ Fibre-filled Light-warmth Duvet, twin Now $69.99 Reg. $159.99 Save 56% Plus up to 40% off other selected bedding"></a></div>
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=%5BLjava.lang.String%3B%407d307d30&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=13277&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Sheets"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab9a_septwk2_en.jpg" alt="wholeHome LUXE™/MC Cotton Sateen Open Stock Sheets Now from $29.99 Reg. from $49.99 40% off Plus up to 40% off other selected sheets"></a></div>
 </div>
+<!-- TAB 7A --> <!-- TAB 8A --> <!-- TAB 9A -->
+
+<!-- TAGLINE 3 (TAB 10A) -->
+<div class="hp-feature-tab0">
+<div><p>Sears is your destination for major appliances</p></div>
+</div>
+<!-- TAGLINE 3 (TAB 10A) -->
 
 <!-- TAB 11A -->
-<div class="hp-feature-tab1 ">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221413260+%5bNew+Markdowns+on+Spring+Fashions%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_New_Markdowns_on_Spring_ Fashions!"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/mobile-homepage/tab11a_maywk1_mobile_en.jpg" alt="New Markdowns on Spring Fashions! up to 40% off selected items, while quantities last Shop now" /></a></div>
+<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><a href="/catalog/appliances-en-wp-815?intid=HP_sepwk22016_feature_tab_Shop_All_Major_Appliances"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab11a_septwk2_en.jpg" alt="Sears is Canada’s #1 retailer major appliances* Shop All Major Appliances *Based on survey current at time of ad preparation." /></a></div>
 </div>
 
-<!-- TAB 12A -->
-<div class="hp-feature-tab1 ">
-<div><a href="/content/getthelook?intid=HP_maywk12016_feature_tab_Get_The_Look"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/apr/aprwk4/feature-tab/tab6a_aprwk4_mobile_en.jpg" alt="Get the look! Make trendy style inspirations all your own Shop now"  /></a></div>
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/catalog/appliances-en-wp-815?intid=HP_sepwk22016_feature_tab_Shop_All_Major_Appliances"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab11a_septwk2_mobile_en.jpg" alt="Sears is Canada’s #1 retailer major appliances* Shop All Major Appliances *Based on survey current at time of ad preparation." /></a></div>
+</div>
+<!-- TAB 11A -->
+
+<!-- TAB 12A --> <!-- TAB 13A --> <!-- TAB 14A -->
+<div class="hp-feature-tab8">
+<div><a href="/catalog/appliances-stoves-ovens-stoves-en-wp-843?intid=HP_sepwk22016_feature_tab_Range"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab12a_septwk2_en.jpg" alt="Kenmore Simple Care™ 5.4 cu.ft. Smooth-top 30&quot; Convection Electric Range – Stainless Steel Save $300 Now $899.99 Reg. $1199.99 Shop All STOVES"></a></div>
+<div><a href="/catalog/kitchen-cookware-cookware-sets-en-wp-1354?intid=HP_sepwk22016_feature_tab_Cookware"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab13a_septwk2_en.jpg" alt="Paderno® ‘Copperline’ 11-piece Cookware Set 70% off Now $239.99 Reg. $799.99 Shop ALL Cookware Sets"></a></div>
+<div><a href="/catalog/kitchen-cookware-pans-woks-en-wp-2352?intid=HP_sepwk22016_feature_tab_Frying_Pan"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab14a_septwk2_en.jpg" alt="Ricardo® 9.5&quot; Non-stick Fry Pan $30 off Now $59.99 Reg. $89.99 Shop all Pans"></a></div>
+</div>
+<!-- TAB 12A --> <!-- TAB 13A --> <!-- TAB 14A -->
+
+<!-- TAB 15A -->
+<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><a href="/content/media?intid=HP_sepwk22016_feature_tab_Welcome_Home_20_6"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab15a_septwk2_en.jpg" alt="Welcome Home. Fall 2016 Catalogue. New arrivals! Plus coupons inside. Shop All" /></a></div>
 </div>
 
-<p class="legal-contents">* Excludes clearance.</p>
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/content/media?intid=HP_sepwk22016_feature_tab_Welcome_Home_20_6"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab15a_septwk2_mobile_en.jpg" alt="Welcome Home. Fall 2016 Catalogue. New arrivals! Plus coupons inside. Shop All" /></a></div>
+</div>
+<!-- TAB 15A -->
 
+<!-- TAB 18A --> <!-- TAB 16A --> <!-- TAB 17A -->
+<div class="hp-feature-tab8">
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=%5BLjava.lang.String%3B%40121c121c&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=13149&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Curtains_And_Blinds"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab18a_septwk2_en.jpg" alt="Up to 35% off selected curtains and blinds Shop now"></a></div>
+<div><a href="/product/chamberie-damask-look-pvc-vertical-blinds-ready-made/624-000296830-H920536684R?intid=HP_sepwk22016_feature_tab_Vertical_Blind"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab16a_septwk2_en.jpg" alt="‘Chamberie’ Damask Vertical Blinds 50% off Sale from $49.99 Reg. from $99.99 Buy now"></a></div>
+<div><a href="/product/montego-solid-grommet-panel-curtain/624-24316-624-24316?intid=HP_sepwk22016_feature_tab_Curtain"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab17a_septwk2_en.jpg" alt="‘Montego’ Solid Grommet Panel Now from $16.24 Reg. from $24.99 Save 35% Buy now"></a></div>
+</div>
+<!-- TAB 18A --> <!-- TAB 16A --> <!-- TAB 17A -->
+
+<!-- TAGLINE 4 (TAB 19A) -->
+<div class="hp-feature-tab0">
+<div><p>Everything you need to stay healthy</p></div>
+</div>
+<!-- TAGLINE 4 (TAB 19A) -->
+
+<!-- TAB 20A --> <!-- TAB 21A --> <!-- TAB 22A -->
+<div class="hp-feature-tab8">
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12657&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Fitness_Equip_On_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab20a_septwk2_en.jpg" alt="up to 40% off selected fitness equipment Shop now"></a></div>
+<div><a href="/product/nordictrack-t63-26-chp-treadmill/606-000097485-24996?intid=HP_sepwk22016_feature_tab_Fitness_Treadmill"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab21a_septwk2_en.jpg" alt="NordicTrack® 'T6.3' 2.6 CHP Treadmill 70% off Now $679.99 Reg. $2399.99 Buy now"></a></div>
+<div><a href="/product/breville-juice-fountain-plus/611-000019349-BREJE98XL?intid=HP_sepwk22016_feature_tab_Breville"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab22a_septwk2_en.jpg" alt="Breville® Juice Fountain™ Plus 30% off Now $159.99 Reg. $229.99 Buy now"></a></div>
+</div>
+<!-- TAB 20A --> <!-- TAB 21A --> <!-- TAB 22A -->
+
+<!-- TAB 23A -->
+<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><a href="/content/all-about-fall?intid=HP_sepwk22016_feature_tab_All_About_New_All_About_Fall_20_6"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab23a_septwk2_en.jpg" alt="All About New! All About Fall! Fall 2016 Catalogue. New Arrivals! Plus coupons inside. Shop all" /></a></div>
+</div>
+
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/content/all-about-fall?intid=HP_sepwk22016_feature_tab_All_About_New_All_About_Fall_20_6"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab23a_septwk2_mobile_en.jpg" alt="All About New! All About Fall! Fall 2016 Catalogue. New Arrivals! Plus coupons inside. Shop all" /></a></div>
+</div>
+<!-- TAB 23A -->
+
+<!-- TAGLINE 5 (TAB 24A) -->
+<div class="hp-feature-tab0">
+<div><p>Everything you need for fall</p></div>
+</div>
+<!-- TAGLINE 5 (TAB 24A) -->
+
+<!-- TAB 25A --> <!-- TAB 26A --> <!-- TAB 27A -->
+<div class="hp-feature-tab8">
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12412&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Boots"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab25a_septwk2_en.jpg" alt="Jellypop® Lace-up Women’s Boots 30% off Now $69.99 Reg. $99.99 up to 30% off other selected footwear"></a></div>
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12133&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Men"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab26a_septwk2_en.jpg" alt="Produkt Men’s Nose-knit Top 25% off Now $33.75 Reg. $45.00 up to 25% off other selected menswear"></a></div>
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12001&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Women"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab27a_septwk2_en.jpg" alt="TOM TAILOR Women's Floral Printed Woven Top $45 up to 25% off other selected women’s wear"></a></div>
+</div>
+<!-- TAB 25A --> <!-- TAB 26A --> <!-- TAB 27A -->
+
+<!-- TAB 28A -->
+<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><a href="/tomtailor?intid=HP_sepwk22016_feature_tab_Tom_Tailor_collection"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab28a_septwk2_en.jpg" alt="New at Sears. Tom Tailor. Est. 1962. View Collection" /></a></div>
+</div>
+
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/tomtailor?intid=HP_sepwk22016_feature_tab_Tom_Tailor_collection"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab28a_septwk2_mobile_en.jpg" alt="New at Sears. Tom Tailor. Est. 1962. View Collection" /></a></div>
+</div>
+<!-- TAB 28A -->
+
+<!-- TAGLINE 6 (TAB 29A) -->
+<div class="hp-feature-tab0">
+<div><p>Everything you need for your little one</p></div>
+</div>
+<!-- TAGLINE 6 (TAB 29A) -->
+
+<!-- TAB 30A -->
+<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><a href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%22958647+%5bToy+Sale%5d%22&amp;orderBy=16&amp;intid=HP_sepwk22016_feature_tab_Toy_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab30a_septwk2_en.jpg" alt="Toy Sale. Up to 25% Off selected Toys. Shop Now" /></a></div>
+</div>
+
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%22958647+%5bToy+Sale%5d%22&amp;orderBy=16&amp;intid=HP_sepwk22016_feature_tab_Toy_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab30a_septwk2_mobile_en.jpg" alt="Toy Sale. Up to 25% Off selected Toys. Shop Now" /></a></div>
+</div>
+<!-- TAB 30A -->
+
+<!-- TAB 31A --> <!-- TAB 32A --> <!-- TAB 33A -->
+<div class="hp-feature-tab8">
+<div><a href="/product/disney-frozen-action-elsa/616-000190736-CGH15?intid=HP_sepwk22016_feature_tab_Toy_1"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab31a_septwk2_en.jpg" alt="Disney Frozen™ Action Elsa Now $31.49 Reg. $34.99 Buy now"></a></div>
+<div><a href="/product/the-original-big-wheel-jr-rider/616-000034967-64732?intid=HP_sepwk22016_feature_tab_Toy_2"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab32a_septwk2_en.jpg" alt="The Original Big Wheel™ Jr. Rider Now $47.99 Reg. $59.99 Buy now"></a></div>
+<div><a href="/product/newberrytm-mc-motor-bike-scooter-for-dolls/616-000319376-01125?intid=HP_sepwk22016_feature_tab_Toy_3"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab33a_septwk2_en.jpg" alt="Newberry™/MC Motor Bike/Scooter For Dolls Now $27.99 Reg. $39.99 Buy Now"></a></div>
+</div>
+<!-- TAB 31A --> <!-- TAB 32A --> <!-- TAB 33A -->
+
+<!-- TAB 34A -->
+<div class="hp-feature-tab5 tablet-desktop-contents">
+<div>
+<a href="/baby?intid=HP_sepwk22016_feature_tab_Baby"><img  style="width: 99%;" src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab34a_septwk2_01_en.jpg" alt="Baby. We have everything you need to get ready for baby. From dream nurseries to adorable clothing to travel systems, find it all here! Shop now"></a></div>
+<div><a href="/content/publications/virtual-catalog?flyer_type_name=catalog&amp;flyer_run_id=169508&amp;intid=HP_sepwk22016_feature_tab_Baby_Catalogue"><img style="width: 105%; margin-left: -19px;" src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab34a_septwk2_02_en.jpg" alt="Baby. Shop our online catalogue"></a></div>
+</div>
+
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/baby?intid=HP_sepwk22016_feature_tab_Baby"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab34a_septwk2_01_mobile_en.jpg" alt="Baby. We have everything you need to get ready for baby. From dream nurseries to adorable clothing to travel systems, find it all here! Shop now"></a></div>
+<div><a href="/content/publications/virtual-catalog?flyer_type_name=catalog&amp;flyer_run_id=169508&amp;intid=HP_sepwk22016_feature_tab_Baby_Catalogue"><img style="margin-top:-14px;" src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab34a_septwk2_02_mobile_en.jpg" alt="Baby. Shop our online catalogue"></a></div>
+</div>
+<!-- TAB 34A -->
+
+<!-- TAGLINE 7 (TAB 35A) -->
+<div class="hp-feature-tab0">
+<div><p>We're your destination for...</p></div>
+</div>
+<!-- TAGLINE 7 (TAB 35A) -->
+
+<!-- TAB 36A --> <!-- TAB 37A --> <!-- TAB 38A -->
+<div class="hp-feature-tab8">
+<div><a href="/catalog/luggage-en-wp-1722?intid=HP_sepwk22016_feature_tab_Luggage"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab36a_septwk2_en.jpg" alt="Luggage"></a></div>
+<div><a href="/catalog/beauty-fragrance-en-wp-451?intid=HP_sepwk22016_feature_tab_Beauty"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab37a_septwk2_en.jpg" alt="Beauty"></a></div>
+<div><a href="/catalog/women-intimates-en-wp-52?intid=HP_sepwk22016_feature_tab_Womens_Intimates"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab38a_septwk2_en.jpg" alt="Women's Intimates"></a></div>
+</div>
+<!-- TAB 36A --> <!-- TAB 37A --> <!-- TAB 38A -->
+
+<!-- LEGAL -->
+<!--<p>&nbsp;</p>-->
+<div class="hp-feature-tab1">
+<p class="legal-contents">Quoted savings on <a style="color:#3a7cd2" href="https://www.sears.ca">sears.ca</a> are off Sears regular prices, and exclude clearance, unless otherwise stated. Offers and prices in Sears catalogues and Sears retail stores may vary. Offers are subject to change without notice.</p>
+<p class="legal-contents">&nbsp;</p>
+<!--<p class="legal-contents">** Based on survey current at time of ad preparation.</p>-->
+<p class="legal-contents">&nbsp;</p>
+<!-- LEGAL -->
+</div>
 </div>
 				
 	
@@ -4694,26 +4812,7 @@ function togglecategory(thisobj){$('.subcategoryList1').not('.hide').not($(thiso
 					  PasswordResetNotify.jsp, WishlistCreateNotify.jsp,  LandingPage.jsp, 	
 					  ShippingDetailDisplay.jsp, ShopCartDisplay.jsp, StaticContent, 
 					  Static JSPs, Footer_UI.jsp, Header_UI.jsp, ProductDescription_UI.jsp  
-					  UserTime--><!-- BEGIN ContentRecommendation_UI.jspf -->
-			<div id="contentRecommendationWidget_1_-1012_3074457345618266530" class="contentRecommendationWidget" >
-			<!-- BEGIN Content_UI.jspf -->
-
-<div class="left_espot">
-	
-	
-					<div class="global_marquee" style="width:725px;float:right;">
-	<a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221749603+%5bPrice+Alert%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_hp_marquee_Price_Alert" target="_self">
-	<span class="heading-red-md">Price Alert! </span>
-	<span class="heading-blue-md">Up to 55% off selected items to update your life. Shop</span><span class="rightArrow"></span>
-	</a>
-</div>
-				
-	
-</div>
-
-<!-- END Content_UI.jspf -->
-			</div>
-		<!-- END ContentRecommendation_UI.jspf --><!-- END ContentRecommendation.jsp --><!-- BEGIN CategoryRecommendation.jsp --><!-- END CategoryRecommendation.jsp --><!-- BEGIN CatalogEntryRecommendation.jsp -->
+					  UserTime--><!-- END ContentRecommendation.jsp --><!-- BEGIN CategoryRecommendation.jsp --><!-- END CategoryRecommendation.jsp --><!-- BEGIN CatalogEntryRecommendation.jsp -->
 
 <script type="text/javascript">
 	dojo.addOnLoad(function() { 
@@ -4793,73 +4892,209 @@ function togglecategory(thisobj){$('.subcategoryList1').not('.hide').not($(thiso
 <div class="left_espot">
 	
 	
-					<!-- MAY 9 - 11 -->
-<style>
-.grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
-</style>
+					<div id="hpfeaturetab-v2" style="margin-top:-30px;">
 
+<!-- Hero 1A -->
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%22634410+%5bIncredible+Deals%5d%22&amp;orderBy=16&amp;intid=HP_sepwk2_hero_tab_Incredible_Deals_Shop_All"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/desktop-carousel/hero1a_septwk2_mobile_en.jpg" alt="Incredible deals Plus more items priced right. Shop All" /></a>
+</div>
+</div>
+<!-- Hero 1A -->
 
-<div id="hpfeaturetab-v2">
-
-
-<!--TAB3A-->
-<div class="hp-feature-tab5 tablet-desktop-contents">
-<div><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_maywk1_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></div>
-<div style="margin-left:10px;">
-<a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=0&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=&sType=SimpleSearch&metaData=&pageSize=&manufacturer=&resultCatEntryType=&catalogId=10051&pageView=grid&searchTerm=&facet=ads_f16533_ntk_cs%3A%221749603+%5BPrice+Alert%5D%22&minPrice=&urlLangId=-1&categoryId=12001&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:10px;width:90%;" src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_woman_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a>
-
-<a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=0&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=&sType=SimpleSearch&metaData=&pageSize=&manufacturer=&resultCatEntryType=&catalogId=10051&pageView=grid&searchTerm=&facet=ads_f16533_ntk_cs%3A%221749603+%5BPrice+Alert%5D%22&minPrice=&urlLangId=-1&categoryId=12133&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:-3px;width:90%;"  src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_men_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a>
-
-<a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=0&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=&sType=SimpleSearch&metaData=%5BLjava.lang.String%3B%40250e250e&pageSize=&manufacturer=&resultCatEntryType=&catalogId=10051&pageView=grid&searchTerm=&facet=ads_f16533_ntk_cs%3A%221749603+%5BPrice+Alert%5D%22&minPrice=&urlLangId=-1&categoryId=12355&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:-3px;width:90%;"  src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_toys_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a>
-
-<a href="/SearchDisplay?searchTermScope=&searchType=1002&filterTerm=&orderBy=0&maxPrice=&brand=&top_category=&showResultsPage=true&langId=-1&beginIndex=0&advancedSearch=&sType=SimpleSearch&metaData=%5BLjava.lang.String%3B%402fbf2fbf&pageSize=&manufacturer=&resultCatEntryType=&catalogId=10051&pageView=grid&searchTerm=&facet=ads_f16533_ntk_cs%3A%221749603+%5BPrice+Alert%5D%22&minPrice=&urlLangId=-1&categoryId=13276&storeId=10151#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:-3px;width:90%;"  src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_bedding_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a>
-
-<a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221749603+%5bPrice+Alert%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Price_Alert"><img class="grow" style="margin-top:-5px;width:90%;" src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab3a_shop_all_en_v2.jpg" alt="Price Alert Up to 55% off selected items Shop now"  /></a></div>
+<!-- Flash Sale -->
+<!--<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk1/feature-tab/tab1d_septwk1_en.jpg" /></div>
 </div>
 
-<!-- TAB 4A -->
-<div class="hp-feature-tab1 tablet-desktop-contents">
-<div><a href="/content/vip-week?intid=HP_maywk12016_feature_tab_VIP_Week"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab2e_maywk1_en.jpg" alt="VIP Week
-May 5–11 Online-exclusive Great savings on selected major appliances, furniture, mattresses, fitness, outdoor living + more Shop now" /></a></div>
+<div class="hp-feature-tab1 mobile-736max">
+<div><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk1/feature-tab/tab1d_septwk1_mobile_en.jpg" /></div>
+</div>-->
+<!-- Flash Sale -->
+
+<!-- TAGLINE 1 (TAB 1A) -->
+<div class="hp-feature-tab0">
+<div><p>Mattress Shop</p></div>
 </div>
+<!-- TAGLINE 1 (TAB 1A) -->
 
-<!-- TAB 5A -->
-<div class="hp-feature-tab1 tablet-desktop-contents">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%22693458+%5bSpring+Best+Sellers%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Spring’s_Best_Sellers"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab5a_maywk1_en.jpg" alt="Spring’s Best Sellers Find great savings on selected items we know you love Shop now" /></a></div>
+<!-- TAB 2A --> <!-- TAB 3A -->
+<div class="hp-feature-tab6">
+<div><a href="/content/pricematch?intid=HP_sepwk22016_feature_tab_Price_Match_Guarantee"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab2a_septwk2_en.jpg" alt="Price Match Guarantee Sleep Sets &amp; Major Appliances We've checked the prices so you don't have to. Find it for less anywhere else and we'll BEAT it by 10% at time of purchase. Guaranteed. Details"></a></div>
+<div><a href="/catalog/mattresses-mattress-only-en-wp-1197?intid=HP_sepwk22016_feature_tab_Shop_All_Mattress"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab3a_septwk2_en.jpg" alt="Shop All Mattresses"></a></div>
 </div>
+<!-- TAB 2A --> <!-- TAB 3A -->
 
-<!-- TAB 7A -->  <!-- TAB 8A -->
-<div class="hp-feature-tab4 tablet-desktop-contents">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221014807+%5bBed+Bath+and+Blinds+Sale%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Bed_Bath_Blinds_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab7a_maywk1_en_v3.jpg" alt="Up to 30% off selected window coverings Shop now" /></a></div>
-
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%22730932+%5bSpring+Home+Makeover%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Spring_Home_Makeover"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab8a_maywk1_en_v3.jpg" alt="Spring Home Makeover We can help with your reno projects up to 40% off selected items Shop now"  /></a></div>
+<!-- TAB 4A --> <!-- TAB 5A -->
+<div class="hp-feature-tab4">
+<div><a href="/product/posture-sleep-r-md-cardiff-tight-top-firm-foam-sleep-sets/601-24246-24246?intid=HP_sepwk22016_feature_tab_Mattress_1"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab4a_septwk2_en.jpg" alt="POSTURE SLEEP®/MD ‘Cardiff’ Tight -top Firm Foam Sleep Set, queen size $319.99 compare at $799.00 Buy now"></a></div>
+<div><a href="/product/sealy-piedra-tight-top-sleep-set/601-15817-15817?intid=HP_sepwk22016_feature_tab_Mattress_2"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab5a_septwk2_en.jpg" alt="Sealy® ’Piedra’ Tight-top Sleep Set, queen size $399.99 compare at $1398.00 Buy now"></a></div>
 </div>
+<!-- TAB 2A --> <!-- TAB 3A -->
 
-<!-- TAB 10A -->
-<div class="hp-feature-tab1 tablet-desktop-contents">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%22737027+%5bSummer+Fashion+Sale%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Summer_Fashions_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab10a_maywk1_en_v2.jpg" alt="Summer Fashion Sale Up to 40% off selected items" /></a></div>
+<!-- TAGLINE 2 (TAB 6A) -->
+<div class="hp-feature-tab0">
+<div><p>Everything you need for your bed & bath</p></div>
 </div>
+<!-- TAGLINE 2 (TAB 6A) -->
 
-<!-- TAB 9A --> <!-- TAB 6A -->
-<div class="hp-feature-tab4 tablet-desktop-contents">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%22691853+%5bNewborn+Nesting+Event%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Newborn_Nesting"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab9a_maywk1_en.jpg" alt="Newborn Nesting Event Find great deals on selected items for your bundle of joy Shop now" /></a></div>
-
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221345000+%5bGet+Outside+Sale%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_Get_Outside"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab6a_maywk1_en_v2.jpg" alt="Get Outside Up to 50% off selected items Shop now"  /></a></div>
+<!-- TAB 7A --> <!-- TAB 8A --> <!-- TAB 9A -->
+<div class="hp-feature-tab8">
+<div><a href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%221839075+%5bBath%5d%22&amp;orderBy=16&amp;intid=HP_sepwk22016_feature_tab_Towel"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab7a_septwk2_en.jpg" alt="WholeHome®/MD 'Perfect' Collection Bath Sheet Save 30% Now $17.47 Reg. $24.97"></a></div>
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=%5BLjava.lang.String%3B%4015841584&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=13276&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Duvet"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab8a_septwk2_en.jpg" alt="WholeHome®/MD Dreamessence™ Fibre-filled Light-warmth Duvet, twin Now $69.99 Reg. $159.99 Save 56% Plus up to 40% off other selected bedding"></a></div>
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=%5BLjava.lang.String%3B%407d307d30&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=13277&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Sheets"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab9a_septwk2_en.jpg" alt="wholeHome LUXE™/MC Cotton Sateen Open Stock Sheets Now from $29.99 Reg. from $49.99 40% off Plus up to 40% off other selected sheets"></a></div>
 </div>
+<!-- TAB 7A --> <!-- TAB 8A --> <!-- TAB 9A -->
+
+<!-- TAGLINE 3 (TAB 10A) -->
+<div class="hp-feature-tab0">
+<div><p>Sears is your destination for major appliances</p></div>
+</div>
+<!-- TAGLINE 3 (TAB 10A) -->
 
 <!-- TAB 11A -->
 <div class="hp-feature-tab1 tablet-desktop-contents">
-<div><a href="/SearchDisplay?langId=-1&storeId=10151&catalogId=10051&categoryId=&facet=ads_f16533_ntk_cs%3a%221413260+%5bNew+Markdowns+on+Spring+Fashions%5d%22&orderBy=0#facet:&productBeginIndex:0&orderBy:6&pageView:grid&minPrice:&maxPrice:&pageSize:&intid=HP_maywk12016_feature_tab_New_Markdowns_on_Spring_ Fashions!"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/may/maywk1/feature-tab/tab11a_maywk1_en.jpg" alt="New Markdowns on Spring Fashions! up to 40% off selected items, while quantities last Shop now" /></a></div>
+<div><a href="/catalog/appliances-en-wp-815?intid=HP_sepwk22016_feature_tab_Shop_All_Major_Appliances"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab11a_septwk2_en.jpg" alt="Sears is Canada’s #1 retailer major appliances* Shop All Major Appliances *Based on survey current at time of ad preparation." /></a></div>
 </div>
 
-<!-- TAB 12A -->
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/catalog/appliances-en-wp-815?intid=HP_sepwk22016_feature_tab_Shop_All_Major_Appliances"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab11a_septwk2_mobile_en.jpg" alt="Sears is Canada’s #1 retailer major appliances* Shop All Major Appliances *Based on survey current at time of ad preparation." /></a></div>
+</div>
+<!-- TAB 11A -->
+
+<!-- TAB 12A --> <!-- TAB 13A --> <!-- TAB 14A -->
+<div class="hp-feature-tab8">
+<div><a href="/catalog/appliances-stoves-ovens-stoves-en-wp-843?intid=HP_sepwk22016_feature_tab_Range"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab12a_septwk2_en.jpg" alt="Kenmore Simple Care™ 5.4 cu.ft. Smooth-top 30&quot; Convection Electric Range – Stainless Steel Save $300 Now $899.99 Reg. $1199.99 Shop All STOVES"></a></div>
+<div><a href="/catalog/kitchen-cookware-cookware-sets-en-wp-1354?intid=HP_sepwk22016_feature_tab_Cookware"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab13a_septwk2_en.jpg" alt="Paderno® ‘Copperline’ 11-piece Cookware Set 70% off Now $239.99 Reg. $799.99 Shop ALL Cookware Sets"></a></div>
+<div><a href="/catalog/kitchen-cookware-pans-woks-en-wp-2352?intid=HP_sepwk22016_feature_tab_Frying_Pan"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab14a_septwk2_en.jpg" alt="Ricardo® 9.5&quot; Non-stick Fry Pan $30 off Now $59.99 Reg. $89.99 Shop all Pans"></a></div>
+</div>
+<!-- TAB 12A --> <!-- TAB 13A --> <!-- TAB 14A -->
+
+<!-- TAB 15A -->
 <div class="hp-feature-tab1 tablet-desktop-contents">
-<div><a href="/content/getthelook?intid=HP_maywk12016_feature_tab_Get_The_Look"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/apr/aprwk4/feature-tab/tab6a_aprwk4_en.jpg" alt="Get the look! Make trendy style inspirations all your own Shop now"  /></a></div>
+<div><a href="/content/media?intid=HP_sepwk22016_feature_tab_Welcome_Home_20_6"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab15a_septwk2_en.jpg" alt="Welcome Home. Fall 2016 Catalogue. New arrivals! Plus coupons inside. Shop All" /></a></div>
 </div>
 
-<p class="legal-contents">* Excludes clearance.</p>
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/content/media?intid=HP_sepwk22016_feature_tab_Welcome_Home_20_6"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab15a_septwk2_mobile_en.jpg" alt="Welcome Home. Fall 2016 Catalogue. New arrivals! Plus coupons inside. Shop All" /></a></div>
+</div>
+<!-- TAB 15A -->
 
+<!-- TAB 18A --> <!-- TAB 16A --> <!-- TAB 17A -->
+<div class="hp-feature-tab8">
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=%5BLjava.lang.String%3B%40121c121c&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=13149&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Curtains_And_Blinds"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab18a_septwk2_en.jpg" alt="Up to 35% off selected curtains and blinds Shop now"></a></div>
+<div><a href="/product/chamberie-damask-look-pvc-vertical-blinds-ready-made/624-000296830-H920536684R?intid=HP_sepwk22016_feature_tab_Vertical_Blind"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab16a_septwk2_en.jpg" alt="‘Chamberie’ Damask Vertical Blinds 50% off Sale from $49.99 Reg. from $99.99 Buy now"></a></div>
+<div><a href="/product/montego-solid-grommet-panel-curtain/624-24316-624-24316?intid=HP_sepwk22016_feature_tab_Curtain"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab17a_septwk2_en.jpg" alt="‘Montego’ Solid Grommet Panel Now from $16.24 Reg. from $24.99 Save 35% Buy now"></a></div>
+</div>
+<!-- TAB 18A --> <!-- TAB 16A --> <!-- TAB 17A -->
+
+<!-- TAGLINE 4 (TAB 19A) -->
+<div class="hp-feature-tab0">
+<div><p>Everything you need to stay healthy</p></div>
+</div>
+<!-- TAGLINE 4 (TAB 19A) -->
+
+<!-- TAB 20A --> <!-- TAB 21A --> <!-- TAB 22A -->
+<div class="hp-feature-tab8">
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12657&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Fitness_Equip_On_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab20a_septwk2_en.jpg" alt="up to 40% off selected fitness equipment Shop now"></a></div>
+<div><a href="/product/nordictrack-t63-26-chp-treadmill/606-000097485-24996?intid=HP_sepwk22016_feature_tab_Fitness_Treadmill"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab21a_septwk2_en.jpg" alt="NordicTrack® 'T6.3' 2.6 CHP Treadmill 70% off Now $679.99 Reg. $2399.99 Buy now"></a></div>
+<div><a href="/product/breville-juice-fountain-plus/611-000019349-BREJE98XL?intid=HP_sepwk22016_feature_tab_Breville"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab22a_septwk2_en.jpg" alt="Breville® Juice Fountain™ Plus 30% off Now $159.99 Reg. $229.99 Buy now"></a></div>
+</div>
+<!-- TAB 20A --> <!-- TAB 21A --> <!-- TAB 22A -->
+
+<!-- TAB 23A -->
+<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><a href="/content/all-about-fall?intid=HP_sepwk22016_feature_tab_All_About_New_All_About_Fall_20_6"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab23a_septwk2_en.jpg" alt="All About New! All About Fall! Fall 2016 Catalogue. New Arrivals! Plus coupons inside. Shop all" /></a></div>
+</div>
+
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/content/all-about-fall?intid=HP_sepwk22016_feature_tab_All_About_New_All_About_Fall_20_6"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab23a_septwk2_mobile_en.jpg" alt="All About New! All About Fall! Fall 2016 Catalogue. New Arrivals! Plus coupons inside. Shop all" /></a></div>
+</div>
+<!-- TAB 23A -->
+
+<!-- TAGLINE 5 (TAB 24A) -->
+<div class="hp-feature-tab0">
+<div><p>Everything you need for fall</p></div>
+</div>
+<!-- TAGLINE 5 (TAB 24A) -->
+
+<!-- TAB 25A --> <!-- TAB 26A --> <!-- TAB 27A -->
+<div class="hp-feature-tab8">
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12412&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Boots"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab25a_septwk2_en.jpg" alt="Jellypop® Lace-up Women’s Boots 30% off Now $69.99 Reg. $99.99 up to 30% off other selected footwear"></a></div>
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12133&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Men"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab26a_septwk2_en.jpg" alt="Produkt Men’s Nose-knit Top 25% off Now $33.75 Reg. $45.00 up to 25% off other selected menswear"></a></div>
+<div><a href="/SearchDisplay?searchTermScope=&amp;searchType=1002&amp;filterTerm=&amp;orderBy=16&amp;maxPrice=&amp;brand=&amp;top_category=&amp;showResultsPage=true&amp;langId=-1&amp;beginIndex=0&amp;advancedSearch=&amp;sType=SimpleSearch&amp;metaData=&amp;pageSize=&amp;manufacturer=&amp;resultCatEntryType=&amp;catalogId=10051&amp;pageView=grid&amp;searchTerm=&amp;facet=ads_f16533_ntk_cs%3A%22826060+%5BSears+On+Sale%5D%22&amp;minPrice=&amp;urlLangId=-1&amp;categoryId=12001&amp;storeId=10151&amp;intid=HP_sepwk22016_feature_tab_Women"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab27a_septwk2_en.jpg" alt="TOM TAILOR Women's Floral Printed Woven Top $45 up to 25% off other selected women’s wear"></a></div>
+</div>
+<!-- TAB 25A --> <!-- TAB 26A --> <!-- TAB 27A -->
+
+<!-- TAB 28A -->
+<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><a href="/tomtailor?intid=HP_sepwk22016_feature_tab_Tom_Tailor_collection"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab28a_septwk2_en.jpg" alt="New at Sears. Tom Tailor. Est. 1962. View Collection" /></a></div>
+</div>
+
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/tomtailor?intid=HP_sepwk22016_feature_tab_Tom_Tailor_collection"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab28a_septwk2_mobile_en.jpg" alt="New at Sears. Tom Tailor. Est. 1962. View Collection" /></a></div>
+</div>
+<!-- TAB 28A -->
+
+<!-- TAGLINE 6 (TAB 29A) -->
+<div class="hp-feature-tab0">
+<div><p>Everything you need for your little one</p></div>
+</div>
+<!-- TAGLINE 6 (TAB 29A) -->
+
+<!-- TAB 30A -->
+<div class="hp-feature-tab1 tablet-desktop-contents">
+<div><a href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%22958647+%5bToy+Sale%5d%22&amp;orderBy=16&amp;intid=HP_sepwk22016_feature_tab_Toy_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab30a_septwk2_en.jpg" alt="Toy Sale. Up to 25% Off selected Toys. Shop Now" /></a></div>
+</div>
+
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/SearchDisplay?langId=-1&amp;storeId=10151&amp;catalogId=10051&amp;categoryId=&amp;facet=ads_f16533_ntk_cs%3a%22958647+%5bToy+Sale%5d%22&amp;orderBy=16&amp;intid=HP_sepwk22016_feature_tab_Toy_Sale"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab30a_septwk2_mobile_en.jpg" alt="Toy Sale. Up to 25% Off selected Toys. Shop Now" /></a></div>
+</div>
+<!-- TAB 30A -->
+
+<!-- TAB 31A --> <!-- TAB 32A --> <!-- TAB 33A -->
+<div class="hp-feature-tab8">
+<div><a href="/product/disney-frozen-action-elsa/616-000190736-CGH15?intid=HP_sepwk22016_feature_tab_Toy_1"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab31a_septwk2_en.jpg" alt="Disney Frozen™ Action Elsa Now $31.49 Reg. $34.99 Buy now"></a></div>
+<div><a href="/product/the-original-big-wheel-jr-rider/616-000034967-64732?intid=HP_sepwk22016_feature_tab_Toy_2"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab32a_septwk2_en.jpg" alt="The Original Big Wheel™ Jr. Rider Now $47.99 Reg. $59.99 Buy now"></a></div>
+<div><a href="/product/newberrytm-mc-motor-bike-scooter-for-dolls/616-000319376-01125?intid=HP_sepwk22016_feature_tab_Toy_3"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab33a_septwk2_en.jpg" alt="Newberry™/MC Motor Bike/Scooter For Dolls Now $27.99 Reg. $39.99 Buy Now"></a></div>
+</div>
+<!-- TAB 31A --> <!-- TAB 32A --> <!-- TAB 33A -->
+
+<!-- TAB 34A -->
+<div class="hp-feature-tab5 tablet-desktop-contents">
+<div>
+<a href="/baby?intid=HP_sepwk22016_feature_tab_Baby"><img  style="width: 99%;" src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab34a_septwk2_01_en.jpg" alt="Baby. We have everything you need to get ready for baby. From dream nurseries to adorable clothing to travel systems, find it all here! Shop now"></a></div>
+<div><a href="/content/publications/virtual-catalog?flyer_type_name=catalog&amp;flyer_run_id=169508&amp;intid=HP_sepwk22016_feature_tab_Baby_Catalogue"><img style="width: 105%; margin-left: -19px;" src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab34a_septwk2_02_en.jpg" alt="Baby. Shop our online catalogue"></a></div>
+</div>
+
+<div class="hp-feature-tab1 mobile-736max">
+<div><a href="/baby?intid=HP_sepwk22016_feature_tab_Baby"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab34a_septwk2_01_mobile_en.jpg" alt="Baby. We have everything you need to get ready for baby. From dream nurseries to adorable clothing to travel systems, find it all here! Shop now"></a></div>
+<div><a href="/content/publications/virtual-catalog?flyer_type_name=catalog&amp;flyer_run_id=169508&amp;intid=HP_sepwk22016_feature_tab_Baby_Catalogue"><img style="margin-top:-14px;" src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab34a_septwk2_02_mobile_en.jpg" alt="Baby. Shop our online catalogue"></a></div>
+</div>
+<!-- TAB 34A -->
+
+<!-- TAGLINE 7 (TAB 35A) -->
+<div class="hp-feature-tab0">
+<div><p>We're your destination for...</p></div>
+</div>
+<!-- TAGLINE 7 (TAB 35A) -->
+
+<!-- TAB 36A --> <!-- TAB 37A --> <!-- TAB 38A -->
+<div class="hp-feature-tab8">
+<div><a href="/catalog/luggage-en-wp-1722?intid=HP_sepwk22016_feature_tab_Luggage"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab36a_septwk2_en.jpg" alt="Luggage"></a></div>
+<div><a href="/catalog/beauty-fragrance-en-wp-451?intid=HP_sepwk22016_feature_tab_Beauty"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab37a_septwk2_en.jpg" alt="Beauty"></a></div>
+<div><a href="/catalog/women-intimates-en-wp-52?intid=HP_sepwk22016_feature_tab_Womens_Intimates"><img src="/wcsstore/SearsSAS/images/content/2016/home-page/sep/sepwk2/feature-tab/tab38a_septwk2_en.jpg" alt="Women's Intimates"></a></div>
+</div>
+<!-- TAB 36A --> <!-- TAB 37A --> <!-- TAB 38A -->
+
+<!-- LEGAL -->
+<!--<p>&nbsp;</p>-->
+<div class="hp-feature-tab1">
+<p class="legal-contents">Quoted savings on <a style="color:#3a7cd2" href="https://www.sears.ca">sears.ca</a> are off Sears regular prices, and exclude clearance, unless otherwise stated. Offers and prices in Sears catalogues and Sears retail stores may vary. Offers are subject to change without notice.</p>
+<p class="legal-contents">&nbsp;</p>
+<!--<p class="legal-contents">** Based on survey current at time of ad preparation.</p>-->
+<p class="legal-contents">&nbsp;</p>
+<!-- LEGAL -->
+</div>
 </div>
 				
 	
@@ -5278,7 +5513,7 @@ cursor:pointer;
 	     
         <li><a href="/content/customer-support" target="_self">See More</a></li>
 
-
+<li style="color:#3a7cd2;margin-top:15px;"><a href="http://goo.gl/forms/rqMnWuYZMcYIKvVK2" target="_blank">Help us improve sears.ca</a></li>
 </ul>
 
 
@@ -5358,11 +5593,11 @@ cursor:pointer;
 <h3 class="footer non-toggle" >Sears Club<sup>TM</sup><br />Rewards Program</h3>
 <div class="content">
 <ul>
-	 <li><a href="/searsclub" target="_self">Learn More</a></li>
-	 <li><a href="/searsclub" target="_self">Join Now</a></li>
-	 <li><a href="/searsclub" target="_self">Register</a></li>
-	<li><a href="http://www.searsfinancial.ca/SearsAdvantage.aspx" target="_blank">My Advantage</a></li>
-	 <li><a href="http://www.searsfinancial.ca/InsuranceServices.aspx" target="_blank">Insurance Services</a></li>
+	 <li><a href="http://www.searsclub.ca/#/about" target="_blank">Learn More</a></li>
+	 <li><a href="http://www.searsclub.ca/#/registration" target="_blank">Join Now</a></li>
+	 <li><a href="http://www.searsclub.ca/#/home" target="_blank">Register</a></li>
+	<li><a href="http://www.searsclub.ca/#/myadvantage" target="_blank">My Advantage</a></li>
+	 <li><a href="http://www.searsclub.ca/#/insurance" target="_blank">Insurance Services</a></li>
 </ul>
 </div>
 </div>
@@ -5399,7 +5634,7 @@ cursor:pointer;
       <li><a href="/content/corporateinfohome" target="_self">Corporate Information</a></li>
       <li><a href="/content/sears-in-your-community" target="_self">Sears In Your Community</a></li>
   	<li><a href="/content/charitable-foundation" target="_self">Sears Canada Charitable Foundation</a></li>
-      <li><a href="/content/careers" target="_self">Careers at Sears</a></li>
+      <li><a href="http://careers.sears.ca/" target="_blank">Careers at Sears</a></li>
       <li><a href="http://sears.investorroom.com/press-releases" target="_new">Press Releases</a></li>
       <li><a href="/content/media-room" target="_self">Media Room</a></li>
       <li><a href="/content/fraud" target="_self">Fraud Prevention</a></li>
@@ -5531,12 +5766,11 @@ cursor:pointer;
 		parseAllWidgets();
 	}); 	
 </script><!-- New Relic Footer Timer -->
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","agent":"","transactionName":"b1dXYEYDWBcDB0JeClYdZkBGF0IXIwdCXgpWHVZbWUxfBg9KVVgIVVdHV1FMRRAQEUJES3pTRlF1AUINDQo=","applicationID":"4151430","errorBeacon":"bam.nr-data.net","applicationTime":195,"queueTime":0,"licenseKey":"d24fd3b381"}</script><!-- END Footer.jsp -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","agent":"","transactionName":"b1dXYEYDWBcDB0JeClYdZkBGF0IXIwdCXgpWHVZbWUxfBg9KVVgIVVdHV1FMRRAQEUJES3pTRlF1AUINDQo=","applicationID":"4151430","errorBeacon":"bam.nr-data.net","applicationTime":2706,"queueTime":0,"licenseKey":"d24fd3b381"}</script><!-- END Footer.jsp -->
 			</div>
 		</div>
 		
-		<!-- START Tealium.jsp -->
-<script src="//shard2.sears.ca/wcsstore/SearsSAS/javascript/Widgets/Tealium/tealium-events.js"></script>
+		<!-- START Tealium.jsp --><script src="//shard2.sears.ca/wcsstore/SearsSAS/javascript/Widgets/Tealium/tealium-events.js"></script>
 <script type="text/javascript" class="tealium-config">
 
 	// variable to help with setting events
@@ -5570,7 +5804,34 @@ cursor:pointer;
 	head.appendChild(script);
 </script>
 
-<script type="text/javascript">
+<!-- Google Tag Manager --> 
+<script type="text/javascript" class="google-config">
+   dataLayer = [{
+	 'page_type': 'home'
+	,'pageCategory': 'home'	
+	
+	,'page_group': 'homepage'
+	,'page_name': 'homepage'
+	,'page_catalog': 'sears'
+	,'site_language': 'en'
+	,'server_id': 'brm7app08.int.sears.ca - WC_prod_node4'
+	,'bread_crumbs' : tealiumDataJS.getBreadCrumbArray()
+		
+
+}];
+
+
+</script>
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KPW5HZ" 
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], 
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); 
+})(window,document,'script','dataLayer','GTM-KPW5HZ');</script> 
+<!-- End Google Tag Manager --><script type="text/javascript">
 	tealiumDataJS.initializePageEvents('home');
 </script>
 <!-- END Tealium.jsp --> </body>

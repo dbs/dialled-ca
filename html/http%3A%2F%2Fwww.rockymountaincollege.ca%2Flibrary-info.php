@@ -2,15 +2,13 @@
 <html xml:lang="en-gb" lang="en-gb" >
 <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-      <base href="http://www.rockymountaincollege.ca/index.php" />
+	      <base href="http://www.rockymountaincollege.ca/index.php" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Rocky Mountain College, RMC, Pathways, Christian, College" />
   <meta name="author" content="Super User" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Pathways powered by Rocky Mountain College is a multi-site and multi-denominational Christian college in Calgary, Alberta, Canada that provides academic courses and training online to students anywhere in the world." />
   <title>Christian Leadership Training - Pathways - Powered by Rocky Mountain College</title>
-  <link href="http://www.rockymountaincollege.ca/" rel="canonical" />
   <link href="/templates/gantry/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
   <link href="http://www.rockymountaincollege.ca/component/search/?id=1&amp;Itemid=101&amp;format=opensearch" rel="search" title="Search Pathways - Powered by Rocky Mountain College" type="application/opensearchdescription+xml" />
   <link rel="stylesheet" href="http://www.rockymountaincollege.ca/modules/mod_latestnewsenhanced/style.css.php?security=1&amp;suffix=128&amp;item_w=100&amp;head_w=64&amp;head_h=64&amp;font_s=14" type="text/css" />
@@ -21,6 +19,7 @@
   <link rel="stylesheet" href="/templates/gantry/css-compiled/master-1ff86eb92bfb6c9a26be98de2cc19a35.css" type="text/css" />
   <link rel="stylesheet" href="/templates/gantry/css-compiled/mediaqueries.css" type="text/css" />
   <link rel="stylesheet" href="/templates/gantry/css-compiled/animate.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/gantry/css/tablesaw.stackonly.css" type="text/css" />
   <link rel="stylesheet" href="/templates/gantry/css/gantry-custom.css" type="text/css" />
   <link rel="stylesheet" href="http://www.rockymountaincollege.ca/modules/mod_jf_mobilemenu/assets/jf_mm.min.css" type="text/css" />
   <link rel="stylesheet" href="/modules/mod_maximenuck/themes/blank/css/maximenuck.php?monid=bottom1" type="text/css" />
@@ -314,6 +313,7 @@ div#headermenu .maxipushdownck ul.maximenuck2 li.maximenuck > .separator span.de
   <script src="/templates/gantry/js/wow.js" type="text/javascript"></script>
   <script src="/templates/gantry/js/smooth-scroll.min.js" type="text/javascript"></script>
   <script src="/templates/gantry/js/jquery.autofix_anything.js" type="text/javascript"></script>
+  <script src="/templates/gantry/js/tablesaw.stackonly.js" type="text/javascript"></script>
   <script src="http://www.rockymountaincollege.ca/modules/mod_jf_mobilemenu/assets/jquery.jf_multilevelpushmenu.min.js" type="text/javascript"></script>
   <script src="http://www.rockymountaincollege.ca/modules/mod_jf_mobilemenu/assets/jf_mm.min.js" type="text/javascript"></script>
   <script src="/media/jui/js/jquery.ui.core.min.js" type="text/javascript"></script>
@@ -814,31 +814,31 @@ jQuery(window).on('load',  function() {
 		<h3 style="margin-top:30px!important;"><a href="/news-updates.html">News &amp; Updates</a></h3>
 		<p>		<div class="moduletable">
 						<ul class="latestnews">
-	<li itemscope itemtype="http://schema.org/Article">
+	<li itemscope itemtype="https://schema.org/Article">
 		<a href="/courses/introduction-to-the-bible-for-free.html" itemprop="url">
 			<span itemprop="name">
 				Introduction to the Bible for FREE			</span>
 		</a>
 	</li>
-	<li itemscope itemtype="http://schema.org/Article">
+	<li itemscope itemtype="https://schema.org/Article">
 		<a href="/news-updates/56-rmc-outcome-report.html" itemprop="url">
 			<span itemprop="name">
 				RMC Outcome Report			</span>
 		</a>
 	</li>
-	<li itemscope itemtype="http://schema.org/Article">
+	<li itemscope itemtype="https://schema.org/Article">
 		<a href="/academic-life/stay-connected.html" itemprop="url">
 			<span itemprop="name">
 				Stay Connected			</span>
 		</a>
 	</li>
-	<li itemscope itemtype="http://schema.org/Article">
+	<li itemscope itemtype="https://schema.org/Article">
 		<a href="/news-updates/53-evangelical-missionary-church-of-canada.html" itemprop="url">
 			<span itemprop="name">
 				Evangelical Missionary Church of Canada			</span>
 		</a>
 	</li>
-	<li itemscope itemtype="http://schema.org/Article">
+	<li itemscope itemtype="https://schema.org/Article">
 		<a href="/news-updates/52-centre-for-pastoral-care-education.html" itemprop="url">
 			<span itemprop="name">
 				Centre for Pastoral Care Education			</span>
@@ -973,7 +973,7 @@ Rocky Mountain College was formed 24 years ago when ...															</div>
     <div class="uk-width-medium-1-4 uk-float-right uk-flex-order-last-medium">
         
 
-<ul class="uk-thumbnav uk-flex-column" data-uk-switcher="{connect:'#wk-9f5',animation:'fade'}">
+<ul class="uk-thumbnav uk-flex-column" data-uk-switcher="{connect:'#wk-589',animation:'fade'}">
         <li><a href="/"><img src="/media/widgetkit/rmc-ss-dani-c73646d894b2af66e2222f570e8f2648.png" alt="Danielle Ezard" width="70" height="70"></a></li>
         <li><a href="/"><img src="/media/widgetkit/rmc-ss-jamie-hunka-5a96b3c1999047e831c4e3d4049d6449.png" alt="Jamie Hunka" width="70" height="70"></a></li>
 </ul>
@@ -981,7 +981,7 @@ Rocky Mountain College was formed 24 years ago when ...															</div>
     </div>
     <div class="uk-width-medium-3-4">
         
-<ul id="wk-9f5" class="uk-switcher uk-text-left " data-uk-check-display>
+<ul id="wk-589" class="uk-switcher uk-text-left " data-uk-check-display>
 
     
     <li>
@@ -1392,7 +1392,7 @@ jQuery('.rt-grid-3.rt-pull-9').hcSticky({
 	responsive: true
 });
     });
-    
+
   	</script>
 	</body>
 </html>

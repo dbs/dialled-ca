@@ -9,7 +9,7 @@
 <link href="/themes/andornot/css/vendor/bootstrap-slider.css" media="all" rel="stylesheet" type="text/css">
 <link href="/themes/andornot/css/print.css" media="print" rel="stylesheet" type="text/css">
 <link href="/themes/root/images/vufind-favicon.ico" rel="shortcut icon" type="image/x-icon">
-<link href="/Search/OpenSearch?method=describe" rel="search" type="application/opensearchdescription+xml" title="Library Catalogue Search">            <script type="text/javascript">
+<link href="/Search/OpenSearch?method=describe" rel="search" type="application/opensearchdescription+xml" title="Search the Library Catalogue">            <script type="text/javascript">
     //<!--
     path = '';
     //-->
@@ -37,10 +37,10 @@
     <span class="sr-only">Toggle navigation</span>
     <i class="fa fa-bars"></i>
   </button>
-  <a role="logo" href="http://northernhealth.ca"><img src="/themes/andornot/images/nha_logo.jpg" alt="Northern Health Authority"/></a>
+  <a role="logo" href="https://northernhealth.ca/OurServices/LibraryServices.aspx"><img src="/themes/andornot/images/nha_logo.jpg" alt="Northern Health Authority"/></a>
 </div>
 <div class="navbar-header clearfix">
-  <a href="/"><h1>Library Services</h1></a>
+  <a href="/"><h1>Library Catalogue</h1></a>
 </div>
 <!--[if lt IE 9]>
 <p style="font-size=16pt;color:red;">It looks like you're using an older browser. <a href="/?ui=IE7">Click here</a> to view this site with a theme that's better for your browser.</p>
@@ -118,7 +118,7 @@
         <div class="row">
           <div class="searchHomeContent">
     <div class="well well-blue clearfix">
-      <h2>Library Catalogue Search</h2>
+      <h2>Search the Library Catalogue</h2>
       <form role="search" class="navbar-form navbar-left" method="get" action="/Search/Results" name="searchForm" id="searchForm" autocomplete="off">
     		<input class="form-control search-query autocomplete searcher:Solr" id="searchForm_lookfor" type="text" name="lookfor" value=""/>
 				  <select class="form-control" id="searchForm_type" name="type" data-native-menu="false">
@@ -131,7 +131,6 @@
 					  </select>
 				<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Find</button>
 				  <a href="/Search/Advanced" class="btn btn-link">Advanced Search</a>
-		  <a href="/Alphabrowse/Home?source=topic&from=a" class="btn btn-link">Browse the Catalogue</a>
 		
 
                   </form>
@@ -139,332 +138,30 @@
   </div>
 </div>
 
-<div class="col-sm-3">
-		<!-- Nav tabs -->
-		<ul class="fa-ul" role="tablist">
-		  <li><a href="#home" role="tab" data-toggle="tab"><i class="fa fa-li fa-plus-square-o"></i> Home</a></li>
-		  <li><a href="#services" role="tab" data-toggle="tab"><i class="fa fa-li fa-plus-square-o"></i> Our Services</a></li>
-		  <li><a href="#databases" role="tab" data-toggle="tab"><i class="fa fa-li fa-plus-square-o"></i> Online Databases</a></li>
-		  <li><a href="#specialcollections" role="tab" data-toggle="tab"><i class="fa fa-li fa-plus-square-o"></i> Special Collections</a></li>
-		  <li><a href="#professionals" role="tab" data-toggle="tab"><i class="fa fa-li fa-plus-square-o"></i> Information for Professionals</a></li>
-		  <li><a href="#patients" role="tab" data-toggle="tab"><i class="fa fa-li fa-plus-square-o"></i> Information for Patients</a></li>
-		  <li><a href="/Help/Home?topic=search" class="help-link" title="Search Tips"><i class="fa fa-li fa-plus-square-o"></i> Search Tips</a></li>
+<div class="well well-blue clearfix">
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Popular Topics</h2>
+		<ul class="fa-ul">
+			<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0[]=nmp&type0[]=AllFields&lookfor0[]=&type0[]=AllFields&lookfor0[]=&type0[]=AllFields&bool0[]=AND&daterange[]=publishDate&publishDatefrom=2005&publishDateto=">NMP Books</a></li>
+			<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0[]=wellness&type0[]=AllFields&lookfor0[]=&type0[]=AllFields&lookfor0[]=&type0[]=AllFields&bool0[]=AND&daterange[]=publishDate&publishDatefrom=2005&publishDateto=">Wellness Collection</a></li>
+			<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0[]=e-Book&type0[]=AllFields&lookfor0[]=&type0[]=AllFields&lookfor0[]=&type0[]=AllFields&bool0[]=AND&daterange[]=publishDate&publishDatefrom=&publishDateto=">Online Books</a></li>
+			<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0[]=%22Total+Quality+Management%22&type0[]=AllFields&lookfor0[]=%22Quality+of+Health+Care%22&type0[]=AllFields&bool0[]=OR&daterange[]=publishDate&publishDatefrom=2000&publishDateto=">Lean & Quality Improvement Books</a></li>
 		</ul>
+	</div>
+	<div class="col-sm-6">
+	  <h2>Browse the Catalogue</h2>
+	  <ul class="fa-ul">
+		<li><i class="fa fa-li fa-caret-right"></i> <a href="/Alphabrowse/Home?source=topic&amp;from=a">by Topic</a></li>
+		<li><i class="fa fa-li fa-caret-right"></i> <a href="/Alphabrowse/Home?source=author&amp;from=a">by Author</a></li>
+		<li><i class="fa fa-li fa-caret-right"></i> <a href="/Alphabrowse/Home?source=title&amp;from=a">by Title</a></li>
+		<li><i class="fa fa-li fa-caret-right"></i> <a href="/Alphabrowse/Home?source=lcc&amp;from=a">by Call Number</a></li>
+	  </ul>
+	</div>
 </div>
-<div class="col-xs-9">
-		<!-- Tab panes -->
-		<div class="tab-content">
-		  <div class="tab-pane fade in active" id="home">
-			<h2>Northern Health Library Services</h2>
-			<p>Northern Health Library supports Northern Health's <a href="http://www.northernhealth.ca/Portals/0/About/documents/NorthernHealthStrategicPlan.ppt" target="_blank">vision,
-			mission, and strategic plan</a> through its information and knowledge management services, which are available to allied health, nursing, medical, administrative and support staff in all Northern Health sites. Library services support research, evidence-informed practice, clinical education, continuing education and research. Students working on site may also access many of the services in the library. </p>
-			<div class="row">
-				<div class="col-sm-6">
-					<p>Contact us to request any of these library services:</p>
-					<ul class="fa-ul">
-						<li><i class="fa fa-li fa-caret-right"></i> <a href="#databases" role="tab" data-toggle="tab">Online Databases (
-						e.g. CINAHL, Medline, Mosby's, UpToDate, e-CPS, Micromedex and more)</a></li>
-						<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Research Assistance">Request
-						  research assistance/literature search</a></li>
-						<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Article/Book Request">Request
-						  an article or a book</a></li>
-						<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Training/orientation">Book
-						  database training or library orientation</a></li>
-						<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Personal Alerts">Sign
-						  up for your personal topic or journal alerts</a></li>
-						<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Order a Book">Order
-						  a book for your department</a></li>
-					</ul>  
-				</div>				
-				<div class="col-sm-5 col-sm-offset-1">
-				<h3>Contact Us</h3>
-				<ul class="fa-ul" role="tablist">
-					<li><i class="fa fa-li fa-building"></i> University Hospital of Northern BC<br />
-					1475 Edmonton Street<br />
-					Prince George, BC V2M 1S2 </li>
-					<li><i class="fa fa-li fa-phone"></i> Tel: 250-565-2219 </li>
-					<li><i class="fa fa-li fa-envelope"></i> Email: <a href="mailto:library@northernhealth.ca">library@northernhealth.ca</a></li>
-				</ul>
-			</div>
-		</div>
-		  </div>
-		  <div class="tab-pane fade" id="services">
-			<h2>Our Services</h2>
-			<p>To request items to borrow, search this catalogue and add items to your Book Bag or Favourites lists, then complete the request form in the Book Bag or your account.</p>
-			<p>Contact us to request any of these library services:</p>
-			<ul class="fa-ul">
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Research Assistance">Request
-				  research assistance/literature search</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Article/Book Request">Request
-				  an article or a book</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Training/orientation">Book
-				  database training or library orientation</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Personal Alerts">Sign
-				  up for your personal topic or journal alerts</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="mailto:library@northernhealth.ca?subject=Order a Book">Order
-				  a book for your department</a></li>
-			</ul>  
-		  </div>
-		  <div class="tab-pane fade" id="databases">
-			<h2>Online Databases</h2>
-			<ul class="fa-ul">
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://search.ebscohost.com/login.aspx?authtype=ip,uid&custid=s5547586&profile=pfi" target="_blank">Find Full Text Journals @ Northern Health </a></strong></li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.primalonlinelearning.com/login.aspx" target="_blank">Anatomy & Physiology Online (APO)</a></strong></li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.anatomy.tv" target="_blank">Anatomy.TV (ATV)</a></strong></li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://site.ebrary.com/lib/northernhealth/search.action" target="_blank">Canadian Health Research</a></strong></li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.caot.ca/default.asp?pageid=1386" target="_blank">CAOT  OT  Education Finder</a></strong></li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://search.ebscohost.com/login.aspx?authtype=ip,url,uid&profile=ehost&defaultdb=ccm" target="_blank">Cinahl Complete</a></strong> * - Indexes nursing and allied health journals and contains over 1,400 full text journals.</li>
-			<li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://login.elsevierperformancemanager.com/systemlogin.aspx?virtualname=northernhealth-bcprincegeorge " target="_blank">Clinical Skills</a></strong> - Clinical Skills (formerly Mosbyâs Nursing Skills) helps nurses refresh their knowledge or learn entirely new skills and procedures. Staff may request offsite access by contacting the library.</li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://ovidsp.ovid.com/ovidweb.cgi?T=JS&MODE=ovid&PAGE=main&NEWS=n&D=coch" target="_blank">Cochrane Library</a></strong>  * - Reviews of literature on health interventions, and recommendations for practice.</li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.e-therapeutics.ca/" target="_blank">RxTx</a></strong> * - Online Compendium of Pharmaceuticals, e-CPS is now called RxTx but the content remains the same. No off site access.   </li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://ovidsp.ovid.com/ovidweb.cgi?T=JS&amp;MODE=ovid&amp;PAGE=main&amp;NEWS=n&amp;D=ebmz" target="_blank">Evidence-Based Medicine Reviews</a></strong>  * - Clinical trials database and online article reviews of health interventions, health technologies and economic evaluations. </li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://ovidsp.ovid.com/ovidweb.cgi?T=JS&amp;MODE=ovid&amp;NEWS=N&amp;PAGE=main&amp;D=ebmy" target="_blank">Evidence-Based Medicine Reviews Fulltext</a></strong>  * - These include online reviews from the Cochrane Database of Systematic Reviews, ACP Journal Club, and DARE (Database of Reviews of Effects) </li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.healthsystemsevidence.org/" target="_blank">Health Systems Evidence</a></strong> </li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://ovidsp.ovid.com/ovidweb.cgi?T=JS&amp;MODE=ovid&amp;PAGE=main&amp;NEWS=n&amp;D=mesz" target="_blank">Medline (OVID)</a></strong>  * - Premier index to biomedical, nursing, and allied health articles. Links to over 1500 online journals in medicine, nursing, allied health and health services research. (OVID interface) </li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://search.ebscohost.com/login.aspx?authtype=ip,uid&amp;profile=ehost&amp;defaultdb=cmedm" target="_blank">Medline (Ebsco)</a></strong>  * - Premier index to biomedical, nursing, and allied health articles. Links to over 1500 online journals in medicine, nursing, allied health and health services research. (Ebsco interface) </li>
-			  <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.micromedexsolutions.com/home/dispatch" target="_blank">Micromedex</a></strong>  (Only available at UHNBC)</li> - Comprehensive drug database available only at UHNBC. Requires user id and password available from the Library. Monographs available to staff on request. </li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.nurseone.ca/" target="_blank">NurseOne</a></strong> </li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.pedro.org.au/" target="_blank">PEDro Physiotherapy Evidence Database</a></strong> </li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://search.ebscohost.com/login.aspx?authtype=ip,uid&amp;profile=ehost&amp;defaultdb=psyh" target="_blank">PsychINFO</a></strong>  * - The online database of the American Psychological Association, indexing journals, reference materials, and audiovisual materials, containing the APA journals online. </li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=PubMed" target="_blank">Pubmed</a></strong> - The National Library of Medicine (U.S.) database from which Medline is derived. Indexes some material not available in Cinahl or in Medline. (free on the internet) </li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://online.statref.com/Search.aspx?grpalias=NBCHA" target="_blank">Stat!Ref</a></strong> - Online reference texts in medicine, nursing, and allied health. (Mobile and remote access) </li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.tripdatabase.com/" target="_blank">TRIP (Turning Research Into Practice) Database</a></strong> </li>
-			   <li><i class="fa fa-li fa-caret-right"></i> <strong><a href="http://www.uptodate.com/contents/search" target="_blank">UpToDate Anywhere</a></strong> - You can now register for mobile and remote access to UpToDate Anywhere through NH. Contact the library if you need help.</li>
-			</ul>
-				<p>* <a href="mailto:library@northernhealth.ca">Contact the library</a> for assistance with accessing these resources from home.</p>
-
-		  </div>
-		  <div class="tab-pane fade" id="specialcollections">
-			<h2>Special Collections Within the Library</h2>
-			<h3>PG Family Resource Library - Maternal Child Department, UHNBC</h3>
-			<p>Thanks to a donation by the Ronald McDonald Children's Charity, families of Paediatric patients at UHNBC are able to access resources located in the UHNBC PG Family Resource Library that carries materials about child health conditions. Relevant materials can be accessed by clicking on any of the topics below. If the topic you are researching is not listed here, please contact Northern Health Library staff via <a href="mailto:library@northernhealth.ca">email</a> or phone: 250-565-2219 or 250-565-2220. Library staff are glad to assist patients and families with their information requests not available through the materials found in the PG Family Resource Library.</p>
-			<div class="row">
-			<div class="col-sm-4">
-			<ul class="fa-ul">
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=attention+deficit+disorder+with+hyperactivity&type0%5B%5D=Subject&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">ADHD</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=hypersensitivity+OR+%22food+sensitivity%22&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">allergies</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=anxiety+disorders&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">anxiety</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=asperger+syndrome&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">Asperger syndrome</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=asthma&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">asthma</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=autism+OR+autistic&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">autism</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=%22breast+feeding%22+OR+breastfeeding&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">breastfeeding</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=aggression&type0%5B%5D=Subject&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">bullying</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=neoplasms&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">cancer</a></li>
-			</ul>
-			</div>
-			<div class="col-sm-4">
-			<ul class="fa-ul">
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=depression&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">depression</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=diabetes+OR+mellitus&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">diabetes</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=child+behavior+&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">difficult child</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=%22domestic+violence%22+OR+%22child+abuse%22&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">domestic violence</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=down+syndrome&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">Down's Syndrome</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=dyslexia&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">dyslexia</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=eating+disorders&type0%5B%5D=Subject&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">eating disorders</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=fetal+alcohol+syndrome&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">fetal alcohol syndrome</a></li>
-			</ul>
-			</div>
-			<div class="col-sm-4">
-			<ul class="fa-ul">
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=child+hospitalized&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">hospitalized child</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=infant+care&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">infant care</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=irritable+bowel+syndrome&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">irritable bowel syndrome</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=learning+disorders&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">learning disorders</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=parent+child+relations&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">parent child relations</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=infant+premature&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">prematurity</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=tourette*+syndrome&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">Tourette's syndrome</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=vision+disorders&type0%5B%5D=Subject&bool0%5B%5D=AND&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=&filter%5B%5D=building%3A%22UHNBC+Family+Resource+Library%22">vision disorders</a></li>
-			</ul>
-			</div>
-			</div>
-			<h3>Canadian Health Research Collection</h3>
-			<p>The Canadian Health Research Collection includes research reports from Canadian government agencies as well as health organizations. Below are some examples of reports that are available. Use the search box provided to search using key words. For assistance, please contact the library by emailing <a href="mailto:library@northernhealth.ca">library@northernhealth.ca</a> or calling 250-565-2219 or 250-565-2220.</p>
-
-			<div class="row">
-			<div class="col-sm-4">
-			<h4>Topics</h4>
-			<ul class="fa-ul">
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=Influenza&type0%5B%5D=Subject&bool0%5B%5D=AND&filter%5B%5D=%7Eformat%3A%22e-Book%22&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=">Influenza</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=patient+safety&type0%5B%5D=Subject&bool0%5B%5D=AND&filter%5B%5D=%7Eformat%3A%22e-Book%22&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=">Patient safety</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=quality+improvement&type0%5B%5D=Subject&bool0%5B%5D=AND&filter%5B%5D=%7Eformat%3A%22e-Book%22&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=">Quality improvement</a></li>
-			</ul>
-			</div>
-			<div class="col-sm-8">
-			<h4>Organizations</h4>
-			<ul class="fa-ul">
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=Patient+Safety+and+Quality+Council&type0%5B%5D=publisher&bool0%5B%5D=AND&filter%5B%5D=%7Eformat%3A%22e-Book%22&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=">BC Patient Safety and Quality Council</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=Saskatchewan+Health+Quality+Council&type0%5B%5D=publisher&bool0%5B%5D=AND&filter%5B%5D=%7Eformat%3A%22e-Book%22&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=">Saskatchewan Health Quality Council</a></li>
-				<li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Results?sort=relevance&join=AND&lookfor0%5B%5D=Canadian+Agency+for+Drugs+and+Technologies+in+Health&type0%5B%5D=publisher&bool0%5B%5D=AND&filter%5B%5D=%7Eformat%3A%22e-Book%22&daterange%5B%5D=publishDate&publishDatefrom=&publishDateto=">Canadian Agency for Drugs and Technologies in Health (CADTH)</a></li>
-			</ul>  
-			</div>
-			</div>
-		  </div>
-		  <div class="tab-pane fade" id="patients">
-			<h2>Patient and Family Resources</h2>
-			<ul class="fa-ul">
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.aboutkidshealth.ca" target="_blank">AboutKidsHealth</a></li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.bccancer.bc.ca/default.htm" target="_blank">BC Cancer Agency</a>
-				  </li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.bcchildrens.ca/KidsTeensFam/FamilyResourceLibrary/otherlibraries.htm" target="_blank">BC Childrens' Women's Hospital Family Resource Centre</a>
-				  </li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.bchealthguide.org" target="_blank">BC Health Guide</a></li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.hc-sc.gc.ca/index-eng.php" target="_blank">Canada Health Portal</a>
-				  </li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.cmha.bc.ca/" target="_blank">Canadian Mental Health Association
-					  (Ontario)</a>
-				  </li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.dietitians.ca" target="_blank">Dieticians of Canada</a>
-				  </li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.mentalhealth.com" target="_blank">Dr. Philip Long's Internet Mental
-					  Health</a>
-				  </li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.nlm.nih.gov/medlineplus" target="_blank">Medline Plus</a></li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.sexualityandu.ca/" target="_blank">Sexuality and U</a></li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.womenshealthmatters.ca" target="_blank">Women's Health Matters</a></li>
-				  <li><i class="fa fa-li fa-caret-right"></i> 
-					<a href="http://www.lib.pg.bc.ca/taxonomy/term/40" target="_blank">Prince George Public Library Health and Wellness Resource</a></li>
-			</ul>  
-		  </div>
-		  <div class="tab-pane fade" id="professionals">
-		   <h2>Information for Health Professionals</h2>
-		   <p>Databases and resources to aid your practice.</p>
-
-			<div class="panel-group" id="accordion">
-			  <div class="panel panel-default">
-				<div class="panel-heading">
-				  <h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-					  Allied Health
-					</a>
-				  </h4>
-				</div>
-				<div id="collapseOne" class="panel-collapse collapse in">
-				  <div class="panel-body">
-				  <h4>Online Resources</h4>
-						<ul class="fa-ul">
-							<li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.e-therapeutics.ca/" target="_blank">E-CPS</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="https://ournh.northernhealth.ca/PoliciesProcedures/Pages/DST-Clinical.aspx" target="_blank">Policies and Clinical Standards, Northern Health</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.caot.ca/default.asp?pageid=1386" target="_blank">CAOT&nbsp;  OT&nbsp; Education
-							  Finder</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.kingguide.com" target="_blank">King Guide</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.pedro.org.au/" target="_blank">PED<em>ro </em> - Physiotherapy
-							  Evidence Database</a></li>		  
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.pennutrition.com/site/northernhealth" target="_blank">PEN
-						  - Practice-Based Evidence in Nutrition</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://online.statref.com/Document.aspx?grpalias=NBCHA&amp;FxId=76" target="_blank">Red
-							  book : report of the Committee on Infectious Diseases</a> </li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://online.statref.com/Document.aspx?grpalias=NBCHA&amp;FxId=15" target="_blank">The
-							  review of natural products</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.micromedexsolutions.com/home/dispatch" target="_blank">Micromedex</a> (Only available at UHNBC) </li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.uptodate.com/contents/search" target="_blank">UpToDate</a></li>
-						</ul>
-						<h4>Databases</h4>
-						<ul class="fa-ul">
-							<li><i class="fa fa-li fa-caret-right"></i> <a href="#databases" role="tab" data-toggle="tab">View Online Databases</a></li>
-						</ul>
-					  <p><a href="mailto:library@northernhealth.ca">Contact the library</a> for assistance with accessing these resources from home.</p>
-				  </div>
-				</div>
-			  </div>
-			  <div class="panel panel-default">
-				<div class="panel-heading">
-				  <h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-						Medicine
-					</a>
-				  </h4>
-				</div>
-				<div id="collapseThree" class="panel-collapse collapse">
-				  <div class="panel-body">
-				  <h4>Online Resources</h4>
-						<ul class="fa-ul">
-							  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.bcguidelines.ca/gpac/" target="_blank">B.C. Ministry of Health Services Practice
-						  Guidelines and Protocols</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.cma.ca/clinicalresources/practiceguidelines" target="_blank">CMA Practice Guidelines</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="https://www.cpsbc.ca/" target="_blank">College of Physicians and Surgeons of BC</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://ovidsp.ovid.com/ovidweb.cgi?T=JS&MODE=ovid&PAGE=main&NEWS=n&D=coch">Cochrane
-							  Library</a>*</li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="https://ournh.northernhealth.ca/PoliciesProcedures/Pages/DST-Clinical.aspx" target="_blank">Policies and Clinical Standards, Northern Health</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://online.statref.com/Document.aspx?grpalias=NBCHA&amp;FxId=99" target="_blank">AAFP
-							  Conditions A to Z</a></li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://online.statref.com/Document.aspx?grpalias=NBCHA&amp;FxId=76" target="_blank">Red Book : Report of the Committee on Infectious
-						  Diseases</a> </li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.uptodate.com/contents/search" target="_blank">UpToDate&nbsp;</a> (Mobile and remote access available)</li>
-						  <li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=48&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Scientific American Medicine</a> (Mobile and remote access)</li>
-						</ul>
-						<h4>Databases</h4>
-						<ul class="fa-ul">
-							<li><i class="fa fa-li fa-caret-right"></i> <a href="#databases" role="tab" data-toggle="tab">View Online Databases</a></li>
-						</ul>
-						  <p><a href="mailto:library@northernhealth.ca">Contact the library</a> for assistance with accessing these resources from home.</p>
-				  </div>
-				</div>
-			  </div>
-			  <div class="panel panel-default">
-				<div class="panel-heading">
-				  <h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-					  Nursing
-					</a>
-				  </h4>
-				</div>
-				<div id="collapseTwo" class="panel-collapse collapse">
-				  <div class="panel-body">
-							<h4>Online Journals</h4>
-							<h5><a href="http://search.ebscohost.com/login.aspx?authtype=ip,uid&custid=s5547586&profile=pfi" target="_blank">Find Full Text Journals @ Northern Health</a></h5>
-							  <p>Northern Health journal collection with over 4000 links to online journals. Some free journals may require passwords or have 6 to 12-month embargoes on access.  Online journals are not available from home via this link but must be accessed through OVID or Ebsco databases. Our licensed online journals can also be accessed from the library's catalogue. </p>
-							<h4>Databases</h4>
-								<p><a href="#databases" role="tab" data-toggle="tab">View Online Databases</a></p>
-							<h4>Associations</h4>
-							<ul class="fa-ul">
-							  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.cna-nurses.ca/cna/default_e.aspx" target="_blank">Canadian
-								  Nurses Association</a></li>
-							 <li><i class="fa fa-li fa-caret-right"></i> <a href="https://www.crnbc.ca/Pages/Default.aspx" target="_blank">College
-								  of Registered Nurses of B.C.</a></li>
-							  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.clpnbc.org" target="_blank">College of Licensed
-								  Practical Nurses of B.C.</a></li>
-							  <li><i class="fa fa-li fa-caret-right"></i> <a href="http://www.crpnbc.ca/" target="_blank">College of Registered Psychiatric Nurses of BC</a></li>
-								</ul>
-							  <h4>Reference Books</h4>
-							  <p>The following reference books are available online from Northern Health sites: </p>
-							  
-								<ul class="fa-ul">
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=99&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">AAFP Conditions A-Z (2015)</a></li>
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=488&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Auscultation Skills: Breath &amp; Heart Sounds - 5th Ed. (2014)</a></li>
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=58&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Davis's Drug Guide for Nurses - 14th Ed. (2015)</a></li>
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=122&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Delmar's Geriatric Nursing Care Plans - 3rd Ed. (2005)</a></li>
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=38&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Jablonski's Dictionary of Medical Acronyms &amp; Abbreviations - 6th Ed. (2009) - March 2012 Update</a></li>
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=496&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Nursing Care Plans: Transitional Patient &amp; Family Centered Care - 6th Ed. (2014)</a></li>
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=76&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Red Book: 2012 Report of the Committee on Infectious Diseases - 29th Ed. (2012)</a></li>
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=15&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Review of Natural Products(2014)</a></li>
-									<li><i class="fa fa-li fa-caret-right"></i> <a href=" http://online.statref.com/Entry.aspx?lt=DOC&FxID=57&StartDoc=1&Offset=0&QueryID=-1&grpalias=NBCHA">Taber's Cyclopedic Medical Dictionary - 22nd Ed. (2013)</a></li>
-								</ul>
-
-						  <h4>Online Resources</h4>
-								<ul class="fa-ul">
-								  <li><i class="fa fa-li fa-caret-right"></i> <a href="https://ournh.northernhealth.ca/PoliciesProcedures/Pages/DST-Clinical.aspx" target="_blank">Policies and Clinical Standards, Northern Health</a></li>
-								</ul>															
-				  </div>
-				</div>
-			  </div>
-
-			</div>
-		  </div>
-		</div>
 </div>
 
-<!-- Commenting out all browsable facets from home page
+<!-- Commenting out all browsable facets from home page 
 <div class="row">
           <div class="col-sm-3">
       <p class="lead">Browse by Format</p>
@@ -491,15 +188,29 @@
     </div>
     <footer role="contentinfo" class="hidden-print">
       <div class="container">
-        <hr/>
-<ul class="list-inline">
-  <li><a href="/">Home</a></li>
-  <li><a href="/Search/Advanced">Advanced Search</a></li>
-  <li><a href="/Alphabrowse/Home?source=topic&from=a">Browse the Catalogue</a></li>
-  <li><a href="/Search/History">Search History</a></li>
-  <li><a href="/Help/Home?topic=search" class="help-link" title="Search Tips">Search Tips</a></li>
-  <li><a href="mailto:library@northernhealth.ca">Ask a Librarian</a></li>
-</ul>
+        <div class="row">
+	<div class="col-sm-6">
+		<h4>Site Map</h4>
+				<ul class="fa-ul">
+		  <li><i class="fa fa-li fa-caret-right"></i> <a href="https://northernhealth.ca/OurServices/LibraryServices.aspx">Library Services for Staff and Physicians</a></li>
+		  <li><i class="fa fa-li fa-caret-right"></i> <a href="https://northernhealth.ca/OurServices/LibraryServices.aspx#12419405-article-databases">Online Databases</a></li>
+		  <li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/Advanced">Advanced Search</a></li>
+		  <li><i class="fa fa-li fa-caret-right"></i> <a href="/Search/History">Search History</a></li>
+		  <li><i class="fa fa-li fa-caret-right"></i> <a href="/Help/Home?topic=search" class="help-link" title="Search Tips">Search Tips</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-6">
+		<h4>Contact Us</h4>
+		<ul class="fa-ul" role="tablist">
+			<li><i class="fa fa-li fa-building"></i> University Hospital of Northern BC<br>
+			1475 Edmonton Street<br>
+			Prince George, BC V2M 1S2 </li>
+			<li><i class="fa fa-li fa-phone"></i> Tel: 250-565-2219 </li>
+			<li><i class="fa fa-li fa-envelope"></i> Email: <a href="mailto:library@northernhealth.ca">library@northernhealth.ca</a></li>
+			<li><i class="fa fa-li fa-info-circle"></i> <a href="https://northernhealth.ca/OurServices/LibraryServices.aspx">Library Services Information</a></li>
+		</ul>
+	</div>
+</div>
         <div class="col-sm-12"></div>
       </div>
     </footer>

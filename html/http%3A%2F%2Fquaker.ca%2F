@@ -10,10 +10,148 @@
     <link rel="alternate" type="application/rss+xml" title="Quakers In Canada" href="http://quaker.ca/feed/" />
 
     <link rel="alternate" type="application/rss+xml" title="Quakers In Canada &raquo; Feed" href="http://quaker.ca/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Quakers In Canada &raquo; Comments Feed" href="http://quaker.ca/comments/feed/" />
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/quaker.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=b9cc9f6e36e9564a22966987058b37cf"}};
-			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"http:\/\/quaker.ca\/wp-includes\/js\/wp-emoji.js?ver=656d2904f6cfc32eb865c26da100743f","twemoji":"http:\/\/quaker.ca\/wp-includes\/js\/twemoji.js?ver=656d2904f6cfc32eb865c26da100743f"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple", "flag", "diversity" or "unicode8" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' ),
+			stringFromCharCode = String.fromCharCode,
+			tonedata, tone, tone2;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'A' and 'U' in them, if the browser doesn't render flag emoji
+				 * - The Australian flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+				context.fillText( stringFromCharCode( 55356, 56806, 55356, 56826 ), 0, 0 );
+				return canvas.toDataURL().length > 3000;
+			case 'diversity':
+				/*
+				 * This tests if the browser supports the Emoji Diversity specification, by rendering an
+				 * emoji with no skin tone specified (in this case, Santa). It then adds a skin tone, and
+				 * compares if the emoji rendering has changed.
+				 */
+				context.fillText( stringFromCharCode( 55356, 57221 ), 0, 0 );
+				tonedata = context.getImageData( 16, 16, 1, 1 ).data;
+				tone = tonedata[0] + ',' + tonedata[1] + ',' + tonedata[2] + ',' + tonedata[3];
+
+				context.fillText( stringFromCharCode( 55356, 57221, 55356, 57343 ), 0, 0 );
+				// Chrome has issues comparing arrays, and Safari has issues converting arrays to strings.
+				// So, we create our own string and compare that, instead.
+				tonedata = context.getImageData( 16, 16, 1, 1 ).data;
+				tone2 = tonedata[0] + ',' + tonedata[1] + ',' + tonedata[2] + ',' + tonedata[3];
+
+				return tone !== tone2;
+			case 'simple':
+				/*
+				 * This creates a smiling emoji, and checks to see if there is any image data in the
+				 * center pixel. In browsers that don't support emoji, the character will be rendered
+				 * as an empty square, so the center pixel will be blank.
+				 */
+				context.fillText( stringFromCharCode( 55357, 56835 ), 0, 0 );
+				return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+			case 'unicode8':
+				/*
+				 * To check for Unicode 8 support, let's try rendering the most important advancement
+				 * that the Unicode Consortium have made in years: the burrito.
+				 */
+				context.fillText( stringFromCharCode( 55356, 57135 ), 0, 0 );
+				return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'simple', 'flag', 'unicode8', 'diversity' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
 		</script>
 		<style type="text/css">
 img.wp-smiley,
@@ -29,18 +167,17 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='contact-form-7-css'  href='http://quaker.ca/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.4.1' type='text/css' media='all' />
-<link rel='stylesheet' id='social-widget-css'  href='http://quaker.ca/wp-content/plugins/social-media-widget/social_widget.css?ver=b9cc9f6e36e9564a22966987058b37cf' type='text/css' media='all' />
-<link rel='stylesheet' id='wptoolset-field-datepicker-css'  href='http://quaker.ca/wp-content/plugins/wp-views-new/embedded/toolset/toolset-common/toolset-forms/css/wpt-jquery-ui/jquery-ui-1.11.4.custom.css?ver=1.11.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://quaker.ca/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='social-widget-css'  href='http://quaker.ca/wp-content/plugins/social-media-widget/social_widget.css?ver=656d2904f6cfc32eb865c26da100743f' type='text/css' media='all' />
+<link rel='stylesheet' id='wptoolset-field-datepicker-css'  href='http://quaker.ca/wp-content/plugins/types/library/toolset/toolset-common//toolset-forms/css/wpt-jquery-ui/jquery-ui-1.11.4.custom.css?ver=1.11.4' type='text/css' media='all' />
 <link rel='stylesheet' id='mediaelement-css'  href='http://quaker.ca/wp-includes/js/mediaelement/mediaelementplayer.min.css?ver=2.18.1' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-mediaelement-css'  href='http://quaker.ca/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=b9cc9f6e36e9564a22966987058b37cf' type='text/css' media='all' />
-<link rel='stylesheet' id='views-pagination-style-css'  href='http://quaker.ca/wp-content/plugins/wp-views-new/embedded/res/css/wpv-pagination.css?ver=1.11.1' type='text/css' media='all' />
-<link rel='stylesheet' id='sccss_style-css'  href='http://quaker.ca?sccss=1&#038;ver=b9cc9f6e36e9564a22966987058b37cf' type='text/css' media='all' />
-<script type='text/javascript' src='http://quaker.ca/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.0'></script>
+<link rel='stylesheet' id='wp-mediaelement-css'  href='http://quaker.ca/wp-includes/js/mediaelement/wp-mediaelement.css?ver=656d2904f6cfc32eb865c26da100743f' type='text/css' media='all' />
+<link rel='stylesheet' id='views-pagination-style-css'  href='http://quaker.ca/wp-content/plugins/wp-views/embedded/res/css/wpv-pagination.css?ver=2.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://quaker.ca/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
 <link rel='https://api.w.org/' href='http://quaker.ca/wp-json/' />
 <link rel="canonical" href="http://quaker.ca/" />
-<link rel='shortlink' href='http://wp.me/P3wE01-5g' />
+<link rel='shortlink' href='http://quaker.ca/' />
 <link rel="alternate" type="application/json+oembed" href="http://quaker.ca/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fquaker.ca%2F" />
 <link rel="alternate" type="text/xml+oembed" href="http://quaker.ca/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fquaker.ca%2F&#038;format=xml" />
 <script type="text/javascript">
@@ -74,24 +211,12 @@ img.emoji {
 	for (var i = 0; i < evts.length; i++) {
 		addEvent(evts[i], logHuman);
 	}
-})('//quaker.ca/?wordfence_logHuman=1&hid=FCEEFF942668251C45DD8EB4A85A2B0C');
-</script>
-<link rel='dns-prefetch' href='//v0.wordpress.com'>
-<link href="http://quaker.ca/wp-content/themes/Sterling-Child-Theme/style.css" rel="stylesheet" type="text/css" media="screen" />
+})('//quaker.ca/?wordfence_logHuman=1&hid=23B3690367066F213AEFF12E85D35417');
+</script><link href="http://quaker.ca/wp-content/themes/Sterling-Child-Theme/style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://quaker.ca/wp-content/themes/Sterling/css/primary-blue.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://quaker.ca/wp-content/themes/Sterling/css/_mobile.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://quaker.ca/wp-content/themes/Sterling/css/_font-awesome.css" rel="stylesheet" type="text/css" media="screen" />
-<link rel="shortcut icon" href="http://quaker.ca/wp-content/uploads/2013/02/quaker-favicon.ico"/>
-<style type="text/css" media="screen"></style>
-<!-- Jetpack Open Graph Tags -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Quakers In Canada" />
-<meta property="og:description" content="The electronic meeting place for Canadian Quakers in the unprogrammed tradition, united since 1955 as Canadian Yearly Meeting of the Religious Society of Friends." />
-<meta property="og:url" content="http://quaker.ca/" />
-<meta property="og:site_name" content="Quakers In Canada" />
-<meta property="og:image" content="http://quaker.ca/wp-content/uploads/2013/06/quaker-donate.png" />
-<meta property="og:locale" content="en_US" />
-<meta name="twitter:card" content="summary" />
+<link rel="shortcut icon" href="http://quaker.ca/wp-content/uploads/2016/05/quaker-favicon.png"/>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans" />
@@ -215,6 +340,11 @@ header {padding:20px 0;}
 
     <!-- Styles generated by custom page styling options. -->
 <style type="text/css">body, html {background-color:# !important;}</style>
+<style type="text/css">
+header nav a {
+    color: #ddf1a3 !important;
+}
+</style>
 </head>
 <body class="home page page-id-326 page-template page-template-page-template-home-sidebar page-template-page-template-home-sidebar-php blog-1" >
 <div id="tt-wide-layout">
@@ -262,10 +392,10 @@ header {padding:20px 0;}
 <ul class="sub-menu">
 	<li id="menu-item-3791" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3791"><a title="News" href="http://quaker.ca/news-and-events/">News</a></li>
 	<li id="menu-item-6007" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6007"><a href="http://quaker.ca/news-and-events/cym-gathering-2016/">CYM 2016 Gathering</a></li>
-	<li id="menu-item-6835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6835"><a href="http://quaker.ca/cym-2015-post/">CYM 2015 Posts</a></li>
+	<li id="menu-item-6835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6835"><a href="http://quaker.ca/cym-2015-post/">CYM 2016 Posts</a></li>
 	<li id="menu-item-7107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7107"><a href="http://quaker.ca/news-and-events/fwcc-world-plenary/">FWCC World Plenary</a></li>
 	<li id="menu-item-6534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6534"><a href="http://quaker.ca/news-and-events/grant-recipient-reports/">Grant Recipient Reports</a></li>
-	<li id="menu-item-6262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6262"><a href="http://quaker.ca/?page_id=6260">Other Gatherings</a></li>
+	<li id="menu-item-6262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6262"><a href="http://quaker.ca/news-and-events/other-gatherings/">Other Gatherings</a></li>
 	<li id="menu-item-1180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1180"><a href="http://quaker.ca/news-and-events/newsletter/">Newsletter</a></li>
 	<li id="menu-item-6170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6170"><a href="http://quaker.ca/news-and-events/writings/">Writings</a></li>
 </ul>
@@ -310,23 +440,30 @@ header {padding:20px 0;}
 
 			<div class="slideshow_view">
 				<div class="slideshow_slide slideshow_slide_image">
-					<a href="http://quaker.ca/news/quakers-appalled-by-islamophobia/" target="_self" >						<img src="http://quaker.ca/wp-content/uploads/2015/11/logo.jpg" alt="Quakers Appalled by Islamophobia" width="402" height="222" />
+					<a href=" http://quaker.ca/news-and-events/cym-gathering-2016/" target="_self" >						<img src="http://quaker.ca/wp-content/uploads/2016/08/kerry3.jpg" alt="CYM 2016 Gathering in Camrose" width="625" height="264" />
 					</a>					<div class="slideshow_description_box slideshow_transparent">
-						<h2 class="slideshow_title"><a href="http://quaker.ca/news/quakers-appalled-by-islamophobia/" target="_self" >Quakers Appalled by Islamophobia</a></h2>											</div>
+						<div class="slideshow_title"><a href=" http://quaker.ca/news-and-events/cym-gathering-2016/" target="_self" >CYM 2016 Gathering in Camrose</a></div>											</div>
 				</div>
 
 						<div style="clear: both;"></div></div><div class="slideshow_view">
 				<div class="slideshow_slide slideshow_slide_image">
-					<a href="http://quaker.ca/who-we-are/history/" target="_self" >						<img src="http://quaker.ca/wp-content/uploads/2015/08/old-quakers.png" alt="Explore Quaker History" width="500" height="350" />
+					<a href="http://quaker.ca/news-and-events/cym-gathering-2016/" target="_self" >						<img src="http://quaker.ca/wp-content/uploads/2016/08/kerry2.jpg" alt="CYM 2016 Gathering in Camrose" width="603" height="264" />
 					</a>					<div class="slideshow_description_box slideshow_transparent">
-						<h2 class="slideshow_title"><a href="http://quaker.ca/who-we-are/history/" target="_self" >Explore Quaker History</a></h2>											</div>
+						<div class="slideshow_title"><a href="http://quaker.ca/news-and-events/cym-gathering-2016/" target="_self" >CYM 2016 Gathering in Camrose</a></div>											</div>
 				</div>
 
 						<div style="clear: both;"></div></div><div class="slideshow_view">
 				<div class="slideshow_slide slideshow_slide_image">
-					<a href="http://quaker.ca/news/quakers-at-the-truth-and-reconciliation-commission-walk/" target="_self" >						<img src="http://quaker.ca/wp-content/uploads/2015/06/Quaker-TRC1.jpg" alt="Quakers at the Walk for Reconciliation" width="600" height="450" />
+					<a href="http://quaker.ca/news/quakers-at-the-truth-and-reconciliation-commission-walk/" target="_self" >						<img src="http://quaker.ca/wp-content/uploads/2016/08/march.jpg" alt="Quakers at the Walk for Reconciliation" width="605" height="265" />
 					</a>					<div class="slideshow_description_box slideshow_transparent">
-						<h2 class="slideshow_title"><a href="http://quaker.ca/news/quakers-at-the-truth-and-reconciliation-commission-walk/" target="_self" >Quakers at the Walk for Reconciliation</a></h2>											</div>
+						<div class="slideshow_title"><a href="http://quaker.ca/news/quakers-at-the-truth-and-reconciliation-commission-walk/" target="_self" >Quakers at the Walk for Reconciliation</a></div>											</div>
+				</div>
+
+						<div style="clear: both;"></div></div><div class="slideshow_view">
+				<div class="slideshow_slide slideshow_slide_image">
+					<a href="http://quaker.ca/who-we-are/history/" target="_self" >						<img src="http://quaker.ca/wp-content/uploads/2016/08/history.jpg" alt="Explore Quaker History" width="605" height="265" />
+					</a>					<div class="slideshow_description_box slideshow_transparent">
+						<div class="slideshow_title"><a href="http://quaker.ca/who-we-are/history/" target="_self" >Explore Quaker History</a></div>											</div>
 				</div>
 
 						<div style="clear: both;"></div></div><div class="slideshow_view">
@@ -356,46 +493,37 @@ header {padding:20px 0;}
 <a title="Find a quaker" href="http://quaker.ca/contact/find-a-meeting/"><img class="alignnone size-full wp-image-2550" src="http://quaker.ca/wp-content/uploads/2013/06/quaker-find-2.png" alt="groups-2" /></a><br />
 <a title="Donate to CYM" href="http://quaker.ca/contact/donate"><img src="http://quaker.ca/wp-content/uploads/2013/06/quaker-donate.png" alt="" /></a></p>
 <h3 class="homepage">Bienvenue</h3>
-<p>Si vous voulez des informations en francais, nous demander, <span id="eeb-562915"></span><script type="text/javascript">(function(){var ml="8heqA7Fr%kfoEvl.1a643s0cBtu-Cnm2iDp!",mi="8DLA8OF172:8DQ8OONAP>I;8D43J2EIP;ME:7AMGAPE8CF3JA927?GA8OO8OF8OFG>AEE8DQ8OONAP>I;K>PM98OO8D<E8OB8OD0O@58DHP>8OF=;JE8OFR>APIS8DL8O6A8D<",o="";for(var j=0,l=mi.length;j<l;j++){o+=ml.charAt(mi.charCodeAt(j)-48);}document.getElementById("eeb-562915").innerHTML = decodeURIComponent(o);}());</script><noscript>*protected email*</noscript>.
+<p>Si vous voulez des informations en francais, nous demander, <a href="mailto:questionsfrancais@quaker.ca">s&#8217;il vous plait!</a>.
 </div>
 <div class="two_thirds">
 <span class="section_title_two">Latest Posts</span><div class="blog_posts_featured_holder">
 <div class="blog_posts_featured_image">
-<a href='http://quaker.ca/events/atlantic-friends-gathering-may-20-23/'><img src='http://quaker.ca/wp-content/uploads/2016/05/sunset-Geddie-65x65.jpg' alt='Atlantic Friends Gathering &#8211; May 20-23' /></a><strong><a href="http://quaker.ca/events/atlantic-friends-gathering-may-20-23/">Atlantic Friends Gathering &#8211; May 20-23</a></strong><p>Come and join us over the Victoria Day weekend at Camp Geddie, Merigomish, NS.
+<strong><a href="http://quaker.ca/quaker-blog/fall-2016-on-line-courses-offered-by-education-and-outreach-committee/">Fall 2016 On-Line Courses offered by Education and Outreach Committee</a></strong><p>Canadian Yearly Meeting Education &amp; Outreach Committee
 
-See info at http://atlantic.quaker.ca/afg
+Announces Online Courses for Fall 2016
 
- 	We have arranged a full program including guest speakers, and members from our three Atlantic Friends Meet...</p></div>
+“Introduction to Quakers and Friends’ Ways” and "Uh-Oh Was That a Leading?"
+
+Facilitator: David Summerhays (Montreal Monthly Meet...</p></div>
 <div class="hr hr-dotted">&nbsp;</div>
 </div>
 <div class="blog_posts_featured_holder">
 <div class="blog_posts_featured_image">
-<strong><a href="http://quaker.ca/whym/whym-registration-documents-available/">WHYM Registration Documents Available!</a></strong><p>Dear Friends, the registration documents for the Spring WHYM gathering are available now. For more information on WHYM click here.
+<strong><a href="http://quaker.ca/cym/canadian-yearly-meeting-epistle-2016/">Canadian Yearly Meeting Epistle, 2016</a></strong><p>August 13, 2016
 
-Spring WHYM Registration (Word)
+Epistle of Canadian Yearly Meeting 2016 
 
-Spring WHYM Registration (Excel)
-
-&nbsp;
-
-&nbsp;
-
-Should you...</p></div>
+O wait to feel this spirit, and to be guided to walk in this spirit, that ye may enjoy the Lord in sweetness, and walk sweetly, meekly, tenderly, peaceably, and lovingly on...</p></div>
 <div class="hr hr-dotted">&nbsp;</div>
 </div>
 <div class="blog_posts_featured_holder">
 <div class="blog_posts_featured_image">
-<strong><a href="http://quaker.ca/news/cym-2016-registration-form-and-registration-material-available/">CYM 2016: Registration Form and Registration Material Available!</a></strong><p>Dear Friends, in preparation for the CYM 2016, we have uploaded the Registration Form and Registration Material documents.
-
-&nbsp;
-
-For more information, please visit the CYM 2016 Gathering page....</p></div>
+<strong><a href="http://quaker.ca/news/canadian-young-friends-yearly-meeting-epistle-2016/">Canadian Young Friends’ Yearly Meeting Epistle 2016</a></strong><p>This week in Camrose (August 6 – 13, 2016) held a great diversity of experiences for Canadian Young Friends’ Yearly Meting (CYFYM); deep conversations, shared laughter, gathered meetings for business, and involvement in rich Canadian Y...</p></div>
 <div class="hr hr-dotted">&nbsp;</div>
 </div>
 <div class="blog_posts_featured_holder">
 <div class="blog_posts_featured_image">
-<strong><a href="http://quaker.ca/news/announcing-online-course-spring-2016-uh-oh-was-that-a-leading/">Announcing Online Course Spring 2016: &#8220;Uh Oh, Was That a Leading?&#8221;</a></strong><p>Friends across Canada are invited to participate in this new free online course facilitated by David Summerhays (Montreal Monthly Meeting). The five-week course will begin mid-April and conclude in May 2016.
-The course content will...</p></div>
+<strong><a href="http://quaker.ca/quaker-blog/outward-bound/">Outward Bound</a></strong><p>Wednesday is a special day at CYM. That's when Friends are invited to help with a local service project and then partake of the simple evening meal, with the cafeteria's savings on the meal going to a local charity, usually the charity...</p></div>
 <div class="hr hr-dotted">&nbsp;</div>
 </div>
 <p>&nbsp;<br />
@@ -441,9 +569,9 @@ Toll Free Canada &#038; U.S.A.:<br />
 1-888-296-3222<br />
 Fax: 613-235-1753</p>
 <p>E-mail:<br />
-<span id="eeb-846865"></span><script type="text/javascript">(function(){var ml=".ufA3nYiyC0IbgFr6ldMh8-tq2BeD4kEa%mos_c",mi="Q49PQI:D?K2Q4LQIIRP7AGSQ43V8RFS227VKQM:H1PNK?0VPQIIQI:G7GAKQ4LQII96CQI:;52SQI:QI@QI4:4EQ4JQI:3BR757TG?PG7S5QIIQI:QI:QI:GP?=KGQ4LQIIU<AP5NQIIQI:VAPTTQ4LQIIRP7AGSFA75NQIIQ4OQI:96CQI:;52SQI:QI@QI:3BR757TG?PG7S5Q49QI>PQ4O",o="";for(var j=0,l=mi.length;j<l;j++){o+=ml.charAt(mi.charCodeAt(j)-48);}document.getElementById("eeb-846865").innerHTML = decodeURIComponent(o);}());</script><noscript>*protected email*</noscript><br />
-<span id="eeb-740899"></span><script type="text/javascript">(function(){var ml="ro2gmdtsaki-wDE.C_b04fhWelncuA%3Fq",mi="NO@8N2CF0HENO=N2248:I61NOM<HBH5:610NDCQL89H0?K8N22N2C6:6IHNO=N22GHBN2C>5:610N22N2CN2CN2C6803H6NO=N22ABI8J9N22N2CKI877NO=N2248:I61;I:J9N22NO>N2CGHBN2C>5:610NO@N2P8NO>",o="";for(var j=0,l=mi.length;j<l;j++){o+=ml.charAt(mi.charCodeAt(j)-48);}document.getElementById("eeb-740899").innerHTML = decodeURIComponent(o);}());</script><noscript>*protected email*</noscript><br />
-<span id="eeb-957423"></span><script type="text/javascript">(function(){var ml="3-g0nqtChkTcelWob42DEIsrAmw.%Ffu_ia",mi="L07RLB38G<NL0CLBBIRQ=6?L0HJ<@LA35OR9<GK;RLBBLB36Q6=<L0CLBB><@LB3:<;84Q;R=LB3EFFO<FLBBLB3LB3LB36RG2<6L0CLBBP@=R49LBBLB3;=RFFL0CLBBIRQ=6?1=Q49LBBL0DLB3><@LB3:<;84Q;R=LB3EFFO<FL07LBMRL0D",o="";for(var j=0,l=mi.length;j<l;j++){o+=ml.charAt(mi.charCodeAt(j)-48);}document.getElementById("eeb-957423").innerHTML = decodeURIComponent(o);}());</script><noscript>*protected email*</noscript></p>
+<a title="CYM Info &#038; Administration" href="mailto:cym-office@quaker.ca" target="_blank"> CYM Info &#038; Administration</a><br />
+<a title="Web Editor" href="mailto:webeditor@quaker.ca" target="_blank"> Web Editor</a><br />
+<a title="Web Technical Issues" href="mailto:web@quaker.ca" target="_blank"> Web Technical Issues</a></p>
 </div>
 		</div>                    </div>
                                         <div class="one_fourth">
@@ -469,19 +597,19 @@ Fax: 613-235-1753</p>
                                         <div class="one_fourth">
                         		<div class="sidebar-widget widget_recent_entries">		<p class="foot-heading">Recent Posts</p>		<ul>
 					<li>
-				<a href="http://quaker.ca/events/atlantic-friends-gathering-may-20-23/">Atlantic Friends Gathering &#8211; May 20-23</a>
+				<a href="http://quaker.ca/quaker-blog/fall-2016-on-line-courses-offered-by-education-and-outreach-committee/">Fall 2016 On-Line Courses offered by Education and Outreach Committee</a>
 						</li>
 					<li>
-				<a href="http://quaker.ca/whym/whym-registration-documents-available/">WHYM Registration Documents Available!</a>
+				<a href="http://quaker.ca/cym/canadian-yearly-meeting-epistle-2016/">Canadian Yearly Meeting Epistle, 2016</a>
 						</li>
 					<li>
-				<a href="http://quaker.ca/news/cym-2016-registration-form-and-registration-material-available/">CYM 2016: Registration Form and Registration Material Available!</a>
+				<a href="http://quaker.ca/news/canadian-young-friends-yearly-meeting-epistle-2016/">Canadian Young Friends’ Yearly Meeting Epistle 2016</a>
 						</li>
 					<li>
-				<a href="http://quaker.ca/news/announcing-online-course-spring-2016-uh-oh-was-that-a-leading/">Announcing Online Course Spring 2016: &#8220;Uh Oh, Was That a Leading?&#8221;</a>
+				<a href="http://quaker.ca/quaker-blog/outward-bound/">Outward Bound</a>
 						</li>
 					<li>
-				<a href="http://quaker.ca/news/the-2016-gathering-in-camrose-alberta-needs-your-help-2/">The 2016 Gathering in Camrose, Alberta needs your help!</a>
+				<a href="http://quaker.ca/quaker-blog/fgc-2017-gathering-invitation-to-cym/">FGC 2017 Gathering: Invitation to CYM</a>
 						</li>
 				</ul>
 		</div>		                    </div>
@@ -537,38 +665,32 @@ Fax: 613-235-1753</p>
 		<# } #>
 	</div>
 </script>
-	<div style="display:none">
-	</div>
+<!--[if IE 7]><style>
+.wpv-pagination { *zoom: 1; }
+</style><![endif]-->
 <link rel='stylesheet' id='bp_shortcode_f_i_css-css'  href='http://quaker.ca/wp-content/plugins/blog_posts_shortcode_featured_image/blog_posts_shortcode_featured_image.css?ver=1.0' type='text/css' media='screen' />
 <link rel='stylesheet' id='slideshow-jquery-image-gallery-stylesheet_functional-css'  href='http://quaker.ca/wp-content/plugins/slideshow-jquery-image-gallery/style/SlideshowPlugin/functional.css?ver=2.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='slideshow-jquery-image-gallery-stylesheet_style-dark-css'  href='http://quaker.ca/wp-content/plugins/slideshow-jquery-image-gallery/css/style-dark.css?ver=2.3.1' type='text/css' media='all' />
-<script type='text/javascript' src='http://quaker.ca/wp-includes/js/comment-reply.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-includes/js/comment-reply.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var php_data = {"sticky_sidebar":"false","sticky_header_menu":"false"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/custom-main.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/slides.min.jquery.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.prettyPhoto.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.superfish.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.cycle.all.min.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.easing.1.3.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.isotope.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/custom-main.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/slides.min.jquery.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.prettyPhoto.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.superfish.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.cycle.all.min.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.easing.1.3.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling/framework/js/jquery.isotope.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
 <script type='text/javascript' src='http://quaker.ca/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/quaker.ca\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ...","cached":"1"};
+var _wpcf7 = {"loaderUrl":"http:\/\/quaker.ca\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ..."};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.4.1'></script>
-<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2016Mayaa'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var WPGroHo = {"my_hash":""};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/plugins/jetpack/modules/wpgroho.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.5'></script>
 <script type='text/javascript' src='http://quaker.ca/wp-content/themes/Sterling-Child-Theme/js/main.js?ver=1.0.0'></script>
 <script type='text/javascript' src='http://quaker.ca/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
 <script type='text/javascript' src='http://quaker.ca/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
@@ -581,7 +703,7 @@ var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://quaker.ca/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=2.18.1-a'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-includes/js/mediaelement/wp-mediaelement.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
 <script type='text/javascript' src='http://quaker.ca/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
@@ -589,16 +711,16 @@ var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
 var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://quaker.ca/wp-includes/js/wp-util.min.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-includes/js/wp-util.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
 <script type='text/javascript' src='http://quaker.ca/wp-includes/js/backbone.min.js?ver=1.2.3'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-includes/js/mediaelement/wp-playlist.min.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-includes/js/mediaelement/wp-playlist.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var wpv_pagination_local = {"front_ajaxurl":"http:\/\/quaker.ca\/wp-admin\/admin-ajax.php","ajax_pagination_url":"http:\/\/quaker.ca\/wpv-ajax-pagination\/","calendar_image":"http:\/\/quaker.ca\/wp-content\/plugins\/wp-views-new\/embedded\/res\/img\/calendar.gif","calendar_text":"Select date","datepicker_min_date":null,"datepicker_max_date":null};
+var wpv_pagination_local = {"front_ajaxurl":"http:\/\/quaker.ca\/wp-admin\/admin-ajax.php","calendar_image":"http:\/\/quaker.ca\/wp-content\/plugins\/wp-views\/embedded\/res\/img\/calendar.gif","calendar_text":"Select date","datepicker_min_date":null,"datepicker_max_date":null,"resize_debounce_tolerance":"100"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://quaker.ca/wp-content/plugins/wp-views-new/embedded/res/js/wpv-pagination-embedded.js?ver=1.11.1'></script>
-<script type='text/javascript' src='http://quaker.ca/wp-includes/js/wp-embed.min.js?ver=b9cc9f6e36e9564a22966987058b37cf'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-content/plugins/wp-views/embedded/res/js/wpv-pagination-embedded.js?ver=2.2'></script>
+<script type='text/javascript' src='http://quaker.ca/wp-includes/js/wp-embed.js?ver=656d2904f6cfc32eb865c26da100743f'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var SlideshowPluginSettings_3636 = {"animation":"fade","slideSpeed":"1.6","descriptionSpeed":"0.4","intervalSpeed":"7","slidesPerView":"1","maxWidth":"0","aspectRatio":"3:1","height":"264","imageBehaviour":"stretch","showDescription":"true","hideDescription":"false","preserveSlideshowDimensions":"false","enableResponsiveness":"true","play":"true","loop":"true","pauseOnHover":"true","controllable":"true","hideNavigationButtons":"false","showPagination":"false","hidePagination":"true","controlPanel":"false","hideControlPanel":"true","waitUntilLoaded":"true","showLoadingIcon":"true","random":"false","avoidFilter":"true","stretchImages":"true"};
@@ -606,12 +728,6 @@ var slideshow_jquery_image_gallery_script_adminURL = "http:\/\/quaker.ca\/wp-adm
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://quaker.ca/wp-content/plugins/slideshow-jquery-image-gallery/js/min/all.frontend.min.js?ver=2.3.1'></script>
-<script type='text/javascript' src='http://stats.wp.com/e-201619.js' async defer></script>
-<script type='text/javascript'>
-	_stq = window._stq || [];
-	_stq.push([ 'view', {v:'ext',j:'1:4.0.2',blog:'52109265',post:'326',tz:'-4',srv:'quaker.ca'} ]);
-	_stq.push([ 'clickTrackerInit', '52109265', '326' ]);
-</script>
 
 
 <script>
@@ -825,6 +941,3 @@ function BodyLoad()
 
 </body>
 </html>
-<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
-
- Served from: quaker.ca @ 2016-05-09 10:11:14 by W3 Total Cache -->

@@ -6,9 +6,9 @@
 <html class="no-js" lang="en" dir="ltr">
 <!--<![endif]-->
 
-<!-- Server: 02 -->
+<!-- Server: 01 -->
 
-<!-- v4.0.13 - 2015-04-21 -->
+<!-- v4.0.21 - 2016-04-12 -->
 
 
 <head>
@@ -16,8 +16,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="Public Safety Canada was created in 2003 to ensure coordination across all federal departments and agencies responsible for national security and the safety of Canadians. Our mandate is to keep Canadians safe from a range of risks such as natural disasters, crime and terrorism." />
 	<meta name="dcterms.title" content="Public Safety Canada - Home" />
-	<meta name="dcterms.issued" content="2015-05-14" />
-	<meta name="dcterms.modified" content="2016-05-07" />
+	<meta name="dcterms.issued" content="2015-12-16" />
+	<meta name="dcterms.modified" content="2016-09-09" />
 	<meta name="keywords" content="Security" />
 	<meta name="dcterms.subject" content="Safety; Public safety; Emergency preparedness" />
 	<meta name="dcterms.language" title="ISO639-2" content="eng" />
@@ -271,61 +271,42 @@
 						<li><a href="#panel2">Tab 2</a></li>
 						<li><a href="#panel3">Tab 3</a></li>
 						<li><a href="#panel4">Tab 4</a></li>
-                        <li><a href="#panel5">Tab 5</a></li>
 					</ul>
 					<div class="tabpanels">
 						<div role="tabpanel" id="panel1" class="in fade">
-							<a href="https://www.canada.ca/en/services/policing/alberta-wildfires.html">
+							<a href="https://www.canada.ca/en/services/defence/nationalsecurity/consultation-national-security.html?utm_source=PS&utm_medium=PS-carousel &utm_campaign=ntnl-scrt-cnsltn">
 								<figure>
-									<img src="/cnt/assets/carousel/Wildfires-NT_carousel-bil.jpg" alt="Panel 1" />
+									<img src="/cnt/assets/carousel/ntnl-scrt-cnslttn-bil.jpg" alt="Panel 1" />
 									<figcaption>
-										<p>Alberta Wildfires - Get the latest</p>
+										<p>Consultation on National Security: Learn about national security and share your views online</p>
 									</figcaption>
 								</figure>
 							</a>
 						</div>
-
-
-						<div role="tabpanel" id="panel2" class="in fade">
-							<a href="http://www.scics.gc.ca/english/Conferences.asp?a=viewdocument&id=2424">
+						<div role="tabpanel" id="panel2" class="out fade">
+							<a href="http://news.gc.ca/web/article-en.do?nid=1121889">
 								<figure>
-									<img src="/cnt/nws/pht-gllr/2016/_mgs/20160506-01-sm-bil.jpg" alt="Panel 2" />
+									<img src="/cnt/nws/pht-gllr/2016/_mgs/20160909-bil.jpg" alt="Panel 2" />
 									<figcaption>
-										<p>The Honourable Ralph Goodale, Minister of Public Safety and Emergency Preparedness, delivered remarks at the the FPT Ministers’ Emergency Management Meeting on May 6, 2016 in Toronto, Ontario.</p>
+										<p>The Honourable Ralph Goodale, Minister of Public Safety and Emergency Preparedness, and the Honourable Jody Wilson-Raybould, Minister of Justice and Attorney General of Canada, delivered remarks at the Launch of the National Security Consultation on September 8, 2016, in Edmonton, Alberta.</p>
 									</figcaption>
 								</figure>
 							</a>
 						</div>
-
-
 						<div role="tabpanel" id="panel3" class="out fade">
-							<a href="http://www.getprepared.gc.ca/cnt/rsrcs/ep-wk/index-en.aspx">
+							<a href="https://www.canada.ca/en/services/defence/cybersecurity/consultation-cyber-security.html?utm_source=PS&utm_medium=ps-carousel&utm_campaign=cbr-scrt-cnsltn">
 								<figure>
-									<img src="/cnt/assets/carousel/20160429-en.jpg" alt="Panel 3" />
+									<img src="/cnt/assets/carousel/cybr-cnslttn-bil.jpg" alt="Panel 3" />
 									<figcaption>
-										<p>
-											Emergency Preparedness Week
-										</p>
+										<p>Cyber Security Consultation: Learn about the cyber security environment in Canada and provide your input</p>
 									</figcaption>
 								</figure>
 							</a>
 						</div>
 						<div role="tabpanel" id="panel4" class="out fade">
-							<a href="http://www.getcybersafe.gc.ca/index-en.aspx">
-								<figure>
-									<img src="/cnt/assets/carousel/20151130-1-en.jpg" alt="Panel 4" />
-									<figcaption>
-										<p>
-											Get Cyber Safe
-										</p>
-									</figcaption>
-								</figure>
-							</a>
-						</div>
-						<div role="tabpanel" id="panel5" class="out fade">
 							<a href="/cnt/rsrcs/cndn-dsstr-dtbs/index-en.aspx">
 								<figure>
-									<img src="/cnt/assets/carousel/20151130-2-bil.jpg" alt="Panel 5" />
+									<img src="/cnt/assets/carousel/20151130-2-bil.jpg" alt="Panel 4" />
 									<figcaption>
 										<p>
 											The Canadian Disaster Database (CDD) contains detailed disaster information on more than 1000 natural, technological and conflict events (excluding war) that have happened since 1900 at home or abroad and that have directly affected Canadians.
@@ -343,33 +324,33 @@
 						<h2>News</h2>
 						
         <li class="list-group-item">
-            <a href="http://www.scics.gc.ca/english/Conferences.asp?a=viewdocument&id=2424">Federal-Provincial-Territorial Ministers Meet To Discuss Emergency Management</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1123179">Statement from Minister Goodale on the Anniversary of 9/11 and the National Day of Service</a>
             <br />
-            <small class="text-muted">May 6, 2016</small>
+            <small class="text-muted">September 11, 2016</small>
         </li>
     
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1062049">Public Safety Canada and the Canadian Red Cross sign Memorandum of Understanding</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1122779">Statement from Minister Goodale at the Annual General Meeting of the Canadian Volunteer Fire Services Association</a>
             <br />
-            <small class="text-muted">May 6, 2016</small>
+            <small class="text-muted">September 10, 2016</small>
         </li>
     
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1060779">Statement from Minister Goodale on Wildfire Situation in Fort McMurray</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1121889">Government of Canada launches public consultation on national security</a>
             <br />
-            <small class="text-muted">May 3, 2016</small>
+            <small class="text-muted">September 8, 2016</small>
         </li>
     
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1059789">The Government of Canada marks Emergency Preparedness Week 2016</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1121819">The Government of Canada is listening to Indigenous Peoples and the policing community</a>
             <br />
-            <small class="text-muted">May 1, 2016</small>
+            <small class="text-muted">September 8, 2016</small>
         </li>
     
         <li class="list-group-item">
-            <a href="http://news.gc.ca/web/article-en.do?nid=1046589">Statement by the Honourable Ralph Goodale, Minister of Public Safety and Emergency Preparedness, regarding the death of RCMP Constable Beckett</a>
+            <a href="http://news.gc.ca/web/article-en.do?nid=1121459">Minister Goodale and Minister Wilson-Raybould to hold a media availability</a>
             <br />
-            <small class="text-muted">April 5, 2016</small>
+            <small class="text-muted">September 7, 2016</small>
         </li>
     
 						
@@ -412,20 +393,31 @@
 			<aside class="col-md-4">
 				<h2>How Do I?</h2>
 				<ul class="list-group list-unstyled">
+					<li class="list-group-item"><a href="/ppio">Submit an inquiry to the Passenger Protect Inquiries Office?</a></li>
+					<li class="list-group-item"><a href="/cnt/mrgnc-mngmnt/dsstr-prvntn-mtgtn/ndmp/index-en.aspx">Apply for the National Disaster Mitigation Program</a></li>
 					<li class="list-group-item"><a href="/cnt/ntnl-scrt/cbr-scrt/rprt-en.aspx">Report a cyber incident</a></li>
-					<li class="list-group-item"><a href="/cnt/cntrng-crm/crrctns/vcmt-ssstnc-en.aspx">Access resources for victims of crime.</a></li>
-					<li class="list-group-item"><a href="http://www.getprepared.gc.ca/cnt/kts/index-en.aspx">Prepare an emergency kit.</a></li>
-					<li class="list-group-item"><a href="/cnt/rsrcs/cndn-dsstr-dtbs/index-en.aspx">Access the Canadian Disaster Database.</a></li>
+					<li class="list-group-item"><a href="/cnt/cntrng-crm/crrctns/vcmt-ssstnc-en.aspx">Access resources for victims of crime</a></li>
+					<li class="list-group-item"><a href="http://www.getprepared.gc.ca/cnt/kts/index-en.aspx">Prepare an emergency kit</a></li>
+					<li class="list-group-item"><a href="/cnt/rsrcs/cndn-dsstr-dtbs/index-en.aspx">Access the Canadian Disaster Database</a></li>
 				</ul>
 								
 				<h2>Priorities</h2>
 				
 
-		<a href="http://canada.pch.gc.ca/eng/1460573328032" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/2016-cndn-cntnt-en.jpg" alt="Canadian Content in Digital World" /> </a>             
+		<a href="http://canada.ca/youth" class="thumbnail small">
+			<img src="/cnt/_modules/priorities/_mgs/20160719-en.jpg" alt="" />
+			Apply now to the PM's Youth Council
+		</a>
 
-		<a href="http://www.rcmpcareers.ca" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/2016-rcmp-bil.jpg" alt="Join the Royal Canadian Mounted Police" /> </a>
+		<a href="http://www.cic.gc.ca/english/visit/eta.asp" class="thumbnail small">
+			<img src="/cnt/_modules/priorities/_mgs/eta-en.jpg" alt="" />
+			Tell visiting family and friends about eTA             
+		</a>
 
-		<a href="http://canada.ca/en/services/environment/weather/climatechange/climate-action.html" class="thumbnail"> <img src="/cnt/_modules/priorities/_mgs/2016-climate-change-en.jpg" alt="Have your say on climate change today!" /> </a>
+		<a href="http://international.gc.ca/world-monde/campaign-campagne/gfatm-fmstp/replenishment-conference-reconstitution.aspx?lang=eng" class="thumbnail small">
+			<img src="/cnt/_modules/priorities/_mgs/2016-glbl-fnd-en.jpg" alt="" />
+			Fifth Replenishment Conference of the Global Fund
+		</a>
 
 	
 
@@ -450,7 +442,7 @@
 			<div class="clearfix"></div>
       <dl id="wb-dtmd">
 				<dt>Date modified: </dt>
-				<dd><time property="dateModified">2016-05-07</time></dd>
+				<dd><time property="dateModified">2016-09-09</time></dd>
 			</dl> 
         
          

@@ -300,13 +300,16 @@ jQuery(document).ready(function ($) {
 	<!-- Slides Container.  Rotator: 1 -->
 	<div data-u="slides" style="cursor:move; position:absolute; left:0px; top:0px; width:765px; height:277px; overflow:hidden;">
 			<div>			
-				<img data-u="image" src="./photos/Ads/13_Pitch In.jpg" alt="Pitch In bag in Carleton Place">
+				<img data-u="image" src="./photos/Ads/31_September3.jpg" alt="Two women sitting on red chairs beside the Mississippi River in Carleton Place late summer">
 			</div>
 			<div>			
-				<img data-u="image" src="./photos/Ads/14_spring crocus2.jpg" alt="beautiful purple spring crocuses in snow">
+				<img data-u="image" src="./photos/Ads/32_September2.jpg" alt="Seeting up for the Labyrinth light up in Carleton Place">
 			</div>
 			<div>			
-				<img data-u="image" src="./photos/Ads/15_maple season.jpg" alt="maple syrup buckets on trees in spring">
+				<img data-u="image" src="./photos/Ads/33_September4.jpg" alt="Carleton Place Town Hall fall colours">
+			</div>
+			<div>			
+				<img data-u="image" src="./photos/Ads/30_September1.jpg" alt="Light up the Labyrinth">
 			</div>
 	</div>
 
@@ -469,8 +472,6 @@ else if("Living Here" == "Visitors")
 </li>
 		<li><a href="-p1331.php" data-link-level="2">Community and Social Services</a>
 </li>
-		<li><a href="seniorsservicesp229.php" data-link-level="2">Senior's Services</a>
-</li>
 		<li><a href="drug-strategy-committee-p1920.php" data-link-level="2">Drug Strategy Committee</a>
 </li>
 	</ul></div></div></li>
@@ -481,19 +482,22 @@ else if("Living Here" == "Visitors")
 	<div class="parent drop8"><a  data-link-level="1" href="library-c234.php">Library</a>
 </div></li>
 <li class="button" id="button15">
-	<div class="parent drop9"><a  data-link-level="1" href="museum-c254.php">Museum and Labyrinth</a>
+	<div class="parent drop9"><a  data-link-level="1" href="seniors-services.php">Seniors' Services</a>
 </div></li>
 <li class="button" id="button16">
-	<div class="parent drop10"><a  data-link-level="1" href="transportationtransit.php">Transportation/Transit</a>
+	<div class="parent drop10"><a  data-link-level="1" href="museum-c254.php">Museum and Labyrinth</a>
 </div></li>
 <li class="button" id="button17">
-	<div class="parent drop11"><a  data-link-level="1" href="localhistoryc10.php">Local History</a>
+	<div class="parent drop11"><a  data-link-level="1" href="transportationtransit.php">Transportation/Transit</a>
 </div></li>
 <li class="button" id="button18">
-	<div class="parent drop12"><a  data-link-level="1" href="sistercitiesc214.php">Sister Cities</a>
+	<div class="parent drop12"><a  data-link-level="1" href="localhistoryc10.php">Local History</a>
 </div></li>
-<li class="button buttonlast" id="button19">
-	<div class="parent drop13"><a  data-link-level="1" href="photoalbumc3.php">Photo Album</a>
+<li class="button" id="button19">
+	<div class="parent drop13"><a  data-link-level="1" href="sistercitiesc214.php">Sister Cities</a>
+</div></li>
+<li class="button buttonlast" id="button20">
+	<div class="parent drop14"><a  data-link-level="1" href="photoalbumc3.php">Photo Album</a>
 </div></li>
 </ul>
 <!-- xcss menu ends -->
@@ -522,187 +526,198 @@ else if("Living Here" == "Visitors")
 					<span class="breadcrumb_section"><a href="livingheres2.php" title="Living Here">Living Here</a></span>
 					<span class="breadcrumb_category breadcrumb_current"><a href="library-c234.php" title="Library">Library</a></span>
 			</div><br>
-          <div>&nbsp;</div>
-
-<h1>Carleton Place Public Library</h1>
-
-<div><img alt="Carleton Place Public Library" border="0" src="http://carletonplace.ca/photos/custom/library%20photo%20small.jpg" style="margin-left: 10px; float: right;" />
-<div><span style="font-size:14px;">Access the library website at <a href="http://www.carletonplacelibrary.ca">www.carletonplacelibrary.ca</a></span><br />
-&nbsp;</div>
+          <h1 style="text-align: center;">
+  <br />
+  <img alt="Carleton Place Public Library" border="0" src="http://carletonplace.ca/photos/custom/library%20photo%20small.jpg" style="margin-right: 8px;" />
+</h1>
+<h1 style="text-align: center;">Carleton Place Public Library
+</h1>
+<div style="text-align: center;">101 Beckwith Street
+  <br />
+  Carleton Place, ON K7C 2T3
+  <br />
+  (613) 257-2702
+  <br />
+  Email: <a href="mailto:mcaswell@carletonplace.ca">mcaswell@carletonplace.ca</a>
 </div>
-
-<div><span style="line-height: 1.5; font-size: 14px; font-weight: bold;">Location:</span></div>
-
-<p style="text-align: left;">101 Beckwith Street<br />
-Carleton Place, ON K7C 2T3<br />
-(613) 257-2702<br />
-Email: <a href="mailto:mcaswell@carletonplace.ca">mcaswell@carletonplace.ca</a></p>
-
-<h2 style="text-align: left;">Library Hours:</h2>
-
-<div>Monday to Thursday: 1:30 p.m. to 8:00 p.m</div>
-
-<div>Friday: 9:30 a.m. to 5:30 p.m.</div>
-
-<div>Saturday: 10:00 a.m. to 5:00 p.m.</div>
-
-<div>&nbsp;</div>
-
-<div><span style="line-height: 1.5;">All materials can be signed out for three weeks, with the exception of DVDs, which can be signed out for one week.</span></div>
-
-<p><span style="line-height: 1.5; font-size: 14px; font-weight: bold;">Book Drop Hours:</span></p>
-
-<div>Monday - Friday 9:00 am to 1:30 pm<br />
-Saturday 9:00 am to 10:00 am</div>
-
-<h2><span style="font-weight: bold;">Fines:</span></h2>
-
-<div><span style="line-height: 1.5;">Adults -&nbsp;20 cents/day</span></div>
-
-<div>
-<div>Children - 10 cents/day</div>
+<div style="text-align: center;"><span style="font-size:12px;"><span style="line-height: 21px; text-align: center;">Access the library website at <a href="http://www.carletonplacelibrary.ca">www.carletonplacelibrary.ca</a></span></span>
 </div>
-
-<div>&nbsp;</div>
-
 <div>
-<hr /></div>
-
-<div>&nbsp;</div>
-
-<div><span style="line-height: 1.5; font-size: 14px; font-weight: bold;">List of Services Available:</span></div>
-
-<div>
-<table style="width: 100%; border-collapse: collapse;">
-	<tbody>
-		<tr>
-			<td style="padding-left: 10px;">
-			<ul>
-				<li>Wireless Internet Access</li>
-				<li>Interlibrary Loans through Ontario Interloan Network</li>
-				<li>Local History and Genealogical Information</li>
-				<li>Talking Books for the Seeing Impaired</li>
-				<li>Shut-In Delivery Service</li>
-				<li>Photocopying Capabilities</li>
-			</ul>
-			</td>
-			<td style="padding-left: 10px;">
-			<ul>
-				<li>Children&#39;s Programs</li>
-				<li>DVD library</li>
-				<li>Newspapers</li>
-				<li>Magazines</li>
-				<li>Books</li>
-			</ul>
-			</td>
-		</tr>
-	</tbody>
-</table>
+  <p style="text-align: left;">&nbsp;
+  </p>
+  <h2 class="page_subheader_title" style="text-align: left;">Library Hours
+  </h2>
+  <div>Monday to Thursday: 1:30 p.m. to 8:00 p.m
+  </div>
+  <div>Friday: 9:30 a.m. to 5:30 p.m.
+  </div>
+  <div>Saturday: 10:00 a.m. to 5:00 p.m.
+  </div>
+  <div>&nbsp;
+  </div>
+  <div><span style="line-height: 1.5;">All materials can be signed out for three weeks, with the exception of DVDs, which can be signed out for one week.</span>
+  </div>
+  &nbsp;
+  <h2 class="page_subheader_title">Bookdrop
+  </h2>
+  <div>Monday - Friday 9:00 am to 1:30 pm
+    <br />
+    Saturday 9:00 am to 10:00 am
+  </div>
 </div>
-
-<h2>Community Internet Access:</h2>
-
-<p>We offer three computer terminals that offer internet access and the Microsoft Office suite of products, which are available for an hour per person per day, and two Express terminals, which are available for up to 15 minutes. &nbsp; We also offer free WiFi access. &nbsp;To book time on a computer, contact the Library at (613) 257-2702.</p>
-
-<div>&nbsp;</div>
-
-<div>&nbsp;</div>
-
-<h2><span style="font-weight: bold;">The Barbara Walsh Room:</span></h2>
-
-<p>This room is ideal for meetings, conferences and workshops. It offers a non-smoking environment and features a kitchenette and air conditioning. A television is available upon request, at no additional cost. The room will accommodate 50 persons. The cost of rental is $45.00 per eveni<span style="font-size: 10pt;">ng or half day.</span></p>
-
-<div>For further information, please call Meriah at (613) 257-2702.</div>
-
-<div>&nbsp;</div>
-
-<h2><strong style="line-height: 1.5; font-size: 14px;"><span class="page_header_title" style="font-size: 12pt;">Fees and Charges:</span></strong></h2>
-
+<p>&nbsp;
+</p>
+<h2 class="page_subheader_title">Fines
+</h2>
+<p><span style="line-height: 1.5;">Adults -&nbsp;20 cents/day</span>
+<br>
+<p>Children - 10 cents/day
+</p>
+<p>&nbsp;
+</p>
+<h2 class="page_subheader_title">List of Services Available
+</h2>
 <div>
-<table style="width: 100%; border-collapse: collapse;">
-	<tbody>
-		<tr>
-			<td>
-			<div><strong>Fee Type</strong></div>
-			</td>
-			<td>
-			<div><strong>Fee Amount</strong></div>
-			</td>
-			<td>
-			<div><strong>Reason/Purpose</strong></div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<div>Room Rental Fee</div>
-			</td>
-			<td>
-			<div>$45.00</div>
-			</td>
-			<td>
-			<div>Room maintenance</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<div>Photocopy Fee</div>
-			</td>
-			<td>
-			<div>$0.20 per page</div>
-			</td>
-			<td>
-			<div>Paper, toner and maintenance costs</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<div>Printing Fee</div>
-			</td>
-			<td>
-			<div>$0.25 per page</div>
-			</td>
-			<td>
-			<div>Paper, toner and maintenance costs</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<div>Adult Book Late Fine</div>
-			</td>
-			<td>
-			<div>$0.20 per day per book</div>
-			</td>
-			<td>
-			<div>To encourage on time returns</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<div>Juvenile Book Late Fine</div>
-			</td>
-			<td>
-			<div>$0.10 per day per book</div>
-			</td>
-			<td>
-			<div>To encourage on time returns</div>
-			</td>
-		</tr>
-	</tbody>
-</table>
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="padding-left: 10px;">
+          <ul>
+            <li>Wireless Internet Access</li>
+            <li>Interlibrary Loans through Ontario Interloan Network</li>
+            <li>Local History and Genealogical Information</li>
+            <li>Talking Books for the Seeing Impaired</li>
+            <li>Shut-In Delivery Service</li>
+            <li>Photocopying Capabilities</li>
+          </ul>
+        </td>
+        <td style="padding-left: 10px;">
+          <ul>
+            <li>Children&#39;s Programs</li>
+            <li>DVD library</li>
+            <li>Newspapers</li>
+            <li>Magazines</li>
+            <li>Books</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-<div>&nbsp;</div>
-
+<h2 class="page_subheader_title">Community Internet Access
+</h2>
+<p>We offer three computer terminals that offer internet access and the Microsoft Office suite of products, which are available for an hour per person per day, and two Express terminals, which are available for up to 15 minutes. &nbsp; We also offer free WiFi access. &nbsp;To book time on a computer, contact the Library at (613) 257-2702.
+</p>
+<p>&nbsp;
+</p>
+<h2 class="page_subheader_title">The Barbara Walsh Room
+</h2>
+<p>This room is ideal for meetings, conferences and workshops. It offers a non-smoking environment and features a kitchenette and air conditioning. A television is available upon request, at no additional cost. The room will accommodate 50 persons. The cost of rental is $45.00 per eveni<span style="font-size: 10pt;">ng or half day.</span>
+</p>
+<div>For further information, please call Meriah at (613) 257-2702.
+</div>
+<div>&nbsp;
+</div>
+<h2 class="page_subheader_title">Fees and Charges
+</h2>
 <div>
-<hr /></div>
-
-<div><span class="page_header_title" style="font-size: 12pt;">Useful Links:</span></div>
-
-<div>&nbsp;</div>
-
-<div><a href="http://talesfromanopenbook.wordpress.com" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Library Blog</a></div>
-
-<div><a href="http://downloadcentre.library.on.ca" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Download Audio Books and e-books!</a></div>
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td>
+          <div><strong>Fee Type</strong>
+          </div>
+        </td>
+        <td>
+          <div><strong>Fee Amount</strong>
+          </div>
+        </td>
+        <td>
+          <div><strong>Reason/Purpose</strong>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Room Rental Fee
+          </div>
+        </td>
+        <td>
+          <div>$45.00
+          </div>
+        </td>
+        <td>
+          <div>Room maintenance
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Photocopy Fee
+          </div>
+        </td>
+        <td>
+          <div>$0.20 per page
+          </div>
+        </td>
+        <td>
+          <div>Paper, toner and maintenance costs
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Printing Fee
+          </div>
+        </td>
+        <td>
+          <div>$0.25 per page
+          </div>
+        </td>
+        <td>
+          <div>Paper, toner and maintenance costs
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Adult Book Late Fine
+          </div>
+        </td>
+        <td>
+          <div>$0.20 per day per book
+          </div>
+        </td>
+        <td>
+          <div>To encourage on time returns
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Juvenile Book Late Fine
+          </div>
+        </td>
+        <td>
+          <div>$0.10 per day per book
+          </div>
+        </td>
+        <td>
+          <div>To encourage on time returns
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>&nbsp;
+</div>
+<h2 class="page_subheader_title">Useful Links
+</h2>
+<div><a href="http://talesfromanopenbook.wordpress.com" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Library Blog</a>
+</div>
+<div><a href="http://downloadcentre.library.on.ca" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no'); return false;">Download Audio Books and e-books!</a>
+</div>
 
                   </div>
         <div id="page_column"></div>

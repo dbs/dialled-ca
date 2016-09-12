@@ -23,7 +23,7 @@
 <link rel="stylesheet" type="text/css" href="/_layouts/1036/styles/core.css?rev=%2B5UhdALQnx9YlM%2BQtl5bGw%3D%3D"/>
 
 	<script src="/_layouts/1036/init.js?rev=Zpvm9KMbdlQbL5m5Q4b0cg%3D%3D"></script>
-<script type="text/javascript" language="javascript" src="/_layouts/1036/core.js?rev=ZLlDjXWYVaf%2FShrif9tULA%3D%3D" defer></script>
+<script type="text/javascript" language="javascript" src="/_layouts/1036/core.js?rev=j%2F3tLUsKcM8qil1HGx6aHA%3D%3D" defer></script>
 <script type="text/javascript" language="javascript" src="/_layouts/1036/non_ie.js?rev=yfNry4hY0Gwa%2FPDNGrqXVg%3D%3D"></script>
 <script type="text/javascript" language="javascript" src="/_layouts/1036/search.js?rev=LkcliuXuBtpyM1BbXQm3gw%3D%3D" defer></script>
 
@@ -81,7 +81,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xCE20D12571D3EAC0843D97C13837837DE3A2348A5A0834DC5F97AAE96D4F3D93C79C8A2F4FD2F6039B95F3DA3D8B370F9D8CB9307952DDCC066AA3A5F0EC559C,09 May 2016 14:26:18 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x7CB3EFC09B844EFA2C24937103B8132D1D716B672B2E480EB28683F8C710D222BEEC47B1DD73DE0C773252ADA4D80DEE651FFE64D8351E07EE7E187E80310EAC,11 Sep 2016 16:36:04 -0000" />
 <input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
 <input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
@@ -260,6 +260,7 @@ var L_Menu_SiteTheme="";
 <li><a href="http://www.cvm.qc.ca/formationcontinue/programmesfcae" title="Programmes et cours de perfectionnement">Programmes et cours de perfectionnement</a></li>
 <li><a href="http://www.cvm.qc.ca/formationcontinue/admission" title="Admission et inscription">Admission et inscription</a></li>
 <li><a href="http://www.cvm.qc.ca/formationcontinue/formationentreprise" title="Formation sur mesurepour les entreprises">Formation sur mesure<br />pour les entreprises</a></li>
+<li><a href="http://www.cvm.qc.ca/formationcontinue/centrelangues" title="Centre linguistique">Centre linguistique</a></li>
 <li><a href="http://www.cvm.qc.ca/formationcontinue/francisation" title="Francisation">Francisation</a></li>
 <li><a href="http://www.cvm.qc.ca/formationcontinue/formationenligne" title="Formation en ligne">Formation en ligne</a></li>
 <li><a href="http://www.cvm.qc.ca/formationcontinue/reconnaissanceacquis" title="Reconnaissance des acquis">Reconnaissance des acquis</a></li>
@@ -414,6 +415,11 @@ var L_Menu_SiteTheme="";
 <td align=left><a title="Repère" href="/repere" target="_blank"><img style="border-bottom:0px solid;border-left:0px solid;width:120px;border-top:0px solid;border-right:0px solid" border=0 alt="Repère" src="/bibliotheque/PublishingImages/H12/repere.png"></a></td></tr>
 <tr valign=middle>
 <td>
+<h3 align=center>LIVRES ÉLECTRONIQUES</h3></td></tr></tr>
+<tr>
+<td align=left><a title="Dés Libris" href="http://deslibris.ca/" target="_blank"><img style="border-bottom:0px solid;border-left:0px solid;width:120px;border-top:0px solid;border-right:0px solid" border=0 alt="Repère" src="/bibliotheque/PublishingImages/DesLibris.png"></a></td></tr>
+<tr valign=middle>
+<td>
 <h3 align=center>STATISTIQUES</h3></td></tr>
 <tr>
 <td height=40 align=left><a title="Institut de la statistique" href="http://www.stat.gouv.qc.ca/" target="_blank"><img border=0 alt="Institut de la statistique du Québec" src="/bibliotheque/PublishingImages/H12/stat_quebec.jpg" width=145 height=35></a><br> <br></td></tr>
@@ -473,6 +479,12 @@ var L_Menu_SiteTheme="";
 <tbody>
 <tr>
 <td><strong>Suivez-nous sur :</strong><br> <a title="Facebook de la bibliothèque du CVM" href="https://www.facebook.com/BiblioCVM" target="_blank"><img style="border-bottom:0px solid;border-left:0px solid;height:51px;border-top:0px solid;border-right:0px solid" border=0 alt="Facebook de la bibliothèque" src="/bibliotheque/PublishingImages/Facebook.jpg"></a>     <a title="Coups de coeur d'hier et d'aujourd'hui de l'équipe de la bibliothèque" href="http://bibliocvm.tumblr.com/" target="_blank"><img style="border-bottom:0px solid;border-left:0px solid;height:50px;border-top:0px solid;border-right:0px solid" border=0 alt="Blogue de la bibliothèque - Tumblr." src="/bibliotheque/PublishingImages/TumbleR.png"></a>     <a title="Venez Twitter avec nous!" href="https://twitter.com/BibliothequeCVM" target="_blank"><img style="border-bottom:0px solid;border-left:0px solid;height:51px;border-top:0px solid;border-right:0px solid" border=0 alt="Compte Twitter de la bibliothèque" src="/bibliotheque/PublishingImages/twitter.jpg"></a>   <a title="Site mobile de la bibliothèque" href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw030?owa_no_site=2385" target="_blank"></a></td></tr></tbody></table>
+<h2>Bonne rentrée!</h2>
+<p>Toute notre équipe vous souhaite un excellent semestre! Au plaisir de vous voir à la bibliothèque! </p>
+<h2>Grande nouveauté : des livres électroniques à la bibliothèque!</h2>
+<p>La bibliothèque est maintenant abonnée à DesLibris, une collection de livres électroniques québécois et canadiens. Cette collection présente à la fois des titres en français et en anglais. Les livres sont offerts en lecture en continu (« <em>streaming</em> »); il n'est donc pas nécessaire de les emprunter ou de les télécharger. DesLibris peut être consulté à partir de n'importe quel poste informatique du collège. Rendez-vous au <a href="http://www.deslibris.ca">www.deslibris.ca</a> pour découvrir cette nouvelle ressource!</p>
+<h2>Vitrine de la rentrée</h2>
+<p>Voyez la nouvelle vitrine à la bibliothèque sur le thème du feu, qui brûle, éclaire et inspire! Cette vitrine est une réalisation de Fanny Deveaux et Samuel Désormeaux, étudiants en design de présentation, soutenus par leur professeur Pascal Duplantie.</p>
 <h2>Nos plus récents outils de recherche </h2>
 <h3>ARTstor</h3>
 <p>La bibliothèque est maintenant abonnée à la banque d'images Artstor, qui vous permet de consulter en ligne des numérisations, en haute résolution, d’œuvres provenant de grands musées et d'archives (photographies de l'agence Magnum et du Getty, tableaux et sculptures conservés au MET ou au MoMA, dessins d'architecture tirés des archives de la Society of Architectural Historians, etc.). Il est possible de consulter le contenu de l'Artstor Digital Library à partir de n'importe quel poste informatique situé dans le collège. De l'extérieur du cégep, vous devez créer un compte. Pour connaître la procédure, communiquez avec votre bibliothécaire (<a title="" href="mailto:afchampoux@cvm.qc.ca">afchampoux@cvm.qc.ca</a>). </p>
@@ -500,7 +512,7 @@ var L_Menu_SiteTheme="";
 <li>Du lundi au jeudi, de 7 h 45 à 21 h</li>
 <li>Le vendredi, de 7 h 45 à 17 h</li></ul>
 <p>Pour toute information additionnelle, vous pouvez contacter le personnel de la bibliothèque au 514 982-3437, poste 2221.</p></td></tr></tbody></table>
-<h2></h2></div>		
+<h2> </h2></div>		
 	</div>
 	</div>
 
@@ -644,4 +656,4 @@ SAE4736C5_Submit();
 </script></form>
 	</body>
 </html>
-<!-- Rendu à l'aide du profil de cache :Internet public (purement anonyme) à : 2016-05-09T10:26:18 -->
+<!-- Rendu à l'aide du profil de cache :Internet public (purement anonyme) à : 2016-09-11T12:36:05 -->

@@ -1,88 +1,445 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-82048921-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/de_theme/img/favicons/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="/student-life/library" />
+<link rel="shortlink" href="/node/77" />
+<link rel="delete-form" href="/node/77/delete" />
+<link rel="edit-form" href="/node/77/edit" />
+<link rel="version-history" href="/node/77/revisions" />
+<link rel="revision" href="/student-life/library" />
 
-<head>
+      <title>Library | Mohawk College</title>
+      <link rel="stylesheet" href="/sites/default/files/css/css_7H-qksggjOi25POBrVSp6NDU3A9vQhL6eYRKdozc2yM.css?od8num" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_WUPd8V7-dgioZQqVeXRS2uMDBxwvsutzd6-R5nNwwXo.css?od8num" media="all" />
 
-	<title>Mohawk College Library </title>
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="/sites/default/files/css/css_AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs.css?od8num" media="all" />
+<![endif]-->
+
+      <!-- Simple State Manager 3.x polyfills -->
+      <!--[if IE 8]>
+        <script src="/themes/de_theme/dist/js/vendor/addEventListener.polyfill.min.js"></script>
+        <script src="/themes/de_theme/dist/js/vendor/bind.polyfill.min.js"></script>
+        <script src="/themes/de_theme/dist/js/vendor/media.match.min.js"></script>
+      <![endif]-->
+      
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+<script src="/themes/de_theme/dist/js/vendor/modernizr.min.js?v=3.3.1"></script>
+
+    <!--[if IE 9]>
+      <script src="/themes/de_theme/bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+    var MTIProjectId='271bbd79-582c-427f-81b1-a3b123d36e4d';
+     (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type='text/javascript';
+        mtiTracking.async='true';
+        mtiTracking.src='/themes/de_theme/fonts/avenir/mtiFontTrackingCode.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+       })();
+    </script>
+    <link rel="apple-touch-icon" sizes="57x57" href="/themes/de_theme/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/themes/de_theme/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/themes/de_theme/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/themes/de_theme/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/themes/de_theme/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/themes/de_theme/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/themes/de_theme/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/themes/de_theme/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/de_theme/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/themes/de_theme/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/themes/de_theme/img/favicons/safari-pinned-tab.svg" color="#780032">
+    <meta name="apple-mobile-web-app-title" content="Mohawk College">
+    <meta name="application-name" content="Mohawk College">
+    <meta name="msapplication-TileColor" content="#780032">
+    <meta name="msapplication-TileImage" content="/themes/de_theme/img/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+      </head>
+  <body class="layout-one-sidebar layout-sidebar-primary path-node node--type-basic-page">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
     
-    <meta name="robots" content="index,follow" />
+    <div class="layout-container">
 
-	<meta name="description" content="The Mohawk College Library helps the Mohawk community connect, learn and succeed. Access the library for assignment help, study space, tech support at the Library TECH BARs, 24/7 online access to quality information resources, and information assistance in-person, and via phone, chat, email or text.">
+      
+  
+  <header id="header" role="banner">
+    <div class="section-header">
+      <div id="masthead" class="masthead">
+        <div class="container clearfix">
+            <div class="region region--masthead-second clearfix">
+    <div class="region-inner">
+      <div id="block-googleblock" class="block block-google-custom-search block-google-block">
+  <div class="block--inner">
+    
         
-	<meta name="keywords" content="mohawk, college, library, resources, services, subject guides, ejournals, databases, faqs, collaboratory, books, ebooks, online videos, tech support, chat, ">
+          <div class="cse-search"><gcse:searchbox-only resultsUrl="/search-results"></gcse:searchbox-only></div>
+      </div>
+</div>
+<div id="block-mocomotionheader" class="block block-block-content block-block-content9b76320f-d2c2-45b2-8d00-cc90a8b92267">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><a class="header-link" href="https://mocomo.mohawkcollege.ca/cp/home/displaylogin"><span class="icon ion-android-lock"></span>MOCOmotion</a><a class="header-link" href="https://elearn.mohawkcollege.ca/"><span class="icon ion-android-lock"></span>eLearn</a><a href="#" class="search-toggle"><span class="icon ion-android-search"><span class="visually-hidden">Open search box</span></span></a>
+</div>
+      
+      </div>
+</div>
+<div id="block-audience-2" class="block block-system block-system-menu-blockaudience menu--audience">
+  <div class="block--inner">
+    <a href="#" class="header-link audience-toggle"><span class="icon ion-android-people"></span>Information for...<span class="icon ion-android-arrow-dropdown"></span></a>
+          
+              <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/alumni" data-drupal-link-system-path="node/182">Alumni</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/community" data-drupal-link-system-path="node/185">Community</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/current-students" data-drupal-link-system-path="node/187">Current Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/donors-and-partners" data-drupal-link-system-path="node/188">Donors and Partners</a>
+              </li>
+                <li class="menu-item">
+        <a href="/educator-resources" data-drupal-link-system-path="node/1541">Educators</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/employees" data-drupal-link-system-path="node/189">Employees</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/future-students" data-drupal-link-system-path="node/190">Future Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/indigenous-students" data-drupal-link-system-path="node/183">Indigenous Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/industry-and-employers" data-drupal-link-system-path="node/184">Industry and Employers</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/international-students" data-drupal-link-system-path="node/191">International Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/parents-and-caregivers" data-drupal-link-system-path="node/193">Parents and Caregivers</a>
+              </li>
+        </ul>
+  
 
-<!-- Script for Equipment -->
 
-   	 	
-       
- 	<meta charset="utf-8">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-   
+      </div>
+</div>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
+    </div>
+  </div>
 
-<script type='text/javascript'>
- jQuery.noConflict();
-</script>
+            <div class="region region--masthead-first clearfix">
+  <div class="region-inner">
+    <div id="block-de-theme-branding" class="block block-system block-system-branding-block">
+  <div class="block--inner">
+    
+        
+          <a href="/" title="Home" rel="home" class="site-logo">
+      <img src="/themes/de_theme/logo.svg" alt="Home" />
+    </a>
+        <div class="site-name">
+      <a href="/" title="Home" rel="home">Mohawk College</a>
+    </div>
+      </div>
+</div>
 
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="robots" content="index,follow" />
+    <div class="main-menu--toggle">
+      <a href="#"><span class="icon ion-navicon"></span> Menu </a>
+    </div>
+  </div>
+  </div>
+
+            <div class="region region--masthead-third clearfix">
+    <div class="region-inner">
+      <div id="block-mainnavigation-2" class="block block-expanded-menu-block block-expanded-menu-blockmain">
+  <div class="block--inner">
+    
+        
+          
+              <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/programs" data-drupal-link-system-path="node/16">Programs</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/programs/search" summary="&lt;p&gt;Explore our variety of programs and filter for just the type of program you are looking for. Search for a program by theme, program length, type of credential, location, availability, and opportunity for co-op work terms.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="programs/search">Full-Time Program Search</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/programs/skilled-trades-apprenticeship" summary="&lt;p&gt;Join a workforce in-demand.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/581">Skilled Trades and Apprenticeship</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/programs/want-to-try-college" data-drupal-link-system-path="node/3057">Want to try College?</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/programs/learning-at-mohawk" data-drupal-link-system-path="node/22">Learning at Mohawk</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/ce" data-drupal-link-system-path="node/609">Continuing Education</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/ce/programs" summary="basic_html" data-drupal-link-system-path="ce/programs">Find a Program</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/find-a-course" data-drupal-link-system-path="node/611">Find a Course</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/registration" data-drupal-link-system-path="node/2465">Registration</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/academic-information" data-drupal-link-system-path="node/2482">Academic</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/financial-information" data-drupal-link-system-path="node/2468">Financial</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/what-online-learning" data-drupal-link-system-path="node/2467">Online Learning</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/student-services" data-drupal-link-system-path="node/2494">Student Services</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/continuing-education-catalogue" data-drupal-link-system-path="node/2502">Continuing Education Catalogue</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/become-a-student" summary="basic_html" data-drupal-link-system-path="node/17">Become a Student</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/how-to-apply" data-drupal-link-system-path="node/2331">How to Apply</a>
+              </li>
+                <li class="menu-item">
+        <a href="/become-a-student/apply-as-an-international-student" data-drupal-link-system-path="node/3276">Apply as an International Student</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/tuition-and-fees" summary="&lt;p&gt;Discover your program costs and available resources to help finance your education.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/41">Tuition and Fees</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/academic-dates" data-drupal-link-system-path="node/2847">Academic Dates</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/pathways-and-credit-transfer" summary="&lt;p&gt;Pathways is&amp;nbsp;here to help students understand the options available as they discover new interests and passions.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/1624">Pathways and Credit Transfer</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/prior-learning-assessment-recognition" summary="&lt;p&gt;Prior Learning Assessment &amp;amp; Recognition (PLAR) focuses on the evaluation of prior learning rather than formal educational courses used in the academic&amp;nbsp;transfer of credits&amp;nbsp;or&amp;nbsp;course exemptions&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/40">Prior Learning Assessment &amp; Recognition</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded menu-item--active-trail">
+        <a href="/student-life" data-drupal-link-system-path="node/18">Student Life</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/orientation" summary="&lt;p&gt;Start your college experience at Day One Orientation!&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/2282">Orientation</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/registration-records" data-drupal-link-system-path="node/48">Registration and Records</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/academics" data-drupal-link-system-path="node/50">Academics</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/financial-assistance" summary="&lt;p&gt;Learn about the ways Mohawk helps you learn how to finance your education.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/51">Financial Assistance</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/library" summary="&lt;p&gt;The Library is here to help take your education to the next level.&amp;nbsp;&lt;/p&gt;&#13;&#10; basic_html" data-drupal-link-system-path="node/77" class="is-active">Library</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/student-technical-support" summary="&lt;p&gt;Get answers to your tech questions or update your technical skills with free college tools and guides.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/56">Technical Support</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/employment" data-drupal-link-system-path="node/52">Employment</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/student-housing" data-drupal-link-system-path="node/53">Student Housing</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/athletics" summary="&lt;p&gt;Looking to get active? Mohawk offers recreation and&amp;nbsp;fitness programs at the DBARC. Or join a varsity team.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/57">Athletics and Recreation</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/wellness" summary="&lt;p&gt;Mohawk is here for you. Learn about counselling services and&amp;nbsp;Wellness4U.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/55">Wellness</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/activities-and-student-leadership" data-drupal-link-system-path="node/54">Activities and Student Leadership</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/events" summary="basic_html" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about-mohawk" data-drupal-link-system-path="node/20">About</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/leadership-and-administration" summary="&lt;p&gt;Read our Mission, Vision and Values and learn about the Mohawk Executive Group, Senior Leadership Team and Corporate Services. Or explore our Board of Governors section as well as review our Policies and Procedures.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/583">Leadership and Administration</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/teaching/faculty" summary="&lt;p&gt;Discover our Faculty and Instructors and how their making Mohawk a great place to learn.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="about/teaching/faculty">Faculty and Instructors</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-mohawk/50th-anniversary" summary="&lt;p&gt;Share with us your memories of Mohawk!&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/2863">50th Anniversary</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/campuses" data-drupal-link-system-path="node/605">Campuses and Facilities</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/initiatives" summary="&lt;p&gt;Learn about Mohawk&#039;s applied research and&amp;nbsp;sustainability and outreach&amp;nbsp;efforts.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/584">Initiatives</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/institutional-research" data-drupal-link-system-path="node/585">Institutional Research</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about/news" summary="&lt;p&gt;Read about our staff and students&#039;&amp;nbsp;great work and accomplishments.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="about/news">News and Blogs</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/accessibility" data-drupal-link-system-path="node/588">Accessibility</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/security-and-emergency-management" data-drupal-link-system-path="node/617">Security and Emergency Management</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/work-at-mohawk" data-drupal-link-system-path="node/1250">Work at Mohawk</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/contact-mohawk" summary="&lt;p&gt;Not sure where to start? Contact a department or emergency campus services.&amp;nbsp;&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/589">Contact Mohawk</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
 
 
-	<link rel="stylesheet" href="css/library-website.css" type="text/css" />
- 
-	<!--[if (gte IE 6)&(lte IE 8)]>
-		<script type="text/javascript" src="js/html5.js"></script>
-		<script type="text/javascript" src="js/selectivizr-min.js"></script>
-		<link rel="stylesheet" href="css/ie_7.css" type="text/css" />
-	<![endif]-->
+      </div>
+</div>
+<div id="block-visit-apply-buttons" class="block block-block-content block-block-content0299650e-a0a0-4500-8c77-d8587147b854">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="visit-apply-buttons"><a class="btn btn-secondary" href="/programs/search/september">Start this September</a><a class="btn btn-secondary" href="/future-students/visit-mohawk">Visit</a></div>
+</div>
+      
+      </div>
+</div>
+
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+        <div class="region region--content-prefix clearfix">
+    <div id="block-de-theme-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  <div class="block--inner">
+    
+        
+            <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/"><span class="visually-hidden">Home</span></a>
+              </li>
+          <li>
+                  <a href="/student-life">Student Life</a>
+              </li>
+          <li>
+                  Library
+              </li>
+        <li></li>
+    </ol>
+  </nav>
+
+      </div>
+</div>
+
+  </div>
+
+  
+  <div class="section-content">
+    <div class="container clearfix">
+      
+      
+      
+
+      <main id="main" role="main" class="column">
+        <a id="main-content" tabindex="-1"></a>        <div class="layout-content">
+            <div class="region region--content clearfix">
+    
+
+<div id="block-de-theme-page-title" class="block block-core block-page-title-block">
+  <div class="block--inner">
+    
+        
+          
+  <h1 class="js-quickedit-page-title page-title"><span class="field field--name-title field--type-string field--label-above">Library</span>
+</h1>
 
 
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
-<script type="text/javascript" src="js/all-in-one-min.js"></script>
-<script type="text/javascript" src="js/setup.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/portfolio-filter.js"></script>
-<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+      </div>
+</div>
+<div id="block-de-theme-content" class="block block-system block-system-main-block">
+  <div class="block--inner">
+    
+        
+          
+<article data-history-node-id="77" role="article" about="/student-life/library" class="node node--type-basic-page node--view-mode-full">
 
-<!-- Test Markup for Hours in Google Search Results -->
+  
+    
 
-<script> 
-window.jsonldcb1220 = function(data) { 
-   var e = document.createElement("script"); 
-   e.type = "application/ld+json"; 
-   e.text = JSON.stringify(data); 
-   document.body.appendChild(e); 
-}; 
-var jsonld_1220 = document.createElement("script"); 
-jsonld_1220.setAttribute("src","//api3.libcal.com/api_hours_grid.php?format=jsonld&iid=1029&lid=1220&callback=jsonldcb1220"); 
-document.body.appendChild(jsonld_1220); 
-</script> 
+  
+   <div class="node__content">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><!-- Google Tracking Code -->
 
-
-<!-- Test Markup for Social Profiles in Google Search Results -->
-
-<script type="application/ld+json">
-{ "@context" : "http://schema.org",
-  "@type" : "Organization",
-  "logo": "http://lib-wind.mohawkcollege.ca/library/images/library-logo.png",
-  "name" : "Mohawk College Library",
-  "url" : "http://library.mohawkcollege.ca/",
-  "sameAs" : [ "https://www.facebook.com/MohawkCollegeLibrary",
-    "https://twitter.com/mohawklibrary",
-    "https://plus.google.com/+MohawkCollegeCummingsLibraryCollaboratoryHamilton/about",
-"http://instagram.com/mohawklibrary"] 
-}
-</script>
-
-<!-- Google Analytics Tracking Code -->
-
-<script>
+<!--<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -91,52 +448,464 @@ document.body.appendChild(jsonld_1220);
   ga('create', 'UA-52692502-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-
-<!-- Google Verification -->
-
-<meta name="google-site-verification" content="tfbN1ZS4-5Rbln_ns5g4xve3StZ3vdnWPeNm3VEgdiM" />
+</script>-->
 
 
-<!-- Google Outbound Link Tracking -->
+<style type="text/css">
+
+.box {
+   	padding: 10px;
+   	display: none;
+   	margin: 10px;
+        font-size: 18px;
+}
+#ebscohostsearchtext,  .ebscohost-search-box {
+	width: 350px; 
+	height: 30px; 
+	border-radius:3px; 
+	padding-left:5px; 
+	margin-left:0px;
+}	
+input.ebscohost-search-button,  #ebscohostsearchbutton {
+	border:1px solid #555555;
+	padding:7px 10px 7px 10px;
+	font-size:16px;
+	font-weight: bold;
+	color:#ffffff;
+	width: 100px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	background-color: #008c00;
+}
+#opac-search-box {
+	width: 350px; 
+	height: 30px; 
+	border-radius:3px;
+}
+.opac-search-button {
+	width: 100px; 
+	font-size: 16px;
+}
+.opac-search-button:hover {
+ background-color: #660033 !important;
+    color: #f2f5fa;
+}
+ #search_submit {
+	border:1px solid #555555;
+	padding:7px 10px 7px 10px;
+	font-size:16px;
+	font-weight: bold;
+	color:#ffffff;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	background-color: #008c00;
+        width: 100px; 
+}
+.search-box {
+	background-color: #2d292a;
+}
+.radio-menu {
+	color: #ffffff;
+	font-size:18px;	
+	margin-left: 10px;	
+	padding-bottom: 20px;	
+}
+.radio-inline {
+	padding-left: 5px;
+}
+
+/* Tweak for Search Box From Vendor */
+
+.radio-inline input {
+      width: inherit;
+      height: 1.2em;
+      margin-right: .4em;
+}
+
+/* My Tweaks to Override Vendor CSS - Search Box */
+
+input[type] {
+     min-width: 0px !important;
+     line-height: normal !important;
+}
+label {
+     font-weight: normal !important;
+     display: inline !important;
+}
+
+/* My Tweaks to Override Vendor Image Boxes */
+
+.three-boxes-cta-template .info-area {
+     padding: 0px !important;  
+     padding-top: 10px !important;
+     margin-bottom -25px !important;
+}
+.three-boxes-cta-template .info-area p {
+     padding-left: 10px !important;
+}
+.two-boxes-cta-template .cta-box.last {
+     background-color: #e8eaf0;
+padding: 15px;
+}
+
+/* General Styling */
+
+.homepage-icons {
+     width: 100%;
+}
+.homepage-icons img {
+     margin: 12px;
+}
+
+/* Style for Carousel */
+
+.sss {
+     height: 0;
+     margin: 0; 
+     padding: 0;
+     position: relative;
+     display: block;
+}
+.ssslide {
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: none;
+     overflow: hidden;
+}
+.ssslide img {
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+.sssnext, .sssprev   {
+	width: 25px;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('/sites/default/files/library/arr.png') no-repeat;
+}
+.sssprev {
+	left: 3%;
+	background-position: 0 50%;
+        margin-top: 100px;
+}
+.sssnext {
+	right: 3%;
+	background-position: -26px 50%;
+        margin-top: 100px;
+}
+.sssprev:hover, .sssnext:hover {
+	cursor: pointer;
+      /*background-color: #660033;
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);*/
+}
+
+/*  Start Media Queries */
+ 
+/* iPad Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+.homepage-icons img {
+     margin: 2px;
+}
+.two-boxes-cta-template .cta-box.first {
+    
+}
+.two-boxes-cta-template .cta-box.last {
+  padding: 5px;  
+}
+}
+
+/* iPad Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+.homepage-icons img {
+     margin: 5px;
+}
+}
+
+/* iPhone (Portrait)  */
+@media only screen and (min-width : 320px) and (max-width : 568px) and (orientation : portrait)  {
+
+#ebscohostsearchtext, .ebscohost-search-box {
+     width: 220px;
+     margin-bottom: 5px;
+}
+.ebscohost-search-button, #ebscohostsearchbutton {
+     width: 80px;
+}
+.radio-menu {
+     font-size: 15px;
+     margin-left: 5px;
+}
+#everything, .radio-inline {
+     margin-left: 20px;
+     padding-right: 60px;
+}
+#books, .radio-inline {
+     margin-left: 20px;
+     padding-right: 90px
+}
+#journals, .radio-inline {
+
+}
+.sssprev {
+margin-top: 80px;
+}
+.sssprev {
+margin-top: 80px;
+}
+.two-boxes-cta-template .cta-box.last {
+    
+}
+}
+
+/* iPhone (Landscape)  */
+@media only screen and (min-width : 320px) and (max-width : 568px) and (orientation : landscape)  {
+
+.homepage-icons img {
+    margin: 25px;
+}
+}
+
+</style>
+
+<!--Carousel Scripts -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <script>
-/**
-* Function that tracks a click on an outbound link in Google Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label.
-*/
-var trackOutboundLink = function(url) {
-   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
-     function () {
-     document.location = url;
-     }
-   });
-}
-</script> 
-</head>
+jQuery(function($) {
+$('.slider').sss();
+});
+</script>
 
-<body class="home">
+<script>
+;(function($, window, document, undefined ) {
 
-	
-<!-- Header -->
-	<header class="header_bg clearfix">
-		<div class="container clearfix">
+$.fn.sss = function(options) {
+
+// Options
+
+	var settings = $.extend({
+	slideShow : true,
+	startOn : 0,
+	speed : 5500,
+	transition : 400,
+	arrows : true
+	}, options);
+
+	return this.each(function() {
+
+// Variables
+
+	var
+	wrapper = $(this),
+	slides = wrapper.children().wrapAll('<div class="sss"/>').addClass('ssslide'),
+	slider = wrapper.find('.sss'),
+	slide_count = slides.length,
+	transition = settings.transition,
+	starting_slide = settings.startOn,
+	target = starting_slide > slide_count - 1 ? 0 : starting_slide,
+	animating = false,
+	clicked,
+	timer,
+	key,
+	prev,
+	next,
+
+// Reset Slideshow
+
+	reset_timer = settings.slideShow ? function() {
+	clearTimeout(timer);
+	timer = setTimeout(next_slide, settings.speed);
+	} : $.noop;
+
+// Animate Slider
+
+	function get_height(target) {
+	return ((slides.eq(target).height() / slider.width()) * 100) + '%';
+	}
+
+	function animate_slide(target) {
+	if (!animating) {
+	animating = true;
+	var target_slide = slides.eq(target);
+
+	target_slide.fadeIn(transition);
+	slides.not(target_slide).fadeOut(transition);
+
+	slider.animate({paddingBottom: get_height(target)}, transition,  function() {
+	animating = false;
+	});
+
+	reset_timer();
+
+	}};
+
+// Next Slide
+
+	function next_slide() {
+	target = target === slide_count - 1 ? 0 : target + 1;
+	animate_slide(target);
+	}
+
+// Prev Slide
+
+	function prev_slide() {
+	target = target === 0 ? slide_count - 1 : target - 1;
+	animate_slide(target);
+	}
+
+	if (settings.arrows) {
+	slider.append('<div class="sssprev"/>', '<div class="sssnext"/>');
+	}
+
+	next = slider.find('.sssnext'),
+	prev = slider.find('.sssprev');
+
+	$(window).load(function() {
+
+	slider.css({paddingBottom: get_height(target)}).click(function(e) {
+	clicked = $(e.target);
+	if (clicked.is(next)) { next_slide() }
+	else if (clicked.is(prev)) { prev_slide() }
+	});
+
+	animate_slide(target);
+
+	$(document).keydown(function(e) {
+	key = e.keyCode;
+	if (key === 39) { next_slide() }
+	else if (key === 37) { prev_slide() }
+	});
+
+	});
+// End
+
+});
+
+};
+})(jQuery, window, document);
+
+</script>
+
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>-->
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        if($(this).attr("value")=="all"){
+            $(".box").not(".all").hide();
+            $(".all").show();
+        }
+        if($(this).attr("value")=="opac"){
+            $(".box").not(".opac").hide();
+            $(".opac").show();
+        }
+        if($(this).attr("value")=="journals"){
+            $(".box").not(".journals").hide();
+            $(".journals").show();
+        }
+		if($(this).attr("value")=="google"){
+            $(".box").not(".google").hide();
+            $(".google").show();
+        }				
+		
+    });
+});
+</script>
+
+<!-- Start Search Box -->
+  
+    <div class="search-box">   
+    
+    	<!--<div class="learn-more">
+        
+        <p>Library Search</p>
+        <p>Learn More</p>
+        </div>-->
+    	
+        <!-- EDS Search --> 
+        
+        <div class="all box" id="allOptionDiv" style="display: block;">	
+    
+    		<p style="color: #ffffff;">Search all library collections at once</p>
+
+<script src="https://support.ebscohost.com/eit/scripts/ebscohostsearch.js" type="text/javascript"></script>
+
+<form action="" id="ebscohostCustomSearchBox" method="post" onsubmit="return ebscoHostSearchGo(this);">
+
+<input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+
+<input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://ezproxy.mohawkcollege.ca/login?url=https://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=0&amp;custid=mohawk&amp;groupid=main&amp;profid=eds&amp;mode=or&amp;lang=en&amp;authtype=ip,uid&amp;ssl=Y" /> 
+
+<input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" /> 
+<input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+OR+" /> 
+<input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+<input id="ebscohostsearchtext" name="ebscohostsearchtext" type="text" placeholder="books, articles, journals, videos & more" /> 
+<input class="ebscohost-search-button "type="submit" value="Search" />
+
+</form>
+
+</div>
+
+	  <!-- OPAC Search --> 
+
+    	<div class="opac box">
+        
+     		<p style="color: #ffffff;">Search the library catalogue for books, videos & more</p>
+   
+	<form action="https://libcat.mohawkcollege.ca/EvergreenSearch.php" method="get">
+	<input type="text" id="opac-search-box" name="search_box" type="text" placeholder=" books, eBooks, videos & more" /> 
+	<input class="opac-search-button" type="submit" id="search_submit" name="search_submit" value="Search" /> 
+
+	</form>
+    
+</div>
+    
+    
+    <!-- Journal Search --> 
+    
+    <div class="journals box">
+    
+    	<p style="color: #ffffff;">Find Journals by title</p>
+
+	<!-- EBSCOhost Custom Search Box Begins -->
+<script src="https://support.ebsco.com/eit/scripts/ebscohostsearch.js" type="text/javascript"></script>
+
+	<form id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
+		<input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+		<input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://ezproxy.mohawkcollege.ca/login?url=https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=44&db=edspub&custid=mohawk&groupid=main&profid=eds&mode=bool&authtype=ip,uid&ssl=Y" />
+		<input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+		<input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
+		<input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+		
+		<input id="ebscohostsearchtext" class="edspub" name="ebscohostsearchtext" placeholder="Enter title, publisher, subject or ISSN/ISBN" />
+		<input type="submit" value="Search" class="ebscohost-search-button edspub" />
+    
+</div>  
+    
+  	<!-- Google Search --> 
+  
+  	<!--<div class="google box">  
      
-<!-- College Links --> 
-			<ul class="college-links" role="complementary" aria-label="Mohawk College Links">       
-      			<li><a href="http://www.mohawkcollege.ca" target="_blank">Mohawk College</a></li>          
-     			<li><a href="https://elearn.mohawkcollege.ca" target="_blank">eLearn</a></li>
-        		<li><a href="https://mocomo.mohawkcollege.ca" target="_blank">MOCOmotion</a></li>
-    		</ul>  
-                                           
-  		</div> 
+     	<p>Search the Library Website</p>           
+  
       
-<!-- New Google Custom Search -->
- 	<div class="wrapper">
- 		<div class="googlesearch" role="search" aria-label="Website Search">
-      
- <script>
+<script>
   (function() {
     var cx = '003832811567995827775:crnurdoh_tg';
     var gcse = document.createElement('script');
@@ -150,655 +919,480 @@ var trackOutboundLink = function(url) {
 </script>
 <gcse:searchbox-only></gcse:searchbox-only>
 
-		</div>
-	</div>
-
-<!-- Logo -->
-	<div class="logo" role="banner" aria-label="logo">    
-		<a href="index.php"><img src="images/VI Colour_print_header.fw.png" alt="Mohawk College Library Home Page"> </a>
-	</div>  
-
-<!-- Main Nav -->
-	<nav class="main-menu" role="navigation" aria-label="main menu">
-			
-    	<ul id="nav" class="main-menu">
-			<li id="home"><a href="index.php">Home</a></li>
-			<li id="resources"><a href="resources.php">Resources</a></li>
-    		<li id="services"><a href="services.php">Services</a></li>   
-    		<li id="hours"><a href="http://mohawkcollege.ca.libguides.com/hours">Hours & Locations</a></li>
-            <li id="about"><a href="about-us.php">About Us</a></li>
-            <li id="collaboratory"><a href="http://collaboratory.mohawkcollege.ca/" target="_blank">Collaboratory</a></li>
-   			<li id="help"><a href="help.htm">Help</a></li>  
-	  	</ul>           
-
-
-<!-- 3 Line Menu -->             
-                
-<script type="text/javascript">
- jQuery.noConflict();
-jQuery(document).ready(function($) {
-       $("#nav").addClass("js").before('<div id="linemenu">&#9776;</div>');
-        $("#linemenu").click(function(){
-                $("#nav").toggle();
-        });
-        $(window).resize(function(){
-                if(window.innerWidth > 768) {
-                        $("#nav").removeAttr("style");
-                }
-        })
-}); 
-
-</script>                         
-  	</nav>
-	
-</header>    
-            
-
-
- 
-	<div class="clear"></div>
-	
-    <div class="bannerbg">
-    
-    <div class="container clearfix"> 
-
-<!-- Tabbed Box -->
-    <div class="tabBox">
-    	<ul class="tabs">
-    
-    		<li><a href="#databases">All Collections</a></li>
-    		<li><a href="#catalogue">Catalogue</a></li>
-    		<li><a href="#subject-guides">Subject Guides</a></li>
- 			<li><a href="#ejournals">eJournals</a></li> 
-    		<li><a href="#faqs">FAQs</a></li>   
-      
-	  </ul>
- 
-<div class="tabContainer">
-  
-<!-- Content for Tab 1 All Databases (EDS) Search --> 
+	</div>-->
    
-<div id="databases" class="tabContent">
-
-	<p>Search all library collections at once!</p>
-
-<script src="http://support.ebsco.com/eit/scripts/ebscohostsearch.js" type="text/javascript"></script>
-
-<form action="" id="ebscohostCustomSearchBox" method="post" onsubmit="return ebscoHostSearchGo(this);">
-
-<input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" /> 
-<input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://ezproxy.mohawkcollege.ca/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=0&amp;custid=mohawk&amp;groupid=main&amp;profid=eds&amp;mode=or&amp;lang=en&amp;authtype=ip" /> 
-
-<input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" /> 
-<input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+OR+" /> 
-<input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
-
-<div>
-
-<input id="ebscohostsearchtext" name="ebscohostsearchtext" style="font-size:13px; width: 340px; padding-left:5px; margin-left:0px;" type="text" placeholder="books, eBooks, articles, journals, videos & more" /> 
-<input class="ebscohost-search-button " style="font-size:13px; padding-left:5px; width: 100px;" type="submit" value="Search" />
-
-<div id="guidedFieldSelectors">
-
-<input checked="checked" class="radio" id="guidedField_0" name="searchFieldSelector" type="radio" value="" /> 
-<label class="label" for="guidedField_0"> Keyword</label> 
-<input class="radio" id="guidedField_1" name="searchFieldSelector" type="radio" value="TI" /> 
-<label class="label" for="guidedField_1"> Title</label> 
-<input class="radio" id="guidedField_2" name="searchFieldSelector" type="radio" value="AU" /> 
-<label class="label" for="guidedField_2"> Author</label>
-&nbsp;&nbsp;
-<input type="checkbox" id="chkCatalogOnly" name="chkCatalogOnly"  />
-<label class="limiter" for="chkCatalogOnly">Catalogue Only</label>
-
-<a href="http://mohawkcollege.ca.libguides.com/az.php" target="_blank" style=" margin-left: 20px" > <strong> A-Z List of Databases </strong></a>   
-
-		</div>
-	</div>		                
-</form>
-</div>
-     
-<!-- Content for Tab2 OPAC Search -->
-
-<div id="catalogue" class="tabContent">    
-  
-  <p>Search the library catalogue for books, videos & more!</p>
-   
-	<form action="http://lib-drupal.mohawkcollege.ca/EvergreenSearch.php" method="get">
-
-	<label for="search_type" class="hide-label">Choose a search type</label>
-
-	<select id="search_type" name="search_type" style="width: 100px; font-weight: bold; font-size: 13px;">
-    
-        <option value="keyword" selected="selected">Keyword</option>
-        <option value="title">Title</option>
-        <!--<option value="jtitle">Journal Title</option>-->
-        <option value="author">Author</option>
-        <option value="subject">Subject</option>
-	</select>
-
-	<label for="search_box" class="hide-label">Enter search terms</label>
-
-	<input type="text" id="search_box" name="search_box" style="width: 250px;" /> 
-
-	<input type="submit" id="search_submit" name="search_submit" style="width: 100px; font-weight: bold; font-size: 13px;" value="Search" /> <br/><br/>
-
-	<input class="radio" aria-labelledby="radio_label" type="radio" name="item_type" id="item_type" value="" checked="checked" />
-
-	<label role="radiogroup" class="label" for="item_type"> All Formats</label>
-
-	<input class="radio" type="radio" name="item_type" value="i" id="audiobooks" />
-
-	<label role="radio" class="label" for="audiobooks"> Audiobooks</label>	
-
-	<input class="radio" type="radio" name="item_type" value="a" id="books" />	
-					
-	<label role="radio" class="label" for="books"> Books & eBooks</label>
- 
-	<!--<input class="radio" type="radio" name="item_type" id="item_type" value="j" />						
-	<label class="label" for="item_type"> Music CD's</label>-->	
-
-	<input class="radio" type="radio" name="item_type" value="m" id="online" />	
-					
-	<label role="radio" class="label" for="online"> Online Resources</label>		
-
-	<input class="radio" type="radio" name="item_type" value="g" id="videos" />						
-	<label role="radio" class="label" for="videos"> Videos</label>	
-
-	</form>
-
-
-</div> 
- 
-<!--Content for Tab 3 Subject Guides Search--> 
-	   
-<div id="subject-guides" class="tabContent">  
-    
-Select a subject to begin your search
-
-<script>
-springshare_widget_config_1435864731557 = { path: 'subjects' };
-</script>
-<div id="s-lg-widget-1435864731557"></div>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=361&widget_type=4&load_type=2&widget_embed_type=1&output_format=1&list_format=2&drop_text=Select+a+Subject...&sort_type=0&widget_title=Subject+List&widget_height=250&widget_width=100%25&widget_link_color=2954d1&guide_published=2&show_guides=3&window_target=2&config_id=1435864731557";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1435864731557");</script>
-
-	
-<br/>
-Or Search All Guides
-
-<script>
-springshare_widget_config_1435864823917 = {  };
-</script>
-<div id="s-lg-widget-1435864823917"></div>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=361&widget_type=7&widget_embed_type=1&output_format=1&search_box_type=1&placeholder_text=Enter+Search+Words&button_text=Search&widget_height=&widget_width=250&config_id=1435864823917";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1435864823917");</script>
-<br/>
-</div>      
-
-<!--Content for Tab4 Full Text Finder Search -->
-
-<div id="ejournals" class="tabContent">     
-
-	<p>Find eJournals by title</p>
-      
-<!-- EBSCOhost Custom Search Box Begins -->
-
-<script src="http://support.ebsco.com/eit/scripts/ebscohostsearch.js" type="text/javascript"></script>
-
-<form action="" id="ebscohostCustomSearchBox" method="post" onsubmit="return ebscoHostSearchGo(this);">
-<input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" /> 
-<input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://ezproxy.mohawkcollege.ca/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=44&amp;db=edspub&amp;mode=bool&amp;authtype=ip" /> 
-
-<input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" /> 
-<input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+OR+" /> 
-<input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
-
-<div>
-<input id="ebscohostsearchtext" name="ebscohostsearchtext" style="font-size:13px; width: 340px; padding-left:5px; margin-left:0px;" type="text" /> 
-
-<input class="ebscohost-search-button " style="font-size:13px; width: 100px; padding-left:5px;" type="submit" value="Search" />
-
-		</div>
-	</form>
-    <br/>
-</div>  
-
-<!--Content for Tab5 FAQ's -->
-
-<div id="faqs" class="tabContent">
-
-<p>Choose a topic from the menu or search our FAQs. </p>
-    
-    <div class="lh3-faq-search" data-submit-value="Search"></div>
-	<br/>
-
+ <div class="radio-menu">
+        <label class="radio-inline"><input type="radio" name="searchRadio" value="all" checked="checked">Search Everything</label>
+        <label class="radio-inline"><input type="radio" name="searchRadio" value="opac">Books & More</label>
+        <label class="radio-inline"><input type="radio" name="searchRadio" value="journals">Journals by Title</label>
+        <!--<label class="radio-inline"><input type="radio" name="searchRadio" value="google">Website Search</label>-->
+        <a href="http://mohawkcollege.ca.libguides.com/az.php" target="_blank" style=" margin-left: 30px; color:#ffffff;">A-Z Databases</a>
     </div>
-     
-  </div>
-
-</div>
             
-  <div class="hours-box">
+    <!-- End Search Box -->
+    
+    </div>
 
-            <h1 class="hours-title">Today's Hours</h1>
-  
-       <div id="api_hours_today_iid1029_lid0">              
-       
-       </div>	   
-	   
-		<script src="https://api3.libcal.com/api_hours_today.php?iid=1029&lid=0&format=js&context=object"> </script>    
-  </div>                    
-            
- </div>  
-      
-</div>    
+<div class="homepage-icons">
 
-<div class="clear padding10"></div>
-	
-	<!-- Main Content -->
-	    	    	
-    <section class="container clearfix">       
-		
-        <div class="col_1_3">
-			<div class="features">
-				<div class="title clearfix">  
-                	
-                  <h1>Quick Links</h1>
-		</div>
-      <ul>           
+<a href="http://mohawkcollege.ca.libguides.com/" target="_blank"><img src="/sites/default/files/library/icons/program-guides-icon.fw.png" 
+
+alt="program guides" /></a>
+
+<a href="http://mohawkcollege.ca.libguides.com/citeyoursources" target="_blank"><img src="/sites/default/files/library/icons/apa-
+
+icon.fw.png" alt="apa subject guide"/></a>
+
+<a href="
+/student-life/library/get-help/technical-help"><img src="/sites/default/files/library/icons/tech-support-icon.fw.png" alt="technical 
+
+support"/></a>
+
+<a href="http://mohawkcollege.ca.libcal.com/calendar/libraryevents/?cid=1406&t=d&d=0000-00-00&cal%5B%5D=1406" target="_blank"><img 
+
+src="/sites/default/files/library/icons/events-icon.fw.png" alt="library events"/></a>
+
+<a href="http://mohawkcollege.ca.libguides.com/hours" target="_blank"><img src="/sites/default/files/library/icons/hours-
+
+icon.fw.png"alt="library hours" /></a>
+
+<a href="http://mohawklibrary.ask.ca.libraryh3lp.com/" target="_blank"><img src="/sites/default/files/library/icons/faq-icon.fw.png" 
+
+alt="frequently asked questions"/></a>
+
+</div>
+
+<div class="two-boxes-cta-template">
+<div class="cta-box first">
+
+<div class="slider">
+
+<img src="/sites/default/files/library/images/sliders/welcome-students.fw.png" alt="welcome students"/>
+<img src="/sites/default/files/library/images/sliders/new-site-2016.jpg" alt="new library site"/>
+<img src="/sites/default/files/library/images/sliders/program-guides-name.jpg" alt="subject guides are now called program guides"/>
+<img src="/sites/default/files/library/images/sliders/laptops.jpg" alt="borrow a laptop"/>
+</div>
+
+<div class="cta-area"><a href="/student-life/library/about-us/library-news">More Info</a>
+</div>
+</div>
+
+<div class="cta-box last">
+
+<p>Welcome new and returning students! Check out the great resources and services available to you in the Library. We're here to help you connect, learn and succeed at Mohawk. </>
+
+ <p>Our Subject Guides are now called Program Guides! New name, new look - same great content! Find library resources in your program area!</p>
                
-        <li><a href="http://mohawkcollege.ca.libguides.com/citeyoursources" target="_blank" class="button white">APA Help</a></li>
-        <li><a href="http://mohawkcollege.ca.libcal.com/" target="_blank" class="button white">Book Group Space</a></li>         
-        <li><a href="https://libcat.mohawkcollege.ca/eg/opac/login?redirect_to=%2Feg%2Fopac%2Fmyopac%2Fmain" target="_blank" class="button white">Library Account</a></li>
-             
-        <li><a href="http://lib-wind.mohawkcollege.ca/Chat/library_main.html" target="_blank" class="button white">Library Chat</a></li>
-        <li><a href="http://mohawkcollege.ca.libcal.com/calendar/libraryevents" target="_blank" class="button white">Library Events</a></li>
-        <li><a href="off-campus.php" class="button white">Off-Campus Access</a></li>          
-        <li><a href="http://mohawkcollege.ca.libguides.com/tech-support" target="_blank" class="button white">Tech Support</a></li> 
-        <li><a href="http://library.mohawkcollege.ca/assignment-calculator.php" target="_blank" class="button white">Assignment Calculator</a></li>                 
-                   
-      </ul> 
-	</div>
-   </div>
-		
-		<div class="col_1_3">
-			<div class="features">
-				<div class="title clearfix">
-             
-				<h1>Library News</h1>
-				               
-                </div>                                   
-              
-              <p>New in our collections: <a href="http://ezproxy.mohawkcollege.ca/login?url=https://curio.ca/en/video/this-changes-everything-8754/" target="_blank">This Changes Everything - the documentary</a> inspired by <a href="http://libcat.mohawkcollege.ca/eg/opac/record/61466?query=%22this%20changes%20everything%22;qtype=keyword;locg=1" target="_blank">Naomi Klein's bestselling book</a> - available online through <a href="http://mohawkcollege.ca.libguides.com/go.php?c=17412570" target="_blank">CBC Curio</a>!</p>
-              <p>Like maps? Love history? Check out our new database: <a href="http://mohawkcollege.ca.libguides.com/go.php?c=21214620" target="_blank">Map as History</a>!</p>
-              <p>Search all library collections at once using the library's new search - check it out (above)! Read more about the <a href="search-all-library.php" target="_blank">new library search</a>.</p>
-                       
-       
-	      </div>
-</div>
-                    
-		<div class="col_1_3 last">
-			<div class="features">
-				<div class="title clearfix">
-                
-			<h1>Resource Links</h1>
-				               
-	</div>
+  <p>Check out our great workshops. Sessions include getting your laptop ready, navigating eLearn, Office 365, and much more.</p>       
 
-	<ul>           
-               
-        <li><a href="http://ezproxy.mohawkcollege.ca/login?url=http://search.ebscohost.com/login.aspx?profile=eds&custid=mohawk&authtype=ip,uid" onclick="trackOutboundLink('http://ezproxy.mohawkcollege.ca/login?url=http://search.ebscohost.com/login.aspx?profile=eds&custid=mohawk&authtype=ip,uid'); return false;" target="_blank" class="button white">Search All Collections</a></li> 
-        <li><a href="http://mohawkcollege.ca.libguides.com/" target="_blank" class="button white">Subject Guides</a></li> 
-        <li><a href="http://libcat.mohawkcollege.ca/eg/opac/home" target="_blank" class="button white">Books, Videos & More</a></li>      
-        <li><a href="http://mohawkcollege.ca.libguides.com/az.php?t=11749" class="button white">Magazines & Journals </a></li>   
-        <li><a href="ebooks.php" class="button white">eBooks</a></li>     
-        <li><a href="videos.php" class="button white">Online Videos</a></li>        
-        <li><a href="http://mohawkcollege.ca.libguides.com/az.php?t=11750" class="button white">Newspapers</a></li>
-        <li><a href="http://ezproxy.mohawkcollege.ca/login?url=http://search.ebscohost.com/login.aspx?profile=pfi&defaultdb=pfi&authtype=ip,uid&custid=mohawk
-" target="_blank"  class="button white">eJournal Portal</a></li>                               
-                   
-      </ul>    
- 	  </div>
-	</div>
-  
- <div class="clear"></div>
-	
-<!-- End Main Content -->
-
-<!-- Equipment Availability --> 
-  
-	<div class="equipment-title">
-		<h2>Available Now</h2>
-	</div>
-
-<!-- Equipment Locations -->	
-    
-    <div class="equipment">
-    
-    <div class="equipment-locations">
-        <div class="equipment-fennell">
-    		<div class="title clearfix">
-    			<h3>Fennell</h3>    		
-            </div>
-
-		<p><strong><span style="color:
-
-#004c00">
-	80    
-		</span></strong> Chromebooks Available
-
-<br>
-		<strong><span style="color: 
-
-#004c00">
-	49    
-		</span></strong> Laptops Available
-
-<br>
-
-		<strong><span class="item-count count" id="fennell-tablets" style="color: 
-
-#004c00">
-
-	4    
-        </span></strong> Tablets Available
-
-<br>
-
-		<strong><span style="color: 
-
-#9e0000">
-
-	1    
-	</span></strong> Bikes Available
-
-	</p>
-                   
-</div>
-
-    
-	 <div class="equipment-locations">
-     	<div class="equipment-iahs">                       
-			<div class="title clearfix">	
-            	<h3>IAHS</h3>
-            </div>
-  
-  <p><strong><span style="color: 
-#9e0000">
-    5  </span></strong> Laptops Available
-  
-<br>
-<strong><span style="color: 
-
-#004c00">
-10</span></strong>  Chromebooks Available
-  
- 	</p> 
-  
-</div>
-	
-	<div class="equipment-locations">
-     	<div class="equipment-stoney-creek">
-        	<div class="title clearfix">
-				<h3>Stoney Creek</h3>
-            </div>
-
-<p><strong><span class="item-count count" id="stoneycreek-tablets" style="color: 
  
-#004c00"> 9</span></strong> Laptops Available
-
-<br> 
-<strong><span class="item-count count" id="stoneycreek-laptops" style="color:                                   
-
-#004c00"> 10</span></strong> Chromebooks Available
-
-	</p> 
-
-</div>
-                                                    
-       	<div class="equipment-links">
-            <div class="title clearfix">
-            	<h3>Borrow...</h3>
-            </div>
-                
-                <ul>
-                <li><a href="http://collaboratory.mohawkcollege.ca/technology-loans" target="_blank">Laptops, Chromebooks & Tablets </a></li>
-                <li><a href="bicycles.php">Bikes</a></li>
-                </ul>
-
-		</div>
-     </div>
- </div>
-</div>  
-
-  
-<!-- Slider -->
-  
-		
-	<div class="slider_arrows">        
-        
-		<a href="#prev" role="button" class="prev_item"></a>
-        <a href="#next" role="button" class="next_item"></a>
-	</div>
-      		
-	<div class="clear"></div>
-	
-	<div class="clear padding10"></div>
-    
- </div>
-       
-    <div class="clear padding20"></div>
-		<div class="slider">
-			<ul id="work">
-				
-                <!-- Slider #1 -->
-				<li id="id-1">
-                <span class="slider_image">
-                               
-                 <a href="http://library.mohawkcollege.ca/search-all-library.php" target="_blank" class="img-thumb"><img src="images/sliders/searchitall.jpg" alt="all in one search"  class="portfolio_image"></a>
-				</span>
- 						
-				<span class="clear padding15"></span>
-				</li>
-					
-				<!-- Slider #2 -->
-				<li id="id-2">                
-                <span class="slider_image">                 	
-                
-            	<a href="http://library.mohawkcollege.ca/bicycles.php" target="_blank" class="img-thumb"><img src="images/sliders/borrow-bikes.jpg" alt="borrow a bike from the library"  class="portfolio_image"></a>      
-
-				</span>              										
-				<span class="clear padding15"></span>
-				</li>
-                                     				
-			  	<!-- Slider #3 -->
-				<li id="id-3">
-                <span class="slider_image">
-               				
-               <a href="http://mohawkcollege.ca.libguides.com/careers" target="_blank" class="img-thumb"><img src="images/sliders/CareersLibGuide.jpg" alt="careers and job hunting guide"  class="portfolio_image"></a></span>  
-     
-				<span class="clear padding15"></span>
-				</li>
-										
-				<!-- Slider #4 -->
-				<li id="id-4">
-				<span class="slider_image">
-                
-           <a href="http://ezproxy.mohawkcollege.ca/login?url=http://www.veryshortintroductions.com/browse?t0=VSIO_SUBJECTS:SOC00010" onclick="trackOutboundLink('http://ezproxy.mohawkcollege.ca/login?url=http://www.veryshortintroductions.com/browse?t0=VSIO_SUBJECTS:SOC00010'); return false;" target="_blank" class="img-thumb">
-<img src="images/sliders/oxfordshorts.jpg" alt="oxford shorts database"  class="portfolio_image"></a>
-                </span>
-                	                                             		
-				<span class="clear padding15"></span>
-				</li>
-					
-				<!-- Slider #5 -->
-				<li id="id-5">
-				<span class="slider_image">
-                
-                <a href="http://ezproxy.mohawkcollege.ca/login?url=http://search.ebscohost.com/login.aspx?profile=eon&defaultdb=eon&authtype=ip,uid&custid=mohawk" onclick="trackOutboundLink('http://ezproxy.mohawkcollege.ca/login?url=http://search.ebscohost.com/login.aspx?profile=eon&defaultdb=eon&authtype=ip,uid&custid=mohawk'); return false;" target="_blank" class="img-thumb"><img src="images/sliders/Flipster.jpg" alt="Flipster Magazine Database"  class="portfolio_image"></a>
-                </span>
-
-                                   				
-				<span class="clear padding15"></span>
-				</li> 
-															
-				<!--Slider #6 -->
-				<li id="id-6">
-				<span class="slider_image">
-				                 
-               <a href="http://mohawkcollege.ca.libguides.com/copyright" target="_blank" class="img-thumb"><img src="images/sliders/copyright.jpg" alt="faculty copyright guide"  class="portfolio_image"></a></span>  
-                
-				<span class="clear padding15"></span>
-				</li>					
-				
-              </ul>
-              
-			</div>
-            		
-	</section>
-
- <!-- Final Content -->
- 	
-	<section class="homepage_widgets_bg clearfix">
-		<div class="container clearfix">		
-			<div class="padding10"></div>	
-             
-    	<!-- Column 1 -->
-    
-	<div class="col_1_2 ">
-		<h2 class="regular white bottom_line">Library Poll</h2>
-        
-        
-       <script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/9404964.js"></script>
-<noscript><a href="http://polldaddy.com/poll/9404964/">What is your favourite social media app?</a></noscript>
-
-   </div>      
-       			
-	<!-- Column 2 -->
-                       
-    <div class="col_1_2 last" id="why-section">
-		<h2 class="regular white bottom_line">Library Events</h2>
-		
-     <div>
-       
-   
- <div id="api_upc_cid1406_iid1029"></div>
-<script type="text/javascript" src="https://api3.libcal.com/api_events.php?iid=1029&m=upc&cid=1406&c=&d=&l=5&target=_blank&simple=ul_date&context=object&format=js"> </script>
-
-	
- </div> 
-   	
+<div class="cta-area"><a href="/student-life/library/about-us/library-news">Library News</a></div>
 </div>
 </div>
-</section>
 
-	 
-<!-- Footer -->
-	 <!-- footer -->
-	<footer class="footer_bg_bottom clearfix" role="contentinfo">
-	      	<div class="footer_bottom container">		
-				
-                <div class="col_1_3">
-                	<div class="menu">
-						<h2>College Links</h2>
-							<ul>
-                     			<li><a href="http://www.mohawkcollege.ca/one-card.html" target="_blank">ONE Card</a></li>
-                        		<li><a href="http://www.mohawkcollege.ca/studentservices/learning-support-centre.html" target="_blank">Learning Support Centre</a></li>                        
-                        		<li><a href="http://www.mohawkcollege.ca/about/TeachingLearningQuality/CTL.html" target="_blank">Centre for Teaching & Learning</a></li>                                               
-                        		<li><a href="http://mohawk.bookware3000.ca/eSolution/course.php" target="_blank">Bookstore</a></li>                        
-                        		<li><a href="http://www.mohawkcollege.ca/studentservices/the-square.html" target="_blank">The Square</a></li>                        
-							</ul>
-						</div>
-                    </div>
-           		
-                <div class="col_1_3">
-					<div class="address">
-                		<h2>Address</h2>                
-                			<ul>
-                				<li>Mohawk College Library</li> 
-                				<li>135 Fennell Ave. West</li>
-								<li>Hamilton, ON  L8N 3T2</li>	
-                    			<li>905-575-2077</li> 
-                                <li></li>                  
-                 			</ul>
-					</div>
-               </div>
-               
-               
-				<div class="col_1_3">
-                	<div class="contact">
- 						<h2>Contact Us</h2>                
-        					<ul>
-          						<li><a href="http://library.mohawkcollege.ca/suggestions.php"><img src="images/feedback-homepage.fw.png" alt="feedback link" width="40" height="40" vertical-align="middle"/>Send us your suggestions!</a></li>
-          						<li><a href="http://library.mohawkcollege.ca/report_technical_problem.php"><img src="images/tech-help-homepage.fw.png" alt="technical report form" width="40" height="40" />Report a technical problem.</a></li>
-          						<li><a href="http://lib-wind.mohawkcollege.ca/Chat/library_main.html"><img src="images/chat-homepage.fw.png" alt="chat with us" width="40" height="40" />Chat live with Library Staff.</a></li>
-        					</ul>
-                	
-					</div>
-               </div>
-    
-    
-    				<div class="col_1_3">
-           				<div class="social-media">
-            				<h2>Connect</h2>           
-             					<ul>    	
-        
-        						<li><a href="https://www.facebook.com/MohawkCollegeLibrary" target="_blank"><img src="images/Facebook Round.png" width="30" height="30" alt="Mohawk Library on Facebook">Facebook</a></li>      
-		  		        		<li><a href="https://twitter.com/mohawklibrary" target="_blank"><img src="images/Twitter round.png" width="30" height="30" alt="Mohawk Library on Twitter">Twitter</a></li>               		
-        						<li><a href="https://www.youtube.com/channel/UCGHIGb28pXeEhocqWagrNFQ" target="_blank"><img src="images/Youtube round.png" width="30" height="30" alt="Mohawk Library on YouTube">YouTube</a></li> 	  	        		 	               
-                				<li><a href="https://plus.google.com/+MohawkCollegeCummingsLibraryCollaboratoryHamilton?hl=en"target="_blank" ><img src="images/Google plus round.png" width="30" height="30" alt="Mohawk Library on Google+">Google Plus</a></li>       
-      							<li><a href="http://instagram.com/mohawklibrary" target="_blank"><img src="images/Instagram round.png"  width="30" height="30" alt="Mohawk College Library on Instagram">Instagram</a></li>                       		     		  
-                  				</ul>                
-                                       	                     
-                		</div> 
-                	</div>
-                  <div class="clear"></div>
-                  
-  <div class="copyright">
-  <div class="clear padding10"></div>
-            <p>Copyright 2014 Mohawk College Library Hamilton Ontario</p>
-            <div class="clear padding10"></div>
-        </div>                
-                  
-                  
-                  
-			</div>
-               
- 		</footer>
- 
-         
-     
+
+
+<div style="clear: both;"></div>
+
+<div class="three-boxes-cta-template">
+
+<div class="cta-box first"><img alt="book group space" src="/sites/default/files/library/group-space-sandbox.jpg"  />
+
+<div class="cta-area"><a href="http://mohawkcollege.ca.libcal.com/" target="_blank">Book Group Space</a></div>
+
+</div>
+
+<div class="cta-box middle"><img alt="your library account"  src="/sites/default/files/library/library-account.jpg" />
+
+<div class="cta-area"><a href="/student-life/library/borrowing/library-account">Your Library Account</a></div>
+
+</div>
+
+<div class="cta-box last"><img alt=" off campus access"  src="/sites/default/files/library/off-campus-access-sm.jpg" />
+
+<div class="cta-area"><a href="/student-life/library/get-help/off-campus-access">Off-Campus Access</a></div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Script for Chat Now Button From Side -->
+
+<!-- Place this div in your web page where you want your chat widget to appear. -->
+<div class="needs-js"><div class="libraryh3lp-tab">
+  <span>Chat is offline</span>
+</div></div>
+
+<!-- Place this script as near to the end of your BODY as possible. -->
 <script type="text/javascript">
-
-(function($) {
- 
-  $(".tabContent").hide(); 
-  $("ul.tabs li:first").addClass("active").show(); 
-  $(".tabContent:first").show(); 
- 
-  $("ul.tabs li").click(function () {
-    $("ul.tabs li").removeClass("active"); 
-    $(this).addClass("active"); 
-    $(".tabContent").hide(); 
-    var activeTab = $(this).find("a").attr("href"); 
-    $(activeTab).fadeIn(); 
-    return false;
-  });
-  
-  })(jQuery);
-</script>
-
- <script type="text/javascript">  
-   
   (function() {
     var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
-    x.src = "//mohawklibrary.ask.ca.libraryh3lp.com/js/faq-embeddable/embed.js";
+    x.src = (document.location.protocol === "https:" ? "https://" : "http://") + 
+
+"ca.libraryh3lp.com/js/libraryh3lp.js?466";
     var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
   })();
 </script>
 
 
-    
-   	
-   
-	</body>
 
+<div class="libraryh3lp" style="display: none;" data-lh3-jid="mohawk-
+
+library@chat.ca.libraryh3lp.com"><a href="#" onclick="window.open
+
+('https://ca.libraryh3lp.com/chat/mohawk-library@chat.ca.libraryh3lp.com?skin=15121', 'AskUs', 
+
+'resizable=1,width=220,height=330'); return false;"><div class="libraryh3lp-tab">
+  <span>Chat Now</span>
+</div></a></div>
+
+
+
+
+
+
+    </div>
+      
+  </div>
+</article>
+
+      </div>
+</div>
+
+  </div>
+
+        </div>      </main>
+
+                <aside id="sidebar-primary" role="complementary" class="sidebar column">
+    <div class="region region--sidebar-primary clearfix">
+        <nav role="navigation" aria-labelledby="block-audience-first-level-menu" id="block-audience-first-level" class="block block-menu navigation menu--back">
+            
+  <h2 class="visually-hidden" id="block-audience-first-level-menu">Audience 1+</h2>
+  
+
+        
+    
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-main-navigation-second-level-menu" id="block-main-navigation-second-level" class="block block-menu navigation menu--main menu--back">
+            
+  <h2 class="visually-hidden" id="block-main-navigation-second-level-menu">Main Navigation 2+</h2>
+  
+
+        
+    
+
+
+  </nav>
+<div id="block-main-navigation-side-bar" class="block block-expanded-menu-block block-expanded-menu-blockmain">
+  <div class="block--inner">
+    
+        
+          
+              <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/student-life/library/search-collections" data-drupal-link-system-path="node/360">Search Collections</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/student-life/library/search-collections/search-all" summary="basic_html" data-drupal-link-system-path="node/477">Search All</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/search-collections/program-guides" data-drupal-link-system-path="node/480">Program Guides</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/search-collections/books-media-more" data-drupal-link-system-path="node/481">Books, Media &amp; More</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/search-collections/journals-and-magazines" data-drupal-link-system-path="node/482">Journals and Magazines</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/search-collections/ebooks" summary="basic_html" data-drupal-link-system-path="node/483">eBooks</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/search-collections/online-videos" summary="basic_html" data-drupal-link-system-path="node/485">Online Videos</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/search-collections/images" title="Search for images" data-drupal-link-system-path="node/486">Images</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/search-collections/databases-a-z" data-drupal-link-system-path="node/600">Databases A-Z</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/student-life/library/use-library" summary="basic_html" data-drupal-link-system-path="node/361">Use the Library</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/student-life/library/use-library/computers-technology" summary="basic_html" data-drupal-link-system-path="node/488">Computers &amp; Technology</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/use-library/faculty-services" data-drupal-link-system-path="node/489">Faculty Services</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/use-library/learning-spaces" data-drupal-link-system-path="node/490">Learning Spaces</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/use-library/library-events-workshops" data-drupal-link-system-path="node/491">Library Events &amp; Workshops</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/use-library/print-copy-scan" data-drupal-link-system-path="node/492">Print/Copy/Scan</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/student-life/library/borrowing" summary="basic_html" title="Borrowing from the Library" data-drupal-link-system-path="node/470">Borrowing</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/student-life/library/borrowing/how-to-borrow" data-drupal-link-system-path="node/550">How to Borrow</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/borrowing/library-account" data-drupal-link-system-path="node/495">Library Account</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/borrowing/request-items" data-drupal-link-system-path="node/496">Request Items</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/borrowing/fines" data-drupal-link-system-path="node/497">Fines</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/borrowing/borrow-laptops-chromebooks" data-drupal-link-system-path="node/499">Borrow a Laptop</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/borrowing/borrow-a-bike" data-drupal-link-system-path="node/500">Borrow a Bike</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/borrowing/alumni-borrowers" data-drupal-link-system-path="node/501">Alumni Borrowers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/borrowing/community-borrowers" data-drupal-link-system-path="node/502">Community Borrowers</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/student-life/library/get-help" summary="basic_html" data-drupal-link-system-path="node/372">Get Help</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/student-life/library/get-help/research-help" data-drupal-link-system-path="node/509">Research Help</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/get-help/technical-help" data-drupal-link-system-path="node/510">Technical Help</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/get-help/off-campus-access" data-drupal-link-system-path="node/576">Off-Campus Access</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://mohawklibrary.ask.ca.libraryh3lp.com/">FAQs</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/student-life/library/about-us" summary="basic_html" title="About the Library" data-drupal-link-system-path="node/375">About the Library</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/student-life/library/about-us/locations-hours" data-drupal-link-system-path="node/1390">Locations &amp; Hours</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/about-us/contact-library" data-drupal-link-system-path="node/505">Contact the Library</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/about-us/staff-directory" summary="basic_html" data-drupal-link-system-path="node/3279">Staff Directory</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/about-us/library-policies" data-drupal-link-system-path="node/506">Library Policies</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/about-us/accessibility-library" data-drupal-link-system-path="node/507">Accessibility</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/library/about-us/library-social-media" data-drupal-link-system-path="node/508">Library Social Media</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+      </div>
+</div>
+
+    </div>
+  </aside>
+
+      
+          </div>  </div>
+      
+  
+      <footer id="footer" role="contentinfo">
+        <div class="region region--footer clearfix">
+    <div class="region-inner">
+      <div id="block-libraryfooterlogo" class="block block-block-content block-block-content8dceb5b3-65f6-474d-924c-c14121f79961">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="http://library.mohawkcollege.ca/"><img alt="Mohawk College Library" height="100" src="/sites/default/files/library/library-logo.fw.png" width="300" /></a><a></a></p></div>
+      
+      </div>
+</div>
+<div id="block-libraryfootercontact" class="block block-block-content block-block-contentaed039e4-3b05-442f-9602-15957bb433e7">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p style="font-size: 20px; color: #f5821e;">Contact the Library</p>
+
+<p style="font-size: 20px; color: #f5821e;">
+<a href="mailto:library@mohawkcollege.ca"><img alt="email the library" height="60" src="/sites/default/files/library/icons/email-white.fw.png" width="60" /></a>
+<a href="http://lib-wind.mohawkcollege.ca/Chat/library_main.html"><img alt="chat with the library" height="60" src="/sites/default/files/library/icons/chat-white.fw.png" width="60" /></a>
+<a href="/student-life/library/about-us/contact-library"><img alt="phone the library" height="60" src="/sites/default/files/library/icons/phone-white.fw.png" width="60" /></a>
+<a href="/student-life/library/about-us/contact-library"><img alt="text the library" height="60" src="/sites/default/files/library/icons/iphone-white.fw.png" width="60" /></a>
+</p>
+
+</div>
+      
+      </div>
+</div>
+<div id="block-libraryfooterconnect" class="block block-block-content block-block-contenta9c2fa2f-55c6-4f7a-bd81-c7f9e47ae2f9">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p style="font-size: 20px; color: #f5821e;">Connect with the Library</p>
+
+<p style="font-size: 20px; color: #f5821e;">
+<a href="https://www.facebook.com/MohawkCollegeLibrary" target="_blank"><img alt="Mohawk College Library on Facebook" height="60" src="/sites/default/files/library/icons/facebook-white.fw.png" width="60" /></a>
+<a href="https://twitter.com/mohawklibrary" target="_blank"><img alt="Mohawk College Library on Twitter" height="60" src="/sites/default/files/library/icons/twitter-white.fw.png" width="60" /></a>
+<a href="https://www.youtube.com/channel/UCGHIGb28pXeEhocqWagrNFQ" target="_blank"><img alt="Mohawk College Library on YouTube" height="60" src="/sites/default/files/library/icons/youtube-white.fw.png" width="60" /></a>
+<a href="http://instagram.com/mohawklibrary" target="_blank"><img alt="Mohawk College Library on Instagram" height="60" src="/sites/default/files/library/icons/instagram-white.fw.png" width="60" /></a>
+</p>
+
+</div>
+      
+      </div>
+</div>
+<div id="block-mohawkaddressfooter" class="block block-block-content block-block-contenta4daeed9-cee8-4a55-9900-d72e937516a5">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="footer-address">
+<h2>Mohawk College</h2>
+
+<ul><li>P.O. Box 2034</li>
+	<li>Hamilton, ON, Canada L8N 3T2</li>
+</ul><p><a href="/about-mohawk/contact-mohawk">Contact Mohawk</a></p>
+
+<p><a data-entity-type="node" data-entity-uuid="e341d5c9-f6ec-4225-a3ee-271c9eb23242" href="/about-mohawk/leadership-and-administration/policies-and-procedures/corporate-policies-and" title="Corporate Policies and Procedures">Policies and Procedures</a><br /><a data-entity-type="node" data-entity-uuid="b8a3acb6-ba94-43e3-9202-c05eb1c2f2f7" href="/about-mohawk/leadership-and-administration/policies-and-procedures/sexual-assault-and-sexual" title="Sexual Assault and Sexual Violence Awareness">Sexual Assault and Sexual Violence Awareness</a><br /><a data-entity-type="node" data-entity-uuid="da2034ae-055d-4960-a3df-54ec16f4f4d2" href="/about-mohawk/accessibility" title="Accessibility">Accessibility</a></p>
+</div>
+</div>
+      
+      </div>
+</div>
+<div class="views-element-container block block-views block-views-blockcampus-block-1" id="block-views-block-campus-block-1">
+  <div class="block--inner">
+    
+          <h2>Campuses</h2>
+        
+          <div><div class="view view-campus view-id-campus view-display-id-block_1 js-view-dom-id-d854bd908526a4190f1b499b00d25d50e9c1d7df5bf6ceea71cf2ef52c3df351">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/fennell-campus" hreflang="en">Fennell Campus</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/institute-for-applied-health-sciences-at-mcmaster" hreflang="en">Institute for Applied Health Sciences at McMaster</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/ogwehoweh-skills-and-trades-training-centre" hreflang="en">Ogwehoweh Skills and Trades Training Centre</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/six-nations-polytechnic" hreflang="en">Six Nations Polytechnic</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/stoney-creek-campus" hreflang="en">Stoney Creek Campus</a></span></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+</div>
+<div id="block-mohawksocialmediaprivacyfooter" class="block block-block-content block-block-contenta4bad364-793d-4da6-9131-49e3b800140e">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="social-media-wrapper">
+<ul>
+	<li><a class="ion-social-facebook" href="https://www.facebook.com/mohawkcollege" target="_blank"><span class="icon-text">Facebook</span></a></li>
+	<li><a class="ion-social-twitter" href="https://twitter.com/mohawkcollege" target="_blank"><span class="icon-text">Twitter</span></a></li>
+	<li><a class="ion-social-instagram" href="https://www.instagram.com/mohawk.college/" target="_blank"><span class="icon-text">Instagram</span></a></li>
+	<li><a class="ion-social-youtube" href="https://www.youtube.com/user/mohawkcollege" target="_blank"><span class="icon-text">Youtube</span></a></li>
+	<li><a class="ion-android-more-vertical" href="/about/contact-mohawk/marketing-and-communications/social-media"><span class="icon-text">More</span></a></li>
+</ul>
+</div>
+
+<p>&nbsp; &nbsp;</p>
+
+<p><a href="http://www.mohawkstudents.ca/" title="mohawk students' association"><img alt="mohawk student's association" height="50" src="/sites/default/files/mohawk%20students%20association/logo-msa-140x70.png" width="100" /></a></p>
+</div>
+      
+      </div>
+</div>
+
+    </div>
+  </div>
+
+    </footer>
+  
+</div>
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/77","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"user":{"uid":0,"permissionsHash":"b48845a936bf8e1208aa5465384b70516dcec0688c9b06bdc618b9ab079c2c2a"}}</script>
+<script src="/core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=2.1.4"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.1.8"></script>
+<script src="/core/misc/drupal.js?v=8.1.8"></script>
+<script src="/modules/contrib/google_analytics/js/google_analytics.js?v=8.1.8"></script>
+<script src="/themes/de_theme/bower_components/SimpleStateManager/dist/ssm.min.js?od8num"></script>
+<script src="/themes/de_theme/bower_components/matchHeight/jquery.matchHeight-min.js?od8num"></script>
+<script src="/themes/de_theme/dist/js/script.min.js?od8num"></script>
+<script src="/themes/de_theme/libraries/google_cse/google_cse.min.js?od8num"></script>
+<script src="/themes/de_theme/libraries/slick/slick.min.js?od8num"></script>
+<script src="/themes/de_theme/bower_components/masonry/dist/masonry.pkgd.min.js?od8num"></script>
+<script src="/themes/de_theme/bower_components/featherlight/release/featherlight.min.js?od8num"></script>
+<script src="/themes/de_theme/bower_components/dropkick/lib/dropkick.js?od8num"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d40aa54ef7","applicationID":"26356517","transactionName":"YARTYxYFWRZVUUEMXllOcFQQDVgLG0JUAlRoAlBUDAE=","queueTime":0,"applicationTime":18,"atts":"TENQFV4fShg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

@@ -3,54 +3,123 @@
 <head>
 	<title>404 - Page Not Found</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noarchive" />
 	<link rel="shortcut icon" href="//cdn1.editmysite.com/developer/none.ico" />
 
 	<style type="text/css">
-	body {
-		background: url(//cdn1.editmysite.com/images/404background.jpg);
-		font-family: Helvetica, arial, sans-serif;
-		color: #ccc;
-	}
-	.alert-container {
-		background: url(//cdn1.editmysite.com/images/404_textbox.png);
-		width: 918px;
-		height: 142px;
-		margin: 82px auto 0px;
-	}
-	.alert-inner {
-		padding: 24px 0px 0px 209px;
-	}
-	.alert-heading {
-		font-size: 50px;
-		font-weight: bold;
-		line-height: 50px;
-	}
-	.alert-subheading {
-		margin-top: 8px;
-		font-size: 28px;
-		line-height: 28px;
-	}
-	.redirect {
-		width: 918px;
-		margin: 24px auto 0px;
-		font-size: 14px;
-		line-height: 14px;
-		text-align: center;
-	}
-	.redirect a {
-		color: #ffb300;
-		text-decoration: none;
-	}
+		@font-face {
+			font-family: 'Proxima Nova';
+			font-weight: 300;
+			src: url("//cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.eot");
+			src: url("//cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.eot?#iefix") format("embedded-opentype"), url("//cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.woff") format("woff"), url("//cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'Proxima Nova';
+			src: url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/2EF7EC_1_0.eot");
+			src: url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/2EF7EC_1_0eot?#iefix") format("embedded-opentype"), url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/2EF7EC_1_0.woff") format("woff"), url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/2EF7EC_1_0.ttf") format("truetype");
+		}
+
+		@font-face {
+			font-family: 'Proxima Nova';
+			font-weight: 500;
+			src: url("//cdn2.editmysite.com/fonts/Proxima-Semibold/267447_5_0.eot");
+			src: url("//cdn2.editmysite.com/fonts/Proxima-Semibold/267447_5_0.eot?#iefix") format("embedded-opentype"), url("//cdn2.editmysite.com/fonts/Proxima-Semibold/267447_5_0.woff") format("woff"), url("//cdn2.editmysite.com/fonts/Proxima-Semibold/267447_5_0.ttf") format("truetype");
+		}
+
+		body {
+			background-color: #F8F8F8;
+			font-family: 'Proxima Nova';
+		}
+
+		hr {
+			border: 1px solid #E7E7E7;
+			border-top: 0;
+		}
+
+		.warning-container {
+			padding: 38px 40px;
+			padding-bottom: 0;
+			box-sizing: border-box;
+			text-align: center;
+			background-color: white;
+			border: 1px solid #D4D4D4;
+			height: 335px;
+			width: 484px;
+			margin: 0 auto;
+			margin-top: 10%;
+			-webkit-box-shadow: 0px 0px 41px -8px rgba(237,234,237,1);
+			-moz-box-shadow: 0px 0px 41px -8px rgba(237,234,237,1);
+			box-shadow: 0px 0px 41px -8px rgba(237,234,237,1);
+		}
+
+		.header {
+			margin: 26px 0 0 0;
+			color: #363B3E;
+			font-size: 45px;
+			font-weight: 500;
+		}
+
+		.error {
+			margin: 0 0 0 0;
+			color: #9BA0A3;
+			margin-bottom: 35px;
+		}
+
+		.check-url, .otherwise {
+			color: #666C70;
+		}
+
+		.check-url {
+			margin-top: 0;
+			font-weight: 500;
+		}
+
+		.otherwise {
+			margin-top: 0;
+		}
+
+		.logo {
+			width: 82px;
+		}
+
+		.bottom-content {
+			display: inline-block;
+			height: 120px;
+			line-height: 120px;
+		}
+
+		.bottom-content > span {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: normal;
+		}
+
+		a {
+			color: #2990EA;
+			text-decoration: inherit;
+		}
+
+		@media (max-width: 550px) {
+			.warning-container {
+				width: 80%;
+			}
+		}
+
 	</style>
 </head>
 <body>
-	<div class="alert-container">
-		<div class="alert-inner">
-			<div class="alert-heading">404 - Page Not Found</div>
-			<div class="alert-subheading">Sorry, the page you are looking for does not exist</div>
-		</div>
+<div class="warning-container">
+	<h2 class="header">404</h2>
+	<p class="error">Error - Page Not Found</p>
+	<hr>
+	<div class="bottom-content">
+			<span>
+				<p class="check-url">Please check the URL.</p>
+				<p class="otherwise">Otherwise, <a href="/">click here</a> to be redirected to the homepage.</p>
+			</span>
 	</div>
-	<div class="redirect">Please check the URL.  Otherwise, <a href="/">click here</a> to be redirected to the homepage.</div>
+</div>
 </body>
 </html>

@@ -247,8 +247,22 @@ Consultation du rÃ´le d'Ã©valuation<br>
 <tr><td width="300" valign="top">
 <div style="padding:15px 0px 15px 0px">
 
+
+<!-- Horaire estival  -->
+<!-- <div class="title">Horaire estival de la bibliothÃ¨que  </div>
+
+    <p><b>Lundi au vendredi</b>
+	<br>  8h00 Ã  16h00 
+	<br>(fermÃ© de midi Ã  13h00)</p>
+                <p><b>Vendredi</b>
+				<br> 18h00 Ã  20h00</p>
+                <p><b>Samedi</b>
+				<br> 10h00 Ã  13h00</p>
+ 
+<p>&nbsp;</p> -->
+ 
 <!-- Ete biblio -->
-<div class="title">Horaire  de la bibliothÃ¨que  </div>
+<div class="title">Horaire rÃ©gulier  de la bibliothÃ¨que  </div>
  
 <p><strong>Lundi</strong> <br />8h Ã  midi</p>
 <p><strong>Mardi</strong> <br />18h00 Ã  20h00</p>

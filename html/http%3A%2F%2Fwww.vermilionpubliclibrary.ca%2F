@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Vermilion Public Library of Vermilion, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Vermilion, Alberta, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Vermilion Public Library of Vermilion, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Vermilion, Alberta, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.vermilionpubliclibrary.ca/" />
@@ -34,10 +38,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=""/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -45,7 +47,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Vermilion Public Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Vermilion Public Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -259,7 +261,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -267,6 +268,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -281,6 +294,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -301,9 +320,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -335,45 +353,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/154" class="blog_link active_page" title="Library News">Library News</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=154" class="blog_link active_page" title="Library News"><span>Library News</span></a>
+    </li>
+    <li  >
       <a href="/calendars/show/154" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/154" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=154" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/170" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -400,10 +398,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -418,9 +416,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
-    <li class="MenuOpen" id="active"><a href="http://www.vermilionpubliclibrary.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.vermilionpubliclibrary.ca/eResources" title="Eresources"><span>eResources</span></a></li></ul></li><li><a href="http://www.vermilionpubliclibrary.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.vermilionpubliclibrary.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.vermilionpubliclibrary.ca/Books-for-Babies" title="Books for babies"><span>Books for Babies</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Books-for-Kids" title="Books for kids"><span>Books for Kids</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Books-on-Wheels" title="Books on wheels"><span>Books on Wheels</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Computer-Comfort" title="Computer comfort"><span>Computer Comfort</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Computers-For-Novices" title="Computers for novices"><span>Computers For Novices</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Genealogy-Interest-Group" title="Genealogy interest group"><span>Genealogy Interest Group</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Google-Your-World" title="Google your world!"><span>Google Your World!</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Kids-Connection" title="Kids connection"><span>Kids Connection</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Rhyme-Time" title="Rhyme time"><span>Rhyme Time</span></a></li></ul></li><li><a href="http://www.vermilionpubliclibrary.ca/New-Items" title="New items"><span>New Items</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/e-Books" title="E-books"><span>e-Books</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Event-Calendar" title="Event calendar"><span>Event Calendar</span></a></li>
-  
+    <li class="MenuOpen" id="active"><a href="http://www.vermilionpubliclibrary.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.vermilionpubliclibrary.ca/eResources" title="Eresources"><span>eResources</span></a></li></ul></li><li><a href="http://www.vermilionpubliclibrary.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.vermilionpubliclibrary.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.vermilionpubliclibrary.ca/Books-for-Babies" title="Books for babies"><span>Books for Babies</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Books-for-Kids" title="Books for kids"><span>Books for Kids</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Books-on-Wheels" title="Books on wheels"><span>Books on Wheels</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Computer-Comfort" title="Computer comfort"><span>Computer Comfort</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Genealogy-Interest-Group" title="Genealogy interest group"><span>Genealogy Interest Group</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Kids-Connection" title="Kids connection"><span>Kids Connection</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Time-to-Rhyme" title="Time to rhyme"><span>Time to Rhyme</span></a></li></ul></li><li><a href="http://www.vermilionpubliclibrary.ca/New-Items" title="New items"><span>New Items</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/e-Books" title="E-books"><span>e-Books</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Event-Calendar" title="Event calendar"><span>Event Calendar</span></a></li>
 </ul>
 
 	</nav>
@@ -499,7 +495,17 @@ if (typeof jQuery != 'undefined') {
 				
 				
 				<div class="slideContent">
-					<img class="bigImg" alt="Book Sale 2016 website" src="http://files.townlife.com/public/uploads/photos/473531/Book_Sale_2016_website_xlarge.png" />
+					<img class="bigImg" alt="mystery knitalong website" src="http://files.townlife.com/public/uploads/photos/501306/mystery_knitalong_website_xlarge.png" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="cookbook club website 2" src="http://files.townlife.com/public/uploads/photos/501555/cookbook_club_website_2_xlarge.png" />
 					
 					
 					
@@ -510,6 +516,16 @@ if (typeof jQuery != 'undefined') {
 			   
 				<div class="slideContent">
 					<img class="bigImg" alt="meeting room" src="http://files.townlife.com/public/uploads/photos/391963/meeting_room_xlarge.jpg" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Adult Stacks" src="http://files.townlife.com/public/uploads/photos/296600/adult_stacks_1_xlarge.jpg" />
 					
 					
 					
@@ -530,16 +546,6 @@ if (typeof jQuery != 'undefined') {
 			   
 				<div class="slideContent">
 					<img class="bigImg" alt="Children's Leveled Readers" src="http://files.townlife.com/public/uploads/photos/296584/kids_area_2_xlarge.jpg" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="Adult Stacks" src="http://files.townlife.com/public/uploads/photos/296600/adult_stacks_1_xlarge.jpg" />
 					
 					
 					
@@ -591,70 +597,54 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5653"><img alt="Bbf front cover with new release" src="http://files.townlife.com/public/asset_files/6758/thumb_400/BBF front cover with new release.jpg?1449604099" /></a></div>
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5653">				
-	  Book Signing for &quot;Backyard Bird Feeding: An Alberta Guide&quot;			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/6649">
+	    Summer Reading program begins July 5th.
+          </a>
+        <p>Join our &quot;wild&quot; summer reading program this year for fun and the opportunity to win prizes.&nbsp; Keep track of your reading online.&nbsp...
+        <!-- <a href="/blogs/show_entry/6649">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6639">
+	    Agricultural Fair Craft Classes
+          </a>
+        <p>Agricultural Fair Craft Classes
+
+An instructor from the Vermilion Library will help prepare entries for the Vermilion Fair.  All classes are free...
+        <!-- <a href="/blogs/show_entry/6639">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6758/xlarge/BBF%20front%20cover%20with%20new%20release.jpg?1449604099" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Bbf%20front%20cover%20with%20new%20release" src="http://files.townlife.com/public/asset_files/6758/thumb_400/BBF%20front%20cover%20with%20new%20release.jpg?1449604099" />
+            </a>
+          </div>
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/5653">
+	    Book Signing for &quot;Backyard Bird Feeding: An Alberta Guide&quot;
+          </a>
         <p>The Vermilion River Naturalist Society is co-hosting a book signing for the new book, &quot;Backyard Bird Feeding: An Alberta Guide&quot; by Myrna ...
         <!-- <a href="/blogs/show_entry/5653">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_comment_on_post">
-        
         <a href="/blogs/show_entry/295#comment1397">				
 	  Vermilion Memories comment on Vermilion Memories			 			
         </a>        
       </li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5454">				
-	  Find A New Friend			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5454">
+	    Find A New Friend
+          </a>
         <p>Don&rsquo;t judge a book by its cover. Choose it by its description and be entered into our draw. Selections from our juvenile and young adult coll...
         <!-- <a href="/blogs/show_entry/5454">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
-      <li class="new_post">
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5453">				
-	  Novelist Workshop			 			
-        </a>
-        <p>Find out what to read next! Learn how to use this on-line resource.  Search for new titles, authors or plots, or enter your preferences to find rea...
-        <!-- <a href="/blogs/show_entry/5453">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
-    
-      <li class="new_post">
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5415">				
-	  4th Annual Pumpkin Carving Contest			 			
-        </a>
-        <p>Enter our pumpkin carving contest for a chance to win one of 2 prizes!&nbsp; Bring your pre-carved or decorated pumpkin to the library on October 2...
-        <!-- <a href="/blogs/show_entry/5415">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/154">+ MORE</a></h6>
 </div>
@@ -665,167 +655,104 @@ if (typeof jQuery != 'undefined') {
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/154">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/154">Upcoming Events</a> 
         <span class="latest_events_count">(8)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>10</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>24</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35255">Family Rhyme and Read for English Language Learners</a>
-            <span class="upcoming_time_frame">
-              (Tomorrow)
-              
-                &nbsp;from 10:00 AM
-                
-                  &nbsp;to 11:30 AM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/33206">Kids Connection</a>
-            <span class="upcoming_time_frame">
-              (in 2 days)
-              
-                &nbsp;from 10:30 AM
-                
-                  &nbsp;to 12:00 PM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>12</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/33217">Time to Rhyme</a>
-            <span class="upcoming_time_frame">
-              (in 3 days)
-              
-                &nbsp;from 10:15 AM
-                
-                  &nbsp;to 11:30 AM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>17</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35256">Family Rhyme and Read for English Language Learners</a>
+            <a href="/calendars/show_event/37255">Last day of Registration for Mystery Halloween Knitalong</a>
             <span class="upcoming_time_frame">
               (in 1 week)
-              
-                &nbsp;from 10:00 AM
-                
-                  &nbsp;to 11:30 AM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>18</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>27</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/33207">Kids Connection</a>
-            <span class="upcoming_time_frame">
-              (in 1 week)
-              
-                &nbsp;from 10:30 AM
-                
-                  &nbsp;to 12:00 PM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>19</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/33218">Time to Rhyme</a>
-            <span class="upcoming_time_frame">
-              (in 1 week)
-              
-                &nbsp;from 10:15 AM
-                
-                  &nbsp;to 11:30 AM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>21</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35558">Library Closed</a>
-            <span class="upcoming_time_frame">
-              (in 1 week)
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>24</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35257">Family Rhyme and Read for English Language Learners</a>
+            <a href="/calendars/show_event/37362">Scrabble</a>
             <span class="upcoming_time_frame">
               (in 2 weeks)
-              
-                &nbsp;from 10:00 AM
-                
-                  &nbsp;to 11:30 AM
-                
-              
             </span>
           </li>
-        
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>27</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37363">Zentangle Everyone!</a>
+            <span class="upcoming_time_frame">
+              (in 2 weeks)
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>28</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/36987">Kids Connection CANCELLED</a>
+            <span class="upcoming_time_frame">
+              (in 2 weeks)
+                &nbsp;from 10:30 AM
+                  &nbsp;to 12:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>04</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37361">Family Rhyme and Read for English Language Learners</a>
+            <span class="upcoming_time_frame">
+              (in 3 weeks)
+                &nbsp;from 10:00 AM
+                  &nbsp;to 11:30 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>05</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/36988">Kids Connection</a>
+            <span class="upcoming_time_frame">
+              (in 3 weeks)
+                &nbsp;from 10:30 AM
+                  &nbsp;to 12:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>05</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37256">Mystery Halloween Knitalong</a>
+            <span class="upcoming_time_frame">
+              (in 3 weeks)
+                &nbsp;from  7:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>06</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37360">Cookbook Club: Appetizers</a>
+            <span class="upcoming_time_frame">
+              (in 3 weeks)
+                &nbsp;from 12:00 PM
+                  &nbsp;to  1:00 PM
+            </span>
+          </li>
       </ul>
       <h6 class="more"><a href="/calendars/table/154">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -833,72 +760,39 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_739">
-	      
-              
-	      
+	    <dd id="action_739">
 	        <img alt="Call (780) 853-4288" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 853-4288" />
 		
 		Call (780) 853-4288
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_740">
-	      
-              
-	      
+		    <dd id="action_740">
 	        <img alt="Fax (780) 853-1783" class="action_steps_image" src="/images/icons/fff/printer.png?1445483283" title="Fax (780) 853-1783" />
 		
 		Fax (780) 853-1783
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1190">
-	      
-              
-	      
+		    <dd id="action_1190">
 	        <img alt="Follow us on Facebook" class="action_steps_image" src="/images/icons/fff_action_steps/user_go.png?1445483283" title="Follow us on Facebook" />
 		<a class='action_steps_link' href='http://www.facebook.com/vermilionpl' target='_blank'>
 		Follow us on Facebook
 		</a>
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/154" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1504&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1504&amp;return_url=http%3A%2F%2Fwww.vermilionpubliclibrary.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
-	
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -909,12 +803,9 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="subNavigation" class="rightItem">
 			<h3>Links</h3>
-			
-
-<ul id="SubNav">
+			<ul id="SubNav">
   <li><a href="http://www.vermilionpubliclibrary.ca/eResources" class="eresources_link123" target="" title="Eresources"><span>eResources</span></a></li>
 </ul>
-
 
 		</nav>
 		
@@ -934,16 +825,10 @@ if (typeof jQuery != 'undefined') {
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -955,12 +840,8 @@ if (typeof jQuery != 'undefined') {
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
-    
           <!-- LIQUID LAYOUT -->    
     <ul class="social">
-        
           <li id="facebook">
             <div id="fb-root"></div>
             <script>
@@ -993,24 +874,15 @@ if (typeof jQuery != 'undefined') {
             </script>
             <div class="fb-like" data-href="http://www.vermilionpubliclibrary.ca/" data-width="180" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
           </li>
-        
-        
 
-        
 
-        
 
-        
           <li id="facebookshare">
             <div class="fb-share-button" data-layout="button_count" data-href="http://www.vermilionpubliclibrary.ca/"></div>
           </li>
-        
     </ul>
 
-    
-    
 
-  
 </div>
 
  </span>
@@ -1031,87 +903,7 @@ if (typeof jQuery != 'undefined') {
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
 			
 				
 			
@@ -1133,7 +925,29 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -1147,29 +961,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
 			
 				
 			
@@ -1191,7 +983,29 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -1205,18 +1019,76 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
 			
 				
 					</div><!-- end book group -->
@@ -1239,7 +1111,7 @@ if (typeof jQuery != 'undefined') {
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1281,61 +1153,39 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
-    <li class="MenuOpen" id="active"><a href="http://www.vermilionpubliclibrary.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.vermilionpubliclibrary.ca/eResources" title="Eresources"><span>eResources</span></a></li></ul></li><li><a href="http://www.vermilionpubliclibrary.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.vermilionpubliclibrary.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.vermilionpubliclibrary.ca/Books-for-Babies" title="Books for babies"><span>Books for Babies</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Books-for-Kids" title="Books for kids"><span>Books for Kids</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Books-on-Wheels" title="Books on wheels"><span>Books on Wheels</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Computer-Comfort" title="Computer comfort"><span>Computer Comfort</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Computers-For-Novices" title="Computers for novices"><span>Computers For Novices</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Genealogy-Interest-Group" title="Genealogy interest group"><span>Genealogy Interest Group</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Google-Your-World" title="Google your world!"><span>Google Your World!</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Kids-Connection" title="Kids connection"><span>Kids Connection</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Rhyme-Time" title="Rhyme time"><span>Rhyme Time</span></a></li></ul></li><li><a href="http://www.vermilionpubliclibrary.ca/New-Items" title="New items"><span>New Items</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/e-Books" title="E-books"><span>e-Books</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Event-Calendar" title="Event calendar"><span>Event Calendar</span></a></li>
-  
+    <li class="MenuOpen" id="active"><a href="http://www.vermilionpubliclibrary.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.vermilionpubliclibrary.ca/eResources" title="Eresources"><span>eResources</span></a></li></ul></li><li><a href="http://www.vermilionpubliclibrary.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.vermilionpubliclibrary.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.vermilionpubliclibrary.ca/Books-for-Babies" title="Books for babies"><span>Books for Babies</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Books-for-Kids" title="Books for kids"><span>Books for Kids</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Books-on-Wheels" title="Books on wheels"><span>Books on Wheels</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Computer-Comfort" title="Computer comfort"><span>Computer Comfort</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Genealogy-Interest-Group" title="Genealogy interest group"><span>Genealogy Interest Group</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Kids-Connection" title="Kids connection"><span>Kids Connection</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Time-to-Rhyme" title="Time to rhyme"><span>Time to Rhyme</span></a></li></ul></li><li><a href="http://www.vermilionpubliclibrary.ca/New-Items" title="New items"><span>New Items</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/e-Books" title="E-books"><span>e-Books</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.vermilionpubliclibrary.ca/Event-Calendar" title="Event calendar"><span>Event Calendar</span></a></li>
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/154" class="blog_link active_page" title="Library News">Library News</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=154" class="blog_link active_page" title="Library News"><span>Library News</span></a>
+    </li>
+    <li  >
       <a href="/calendars/show/154" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/154" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=154" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/170" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			<br type="_moz" />
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1344,7 +1194,7 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1354,41 +1204,23 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/154" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1525,6 +1357,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1551,3 +1408,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

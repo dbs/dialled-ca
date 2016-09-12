@@ -59,8 +59,8 @@
 	<ul class="dropdown-menu">
 	<li><a href="/awards.php">Awards / Prix et distinctions</a></li>
 	<li><a href="/medals.php">Medals / MÃ©dailles</a></li>
-	<li><a href="/2016/index.php">2016 Convention / Prochain congrÃ¨s</a></li>
-	<li><a href="/2015/index.php">Last Convention / dernier congrÃ¨s</a></li>
+	<li><a href="/2017/index.php">2017 Convention / Prochain congrÃ¨s</a></li>
+	<li><a href="/2016/index.php">Last Convention / dernier congrÃ¨s</a></li>
 	<li><a href="/conventions.php">Conventions / Tous les CongrÃ¨s</a></li>
 	</ul>
 </li>
@@ -97,8 +97,8 @@
     <h2>What's New?</h2>
 
     <ul class="list">
+		<li><a href="/2017/">2017 RCNA Convention in Boucherville, Quebec July 18 - July 23, 2017</a></li>
 		<li><a href="/2016/">2016 RCNA Convention in Ottawa, Ontario  July 19 - July 24, 2016</a></li>
-		<li><a href="/2015/">2015 RCNA Convention in Halifax, Nova Scotia July 22 - July 26, 2015</a></li>
         <li>View sample issues of theÂ <em>The CN Journal Online:</em>
 			<ul>
 				<li><a href="http://www.rcna.ca/sample/2008NovemberCNJ.php" target="_blank">November 2008</a></li>
@@ -138,8 +138,8 @@
 	</div></div>		
 	<h2>Quoi de neuf?</h2>
 	<ul class="list">
-		<li><a href="/2016/">Information sur le congrÃ¨s de l'annÃ©e prochaine</a></li>
-		<li><a href="/2015/">Information sur le congrÃ¨s de cette annÃ©e</a></li>
+		<li><a href="/2017/">Information sur le congrÃ¨s de l'annÃ©e prochaine</a></li>
+		<li><a href="/2016/">Information sur le congrÃ¨s de cette annÃ©e</a></li>
 		<li>Lisez quelques numÃ©ros du <em>Journal de la numismatique canadienne</em>
 		<ul>
 		<li><a href="/sample/2008NovemberCNJ.php" target="_blank">novembre 2008</a></li> 
@@ -185,7 +185,7 @@
 5694 Highway #7 East, Suite 432<br>
 Markham ON Canada L3P 1B4</li>
 <li>Telephone / TÃ©lÃ©phone: 647-401-4014</li>
-<li>Email / Courriel: <a href='ma&#105&#108&#116o:i%6e%66%6f%40%72c%6e%61%2e%63a'>info&#64&#114&#99&#110&#97&#46&#99a</a><br>
+<li>Email / Courriel: <a href='m&#97&#105&#108&#116&#111:%69n%66%6f%40%72%63na%2e%63%61'>&#105&#110f&#111&#64&#114&#99n&#97&#46&#99&#97</a><br>
 	<a href="//www.facebook.com/TheRCNA"><img src="/components/facebook.gif" width="16" height="16" alt="Facebook" /> Follow Us</a><br></li>
         <li><a href="/">Home / Accueil</a></li>
         <li><a href="/sitemap.php">Site Map / Plan du site</a></li>
@@ -225,8 +225,8 @@ Markham ON Canada L3P 1B4</li>
     	<ul class="nav nav-list">
     <li><a href="/awards.php">Awards / Prix et distinctions</a></li>
 	<li><a href="/medals.php">Medals / MÃ©dailles</a></li>
-	<li><a href="/2016/">2016 Convention / Prochain congrÃ¨s</a></li>
-	<li><a href="/2015/">2015 Convention / dernier congrÃ¨s</a></li>
+	<li><a href="/2017/">2017 Convention / Prochain congrÃ¨s</a></li>
+	<li><a href="/2016/">2016 Convention / dernier congrÃ¨s</a></li>
 	<li><a href="/conventions.php">Conventions / CongrÃ¨s</a></li>
     </ul>
 <h3>Contacts / Pour nous rejoindre</h3>

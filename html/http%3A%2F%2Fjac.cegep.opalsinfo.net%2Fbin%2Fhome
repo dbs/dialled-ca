@@ -22,8 +22,20 @@
  <script type="text/javascript">
 
 var  opalsApp= null;
+var oplLocale={
+    lang:"en",
+    curCode:"CAD ",
+    curSymbol:"$"
+};
+var libCal={
+        dateClosed:['2016-09-05','2016-10-10','2016-12-26','2016-12-27','2016-12-28','2016-12-29','2016-12-30','2017-01-02','2017-03-06','2017-03-07','2017-03-08','2017-03-09','2017-03-10','2017-04-14','2017-04-17','2017-05-22','2017-06-26'],
+        weekdayClosed:[0,6],
+        dateFirst:'2011-05-02',
+        dateLast:'2017-12-16'
+}
+
 </script>
-<script type="text/javascript" src="/js/angularjs/locale/msg_en.js?t=2016041501"></script>
+<script type="text/javascript" src="/js/angularjs/locale/msg_en.js?t=20160831"></script>
 <script type="text/javascript" src="/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript" src="/js/tinymce/plugins/media/plugin.min.js"></script>
 
@@ -56,12 +68,16 @@ var  opalsApp= null;
 <script type="text/javascript" src="/js/angularjs/angular-cookies.min.js"></script>
 
 
-<link rel="stylesheet" type="text/css"  href="/js/angularjs/user/opl_userDirective.css?dd=20160309"/>
-<script type="text/javascript" src="/js/angularjs/user/opl_userDirective.js?dd=20160309"></script>
-<script type="text/javascript" src="/js/angularjs/datePickerDirectives.js?dd=20160317"></script>
+<link rel="stylesheet" type="text/css"  href="/js/angularjs/user/opl_userDirective.css?dd=20160826"/>
+<script type="text/javascript" src="/js/angularjs/user/opl_userDirective.js?dd=20160826"></script>
+<script type="text/javascript" src="/js/angularjs/datePickerDirectives.js?dd=20160826"></script>
+<script type="text/javascript" src="/js/angularjs/eqmnt/eqmntDirective.js?dd=20160826"></script>
+<script type="text/javascript" src="/js/angularjs/txtbk/txtbkDirective.js?dd=20160826"></script>
 
 <link rel="stylesheet" type="text/css" href="/js/angularjs/fullcalendar.css"/>
-<link rel="stylesheet" type="text/css" href="/js/angularjs/oplDirectives.css?dd=20160412"/>
+<link rel="stylesheet" type="text/css" href="/js/angularjs/oplDirectives.css?dd=20160826"/>
+<link rel="stylesheet" type="text/css" href="/js/angularjs/eqmnt/eqmntDirective.css?dd=20160826"/>
+<link rel="stylesheet" type="text/css" href="/js/angularjs/txtbk/txtbkDirective.css?dd=20160826">
 
  <script type="text/javascript" src='/js/lib/moment.min.js'></script>
     <link  rel="stylesheet" type="text/css" href='/js/lib/jquery.qtip.min.css' rel='stylesheet' />
@@ -69,9 +85,9 @@ var  opalsApp= null;
 
 <script type="text/javascript" src="/js/angularjs/fullcalendar.min.js"></script>
 <script type="text/javascript" src="/js/angularjs/lang-all.js"></script>
-<script type="text/javascript" src="/js/angularjs/oplDirectives.js?dd=20160412"></script>
+<script type="text/javascript" src="/js/angularjs/oplDirectives.js?dd=20160901"></script>
 
-<script type="text/javascript" src='/theme/opals/locale/en/js/msg.js?dd=20160302001'></script>
+<script type="text/javascript" src='/theme/opals/locale/en/js/msg.js?dd=20160831'></script>
 
 
 <!-- script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script -->
@@ -91,9 +107,11 @@ var  opalsApp= null;
                           phone:    "",
                           email:     ""
         };
-
-    if(!opalsApp)
-        opalsApp =angular.module("opalsApp",['ngSanitize','ngResource','ngRoute','q','oplUI','oplUser']);
+    var prefJson={"curCode":"CAD","preDueNotice":"0","fdrtax":"0.0","unionCircUpdate":"0","charge_damage":"1","bibformat":"apa","fine":"1","emailSmtp":"","link1_name":"John Abbott College Library Media Services","defaultSearchPage":"0","showQRCode":"1","showLocation":"1","barcodeType":"0","timeclear":"10m","itemonloanMsgTop":"","searchResultDisplay":"list","link2_name":"John Abbott College, Sainte-Anne-de-Bellevue, Québec, Canada","OpacLoginRequired":"0","unionSvcUrl":"","emailPass":"","selfcheck":"0","equipmentOverdueDisplay":"0","libZip":"H9X 3L9","validateBarcode":"1","userFileFtp_password":"","textbookChargeOverdue":"0","ebs_host":"","showPathfinder":"1","slogan_css":"font-size:24pt;text-shadow: 0 3px 3px black; color:white;font-family: arial","circulationSound":"1","unionId":"","syndeticsId":"","reportGroup":"4,5","ebs_accessKey":"","iuset":"1","link1_url":"http://www.johnabbott.qc.ca/library","authenticateBySID":0,"union852":"","emailAddress":"library.ref@johnabbott.qc.ca","bibTimeclear":"10m","textbookChargeLost":"0","libAddress":"21,275 Lakeshore Blvd.","userDataOverwriten":"0","itemonloanMsgBottom":"","textbookFine":"0","libname_css":"font-size:24pt;text-shadow: 0 3px 3px black; color:#00CCFF;font-family: arial;color:#FFFFFF","libFax":"","bookingReserve":"0","multilingual":"en,fr","cssTheme":"0","ebookModule":"0","googlePreview":"1","headerbg_class":"bg000099","headerLogo_pos":"left","rating":"2","SIF_sourceId":"","libState":"QC","charge_overdue":"1","userFileFtp_username":"","curSymbol":"$","cerf":"0","recordLock":"","amazonSecreteKey":"","SIF_enable":"0","unionExportExcludeTypes":"bookManuscript,ebook,journal,serial,electronicMedia,internet,compactDisc,map,mapManuscript,bookOnTape,musicCassette,CDMusic,manuscriptMusic,sheetMusic,artifact,photoPoster,libraryKit,mixedMaterial,movie,videocassette,DVD,blu_ray","textbookMgmnt":"0","disableLibCat":"0","dateLast":"2017-12-16","timeout":"200m","ebs_libCode":"","lang":"en","timezone":"America/Montreal","userCsvFileLocation":"","hit_counter":"1","showARL":"0","slogan":"Library Media Services","showBeginnerSrch":"2","textbookOverdueDisplay":"0","link2_url":"http://www.johnabbott.qc.ca/","libCity":"Sainte-Anne-de-Bellevue","colorTheme":null,"OWLBgSrchFields":"keyword,title,author","hitCounter":"655864","currency":"CAD:$","defaultSearchResultSort":"0","libraryType":"academy","patronItemPrivacy":"0","country":"Canada","libEmail":"library.ref@johnabbott.qc.ca","textbookChargeDamage":"0","libname":"John Abbott College","libPhone":"514-457-6610 x5330","odNoticeMsgBottom":"[\"The Library is open from 8 a.m. to 6 p.m. this week.  Books can also be left in the box set up for that purpose outside of Library hours.  We hope to see you soon. Library Circulation staff.\"]","libcode":"JAC","beginnerSrchLocation":"","reservationSysType":"0","useAttOrder":"list:1016,9016,4,9004,5006,1003,21,9021,5001,5000,31,7,8,16,5002,63,1018,5,12","unionCircUpdateDate":"2016-04-08 15:47:54","warningDatetime":"","OWLsrchLocation":"","ebrary":"http://site.ebrary.jac.orc.scoolaid.net","iumap":"{\"sid\":\"NoDA\",\"firstname\":\"Prenom\",\"lastname\":\"ï»¿Nom\",\"phone\":\"NumeroTel\",\"program\":\"TitreProgramme\",\"addrLine1\":\"Ligne1Add\",\"city\":\"Ligne2Add\",\"userbarcode\":\"Barcode\",\"birthday\":\"DateNaissance\",\"gender\":\"Sexe\"}","emailUser":"","defCategory":"1","dateFirst":"2011-05-02","charge_lost":"1","useHolidays":"0","allowOutstandingBalance":"1","allowOverdue":"1","SIF_schoolLocalId":"","lockingDatetime":"","overwrittenByBarcode":"0","amazonId":"","prvtax":"0.0","fontTheme":null,"selfcreateAccount":"1","SIF_zis_url":"","classificationSystem":"LCC","showLocationFilter":"1","theme":"opals","odNoticeMsgTop":"[\"The following items are overdue in the Library.  Please return them promptly so that they can be available for other members of the JAC community.  If they are still required, please speak to Circulation staff about the possibility of a renewal.\"]","autoAdd2NewItemList":"1","SIF_version":"","userFileFtp_url":"","slipPrinter":"0","acsd_uuid":"","autoUpdateUnion":"0","dateProfile":"CA-QC","equipmentMgmnt":"1","searchAdv":"4,and,1003,or,21,or,5","ILL_Messaging":"0"};
+    
+    if(!opalsApp) {
+        opalsApp =angular.module("opalsApp",['ngSanitize','ngResource','ngRoute','q','oplUI','oplUser','eqmntMod']);
+    }
    //------------------------------------------------------------------------------------------------
      opalsApp.service('pageService',['$http', function($http) {
          var menuItemList=[
@@ -191,6 +209,20 @@ var  opalsApp= null;
       ]
    },
    {
+      "color" : "#ffff33",
+      "cssClass" : "turqoise",
+      "bgColor" : "#3BA371",
+      "title" : "Items",
+      "path" : null,
+      "submenuItem" : [
+         {
+            "target" : null,
+            "path" : "/bin/marc21/quickItemList",
+            "title" : "Quick Entry List"
+         }
+      ]
+   },
+   {
       "color" : "#4A3702",
       "cssClass" : "blue",
       "bgColor" : "#4284F7",
@@ -247,6 +279,7 @@ var  opalsApp= null;
 
                 }
                 $scope.showDlg=function(cbFn){
+                    console.log(cbFn);
                     $scope.loginCallBackFn=cbFn;
                     $("#opl-loginDlg").dialog({modal:true,autoResize:true,
                                                 height:230,width:540});
@@ -404,7 +437,7 @@ timeClear = convertTmClearMillisec('10m') ;
         
 //---------------------------------------------------------
 
-var curDateTime= new Date("2016/05/09 10:26:38");
+var curDateTime= new Date("2016/09/11 12:36:15");
 
 var myWidth = 0, myHeight = 0;
 function getWindowSize() {
@@ -513,6 +546,7 @@ $(document).ready(function(){
 </head>
 
 <body onkeydown="keyPressHandler(event);"  style="min-height:1200px" class="yui-skin-sam" ng-app="opalsApp" ng-cloak >
+
 <script type="text/ng-template" id="menu.html">
     <div style="width:100%;background:gray; "><ul class="oplMenu">
             <li class="oplMenu-{{m.cssClass}}"
@@ -557,7 +591,7 @@ $(document).ready(function(){
           
         </td>
         <td align="right" valign="top" nowrap  style="border:1px;padding-right:5px;">
-                        <span>Monday, May 09 2016</span><br>
+                        <span>Sunday, September 11 2016</span><br>
           <span>
 
     <br />
@@ -755,7 +789,8 @@ width:21px;height:21px;
             //setCookie("_att", document.searchStdFrm.sf0.value);
 
             
-        
+            
+
     }
     addOnload(initSearchForm);
     var searchFormVal=[
@@ -1516,7 +1551,7 @@ width:21px;height:21px;
                 <div style="display:inline-block;width:110px;text-align:right;font-weight:bold">{{oplMsg.pwdTxt}} </div>
                 <input type='password'    ng-model="password"  size=22 />
            </div> 
-        <div style="padding:7px 2px 7px 57px" ng-show="authBySID">
+        <div style="padding:7px 2px 7px 57px" >
                 <i>{{oplMsg.instructionMsg}}</i>
         </div>
            <center><br><input type="button" ng-click="authenticate();" value="Login"></center>                      
@@ -1691,6 +1726,8 @@ var reminderPan={
             var cell_1 = tr.insertCell(1);
             var noteLink=document.createElement('a');
             noteLink.setAttribute('href',notes[i].url);
+            if(notes[i].target && notes[i].target !="")
+                noteLink.setAttribute('target',notes[i].target);
             cell_1.setAttribute('style','text-align:left');
             var textLink = document.createTextNode(notes[i].note);
                 noteLink.appendChild(textLink);
@@ -2131,39 +2168,7 @@ addOnload(reminderPan.init);
     var cDate =[
        
        {
-           dClosed: '2015-04-03',
-           dLabel : 'Good Friday',
-           note : '',
-           closed:true,
-           imgName:''
-        } ,
-       
-       {
-           dClosed: '2015-05-18',
-           dLabel : 'Victoria Day',
-           note : '',
-           closed:true,
-           imgName:''
-        } ,
-       
-       {
-           dClosed: '2015-06-24',
-           dLabel : 'St. Jean Baptiste Day',
-           note : '',
-           closed:true,
-           imgName:''
-        } ,
-       
-       {
-           dClosed: '2015-07-01',
-           dLabel : 'Canada Day',
-           note : '',
-           closed:true,
-           imgName:''
-        } ,
-       
-       {
-           dClosed: '2015-09-07',
+           dClosed: '2016-09-05',
            dLabel : 'Labour Day',
            note : '',
            closed:true,
@@ -2171,7 +2176,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2015-10-12',
+           dClosed: '2016-10-10',
            dLabel : 'Thanksgiving',
            note : '',
            closed:true,
@@ -2179,31 +2184,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2015-11-16',
-           dLabel : 'Strike Day',
-           note : '',
-           closed:true,
-           imgName:''
-        } ,
-       
-       {
-           dClosed: '2015-11-17',
-           dLabel : 'Strike Day',
-           note : '',
-           closed:true,
-           imgName:''
-        } ,
-       
-       {
-           dClosed: '2015-12-04',
-           dLabel : 'Friday after Strike Day',
-           note : '',
-           closed:true,
-           imgName:''
-        } ,
-       
-       {
-           dClosed: '2015-12-24',
+           dClosed: '2016-12-26',
            dLabel : 'Christmas Break',
            note : '',
            closed:true,
@@ -2211,7 +2192,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2015-12-25',
+           dClosed: '2016-12-27',
            dLabel : 'Christmas Break',
            note : '',
            closed:true,
@@ -2219,7 +2200,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2015-12-28',
+           dClosed: '2016-12-28',
            dLabel : 'Christmas Break',
            note : '',
            closed:true,
@@ -2227,7 +2208,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2015-12-29',
+           dClosed: '2016-12-29',
            dLabel : 'Christmas Break',
            note : '',
            closed:true,
@@ -2235,7 +2216,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2015-12-30',
+           dClosed: '2016-12-30',
            dLabel : 'Christmas Break',
            note : '',
            closed:true,
@@ -2243,7 +2224,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2015-12-31',
+           dClosed: '2017-01-02',
            dLabel : 'Christmas Break',
            note : '',
            closed:true,
@@ -2251,15 +2232,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-01-01',
-           dLabel : 'Christmas Break',
-           note : '',
-           closed:true,
-           imgName:''
-        } ,
-       
-       {
-           dClosed: '2016-02-29',
+           dClosed: '2017-03-06',
            dLabel : 'Study Break',
            note : '',
            closed:true,
@@ -2267,7 +2240,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-03-01',
+           dClosed: '2017-03-07',
            dLabel : 'Study Break',
            note : '',
            closed:true,
@@ -2275,7 +2248,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-03-02',
+           dClosed: '2017-03-08',
            dLabel : 'Study Break',
            note : '',
            closed:true,
@@ -2283,7 +2256,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-03-03',
+           dClosed: '2017-03-09',
            dLabel : 'Study Break',
            note : '',
            closed:true,
@@ -2291,7 +2264,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-03-04',
+           dClosed: '2017-03-10',
            dLabel : 'Study Break',
            note : '',
            closed:true,
@@ -2299,7 +2272,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-03-25',
+           dClosed: '2017-04-14',
            dLabel : 'Good Friday',
            note : '',
            closed:true,
@@ -2307,7 +2280,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-03-28',
+           dClosed: '2017-04-17',
            dLabel : 'Easter Monday',
            note : '',
            closed:true,
@@ -2315,7 +2288,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-05-23',
+           dClosed: '2017-05-22',
            dLabel : 'Victoria Day',
            note : '',
            closed:true,
@@ -2323,7 +2296,7 @@ addOnload(reminderPan.init);
         } ,
        
        {
-           dClosed: '2016-06-24',
+           dClosed: '2017-06-26',
            dLabel : 'St. Jean Baptiste Day',
            note : '',
            closed:true,
@@ -2986,7 +2959,7 @@ $(document).ready(function(){
         <a style='color:#fff;' href='http://www.johnabbott.qc.ca/'>John Abbott College, Sainte-Anne-de-Bellevue, Québec, Canada</a>
 	</div>
     <span id='visitorCounter' style='vertical-align:middle;'></span>
-    <a href='http://opalsinfo.net' target='_blank' title='Last update: 20160304-140315
+    <a href='http://opalsinfo.net' target='_blank' title='Last update: 20160826-134101
 '><img src='/theme/opals/image/opals_footer.png' style='vertical-align:middle;'/></a>
 </div>
 </body>

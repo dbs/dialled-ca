@@ -15,23 +15,23 @@
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" />
     
 
-    <link href="/themes/style.css?v=2.245" rel='stylesheet' type='text/css' />
-    <link href="/themes/contenu.css?v=2.245" rel='stylesheet' type='text/css' />
-    <link href="/themes/style-new.css?v=2.245" rel='stylesheet' type='text/css' />
-    <link href="/themes/laurentides/Site.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/style.css?v=2.247" rel='stylesheet' type='text/css' />
+    <link href="/themes/contenu.css?v=2.247" rel='stylesheet' type='text/css' />
+    <link href="/themes/style-new.css?v=2.247" rel='stylesheet' type='text/css' />
+    <link href="/themes/laurentides/Site.css?v=2.247" rel='stylesheet' type='text/css' />
     <!--[if IE 9]>
-    <link href="/themes/style_IE9.css?v=2.245" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE9.css?v=2.247" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 8]>
-    <link href="/themes/style_IE8.css?v=2.245" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE8.css?v=2.247" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 7]>
-    <link href="/themes/style_IE7.css?v=2.245" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE7.css?v=2.247" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 6]>
-    <link href="/themes/style_IE6.css?v=2.245" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE6.css?v=2.247" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link href="/themes/print.css?v=2.245" rel='stylesheet' type='text/css' media="print" />
+    <link href="/themes/print.css?v=2.247" rel='stylesheet' type='text/css' media="print" />
     <link href="http://fonts.googleapis.com/css?family=Vollkorn|Lato:normal,bold|Amaranth|Actor|Open+Sans|Droid+Sans|Open+Sans|Days+One|Roboto:100,400,700|Karla:400,700" rel="stylesheet" type="text/css" /><link href="/laurentides/fr/rss/nouvelles.aspx" rel="alternate" type="application/rss+xml" title="Réseau BIBLIO des Laurentides" />
     <meta property="og:title" content="Réseau BIBLIO des Laurentides" />
     <meta property="og:image" content="http://www.mabibliotheque.ca/images/laurentides/img-partage.jpg" />
@@ -40,7 +40,7 @@
     <meta property="og:description" content="" />
 
 <style type="text/css">
-  .imgEnteteContenu { background:#D69038 url(/images/entete/entete_fleurs.jpg) no-repeat center top; height:35px;}
+  .imgEnteteContenu { background:#815226 url(/images/entete/entete_automne.jpg) no-repeat center top; height:35px;}
 </style>
 
 
@@ -215,7 +215,7 @@
   "AfficherBiblioExtranetBiblio": false,
   "AfficherEchangesGestionBiblio": false,
   "PermettreAuBiblioDUploaderUneImageDActivite": true,
-  "PermettreAuBiblioDUploaderUneImageDansInformationBiblio": false,
+  "PermettreAuBiblioDUploaderUneImageDansInformationBiblio": true,
   "PermettreAuBiblioDeChangerTailleEtPolice": false,
   "CoordonneesCourtes": null,
   "TextActivitesDeMaBiblio": null,
@@ -308,7 +308,7 @@
     
     <script language="javascript" type="text/javascript" src="/scripts/jquery.cycle.all.min.js"></script>
     
-        <script language="javascript" type="text/javascript" src="/scripts/promo_accueil.js?v=2.245"></script>
+        <script language="javascript" type="text/javascript" src="/scripts/promo_accueil.js?v=2.247"></script>
     
     <style type="text/css">
         .btRSSInfolettre
@@ -352,7 +352,7 @@
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODMzNjk2ODc1D2QWAmYPZBYCZg9kFgRmD2QWDgICDxYCHgdjb250ZW50ZGQCAw8WBB8AZB4HVmlzaWJsZWhkAgQPFgIfAWhkAgYPFgIeBFRleHQFODxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtTGFuZ3VhZ2UiIGNvbnRlbnQ9ImZyX0NBIiAvPgoNZAIfDxYCHwIFhAE8bGluayBocmVmPSIvbGF1cmVudGlkZXMvZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIGRlcyBMYXVyZW50aWRlcyIgLz5kAiAPFgIfAgWcAw0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp0aXRsZSIgY29udGVudD0iUsOpc2VhdSBCSUJMSU8gZGVzIExhdXJlbnRpZGVzIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzppbWFnZSIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9pbWFnZXMvbGF1cmVudGlkZXMvaW1nLXBhcnRhZ2UuanBnIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp1cmwiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvbGF1cmVudGlkZXMvZnIvaW5kZXguYXNweCIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkZXMgTGF1cmVudGlkZXMiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAiEPFgIfAgWVAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojRDY5MDM4IHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfZmxldXJzLmpwZykgbm8tcmVwZWF0IGNlbnRlciB0b3A7IGhlaWdodDozNXB4O30KPC9zdHlsZT4KZAIBDxYCHgZhY3Rpb24FGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4FhQCAQ8PFgIeC05hdmlnYXRlVXJsBRovbGF1cmVudGlkZXMvZnIvaW5kZXguYXNweGRkAgIPFgIeC18hSXRlbUNvdW50AgQWCGYPZBYCAgEPDxYKHghDc3NDbGFzcwUQbGl2cmVzUmVzc291cmNlcx8CBU48c3Bhbj48c3Ryb25nPkxpdnJlcyAmYW1wOzxiciAvPg0KcmVzc291cmNlczwvc3Ryb25nPjxiciAvPiBudW3DqXJpcXVlczwvc3Bhbj4eBlRhcmdldAUFX3NlbGYfBAU6L2xhdXJlbnRpZGVzL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvaW5kZXguYXNweB4EXyFTQgICZGQCAQ9kFgICAQ8PFgofBgUEcHJldB8CBT48c3Bhbj48c3Ryb25nPlByw6p0IGVudHJlPC9zdHJvbmc+PGJyIC8+IGJpYmxpb3Row6hxdWVzPC9zcGFuPh8HBQVfc2VsZh8EBTMvbGF1cmVudGlkZXMvZnIvcHJldC1lbnRyZS1iaWJsaW90aGVxdWVzL2luZGV4LmFzcHgfCAICZGQCAg9kFgICAQ8PFgofBgUKZXZlbmVtZW50cx8CBUo8c3Bhbj48c3Ryb25nPkFjdGl2aXQmIzIzMztzPC9zdHJvbmc+PGJyIC8+DQpkZXMgYmlibGlvdGgmIzIzMjtxdWVzPC9zcGFuPh8HBQVfc2VsZh8EBTYvbGF1cmVudGlkZXMvZnIvYWN0aXZpdGVzLWRlcy1iaWJsaW90aGVxdWVzL2luZGV4LmFzcHgfCAICZGQCAw9kFgICAQ8PFgofBgUNYmlibGlvdGhlcXVlcx8CBU88c3Bhbj48c3Ryb25nPkJpYmxpb3RoJiMyMzI7cXVlczwvc3Ryb25nPjxiciAvPg0KSG9yYWlyZSBldCBsb2NhbGlzYXRpb248L3NwYW4+HwcFBV9zZWxmHwQFQC9sYXVyZW50aWRlcy9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL2luZGV4LmFzcHgfCAICZGQCAw8WAh8FAgMWBmYPZBYCAgEPDxYGHwIFB0FjY3VlaWwfBwUFX3NlbGYfBAUaL2xhdXJlbnRpZGVzL2ZyL2luZGV4LmFzcHhkZAIBD2QWAgIBDw8WBh8CBRBRdWkgc29tbWVzLW5vdXM/HwcFBV9zZWxmHwQFQy9sYXVyZW50aWRlcy9mci9xdWktc29tbWVzLW5vdXMvY29uc2VpbC1kLWFkbWluaXN0cmF0aW9uL2luZGV4LmFzcHhkZAICD2QWAgIBDw8WBh8CBQxOb3VzIGpvaW5kcmUfBwUFX3NlbGYfBAUnL2xhdXJlbnRpZGVzL2ZyL25vdXMtam9pbmRyZS9pbmRleC5hc3B4ZGQCBA8WAh8FAgMWBgIBD2QWAgIDDw8WBh8CBQdBY2N1ZWlsHwcFBV9zZWxmHwQFGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4ZGQCAg9kFgICAw8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBUMvbGF1cmVudGlkZXMvZnIvcXVpLXNvbW1lcy1ub3VzL2NvbnNlaWwtZC1hZG1pbmlzdHJhdGlvbi9pbmRleC5hc3B4ZGQCAw9kFgICAw8PFgYfAgUMTm91cyBqb2luZHJlHwcFBV9zZWxmHwQFJy9sYXVyZW50aWRlcy9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkAgUPDxYIHwcFBl9ibGFuax8CBSFNb24gZG9zc2llcjxzcGFuPiBkJ3VzYWdlcjwvc3Bhbj4eB1Rvb2xUaXAFFE1vbiBkb3NzaWVyIGQndXNhZ2VyHwQFMmh0dHA6Ly9vbWVnYS5jcnNicGwucWMuY2EvdWh0YmluL2NnaXNpcnNpL1gvWC8wLzQ5FgIeB29uY2xpY2sFUF9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ0VudMOqdGUnLCAnTW9uIGRvc3NpZXIgZCB1c2FnZXInXSk7ZAIHDxYCHwUCBBYIAgEPZBYCZg8PFgofBgUQbGl2cmVzUmVzc291cmNlcx8CBU48c3Bhbj48c3Ryb25nPkxpdnJlcyAmYW1wOzxiciAvPg0KcmVzc291cmNlczwvc3Ryb25nPjxiciAvPiBudW3DqXJpcXVlczwvc3Bhbj4fBwUFX3NlbGYfBAU6L2xhdXJlbnRpZGVzL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvaW5kZXguYXNweB8IAgJkZAICD2QWAmYPDxYKHwYFBHByZXQfAgU+PHNwYW4+PHN0cm9uZz5QcsOqdCBlbnRyZTwvc3Ryb25nPjxiciAvPiBiaWJsaW90aMOocXVlczwvc3Bhbj4fBwUFX3NlbGYfBAUzL2xhdXJlbnRpZGVzL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4HwgCAmRkAgMPZBYCZg8PFgofBgUKZXZlbmVtZW50cx8CBUo8c3Bhbj48c3Ryb25nPkFjdGl2aXQmIzIzMztzPC9zdHJvbmc+PGJyIC8+DQpkZXMgYmlibGlvdGgmIzIzMjtxdWVzPC9zcGFuPh8HBQVfc2VsZh8EBTYvbGF1cmVudGlkZXMvZnIvYWN0aXZpdGVzLWRlcy1iaWJsaW90aGVxdWVzL2luZGV4LmFzcHgfCAICZGQCBA9kFgJmDw8WCh8GBQ1iaWJsaW90aGVxdWVzHwIFTzxzcGFuPjxzdHJvbmc+QmlibGlvdGgmIzIzMjtxdWVzPC9zdHJvbmc+PGJyIC8+DQpIb3JhaXJlIGV0IGxvY2FsaXNhdGlvbjwvc3Bhbj4fBwUFX3NlbGYfBAVAL2xhdXJlbnRpZGVzL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vaW5kZXguYXNweB8IAgJkZAIJD2QWAgIBD2QWAgIBDxYCHwUCBBYIAgEPZBYCZg8WAh8CBdoDPGRpdiBjbGFzcz0iaGVyby1zbGlkZSI+CjxkaXYgY2xhc3M9Imhlcm8tYmFja2dyb3VuZCBhbGlnbi1yaWdodCI+CjxpbWcgYWx0PSIiIHNyYz0iL2ltYWdlcy9sYXVyZW50aWRlcy9hY2N1ZWlsL3Byb21vdGlvbnMvcHJvbW8wNS1waG90by5qcGciIC8+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJoZXJvLWNvbnRlbnQiPgo8YSBocmVmPSIvbGF1cmVudGlkZXMvZnIvbGl2cmVzLWV0LXJlc3NvdXJjZXMtbnVtZXJpcXVlcy9pbmRleC5hc3B4Ij4KPGltZyBhbHQ9Ik1hIEJpYmxpbyDDoCBtb2ksIGMnZXN0IHVuIGxpZXUgYWNjdWVpbGxhbnQgZXQgYnJhbmNow6kgcHLDqHMgZGUgY2hleiBtb2kgb8O5IGonYWltZSBtZSByZXRyb3V2ZXIuIEV0IGMnZXN0IGdyYXR1aXQhIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL3Byb21vMDUtbGl2cmVzLW51bWVyaXF1ZXMuc3ZnIiAvPgo8L2E+CjwvZGl2Pgo8L2Rpdj4KZAICD2QWAmYPFgIfAgXcAzxkaXYgY2xhc3M9Imhlcm8tc2xpZGUiPgo8ZGl2IGNsYXNzPSJoZXJvLWJhY2tncm91bmQgYWxpZ24tcmlnaHQiPgo8aW1nIGFsdD0iIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL3Byb21vMDEtcGhvdG8uanBnIiAvPgo8L2Rpdj4KPGRpdiBjbGFzcz0iaGVyby1jb250ZW50Ij4KPGEgaHJlZj0iL2xhdXJlbnRpZGVzL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vaW5kZXguYXNweCI+CjxpbWcgYWx0PSJNYSBCaWJsaW8gw6AgbW9pLCBjJ2VzdCB1biBsaWV1IGFjY3VlaWxsYW50IGV0IGJyYW5jaMOpIHByw6hzIGRlIGNoZXogbW9pIG/DuSBqJ2FpbWUgbWUgcmV0cm91dmVyLiBFdCBjJ2VzdCBncmF0dWl0ISIgc3JjPSIvaW1hZ2VzL2xhdXJlbnRpZGVzL2FjY3VlaWwvcHJvbW90aW9ucy9wcm9tbzAxLWJpYmxpb3RoZXF1ZXMuc3ZnIiAvPgo8L2E+CjwvZGl2Pgo8L2Rpdj4KZAIDD2QWAmYPFgIfAgXxAzxkaXYgY2xhc3M9Imhlcm8tc2xpZGUiPgo8ZGl2IGNsYXNzPSJoZXJvLWJhY2tncm91bmQgYWxpZ24tcmlnaHQiPgo8aW1nIGFsdD0iIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL3Byb21vMDItcGhvdG8uanBnIiAvPgo8L2Rpdj4KPGRpdiBjbGFzcz0iaGVyby1jb250ZW50Ij4KPGEgaHJlZj0iL2xhdXJlbnRpZGVzL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvaW5kZXguYXNweCI+CjxpbWcgYWx0PSJNYSBCaWJsaW8gw6AgbW9pLCBjJ2VzdCBkZXMgY291cnMgZGUgbGFuZ3VlIGV0IGRlIGJ1cmVhdXRpcXVlIGVuIGxpZ25lIG/DuSBqJ2FwcHJlbmRzIMOgIG1vbiByeXRobWUuIEV0IGMnZXN0IGdyYXR1aXQhIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL3Byb21vMDItcmVzc291cmNlcy1jb3Vycy1lbi1saWduZS5zdmc/dj0yMDE1LjA5LjExIiAvPgo8L2E+CjwvZGl2Pgo8L2Rpdj4KZAIED2QWAmYPFgIfAgXFAzxkaXYgY2xhc3M9Imhlcm8tc2xpZGUiPgo8ZGl2IGNsYXNzPSJoZXJvLWJhY2tncm91bmQgYWxpZ24tcmlnaHQiPgo8aW1nIGFsdD0iIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL3Byb21vMDMtcGhvdG8uanBnIiAvPgo8L2Rpdj4KPGRpdiBjbGFzcz0iaGVyby1jb250ZW50Ij4KPGEgaHJlZj0iL2xhdXJlbnRpZGVzL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4Ij4KPGltZyBhbHQ9Ik1hIEJpYmxpbyDDoCBtb2ksIGMnZXN0IHVuIGxpZXUgYWNjdWVpbGxhbnQgZXQgYnJhbmNow6kgcHLDqHMgZGUgY2hleiBtb2kgb8O5IGonYWltZSBtZSByZXRyb3V2ZXIuIEV0IGMnZXN0IGdyYXR1aXQhIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL3Byb21vMDMtcGViLnN2ZyIgLz4KPC9hPgoKPC9kaXY+CjwvZGl2PmQCCg8PFgIfAWhkFgICAQ8PFgIfAgUHQWNjdWVpbGRkAgsPZBYCAgEPZBYEAgEPFgIfAWhkAgIPFgQfBWYfAWhkAgwPFgIfBQIDFgZmD2QWAgIBDw8WBh8CBQdBY2N1ZWlsHwcFBV9zZWxmHwQFGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4ZGQCAQ9kFgICAQ8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBUMvbGF1cmVudGlkZXMvZnIvcXVpLXNvbW1lcy1ub3VzL2NvbnNlaWwtZC1hZG1pbmlzdHJhdGlvbi9pbmRleC5hc3B4ZGQCAg9kFgICAQ8PFgYfAgUMTm91cyBqb2luZHJlHwcFBV9zZWxmHwQFJy9sYXVyZW50aWRlcy9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkZJII4snxJ9iXdDiDmHHDpK9F0TMdGvQFK6A8ygW+WX6t" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODMzNjk2ODc1D2QWAmYPZBYCZg9kFgRmD2QWDgICDxYCHgdjb250ZW50ZGQCAw8WBB8AZB4HVmlzaWJsZWhkAgQPFgIfAWhkAgYPFgIeBFRleHQFODxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtTGFuZ3VhZ2UiIGNvbnRlbnQ9ImZyX0NBIiAvPgoNZAIfDxYCHwIFhAE8bGluayBocmVmPSIvbGF1cmVudGlkZXMvZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIGRlcyBMYXVyZW50aWRlcyIgLz5kAiAPFgIfAgWcAw0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp0aXRsZSIgY29udGVudD0iUsOpc2VhdSBCSUJMSU8gZGVzIExhdXJlbnRpZGVzIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzppbWFnZSIgY29udGVudD0iaHR0cDovL3d3dy5tYWJpYmxpb3RoZXF1ZS5jYS9pbWFnZXMvbGF1cmVudGlkZXMvaW1nLXBhcnRhZ2UuanBnIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp1cmwiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvbGF1cmVudGlkZXMvZnIvaW5kZXguYXNweCIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkZXMgTGF1cmVudGlkZXMiIC8+DQogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSIiIC8+DQpkAiEPFgIfAgWWAQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogIC5pbWdFbnRldGVDb250ZW51IHsgYmFja2dyb3VuZDojODE1MjI2IHVybCgvaW1hZ2VzL2VudGV0ZS9lbnRldGVfYXV0b21uZS5qcGcpIG5vLXJlcGVhdCBjZW50ZXIgdG9wOyBoZWlnaHQ6MzVweDt9Cjwvc3R5bGU+CmQCAQ8WAh4GYWN0aW9uBRovbGF1cmVudGlkZXMvZnIvaW5kZXguYXNweBYUAgEPDxYCHgtOYXZpZ2F0ZVVybAUaL2xhdXJlbnRpZGVzL2ZyL2luZGV4LmFzcHhkZAICDxYCHgtfIUl0ZW1Db3VudAIEFghmD2QWAgIBDw8WCh4IQ3NzQ2xhc3MFEGxpdnJlc1Jlc3NvdXJjZXMfAgVOPHNwYW4+PHN0cm9uZz5MaXZyZXMgJmFtcDs8YnIgLz4NCnJlc3NvdXJjZXM8L3N0cm9uZz48YnIgLz4gbnVtw6lyaXF1ZXM8L3NwYW4+HgZUYXJnZXQFBV9zZWxmHwQFOi9sYXVyZW50aWRlcy9mci9saXZyZXMtZXQtcmVzc291cmNlcy1udW1lcmlxdWVzL2luZGV4LmFzcHgeBF8hU0ICAmRkAgEPZBYCAgEPDxYKHwYFBHByZXQfAgU+PHNwYW4+PHN0cm9uZz5QcsOqdCBlbnRyZTwvc3Ryb25nPjxiciAvPiBiaWJsaW90aMOocXVlczwvc3Bhbj4fBwUFX3NlbGYfBAUzL2xhdXJlbnRpZGVzL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4HwgCAmRkAgIPZBYCAgEPDxYKHwYFCmV2ZW5lbWVudHMfAgVKPHNwYW4+PHN0cm9uZz5BY3Rpdml0JiMyMzM7czwvc3Ryb25nPjxiciAvPg0KZGVzIGJpYmxpb3RoJiMyMzI7cXVlczwvc3Bhbj4fBwUFX3NlbGYfBAU2L2xhdXJlbnRpZGVzL2ZyL2FjdGl2aXRlcy1kZXMtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4HwgCAmRkAgMPZBYCAgEPDxYKHwYFDWJpYmxpb3RoZXF1ZXMfAgVPPHNwYW4+PHN0cm9uZz5CaWJsaW90aCYjMjMyO3F1ZXM8L3N0cm9uZz48YnIgLz4NCkhvcmFpcmUgZXQgbG9jYWxpc2F0aW9uPC9zcGFuPh8HBQVfc2VsZh8EBUAvbGF1cmVudGlkZXMvZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4HwgCAmRkAgMPFgIfBQIDFgZmD2QWAgIBDw8WBh8CBQdBY2N1ZWlsHwcFBV9zZWxmHwQFGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4ZGQCAQ9kFgICAQ8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBUMvbGF1cmVudGlkZXMvZnIvcXVpLXNvbW1lcy1ub3VzL2NvbnNlaWwtZC1hZG1pbmlzdHJhdGlvbi9pbmRleC5hc3B4ZGQCAg9kFgICAQ8PFgYfAgUMTm91cyBqb2luZHJlHwcFBV9zZWxmHwQFJy9sYXVyZW50aWRlcy9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkAgQPFgIfBQIDFgYCAQ9kFgICAw8PFgYfAgUHQWNjdWVpbB8HBQVfc2VsZh8EBRovbGF1cmVudGlkZXMvZnIvaW5kZXguYXNweGRkAgIPZBYCAgMPDxYGHwIFEFF1aSBzb21tZXMtbm91cz8fBwUFX3NlbGYfBAVDL2xhdXJlbnRpZGVzL2ZyL3F1aS1zb21tZXMtbm91cy9jb25zZWlsLWQtYWRtaW5pc3RyYXRpb24vaW5kZXguYXNweGRkAgMPZBYCAgMPDxYGHwIFDE5vdXMgam9pbmRyZR8HBQVfc2VsZh8EBScvbGF1cmVudGlkZXMvZnIvbm91cy1qb2luZHJlL2luZGV4LmFzcHhkZAIFDw8WCB8HBQZfYmxhbmsfAgUhTW9uIGRvc3NpZXI8c3Bhbj4gZCd1c2FnZXI8L3NwYW4+HgdUb29sVGlwBRRNb24gZG9zc2llciBkJ3VzYWdlch8EBTJodHRwOi8vb21lZ2EuY3JzYnBsLnFjLmNhL3VodGJpbi9jZ2lzaXJzaS9YL1gvMC80ORYCHgdvbmNsaWNrBVBfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdFbnTDqnRlJywgJ01vbiBkb3NzaWVyIGQgdXNhZ2VyJ10pO2QCBw8WAh8FAgQWCAIBD2QWAmYPDxYKHwYFEGxpdnJlc1Jlc3NvdXJjZXMfAgVOPHNwYW4+PHN0cm9uZz5MaXZyZXMgJmFtcDs8YnIgLz4NCnJlc3NvdXJjZXM8L3N0cm9uZz48YnIgLz4gbnVtw6lyaXF1ZXM8L3NwYW4+HwcFBV9zZWxmHwQFOi9sYXVyZW50aWRlcy9mci9saXZyZXMtZXQtcmVzc291cmNlcy1udW1lcmlxdWVzL2luZGV4LmFzcHgfCAICZGQCAg9kFgJmDw8WCh8GBQRwcmV0HwIFPjxzcGFuPjxzdHJvbmc+UHLDqnQgZW50cmU8L3N0cm9uZz48YnIgLz4gYmlibGlvdGjDqHF1ZXM8L3NwYW4+HwcFBV9zZWxmHwQFMy9sYXVyZW50aWRlcy9mci9wcmV0LWVudHJlLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweB8IAgJkZAIDD2QWAmYPDxYKHwYFCmV2ZW5lbWVudHMfAgVKPHNwYW4+PHN0cm9uZz5BY3Rpdml0JiMyMzM7czwvc3Ryb25nPjxiciAvPg0KZGVzIGJpYmxpb3RoJiMyMzI7cXVlczwvc3Bhbj4fBwUFX3NlbGYfBAU2L2xhdXJlbnRpZGVzL2ZyL2FjdGl2aXRlcy1kZXMtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4HwgCAmRkAgQPZBYCZg8PFgofBgUNYmlibGlvdGhlcXVlcx8CBU88c3Bhbj48c3Ryb25nPkJpYmxpb3RoJiMyMzI7cXVlczwvc3Ryb25nPjxiciAvPg0KSG9yYWlyZSBldCBsb2NhbGlzYXRpb248L3NwYW4+HwcFBV9zZWxmHwQFQC9sYXVyZW50aWRlcy9mci9iaWJsaW90aGVxdWVzLWhvcmFpcmUtZXQtbG9jYWxpc2F0aW9uL2luZGV4LmFzcHgfCAICZGQCCQ9kFgICAQ9kFgICAQ8WAh8FAgIWBAIBD2QWAmYPFgIfAgX2BDxkaXYgY2xhc3M9Imhlcm8tc2xpZGUiPgo8ZGl2IGNsYXNzPSJoZXJvLWJhY2tncm91bmQgYWxpZ24tcmlnaHQiPgo8aW1nIGFsdD0iIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL2ltZy1iYW5uaWVyZS1jb3VwLWRlLWNvZXVyLmpwZyIgLz4KPC9kaXY+CjxkaXYgY2xhc3M9Imhlcm8tY29udGVudCI+CjxhIGhyZWY9Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9NYWJpYmxpb2Ftb2kiIHRhcmdldD0iX2JsYW5rIj4KPGltZyBhbHQ9Ik1hIEJpYmxpbyDDoCBtb2ksIGMnZXN0IHVuIGxpZXUgYWNjdWVpbGxhbnQgZXQgYnJhbmNow6kgcHLDqHMgZGUgY2hleiBtb2kgb8O5IGonYWltZSBtZSByZXRyb3V2ZXIuIEV0IGMnZXN0IGdyYXR1aXQhIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL2NvdXAtZGUtY29ldXItZGVzLW1haXJlcy5zdmciIC8+CjwvYT4KPC9kaXY+CjxkaXYgY2xhc3M9Imhlcm8tcmVzcG9uc2l2ZS1yaWdodC1pbWFnZSI+CjxpbWcgYWx0PSJDb3VwIGRlIGNvZXVyIiBzcmM9Ii9pbWFnZXMvbGF1cmVudGlkZXMvYWNjdWVpbC9wcm9tb3Rpb25zL2NvdXBzLWNvZXVyLWRlcy1tYWlyZXMucG5nIiAvPgo8L2Rpdj4KPC9kaXY+CmQCAg9kFgJmDxYCHwIFgwQ8YSBjbGFzcz0iaGVyby1zbGlkZSIgaHJlZj0iL2xhdXJlbnRpZGVzL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvaW5kZXguYXNweCIgc3R5bGU9ImRpc3BsYXk6YmxvY2s7Ij4KPGRpdiBjbGFzcz0iaGVyby1iYWNrZ3JvdW5kIGFsaWduLXJpZ2h0Ij4KPGltZyBhbHQ9IiIgc3JjPSIvRmljaGllcnMvV2Vic2l0ZU1hbmFnZXIvbGF1cmVudGlkZXMvSW1hZ2VzL3Byb21vcy9wcm9tbzA3LXBob3RvLmpwZyIgLz4KPC9kaXY+CjxkaXYgY2xhc3M9Imhlcm8tY29udGVudCI+CjxkaXY+CjxpbWcgYWx0PSJNYSBCaWJsaW8gw6AgbW9pLCBjJ2VzdCB1biBsaWV1IGFjY3VlaWxsYW50IGV0IGJyYW5jaMOpIHByw6hzIGRlIGNoZXogbW9pIG/DuSBqJ2FpbWUgbWUgcmV0cm91dmVyLiBFdCBjJ2VzdCBncmF0dWl0ISIgc3JjPSIvRmljaGllcnMvV2Vic2l0ZU1hbmFnZXIvbGF1cmVudGlkZXMvSW1hZ2VzL3Byb21vcy9wcm9tbzA3LXppbmlvLnN2ZyIgLz4KPC9kaXY+CjwvZGl2Pgo8L2E+CiZuYnNwO2QCCg8PFgIfAWhkFgICAQ8PFgIfAgUHQWNjdWVpbGRkAgsPZBYCAgEPZBYEAgEPFgIfAWhkAgIPFgQfBWYfAWhkAgwPFgIfBQIDFgZmD2QWAgIBDw8WBh8CBQdBY2N1ZWlsHwcFBV9zZWxmHwQFGi9sYXVyZW50aWRlcy9mci9pbmRleC5hc3B4ZGQCAQ9kFgICAQ8PFgYfAgUQUXVpIHNvbW1lcy1ub3VzPx8HBQVfc2VsZh8EBUMvbGF1cmVudGlkZXMvZnIvcXVpLXNvbW1lcy1ub3VzL2NvbnNlaWwtZC1hZG1pbmlzdHJhdGlvbi9pbmRleC5hc3B4ZGQCAg9kFgICAQ8PFgYfAgUMTm91cyBqb2luZHJlHwcFBV9zZWxmHwQFJy9sYXVyZW50aWRlcy9mci9ub3VzLWpvaW5kcmUvaW5kZXguYXNweGRkZNPZArS1ENsPJNpqwWAdNRNPGJlAlA7Zw0aQXpy2tn+E" />
 </div>
 
 <script type="text/javascript">
@@ -511,45 +511,28 @@ Horaire et localisation</span></a></div>
     
     <div class="hero"><div class="hero-arrow" onclick="scrollerVersId('content-page', 750)"></div><div class="hero-slide">
 <div class="hero-background align-right">
-<img alt="" src="/images/laurentides/accueil/promotions/promo05-photo.jpg" />
+<img alt="" src="/images/laurentides/accueil/promotions/img-banniere-coup-de-coeur.jpg" />
 </div>
 <div class="hero-content">
-<a href="/laurentides/fr/livres-et-ressources-numeriques/index.aspx">
-<img alt="Ma Biblio à moi, c'est un lieu accueillant et branché près de chez moi où j'aime me retrouver. Et c'est gratuit!" src="/images/laurentides/accueil/promotions/promo05-livres-numeriques.svg" />
+<a href="https://www.facebook.com/Mabiblioamoi" target="_blank">
+<img alt="Ma Biblio à moi, c'est un lieu accueillant et branché près de chez moi où j'aime me retrouver. Et c'est gratuit!" src="/images/laurentides/accueil/promotions/coup-de-coeur-des-maires.svg" />
 </a>
 </div>
+<div class="hero-responsive-right-image">
+<img alt="Coup de coeur" src="/images/laurentides/accueil/promotions/coups-coeur-des-maires.png" />
 </div>
-<div class="hero-slide">
+</div>
+<a class="hero-slide" href="/laurentides/fr/livres-et-ressources-numeriques/index.aspx" style="display:block;">
 <div class="hero-background align-right">
-<img alt="" src="/images/laurentides/accueil/promotions/promo01-photo.jpg" />
+<img alt="" src="/Fichiers/WebsiteManager/laurentides/Images/promos/promo07-photo.jpg" />
 </div>
 <div class="hero-content">
-<a href="/laurentides/fr/bibliotheques-horaire-et-localisation/index.aspx">
-<img alt="Ma Biblio à moi, c'est un lieu accueillant et branché près de chez moi où j'aime me retrouver. Et c'est gratuit!" src="/images/laurentides/accueil/promotions/promo01-bibliotheques.svg" />
+<div>
+<img alt="Ma Biblio à moi, c'est un lieu accueillant et branché près de chez moi où j'aime me retrouver. Et c'est gratuit!" src="/Fichiers/WebsiteManager/laurentides/Images/promos/promo07-zinio.svg" />
+</div>
+</div>
 </a>
-</div>
-</div>
-<div class="hero-slide">
-<div class="hero-background align-right">
-<img alt="" src="/images/laurentides/accueil/promotions/promo02-photo.jpg" />
-</div>
-<div class="hero-content">
-<a href="/laurentides/fr/livres-et-ressources-numeriques/index.aspx">
-<img alt="Ma Biblio à moi, c'est des cours de langue et de bureautique en ligne où j'apprends à mon rythme. Et c'est gratuit!" src="/images/laurentides/accueil/promotions/promo02-ressources-cours-en-ligne.svg?v=2015.09.11" />
-</a>
-</div>
-</div>
-<div class="hero-slide">
-<div class="hero-background align-right">
-<img alt="" src="/images/laurentides/accueil/promotions/promo03-photo.jpg" />
-</div>
-<div class="hero-content">
-<a href="/laurentides/fr/pret-entre-bibliotheques/index.aspx">
-<img alt="Ma Biblio à moi, c'est un lieu accueillant et branché près de chez moi où j'aime me retrouver. Et c'est gratuit!" src="/images/laurentides/accueil/promotions/promo03-peb.svg" />
-</a>
-
-</div>
-</div></div>
+&nbsp;</div>
 
 
             <div class="" id="content-page">
@@ -648,10 +631,10 @@ Horaire et localisation</span></a></div>
                 <img src="/images/laurentides/accueil/bannieres/fleche-droite.png" />
             </div>
         </div>
-        <a href="http://www.mabibliotheque.ca/doc_uploads/reseau_biblio_du_quebec/laurentides/francais/documents/bandeau/auteurs_Laurentides_2015.pdf" class="promo-middle" target="_blank">
+        <a href="http://www.mabibliotheque.ca/doc_uploads/reseau_biblio_du_quebec/laurentides/francais/documents/bandeau/Auteurs-en-Laurentides-Mode-d-emploi-2016.pdf" class="promo-middle" target="_blank">
             <img alt="Auteurs Laurentides" src="/images/laurentides/accueil/bannieres/auteurs-laurentides.jpg" />
         </a>
-        <a href="http://www.culturelanaudiere.qc.ca/public/assets/pdf/publications/courante/ecrits.pdf" class="promo-right" target="_blank">
+        <a href="https://ecritsdelanaudiere.wordpress.com/" class="promo-right" target="_blank">
             <img alt="Les écrits lanaudois" src="/images/laurentides/accueil/bannieres/ecris-lanaudois.jpg" />
         </a>
         <div class="clear"></div>
@@ -730,8 +713,8 @@ Horaire et localisation</span></a></div>
 </script>
 
 <script type="text/javascript" src="/scripts/jquery.inputmask/jquery.inputmask-3.1.js"></script>
-<script src="/scripts/hammer.min.js?v=2.245" type="text/javascript"></script>
-<script src="/scripts/css-accordeon.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/hammer.min.js?v=2.247" type="text/javascript"></script>
+<script src="/scripts/css-accordeon.js?v=2.247" type="text/javascript"></script>
 <script src="/scripts/json2.js" type="text/javascript"></script>
 <script src="/scripts/jquery.autosize-min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
@@ -741,8 +724,8 @@ Horaire et localisation</span></a></div>
 <script src="/scripts/knockout-custom.js" type="text/javascript"></script>
 <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
 <script src="/scripts/jquery.cookie.js" type="text/javascript"></script>
-<script src="/scripts/knockout.grid.js?v=2.245" type="text/javascript"></script>
-<script src="/scripts/script_global.js?v=2.245" type="text/javascript"></script> 
+<script src="/scripts/knockout.grid.js?v=2.247" type="text/javascript"></script>
+<script src="/scripts/script_global.js?v=2.247" type="text/javascript"></script> 
         </div>
     </form>
 </div>
@@ -771,14 +754,14 @@ Horaire et localisation</span></a></div>
         
 
     
-    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=5&count=5&BiblioId=0&apresAujourdhui=1&LastModified=635983836476100000&v=2.245' type='text/javascript'></script>
+    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=5&count=5&BiblioId=0&apresAujourdhui=1&LastModified=636091482832200000&v=2.247' type='text/javascript'></script>
 
-    <script src="/scripts/classes/Arrays.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/Arrays.js?v=2.247" type="text/javascript"></script>
     <script src="/scripts/jquery.cycle.all.min.js" type="text/javascript"></script>
     <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
-    <script src="/scripts/script_onglets.js?v=2.245" type="text/javascript"></script> 
-    <script src="/scripts/classes/Maths.js?v=2.245" type="text/javascript"></script> 
-    <script src="/scripts/classes/ActiviteViewModel.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/script_onglets.js?v=2.247" type="text/javascript"></script> 
+    <script src="/scripts/classes/Maths.js?v=2.247" type="text/javascript"></script> 
+    <script src="/scripts/classes/ActiviteViewModel.js?v=2.247" type="text/javascript"></script> 
 
     <script type="text/javascript">
 

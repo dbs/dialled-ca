@@ -243,7 +243,7 @@ if (ie||dom)
 window.onload=start_slider
 
 </script></div>
-<div id="wb_Text1" style="position:absolute;left:268px;top:312px;width:493px;height:208px;z-index:10;" align="justify">
+<div id="wb_Text1" style="position:absolute;left:273px;top:303px;width:493px;height:208px;z-index:10;" align="justify">
 <font style="font-size:13px" color="#000000" face="Verdana">If you can't come in person our researchers can help you, <a href="./contact.html">contact us</a> and we can provide information on the type of records we have and a quotation for doing the research remotely.<br>
 <br>
 <br>
@@ -253,11 +253,11 @@ To get an overview of the breadth of documents and records available click on th
 The Society also has an active membership engaged in publishing various books and other materials that tell the story of Shelburne County and the people who established the communities in the area. See our <a href="./bookshop.html">BookShop</a>.</font></div>
 <div id="wb_Image1" style="position:absolute;left:510px;top:522px;width:250px;height:182px;z-index:11;" align="left">
 <a href="javascript:showBigPicSCAGS('10charlotte-lg.jpg',600,700)"><img src="images/10charlotte-sm.jpg" id="Image1" alt="Peter Guyon Heritage Home. Courtesy of David Alexander" align="top" border="0" title="Peter Guyon Heritage Home. Courtesy of David Alexander" style="width:250px;height:182px;"></a></div>
-<div id="wb_Text2" style="position:absolute;left:273px;top:569px;width:209px;height:112px;z-index:12;" align="justify">
+<div id="wb_Text2" style="position:absolute;left:275px;top:543px;width:209px;height:112px;z-index:12;" align="justify">
 <font style="font-size:13px" color="#000000" face="Verdana">If you are planning to visit us the Town of Shelburne has the largest number of pre-1800 buildings for a town its size in North America and our list of <a href="./heritage.html">Heritage Buildings</a> is impressive.</font></div>
-<div id="wb_Text4" style="position:absolute;left:167px;top:762px;width:588px;height:32px;z-index:13;" align="left">
+<div id="wb_Text4" style="position:absolute;left:73px;top:750px;width:588px;height:32px;z-index:13;" align="left">
 <font style="font-size:13px" color="#000000" face="Verdana">We look forward to hearing from you to share our wealth of material with you and hopefully add some missing details to your family background.</font></div>
-<div id="wb_MasterPage2" style="position:absolute;left:0px;top:804px;width:800px;height:63px;z-index:14;" align="left">
+<div id="wb_MasterPage2" style="position:absolute;left:0px;top:1016px;width:800px;height:63px;z-index:14;" align="left">
 <hr id="Line2" style="color:#006699;background-color:#006699;border:0px;margin:0;padding:0;position:absolute;left:0px;top:7px;width:800px;height:1px;z-index:6">
 <div id="wb_Text1" style="position:absolute;left:22px;top:17px;width:756px;height:39px;z-index:7;" align="left">
 <font style="font-size:11px" color="#666666" face="Verdana">&#169;2009 The Shelburne County Archives and Genealogical Society. All images are the property of the copyright holders. If you wish to reproduce or obtain full size copies of images please contact the Society.<br>
@@ -281,7 +281,34 @@ Click Image to Enlarge</font></div>
 <a href="javascript:showBigPicSCAGS('10charlotte-lg.jpg',600,700)"><img src="images/img0060.gif" id="Shape2" align="top" alt="Peter Guyon Heritage Home. Courtesy of David Alexander" title="Peter Guyon Heritage Home. Courtesy of David Alexander" border="0" width="258" height="187"></a></div>
 <div id="wb_Shape3" style="position:absolute;left:34px;top:213px;width:207px;height:214px;z-index:22;" align="center">
 <img src="images/img0061.gif" id="Shape3" align="top" alt="" title="" border="0" width="207" height="214"></div>
-<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb6.gif" width="88" height="31" align="top" border="0" alt="Pablo Software Solutions" style="position:absolute;left:214px;top:854px;z-index:250"></a>
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb6.gif" width="88" height="31" align="top" border="0" alt="Pablo Software Solutions" style="position:absolute;left:226px;top:1073px;z-index:250"></a>
+<div id="wb_BulletedList2" style="position:absolute;left:79px;top:864px;width:640px;height:146px;z-index:24;" align="left">
+<table width="100%" border="0" cellpadding="0" cellspacing="2" id="BulletedList2">
+<tr>
+<td align="left" valign="top" width="28" height="22"><font style="font-size:16px;color:#006699;font-family:Verdana">&bull;</font></td>
+<td align="left" valign="top" width="606" height="22"><font style="font-size:13px" color="#000000" face="Verdana">To promote and encourage the study of family history in Shelburne County. </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="28" height="22"><font style="font-size:16px;color:#006699;font-family:Verdana">&bull;</font></td>
+<td align="left" valign="top" width="606" height="22"><font style="font-size:13px" color="#000000" face="Verdana">To assist with research of Shelburne County Genealogy. </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="28" height="34"><font style="font-size:16px;color:#006699;font-family:Verdana">&bull;</font></td>
+<td align="left" valign="top" width="606" height="34"><font style="font-size:13px" color="#000000" face="Verdana">To promote standards of accuracy, responsibility, and scholarly excellence among genealogists. </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="28" height="34"><font style="font-size:16px;color:#006699;font-family:Verdana">&bull;</font></td>
+<td align="left" valign="top" width="606" height="34"><font style="font-size:13px" color="#000000" face="Verdana">To contribute to the Society's holdings through volunteer activities and donations in a manner compatible with the aims and purposes of the Society.</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="28" height="22"><font style="font-size:16px;color:#006699;font-family:Verdana">&bull;</font></td>
+<td align="left" valign="top" width="606" height="22"><font style="font-size:13px" color="#000000" face="Verdana">To encourage and assist in the publication of genealogical source material.</font></td>
+</tr>
+</table></div>
+<div id="wb_Text5" style="position:absolute;left:69px;top:794px;width:602px;height:64px;z-index:25;" align="left">
+<font style="font-size:13px" color="#000000" face="Verdana">The Shelburne County Archives &amp; Genealogical Society is a non-profit organization which was founded in 1987. </font><font style="font-size:13px" color="#000000" face="Courier New"><br>
+</font><font style="font-size:13px" color="#006699" face="Verdana"><b><br>
+The Society exists to:</b></font></div>
 </div>
 </body>
 </html>

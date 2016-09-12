@@ -45,9 +45,9 @@ document.write('<script type="text/javascript" src="/_layouts/1033/msstring.js?r
 document.write('<script type="text/javascript" src="/_layouts/1033/ie55up.js?rev=UgTcwUTI6YcRzTMBxD93Xg%3D%3D"></' + 'script>');
 document.write('<script type="text/javascript" src="/_layouts/bamboo.discussionboardplus/jquery.min.js"></' + 'script>');
 document.write('<script type="text/javascript" src="/_layouts/bamboo.discussionboardplus/bamboo.discussionboardplus.ribbon.privatetopic.js"></' + 'script>');
-document.write('<script type="text/javascript" src="/ScriptResource.axd?d=kYx35OykMNUqzu-0ihppWd56itj1kJBzQEz8a9wNWi1mGU51I02jXHP7WFGbJISlxxnaaN76y6npZPh9F5GRG6zkhtU9vn8XoNBoa2QTG6YKibUKnowT9YltLxQrqoaiaLxJhYute_ydYwUK_IAnwGJvoTs1&amp;t=ffffffffb868b5f4"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=kYx35OykMNUqzu-0ihppWd56itj1kJBzQEz8a9wNWi1mGU51I02jXHP7WFGbJISlxxnaaN76y6npZPh9F5GRG6zkhtU9vn8XoNBoa2QTG6YKibUKnowT9YltLxQrqoaiaLxJhYute_ydYwUK_IAnwGJvoTs1&amp;t=2e2045e2"></' + 'script>');
 document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D"></' + 'script>');
-document.write('<script type="text/javascript" src="/ScriptResource.axd?d=lLokCDuwDPdih0RtidhMcqHwa2N6mWCMrCUXIGnxIwJg0cp9HeNCD2UA4NHQxV5DykemQK7Dzkzxa_-5EQoDqGEf1UHL_UDlsXQ2MZDUKj43YxO9-tVOj9iSy6k5oBd0NtU47iWvJNt2Gqeq5OrUl5j-kVPIJ97U0Noh3qal-JkrVh3g0&amp;t=ffffffffb868b5f4"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=lLokCDuwDPdih0RtidhMcqHwa2N6mWCMrCUXIGnxIwJg0cp9HeNCD2UA4NHQxV5DykemQK7Dzkzxa_-5EQoDqGEf1UHL_UDlsXQ2MZDUKj43YxO9-tVOj9iSy6k5oBd0NtU47iWvJNt2Gqeq5OrUl5j-kVPIJ97U0Noh3qal-JkrVh3g0&amp;t=2e2045e2"></' + 'script>');
 document.write('<script type="text/javascript" src="/ScriptResource.axd?d=pKHkDvbrcKiuSsDXqSNvXgUchUB52kSvPdhyseg0wTgLdm3Rj5IS_LfVpbn6Jetip6q86uuJUaHRdEdKHHuYHEgkBvItXyvQmycHqpmQBopiaPoAMx7zZ3cGRdPmwkKqdpR5UlplkvFKNwYA8jUjRuGGLytYrMrDQaxQKMpkCp9SGmHy0&amp;t=ffffffffbb8f054a"></' + 'script>');
 document.write('<script type="text/javascript" src="/ScriptResource.axd?d=ry83DrXYXwgXyarGzTmjQKuZTd1TtaWOODRAHdShxIV4is2SR672KBZfMFU8om-kNJweTudSXaxZMFvImevI7Vq6BdreyNEImMaTK7VltlyUfmH4lWYFF9I47CMTJMxXFwrL3Ei6lyHte6DGKC2IIyz_5sU1hb-Q0pfs2zGAf9EYI-Cj0&amp;t=ffffffffbb8f054a"></' + 'script>');
 document.write('<script type="text/javascript" src="/ScriptResource.axd?d=eHcZo6_EyVlNvWWpTwSFMyqk_T3VI_7_crLTG61318QUBPw7vcZzv_GxM3pM1XFsaLtteRREaskNNxU3TYfl4HBjPTcMyli4eJMqFv81EuLcuO6HaZL1Rzh3pG2-Bra972nHXSlaN_31cMYEcDlBx2ir5BxMXWAPjoD-252eukivvFHI0&amp;t=ffffffffbb8f054a"></' + 'script>');
@@ -114,6 +114,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KWCV6X');
+
+    ///https://developers.google.com/tag-manager/enhanced-ecommerce#overview
 </script>
 <!-- End FPI Google Tag Manager -->
 
@@ -123,7 +125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End FPI Bing Tag Manager -->
 
 
-<link rel="stylesheet" href="/_layouts/FPI.EC/css/fpi-ec.1.0.9.css" />
+<link rel="stylesheet" href="/_layouts/FPI.EC/css/fpi-ec.1.0.15.css" />
 
 
 <link rel="stylesheet" href="/_layouts/FPI.Base/css/jsgrid.min.css" />
@@ -138,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Start FPI SME -->
 <link rel="stylesheet" href="/_layouts/FPI.Base/css/fpi-sme-font.1.0.4.css" />
-<link rel="stylesheet" href="/_layouts/FPI.Base/css/fpi-calendar-event.1.0.4.css" />
+<link rel="stylesheet" href="/_layouts/FPI.Base/css/fpi-calendar-event.1.0.6.css" />
 <link rel="stylesheet" href="/_layouts/FPI.Base/css/fpi-publication-search.1.0.4.css" />
 <!-- End FPI SME -->
 
@@ -264,7 +266,7 @@ function changeLocation(str,name,value) {
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x8B5E4C125B2358B64542A0D89344E5392885BF914F26C225D3B2CED015470B6ED5A3DFDDE7EE5173B5221E463FEACF927399EEB4A5120CB7CA0763DBBAE641BD,09 May 2016 14:26:57 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x9A07FF0E019FA203F39FCEEE9124EFD4E0EE1FE8C3CE7155E15D0FA624632CAF48EC248001FC0724B3A72A3980BFC3D6D68D6EFC5C492CB9AF6DB42EE0ECD31D,11 Sep 2016 16:36:28 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -295,7 +297,7 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="/WebResource.axd?d=FrrrZ32RH4dKoE0IuQd5Hx0rAni5nO2PsSOV5UhhuZEDDsaSRzkmxYXSyFT1O02S09g6vTK79-OQZj6qte-KVNhhbhM1&amp;t=634604244479085897" type="text/javascript"></script>
+<script src="/WebResource.axd?d=FrrrZ32RH4dKoE0IuQd5Hx0rAni5nO2PsSOV5UhhuZEDDsaSRzkmxYXSyFT1O02S09g6vTK79-OQZj6qte-KVNhhbhM1&amp;t=635588444026805809" type="text/javascript"></script>
 
 
 <script type="text/javascript">
@@ -336,7 +338,7 @@ var _spWebPartComponents = new Object();//]]>
 <!--
 //-->
 </script>
-<script src="/ScriptResource.axd?d=E2DK4FxLLANNy2-84bmhN7klWSt3bG0khuxyJQTlJS0dz05BgkHBTVirEk9Ms0iYa_fxAA5cvte_0wSwKCFGNwkLmTI0BMYnPGA73xi_aZH13VUnTmeSQQPVmQGHrSV8aDvtjN_IkkTHjYoIvFatTQVLsgw1&amp;t=1fd0eb7a" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=E2DK4FxLLANNy2-84bmhN7klWSt3bG0khuxyJQTlJS0dz05BgkHBTVirEk9Ms0iYa_fxAA5cvte_0wSwKCFGNwkLmTI0BMYnPGA73xi_aZH13VUnTmeSQQPVmQGHrSV8aDvtjN_IkkTHjYoIvFatTQVLsgw1&amp;t=5f861349" type="text/javascript"></script>
 <script src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D" type="text/javascript"></script>
 <script src="/_layouts/BambooSolutions/Bamboo.RatingColumn/Bamboo.RatingColumn.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -383,6 +385,7 @@ return true;
 
 <div>
 
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
 	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEW/AUCzafp4AcCmp6C6g0C4auW0AoCqa+RfgKkr919AuDlx6oEAqev3X0Cpq/dfQKhr919AqCv3X0Co6/dfQKyr919Ar2v3X0Cpa+dfgKlr5F+AqWvlX4Cpa+pfgKlr61+AqWvoX4Cpa+lfgKlr7l+AqWv/X0Cpa/xfQKkr51+AqSvkX4CpK+VfgKkr6l+AqSvrX4CpK+hfgKkr6V+AqSvuX4CpK/9fQKkr/F9AqevnX4Cp6+RfgKnr5V+AqevqX4Cp6+tfgKnr6F+AqevpX4Cp6+5fgKnr/19Aqev8X0Cpq+dfgKmr5F+AqavlX4Cpq+pfgKmr61+AqavoX4Cpq+lfgKmr7l+Aqav/X0Cpq/xfQKhr51+AqGvlX4Coa+pfgKhr61+AqGvoX4Coa+lfgKhr7l+AqGv/X0Coa/xfQKgr51+AqCvkX4CoK+VfgKgr6l+AqCvrX4CoK+hfgKgr6V+As/Oud0OAqCvuX4CoK/9fQKgr/F9AqOvnX4Co6+RfgKjr5V+AqOvqX4Co6+tfgKjr6F+AqOvpX4Co6+5fgKjr/19AqOv8X0Csq+dfgKyr5F+ArKvlX4Csq+pfgKyr61+ArKvoX4Csq+lfgKyr7l+ArKv/X0Csq/xfQK9r51+Ar2vkX4Cva+VfgK9r6l+Ar2vrX4Cva+hfgK9r6V+Ar2vuX4Cva/9fQK9r/F9AoPu+qkHAu7X3NwJAvXAvvcDAtCpkeoFAr+T85wIApr81bcCAuHlt6oEAszOqd0OAvuk6YMGAsaNy7YIAoPu/qkHAu7X0NwJAvXAsvcDAtCpleoFAr+T95wIApr86bcCAuHly6oEAszOrd0OAsaNz7YIAoPu8qkHAu7X1NwJAvXAtvcDAtCpqeoFAr+Ti50IApr87bcCAuHlz6oEAszOod0OAvuk4YMGAsaNw7YIAoPu9qkHAu7X6NwJAvXAyvcDAtCpreoFAr+Tj50IApr84bcCAuHlw6oEAszOpd0OAvuk5YMGAsaNx7YIAoPuiqoHAu7X7NwJAvXAzvcDAtCpoeoFAr+Tg50IApr85bcCAuHlx6oEAszOud0OAvuk+YMGAsaN27YIAoPujqoHAu7X4NwJAvXAwvcDAtCppeoFAr+Th50IApr8+bcCAuHl26oEAszOvd0OAvuk/YMGAsaN37YIAoPugqoHAu7X5NwJAvXAxvcDAtCpueoFAr+Tm50IApr8/bcCAuHl36oEAszOsd0OAvuk8YMGAsaN07YIAoPuhqoHAu7X+NwJAvXA2vcDAtCpveoFAr+Tn50IApr88bcCAuHl06oEAszOtd0OAvuk9YMGAsaN17YIAoPu2qkHAu7XvNwJAvXAnvcDAtCp8ekFAr+T05wIApr8tbcCAuHll6oEAszOid0OAvukyYMGAsaNq7YIAoPu3qkHAu7XsNwJAvXAkvcDAtCp9ekFAr+T15wIApr8ybcCAuHlq6oEAszOjd0OAvukzYMGAsaNr7YIAoLu+qkHAunX3NwJAvTAvvcDAtOpkeoFAvqk+YMGAr6T85wIAoX81bcCAuDlt6oEAs/Oqd0OAvqk6YMGAsGNy7YIAoLu/qkHAunX0NwJAvTAsvcDAtOpleoFAr6T95wIAoX86bcCAsGN27YIAuDly6oEAs/Ord0OAvqk7YMGAsGNz7YIAoLu8qkHAunX1NwJAvTAtvcDAtOpqeoFAr6Ti50IAoX87bcCAuDlz6oEAs/Ood0OAvqk4YMGAsGNw7YIAoLu9qkHAunX6NwJAvTAyvcDAtOpreoFAr6Tj50IAoX84bcCAuDlw6oEAs/Opd0OAvqk5YMGAsGNx7YIAoLuiqoHAunX7NwJAvTAzvcDAtOpoeoFAr6Tg50IAvbGib4GAu+25P8BAoLrpA8CyJmz1goCwbHkygcCzLGoyQcCiPuyngMCz7GoyQcCzrGoyQcCybGoyQcCyLGoyQcCy7GoyQcC2rGoyQcC1bGoyQcCzbHoygcCzbHkygcCzbHgygcCzbHcygcCzbHYygcCzbHUygcCzbHQygcCzbHMygcCzbGIyQcCzbGEyQcCzLHoygcCzLHkygcCzLHgygcCzLHcygcCzLHYygcCzLHUygcCzLHQygcCzLHMygcCzLGIyQcCzLGEyQcCz7HoygcCz7HkygcCz7HgygcCz7HcygcCz7HYygcCz7HUygcCz7HQygcCz7HMygcCz7GIyQcCz7GEyQcCzrHoygcCzrHkygcCzrHgygcCzrHcygcCzrHYygcCzrHUygcCzrHQygcCzrHMygcCzrGIyQcCzrGEyQcCybHoygcCybHgygcCybHcygcCybHYygcCybHUygcCybHQygcCybHMygcCybGIyQcCybGEyQcCyLHoygcCyLHkygcCyLHgygcCyLHcygcCyLHYygcCyLHUygcCyLHQygcCp9DM6QkCyLHMygcCyLGIyQcCyLGEyQcCy7HoygcCy7HkygcCy7HgygcCy7HcygcCy7HYygcCy7HUygcCy7HQygcCy7HMygcCy7GIyQcCy7GEyQcC2rHoygcC2rHkygcC2rHgygcC2rHcygcC2rHYygcC2rHUygcC2rHQygcC2rHMygcC2rGIyQcC2rGEyQcC1bHoygcC1bHkygcC1bHgygcC1bHcygcC1bHYygcC1bHUygcC1bHQygcC1bHMygcC1bGIyQcC1bGEyQcC6/CPHQKGyanoDgKd3svDBAK4t+TeAgLXjYaoDwLy4qCDBQKJ+8KeAwKk0NzpCQKTupy3AQKuk76CDwLr8IsdAobJpegOAp3ex8MEAri34N4CAteNgqgPAvLinIMFAon7vp4DAqTQ2OkJAq6TuoIPAuvwhx0Chsmh6A4Cnd7DwwQCuLfc3gIC143+qQ8C8uKYgwUCifu6ngMCpNDU6QkCk7qUtwECrpO2gg8C6/CDHQKGyZ3oDgKd3r/DBAK4t9jeAgLXjfqpDwLy4pSDBQKJ+7aeAwKk0NDpCQKTupC3AQKuk7KCDwLr8P8eAobJmegOAp3eu8MEAri31N4CAteN9qkPAvLikIMFAon7sp4DAqTQzOkJApO6jLcBAq6TroIPAuvw+x4ChsmV6A4Cnd63wwQCuLfQ3gIC143yqQ8C8uKMgwUCifuungMCpNDI6QkCk7qItwECrpOqgg8C6/D3HgKGyZHoDgKd3rPDBAK4t8zeAgLXje6pDwLy4oiDBQKJ+6qeAwKk0MTpCQKTuoS3AQKuk6aCDwLr8PMeAobJjegOAp3er8MEAri3yN4CAteN6qkPAvLihIMFAon7pp4DAqTQwOkJApO6gLcBAq6TooIPAuvwrx0ChsnJ6A4Cnd7rwwQCuLeE3QIC142mqA8C8uLAgwUCifvingMCpND86QkCk7q8twECrpPegg8C6/CrHQKGycXoDgKd3ufDBAK4t4DdAgLXjaKoDwLy4ryDBQKJ+96eAwKk0PjpCQKTuri3AQKuk9qCDwLq8I8dAoHJqegOApzey8MEAru35N4CApK6jLcBAtaNhqgPAu3ioIMFAoj7wp4DAqfQ3OkJApK6nLcBAqmTvoIPAurwix0Cgcml6A4CnN7HwwQCu7fg3gIC1o2CqA8C7eKcgwUCqZOugg8CiPu+ngMCp9DY6QkCkrqYtwECqZO6gg8C6vCHHQKByaHoDgKc3sPDBAK7t9zeAgLWjf6pDwLt4piDBQKI+7qeAwKn0NTpCQKSupS3AQKpk7aCDwLq8IMdAoHJnegOApzev8MEAru32N4CAtaN+qkPAu3ilIMFAoj7tp4DAqfQ0OkJApK6kLcBAqmTsoIPAurw/x4CgcmZ6A4CnN67wwQCu7fU3gIC1o32qQ8CqoWA/goCweXtoA4CpN+WmA4CyJm31goCjLyHwg0CuoXoxwkCn4bD4gYCycuNkgkC+fvX5AwCq6bioQ8C+qmLqwYC96nHqAYCs+Pd/wIC9KnHqAYC9anHqAYC8qnHqAYC86nHqAYC8KnHqAYC4anHqAYC7qnHqAYC9qmHqwYC9qmLqwYC9qmPqwYC9qmzqwYC9qm3qwYC9qm7qwYC9qm/qwYC9qmjqwYC9qnnqAYC9qnrqAYC96mHqwYC96mLqwYC96mPqwYC96mzqwYC96m3qwYC96m7qwYC96m/qwYC96mjqwYC96nnqAYC96nrqAYC9KmHqwYC9KmLqwYC9KmPqwYC9KmzqwYC9Km3qwYC9Km7qwYC9Km/qwYC9KmjqwYC9KnnqAYC9KnrqAYC9amHqwYC9amLqwYC9amPqwYC9amzqwYC9am3qwYC9am7qwYC9am/qwYC9amjqwYC9annqAYC9anrqAYC8qmHqwYC8qmPqwYC8qmzqwYC8qm3qwYC8qm7qwYC8qm/qwYC8qmjqwYC8qnnqAYC8qnrqAYC86mHqwYC86mLqwYC86mPqwYC86mzqwYC86m3qwYC86m7qwYC86m/qwYCnMijiAgC86mjqwYC86nnqAYC86nrqAYC8KmHqwYC8KmLqwYC8KmPqwYC8KmzqwYC8Km3qwYC8Km7qwYC8Km/qwYC8KmjqwYC8KnnqAYC8KnrqAYC4amHqwYC4amLqwYC4amPqwYC4amzqwYC4am3qwYC4am7qwYC4am/qwYC4amjqwYC4annqAYC4anrqAYC7qmHqwYC7qmLqwYC7qmPqwYC7qmzqwYC7qm3qwYC7qm7qwYC7qm/qwYC7qmjqwYC7qnnqAYC7qnrqAYC0Ojg/AECvdHGiQ8CpsakogUCg6+LvwMC7JXpyQ4CyfrP4gQCsuOt/wICn8iziAgCqKLzVgKVi9HjDgLQ6OT8AQK90cqJDwKmxqiiBQKDr4+/AwLsle3JDgLJ+vPiBAKy49H/AgKfyLeICAKVi9XjDgLQ6Oj8AQK90c6JDwKmxqyiBQKDr7O/AwLslZHIDgLJ+vfiBAKy49X/AgKfyLuICAKoovtWApWL2eMOAtDo7PwBAr3R8okPAqbG0KIFAoOvt78DAuyVlcgOAsn6++IEArLj2f8CAp/Iv4gIAqii/1YClYvd4w4C0OiQ/wECvdH2iQ8CpsbUogUCg6+7vwMC7JWZyA4Cyfr/4gQCsuPd/wICn8ijiAgCqKLjVgKVi8HjDgLQ6JT/AQK90fqJDwKmxtiiBQKDr7+/AwLslZ3IDgLJ+uPiBAKy48H/AgKfyKeICAKooudWApWLxeMOAtDomP8BAr3R/okPAqbG3KIFAoOvo78DAuyVgcgOAsn65+IEArLjxf8CAp/Iq4gIAqii61YClYvJ4w4C0Oic/wECvdHiiQ8CpsbAogUCg6+nvwMC7JWFyA4Cyfrr4gQCsuPJ/wICn8iviAgCqKLvVgKVi83jDgLQ6MD8AQK90aaJDwKmxoSiBQKDr+u8AwLslcnJDgLJ+q/iBAKy443/AgKfyJOICAKootNWApWLseMOAtDoxPwBAr3RqokPAqbGiKIFAoOv77wDAuyVzckOAsn60+IEArLjsf8CAp/Il4gIAqii11YClYu14w4C0ejg/AECutHGiQ8Cp8akogUCgK+LvwMCqaLjVgLtlenJDgLW+s/iBAKz463/AgKcyLOICAKpovNWApKL0eMOAtHo5PwBArrRyokPAqfGqKIFAoCvj78DAu2V7ckOAtb68+IEApKLweMOArPj0f8CApzIt4gIAqmi91YCkovV4w4C0ejo/AECutHOiQ8Cp8asogUCgK+zvwMC7ZWRyA4C1vr34gQCs+PV/wICnMi7iAgCqaL7VgKSi9njDgLR6Oz8AQK60fKJDwKnxtCiBQKAr7e/AwLtlZXIDgLW+vviBAKz49n/AgKcyL+ICAKpov9WApKL3eMOAtHokP8BArrR9okPAqfG1KIFAoCvu78DAu2VmcgOAqjjzHcClZXb9QICq6bWoQ8CkcCDmgECmOPUmgUChJrj/A0CgZ3/4QICs7Os6A8C6NL9nAbESgp9pzJPmX8zziYy+z68/SVKew==" />
 </div>
 
@@ -443,8 +446,8 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 
     <div class="menu">
         <div class="careers">
-            <a class="fpi-hide fpi-lang-1033" href="/about-us/careers/Pages/default.aspx"> CAREERS</a>
-            <a class="fpi-hide fpi-lang-1036" href="/about-us/careers/Pages/default.aspx"> CARRIÈRES</a>
+            <a class="fpi-hide fpi-lang-1033" href="/about-us/pages/careers.aspx"> CAREERS</a>
+            <a class="fpi-hide fpi-lang-1036" href="/about-us/pages/carrieres.aspx"> CARRIÈRES</a>
         </div>
         <div class="help">
             <a class="fpi-hide fpi-lang-1033" href="/Extranet/Pages/Help.aspx"> HELP</a>
@@ -555,7 +558,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 	
             
 
-<link rel="stylesheet" href="/_layouts/FPI.EC/css/fpi-ec.1.0.9.css" />
+<link rel="stylesheet" href="/_layouts/FPI.EC/css/fpi-ec.1.0.15.css" />
 
 <div class="header-cart">
     <a class="vline" href="#sbCart" data-toggle="modal" id="A1"><i class="fa fa-shopping-cart fa-5x"></i>&nbsp; <span id="cart_count"></span></a>
@@ -2038,14 +2041,14 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 	<ul>
 		<li><a href="#" id="menu-title">About Us</a>
 			<ul id="menu-text">
-				<li><a href="/about-us/Pages/mission-vision-values.aspx">Vision, Mission, Values</a></li>
-				<li><a href="/about-us/organization/Pages/default.aspx">Organization</a></li>
-				<li><a href="/about-us/facilities/Pages/default.aspx">Our network</a></li>
-				<li><a href="/about-us/careers/Pages/default.aspx">Careers</a></li>
-				<li><a href="/about-us/members-partners-collaborators/Pages/default.aspx">Members, partners and collaborations</a></li>
-				<li><a href="/about-us/why-become-a-member/Pages/default.aspx">Why Become a member</a></li>
-				<li><a href="/Pages/promo.aspx">Why Become an associate</a></li>				
-				<li><a href="/about-us/contact-us/Pages/default.aspx">Contact Us</a></li>
+            <li><a href="/about-us/pages/mission-vision-values.aspx" title="Vision, Mission, Values">Vision, Mission, Values</a></li>
+            <li><a href="/about-us/pages/organization.aspx" title="Organization">Organization</a></li>
+            <li><a href="/about-us/pages/our-network.aspx" title="Our network">Our network</a></li>
+            <li><a href="/about-us/pages/careers.aspx" title="Careers">Careers</a></li>
+            <li><a href="/about-us/pages/members-partners-and-collaborators.aspx" title="Members, partners and collaborators">Members, partners and collaborators</a></li>
+            <li><a href="/about-us/pages/why-become-a-member.aspx" title="Why Become a Member">Why Become a Member</a></li>
+            <li><a href="/pages/promo.aspx" title="Why Become an Associate">Why Become an Associate</a></li>
+            <li><a href="/about-us/pages/contact-us.aspx" title="Contact Us">Contact Us</a></li>
 			</ul>
 		</li>
 		<li><a href="#" id="menu-title">Research Programs</a>
@@ -2056,7 +2059,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 				<li><a href="/ResearchProgram/Pages/research-program-wildfire-operations.aspx">Wildfire Operations</a></li>
 				<li><a href="/ResearchProgram/Pages/research-program-primary-wood-products-manufacturing.aspx">Primary Wood Products Manufacturing</a></li>
 				<li><a href="/ResearchProgram/Pages/research-program-secondary-wood-products-manufacturing.aspx">Secondary Wood Products Manufacturing</a></li>
-				<li><a href="/ResearchProgram/Pages/research-program-advanced-building-system.aspx">Advanced Building Systems</a></li>
+				<li><a href="/researchprogram/advanced-building-systems/pages/default.aspx" title="Advanced Building Systems">Advanced Building Systems</a></li>
 				<li><a href="/ResearchProgram/Pages/research-program-market-pulp.aspx">Market Pulp</a></li>
 				<li><a href="/ResearchProgram/Pages/research-program-paper-packaging-consumer-products.aspx">Paper, Packaging and Consumer Products</a></li>
 				<li><a href="/ResearchProgram/Pages/research-program-biomaterials.aspx">Biomaterials</a></li>
@@ -2224,9 +2227,9 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 <div class="boite_frontale "><a href="/ResearchProgram/advanced-building-systems/Pages/promo-tall-wood-buildings.aspx"><img width="258" height="141" class="miniature" src="/PublishingImages/visuelbf55.jpg" alt="" /></a> <h2>BUILD TALL WITH WOOD!</h2>
 <p>Get your copy of the Technical Guide for the Design and Construction of Tall Wood Buildings in Canada </p>
 <a href="/ResearchProgram/advanced-building-systems/Pages/promo-tall-wood-buildings.aspx"><img width="16" height="16" class="aller" src="/Style%20Library/Images/aller.png" alt="" /></a></div>
-<div class="boite_frontale dernier"><a href="/ResearchProgram/advanced-building-systems/Pages/promo-mid-rise-guide-2.aspx"><img width="258" height="141" class="miniature" src="/ResearchProgram/advanced-building-systems/PublishingImages/Cover-home-EN.png" alt="" /></a><h2>MID-RISE WOOD FRAME CONSTRUCTION</h2>
+<div class="boite_frontale dernier"><a href="/ResearchProgram/advanced-building-systems/Pages/promo-mid-rise-guide.aspx"><img width="258" height="141" class="miniature" src="/ResearchProgram/advanced-building-systems/PublishingImages/Cover-home-EN.png" alt="" /></a><h2>MID-RISE WOOD FRAME CONSTRUCTION</h2>
 <p>Get your copy of the Mid-Rise Wood Frame Construction Handbook.</p>
-<a href="/ResearchProgram/advanced-building-systems/Pages/promo-mid-rise-guide-2.aspx"><img width="16" height="16" class="aller" src="/Style%20Library/Images/aller.png" alt="" /></a></div></div>
+<a href="/ResearchProgram/advanced-building-systems/Pages/promo-mid-rise-guide.aspx"><img width="16" height="16" class="aller" src="/Style%20Library/Images/aller.png" alt="" /></a></div></div>
 ​​​​​​​​​​​​​</div>
 		<!-- Contenu en trois colonnes -----------------> 
     	<div id="lesInfos">
@@ -2320,37 +2323,54 @@ the complete list</a>​​​</p>
 			            <h2>FPInnovations.ca</h2>
 			            <div class="grid_4 alpha">
 				            <div class="languePied"></div>
-				            <p><a href="/">Home</a></p>
-				            <p><a href="/about-us/contact-us/Pages/default.aspx">Contact us</a></p>
-				            <p><a href="/media/reports/Pages/default.aspx">Download our annual report and review of activities</a></p>
+				            <p><a href="/" title="Home">Home</a></p>
+				            <p><a href="/Extranet/Pages/Help.aspx" title="Help">Help</a></p>
+				            <p><a class="fpi-lang-1033" href="#" onclick="OnSelectionChange(1036);" title="Français">FRANÇAIS</a></p>
+				            <p><a class="fpi-lang-1036" href="#" onclick="OnSelectionChange(1033);" title="English">ENGLISH</a></p>
+				            <p>&nbsp;</p>
+				            
+				            <p><a href="/about-us/pages/mission-vision-values.aspx" title="Vision, Mission, Values">Vision, Mission, Values</a></p>
+				            <p><a href="/about-us/pages/organization" title="Organization">Organization</a></p>
+				            <p><a href="/about-us/pages/facilities" title="Our network">Our network</a></p>
+				            <p><a href="/about-us/pages/careers.aspx" title="Careers">Careers</a></p>
+				            <p><a href="/about-us/pages/members-partners-collaborators" title="Members, partners and collaborators">Members, partners and collaborators</a></p>
+				            <p><a href="/about-us/pages/why-become-a-member" title="Why Become a Member">Why Become a Member</a></p>
+				            <p><a href="/pages/promo.aspx" title="Why Become an Associate">Why Become an Associate</a></p>
+				            <p><a href="/about-us/pages/contact-us.aspx" title="Contact Us">Contact Us</a></p>
 			            </div>
 			            <div class="grid_3">
-				            <p><a href="/about-us/careers/Pages/default.aspx">Careers</a></p>
-				            <p><a href="/about-us/facilities/Pages/default.aspx">Our facilities</a></p>
-				            <p>Download mobile app to increase safety hauling on steep slopes (logging trucks)<br /><br />
-					            <a href="/Extranet/Pages/AssetDetails.aspx?item=/Extranet/Assets/Software/BB-SGD-Guideline-app.zip">» Blackberry app</a><br />
-					            <a href="http://itunes.apple.com/us/app/steep-grade-descent-guidelines/id533967493?ls=1&mt=8" target="_blank">» Iphone app</a><br />
-				            </p>
+				            <p><a href="/ResearchProgram/Pages/research-program-resource-assessment.aspx">Resource Assessment</a></p>
+				            <p><a href="/ResearchProgram/forest-operations/Pages/default.aspx">Forest Operations</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-wildfire-operations.aspx">Wildfire Operations</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-primary-wood-products-manufacturing.aspx">Primary Wood Products Manufacturing</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-secondary-wood-products-manufacturing.aspx">Secondary Wood Products Manufacturing</a></p>
+				            <p><a href="/researchprogram/advanced-building-systems/pages/default.aspx">Advanced Building Systems</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-market-pulp.aspx">Market Pulp</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-paper-packaging-consumer-products.aspx">Paper, Packaging and Consumer Products</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-biomaterials.aspx">Biomaterials</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-biorefinery-energy.aspx">Biorefinery and Energy</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-pit.aspx">PIT - Performance Innovation Transport</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-environment-sustainability.aspx">Environment and Sustainability</a></p>
+				            <p><a href="/ResearchProgram/Pages/research-program-value-maximization-decision-support.aspx">Value Maximization and Decision Support</a></p>
 			            </div>
 		            </div>
 		            <div class="grid_13 push_1">
 			            <h2>FPInnovations related websites</h2>
 			            <div class="grid_7 alpha">
-				            <p><a href="http://aboriginalforestry.fpinnovations.ca/" target="_blank">Aboriginal Forestry</a></p>
+			            	<p><a href="http://aboriginalforestry.fpinnovations.ca/" target="_blank" title="Aboriginal Forestry">Aboriginal Forestry</a></p>
 				            <p><a href="http://www.bccoastalinitiative.ca/" target="_blank">BC Coastal Forest Sector Hem-Fir Initiative</a></p>
-				            <p><a href="http://cfs.nrcan.gc.ca/centres/cwfc" target="_blank">Canadian Wood Fibre Centre</a> </p>
+				            <p><a href="http://cfs.nrcan.gc.ca/centres/cwfc" target="_blank">Canadian Wood Fibre Centre</a></p>
 				            <p><a href="http://www.ctimagingcentre.com/" target="_blank">CT Imaging Centre</a></p>
-				            <p><a href="http://www.solutionsforwood.ca/home/" target="_blank">Solutions for Wood</a></p>
-				            <p><a href="http://www.reseauxfibrenetworks.ca/" target="_blank">FIBRE</a></p>
-				            <p><a href="http://www.fpintell.fpinnovations.ca/en/" target="_blank">FPIntell</a></p>
+				            <p><a href="http://www.solutionsforwood.ca/" target="_blank">Solutions for Wood</a></p>
+				            <p><a href="http://www.fpintell.fpinnovations.ca/" target="_blank">FPIntell</a></p>
 			            </div>
 			            <div class="grid_6 omega">
 			            	<p><a href="http://fpsuite.ca" target="_blank">FPSuite</a></p>
-			            	<p><a href="http://www.partenariat.qc.ca" target="_blank">Partenariat innovation forêt</a></p>
-				            <p><a href="http://pit.fpinnovations.ca/Pages/home.aspx" target="_blank">Performance Innovation Transport (PIT)</a></p>
-				            <p><a href="http://www.cwc.ca/index.php/fr/home" target="_blank">Canadian Wood Council</a></p>
-				            <p><a href="http://www.valuetowood.ca/html/english/index.php" target="_blank">Value to Wood</a></p>
-				            <p><a href="http://wildfire.fpinnovations.ca/index.asp" target="_blank">Wildfire Operations Research</a></p>
+				            <p><a href="http://www.partenariat.qc.ca" target="_blank">Partenariat innovation forêt</a></p>
+				            <p><a href="http://thepitgroup.com/" target="_blank">PIT Group</a></p>
+				            <p><a href="http://www.cwc.ca/" target="_blank">Canadian Wood Council</a></p>
+				            <p><a href="http://www.valuetowood.ca/" target="_blank">Value to Wood</a></p>
+				            <p><a href="http://wildfire.fpinnovations.ca/" target="_blank">Wildfire Operations Research</a></p>
 				            <p><a href="http://hardwoodinitiative.fpinnovations.ca" target="_blank">Hardwood Research Initiative</a></p>
 				            <p><a href="http://steepslopeinitiative.fpinnovations.ca" target="_blank">Steep Slope Initiative</a></p>
 			            </div>
@@ -2361,10 +2381,11 @@ the complete list</a>​​​</p>
 			            <div><h2>Share</h2></div>
 				        <!-- Go to www.addthis.com/dashboard to customize your tools -->
 				        <div class="addthis_sharing_toolbox"></div>
-				        <div>&copy; 2016 FPInnovations. All rights reserved. &reg; FPInnovations, its marks and logos are trademarks of FPInnovations.</div>
-			        </div>
+				        <div>&reg; 2016 FPInnovations. All rights reserved.</div>
+					</div>
 		        </div>
 	        </div>
+	        <!--Footer End-->
 
             <!-- the developer dashboard can be turned on by administrators and shows debuging and performance info for the page -->
             <div id="DeveloperDashboard" class="ms-developerdashboard">
@@ -3022,10 +3043,10 @@ document.getElementById('ctl00_ctl45_ctl01_ctl01_ShipToCodeREV').dispose = funct
 <!-- extra js files -->
 
 
-<script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-ec.1.0.9.js"></script>
+<script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-ec.1.0.15.js"></script>
 
 
-<script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-asset-details.1.0.8.js"></script>
+<script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-asset-details.1.0.9.js"></script>
 <script type="text/javascript" src="/_layouts/FPI.EC/js/fpi-legend.1.0.4.js"></script>
 
 
@@ -3041,12 +3062,13 @@ document.getElementById('ctl00_ctl45_ctl01_ctl01_ShipToCodeREV').dispose = funct
 <!-- End Bottom JS -->
 
 
+<script type="text/javascript" src="/_layouts/FPI.QuestechSystems.SharePoint.EventCalendarList/fpi-ev.1.0.0.js"></script>
+
+
 <!-- warn users of old browsers that they need to upgrade -->
 
 
 <!-- Starter Master Page by Randy Drisgill (http://blog.drisgill.com) - May 23, 2010 -->
 <!-- Remove this credit if you want, but if you leave it in I will appreciate it! -->
-
-<!-- <tr><td>Oceanik retrieved Page from second level cache - 1 cache block(s) : 1 main page cache block + 0 translated cache sub-block(s) + 0 no-translated sub-block(s) </td></tr> -->
 </body>
 </html>

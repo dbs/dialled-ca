@@ -1,4 +1,4 @@
-ï»¿<!doctype html>
+<!doctype html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -20,9 +20,9 @@
 
 <link type="text/css" href="css/smoothness/jquery-ui-1.8.6.custom.css" rel="stylesheet" />
 
-<link href="/css/screen.fr.min.css?20160407" rel="stylesheet" type="text/css" media="screen" />
+<link href="/css/screen.fr.min.css?20160808" rel="stylesheet" type="text/css" media="screen" />
 <link href="/css/commun/tablet.css?20160323" rel="stylesheet" type="text/css" media="screen" />
-<link href="/responsive/css/site.css?20160323" rel="stylesheet" type="text/css" media="screen" />
+<link href="/responsive/css/site.css?20160808" rel="stylesheet" type="text/css" media="screen" />
 <link href="/css/print.min.css?20160323" rel="stylesheet" type="text/css" media="print" />
 
 <!--[if lte IE 8]>
@@ -84,7 +84,6 @@ $(document).ready(function() {
                 <li class="noBorder"><a href="/">Accueil</a></li>
                 <li><a href="/faq.php">FAQ</a></li>
                 <li><a href="http://clients.njoyn.com/CL4/xweb/Xweb.asp?tbtoken=YlxcQlUSN252FgcEQ1VJEyNPcnldcFFeb1xVWisRDGNfXDYbX0secWsEPApSVRJXTT5m&chk=dFlbQBJf&page=joblisting&CLID=71754&lang=2" target="_blank">CarriÃ¨res</a></li>
-                <li><a href="/contact.php">Nous joindre</a></li>
                 <li><a href="/plan-du-site.php">Plan du site</a></li>
             </ul>
 
@@ -128,6 +127,7 @@ $(document).ready(function() {
                             <li><a href="/page-territoire.php">Territoire</a></li>
                             <li><a href="/page-espaces-verts.php">Espaces verts</a></li>
                             <li><a href="/page-identification-visuelle.php">Identification visuelle</a></li>
+                            <li><a href="http://geomobile.ville.mirabel.qc.ca/mirabel_public/" target="_blank">Carte interactive</a></li>
                         </ul>
                     </li>
                     <li class="menu02 "><a aria-haspopup="true" href="/page-membres-du-conseil.php">Conseil municipal</a>
@@ -168,11 +168,13 @@ $(document).ready(function() {
                             <li><a href="/page-mirabel-economique-documentation.php">Documentation</a></li>
                             <li><a href="/page-partenaires.php">Partenaires</a></li>
 
-                            <li><a href="/page-mirabel-economique-nous-joindre.php">Nous joindre</a></li>
+                            <li><a href="/page-mirabel-economique-nous-joindre.php">CoordonnÃ©es (Mirabel Ãconomique)</a></li>
 
                         </ul>
                     </li>
                     <li class="menu06 "><a href="/bottin.php">Organismes</a>
+                    </li>
+                    <li class="menu07 "><a href="/contact.php">Nous joindre</a>
                     </li>
                 </ul>
             </div>
@@ -257,15 +259,15 @@ $(document).ready(function() {
 				
 				
 
-					<h4>Mai</h4>
+					<h4>Septembre</h4>
 			<ul class="list-content">
 					
 			<li>
-				<a href="/calendrier-assemblee-du-conseil-municipal-secteur-de-saint-canut-356.php">
-				<span class="date">9</span>
+				<a href="/calendrier-journee-portes-ouvertes-upa-385.php">
+				<span class="date">11</span>
 				<span class="event">
-					<strong>ASSEMBLÃE DU CONSEIL MUNICIPAL - SECTEUR DE SAINT-CANUT</strong>
-					Il y aura une assembl&eacute;e du conseil municipal le lundi 9[...]				</span>
+					<strong>JOURNÃE PORTES OUVERTES (UPA) </strong>
+					14e journ&eacute;e portes ouvertes sur les fermes du Qu&eacute;bec -[...]				</span>
 				</a>
 			</li>
 			
@@ -275,11 +277,11 @@ $(document).ready(function() {
 
 					
 			<li>
-				<a href="/calendrier-vente-de-fleurs-annuelles-du-comite-d-embellissement-357.php">
-				<span class="date">21</span>
+				<a href="/calendrier-assemblee-du-conseil-municipal-dans-le-secteur-de-saint-hermas-382.php">
+				<span class="date">12</span>
 				<span class="event">
-					<strong>VENTE DE FLEURS ANNUELLES DU COMITÃ D&#039;EMBELLISSEMENT</strong>
-					La Vente de fleurs annuelles du Comit&eacute; d&#039;embellissement[...]				</span>
+					<strong>ASSEMBLÃE DU CONSEIL MUNICIPAL DANS LE SECTEUR DE SAINT-HERMAS</strong>
+					Il y aura une assembl&eacute;e du conseil municipale le lundi 12[...]				</span>
 				</a>
 			</li>
 			
@@ -289,25 +291,11 @@ $(document).ready(function() {
 
 					
 			<li>
-				<a href="/calendrier-echange-de-vivaces-360.php">
-				<span class="date">21</span>
+				<a href="/calendrier-assemblee-du-conseil-municipal-dans-le-secteur-de-saint-benoit-383.php">
+				<span class="date">26</span>
 				<span class="event">
-					<strong>ÃCHANGE DE VIVACES</strong>
-					Un &eacute;change de vivaces aura lieu lors de la Vente de fleurs[...]				</span>
-				</a>
-			</li>
-			
-		
-				
-				
-
-					
-			<li>
-				<a href="/calendrier-assemblee-du-conseil-municipal-le-mardi-24-mai-358.php">
-				<span class="date">24</span>
-				<span class="event">
-					<strong>ASSEMBLÃE DU CONSEIL MUNICIPAL (LE MARDI 24 MAI)</strong>
-					La prochaine assembl&eacute;e du conseil municipal aura lieu le[...]				</span>
+					<strong>ASSEMBLÃE DU CONSEIL MUNICIPAL DANS LE SECTEUR DE SAINT-BENOÃT </strong>
+					Il y aura une assembl&eacute;e du conseil municipal le lundi 26[...]				</span>
 				</a>
 			</li>
 			
@@ -333,17 +321,17 @@ $(document).ready(function() {
 					
 						
 
-							<h4>Mai</h4>
+							<h4>Septembre</h4>
 				<ul class="list-content">
 							
 				<li>
-					<a href="/calendrier-communautaire-rencontre-de-musiciens-81.php">
-					<span class="date">9</span>
+					<a href="/calendrier-communautaire-assemblee-generale-annuelle-et-elections-137.php">
+					<span class="date">12</span>
 					<span class="event">
-						<strong>RENCONTRE DE MUSICIENS</strong>
-						Vous jouez du violon ou de l&#039;accord&eacute;on?  Joignez-vous &agrave;[...]					</span>
+						<strong>ASSEMBLÃE GÃNÃRALE ANNUELLE ET ÃLECTIONS</strong>
+						Cette invitation s&#039;adresse &agrave; tous les r&eacute;sidents du secteur[...]					</span>
 					par <br/>
-					MÃNÃTRIERS D'ANTAN					</a>
+					CLUB DE L'ÃGE D'OR DE SAINT-AUGUSTIN					</a>
 				</li>
 				
 			
@@ -352,13 +340,13 @@ $(document).ready(function() {
 
 							
 				<li>
-					<a href="/calendrier-communautaire-halte-garderie-la-mirabelline-103.php">
-					<span class="date">9</span>
+					<a href="/calendrier-communautaire-reunion-mensuelle-141.php">
+					<span class="date">13</span>
 					<span class="event">
-						<strong>HALTE-GARDERIE LA MIRABELLINE</strong>
-						La Maison de la famille de Mirabel offre aux parents[...]					</span>
+						<strong>RÃUNION MENSUELLE</strong>
+						Premi&egrave;re r&eacute;union mensuelle : d&eacute;voilement du programme[...]					</span>
 					par <br/>
-					MAISON DE LA FAMILLE					</a>
+					CERCLE DE FERMIÃRES DE SAINT-JANVIER					</a>
 				</li>
 				
 			
@@ -367,13 +355,13 @@ $(document).ready(function() {
 
 							
 				<li>
-					<a href="/calendrier-communautaire-bonne-boite-bonne-bouffe-102.php">
-					<span class="date">9</span>
+					<a href="/calendrier-communautaire-mechoui-gourmand-138.php">
+					<span class="date">16</span>
 					<span class="event">
-						<strong>BONNE BOÃTE BONNE BOUFFE </strong>
-						Le service Bonne Bo&icirc;te Bonne Bouffe est un service[...]					</span>
+						<strong>MÃCHOUI GOURMAND</strong>
+						Participez &agrave; un &eacute;v&eacute;nement gourmand unique dans la[...]					</span>
 					par <br/>
-					MAISON DE LA FAMILLE					</a>
+					PARC RÃGIONAL DU BOIS-DE-BELLE-RIVIÃRE					</a>
 				</li>
 				
 			
@@ -382,13 +370,25 @@ $(document).ready(function() {
 
 							
 				<li>
-					<a href="/calendrier-communautaire-le-son-des-gamins-99.php">
-					<span class="date">9</span>
+					<a href="/calendrier-communautaire-expo-vente-145.php">
+					<span class="date">17</span>
 					<span class="event">
-						<strong>LE SON DES GAMINS</strong>
-						L&rsquo;atelier parents-enfants &laquo; Le son des gamins &raquo;[...]					</span>
+						<strong>EXPO-VENTE</strong>
+						&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+Exposition des pi&egrave;ces r&eacute;alis&eacute;es[...]					</span>
 					par <br/>
-					MAISON DE LA FAMILLE					</a>
+					CERCLE DE FERMIÃRES DE SAINT-JANVIER					</a>
 				</li>
 				
 						</ul>

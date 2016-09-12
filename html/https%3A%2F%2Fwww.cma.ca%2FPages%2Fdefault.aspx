@@ -7,9 +7,8 @@
 </title><link id="CssRegistration1" rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/pagelayouts15.css"/>
 <link id="CssRegistration4" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=ox%2BqLd6WTqhn6d%2FMqf2BMw%3D%3D"/>
 <link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/searchv15.css?rev=qarmmE3eURu3ZS2Wsbpf2w%3D%3D"/>
-<link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/CMA/css/core.css?rev=20160508"/>
-<link id="CssRegistration6" rel="stylesheet" type="text/css" href="/_layouts/15/CMA/css/newco.css?rev=20160224"/>
-<link id="CssRegistration5" rel="stylesheet" type="text/css" href="/_layouts/15/CMA/css/codedev.css?rev=20160224"/>
+<link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/CMA/css/core.css?rev=20160812"/>
+<link id="CssRegistration5" rel="stylesheet" type="text/css" href="/_layouts/15/CMA/css/codedev.css?rev=20160812"/>
 <link id="CssRegistration2" rel="stylesheet" type="text/css" href="/_layouts/15/CMA/css/jqui/jquery-ui-1.10.3.custom.min.css"/>
 <link id="CssRegistration3" rel="stylesheet" type="text/css" href="/_layouts/15/CMA/css/fotorama.css"/>
 <link rel="shortcut icon" href="/_layouts/15/CMA/img/cma.ico" type="image/vnd.microsoft.icon" id="favicon" /><script type="text/javascript" src="/_layouts/15/init.js?rev=%2FWTxr8UesytJ8GB%2F5hOwZA%3D%3D"></script>
@@ -17,21 +16,20 @@
 <script type="text/javascript" src="/_layouts/15/cma/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="/_layouts/15/cma/js/jquery.cycle2.min.js"></script>
 <script type="text/javascript" src="/_layouts/15/cma/js/sharer.js"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/js.cookie.js?rev=20160224"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/core.js?rev=20160224"></script>
-<script type="text/javascript" src="/_layouts/15/cma/js/bliss-font.js"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/js.cookie.js?rev=20160812"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/core.js?rev=20160812"></script>
 <script type="text/javascript" src="/_layouts/15/cma/js/jquery.spservices-2014.01.min.js"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/twitter.js?rev=20160224"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/SlideShow.js?rev=20160224"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/twitter.js?rev=20160812"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/SlideShow.js?rev=20160812"></script>
 <script type="text/javascript" src="/_layouts/15/cma/js/fotorama.js"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/dashboard-cma.js?rev=20160224"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/widget.js?rev=20160224"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/lunametrics-youtube-v6.js?rev=20160224"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/jstz.min.js?rev=20160224"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/dashboard-cma.js?rev=20160812"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/widget.js?rev=20160812"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/lunametrics-youtube-v6.js?rev=20160812"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/jstz.min.js?rev=20160812"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=zCa_j9eV5SSuJU-8AZ66Bfpt6Xzw0iMO42hjPOxR_YaTXIqbMAoyId4tOC7qQCSFtTBfANYYG2XTjJvVECcJC4EncwGSzzuqLCSL5aJZMUy0RYI4XdG6LErqtLaxAPV3yoQbu3BOFADDgHiBPnRQPDfVjiHHU6QVVr2PG1a9K3ZZ-LScc1KwEY8aZW586xPq0&amp;t=ffffffffdb0d1ac2"></script>
 <script type="text/javascript" src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=zCrlC2y_U6mc-Hd-ArRmDBOGCLp1qcXyaQMKf7hRvDs5NF_ptpg6POSQTYEulaCZjIbArVtROQQGaxhn4rQNghbaVtQnix7X2mQnCaG1dJ1hG221UUWrvv_jER9A9Q7Y_JH3z8HedJRXQZ88kGgmlRE2k7VAeDpaqanHfNqSFzdzY9VZGD_VI7-Knp9ianF30&amp;t=ffffffffdb0d1ac2"></script>
-<script type="text/javascript" src="/_layouts/15/CMA/Js/refinerCustom.js?rev=20160224"></script>
+<script type="text/javascript" src="/_layouts/15/CMA/Js/refinerCustom.js?rev=20160812"></script>
 <script type="text/javascript">RegisterSod("initstrings.js", "\u002f_layouts\u002f15\u002f1033\u002finitstrings.js?rev=4Yrxyggg5knao3D48Ii\u00252FWA\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("strings.js", "\u002f_layouts\u002f15\u002f1033\u002fstrings.js?rev=u\u00252B0KcZWR52dtr8LTlqcZcw\u00253D\u00253D");RegisterSodDep("strings.js", "initstrings.js");</script>
 <script type="text/javascript">RegisterSod("sp.init.js", "\u002f_layouts\u002f15\u002fsp.init.js?rev=3nSw25FIGbfepznMSgi74A\u00253D\u00253D");</script>
@@ -124,7 +122,7 @@
         function ProcessImnMarkers() { }
 
         function followLink(e, t) {
-            "undefined" != typeof t && t ? window.open(e, t) : window.location.href = e;
+            "undefined" != typeof t && t ? window.open(e, t) : window.location.href = e
         }
 
         function addFavoritesTrackingEvent() {
@@ -258,7 +256,8 @@
     <script type="text/javascript">
         // Answers Cloud Services Embed Script v1.02
         // DO NOT MODIFY BELOW THIS LINE *****************************************
-        ; (function (g) {
+        /*
+        (function (g) {
             var hostname = window.location.hostname;
             var srcValue = "//gateway.answerscloud.com/cma-ca/production/gateway.min.js";
             if (hostname != null && hostname.toLocaleLowerCase() != "www.cma.ca") {
@@ -276,10 +275,11 @@
             h.appendChild(am);
             g['acsReady'] = function () { var aT = '__acsReady__', args = Array.prototype.slice.call(arguments, 0), k = setInterval(function () { if (typeof g[aT] === 'function') { clearInterval(k); for (i = 0; i < args.length; i++) { g[aT].call(g, function (fn) { return function () { setTimeout(fn, 1) }; }(args[i])); } } }, 50); };
         })(window);
+        */
         // DO NOT MODIFY ABOVE THIS LINE *****************************************
     </script>
 </head>
- <body class="gradient">
+ <body>
         <div id="imgPrefetch" style="display:none">
 <img src="/_layouts/15/CMA/img/cma.ico?rev=23" />
 <img src="/_layouts/15/images/spcommon.png?rev=23" />
@@ -301,7 +301,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x4E84EEDBB4CF4EEE8810E80C9576E3F79E61644A980E0E80AA19501CA1677145EBCE7CAA9EC459A22CFE8B870B5B8D0A9747E10A819BF1CF0285F913B0548C72,09 May 2016 14:05:18 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xFAF62D6536FC364F30783CA1C3B02558B7F6A1FE6C6CB6777365391E9FF23454EC5219664415157CBDD0C932F2E240044EC942E77D362AD7370AA41C41696559,11 Sep 2016 16:22:33 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -312,7 +312,7 @@
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPBSpWU0tleTo5NmRjZjU4Yi0yMTI1LTQ3MDEtODBkYy0yOGFhZjk3NTE4MGFk2cw1Rh+CPrt+hYsQ6a/WeGo/s1YEiROrO+KpOeG355c=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPBSpWU0tleTo0NTkwMGQxNS1kZWRmLTQ0ZTItOWJkMC05OWFhODc5NTUzZTdk1SQgP3ZIqUbkroLVjViX0IllbVP8ZH1qNJZcgSjU2ug=" />
 </div>
 
 <script type="text/javascript">
@@ -338,14 +338,14 @@ function __doPostBack(eventTarget, eventArgument) {
 <script type="text/javascript">
 //<![CDATA[
 var MSOWebPartPageFormName = 'aspnetForm';
-var g_presenceEnabled = true;
+var g_presenceEnabled = false;
 var g_wsaEnabled = false;
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'CMSPUBLISHING#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fEn", webAbsoluteUrl: "https:\u002f\u002fwww.cma.ca\u002fEn", siteAbsoluteUrl: "https:\u002f\u002fwww.cma.ca", serverRequestPath: "\u002fen\u002fPages\u002fcma_default.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "English", webTemplate: "39", tenantAppVersion: "0", webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T14:05:18.3820726Z") - new Date(), siteClientTag: "11008$$15.0.4569.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f46f813-b231-4638-a796-86d3c2bfbfef}",pageItemId:3366, pagePersonalizationScope:1, alertsEnabled:false, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="/En";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fEn", webAbsoluteUrl: "https:\u002f\u002fwww.cma.ca\u002fEn", siteAbsoluteUrl: "https:\u002f\u002fwww.cma.ca", serverRequestPath: "\u002fen\u002fPages\u002fcma_default.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "English", webTemplate: "39", tenantAppVersion: "0", webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-09-11T16:22:33.4623477Z") - new Date(), siteClientTag: "12192$$15.0.4569.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f46f813-b231-4638-a796-86d3c2bfbfef}",pageItemId:3366, pagePersonalizationScope:1, alertsEnabled:false, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="/En";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};//]]>
@@ -455,7 +455,7 @@ return true;
 
 <div class="aspNetHidden">
 
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAYHQ47t+PolSuDfgI0b9WCVmc+iFge3wW4XJDPWfMPBgVWlkBd59I4CcVB/jxHIo4a9HvBPC9MGRYDzsSc+y21+zBh6pXfydMP40wAlYf09xxZeyg7k85IrRTXuEy4Qqdb2XBNRChRoa98qVU/CyX2kUdExnmVO4BrJ2UeH+9zpMw==" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAdy3WCyMEWfMAKJJdP05bP+mc+iFge3wW4XJDPWfMPBgVWlkBd59I4CcVB/jxHIo4a9HvBPC9MGRYDzsSc+y21+zBh6pXfydMP40wAlYf09xzfAvJckHQMiQclFIDApdGoWXsoO5POSK0U17hMuEKnWU7UaLAcNEHONF+fJS68CcszCVU26Auv8m1GVBpvhNnA=" />
 </div>
 	<script type="text/javascript">
 	    var submitHook = function () { return !1 }; theForm._spOldSubmit = theForm.submit, theForm.submit = function () { submitHook() || this._spOldSubmit() };</script>
@@ -509,14 +509,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         <div id="s4-workspace">
             <div id="s4-bodyContainer">          
                 <div id="frame">
-                     
-        <div class="top-banner grids-1">
-            <a href="https://www.cma.ca/En/pages/joule.aspx?utm_source=cma.ca homepage&utm_medium=Display&utm_content=Leaderboard&utm_campaign=Joule Launch">
-                <img alt="" src="/Assets/assets-library/image/en/joule/Leaderboard_E.jpg" style="BORDER: 0px solid; ">
-            </a>
-        </div>
-
-                    <div class="main-bg">
                     <!-- Header -->
                     <div id="header" class="grids-1 noindex">
                         <!-- Dashboard -->
@@ -696,13 +688,14 @@ LoadSodByKey("jquery.min.js", function () {
                                     </li>
                                     <li class="keep lineGrouping">
                                         <input id="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_RememberMe" type="checkbox" name="ctl00$Dashboard$CustomLoginFBAMaster$signInControl$RememberMe" /><label for="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_RememberMe">Keep me logged in</label>
-                                            <input type="submit" name="ctl00$Dashboard$CustomLoginFBAMaster$signInControl$Login" value="Log in" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Dashboard$CustomLoginFBAMaster$signInControl$Login&quot;, &quot;&quot;, true, &quot;5da40432-e971-4fab-915c-82a0d5444dd4-validation&quot;, &quot;&quot;, false, false))" id="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_Login" class="primary login-button" />
+                                            <input type="submit" name="ctl00$Dashboard$CustomLoginFBAMaster$signInControl$Login" value="Log in" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Dashboard$CustomLoginFBAMaster$signInControl$Login&quot;, &quot;&quot;, true, &quot;7f36361d-02aa-4724-8921-7e981a20a945-validation&quot;, &quot;&quot;, false, false))" id="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_Login" class="primary login-button" />
                                     </li>
                                 </ul>
                             </div>
                             <p>
                                 <strong><span id="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_Label5">Don't have an account?</span></strong></p> 
-                            <a id="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_LabelUrl6" href="/en/Pages/cma-registration.aspx"><span id="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_Label6">Register today to access CMA knowledge resources, including a suite of clinical resources and accredited learning opportunities</span></a>
+                            <a id="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_NewMemberInscriptionLink" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Dashboard$CustomLoginFBAMaster$signInControl$NewMemberInscriptionLink&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><span id="ctl00_Dashboard_CustomLoginFBAMaster_signInControl_Label3">Register today to access CMA knowledge resources, including a suite of clinical resources and accredited learning opportunities</span></a>
+                            
                         </div>
                     
 </div>
@@ -765,29 +758,14 @@ LoadSodByKey("jquery.min.js", function () {
                                 
                                         <div class="grids-1-3">
                                                 <ul>
-                                    
-                                                <li><a href='/En/Pages/join-the-cma.aspx' target='_self'>Join the CMA</a></li>
-                                    
-                                                <li><a href='/En/Pages/get-involved-in-cma.aspx' target='_self'>Get Involved with the CMA</a></li>
-                                    
-                                                <li><a href='/En/Pages/member-benefits.aspx' target='_self'>Member benefits</a></li>
-                                    
-                                                <li><a href='/En/Pages/member-discounts.aspx' target='_self'>Member discounts</a></li>
-                                    
-                                             </ul>
-                                        </div>
-                                    
-                                
-                                        <div class="grids-1-3">
-                                            <ul>
-                                    
-                                                <li><a href='/En/Pages/medical-students.aspx' target='_self'>Medical students</a></li>
-                                    
-                                                <li><a href='/En/Pages/medical-resident.aspx' target='_self'>Medical residents</a></li>
-                                    
-                                                <li><a href='/En/Pages/practicing-physician.aspx' target='_self'>Practising physicians</a></li>
-                                    
-                                                <li><a href='/En/Pages/retired-physicians.aspx' target='_self'>Retired physicians</a></li>
+                                          
+                                         <li><a id=join-cma-nav href='/En/Pages/join-the-cma.aspx' target='_self'>Join the CMA</a></li>
+                                          
+                                         <li><a  href='/En/Pages/get-involved-in-cma.aspx' target='_self'>Get Involved with the CMA</a></li>
+                                          
+                                         <li><a  href='/En/Pages/member-benefits.aspx' target='_self'>Member benefits</a></li>
+                                          
+                                         <li><a  href='/En/Pages/member-discounts.aspx' target='_self'>Member discounts</a></li>
                                     
                                              </ul>
                                         </div>
@@ -796,11 +774,26 @@ LoadSodByKey("jquery.min.js", function () {
                                         <div class="grids-1-3">
                                             <ul>
                                     
-                                                <li><a href='/En/Pages/in-memoriam.aspx' target='_self'>In Memoriam</a></li>
+                                         <li><a  href='/En/Pages/medical-students.aspx' target='_self'>Medical students</a></li>
                                     
-                                                <li><a href='/En/Pages/upcoming-events.aspx' target='_self'>Upcoming events</a></li>
+                                         <li><a  href='/En/Pages/medical-resident.aspx' target='_self'>Medical residents</a></li>
                                     
-                                                <li><a href='/en/Pages/dialogue.aspx' target='_self'>CMA Member Dialogue</a></li>
+                                         <li><a  href='/En/Pages/practicing-physician.aspx' target='_self'>Practising physicians</a></li>
+                                    
+                                         <li><a  href='/En/Pages/retired-physicians.aspx' target='_self'>Retired physicians</a></li>
+                                    
+                                             </ul>
+                                        </div>
+                                    
+                                
+                                        <div class="grids-1-3">
+                                            <ul>
+                                    
+                                         <li><a  href='/En/Pages/in-memoriam.aspx' target='_self'>In Memoriam</a></li>
+                                    
+                                         <li><a  href='/En/Pages/upcoming-events.aspx' target='_self'>Upcoming events</a></li>
+                                    
+                                         <li><a  href='/en/Pages/dialogue.aspx' target='_self'>CMA Member Dialogue</a></li>
                                     
                                              </ul>
                                         </div>
@@ -819,29 +812,14 @@ LoadSodByKey("jquery.min.js", function () {
                                 
                                         <div class="grids-1-3">
                                                 <ul>
-                                    
-                                                <li><a href='/En/Pages/advocacy-getting-involved.aspx' target='_self'>Advocacy: getting involved</a></li>
-                                    
-                                                <li><a href='/En/Pages/submissions-to-government.aspx' target='_self'>Submissions to government</a></li>
-                                    
-                                                <li><a href='/en/pages/policies-research.aspx' target='_self'>Policies and research</a></li>
-                                    
-                                                <li><a href='/En/Pages/issue-specific-policies.aspx' target='_self'>Issue-specific policies</a></li>
-                                    
-                                             </ul>
-                                        </div>
-                                    
-                                
-                                        <div class="grids-1-3">
-                                            <ul>
-                                    
-                                                <li><a href='/En/Pages/media-centre.aspx' target='_self'>Media Centre</a></li>
-                                    
-                                                <li><a href='/En/Pages/md-mp-contact-program.aspx' target='_self'>MD-MP Contact Program</a></li>
-                                    
-                                                <li><a href='/secure/en/Pages/member-epanel.aspx' target='_self'>Member E-Panel</a></li>
-                                    
-                                                <li><a href='/En/Pages/public-health.aspx' target='_self'>Public health</a></li>
+                                          
+                                         <li><a  href='/En/Pages/advocacy-getting-involved.aspx' target='_self'>Advocacy: getting involved</a></li>
+                                          
+                                         <li><a  href='/En/Pages/submissions-to-government.aspx' target='_self'>Submissions to government</a></li>
+                                          
+                                         <li><a  href='/en/pages/policies-research.aspx' target='_self'>Policies and research</a></li>
+                                          
+                                         <li><a  href='/En/Pages/cma-physician-data-centre.aspx' target='_self'>CMA Physician Data Centre</a></li>
                                     
                                              </ul>
                                         </div>
@@ -850,13 +828,28 @@ LoadSodByKey("jquery.min.js", function () {
                                         <div class="grids-1-3">
                                             <ul>
                                     
-                                                <li><a href='/En/Pages/code-of-ethics.aspx' target='_self'>CMA Code of Ethics</a></li>
+                                         <li><a  href='/En/Pages/media-centre.aspx' target='_self'>Media Centre</a></li>
                                     
-                                                <li><a href='/En/Pages/advocacy-skills-training.aspx' target='_self'>Advocacy skills training</a></li>
+                                         <li><a  href='/En/Pages/md-mp-contact-program.aspx' target='_self'>MD-MP Contact Program</a></li>
                                     
-                                                <li><a href='/En/Pages/ethics-and-professionalism.aspx' target='_self'>Ethics and professionalism</a></li>
+                                         <li><a  href='/En/Pages/advocacy-skills-training.aspx' target='_self'>Advocacy skills training</a></li>
                                     
-                                                <li><a href='/En/Pages/medical-professionalism.aspx' target='_self'>Medical professionalism</a></li>
+                                         <li><a  href='/En/Pages/public-health.aspx' target='_self'>Public health</a></li>
+                                    
+                                             </ul>
+                                        </div>
+                                    
+                                
+                                        <div class="grids-1-3">
+                                            <ul>
+                                    
+                                         <li><a  href='/En/Pages/code-of-ethics.aspx' target='_self'>CMA Code of Ethics</a></li>
+                                    
+                                         <li><a  href='/En/Pages/ethics-and-professionalism.aspx' target='_self'>Ethics and professionalism</a></li>
+                                    
+                                         <li><a  href='/En/Pages/medical-professionalism.aspx' target='_self'>Medical professionalism</a></li>
+                                    
+                                         <li><a  href='/En/Pages/physician-health-wellness.aspx' target='_self'>Physician health and wellness</a></li>
                                     
                                              </ul>
                                         </div>
@@ -948,29 +941,14 @@ LoadSodByKey("jquery.min.js", function () {
                                 
                                         <div class="grids-1-3">
                                                 <ul>
-                                    
-                                                <li><a href='/En/Pages/all-resources.aspx' target='_self'>All resources</a></li>
-                                    
-                                                <li><a href='/En/Pages/point-of-care-summaries.aspx' target='_self'>Point-of-care summaries</a></li>
-                                    
-                                                <li><a href='/en/Pages/drug-information.aspx' target='_self'>Drug Information</a></li>
-                                    
-                                                <li><a href='/En/Pages/clinical-practice-guidelines.aspx' target='_self'>CPG Infobase</a></li>
-                                    
-                                             </ul>
-                                        </div>
-                                    
-                                
-                                        <div class="grids-1-3">
-                                            <ul>
-                                    
-                                                <li><a href='/secure/en/Pages/textbooks.aspx' target='_self'>Textbooks</a></li>
-                                    
-                                                <li><a href='/secure/en/Pages/journals.aspx' target='_self'>Journals</a></li>
-                                    
-                                                <li><a href='http://www.cmaj.ca' target='_blank'>CMAJ</a></li>
-                                    
-                                                <li><a href='/En/Pages/cma-publications.aspx' target='_self'>CMA publications</a></li>
+                                          
+                                         <li><a  href='/En/Pages/all-resources.aspx' target='_self'>All resources</a></li>
+                                          
+                                         <li><a  href='/En/Pages/point-of-care-summaries.aspx' target='_self'>Point-of-care summaries</a></li>
+                                          
+                                         <li><a  href='/en/Pages/drug-information.aspx' target='_self'>Drug Information</a></li>
+                                          
+                                         <li><a  href='/En/Pages/clinical-practice-guidelines.aspx' target='_self'>CPG Infobase</a></li>
                                     
                                              </ul>
                                         </div>
@@ -979,13 +957,28 @@ LoadSodByKey("jquery.min.js", function () {
                                         <div class="grids-1-3">
                                             <ul>
                                     
-                                                <li><a href='/En/Pages/patient-handouts.aspx' target='_self'>Patient handouts</a></li>
+                                         <li><a  href='/secure/en/Pages/textbooks.aspx' target='_self'>Textbooks</a></li>
                                     
-                                                <li><a href='/En/Pages/clinical-updates.aspx' target='_self'>Clinical updates</a></li>
+                                         <li><a  href='/secure/en/Pages/journals.aspx' target='_self'>Journals</a></li>
                                     
-                                                <li><a href='/en/Pages/ask-cma-librarian.aspx' target='_self'>Ask a Librarian</a></li>
+                                         <li><a  href='http://www.cmaj.ca' target='_blank'>CMAJ</a></li>
                                     
-                                                <li><a href='/en/Pages/joule-innovation.aspx' target='_self'>Joule Innovation</a></li>
+                                         <li><a  href='/En/Pages/cma-publications.aspx' target='_self'>CMA publications</a></li>
+                                    
+                                             </ul>
+                                        </div>
+                                    
+                                
+                                        <div class="grids-1-3">
+                                            <ul>
+                                    
+                                         <li><a  href='/En/Pages/patient-handouts.aspx' target='_self'>Patient handouts</a></li>
+                                    
+                                         <li><a  href='/En/Pages/clinical-updates.aspx' target='_self'>Clinical updates</a></li>
+                                    
+                                         <li><a  href='/en/Pages/ask-cma-librarian.aspx' target='_self'>Ask a Librarian</a></li>
+                                    
+                                         <li><a  href='/en/Pages/joule-innovation.aspx' target='_self'>Joule Innovation</a></li>
                                     
                                              </ul>
                                         </div>
@@ -1004,33 +997,16 @@ LoadSodByKey("jquery.min.js", function () {
                                 
                                         <div class="grids-1-3">
                                                 <ul>
-                                    
-                                                <li><a href='/en/Pages/physician-leadership-institute.aspx' target='_self'>Physician Leadership Institute (PLI)</a></li>
-                                    
-                                                <li><a href='/En/Pages/pmi-physician-leadership-courses.aspx' target='_self'>Physician leadership courses</a></li>
-                                    
-                                                <li><a href='/En/Pages/resident-student-leadership.aspx' target='_self'>Resident and student leadership</a></li>
-                                    
-                                                <li><a href='/En/Pages/conferences.aspx' target='_self'>Canadian Conference on Physician Leadership</a></li>
-                                    
-                                                <li><a href='/En/Pages/ccpe.aspx' target='_self'>Canadian Certified Physician Executive Credential</a></li>
-                                    
-                                             </ul>
-                                        </div>
-                                    
-                                
-                                        <div class="grids-1-3">
-                                            <ul>
-                                    
-                                                <li><a href='/En/Pages/continuing-medical-education.aspx' target='_self'>Continuing Professional Development</a></li>
-                                    
-                                                <li><a href='/Secure/En/Pages/my-cme-activities.aspx' target='_self'>My CPD activities</a></li>
-                                    
-                                                <li><a href='/en/pages/automatic-credit-transfer-process.aspx' target='_self'>Automatic credit transfer</a></li>
-                                    
-                                                <li><a href='/secure/en/Pages/cma-course-registration.aspx?offeringId=home' target='_blank'>Learning Management System</a></li>
-                                    
-                                                <li><a href='/En/Pages/cma-mini-modules.aspx' target='_self'>CMA Mini-modules</a></li>
+                                          
+                                         <li><a  href='/en/Pages/physician-leadership-institute.aspx' target='_self'>Physician Leadership Institute (PLI)</a></li>
+                                          
+                                         <li><a  href='/En/Pages/pmi-physician-leadership-courses.aspx' target='_self'>Physician leadership courses</a></li>
+                                          
+                                         <li><a  href='/En/Pages/resident-student-leadership.aspx' target='_self'>Resident and student leadership</a></li>
+                                          
+                                         <li><a  href='/En/Pages/conferences.aspx' target='_self'>Canadian Conference on Physician Leadership</a></li>
+                                          
+                                         <li><a  href='/En/Pages/ccpe.aspx' target='_self'>Canadian Certified Physician Executive Credential</a></li>
                                     
                                              </ul>
                                         </div>
@@ -1039,15 +1015,32 @@ LoadSodByKey("jquery.min.js", function () {
                                         <div class="grids-1-3">
                                             <ul>
                                     
-                                                <li><a href='/En/Pages/practice-management-curriculum.aspx' target='_self'>Practice Management Curriculum</a></li>
+                                         <li><a  href='/En/Pages/continuing-medical-education.aspx' target='_self'>Continuing Professional Development</a></li>
                                     
-                                                <li><a href='/En/Pages/transitioning-to-practice.aspx' target='_self'>Transitioning to practice</a></li>
+                                         <li><a  href='/en/pages/education-eol-care-medical-assistance-dying.aspx' target='_self'>Medical assistance in dying</a></li>
                                     
-                                                <li><a href='/En/Pages/managing-your-practice.aspx' target='_self'>Managing your practice</a></li>
+                                         <li><a  href='/Secure/En/Pages/my-cme-activities.aspx' target='_self'>My CPD activities</a></li>
                                     
-                                                <li><a href='/En/Pages/new-in-practice-guide.aspx' target='_self'>New in Practice Guide</a></li>
+                                         <li><a  href='/en/pages/automatic-credit-transfer-process.aspx' target='_self'>Automatic credit transfer</a></li>
                                     
-                                                <li><a href='/En/Pages/physician-health-wellness.aspx' target='_self'>Physician health and wellness</a></li>
+                                         <li><a  href='https://cmalearning.sabacloud.com' target='_blank'>Learning Management System</a></li>
+                                    
+                                             </ul>
+                                        </div>
+                                    
+                                
+                                        <div class="grids-1-3">
+                                            <ul>
+                                    
+                                         <li><a  href='/En/Pages/practice-management-curriculum.aspx' target='_self'>Practice Management Curriculum</a></li>
+                                    
+                                         <li><a  href='/En/Pages/transitioning-to-practice.aspx' target='_self'>Transitioning to practice</a></li>
+                                    
+                                         <li><a  href='/En/Pages/managing-your-practice.aspx' target='_self'>Managing your practice</a></li>
+                                    
+                                         <li><a  href='/En/Pages/new-in-practice-guide.aspx' target='_self'>New in Practice Guide</a></li>
+                                    
+                                         <li><a  href='/En/Pages/pmc-modules.aspx' target='_self'>PMC modules</a></li>
                                     
                                              </ul>
                                         </div>
@@ -1066,25 +1059,12 @@ LoadSodByKey("jquery.min.js", function () {
                                 
                                         <div class="grids-1-3">
                                                 <ul>
-                                    
-                                                <li><a href='https://mdm.ca/' target='_blank'>MD Financial Management</a></li>
-                                    
-                                                <li><a href='https://mdm.ca/wealth-management/incorporation/' target='_blank'>Incorporation</a></li>
-                                    
-                                                <li><a href='https://mdm.ca/wealth-management/banking/' target='_blank'>Banking</a></li>
-                                    
-                                             </ul>
-                                        </div>
-                                    
-                                
-                                        <div class="grids-1-3">
-                                            <ul>
-                                    
-                                                <li><a href='https://mdm.ca/wealth-management/investments/' target='_blank'>Investments</a></li>
-                                    
-                                                <li><a href='https://mdm.ca/wealth-management/insurance/' target='_blank'>Insurance</a></li>
-                                    
-                                                <li><a href='https://mdm.ca/career-stages/student/managing-debt/' target='_blank'>Managing Student Debt</a></li>
+                                          
+                                         <li><a  href='https://mdm.ca/' target='_blank'>MD Financial Management</a></li>
+                                          
+                                         <li><a  href='https://www.mdm.ca/our-services/incorporation' target='_blank'>Incorporation</a></li>
+                                          
+                                         <li><a  href='https://www.mdm.ca/our-services/banking' target='_blank'>Banking</a></li>
                                     
                                              </ul>
                                         </div>
@@ -1093,11 +1073,24 @@ LoadSodByKey("jquery.min.js", function () {
                                         <div class="grids-1-3">
                                             <ul>
                                     
-                                                <li><a href='https://mdm.ca/wealth-management/investments/md-private-investment-counsel/' target='_blank'>MD Private Investment Counsel</a></li>
+                                         <li><a  href='https://www.mdm.ca/our-services/investments' target='_blank'>Investments</a></li>
                                     
-                                                <li><a href='https://mdm.ca/wealth-management/estate-and-trust/' target='_blank'>Estate & Trust</a></li>
+                                         <li><a  href='https://www.mdm.ca/our-services/insurance' target='_blank'>Insurance</a></li>
                                     
-                                                <li><a href='https://mdm.ca/' target='_blank'>MD Account Login</a></li>
+                                         <li><a  href='https://www.mdm.ca/physician-life-stages/students/managing-debt' target='_blank'>Managing Student Debt</a></li>
+                                    
+                                             </ul>
+                                        </div>
+                                    
+                                
+                                        <div class="grids-1-3">
+                                            <ul>
+                                    
+                                         <li><a  href='https://www.mdm.ca/our-services/investments/md-private-investment-counsel' target='_blank'>MD Private Investment Counsel</a></li>
+                                    
+                                         <li><a  href='https://www.mdm.ca/our-services/estate-trust' target='_blank'>Estate & Trust</a></li>
+                                    
+                                         <li><a  href='https://mdm.ca/' target='_blank'>MD Account Login</a></li>
                                     
                                              </ul>
                                         </div>
@@ -1141,20 +1134,20 @@ LoadSodByKey("jquery.min.js", function () {
             data-cycle-swipe="true">
             <!-- empty element for pager links -->
     
-        <a href="https://www.cma.ca/En/Pages/joule-innovation.aspx" target="_parent">
-            <img alt="Joule Innovation " src="/En/Lists/Carrousel/Innovation-banner.jpg" />
+        <a href="https://www.cma.ca/En/Pages/tax-issues.aspx" target="_parent">
+            <img alt="" src="/En/Lists/Carrousel/cma_static_homepage_970x324_taxation-en.JPG" />
         </a>
     
-        <a href="https://www.cma.ca/En/Pages/joule-innovation-app.aspx" target="_parent">
-            <img alt="Download the new Joule app " src="/En/Lists/Carrousel/app-banner.jpg" />
+        <a href="https://mdm.ca/about-md/testimonials/dr-anthea-lafreniere-story?utm_source=cma%20banner&utm_content=Anthea%20Lafreniere&utm_medium=offsite&utm_campaign=BA-16-CA" target="_blank">
+            <img alt="Anthea." src="/En/Lists/Carrousel/baa-16-00186-anthea-970-x-324-en.JPG" />
         </a>
     
-        <a href="https://www.cma.ca/En/Pages/dynamed.aspx" target="_parent">
-            <img alt="" src="/En/Lists/Carrousel/dynamed-banner.jpg" />
+        <a href="" target="_parent">
+            <img alt="announcing the 2016 joule innovation winner" src="/En/Lists/Carrousel/4165_joule_innovation_banners_en.png" />
         </a>
     
-        <a href="https://donate.redcross.ca/ea-action/action?&ea.client.id=1951&ea.campaign.id=50639" target="_blank">
-            <img alt="Donate to the Alberta Fires Appeal" src="/En/Lists/Carrousel/red-cross_alberta_en.jpg" />
+        <a href="https://www.cma.ca/En/Pages/practicing-physician.aspx" target="_parent">
+            <img alt="Transitioning into practice" src="/En/Lists/Carrousel/29760_cma_recruitment_homepage_e.jpg" />
         </a>
     
             <div class="cycle-pager"></div>
@@ -1245,7 +1238,7 @@ LoadSodByKey("jquery.min.js", function () {
 
 <div class="youtube">
     <img alt="" src="/Assets/assets-library/image/en/home-page/YouTube-e.png" style="BORDER: 0px solid; ">
-    <iframe class="home-yt" title="YouTube" src="https://www.youtube.com/embed/3bGyyg2HBz0?enablejsapi=1&feature=youtu.be&wmode=transparent" frameborder="0" allowfullscreen></iframe>
+    <iframe class="home-yt" title="YouTube" src="https://www.youtube.com/embed/wCZSPx-3yVU?enablejsapi=1&feature=youtu.be&wmode=transparent" frameborder="0" allowfullscreen></iframe>
     <a href='https://www.youtube.com/user/CanadianMedicalAssoc' target="_blank" class="follow">
         <span id="ctl00_PlaceHolderMain_youTubeControl_lblMoreVideos">More Videos</span></a>
 </div>
@@ -1329,7 +1322,7 @@ LoadSodByKey("jquery.min.js", function () {
     
         <div class="description">
             <a class="segment-title" href="https://www.cma.ca/En/Pages/1800-members.aspx" >
-                New discount program!
+                New discount program
             </a>
             <p><p>​Save on laptops, desktops, office supplies and much more</p></p>
         </div>
@@ -1341,11 +1334,6 @@ LoadSodByKey("jquery.min.js", function () {
     <div id="ctl00_PlaceHolderMain_TabCustomerUsctrl_Resident" class="clear resident">
         
         <div class="grids-1-2">
-    
-        <div class="description">
-            <a href="https://www.cma.ca/En/Pages/cps-mobile-app.aspx"  class="segment-title">CPS on the RxTx mobile app</a>
-            <p>Download the CPS app</p>
-        </div>
     
         <div class="description">
             <a href="https://www.cma.ca/En/Pages/clinicalkey.aspx"  class="segment-title">ClinicalKey</a>
@@ -1378,6 +1366,13 @@ LoadSodByKey("jquery.min.js", function () {
         </div>
     
         <div class="description">
+            <a class="segment-title" href="https://www.cma.ca/En/Pages/cps-mobile-app.aspx" >
+                CPS on the RxTx mobile app
+            </a>
+            <p>Download the CPS app</p>
+        </div>
+    
+        <div class="description">
             <a class="segment-title" href="https://www.cma.ca/En/Pages/new-in-practice-guide-2015.aspx" >
                 CMA’s New in Practice Guide
             </a>
@@ -1386,16 +1381,9 @@ LoadSodByKey("jquery.min.js", function () {
     
         <div class="description">
             <a class="segment-title" href="https://www.cma.ca/En/Pages/1800-members.aspx" >
-                New discount program!
+                New discount program
             </a>
             <p><p>​Save on laptops, desktops, office supplies and much more</p></p>
-        </div>
-    
-        <div class="description">
-            <a class="segment-title" href="https://www.cma.ca/En/Pages/advocacy-getting-involved.aspx" >
-                Advocacy and representation
-            </a>
-            <p>​Join your 83,000 CMA colleagues</p>
         </div>
     
         </div>
@@ -1407,8 +1395,8 @@ LoadSodByKey("jquery.min.js", function () {
         <div class="grids-1-2">
     
         <div class="description">
-            <a href="https://www.cma.ca/En/Pages/cps-mobile-app.aspx"  class="segment-title">CPS on the RxTx mobile app</a>
-            <p>Download the CPS app</p>
+            <a href="https://www.cma.ca/En/pages/education-eol-care-medical-assistance-dying.aspx"  class="segment-title">New educational offering</a>
+            <p><p>​End-of-life care and medical assistance in dying</p></p>
         </div>
     
         <div class="description">
@@ -1442,6 +1430,13 @@ LoadSodByKey("jquery.min.js", function () {
         </div>
     
         <div class="description">
+            <a class="segment-title" href="https://www.cma.ca/En/Pages/cps-mobile-app.aspx" >
+                CPS on the RxTx mobile app
+            </a>
+            <p>Download the CPS app</p>
+        </div>
+    
+        <div class="description">
             <a class="segment-title" href="https://www.cma.ca/En/Pages/advocacy-getting-involved.aspx" >
                 Advocacy and representation
             </a>
@@ -1449,15 +1444,8 @@ LoadSodByKey("jquery.min.js", function () {
         </div>
     
         <div class="description">
-            <a class="segment-title" href="https://www.cma.ca/En/Pages/physician-leadership-institute.aspx" >
-                Professional development
-            </a>
-            <p><p>​Develop your leadership skills</p></p>
-        </div>
-    
-        <div class="description">
             <a class="segment-title" href="https://www.cma.ca/En/Pages/1800-members.aspx" >
-                New discount program!
+                New discount program
             </a>
             <p><p>​Save on laptops, desktops, office supplies and much more</p></p>
         </div>
@@ -1521,7 +1509,7 @@ LoadSodByKey("jquery.min.js", function () {
     
         <div class="description">
             <a class="segment-title" href="https://www.cma.ca/En/Pages/1800-members.aspx" >
-                New discount program!
+                New discount program
             </a>
             <p><p>​Save on laptops, desktops, office supplies and much more</p></p>
         </div>
@@ -1708,13 +1696,15 @@ refugee care</span></p></p>
         </h3>
         <ul>
     
-        <li>May 06 - <a href="/En/Pages/groups-lining-up-against-use-of-medical-accessory-fees-in-quebec.aspx">Groups lining up against use of medical accessory fees in Quebec</a></li>
+        <li>August 30 - <a href="/En/Pages/update-to-cma-member-discount-program-clublink.aspx">Update to CMA Member Discount Program – ClubLink​</a></li>
     
-        <li>May 06 - <a href="/En/Pages/support-for-fort-mcmurray-wildfire-relief-efforts.aspx">Support for Fort McMurray Wildfire Relief Efforts</a></li>
+        <li>August 24 - <a href="/En/Pages/Members-urge-federal-government-to-protect-tax-fairness-for-physicians-.aspx">Members urge federal government to protect tax fairness for physicians ​</a></li>
     
-        <li>May 03 - <a href="/En/Pages/canadian-medical-association-urges-swift-passage-of-bill-c-14.aspx">Canadian Medical Association urges swift passage of Bill C-14</a></li>
+        <li>August 24 - <a href="/En/Pages/strengthening-resilience-in-medical-training-and-practice.aspx">Strengthening resilience in medical training and practice
+
+</a></li>
     
-        <li>May 02 - <a href="/En/Pages/cma-requests-canada-health-act-review-to-end-ontario-impasse.aspx">CMA requests Canada Health Act review to end Ontario impasse</a></li>
+        <li>August 23 - <a href="/En/Pages/outgoing-cma-president-praises.aspx">Outgoing CMA President praises “soul” of medicine</a></li>
     
         </ul>
         <div class="follow"><a href="./news-announcements.aspx">
@@ -1866,7 +1856,6 @@ refugee care</span></p></p>
             <div id="load-share-email"></div>
           </div>
         </div>
-      </div>
         <div id="ie-message" class="load-ie-message"></div>
         <!-- end modal boxes -->     
             <div id="DeltaFormDigest">
@@ -1877,7 +1866,7 @@ refugee care</span></p></p>
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0xBF6092C4E8DE1979BF6F7977FCD83341A29C52A5A8EB87CAD16292647ACCA33305DBF9E2810F8B9E4A91E4086089B8C7EA463A463A889A557130940E8CDDA8D9,09 May 2016 14:05:19 -0000';
+            formDigestElement.value = '0xDDAC6A92B562F396A315A5F69BCBE8BF5A03509584D7B9F3FC536BD4DF7205AD950E26F28B6EF083AE6A5753E8A7E65B4639447814694F1F1887C750A13E6F15,11 Sep 2016 16:22:34 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>
@@ -1898,14 +1887,14 @@ var ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvUserName = document.al
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvUserName.controltovalidate = "ctl00_Dashboard_CustomLoginFBAMaster_signInControl_UserName";
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvUserName.errormessage = "The username field is mandatory";
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvUserName.display = "Dynamic";
-ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvUserName.validationGroup = "5da40432-e971-4fab-915c-82a0d5444dd4-validation";
+ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvUserName.validationGroup = "7f36361d-02aa-4724-8921-7e981a20a945-validation";
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvUserName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvUserName.initialvalue = "";
 var ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword = document.all ? document.all["ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword"] : document.getElementById("ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword");
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword.controltovalidate = "ctl00_Dashboard_CustomLoginFBAMaster_signInControl_password";
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword.errormessage = "The password field is mandatory";
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword.display = "Dynamic";
-ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword.validationGroup = "5da40432-e971-4fab-915c-82a0d5444dd4-validation";
+ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword.validationGroup = "7f36361d-02aa-4724-8921-7e981a20a945-validation";
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
 ctl00_Dashboard_CustomLoginFBAMaster_signInControl_rfvPassword.initialvalue = "";
 //]]>

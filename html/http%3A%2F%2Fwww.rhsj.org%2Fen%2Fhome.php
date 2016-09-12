@@ -18,7 +18,7 @@ $(document).ready(function() {
 });
 
 var boxesoff = new Array (['qn','1'],['cs','0'],['pr','0'],['pr','1'],['pr','2']);
-var boxes = new Array (['qn','0'],['qn','1'],['qn','2'],['qn','3'],['qn','4'],['qn','5'],['qn','6'],['qn','7'],['pr','0']);
+var boxes = new Array (['qn','0'],['qn','1'],['qn','2'],['pr','0']);
 
 function updateBckg() {
 	$('.box1').scale9Grid({top:100,bottom:100,left:100,right:100});
@@ -142,311 +142,103 @@ function showShadow() {
           <div class="cols_merged"><span class="title">Something new?</span><br />
             <br />
                         <span class="stitle_std"> 
-            In the footsteps of Jeanne Mance            </span></div>
-          <div class="col_left_left"><img src="/upload/nouvelles/265_photo.jpg" width="280" height="280" alt="" /></div>
+            The World Social Forum 2016 - A first in North America            </span></div>
+          <div class="col_left_left"><img src="/upload/nouvelles/287_photo.jpg" width="280" height="280" alt="" /></div>
           <div class="col_left_right"> 
                         <span id="bt_qn0"> 
-            At the invitation of the PRI Centre (Intercommunity Religious Presence) 17 persons were welcomed by Sister C&eacute;cile Gagn&eacute; and a group of RHSJs at the RHSJ Mother House.            (<a href="javascript:showLayer('qn','0')">moreâ¦</a>) </span> 
+            The World Social Forum 2016 has been in existence since 2001 in the countries of the South, but for the first time, Montreal welcomed the largest international gathering for a more united and equitable world, from August 9 to 14, 2016.<br />
+<br />
+120 countries participated to the event. 1 300 workshops and 22 major conferences were offered from 13 chosen themes from social and united economic alternatives in the face of the capitalist crises to the culture of peace and the fight against racism, the disparities and all the questions concerned with international solidarity.<br />
+<br />
+<br />
+            (<a href="javascript:showLayer('qn','0')">moreâ¦</a>) </span> 
             <span id="qn0" style="display: none"> 
-            In the logbook we received at arrival, a question was asked: &laquo;Why did I say yes to the invitation&raquo;? The answers were various depending on the age and situation of the participants, from Cedric, 13, who came with his parents to a retired Brother of the Sacred-Hear and young adults working in Montreal or preparing to go to the Krakow WYD (World Youth Day.<br />
+            Antenne de Paix (of which I am a member) participates in the promotion of peace initiatives, where we are.<br />
 <br />
-The experience continued all afternoon from the visit to the historic sites to the dancing encounter with the Sisters of the infirmary, allowing many to discover our history. But, maybe more&hellip; to come closer to our spiritual family which was established in New France in the wake of Jeanne Mance, founder of Hotel Dieu, through the incentive of our Founder J&eacute;r&ocirc;me Le Royer.<br />
+It is a source of hope to see all that is done in the world in the service of peace and the fight against all forms of exploitation of our humanity.<br />
 <br />
-Sr. Louisette Leli&egrave;vre, r.h.s.j.<br />
-            (<a href="javascript:hideLayer('qn','0')">closeâ¦</a>) </span> 
+If you want to know more, there are many articles on this event on the Internet.<br />
+<br />
+Sister Louisette Leli&egrave;vre            (<a href="javascript:hideLayer('qn','0')">closeâ¦</a>) </span> 
                                   </div>
           <div style="clear: both"></div>
                     <div class="hr_large"></div>
                     <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/261_photo.jpg" width="85" height="85" /></div>
+            <div style="float: left"><img src="/upload/nouvelles/281_photo.jpg" width="85" height="85" /></div>
             <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              A man from La FlÃ¨che at the origin of Montreal              </span> <br />
-              On April 8 and 9, a colloquium was dedicated to J&eacute;r&ocirc;me at the initiative of the Bishop of Mans, His Excellency Yves Le Saux, and in the presence of the Archbishop of Montreal, His Excellency Christian L&eacute;pine.<br />
-<br />
-The first day took place at the Centre l&rsquo;&Eacute;toile in Mans and the second day at the theater of the Halle-au-bl&eacute; of La Fl&egrave;che.<br />
-<br />
-The conferences and discussions allowed the participants to understand better the particular mission of this man at the origin of Montreal. They also took into consideration the mystical dimension of his mission which still inspires the Religious Hospitallers of Saint Joseph, the lay persons associated to the spiritual family and all of those who are attached to his work.<br />
-                          </div>
+              Entrance of Daphly Maurice to the postulate              </span> <br />
+              On the feast of our Founder Marie de la Ferre, we joyfully praised the Lord for the entrance of Daphly as a postulant. Daphly is Haitian and she will join Elizabeth, a Dominican in formation in Lima, Peru. Let us pray that the Lord accompany her on her path.                          </div>
             <div style="clear: both"></div>
           </div>
                     <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/255_photo.jpg" width="85" height="85" /></div>
+            <div style="float: left"><img src="/upload/nouvelles/274_photo.jpeg" width="85" height="85" /></div>
             <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Marie de la Ferre, a source of inspiration              </span> <br />
+              World Youth Days - Krakow 2016              </span> <br />
                             <span id="bt_qn1"> 
-              So, let us remember that if the work of the Venerable Marie de la Ferre is so praiseworthy through so much good brought to the sick for centuries, the heart of her commitment was her faith and not a simple philanthropy. When still young, she would say firmly: &laquo;I want to see and know the God of the Christians&raquo;.&nbsp;              (<a href="javascript:showLayer('qn','1')">moreâ¦</a>) </span> 
+              From all over the world, thousands of young people will go the the WYD (World Youth Days) in Krakow from July 26 to 30, 2016. Let us united with them through prayer.<br />
+<br />
+We share with you the official prayer of the WYD:<br />
+<br />
+&laquo;God, merciful Father,<br />
+in your Son, Jesus-Christ, you have revealed your loveand poured it out upon us in the Holy Spirit, the Comforter,<br />
+we entrust to you today the destiny of the world&nbsp;and of every man and woman.<br />
+<br />
+We entrust to you in a special way<br />
+young people of every language, people and nation:&nbsp;guide and protect them as they walk the complex paths of the world today<br />
+and give them the grace to reap abundant fruits&nbsp;from their experience of the Krakow World Youth Day.              (<a href="javascript:showLayer('qn','1')">moreâ¦</a>) </span> 
               <span id="qn1" style="display: none"> 
-              Her mother educated her in the faith and they would often go together to pray to the Virgin Mary at the church of Roiff&eacute;. Later, when she stayed with her aunt for 16 years, it is said that she withdrew every day to pray and that through her great devotion for the Blessed Sacrament she obtained from her confessor the possibility of going to communion almost every day.<br />
+              Heavenly Father,<br />
+grant that we may bear witness to your mercy.<br />
+teach us how to convey the faith to those in doubt,<br />
+hope to those who are discouraged,<br />
+love to those who fee indifferent,<br />
+forgiveness to those who have done wrong<br />
+and joy to those who are unhappy.<br />
+allow the spark of merciful love<br />
+that you have enkindled within us<br />
+to become a fire that can transform hearts<br />
+and renew the face of the earth.<br />
 <br />
-If you want to read the article in its entirety click on the following link:<br />
-http://www.rhsj.org/en/our-founders_1079_-26.php              (<a href="javascript:hideLayer('qn','1')">closeâ¦</a>) </span> 
+Mary, Mother of Mercy, pray for us,<br />
+Saint John Paul II, pray for us&raquo;.<br />
+              (<a href="javascript:hideLayer('qn','1')">closeâ¦</a>) </span> 
                                         </div>
             <div style="clear: both"></div>
           </div>
                     <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/252_photo.jpg" width="85" height="85" /></div>
+            <div style="float: left"><img src="/upload/nouvelles/271_photo.jpg" width="85" height="85" /></div>
             <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Becoming close to refugees              </span> <br />
-              You remember this ambitious project of Danielle L&eacute;tourneau: It was to ask Quebecers to knit 25, 000 woollen caps so that the refugees could keep not only their heads but also their hearts warm.<br />
-<br />
-Listening to this call, the heart of an RHSJ of the Mother House resonated with it and immediately she asked how to respond.&nbsp; This Sister knits woolen caps every winter for needy children.&nbsp; There are already a lot travelling worldwide.<br />
-<br />
-Another Sister inquired about where to send the nine woolen caps, shown in the photo, Now, nine little children&rsquo;s heads will be warmed by this welcoming gesture. Included with these caps is all the love that we want to give to those who need to feel surrounded by love while they are far from their homeland.<br />
-<br />
-Sister Louisette<br />
-                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/248_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Together, let us celebrate our Founder JÃ©rÃ´me Le Royer              </span> <br />
-                            <span id="bt_qn2"> 
-              On this November 6th, the family of the Religious Hospitallers of St. Joseph celebrated our Founder&rsquo;s entrance into heaven.&nbsp; In St. Basile, Bishop Champagne presided the celebration which took on a color of its own.<br />
-<br />
-              (<a href="javascript:showLayer('qn','2')">moreâ¦</a>) </span> 
-              <span id="qn2" style="display: none"> 
-              Concerned with sharing responsibilities between the RHSJ and associate groups, these groups are invited to assume progressive leadership for the organizational functioning within their own respective region.&nbsp; The English-speaking region has taken this course of action since last September.<br />
-At this time, the Associates of the New Brunswick region are embarking on this route, entrusting the coordination of associate groups of St. Basile, Campbelleon,Tracadie and Bathurst to Pauline Perusse, as coordinator and Alan Muzzerali from Campbellton, as assistant.&nbsp; The four regional groups were represented.<br />
-The Religious Hospitallers of Saint Joseph and Associates expressed gratitude to God for this celebration filled with Hope, inviting&nbsp; us, more than ever, to announce to the world, especially to the sick, and the poor, a loving God who unites and frees.<br />
-Louisette Leli&egrave;vre, rhsj              (<a href="javascript:hideLayer('qn','2')">closeâ¦</a>) </span> 
-                                        </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/245_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Wake the world              </span> <br />
-                            <span id="bt_qn3"> 
-              In Quebec City, on October 26 and 27, 350 Religious, Consecrated Religious and some lay persons gathered for a colloquium on consecrated life.&nbsp; Among them nine RHSJ had the joy of being present.<br />
-<br />
-Three themes for reflection marked out these two days:<br />
-- Look at the past with gratitude;<br />
-- Live the present with passion;<br />
-- Embrace the future with hope.<br />
-              (<a href="javascript:showLayer('qn','3')">moreâ¦</a>) </span> 
-              <span id="qn3" style="display: none"> 
-              This was an opportunity, certainly, to praise the Lord and to thank Him for all these lives given in his service and for his people. There was praise, but also encouragement to keep, even revive, our passion for the Mission of today. A question we can ask ourselves: &ldquo;What would our Founders do in the heart of the 21st century?&rdquo;<br />
-<br />
-Animated with this passion for Christ and his Word, we were strongly invited to embrace the future with hope. This is not a future based on numbers or deeds, but which relies on &ldquo;THE ONE in whom we put our trust&rdquo; (2Tim 1:12) and &ldquo;for whom nothing is impossible&rdquo; (Luke 1:37).<br />
-<br />
-I leave you with the words of Mrs. Denise Bombardier, journalist:<br />
-&ldquo;To believe is a passion, to serve is a passion and then we become eternal&hellip;&rdquo;<br />
-<br />
-Sister Louisette Leli&egrave;vre, RHSJ<br />
-              (<a href="javascript:hideLayer('qn','3')">closeâ¦</a>) </span> 
-                                        </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/242_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Charism, a compass for our life.              </span> <br />
-                            <span id="bt_qn4"> 
-              From August 24 to 29, 2015, eleven associates of Quebec participated in the session on the charism with Marie-Marcelle Desmarais, Director of the IFHIM. It was a big investment for all, but when I heard the comments following the session, I heard only positive comments.&nbsp; This evaluation does not hide the fact that the approach was difficult for some.&nbsp; In conclusion, the experience was very rich.<br />
-<br />
-Thanks for your sharing.&nbsp; I also transmitted to the General Council your gratitude for this week of formation.&nbsp; Now, I would like to share with all the associates the fruits of the session by sharing simply some of the reflections.<br />
-              (<a href="javascript:showLayer('qn','4')">moreâ¦</a>) </span> 
-              <span id="qn4" style="display: none"> 
-              &ldquo;Six days of session from 9:00 to 4:30 was more of a challenge than we first realized&hellip;&rdquo;&nbsp; &ldquo;Self-knowledge is always a difficult approach&rdquo;.<br />
-<br />
-&ldquo;Walking step by step to discover the facets of our Founders&rsquo; charism, we went to the Word of God and it has been a rich experience.&rdquo;<br />
-<br />
-&ldquo;To become aware of our own charism in connection with that of our Founders, was a wonderful experience.&rdquo;<br />
-<br />
-&ldquo;We discovered how the Founders nourished the seed and in our turn, we also nourished the seed through the testimony of our lives.&rdquo;<br />
-<br />
-&ldquo;I discovered that my actions with others are inspired by the charism that inhabits me.&rdquo;<br />
-<br />
-&ldquo;During this week, I experienced a unity with the Founders, my personal experience and the Word of God. It has been a great revelation.&rdquo;<br />
-<br />
-&ldquo;This was a happy experience that will allow us, inside our groups, to deepen the charism of our RHSJ Spiritual Family, understanding better that differences between persons are a source of richness!&rdquo;<br />
-<br />
-&ldquo;It was a rich learning experience which allowed us to see ourselves in our daily actions and to feel the presence of the charism within.&rdquo;<br />
-&ldquo;Let us never forget that the charism is in persons and not in actions.&rdquo;<br />
-<br />
-&ldquo;I believed I would receive a clear definition of the charism, but I was led to discover that to seize the charism of our Founders, I had to discover and experience my own charism.&rdquo;<br />
-<br />
-&ldquo;I really liked the encounter with other associates, the sharing between spouses, it is interesting that each one sees better in the other than he sees in himself.&rdquo;<br />
-<br />
-Charism is a compass for our life. Somehow or other here is the fruit of this session. May this sharing nourish your own reflection. Talk about it among yourselves and don&rsquo;t hesitate to deepen this reality in your respective groups.<br />
-<br />
-Sister Louisette Leli&egrave;vre, RHSJ<br />
-<br />
-<br />
-              (<a href="javascript:hideLayer('qn','4')">closeâ¦</a>) </span> 
-                                        </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/240_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Jeanne Mance honored at Notre Dame Basilica
-during a Mass of Thanksgiving
+              General Assembly of the CRC
+(Canadian Religious Conference)
               </span> <br />
-                            <span id="bt_qn5"> 
-              On Sunday, September 6, a Solemn Mass, with Most Reverend Christian Lepine, Archbishop of Montreal as presider, gathered hundreds of persons in Notre Dame Basilica around the Religious Hospitallers.&nbsp;<br />
-For the entrance procession Robert Lebel honoured us with a new hymn dedicated to Jeanne Mance, &ldquo;There is nothing in the world&hellip;.&rdquo;<br />
-              (<a href="javascript:showLayer('qn','5')">moreâ¦</a>) </span> 
-              <span id="qn5" style="display: none"> 
-              In his homily Archbishop L&eacute;pine encouraged the young and less young to take Jeanne Mance as a source of inspiration, faced with the challenges of today&rsquo;s world.&nbsp; The following are some extracts from his homily:<br />
-&ldquo;Jeanne Mance, a young courageous woman, remained a lay person throughout her life, was part of a group of men and women who founded our country in the 17th century.&nbsp; The project of founding Ville Marie was not simple.&nbsp; To move into the future, they needed a network of holy people in order to have the ability to achieve projects which were beyond their capacity&hellip; it is the same for us.&nbsp;&nbsp;&nbsp;&nbsp;<br />
-Jeanne Mance&rsquo;s attitude was formed of her faith in God, her perseverance and trust, which enabled her to overcome many trials.&nbsp;<br />
-Let us ask Jeanne Mance to accompany young people who are searching for meaning in their lives.&nbsp;<br />
-May she intercede for all who are passing through trials in order that they persevere in confidence.&rdquo;&nbsp;<br />
-The celebration was followed by a social hour, during which Archbishop L&eacute;pine encouraged us to ask for the canonization of Jeanne Mance.<br />
-              (<a href="javascript:hideLayer('qn','5')">closeâ¦</a>) </span> 
-                                        </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/235_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              June 24, 2015 in Kingston              </span> <br />
-              While Quebec celebrated St-Jean-Baptiste Day, the Board of Directors of the Kingston Hospital chose this day to celebrate the 170th anniversary of its foundation by the Religious Hospitallers of Saint Joseph, in 1845.<br />
-It was the occasion to look back and give praise for the 165 predecessors who worked in this institution with tenderness, compassion and skill.<br />
-A commemorative plaque was unveiled and blessed by His Excellency Brendon M. O&rsquo;Brien, archbishop of Kingston.<br />
+              From May 26 to 29, 300 religious gathered around the theme of the mission of the Congregation leaders, as appearing on the logo.<br />
+<br />
+During the opening night, a native person of the Mohawk nation made us experience a purification ritual to free our spirit of all the negative and bring each participant to peace.<br />
+<br />
+The theme was developed by Father Simon Pierre Arnold, osb. Having placed the religious life in the hollows of the tensions of the Kingdom, he invited us to walk toward a recreated religious life and a Mission Ad Gentes.<br />
+<br />
+Strong moment of sharing and hope in the hollow of the challenges of our time.<br />
                           </div>
             <div style="clear: both"></div>
           </div>
                     <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/228_photo.jpg" width="85" height="85" /></div>
+            <div style="float: left"><img src="/upload/nouvelles/269_photo.jpg" width="85" height="85" /></div>
             <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              You will remember that He loves you!              </span> <br />
-              This was the theme for the Youth gathering held at the Montreal Grand Seminary on the occasion of its 175th anniversary.&nbsp;<br />
+              The future of the Mother House              </span> <br />
+                            <span id="bt_qn2"> 
+              Montreal, May 16, 2016 &ndash; The Mayor of Montreal, Mr. Denis Coderre, in the presence of Sister Marie-Th&eacute;r&egrave;se Lalibert&eacute;, announced the intention of the city to acquire the vast property belonging to the Religious Hospitallers of Saint Joseph.<br />
 <br />
-Two hundred young people aged 18 to 30 were invited to reflect on different vocations having their source in baptism.<br />
+This will allow the preservation of the building and natural heritage of this exceptional site and the enhancement of it, in coherence with its rich historical past, for the benefit of Montrealers.              (<a href="javascript:showLayer('qn','2')">moreâ¦</a>) </span> 
+              <span id="qn2" style="display: none"> 
+              In order to realize this project, the City will support the great principles which have guided the RHSJ throughout their history and the vision they have for the future of their property. Those principles are:<br />
 <br />
-The young people had conferences on baptism, marriage, celibacy, priesthood, the permanent diaconate and religious life.<br />
-<br />
-Forty-five kiosks, animated by the congregations (including the RHSJs), different institutes, life groups, secular institutes, new communities, etc. allowed the youth to discover all the possible ways to answer the Lord&rsquo;s call.<br />
-<br />
-<br />
-Two groups of multicultural origin came to discover the Mother House and share their questions with Srs. Nicole Gaudet and Louisette Leli&egrave;vre.<br />
-<br />
-Let us hope that during this gathering, a great number of young people have had the experience of meeting a God full of love who guides their way.<br />
-<br />
-Sr. Louisette and Sr. Colette<br />
-                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/221_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Prayer to ask for the canonisation of Jeanne Mance              </span> <br />
-              God almighty, you inspired Jeanne mance to leave her country to come and testify of your tenderness in New France. &nbsp;She did it so admirably that we recognized in her the &laquo;souls&raquo; and the &laquo;angel&raquo; of the colony that was being founded in Ville-Marie.<br />
-<br />
-Attentive to events, she made herself available to everyone. With all of her heart, she put herself to the service ot the sick, loving them like you loved them. She was audacious, courageous and &laquo;heroic&raquo;.<br />
-<br />
-In thanking you for what you accomplished in her and through her, we pray You: May the sanctity of her life be fully recognized soon in the midst of the Church.<br />
-<br />
-Amen                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/219_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              On this day of April 19, in the Mother House chapel, we praise God.              </span> <br />
-              Since November 2014, we knew that Pope Francis has declared Venerable Jeanne Mance, cofounder of Montreal and founder of H&ocirc;tel Dieu. &nbsp;But this day, the official decree from Rome is handed to us by Father Eric Sylvestre pss, postulator of our founders&#39; cause.<br />
-<br />
-As Mrg L&eacute;pine says:&laquo;Jeanne Mance, woman of faith and charity, built her life on the solid Rock that is God&raquo;. In her continuation, let us walk in her footsteps in the light of our charism.<br />
-<br />
-                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/215_photo.png" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              What we have in common - what distinguishes Jews, Christians and Muslims              </span> <br />
-                            <span id="bt_qn6"> 
-              When we come close to a population in which the great religions are present, many questions come to our minds and also to our hearts. A brief meeting on the subject took place at the mother house in March 2015.<br />
-<br />
-Sr. Louisette captured the attention of her audience in the first minutes with a question that seemed innocent enough: How many Jew, Muslims and Christians live in Quebec? The first responses were: &laquo;Many... numerous... perhaps 3,000 or 5,000,&raquo; only to learn that the Muslims in Quebec number 875,000 and the Jews 375,000 and the Christians? It is difficult to say today because many are no longer baptized and the great majority of the population no longer practices. We have to be aware that we are undergoing a cultural and also a religious revolution.              (<a href="javascript:showLayer('qn','6')">moreâ¦</a>) </span> 
-              <span id="qn6" style="display: none"> 
-              Sometimes fear can overcome us when faced with events which involve the Muslim religion. It is good to remember that in Canada, Muslims are only 2,5% of the population.<br />
-<br />
-Do you remember the origins of the three great monotheistic religions, what we have in common, what distinguihes us from each other?<br />
-<br />
-<u>What we have in common:</u><br />
-- In each of the monotheistic religions God is Creator;<br />
-- Persons come from God and return to God;<br />
-- Mercy and pardon are present in the Koran, the Talmud and the Bible;<br />
-- In the three religions death is a passage and not an ending.<br />
-<br />
-<u>What distinguishes us:</u><br />
-- A relationship to God is expressed in a different manner. For a Muslim, God is inaccessible and Jesus is not recognized as the Christ, the Son of God.<br />
-- Our relationship to the BOOK: the Talmud for the Jews, the Koran for the Muslims and the Bible for the Christians. The Jews await the Messiah and do not recognize the Gospels and the writings of the Apostles. In the eyes of the Muslims, only the Koran i entirely Divine Word.<br />
-- Every religion emerged from a very different culture. We are distinguished from one another by the way in which we live our relationships, educate our children, our way of dressing, of eating...<br />
-<br />
-In such a pluralistic context, we must remain vigilant in order not to become rigid where we live while learning to live together in a better way, mutually respecting the foundation of one and the same law,&laquo; Love one another&raquo;.              (<a href="javascript:hideLayer('qn','6')">closeâ¦</a>) </span> 
+- The preservation of the spirit of the sites;<br />
+- Respect for the values of the Community and its spiritual mission;<br />
+- Protection and perpetuation of the building and natural heritage;<br />
+- Consistency with the site&rsquo;s history;<br />
+- Openness to the collectivity and a response to its needs.<br />
+              (<a href="javascript:hideLayer('qn','2')">closeâ¦</a>) </span> 
                                         </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/212_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Jeanne Mance soon to be declared Venerable              </span> <br />
-              <strong>November 7, 2014 - The RHSJ learned with great joy that Pope Francis recognized the heroic virtues of Jeanne Mance, a native of France and missionary to Canada.</strong><br />
-She was<a href="http://www.rhsj.org/en/history_360_-21.php"> the foundress of Hotel Dieu in Montreal</a>, the person who prepared the way for the coming of the Hospitallers of Saint Joseph. Let us bless the Lord and thank him with all our hearts.&nbsp; In his next decree Pope Francis, will declare her Venerable.                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/205_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Some Canadians Visit La FlÃ¨che              </span> <br />
-                            <span id="bt_qn7"> 
-              <br />
-<strong>Wednesday, October 8, 2014</strong> - The canonization of Bishop Fran&ccedil;ois de Laval and Sr. Marie de l&rsquo;Incarnation, Ursuline, on April 3 brought 125 pilgrims to the <a href="http://upload.wikimedia.org/wikipedia/commons/d/d6/PrytaneeXVIII.jpg">Prytan&eacute;e in la Fl&egrave;che</a>.<br />
-As did <a href="http://www.rhsj.org/en/in-the-beginning_306_-21.php">our founder J&eacute;r&ocirc;me Le Royer de la Dauversi&egrave;re</a>, Bishop Laval attended the college of the Jesuits, which became the Prytan&eacute;e.              (<a href="javascript:showLayer('qn','7')">moreâ¦</a>) </span> 
-              <span id="qn7" style="display: none"> 
-              <br />
-<strong>Wednesday, October 8, 2014 </strong>- The canonization of Bishop Fran&ccedil;ois de Laval and Sr. Marie de l&rsquo;Incarnation, Ursuline, on April 3 brought 125 pilgrims to the <a href="http://upload.wikimedia.org/wikipedia/commons/d/d6/PrytaneeXVIII.jpg">Prytan&eacute;e in la Fl&egrave;che</a>.<br />
-As did <a href="http://www.rhsj.org/en/in-the-beginning_306_-21.php">our founder J&eacute;r&ocirc;me Le Royer de la Dauversi&egrave;re</a>, Bishop Laval attended the college of the Jesuits, which became the Prytan&eacute;e.<br />
-Mr. Jean Petit, Vice-President of the Society&nbsp; of Associate Friends of Montreal,&nbsp; emphasized for the occasion the ties which unite La Fl&egrave;che to Montreal:<br />
-<em>&ldquo;<strong>This unusual connection was born in 1642 with the creation of Ville-Marie, which became Montreal, to which someone from La Fl&egrave;che, Jerome Le Royer de la Dauversi&egrave;re contributed</strong>&rdquo;&nbsp; </em>and Mr. Petit emphasized how these connection will continue,&nbsp; &ldquo;<em><strong>We are reflecting upon this until the 375th anniversary in 2017</strong>.&rdquo;<br />
-Photo: The Prytan&eacute;e, XVIIe century. Source: Wikipedia</em><br />
-              (<a href="javascript:hideLayer('qn','7')">closeâ¦</a>) </span> 
-                                        </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/210_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              An African gathering              </span> <br />
-              <br />
-<strong>Sunday, October 18, 2014</strong> - On Missionary Week which was from October 12 - 19, a celebration took place with the residents of the Beaupr&eacute;au Retirement Home. (<a href="http://www.rhsj.org/en/apostolates_394_-23.php">more ...</a>)                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/204_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Meeting of Associates France - Canada              </span> <br />
-              <br />
-<strong>September 27, 2014 </strong>- The two associate groups from Laval-Angers and LaFleche met for their annual meeting at the Cotellerie community near Laval. In spite of two absentees, seventeen Associates were present along with Sr. Armande Nicole and Sr. Gisele Jaguelin. (<a href="http://www.rhsj.org/en/news_898_-25.php">more...</a>)                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/198_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Inculturation of the mayan prayer              </span> <br />
-              <br />
-Their time of prayer can last 40 minutes or more on their knees, with the use of natural signs which have meaning for them (water, air, the earth, corn). Their prayer concludes with a traditional dance of the whole assembly which can last a long time.They have all the time in the world... for God. (<a href="http://www.rhsj.org/en/apostolates_394_-23.php">more...</a>)                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/197_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Live vocation today              </span> <br />
-              <br />
-&laquo; The ways we experience these renunciations and the way we follow Christ are different, but the difficulty is not greater.&nbsp; The human being has the same fundamental needs and the same existential anxieties. Who am I? Where do I come from? Where am I going? &raquo; (<a href="http://www.rhsj.org/en/vocation_388_-23.php">more...</a>)                          </div>
-            <div style="clear: both"></div>
-          </div>
-                    <div class="col_left_merged"> 
-            <div style="float: left"><img src="/upload/nouvelles/167_photo.jpg" width="85" height="85" /></div>
-            <div style="float: left; width: 470px"> <span class="stitle_std"> 
-              Sr. Marie-Blanche Leblanc: volunteer in palliative care              </span> <br />
-              <br />
-&nbsp;(...) In this hospital world I am called to respect religious pluralism, atheism. Each person is unique, that is why when I meet a brother or a sister, it is always a new experience&hellip;<strong> </strong>(<a href="http://www.rhsj.org/en/volunteer-in-palliative-care-montreal-qc_1037_-23.php">more...</a>)                          </div>
             <div style="clear: both"></div>
           </div>
                     <div style="clear: both"></div>

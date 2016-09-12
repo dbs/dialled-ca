@@ -3,11 +3,10 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Library News | Emily Carr University</title>
+  <title>Emily Carr University Library | Emily Carr University</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="alternate" type="application/rss+xml" title="News" href="/library/rss.xml" />
-
 <link rel="shortcut icon" href="/sites/www.connect.ecuad.ca/themes/ec_release2/favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link type="text/css" rel="stylesheet" media="all" href="/sites/www.connect.ecuad.ca/modules/views/css/views.css?b" />
 <link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?b" />
 <link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?b" />
@@ -37,9 +36,12 @@
   <script type="text/javascript" src="/misc/jquery.js?b"></script>
 <script type="text/javascript" src="/misc/drupal.js?b"></script>
 <script type="text/javascript" src="/sites/www.connect.ecuad.ca/modules/ec_abuse/ec_abuse.js?b"></script>
-<script type="text/javascript" src="/sites/www.connect.ecuad.ca/modules/jquery_form_update/misc/jquery.form.js?b"></script>
+<script type="text/javascript" src="/sites/www.connect.ecuad.ca/modules/jquery_media/js/jquery.media.js?b"></script>
+<script type="text/javascript" src="/sites/all/libraries/jwflv/swfobject.js?b"></script>
+<script type="text/javascript" src="/misc/jquery.form.js?b"></script>
 <script type="text/javascript" src="/misc/ahah.js?b"></script>
 <script type="text/javascript" src="/misc/textarea.js?b"></script>
+<script type="text/javascript" src="/sites/www.connect.ecuad.ca/modules/jquery_plugin/jquery.ec_caption.min.js?b"></script>
 <script type="text/javascript" src="/sites/www.connect.ecuad.ca/themes/ec_release2/js/menu-magic.js?b"></script>
 <script type="text/javascript" src="/sites/www.connect.ecuad.ca/themes/ec_release2/js/cmm-updates.js?b"></script>
 <script type="text/javascript" src="/sites/www.connect.ecuad.ca/modules/ahah_helper/ahah_helper.js?b"></script>
@@ -48,12 +50,30 @@
 jQuery.extend(Drupal.settings, { "basePath": "/", "ahah": { "edit-ec-abuse-submit": { "url": "/ahah_helper/ec_abuse", "event": "click", "keypress": null, "wrapper": "abuse-report-wrapper", "selector": "#edit-ec-abuse-submit", "effect": "fade", "method": "replace", "progress": { "type": "throbber" }, "button": { "op": "Report" } } } });
 //--><!]]>
 </script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+if (Drupal.jsEnabled) {
+  $(document).ready(function() {
+    $.fn.media.defaults.flvPlayer = '/sites/all/libraries/jwflv/player.swf';
+    $.fn.media.defaults.mp3Player = '/sites/all/libraries/jwflv/player.swf';
+    $('.work-audio .filefield-file a').media( { width: 512, height: 20 } );
+  });  
+}
+
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(document).ready(function(){$("div.delicious-posts img").addClass("field-icon-img");$("div.node div.content img[alt!=image]:not(.field-icon-img,.nocaption)").jcaption({copyAlignmentToClass: true, wrapperClass:"image", captionElement: "div", requireText: true});});
+//--><!]]>
+</script>
 </head>
-<body class="not-front not-logged-in one-sidebar sidebar-right node-type-landing-page page-about-news page-library section-library header8">
+<body class="not-front not-logged-in node-type-page one-sidebar sidebar-right page-library section-library node-type-general">
 
   <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K97HTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K97HTG');</script>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K97HTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K97HTG');</script>
   <!-- End Google Tag Manager -->
 
   <div id="page"><div id="page-inner">
@@ -79,7 +99,7 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "ahah": { "edit-ec-abuse-submi
   
   <div class="content">
     <div id="account-links">
-<a href="/user?destination=library" class="login-link">Log in to www.connect.ecuad.ca</a></div>  </div>
+<a href="/user?destination=node%2F161" class="login-link">Log in to www.connect.ecuad.ca</a></div>  </div>
 
   
 </div></div> <!-- /block-inner, /block -->
@@ -107,15 +127,15 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "ahah": { "edit-ec-abuse-submi
 <li class="leaf last menu-mlid-7297 depth1"><a href="/resources/techservices" title="">Technical Services</a></li>
 </ul></li>
 </ul></li>
-<li class="expanded menu-mlid-680 depth0 top-item3"><a href="/resources" title="Access the resources you require here.">RESOURCES</a><ul class="menu"><li class="expanded first menu-mlid-8176 depth0 top-item1 megamenu"><ul class="menu"><li class="leaf first menu-mlid-8200 depth1"><a href="/people" title="">Staff + Faculty Profiles</a></li>
+<li class="expanded menu-mlid-680 depth0 top-item3 active-trail"><a href="/resources" title="Access the resources you require here." class="active-trail">RESOURCES</a><ul class="menu"><li class="expanded first menu-mlid-8176 depth0 top-item1 megamenu"><ul class="menu"><li class="leaf first menu-mlid-8200 depth1"><a href="/people" title="">Staff + Faculty Profiles</a></li>
+<li class="leaf menu-mlid-8110 depth1"><a href="/resources/facilities" title="">Campus Safety + Security</a></li>
 <li class="leaf menu-mlid-8184 depth1"><a href="/studentservices/careers" title="Career + Professional Development Services for Students">Career + Professional Development</a></li>
 <li class="leaf menu-mlid-7292 depth1"><a href="http://blogs.ecuad.ca/directory" title="">Community Blogs</a></li>
 <li class="leaf menu-mlid-705 depth1"><a href="/resources/community" title="">Facility + Community Access</a></li>
-<li class="leaf menu-mlid-8110 depth1"><a href="/resources/facilities" title="">Facility Safety + Security</a></li>
 <li class="leaf menu-mlid-699 depth1"><a href="/resources/galleries" title="">Galleries</a></li>
 <li class="leaf last menu-mlid-8195 depth1"><a href="/programs/gradstudies/graduateresearch" title="">Graduate Research + Teaching</a></li>
 </ul></li>
-<li class="expanded last menu-mlid-8175 depth0 top-item2 megamenu"><ul class="menu"><li class="leaf first menu-mlid-698 has-children depth1"><a href="/library/about" title="">Library</a></li>
+<li class="expanded last menu-mlid-8175 depth0 top-item2 megamenu active-trail"><ul class="menu"><li class="leaf first menu-mlid-698 active depth1 active-trail"><a href="/library" title="" class="active-trail active">Library</a></li>
 <li class="leaf menu-mlid-8232 depth1"><a href="/policies" title="">Policies + Procedures</a></li>
 <li class="leaf menu-mlid-8216 depth1"><a href="/about/community/competitions" title="">Projects + Competitions</a></li>
 <li class="leaf menu-mlid-696 depth1"><a href="/resources/read" title="">READ Books</a></li>
@@ -142,7 +162,7 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "ahah": { "edit-ec-abuse-submi
 <li class="expanded last menu-mlid-1224 depth0 top-item2 megamenu"><ul class="menu"><li class="leaf first menu-mlid-6983 depth1"><a href="/programs/cs" title="">Continuing Studies Office</a></li>
 <li class="leaf menu-mlid-1218 depth1"><a href="/resources/finance" title="">Financial Services Office</a></li>
 <li class="leaf menu-mlid-1196 depth1"><a href="http://www.connect.ecuad.ca/about/careers" title="">Human Resources Office + Careers</a></li>
-<li class="leaf menu-mlid-8170 depth1"><a href="http://www.connect.ecuad.ca/node/327192" title="">President&#039;s Office</a></li>
+<li class="leaf menu-mlid-8170 depth1"><a href="/about/president" title="">President&#039;s Office</a></li>
 <li class="leaf last menu-mlid-8209 has-children depth1"><a href="/node/327231" title="">SITEMAP</a></li>
 </ul></li>
 </ul></li>
@@ -162,225 +182,38 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "ahah": { "edit-ec-abuse-submi
         
         
                   <div id="content-header">
-                          <h1 class="title">Library News</h1>
-                                            <div class="intro_text">The Library and Archives enables research, learning, and innovation by providing unique collections, a welcoming dynamic space, responsive services and professional knowledgeable staff.</div>
-                                                            </div> <!-- /#content-header -->
+                          <h1 class="title">Emily Carr University Library</h1>
+                                                                      </div> <!-- /#content-header -->
         
         <div id="content-area">
-          <div class="view view-News view-id-News view-display-id-page_2 view-dom-id-1">
-    
-  
-  
-      <div class="view-content">
-      <div class="item-list">
-    <ul>
-          <li class="views-row views-row-1 views-row-odd views-row-first">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><img  width="91" height="91" alt="" src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-04/330918/democratic-multiple-sale1-small_0.jpg?1460050446" /></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/330918">Friendly Book Fair</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p>Friendly Book Fair<br />ECUAD Library<br />Saturday, April 16th, 2-4pm</p>
-<p>Come join students from The Democratic Multiple course as they share their new publications.</p>
-<p>We also invite other book and zine makers to bring their own work for sharing, trading, and sale.</p>
-<p>Snacks provided!</p>
-<p><img src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-04/330918/vabf-emily-carr-table-2-cropped.jpg" width="600" height="746" /></p>
-</div>
-  </div>
-</li>
-          <li class="views-row views-row-2 views-row-even">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><img  width="91" height="91" alt="" src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-04/330702/paper-stump-sculpture_0.png?1459800256" /></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/330702">Out of the Forest and Into the Light</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p>Mezzanine Gallery<br />April 1st - 14th, 2016<br />Curated by Nathaniel Ferguson</p>
-<a href="/about/news/330702">Read more...</a></div>
-  </div>
-</li>
-          <li class="views-row views-row-3 views-row-odd">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><a href="/about/news/330028" class="nocaption imagecache imagecache-work_icon_91x91 imagecache-linked imagecache-work_icon_91x91_linked"><img src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/imagecache/work_icon_91x91/news/2016-03/330028/256px-hasemitostereiern2.jpg" alt="" title=""  class="nocaption imagecache imagecache-work_icon_91x91" width="91" height="91" /></a></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/330028">Easter Long Weekend Hours</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p>The Library's hours for the Easter long weekend are as follows:</p>
-<p>Friday, March 25 - Closed<br />Saturday, March 26 - 1-5<br />Sunday, March 26 - 1-5<br />Monday, March 27 Closed</p>
-</div>
-  </div>
-</li>
-          <li class="views-row views-row-4 views-row-even">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><img  width="91" height="91" alt="" src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-03/329491/fullsizerender-31_0.jpg?1457041479" /></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/329491">Issue Press and Other Titles from the LA Art Book Fair</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p style="margin: 0px 0px 15px; padding: 0px; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; color: #323232; line-height: 26px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">By Rachel Bowen.</p>
-<a href="/about/news/329491">Read more...</a></div>
-  </div>
-</li>
-          <li class="views-row views-row-5 views-row-odd">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><a href="/about/news/329465" class="imagefield"><img src="/sites/www.connect.ecuad.ca/themes/ec_release2/images/icon-news-91px.gif" class="nocaption"/></a></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/329465"> The Student Publication retrospective Who is Woo? </a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p>The Student Publication retrospective <em>Who is Woo?</em> features a selection of publications that define the student life of Emily Carr University of Art + Design over the past 90 years. The exhibition will celebrate the artistic works and publications created by past students.</p>
-<p>Come visit the library to interact and explore the rich history of Emily Carr and creativity of the students.</p>
-<p>The Student Publication retrospective <em>Who is Woo?</em><br />Opening Night | Thursday, March 10, 2016 from 5 to 7pm<br />Exhibition | March 4 - 23, 2016<br />Emily Carr University Library<br />1400 Johnston Street, Granville Island</p>
-</div>
-  </div>
-</li>
-          <li class="views-row views-row-6 views-row-even">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><img  width="91" height="91" alt="" src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-02/329403/fullsizerender-4_0.jpg?1456180549" /></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/329403">Roma Publications</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p style="margin: 0px 0px 15px; padding: 0px; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; color: #323232; line-height: 26px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">Roma Publications is an independent art publisher based in Amsterdam.&nbsp; It was founded in 1998 by designer&nbsp;<a href="http://www.rogerwillems.nl/" target="_blank" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; text-decoration: none; color: #007ac9; background: transparent;">Roger Willems</a>, and artists Mark Manders and Marc Nagtzaam.</p>
-<a href="/about/news/329403">Read more...</a></div>
-  </div>
-</li>
-          <li class="views-row views-row-7 views-row-odd">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><img  width="91" height="91" alt="" src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-02/329210/untitled_0.jpg?1454698144" /></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/329210">Instagram Photo Contest, Feb 1-29</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p>The Library is having an Instagram Photo Contest for the month of February, beginning Monday the 1st and ending on Monday the 29th. Post a photo of what you love about the Library to Instagram with the hashtag #LoveYourLibraryECU for a chance at four weekly prizes!</p>
-<h3><strong>WEEKLY PRIZE OF: Your choice of 2 books from our secret stash!</strong></h3>
-<p>How it works:</p>
-<a href="/about/news/329210">Read more...</a></div>
-  </div>
-</li>
-          <li class="views-row views-row-8 views-row-even">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><img  width="91" height="91" alt="" src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-02/329223/closed_0.jpg?1454626690" /></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/329223">Closed for Family Day</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p>The Library will be closed on Monday, February 8, for Family Day.</p>
-<p><a href="http://www.connect.ecuad.ca/library/about/hours">See all the Library's hours</a>.</p>
-</div>
-  </div>
-</li>
-          <li class="views-row views-row-9 views-row-odd">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><img  width="91" height="91" alt="" src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-02/329222/img5958_1.jpg?1454626506" /></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/329222">(non)functional | Amanda Wood</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p>Library Window Gallery<br />February 3 - 15, 2016</p>
-<p>func·tion·al<br />ˈfəNG(k)SH(ə)n(ə)l/<br />adjective</p>
-<p>1. of or having a special activity, purpose, or task; relating to the way in which something works or operates<br />• designed to be practical and useful, rather than attractive<br />• working or operating</p>
-<a href="/about/news/329222">Read more...</a></div>
-  </div>
-</li>
-          <li class="views-row views-row-10 views-row-even views-row-last">  
-  <div class="views-field-field-story-image-fid">
-                <span class="field-content"><img  width="91" height="91" alt="" src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/news/2016-01/328621/img3246_0.jpg?1452637015" /></span>
-  </div>
-  
-  <div class="views-field-title">
-                <span class="field-content"><a href="/about/news/328621">Open Access Artists&#039; Books</a></span>
-  </div>
-  
-  <div class="views-field-teaser">
-          <label class="views-label-teaser">
-        Teaser:
-      </label>
-                <div class="field-content"><p>The Artists' Books Collection is OPEN!</p>
-<p>Starting this week and every Wednesday throughout the semester our  Artists' Books co-op student, William Dereume, will host open-drawer  browsing sessions in the Artists' Books Collection.</p>
-<p>Visit the Library every Wednesday between 11am - 1pm if you're curious!</p>
-</div>
-  </div>
-</li>
-      </ul>
-</div>    </div>
-  
-      <div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
-<li class="pager-item"><a href="/library?page=1" title="Go to page 2" class="active">2</a></li>
-<li class="pager-item"><a href="/library?page=2" title="Go to page 3" class="active">3</a></li>
-<li class="pager-item"><a href="/library?page=3" title="Go to page 4" class="active">4</a></li>
-<li class="pager-item"><a href="/library?page=4" title="Go to page 5" class="active">5</a></li>
-<li class="pager-item"><a href="/library?page=5" title="Go to page 6" class="active">6</a></li>
-<li class="pager-item"><a href="/library?page=6" title="Go to page 7" class="active">7</a></li>
-<li class="pager-item"><a href="/library?page=7" title="Go to page 8" class="active">8</a></li>
-<li class="pager-item"><a href="/library?page=8" title="Go to page 9" class="active">9</a></li>
-<li class="pager-ellipsis">…</li>
-<li class="pager-next"><a href="/library?page=1" title="Go to next page" class="active">next ›</a></li>
-<li class="pager-last last"><a href="/library?page=48" title="Go to last page" class="active">last »</a></li>
-</ul></div>  
-  
-  
-  
-  
-</div>         </div>
+          <div id="node-161" class="node clear-block">
 
-                  <div class="feed-icons"><a href="/library/rss.xml" class="feed-icon"><img src="/misc/feed.png" alt="Syndicate content" title="News" width="16" height="16" /></a></div>
+
+
+  <div class="meta">
+  
+    </div>
+
+  <div class="content">
+    <p>&nbsp;<a href="https://twitter.com/ecuad_library" target="_blank"><img src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/resize/pages/161/twitterlogo-30x30.jpg" width="30" height="30" /></a> &nbsp;&nbsp;<a href="https://www.facebook.com/emily.carr.library" target="_blank"><img src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/resize/pages/161/Facebook-30x30.jpg" width="30" height="30" /></a> &nbsp; &nbsp;<a href="http://instagram.com/ecuad_library/" target="_blank"><img src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/resize/pages/161/instagram-logo-30x30.jpg" width="30" height="30" /></a>&nbsp;</p>
+<h2 style="font-family: Lucida Sans Unicode,Arial,sans-serif; color: #51585c;">Quick Search</h2>
+<div style="background-color: #009ead; color: white; padding-left: 20px; padding-right: 10px; padding-top: 30px; padding-bottom: 30px;">
+<form action="http://search.ebscohost.com/login.aspx" method="get"> <input name="direct" type="hidden" value="true" /> <input name="scope" type="hidden" value="site" /> <input name="site" type="hidden" value="eds-live" /> <input name="authtype" type="hidden" value="ip,guest" /> <input name="custid" type="hidden" value="s1190300" /> <input name="groupid" type="hidden" value="main" /> <input name="profile" type="hidden" value="eds" /> <input id="search_term" class="submit-field" style="padding: 8px;" name="bquery" size="50" type="text" /> <input class="“submit-button”" style="background-color: #e8f2f3; color: #51585c; display: inline-block; font-family: Lucida Sans Unicode,Arial,sans-serif; font-size: 14px; font-weight: bold; line-height: 27px; text-align: center; width: 40px; mso-hide: all;" name="“sa”" type="submit" value="GO" /> </form>
+</div>
+<p>Search for books, articles, journals, and more.</p>
+<p><strong><a href="http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;custid=s1190300&amp;groupid=main&amp;profid=eds&amp;authtype=ip,guest&amp;setup=1" target="_blank" title="Advanced search">Advanced Search</a></strong></p>
+<hr />
+<p>&nbsp;</p>
+<p><a href="http://www.connect.ecuad.ca/node/333198" target="_blank" title="Library computer use policy"><img src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/pages/161/new computer policy.jpg" alt="Library computer use policy" title="Library computer use policy" width="475" height="162" class="image-center" /></a></p>
+<p><a href="http://ecuad.arcabc.ca/" target="_blank" title="ECU's institutional repository"><img src="http://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/resize/pages/161/ECU IR announcement-475x303.jpg" alt="Emily Carr's Institutional Repository" width="475" height="303" class="image-center" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h4 style="text-align: center;"><a href="http://www.connect.ecuad.ca/library/news">Read our news</a></h4>
+<hr />
+  </div>
+
+  </div>        </div>
+
         
         
       </div></div> <!-- /#content-inner, /#content -->
@@ -394,24 +227,26 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "ahah": { "edit-ec-abuse-submi
   <div class="content">
     <div class="menu-name-menu-site-nav parent-mlid-0 menu-level-2">
   <ul class="menu"><li class="collapsed first menu-mlid-6943 depth top-item1"><a href="/people" title="">Staff + Faculty Profiles</a></li>
-<li class="collapsed menu-mlid-3190 depth top-item2"><a href="/studentservices/careers" title="Career + Professional Development Services for Students">CAREER + PD RESOURCES</a></li>
-<li class="leaf menu-mlid-8095 depth top-item3"><a href="http://blogs.ecuad.ca/directory" title="">COMMUNITY BLOGS</a></li>
-<li class="leaf menu-mlid-3169 depth top-item4"><a href="/resources/community" title="Information about access to Institute resources">FACILITY + COMMUNITY ACCESS</a></li>
-<li class="collapsed menu-mlid-8109 depth top-item5"><a href="/resources/facilities" title="">FACILITY SAFETY + SECURITY</a></li>
+<li class="collapsed menu-mlid-8109 depth top-item2"><a href="/resources/facilities" title="">CAMPUS SAFETY + SECURITY</a></li>
+<li class="collapsed menu-mlid-3190 depth top-item3"><a href="/studentservices/careers" title="Career + Professional Development Services for Students">CAREER + PD RESOURCES</a></li>
+<li class="leaf menu-mlid-8095 depth top-item4"><a href="http://blogs.ecuad.ca/directory" title="">COMMUNITY BLOGS</a></li>
+<li class="leaf menu-mlid-3169 depth top-item5"><a href="/resources/community" title="Information about access to Institute resources">FACILITY + COMMUNITY ACCESS</a></li>
 <li class="leaf menu-mlid-3161 depth top-item6"><a href="/resources/galleries" title="Art Galleries at Emily Carr">GALLERIES</a></li>
 <li class="leaf menu-mlid-7205 depth top-item7"><a href="/programs/gradstudies/graduateresearch" title="GRADUATE RESEARCH + TEACHING">GRADUATE RESEARCH + TEACHING</a></li>
-<li class="expanded menu-mlid-3323 depth top-item8 active-trail"><a href="/library/about" title="Hours, Borrowing, Resources, Loans, Media Bookings" class="active-trail">LIBRARY</a><ul class="menu"><li class="leaf first menu-mlid-6926 active depth top-item1 active-trail"><a href="/library" title="Library News page" class="active-trail active">LIBRARY News</a></li>
+<li class="expanded menu-mlid-3323 active depth top-item8 active-trail"><a href="/library" title="Hours, Borrowing, Resources, Loans, Media Bookings" class="active-trail active">LIBRARY</a><ul class="menu"><li class="leaf first menu-mlid-8241 depth top-item1"><a href="/library/news" title="">library news</a></li>
 <li class="leaf menu-mlid-3334 depth top-item2"><a href="/library/about/hours" title="Library Hours">Library Hours</a></li>
 <li class="collapsed menu-mlid-3367 depth top-item3"><a href="/library/contact" title="">Contact the Library</a></li>
-<li class="collapsed menu-mlid-3214 depth top-item4"><a href="/library/about/borrow" title="borrowing + renewing library items">Borrowing + renewing</a></li>
-<li class="collapsed menu-mlid-7266 depth top-item5"><a href="/library/services" title="Library Services">Library Services</a></li>
-<li class="collapsed menu-mlid-3337 depth top-item6"><a href="/library/collections" title="Books, Exhibition Catalogues, Journals, Slides, Film...">Library Collections</a></li>
-<li class="leaf menu-mlid-3692 depth top-item7"><a href="/library/about/exhibition" title="">Exhibition Space</a></li>
-<li class="leaf menu-mlid-8106 depth top-item8"><a href="/library/lynda" title="Lynda.com">Lynda.com</a></li>
-<li class="leaf menu-mlid-7186 depth top-item9"><a href="/library/about/rooms" title="Meeting + study rooms">meeting + study rooms</a></li>
-<li class="leaf menu-mlid-3510 depth top-item10"><a href="/library/researchguides" title="">Research Guides</a></li>
-<li class="leaf menu-mlid-7265 depth top-item11"><a href="/library/donate" title="Donations">donate</a></li>
-<li class="collapsed last menu-mlid-7175 depth top-item12"><a href="/copyright" title="Copyright Guide">copyright</a></li>
+<li class="collapsed menu-mlid-8243 depth top-item4"><a href="/node/333198" title="Library Computer Use Policy">Library Computer Use Policy</a></li>
+<li class="leaf menu-mlid-3344 depth top-item5"><a href="/library/collections/archives" title="Archives">Archives</a></li>
+<li class="collapsed menu-mlid-3214 depth top-item6"><a href="/library/about/borrow" title="borrowing + renewing library items">Borrowing + renewing</a></li>
+<li class="collapsed menu-mlid-7266 depth top-item7"><a href="/library/services" title="Library Services">Library Services</a></li>
+<li class="collapsed menu-mlid-3337 depth top-item8"><a href="/library/collections" title="Books, Exhibition Catalogues, Journals, Slides, Film...">Library Collections</a></li>
+<li class="leaf menu-mlid-3692 depth top-item9"><a href="/library/about/exhibition" title="">Exhibition Space</a></li>
+<li class="leaf menu-mlid-8106 depth top-item10"><a href="/library/lynda" title="Lynda.com">Lynda.com</a></li>
+<li class="leaf menu-mlid-7186 depth top-item11"><a href="/library/about/rooms" title="Meeting + study rooms">meeting + study rooms</a></li>
+<li class="leaf menu-mlid-3510 depth top-item12"><a href="/library/researchguides" title="">Research Guides</a></li>
+<li class="leaf menu-mlid-7265 depth top-item13"><a href="/library/donate" title="Donations">donate</a></li>
+<li class="collapsed last menu-mlid-7175 depth top-item14"><a href="/copyright" title="Copyright Guide">copyright</a></li>
 </ul></li>
 <li class="leaf menu-mlid-8231 depth top-item9"><a href="/policies" title="">POLICIES + PROCEDURES</a></li>
 <li class="leaf menu-mlid-8215 depth top-item10"><a href="http://www.connect.ecuad.ca/about/community/competitions" title="">Projects + Competitions</a></li>
@@ -484,10 +319,11 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "ahah": { "edit-ec-abuse-submi
     <h2>Student Hotlinks</h2>
 <ul> 
 <li><a href="https://inside.ecuad.ca">insideEC</a></li> 
+<li><a href="https://myec.ecuad.ca">myEC</a></li> 
 <li><a href="http://webmail.ecuad.ca">webmail</a></li> 
 <li><a href="http://courses.ecuad.ca">eLearning (Moodle)</a></li> 
 <li><a href="/studentservices/schedule">academic schedule</a></li> 
-<li><a href="/library" class="active">library</a></li>
+<li><a href="/library">library</a></li>
 <li><a href="/studentservices/academic_advising">academic advising</a></li> 
 <li><a href="/studentservices/financial">financial aid + awards</a></li> 
 <li><a href="/studentservices">student services</a></li> 
@@ -589,7 +425,7 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "ahah": { "edit-ec-abuse-submi
 <input type="submit" name="op" id="edit-ec-abuse-submit" value="Report"  class="form-submit" />
 <input type="submit" name="op" id="edit-ec-abuse-close" value="Close"  class="form-submit" />
 </fieldset>
-</div><input type="hidden" name="form_build_id" id="form-15526f7c6f6554ca458bf91d0f5d5953" value="form-15526f7c6f6554ca458bf91d0f5d5953"  />
+</div><input type="hidden" name="form_build_id" id="form-d81b7777c11622c2946c7ae11800adb1" value="form-d81b7777c11622c2946c7ae11800adb1"  />
 <input type="hidden" name="form_id" id="edit-ec-abuse-report-form" value="ec_abuse_report_form"  />
 
 </div></form>

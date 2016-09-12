@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Vilna Municipal Library of Vilna, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Vilna, Alberta, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Vilna Municipal Library of Vilna, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Vilna, Alberta, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.vilnapubliclibrary.ab.ca/" />
@@ -34,10 +38,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=""/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -45,7 +47,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Vilna Municipal Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Vilna Municipal Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -258,7 +260,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -266,6 +267,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -280,6 +293,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -300,9 +319,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -334,41 +352,22 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/156" class="blog_link active_page" title="Blog">Blog</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=156" class="blog_link active_page" title="Blog"><span>Blog</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/156" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/232" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -395,10 +394,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -413,9 +412,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.vilnapubliclibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.vilnapubliclibrary.ab.ca/Support-Your-Library" title="Support your library"><span>Support Your Library</span></a></li><li class="drop"><a href="http://www.vilnapubliclibrary.ab.ca/About-Us" class="about_us_link parent_link" title="About Us"><span>About Us</span></a><ul><li class="drop"><a href="http://www.vilnapubliclibrary.ab.ca/Your-Board" class="your_board_link parent_link" title="Your Board"><span>Your Board</span></a><ul><li><a href="http://www.vilnapubliclibrary.ab.ca/Board-Documents" title="Board documents"><span>Board Documents</span></a></li></ul></li></ul></li><li><a href="http://www.vilnapubliclibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.vilnapubliclibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
-  
 </ul>
 
 	</nav>
@@ -568,82 +565,60 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
+      <li class="new_comment_on_post">
+        <a href="/blogs/show_entry/5330#comment1428">				
+	  Sherr comment on Free Senior Computer Course			 			
+        </a>        
+      </li>
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5525">				
-	  Vilna Xray Machine Fundraiser			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5525">
+	    Vilna Xray Machine Fundraiser
+          </a>
         <p>Vilna Library continually sells double copies or books that are not usable in our collection for a donation towards the Xray machine at the hospita...
         <!-- <a href="/blogs/show_entry/5525">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5331">				
-	  Seniors Travel Show			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5331">
+	    Seniors Travel Show
+          </a>
         <p>Seniors interested in showing their travel destinations, pictures and wisdom are invited to sign up at Vilna 
 Library.  We will be hosting a Senio...
         <!-- <a href="/blogs/show_entry/5331">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5330"><img alt="12033176_1058883810811954_5527716987183415629_n" src="http://files.townlife.com/public/asset_files/6531/thumb_400/12033176_1058883810811954_5527716987183415629_n.jpg?1443302678" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6531/xlarge/12033176_1058883810811954_5527716987183415629_n.jpg?1443302678" class="image-popup-vertical-fit" target="_blank">
+              <img alt="12033176_1058883810811954_5527716987183415629_n" src="http://files.townlife.com/public/asset_files/6531/thumb_400/12033176_1058883810811954_5527716987183415629_n.jpg?1443302678" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5330">				
-	  Free Senior Computer Course			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5330">
+	    Free Senior Computer Course
+          </a>
         <p>Senior computer courses are ongoing in Vilna Library. Interested? Call Vilna library, leave your name and number
 and let us know what course you a...
         <!-- <a href="/blogs/show_entry/5330">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5329"><img alt="12038908_1058900220810313_6528177725984611470_o" src="http://files.townlife.com/public/asset_files/6530/thumb_400/12038908_1058900220810313_6528177725984611470_o.jpg?1443302360" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6530/xlarge/12038908_1058900220810313_6528177725984611470_o.jpg?1443302360" class="image-popup-vertical-fit" target="_blank">
+              <img alt="12038908_1058900220810313_6528177725984611470_o" src="http://files.townlife.com/public/asset_files/6530/thumb_400/12038908_1058900220810313_6528177725984611470_o.jpg?1443302360" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5329">				
-	  Lego Club			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5329">
+	    Lego Club
+          </a>
         <p>Lego Club is a new program for all children whatever age, but they must be accompanied by a parent or guardian.
 Lego Club is the forth Saturday of...
         <!-- <a href="/blogs/show_entry/5329">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
-      <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5328"><img alt="12038883_1058900227476979_8522581033537973305_o" src="http://files.townlife.com/public/asset_files/6529/thumb_400/12038883_1058900227476979_8522581033537973305_o.jpg?1443302273" /></a></div>
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5328">				
-	  Mental Health Coloring Day			 			
-        </a>
-        <p>Are you stressed, an adult and need a break? Hear is your perfect outing. 
-Vilna Library is hosting a coloring day the second Saturday of every mo...
-        <!-- <a href="/blogs/show_entry/5328">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/156">+ MORE</a></h6>
 </div>
@@ -654,39 +629,27 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/156">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/156">Upcoming Events</a> 
         <span class="latest_events_count">(1)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>09</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
             <a href="/calendars/show_event/31831">Open Computer Class, Basic.</a>
             <span class="upcoming_time_frame">
-              (in 11 hours)
-              
+              (today)
                 &nbsp;from  6:00 PM
-                
                   &nbsp;to  7:30 PM
-                
-              
             </span>
           </li>
-        
       </ul>
       <h6 class="more"><a href="/calendars/table/156">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -694,66 +657,33 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_743">
-	      
-              
-	      
+	    <dd id="action_743">
 	        <img alt="Call (780) 636-2077" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 636-2077" />
 		
 		Call (780) 636-2077
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/156" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1510&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1510&amp;return_url=http%3A%2F%2Fwww.vilnapubliclibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=156" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.vilnapubliclibrary.ab.ca%2F&amp;site_id=156" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -769,43 +699,25 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.historicvilnapoolhall.ca/" class="action_steps_link" target="_blank">Vilna Pool Hall</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.vilnaagsociety.com/" class="action_steps_link" target="_blank">Vilna Ag Society</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white" src="/images/resources/page_white.png?1445483283" />
 	  <a href="/Board-Documents" class="action_steps_link" target="">Board Documents</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.historicvilnapoolhall.ca/" class="action_steps_link" target="_blank">Vilna Pool Hall</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -822,16 +734,10 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -843,8 +749,6 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
 </div>
 
  </span>
@@ -865,7 +769,65 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
 			
 				
 			
@@ -887,7 +849,7 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
 			
 				
 			
@@ -909,65 +871,7 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -1003,7 +907,18 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
 			
 				
 			
@@ -1015,17 +930,6 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 				 
 			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -1073,7 +977,7 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1115,57 +1019,36 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.vilnapubliclibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.vilnapubliclibrary.ab.ca/Support-Your-Library" title="Support your library"><span>Support Your Library</span></a></li><li class="drop"><a href="http://www.vilnapubliclibrary.ab.ca/About-Us" class="about_us_link parent_link" title="About Us"><span>About Us</span></a><ul><li class="drop"><a href="http://www.vilnapubliclibrary.ab.ca/Your-Board" class="your_board_link parent_link" title="Your Board"><span>Your Board</span></a><ul><li><a href="http://www.vilnapubliclibrary.ab.ca/Board-Documents" title="Board documents"><span>Board Documents</span></a></li></ul></li></ul></li><li><a href="http://www.vilnapubliclibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.vilnapubliclibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/156" class="blog_link active_page" title="Blog">Blog</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=156" class="blog_link active_page" title="Blog"><span>Blog</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/156" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/232" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1174,7 +1057,7 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1184,44 +1067,25 @@ Vilna Library is hosting a coloring day the second Saturday of every mo...
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/156" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>, 
-			
 			
     <a href="http://www.kalynacountry.com">Kalyna Country</a>, 
 			
-			
      and <a href="http://www.vilna.ca">Village of Vilna</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1358,6 +1222,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1384,3 +1273,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

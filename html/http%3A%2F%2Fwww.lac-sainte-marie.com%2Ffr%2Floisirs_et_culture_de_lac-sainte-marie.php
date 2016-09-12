@@ -139,6 +139,7 @@ Services municipaux
 <li><a class="menu" href="fr/reservoirs_et_fosses_septiques_de_lac-sainte-marie.php">Réservoirs/fosses septiques</a></li>
 <li><a class="menu" href="fr/ecocentre_de_lac-sainte-marie.php">L'écocentre</a></li>
 <li><a class="menu" href="fr/reglements_et_permis_de_lac-sainte-marie.php">Règlements et permis</a></li>
+<li><a class="menu" href="fr/environnement_et_urbanisme.php">&nbsp;&nbsp;&nbsp;Environnement et urbanisme</a></li>
 <li><a class="menu" href="fr/loisirs_et_culture_de_lac-sainte-marie.php">Bibliothèque municipale</a></li>
 <li><a class="menu" href="fr/securite_publique_de_lac-sainte-marie.php">Sécurité publique</a></li>
 <li><a class="menu" href="fr/analyse_de_l_eau.php">Analyse de l'eau</a></li>
@@ -174,11 +175,13 @@ Dans notre communauté
 <br>
 <a href="documents/liste_organismes_2015-10-08.pdf" target="_blank" class="menu">Nos organismes</a>
 <br>
-<a href="documents/liste_entreprises_2016-01-20.pdf" target="_blank" class="menu">Nos entreprises</a>
+<a href="documents/liste_entreprises_2016-09-09.pdf" target="_blank" class="menu">Nos entreprises</a>
 <br>
 <a href="documents/associations_lacs_2015-09-10.pdf" target="_blank" class="menu">Associations de lac</a>
 <br>
 <a class="menu" href="fr/nouveaux_arrivants_lac-sainte-marie.php">Nouveaux arrivants</a>
+<br>
+<a href="http://lepostier.ca/hub/bottin_ressources_2016.pdf" target="_blank" class="menu">Bottin des ressources</a>
 <br>
 <a class="menu" href="fr/hyperliens_et_numeros_utiles_de_lac-sainte-marie.php">Hyperliens et numéros</a>
 <br>
@@ -201,6 +204,21 @@ Dans notre communauté
 
 <!-- Biblio aidants -->
 <div style="padding:10px;">
+
+
+<!-- Biblio municipalité de l'année -->
+<img src="images/reseau_biblio_outaouais.jpg" width="180" height="127" alt="" border="0">
+<div class="title_small">Lac-Sainte-Marie, "Municipalité de l'année"</div>
+<p>Lors de son assemblée générale annuelle, le 18 juin, le Réseau Biblio de l'Outaouais a honoré Lac-Sainte-Marie en nommant celle-ci "Municipalité de l'année 2015".</p>
+<ul class="liste">
+<li><a href="../documents_temp/biblio_52_ans.pdf" target="_blank">LIRE le communiqué ></a></li>
+  </ul>
+  <img src="../images/seperator_horz_250.gif" width="180" height="21">  
+
+
+
+
+
 <div class="title_small">Participation au programme Biblio-Aidants</div>
 <p>Le Réseau BIBLIO de l'Outaouais est heureux de participer au programme Biblio-Aidants qui est un service d'information à l'intention des proches aidants offert par les bibliothèques publiques québécoise et coordonné par l'Association des bibliothèques publiques du Québec.</p>
  <ul class="liste">
@@ -257,8 +275,8 @@ Courriel : admstemarie@crsbpo.qc.ca</p>
 
  
 <p class="title_small">Laissez-passer pour les musées</p>
-<p>Emprunter gratuitement des laissez-passer pour la visite de certains musées  et  
-pour d'autres évènements de la région de l’Outaouais :  s’informer à la bibliothèque durant les heures d’ouverture.</p>
+<p>Empruntez gratuitement des laissez-passer pour la visite de certains musées  et  
+pour d'autres événements de la région de l’Outaouais :  s'informer à la bibliothèque durant les heures d'ouverture.</p>
 
 <p class="title_small">Heures d'ouverture ( à l'année )</p>
  
@@ -291,6 +309,15 @@ pour d'autres évènements de la région de l’Outaouais :  s’informer à la 
 </ul>	
 <img src="images/seperator_horz_250.gif" width="360" height="21"> 		
 
+
+	<!-- Vidéo Biblio -->
+	<img src="http://lepostier.ca/hub/biblio_video.jpg"  alt="" border="0" style="margin-bottom:10px;">
+	<p>Les jeux vidéo sont maintenant disponibles à votre bibliothèque.</p>	
+<ul class="liste">
+<li>Pour consulter le communiqué à ce sujet :
+<br>   <a href="http://lepostier.ca/hub/biblio_jeux_video.pdf" target="_blank">cliquez ici  >></a>  </li>
+</ul>
+<img src="images/seperator_horz_250.gif" width="360" height="21"> 
 
 <!-- Zinio -->
 <img src="http://lepostier.ca/hub/zinio.jpg" width="328" height="186"> 

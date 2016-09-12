@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
 <link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href="/templates/sainteanne2012/css/template20160314.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/templates/sainteanne2012/css/template20160509.css" media="screen" />
 <link rel="icon" sizes="192x192" href="/touch-icon-192x192.png">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-180x180-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png">
@@ -84,7 +84,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </form>
 </div>
 <div id="header-menu">
-	<ul class="menu"><li class="item-140 parent"><a href="/english">English</a></li><li class="item-139 parent"><a href="/contacts">Contacts</a></li><li class="item-146"><a href="http://webmail.usainteanne.ca" target="_blank">Courriel</a></li><li class="item-137 parent"><a href="/bibliotheque">Bibliothèque</a></li><li class="item-142 parent"><a href="/a-propos">À propos</a></li></ul></div>
+	<ul class="menu"><li class="item-140 parent"><a href="/english">English</a></li><li class="item-139 parent"><a href="/contacts">Contacts</a></li><li class="item-146"><a href="https://outlook.office365.com" target="_blank">Courriel</a></li><li class="item-137 parent"><a href="/bibliotheque">Bibliothèque</a></li><li class="item-142 parent"><a href="/a-propos">À propos</a></li></ul></div>
 </div>
 <div class="cleared reset-box"></div>
 <div class="art-bar art-nav">
@@ -135,12 +135,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </div>  <div class="cleared"></div>
 </div>
 <div class="art-layout-cell art-sidebar2">
-<div class="art-nostyle hover">
-
-
-<div class="customart-nostyle hover"  >
-	<p><a href="/125"><img style="margin-bottom: 20px;" src="/images/images/accueil-options/125-anniversaire.jpg" alt="125e anniversaire" width="200" height="100" /></a></p></div>
-</div>
 <div class="art-nostyle">
 
 

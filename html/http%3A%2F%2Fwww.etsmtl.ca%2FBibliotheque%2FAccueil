@@ -8,7 +8,17 @@
 <meta http-equiv="content-style-type" content="text/css" /> 
 <meta http-equiv="content-script-type" content="text/javascript" /> 
 <link type="text/css" rel="stylesheet" href="/CMSPages/GetCSS.aspx?stylesheetname=ETSStyle" /> 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="/CMSPages/GetCSS.aspx?stylesheetname=ETSBiblioMobile" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/CMSScripts/bibliomobile/vendors/modernizr.js"></script>
+<script type="text/javascript" src="/CMSScripts/bibliomobile/vendors/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="/CMSScripts/bibliomobile/mobile.js"></script>
+
 <script type="text/javascript" src="/CMSScripts/pack.js"></script>
 <script>
 $( document ).ready(function() {
@@ -48,7 +58,7 @@ ul, ol{margin-left:33px}
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTU2MjkyNjQyNw9kFgICARBkZBYCAgMPZBYCZg9kFgJmD2QWAgIJD2QWAgIDD2QWAgICD2QWAmYPZBYCZg9kFgICCQ9kFgJmD2QWAmYPZBYCAgIPPCsACQEADxYYHgxaZXJvUm93c1RleHQFHUF1Y3VuZSBub3V2ZWxsZSBwcsOpc2VudGVtZW50HgxSZXBlYXRMYXlvdXQLKiZTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLlJlcGVhdExheW91dAAeDEVuYWJsZVBhZ2luZ2geEE5lc3RlZENvbnRyb2xzSURlHhZIaWRlQ29udHJvbEZvclplcm9Sb3dzZx4dQWx0ZXJuYXRpbmdUcmFuc2Zvcm1hdGlvbk5hbWVlHhVTaG93RWRpdERlbGV0ZUJ1dHRvbnNoHhRDTVNEYXRhQmluZEJ5RGVmYXVsdGceD1JlcGVhdERpcmVjdGlvbgsqKVN5c3RlbS5XZWIuVUkuV2ViQ29udHJvbHMuUmVwZWF0RGlyZWN0aW9uAR4LXyFJdGVtQ291bnQCAx4SVHJhbnNmb3JtYXRpb25OYW1lBRRDTVMuTmV3cy5OZXdzQWNjdWVpbB4NUmVwZWF0Q29sdW1ucwIBZBYGZg9kFgJmD2QWAmYPFQRHL0JpYmxpb3RoZXF1ZS9Ob3V2ZWxsZXMvMjAxNi9BdGVsaWVycy1kZS1mb3JtYXRpb24tRW5kTm90ZS3igJMtRXRlLTIwMTZHL0JpYmxpb3RoZXF1ZS9Ob3V2ZWxsZXMvMjAxNi9BdGVsaWVycy1kZS1mb3JtYXRpb24tRW5kTm90ZS3igJMtRXRlLTIwMTYsQXRlbGllcnMgZGUgZm9ybWF0aW9uIEVuZE5vdGUg4oCTIMOJdMOpIDIwMTZKR8OpcmVyIGZhY2lsZW1lbnQgc2VzIHLDqWbDqXJlbmNlcyBiaWJsaW9ncmFwaGlxdWVzIOKAkyBkYXRlcyBkZXMgYXRlbGllcnNkAgEPZBYCZg9kFgJmDxUETy9CaWJsaW90aGVxdWUvTm91dmVsbGVzLzIwMTYvR2FnbmFudHMtZGVzLXByaXgtZGUtcGFydGljaXBhdGlvbi1hdS1zb25kYWdlLUxpYlFPL0JpYmxpb3RoZXF1ZS9Ob3V2ZWxsZXMvMjAxNi9HYWduYW50cy1kZXMtcHJpeC1kZS1wYXJ0aWNpcGF0aW9uLWF1LXNvbmRhZ2UtTGliUTtHYWduYW50cyBkZXMgcHJpeCBkZSBwYXJ0aWNpcGF0aW9uIGF1IHNvbmRhZ2UgTGliUVVBTCsgMjAxNiJMYSBCaWJsaW90aMOocXVlIGZhaXQgZGVzIGhldXJldXghZAICD2QWAmYPZBYCZg8VBD4vQmlibGlvdGhlcXVlL05vdXZlbGxlcy8yMDE2L1JlcG9uc2VzLWF1LXNvbmRhZ2UtTGliUVVBTC0tMjAxNj4vQmlibGlvdGhlcXVlL05vdXZlbGxlcy8yMDE2L1JlcG9uc2VzLWF1LXNvbmRhZ2UtTGliUVVBTC0tMjAxNiJSw6lwb25zZXMgYXUgc29uZGFnZSBMaWJRVUFMKyAyMDE2HlF1ZWxxdWVzIGRvbm7DqWVzIHN0YXRpc3RpcXVlc2QYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFKHBsYyRsdCR6b25lTG9nbyRTZWFyY2hCb3gkYnRuSW1hZ2VCdXR0b24zi0m6JZ0vMu5IbAdzzCzTE9BGZw==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTU2MjkyNjQyNw9kFgICARBkZBYCAgMPZBYCZg9kFgJmD2QWAgIJD2QWAgIDD2QWAgICD2QWAmYPZBYCZg9kFgICCQ9kFgJmD2QWAmYPZBYCAgIPPCsACQEADxYYHgxaZXJvUm93c1RleHQFHUF1Y3VuZSBub3V2ZWxsZSBwcsOpc2VudGVtZW50HgxSZXBlYXRMYXlvdXQLKiZTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLlJlcGVhdExheW91dAAeDEVuYWJsZVBhZ2luZ2geEE5lc3RlZENvbnRyb2xzSURlHhZIaWRlQ29udHJvbEZvclplcm9Sb3dzZx4dQWx0ZXJuYXRpbmdUcmFuc2Zvcm1hdGlvbk5hbWVlHhVTaG93RWRpdERlbGV0ZUJ1dHRvbnNoHhRDTVNEYXRhQmluZEJ5RGVmYXVsdGceD1JlcGVhdERpcmVjdGlvbgsqKVN5c3RlbS5XZWIuVUkuV2ViQ29udHJvbHMuUmVwZWF0RGlyZWN0aW9uAR4LXyFJdGVtQ291bnQCAx4SVHJhbnNmb3JtYXRpb25OYW1lBRRDTVMuTmV3cy5OZXdzQWNjdWVpbB4NUmVwZWF0Q29sdW1ucwIBZBYGZg9kFgJmD2QWAmYPFQRLL0JpYmxpb3RoZXF1ZS9Ob3V2ZWxsZXMvMjAxNi9BdGVsaWVycy1kZS1mb3JtYXRpb24tRW5kTm90ZS3igJMtQXV0b21uZS0yMDE2Sy9CaWJsaW90aGVxdWUvTm91dmVsbGVzLzIwMTYvQXRlbGllcnMtZGUtZm9ybWF0aW9uLUVuZE5vdGUt4oCTLUF1dG9tbmUtMjAxNi5BdGVsaWVycyBkZSBmb3JtYXRpb24gRW5kTm90ZSDigJMgQXV0b21uZSAyMDE2T0fDqXJlciBmYWNpbGVtZW50IHNlcyByw6lmw6lyZW5jZXMgYmlibGlvZ3JhcGhpcXVlcyZuYnNwO+KAkyBkYXRlcyBkZXMgYXRlbGllcnNkAgEPZBYCZg9kFgJmDxUESS9CaWJsaW90aGVxdWUvTm91dmVsbGVzLzIwMTYvTG9naWNpZWwtZGUtZGV0ZWN0aW9uLWRlLXBsYWdpYXQtaVRoZW50aWNhdGVJL0JpYmxpb3RoZXF1ZS9Ob3V2ZWxsZXMvMjAxNi9Mb2dpY2llbC1kZS1kZXRlY3Rpb24tZGUtcGxhZ2lhdC1pVGhlbnRpY2F0ZS1Mb2dpY2llbCBkZSBkw6l0ZWN0aW9uIGRlIHBsYWdpYXQgaVRoZW50aWNhdGUPQWNjw6hzIHLDqXRhYmxpZAICD2QWAmYPZBYCZg8VBEcvQmlibGlvdGhlcXVlL05vdXZlbGxlcy8yMDE2L0F0ZWxpZXJzLWRlLWZvcm1hdGlvbi1FbmROb3RlLeKAky1FdGUtMjAxNkcvQmlibGlvdGhlcXVlL05vdXZlbGxlcy8yMDE2L0F0ZWxpZXJzLWRlLWZvcm1hdGlvbi1FbmROb3RlLeKAky1FdGUtMjAxNixBdGVsaWVycyBkZSBmb3JtYXRpb24gRW5kTm90ZSDigJMgw4l0w6kgMjAxNkpHw6lyZXIgZmFjaWxlbWVudCBzZXMgcsOpZsOpcmVuY2VzIGJpYmxpb2dyYXBoaXF1ZXMg4oCTIGRhdGVzIGRlcyBhdGVsaWVyc2QYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFKHBsYyRsdCR6b25lTG9nbyRTZWFyY2hCb3gkYnRuSW1hZ2VCdXR0b24JlfcboQ/s4wg0ghZFkogF6U2c2Q==" />
 </div>
 
 <script type="text/javascript">
@@ -76,8 +86,8 @@ function __doPostBack(eventTarget, eventArgument) {
 
 //]]>
 </script>
-<script src="/ScriptResource.axd?d=tven6fPX7qyFvjQ8VMnIk2I9uaoTeKfxpIcaIglG_GZ2jboItaiWjudqOS5GYJuZwBPx7aqXGi31ZRrSTimMDc8FyEkvbgQQfzohqefgYs4r-jJ1C7-6k140ZHwtX4inBgzzk8y0smW4IY0vMfsxizkxo2ISRvux9Z81UCvlNdlm3q8t0&amp;t=749d3652" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=aFvd0QZaLr5Mu3olRS4PXexmt6tOLfLxq3Slu_hlR_aj_xEYb17_ESuFpmsfrkmP6_IIw5Nx2HjR-1Q3Y10b3uuTfFGw691xizb3qGCnaQ1YHBou2_mPUmit5lzvIUIq_W5g7769uDW-hSfHMgaCVxzXOtf454HCvir3wuLO9X4HVGHK0&amp;t=749d3652" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=tven6fPX7qyFvjQ8VMnIk2I9uaoTeKfxpIcaIglG_GZ2jboItaiWjudqOS5GYJuZwBPx7aqXGi31ZRrSTimMDc8FyEkvbgQQfzohqefgYs4r-jJ1C7-6k140ZHwtX4inBgzzk8y0smW4IY0vMfsxizkxo2ISRvux9Z81UCvlNdlm3q8t0&amp;t=2e7e5ad3" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=aFvd0QZaLr5Mu3olRS4PXexmt6tOLfLxq3Slu_hlR_aj_xEYb17_ESuFpmsfrkmP6_IIw5Nx2HjR-1Q3Y10b3uuTfFGw691xizb3qGCnaQ1YHBou2_mPUmit5lzvIUIq_W5g7769uDW-hSfHMgaCVxzXOtf454HCvir3wuLO9X4HVGHK0&amp;t=2e7e5ad3" type="text/javascript"></script>
 <div>
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A5343185" />
@@ -260,6 +270,8 @@ left:-120px; top:-50px;"><div id="plc_lt_zoneLogo_SearchBox_pnlSearch" class="se
         <li><a href="/Bibliotheque/Infos-generales/Bibliotheque/Coordonnees">Coordonnées</a></li>
         <li><a href="/Bibliotheque/Infos-generales/Bibliotheque/Collections-en-bref">En quelques chiffres<br />
         </a></li>
+        <li class="latest-news-link"><a href="/Bibliotheque/Nouvelles/2016">Nouvelles<br />
+        </a></li>
         <li><a href="/Bibliotheque/Infos-generales/Bibliotheque/Politiques-et-reglements">Plan stratégique,<br />
         politiques, règlements</a></li>
         <li><a href="/Bibliotheque/Infos-generales/Bibliotheque/Personnel">Personnel</a></li>
@@ -339,9 +351,7 @@ left:-120px; top:-50px;"><div id="plc_lt_zoneLogo_SearchBox_pnlSearch" class="se
   <div id="etsAMainContent" class="clearfix" >
      <div id="etsALeftColBiblio">
         <div id="etsAOngletsBiblio">
-                        <!-- Detect mobile --> <script type="text/javascript" src="check_mobile.js"></script> <script type="text/javascript">
-checkMobile("http://ets.mbiblio.ca");
-</script><ul class="etshtabs">
+                        <ul class="etshtabs">
     <li class="etsTabOnglet1 select" id="onglet1t"><a href="#onglet1">RECHERCHE</a></li>
     <li class="etsTabOnglet2" id="onglet2t"><a href="#onglet2">MÉMOIRES ET THÈSES DE L'ÉTS</a></li>
 </ul>
@@ -436,7 +446,7 @@ return sR;
                         </div>
 		        <div id="etsAmainRightBiblio">
 			     <div id="imgListFiller" style="width: 462px; height: 385px;">&nbsp;</div>
-<ul id="imgList" style="position:absolute;right:0;top:0"><li><a href="/bibliotheque/Services/Pour-la-recherche/Vitrine-de-diffusion"><img src="/getattachment/Bibliotheque/Accueil/biblio_espace_ETS.jpg"></a></li>
+<ul id="imgList" style="position:absolute;right:0;top:0"><li><a href="http://bibliotheque.etsmtl.ca/libre-acces" target="_blank"><img src="/getattachment/Bibliotheque/Accueil/Carrousel-Libre-acces-CRSNG.png"></a></li>
 <li><a href="/bibliotheque/Services/Equipements/Salles-de-travail"><img src="/getattachment/Bibliotheque/Accueil/Biblio_espace3c_ETS.jpg"></a></li>
 <li><a href="/bibliotheque/Infos-generales/Bibliotheque/Collections-en-bref"><img src="/getattachment/Bibliotheque/Accueil/Biblio_ETS_2015.jpg"></a></li>
 <li><a href="/bibliotheque/Aide-et-formation/A-votre-service/Assistance-(par-telephone,-sur-place,-par-courriel"><img src="/getattachment/Bibliotheque/Accueil/Biblio_assistance_ETS.jpg"></a></li>
@@ -492,6 +502,36 @@ $(document).ready(function(){
 		<td>
 <div class="etsANews">
 <!-- <div class="etsARepeaterImage" style="">
+	<a href="/Bibliotheque/Nouvelles/2016/Ateliers-de-formation-EndNote-–-Automne-2016"></a>
+</div>-->
+<div class="etsFlecheNews">
+<div class="etsANewsTitle">
+<a href="/Bibliotheque/Nouvelles/2016/Ateliers-de-formation-EndNote-–-Automne-2016">Ateliers de formation EndNote – Automne 2016</a>
+</div>
+</div>
+<div class="etsARepeaterSummary">
+  Gérer facilement ses références bibliographiques&nbsp;– dates des ateliers
+</div>
+</div></td>
+	</tr><tr>
+		<td>
+<div class="etsANews">
+<!-- <div class="etsARepeaterImage" style="">
+	<a href="/Bibliotheque/Nouvelles/2016/Logiciel-de-detection-de-plagiat-iThenticate"></a>
+</div>-->
+<div class="etsFlecheNews">
+<div class="etsANewsTitle">
+<a href="/Bibliotheque/Nouvelles/2016/Logiciel-de-detection-de-plagiat-iThenticate">Logiciel de détection de plagiat iThenticate</a>
+</div>
+</div>
+<div class="etsARepeaterSummary">
+  Accès rétabli
+</div>
+</div></td>
+	</tr><tr>
+		<td>
+<div class="etsANews">
+<!-- <div class="etsARepeaterImage" style="">
 	<a href="/Bibliotheque/Nouvelles/2016/Ateliers-de-formation-EndNote-–-Ete-2016"></a>
 </div>-->
 <div class="etsFlecheNews">
@@ -501,36 +541,6 @@ $(document).ready(function(){
 </div>
 <div class="etsARepeaterSummary">
   Gérer facilement ses références bibliographiques – dates des ateliers
-</div>
-</div></td>
-	</tr><tr>
-		<td>
-<div class="etsANews">
-<!-- <div class="etsARepeaterImage" style="">
-	<a href="/Bibliotheque/Nouvelles/2016/Gagnants-des-prix-de-participation-au-sondage-LibQ"></a>
-</div>-->
-<div class="etsFlecheNews">
-<div class="etsANewsTitle">
-<a href="/Bibliotheque/Nouvelles/2016/Gagnants-des-prix-de-participation-au-sondage-LibQ">Gagnants des prix de participation au sondage LibQUAL+ 2016</a>
-</div>
-</div>
-<div class="etsARepeaterSummary">
-  La Bibliothèque fait des heureux!
-</div>
-</div></td>
-	</tr><tr>
-		<td>
-<div class="etsANews">
-<!-- <div class="etsARepeaterImage" style="">
-	<a href="/Bibliotheque/Nouvelles/2016/Reponses-au-sondage-LibQUAL--2016"></a>
-</div>-->
-<div class="etsFlecheNews">
-<div class="etsANewsTitle">
-<a href="/Bibliotheque/Nouvelles/2016/Reponses-au-sondage-LibQUAL--2016">Réponses au sondage LibQUAL+ 2016</a>
-</div>
-</div>
-<div class="etsARepeaterSummary">
-  Quelques données statistiques
 </div>
 </div></td>
 	</tr>

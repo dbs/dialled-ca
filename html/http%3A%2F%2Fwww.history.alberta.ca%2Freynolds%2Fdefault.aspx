@@ -31,7 +31,8 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
-    
+    
+
     
 
 <link href="css/reyn_style.css" rel="stylesheet" type="text/css" />
@@ -96,16 +97,9 @@
 <div id="mainwrapper2">
 <div id="maincontent">
 
-      <h1>Reynolds-Alberta Museum      </h1>
+      <h1>Reynolds-Alberta Museum</h1>
       <hr />
 
-    <br />
-        <div style="border:1px solid #333333; padding:0 10px;">
-        <h3>Be our guest - Free admission for wildfire evacuees</h3>
-        <p>Now until September 5th, 2016, regular admission fees will be waived at provincially-owned historic sites and museums for evacuees of the Alberta wildfires. Evacuees will be required to provide photo identification or a postal code as proof of residency for family admission. We hope access to our sites and museums provides an opportunity for displaced Albertans to enjoy some activities together during this difficult time.
-            </p>
-            </div>
-        <br />
       <p>The Reynolds-Alberta Museum in Wetaskiwin, Alberta, interprets the impact of technological change in transportation,
         aviation, agriculture and industry from the 1890s to the present. Visitors will see a wide variety of vintage automobiles,
         motorcycles, bicycles, trucks, stationary engines, tractors, agricultural implements, aircraft and industrial
@@ -130,7 +124,7 @@
       </div>
         
         <p align="center">&nbsp;</p>
-    <div style="float:right; font-size:.8em; color:#666;"><span id="content_lastmodifiedLabel">Last reviewed/revised: May 7, 2016</span></div>   
+    <div style="float:right; font-size:.8em; color:#666;"><span id="content_lastmodifiedLabel">Last reviewed/revised: September 9, 2016</span></div>   
      
 </div>
     <div id="thirdcolumn">

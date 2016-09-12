@@ -122,7 +122,10 @@ liste_ts["261"] = new Array('RÃ©pertoire des organismes et entreprises','',0,1
 liste_fp["261"] = "fiches";
 liste_ts["3"] = new Array('CoordonnÃ©es','CoordonnÃ©es et heures d\'ouverture',0,1);
 liste_fp["3"] = "joindre";
+liste_sect["147"] = 'Publications 2015';
 liste_sect["107"] = 'La municipalitÃ©';
+liste_ts["349"] = new Array('','',0,107);
+liste_fp["349"] = "publications-2015";
 liste_ts["341"] = new Array('Mot de bienvenue du maire','Monsieur Pierre Yelle,maire',0,107);
 liste_fp["341"] = "motdebienvenuedumaire";
 liste_ts["216"] = new Array('Album photos','',0,107);
@@ -272,6 +275,7 @@ liste_sect["100"] = 'Administration';
               <li value="21"><a href="evaluation-et-taxation.php" onclick="getContenu(275); return false;">Ãvaluation et taxation</a></li>
               <li value="50"><a href="fiches.php" onclick="getContenu(261); return false;">RÃ©pertoire des organismes et entreprises</a></li>
               <li value="54"><a href="joindre.php" onclick="getContenu(3); return false;">CoordonnÃ©es</a></li><li value="3"><b>La municipalitÃ©</b><ol>
+              <li value="0"><a href="publications-2015.php" onclick="getContenu(349); return false;"></a></li>
               <li value="1"><a href="motdebienvenuedumaire.php" onclick="getContenu(341); return false;">Mot de bienvenue du maire</a></li>
               <li value="5"><a href="album_photo.php" onclick="getContenu(216); return false;">Album photos</a></li>
               <li value="15"><a href="archives-journal_municipal.php" onclick="getContenu(259); return false;">Bulletin municipal</a></li>

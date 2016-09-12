@@ -305,34 +305,36 @@ jQuery(document).ready(function () {
   
 </div>
 <div id="mid">
-		<div class="midText editable" id="included-region-1"><h1>DerniÃ¨res nouvelles</h1>
+		<div class="midText editable" id="included-region-1"><h1>DerniÃ¨res nouvelles&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+<h1>&nbsp;</h1>
 <div class="colonne_triple">
 <div class="nouvelle" style="text-align: justify;">
-<div class="date">Depuis le 31 mars :</div>
-<p style="text-align: left;"><a href="services-loisirs-activites.asp"><strong>RÃ©amÃ©nagement des collectes</strong></a></p>
-<p><a href="services-loisirs-activites.asp"><img src="images/BACBRUN124x275 .jpg" alt="" width="275" height="124"></a></p>
+<div class="date"><em>Depuis le 31 mars :</em></div>
+<p style="text-align: left;"><em><a href="services-loisirs-activites.asp"><strong>RÃ©amÃ©nagement des collectes</strong></a></em></p>
+<p><em><a href="services-loisirs-activites.asp"><img src="images/BACBRUN124x275 .jpg" alt="" height="124" width="275"></a></em></p>
 </div>
-<div class="nouvelle"><span style="font-size: small;">Visitez notre section <a href="citoyens-environnement-collecte-organique.asp">collectes</a> afin de tout connaÃ®tre sur les matiÃ¨res organiques.<br></span></div>
+<div class="nouvelle"><em><span style="font-family: Arial; font-size: small;">Visitez notre section <a href="citoyens-environnement-collecte-organique.asp">collectes</a> afin de tout connaÃ®tre sur les matiÃ¨res organiques.<br></span></em></div>
 </div>
 <div class="colonne_triple">
 <div class="nouvelle">
 <div class="nouvelle" style="text-align: justify;">
-<div class="date">NouveautÃ© :</div>
-<p style="text-align: left;"><strong>pourquoi remplacer sa toilette?<br></strong></p>
-<p><a href="info-mun.asp"><img src="images/toilette.tsp .jpg" alt="" width="275" height="124"></a></p>
-<span style="font-size: small;">La municipalitÃ© de Notre-Dame-de-Lourdes accorde une aide financiÃ¨re pour le remplacement d'une toilette standard par une toilette Ã  faible dÃ©bit. <br></span></div>
-<div class="nouvelle">Â </div>
+<div class="date"><em>NouveautÃ© :</em></div>
+<p style="text-align: left;"><em><strong>pourquoi remplacer sa toilette?<br></strong></em></p>
+<p><em><a href="info-mun.asp"><img src="images/toilette.tsp .jpg" alt="" height="124" width="275"></a></em></p>
+<em><span style="font-family: Arial; font-size: small;">La municipalitÃ© de Notre-Dame-de-Lourdes accorde une aide financiÃ¨re pour le remplacement d'une toilette standard par une toilette Ã  faible dÃ©bit. <br></span></em></div>
+<div class="nouvelle"><em>&nbsp;</em></div>
 </div>
 </div>
 <div class="colonne_triple">
 <div class="nouvelle">
-<div class="date">Du 18 avril au 20 mai :</div>
-<p><strong>inscriptions AU CAMP DE JOUR 2016<br></strong></p>
-<p><a href="services-loisirs-camp-de-jour.asp"><img src="vgx-images/INSCRIPTIONS124275.tsp .jpg" alt="" width="275" height="124"></a></p>
-<p style="text-align: justify;"><span style="font-size: small;">Encore une fois, la municipalitÃ© de Notre-Dame-de-Lourdes vous offre un camp de jour afin que vos jeunes de 5 Ã  12 ans puissent avoir un Ã©tÃ© rempli de moments inoubliable.<br></span></p>
+<div class="date"><br>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+</div>
+<div class="date" style="text-align: justify;">&nbsp;</div>
 </div>
 </div>
-<div style="clear: both;">Â </div></div>
+<div style="clear: both; text-align: justify;"><span style="font-family: Arial;">&nbsp;</span></div></div>
 </div><div id="footer" data-cms-node="179">
 		<div class="footerText" data-cms-node="180">
 		  <p align="center" data-cms-node="181"><strong data-cms-node="182">MunicipalitÃ© Notre-Dame-de-Lourdes</strong><br>

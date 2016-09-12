@@ -224,13 +224,16 @@
                 
                     <tr>
                     	
-						<td align="left" valign="top" width="292" style="padding-top: 14px;">
-                        	<a href="http://www.saint-donat.ca/index.cfm"><img src="http://www.saint-donat.ca/images/logo_pg3.jpg" border="0" /></a>
-                        </td>
+						
+							<td align="left" valign="top" width="292" style="padding-top: 5px; padding-left: 60px;">
+	                        	<a href="http://www.saint-donat.ca/index.cfm"><img src="http://www.saint-donat.ca/images/logo_StDonat_final4.jpg" border="0" /></a>
+	                        </td>
+						
+						
 						
                         <td align="left" valign="middle">
                         	
-							<img src="http://www.saint-donat.ca/images/hiver_int_01_08.jpg" />
+							<img src="http://www.saint-donat.ca/images/interne-ete-2016-06.jpg" />
 							
                         </td>
                     </tr>
@@ -721,7 +724,7 @@
 			
 			<li>
 			
-				<a href="http://www.saint-donat.ca/citoyens/Lecocentre.cfm">L'Écocentre</a>
+				<a href="http://www.saint-donat.ca/citoyens/Lecocentre.cfm">L'écocentre</a>
 			
 			</li>
 			
@@ -1166,10 +1169,11 @@
 	Mardi : 9 h &agrave; 12 h et 13 h &agrave; 16 h<br />
 	Mercredi : 13 h &agrave; 20 h<br />
 	Vendredi : 9 h &agrave; 12 h et 13 h &agrave; 16 h et 18 h &agrave; 20 h<br />
-	Samedi : 13 h &agrave; 16 h</p>
+	Samedi : 13 h &agrave; 16 h<br />
+	Dimanche : 13 h &agrave; 16 h (jusqu&#39;au 4 septembre 2016)</p>
 <p>
 	<strong>Services offerts</strong><br />
-	Pr&ecirc;t de livres et <strong>pr&ecirc;t de livres num&eacute;riques</strong>, revues, expositions, animation culturelle, service internet, club de nouveaut&eacute;s, WIFI gratuit, jeux de soci&eacute;t&eacute;, programme <em>Une naissance, un livre</em>. Mis &agrave; part le club des nouveaut&eacute;s, l&rsquo;ensemble des services est offert gratuitement aux r&eacute;sidents de Saint-Donat ainsi qu&rsquo;&agrave; ceux ayant une r&eacute;sidence secondaire.</p>
+	Pr&ecirc;t de livres et <strong>pr&ecirc;t de livres num&eacute;riques</strong>, revues, expositions, animation culturelle, service internet, club de nouveaut&eacute;s, WIFI, jeux de soci&eacute;t&eacute;, programme <em>Une naissance, un livre</em>. Mis &agrave; part le club des nouveaut&eacute;s, l&rsquo;ensemble des services est offert gratuitement aux r&eacute;sidents de Saint-Donat ainsi qu&rsquo;&agrave; ceux ayant une r&eacute;sidence secondaire.</p>
 <p>
 	Au fil des ann&eacute;es la biblioth&egrave;que s&rsquo;est aussi impliqu&eacute;e dans plusieurs &eacute;v&eacute;nements et activit&eacute;s culturelles, notamment :</p>
 <ul>
@@ -1281,9 +1285,9 @@
                 
 					<div class="right_holder">
 	   					
-						<a href="http://www.saint-donat.ca/change.cfm?id=1&page=Parcs_127.cfm"><img src="http://www.saint-donat.ca/images/pbs/Parc_des_pionniers.JPG" alt="Publicité" border="0" style="border: 1px solid #005888;" /></a><br /><br />
-						
 						<a href="http://www.saint-donat.ca/change.cfm?id=1&page=AccEsauxlacsavignettesetlavagedesbateaux.cfm"><img src="http://www.saint-donat.ca/images/pbs/GEN06.JPG" alt="Publicité" border="0" style="border: 1px solid #005888;" /></a><br /><br />
+						
+						<a href="http://www.saint-donat.ca/change.cfm?id=1&page=Parcs_127.cfm"><img src="http://www.saint-donat.ca/images/pbs/Parc_des_pionniers.JPG" alt="Publicité" border="0" style="border: 1px solid #005888;" /></a><br /><br />
 						
 	                </div>
 				
@@ -1344,15 +1348,15 @@
 
 <tr>
 	<form action="http://www.saint-donat.ca/index.cfm" method="post" name="form">
-	<input type="hidden" name="mois" value="4" />
+	<input type="hidden" name="mois" value="8" />
 	<input type="hidden" name="annee" value="2016" />
 	<td><input type="submit" value="&laquo;" class="btn_cal" /></td>
 	</form>
 	
-	<td align="center" colspan="5" class="days">MAI 2016</td>
+	<td align="center" colspan="5" class="days">SEPTEMBRE 2016</td>
 	
 	<form action="http://www.saint-donat.ca/index.cfm" method="post" name="form">
-	<input type="hidden" name="mois" value="6" />
+	<input type="hidden" name="mois" value="10" />
 	<input type="hidden" name="annee" value="2016" />
 	<td align="right"><input type="submit" value="&raquo;" class="btn_cal" /></td>
 	</form>
@@ -1371,6 +1375,14 @@
          
 <tr>
 	
+			<td>&nbsp;</td>
+			
+			<td>&nbsp;</td>
+			
+			<td>&nbsp;</td>
+			
+			<td>&nbsp;</td>
+			
 		
 		
 		<td class="days" >
@@ -1381,25 +1393,40 @@
 		
 		
 		
-		<td class="days" >
+		<td class="days" bgcolor="#005687">
 		
-			<div align="center">2</div>
-		
-		</td>
-		
-		
-		
-		<td class="days" >
-		
-			<div align="center">3</div>
+			<div align="center">
+			
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-02'}&mois=9&annee=2016">2</a>
+			
+			</div>
 		
 		</td>
 		
 		
 		
-		<td class="days" >
+		<td class="days" bgcolor="#005687">
 		
-			<div align="center">4</div>
+			<div align="center">
+			
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-03'}&mois=9&annee=2016">3</a>
+			
+			</div>
+		
+		</td>
+		
+			</tr>
+			<tr>
+		
+		
+		
+		<td class="days" bgcolor="#005687">
+		
+			<div align="center">
+			
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-04'}&mois=9&annee=2016">4</a>
+			
+			</div>
 		
 		</td>
 		
@@ -1421,24 +1448,21 @@
 		
 		
 		
+		<td class="days" >
+		
+			<div align="center">7</div>
+		
+		</td>
+		
+		
+		
 		<td class="days" bgcolor="#005687">
 		
 			<div align="center">
 			
-			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-05-07'}&mois=5&annee=2016">7</a>
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-08'}&mois=9&annee=2016">8</a>
 			
 			</div>
-		
-		</td>
-		
-			</tr>
-			<tr>
-		
-		
-		
-		<td class="days" >
-		
-			<div align="center">8</div>
 		
 		</td>
 		
@@ -1456,11 +1480,14 @@
 		
 			<div align="center">
 			
-			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-05-10'}&mois=5&annee=2016">10</a>
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-10'}&mois=9&annee=2016">10</a>
 			
 			</div>
 		
 		</td>
+		
+			</tr>
+			<tr>
 		
 		
 		
@@ -1472,13 +1499,9 @@
 		
 		
 		
-		<td class="days" bgcolor="#005687">
+		<td class="days" >
 		
-			<div align="center">
-			
-			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-05-12'}&mois=5&annee=2016">12</a>
-			
-			</div>
+			<div align="center">12</div>
 		
 		</td>
 		
@@ -1498,9 +1521,6 @@
 		
 		</td>
 		
-			</tr>
-			<tr>
-		
 		
 		
 		<td class="days" >
@@ -1519,17 +1539,28 @@
 		
 		
 		
-		<td class="days" >
+		<td class="days" bgcolor="#005687">
 		
-			<div align="center">17</div>
+			<div align="center">
+			
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-17'}&mois=9&annee=2016">17</a>
+			
+			</div>
 		
 		</td>
 		
+			</tr>
+			<tr>
 		
 		
-		<td class="days" >
 		
-			<div align="center">18</div>
+		<td class="days" bgcolor="#005687">
+		
+			<div align="center">
+			
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-18'}&mois=9&annee=2016">18</a>
+			
+			</div>
 		
 		</td>
 		
@@ -1555,14 +1586,11 @@
 		
 			<div align="center">
 			
-			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-05-21'}&mois=5&annee=2016">21</a>
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-21'}&mois=9&annee=2016">21</a>
 			
 			</div>
 		
 		</td>
-		
-			</tr>
-			<tr>
 		
 		
 		
@@ -1582,11 +1610,18 @@
 		
 		
 		
-		<td class="days" >
+		<td class="days" bgcolor="#005687">
 		
-			<div align="center">24</div>
+			<div align="center">
+			
+			<a href="http://www.saint-donat.ca/calendrier.cfm?event={d '2016-09-24'}&mois=9&annee=2016">24</a>
+			
+			</div>
 		
 		</td>
+		
+			</tr>
+			<tr>
 		
 		
 		
@@ -1620,9 +1655,6 @@
 		
 		</td>
 		
-			</tr>
-			<tr>
-		
 		
 		
 		<td class="days" >
@@ -1639,22 +1671,14 @@
 		
 		</td>
 		
-		
-		
-		<td class="days" >
-		
-			<div align="center">31</div>
-		
-		</td>
-		
 </tr>
 </table>
 					
 					<p><br />
 					<span style="font-size: 12px;">
-					10/05/2016 - <a href="http://www.saint-donat.ca/evenements/PiEcedetheAtreaLepetitvoilier.cfm">Pièce de théâtre : Le petit voilier</a><br />
-					12/05/2016 - <a href="http://www.saint-donat.ca/evenements/CineclubA19h30AlasalleJulesStGeorges.cfm">Ciné-club à 19 h 30 à la salle Jules-St-Georges</a><br />
-					21/05/2016 - <a href="http://www.saint-donat.ca/evenements/HeureduconteAlaBibliothEque.cfm">Heure du conte à la Bibliothèque</a><br />
+					17/09/2016 - <a href="http://www.saint-donat.ca/evenements/HeureduconteAlaBibliothEque.cfm">Heure du conte à la Bibliothèque</a><br />
+					18/09/2016 - <a href="http://www.saint-donat.ca/evenements/JourneeportesouvertesAlaCaserne.cfm">Journée portes ouvertes à la Caserne</a><br />
+					21/09/2016 - <a href="http://www.saint-donat.ca/evenements/SalondesAInes.cfm">Salon des Aînés</a><br />
 					
 					</span>
 					</p>
@@ -1706,7 +1730,7 @@
         	<tr>
             
             	
-				<td align="left" valign="top" width="220">
+				<td align="center" valign="top" width="220">
                 	
                     <img src="http://www.saint-donat.ca/images/logo_foot.jpg" alt="Municipalité de Saint-Donat" /><br /><br />
                     

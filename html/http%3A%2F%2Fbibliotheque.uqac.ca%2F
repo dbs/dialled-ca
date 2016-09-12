@@ -106,58 +106,7 @@
 						</ul>
 					</li>
 					
-					<li><a href="#">Formations</a>
-						<ul id="jsonResult2">
-							<li><a></a></li>
-						</ul>
-					</li>
-					
-					
-	<script type="text/javascript"> 
-			function fetchjsonp( structJson )
-			{
-				//alert('allo');
-				var resultUL = document.getElementById('jsonResult2');
-				
-				if ( resultUL.hasChildNodes() )
-				{
-					while ( resultUL.childNodes.length >= 1 )
-					{
-						resultUL.removeChild( resultUL.firstChild );       
-					} 
-				}
-				//element.parentNode.removeChild(element);
-				
-				var ton = true;
-				//alert (structJson.length);
-				for (var i = 0; i < structJson.length; i++) 
-				{ 
-					var item = document.createElement("li");
-					var itemLink = document.createElement("a");
-					if( ton )
-					{
-						itemLink.setAttribute('class', 'ton');
-						ton = false;
-					}
-					else
-					{
-						ton = true;
-					}
-					itemLink.setAttribute('href', 'http://bibvir2.uqac.ca/ateliers/inscription.php?id='+structJson[i].id_atelier);
-					var itemContent = document.createTextNode(structJson[i].titre); 
-					itemLink.appendChild(itemContent);
-					item.appendChild(itemLink);
-					resultUL.appendChild(item); 
-				}
-			}
-			
-			var url = "http://bibvir2.uqac.ca/ateliers/ateliers_jsonp.php?callback=fetchjsonp";
-			var script2 = document.createElement('script');
-			script2.setAttribute('src', url);
-
-			// on charge le script dans l'élément head
-			document.getElementsByTagName('head')[0].appendChild(script2); 
-		</script> 
+					<li><a href="http://bibliotheque.uqac.ca/formations">Formations</a></li>
 					
 					<li><a href="http://libguides.uqac.ca/">Ressources par discipline</a></li>
 					
@@ -182,11 +131,11 @@
 			<!-- aller chercher les dernieres nouvelles du blog -->
 			<ul class="sanspuce">
 				
-	<li class="post-1847 post type-post status-publish format-standard hentry category-publications-uqac" id="post-1847">
-	<a class="fleche" href="http://www.uqac.ca/biblio_actu/publications-uqac/la-communaute-de-luqac-en-publications-avril-2016/" rel="bookmark">La communauté de l'UQAC en publications (avril 2016) <br /><span class="moyen vert">Lire la suite >></span></a>
+	<li class="post-1885 post type-post status-publish format-standard hentry category-nouveautes category-ressources-disciplinaires category-ressources-electroniques" id="post-1885">
+	<a class="fleche" href="http://www.uqac.ca/biblio_actu/ressources-electroniques/nouvel-abonnement-livres-electroniques-et-videos-en-informatique/" rel="bookmark">Nouvel abonnement : Livres électroniques et vidéos en informatique <br /><span class="moyen vert">Lire la suite >></span></a>
 
-	<li class="post-1844 post type-post status-publish format-standard hentry category-generalites" id="post-1844">
-	<a class="fleche" href="http://www.uqac.ca/biblio_actu/generalites/testeurs-recherches/" rel="bookmark">Testeurs recherchés <br /><span class="moyen vert">Lire la suite >></span></a>
+	<li class="post-1871 post type-post status-publish format-standard hentry category-nouveautes" id="post-1871">
+	<a class="fleche" href="http://www.uqac.ca/biblio_actu/nouveautes/nouveaute-droits-demprunt-identiques-pour-tous/" rel="bookmark">Modifications des droits d&rsquo;emprunt pour les étudiants et le personnel <br /><span class="moyen vert">Lire la suite >></span></a>
 				<li style="text-align: right; padding-right: 10px;"><a href="http://www.uqac.ca/biblio_actu/"><span>...toutes les nouvelles</span></a></li>
 			</ul>
 		</div>
@@ -195,9 +144,9 @@
 				<p class="sub">Collection en vedette</p>
 				<ul class="sanspuce">
 					<li id="desc_vedette" style="text-align: left; margin-right: 10px;">
-						<a id="icone_vedette" href="http://www.metarecherche.ca/V/?func=native-link&resource=UDQ02218"><img src="/images/vedettes/bscomplete100.gif" title="Business Source Complete"></a>
+						<a id="icone_vedette" href="http://sbiproxy.uqac.ca/login?url=http://curio.ca"><img src="/images/vedettes/curio.png" title="Curio.ca"></a>
 						<p>
-							La base de données Business Source Complete est un outil incontournable pour les sciences économiques et administratives. Elle couvre tous les aspects du domaine des affaires: comptabilité, gestion économie, finance, marketing, etc. Elle fournit le texte intégral de près de 7,800 publications de niveau universitaire. Elle offre la possibilité de chercher dans les publications, les profils d'entreprises, l'index, les références citées, etc.
+							Curio est une nouvelle plateforme qui contient des documentaires télévisuels et radiophoniques, des reportages, des documents darchives, des séquences génériques et plus encore de la société Radio-Canada et de CBC.
 						</p>
 					</li>
 					<li style="text-align: right; padding-right: 10px;"><a href="/ressources/vedettes.php"><span>...toutes les collections en vedette</span></a></li>
@@ -238,7 +187,7 @@
 	<div id="accueil_col3">
 		<div id="pastilles">
 			<!-- <div class="pastille"><a id="pastille1" href="http://bibvir2.uqac.ca/orb/"></a></div> <!-- pastille 1 -->
-			<div class="pastille"><a id="pastille2" href="http://bibvir.uqac.ca/nouveautes/"></a></div> <!-- pastille 2 -->
+			<div class="pastille"><a id="pastille2" href="http://bibvir2.uqac.ca/nouveautes/"></a></div> <!-- pastille 2 -->
 			<div class="pastille"><a id="pastille3" href="http://bibvir2.uqac.ca/subsplus/subjects/suggestions_achat.php"></a></div> <!-- pastille 3 -->
 			<!--<div class="pastille"><a id="pastille4" href="../services/etudiants/ipads.php"></a></div> <!-- pastille 4 -->
 			<div class="pastille"><a id="pastille5" href="http://bibvir2.uqac.ca/bd/login.php?TD=URLI&url=http://bibvir2.uqac.ca/endnote/index.php"></a></div> <!-- pastille 5 -->
@@ -249,7 +198,7 @@
 			<div class="pastille" style="border: 1px solid grey; margin: 4px 0px 4px 0px; padding: 0px;">
 				<div style="background-color: #F8F8F0; margin: 0px; font-size: 1.1em; font-weight: bold; padding: 2px; text-align: center;">Disponible</div>
 				<div style=" padding: 5px;">
-				<div><img style="vertical-align: bottom; margin-top: 4px;" src="http://bibvir2.uqac.ca/commun/images/icone_ipad.png" title="iPads" alt="iPads"/> <strong>10</strong> tablettes iPad (<a href="http://bibliotheque.uqac.ca/services/etudiants/ipads.php">info</a>)<br /><img style="vertical-align: bottom; margin-top: 2px;" src="http://bibvir2.uqac.ca/commun/images/icone_laptop.png" title="portables" alt="portables"/> <strong>5</strong> portables (<a href="http://bibliotheque.uqac.ca/services/etudiants/portables.php">info</a>)<br /><img style="vertical-align: bottom; margin-top: 2px;" src="http://bibvir2.uqac.ca/commun/images/icone_door_open.png" title="salles" alt="salles"/> <strong>24</strong> salles (<a href="http://bibvir2.uqac.ca/orb/">réserver</a>)</div> 
+				<div><img style="vertical-align: bottom; margin-top: 4px;" src="http://bibvir2.uqac.ca/commun/images/icone_ipad.png" title="iPads" alt="iPads"/> <strong>5</strong> tablettes iPad (<a href="http://bibliotheque.uqac.ca/services/etudiants/ipads.php">info</a>)<br /><img style="vertical-align: bottom; margin-top: 2px;" src="http://bibvir2.uqac.ca/commun/images/icone_laptop.png" title="portables" alt="portables"/> <strong>5</strong> portables (<a href="http://bibliotheque.uqac.ca/services/etudiants/portables.php">info</a>)<br /><img style="vertical-align: bottom; margin-top: 2px;" src="http://bibvir2.uqac.ca/commun/images/icone_door_open.png" title="salles" alt="salles"/> <strong>24</strong> salles (<a href="http://bibvir2.uqac.ca/orb/">réserver</a>)</div> 
 				</div>
 			</div>
 		</div>

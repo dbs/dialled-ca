@@ -171,9 +171,9 @@ $(document).ready(function(){
 	<td>
 		<table width="231" border="0" cellpadding="0" cellspacing="0" align="center">
 		<tr>
-			<td style="text-align: left"><a href="/citoyen/culture/index.php?mois=04&amp;annee=2016"><img src="../../images/calendrier_fleche_precedente.gif" width="17" height="8" alt="" border="0" /></a></td>
-			<td colspan="5" style="text-align: center; font-weight: bold">Mai 2016</td>
-			<td style="text-align: right"><a href="/citoyen/culture/index.php?mois=06&amp;annee=2016"><img src="../../images/calendrier_fleche_suivante.gif" width="17" height="8" alt="" border="0" /></a></td>
+			<td style="text-align: left"><a href="/citoyen/culture/index.php?mois=08&amp;annee=2016"><img src="../../images/calendrier_fleche_precedente.gif" width="17" height="8" alt="" border="0" /></a></td>
+			<td colspan="5" style="text-align: center; font-weight: bold">Septembre 2016</td>
+			<td style="text-align: right"><a href="/citoyen/culture/index.php?mois=10&amp;annee=2016"><img src="../../images/calendrier_fleche_suivante.gif" width="17" height="8" alt="" border="0" /></a></td>
 		</tr>
 		</table>
 		<table width="231" border="0" cellpadding="0" cellspacing="0" align="center" class="calendrier">
@@ -187,48 +187,48 @@ $(document).ready(function(){
 			<td><img src="../../images/calendrier_samedi.gif" width="33" height="31" alt="" border="0" /></td>
 		</tr>
  <tr align="center">
-  <td style="background: #898122;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=01#events'><strong>01</strong></a></td>
-  <td style="background: #8b5524;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=02#events'><strong>02</strong></a></td>
-  <td>03</td>
-  <td>04</td>
-  <td>05</td>
-  <td>06</td>
-  <td>07</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>01</td>
+  <td>02</td>
+  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=09&amp;annee=2016&amp;jour=03#events'><strong>03</strong></a></td>
  </tr>
  <tr align="center">
+  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=09&amp;annee=2016&amp;jour=04#events'><strong>04</strong></a></td>
+  <td>05</td>
+  <td style="background: #8b5524;"><a href='../../calendrier/index.php?mois=09&amp;annee=2016&amp;jour=06#events'><strong>06</strong></a></td>
+  <td>07</td>
   <td>08</td>
   <td>09</td>
-  <td>10</td>
-  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=11#events'><strong>11</strong></a></td>
+  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=09&amp;annee=2016&amp;jour=10#events'><strong>10</strong></a></td>
+ </tr>
+ <tr align="center">
+  <td>11</td>
   <td>12</td>
   <td>13</td>
-  <td style="background: #898122;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=14#events'><strong>14</strong></a></td>
- </tr>
- <tr align="center">
-  <td>15</td>
+  <td>14</td>
+  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=09&amp;annee=2016&amp;jour=15#events'><strong>15</strong></a></td>
   <td>16</td>
   <td>17</td>
-  <td>18</td>
-  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=19#events'><strong>19</strong></a></td>
-  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=20#events'><strong>20</strong></a></td>
-  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=21#events'><strong>21</strong></a></td>
  </tr>
  <tr align="center">
-  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=22#events'><strong>22</strong></a></td>
+  <td>18</td>
+  <td style="background: #8b5524;"><a href='../../calendrier/index.php?mois=09&amp;annee=2016&amp;jour=19#events'><strong>19</strong></a></td>
+  <td>20</td>
+  <td>21</td>
+  <td>22</td>
   <td>23</td>
-  <td>24</td>
+  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=09&amp;annee=2016&amp;jour=24#events'><strong>24</strong></a></td>
+ </tr>
+ <tr align="center">
   <td>25</td>
   <td>26</td>
   <td>27</td>
   <td>28</td>
- </tr>
- <tr align="center">
-  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=05&amp;annee=2016&amp;jour=29#events'><strong>29</strong></a></td>
+  <td style="background: #d36500;"><a href='../../calendrier/index.php?mois=09&amp;annee=2016&amp;jour=29#events'><strong>29</strong></a></td>
   <td>30</td>
-  <td>31</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
   <td>&nbsp;</td>
  </tr>
 		</table>
@@ -272,29 +272,6 @@ $(document).ready(function(){
 	<td><img src="images/titre.gif" width="687" height="48" alt="" border="0" /></td>
 </tr>
 </table>
-
-<table width="587" border="0" cellpadding="0" cellspacing="0" align="center" class="data">
-<tr>
-	<th>PATRICE MICHAUD AU SOUPER CONCERT DU CAMP MUSICAL DU LAC MATAPÃDIA</th>
-</tr>
-<tr>
-	<td><p><img style="float: right; margin: 10px;" title="patrice_michaud_camp_musucal_lac_matapedia.jpg" src="https://ssl.pqm.net/gestion/files/1a81664b1b6211e202bd7afc6c637c80/fichiers/patrice_michaud_camp_musucal_lac_matapedia.jpg" alt="patrice_michaud_camp_musucal_lac_matapedia.jpg" width="180" height="180" />Le Camp musical du lac Matap&eacute;dia tiendra son 16e souper concert b&eacute;n&eacute;fice annuel le samedi 4 juin prochain &agrave; 18 h, au Centre sportif David-Pelletier de Sayabec.</p>
-<p>L&rsquo;&eacute;v&eacute;nement sera sous la pr&eacute;sidence d&rsquo;honneur de l&rsquo;auteur-compositeur-interpr&egrave;te Patrice Michaud et parrain&eacute; par Monsieur Yves Boulianne, directeur-g&eacute;n&eacute;ral de la Caisse Vall&eacute;e de la Matap&eacute;dia.</p>
-<p>R&eacute;servez d&egrave;s maintenant votre billet au co&ucirc;t de 70 $ pour cette soir&eacute;e qui promet d&rsquo;&ecirc;tre m&eacute;morable en t&eacute;l&eacute;phonant au (418) 725-8512 ou (418) 536-3652. Veuillez noter que des re&ccedil;us aux fins d&rsquo;imp&ocirc;t (35 $ par billet) seront remis aux gens qui en font la demande.</p>
-<p><a href="https://ssl.pqm.net/gestion/files/1a81664b1b6211e202bd7afc6c637c80/fichiers/patrice_michaud__souper_concertbenefice_2.pdf" target="_blank">--&gt; T&eacute;l&eacute;chargez le communiqu&eacute; de presse en format PDF</a></p>
-<p>&nbsp;</p>
-<p><span style="text-decoration: underline;"><strong>INSCRIPTIONS POUR LES CAMPS D'&Eacute;T&Eacute; 2016</strong></span></p>
-<p><a href="https://ssl.pqm.net/gestion/files/1a81664b1b6211e202bd7afc6c637c80/fichiers/camp_musical_activites2016.pdf" target="_blank">--&gt; T&eacute;l&eacute;chargez les dates d'activit&eacute;s en format PDF</a></p>
-<p><a href="https://ssl.pqm.net/gestion/files/1a81664b1b6211e202bd7afc6c637c80/fichiers/camp_musical_calendrier_des_concerts2016.pdf" target="_blank">--&gt; T&eacute;l&eacute;chargez le calendrier des spectacles en format PDF</a></p>
-<p><strong>INFORMATIONS : </strong></p>
-<p>Julie Quimper, directrice<br />Camp musical du lac Matap&eacute;dia<br />(418) 725-8512</p>
-<p>(Photo : Am&eacute;lie Gagn&eacute;)</p></td>
-</tr>
-<tr>
-	<td><br /><img src="../../images/ligne.gif" width="587" height="1" alt="" border="0" /><br /><br /></td>
-</tr>
-</table>
-
 
 <table width="587" border="0" cellpadding="0" cellspacing="0" align="center" class="data">
 <tr>

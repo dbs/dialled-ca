@@ -26,7 +26,7 @@
 <link rel="alternate" type="application/atom+xml" href="http://www.alliancefrancaise.ca/feeds/posts/atom/?post_category_id=2" title="Posts > featured news via Atom" />
 <link rel="alternate" type="application/xml" href="http://www.alliancefrancaise.ca/feeds/posts/xml/?post_category_id=2" title="Posts > featured news via XML" />
 <link rel="alternate" type="application/json" href="http://www.alliancefrancaise.ca/feeds/posts/json/?post_category_id=2" title="Posts via  JSON" />
-<link rel="stylesheet" type="text/css" href="/_public/Framework/Assets/CSS/server.php?css=3323657267" />
+<link rel="stylesheet" type="text/css" href="/_public/Framework/Assets/CSS/server.php?css=3257227289" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/_public/Framework/Assets/JavaScript/server.php?js=3999878528"></script>
 
@@ -737,9 +737,7 @@
 
 	
 		<div id="homePageContainer">
-			
-	
-<style type="text/css">
+			<style type="text/css">
 #slide_note
 {
 	position: absolute;
@@ -785,14 +783,6 @@
 
 
 
-	<div id="slide_note">
-
-		<div id="slide_note_title">ADULT NEW SESSION</div>
-		<div id="slide_note_contents"><p style="text-align: center;">Our May-June session of French classes starts soon! <a href="/adult-classes/course-selector/"><br />Book your spot</a> today 604-327-0201</p></div>
-
-	</div>
-
-
 <div class="metroBanners shadow"><a href="/kids-and-teens-classes/"><img src="/ban1.png" alt="Kids and Teen classes" /></a></div>
 <div class="metroBanners shadow"><a href="/adult-classes/"><img src="/ban2.png" alt="Adult classes" /></a></div>
 <div class="metroBanners shadow mr0"><a href="/public-service-and-corporate/"><img src="/ban3.png" alt="Public service" /></a></div>
@@ -805,11 +795,9 @@
 <div id="banner_rotator" class="layoutRotatorSlider">
 		<ul>
 			
-				<li><a href="/adult-classes/course-selector/"><img title="[? $post['post_title'] ?]" alt="banner" style="width: 660px; height: 196px;" src="/media/website_posts/296/165-adults.jpg" /></a></li>
+				<li><a href="/adult-classes/course-selector/"><img title="[? $post['post_title'] ?]" alt="banner" style="width: 660px; height: 196px;" src="/media/website_posts/296/adults171.jpg" /></a></li>
 			
-				<li><a href="/kids-and-teens-classes/summer-break/"><img title="[? $post['post_title'] ?]" alt="banner" style="width: 660px; height: 196px;" src="/media/website_posts/2/summer2016kids.jpg" /></a></li>
-			
-				<li><a href="https://alliancefrancaise.sslsvc.com/products/2652/"><img title="[? $post['post_title'] ?]" alt="banner" style="width: 660px; height: 196px;" src="/media/website_posts/345/BANNER-EVENT_Cine_Royal.jpg" /></a></li>
+				<li><a href="/kids-and-teens-classes/course-selector/"><img title="[? $post['post_title'] ?]" alt="banner" style="width: 660px; height: 196px;" src="/media/website_posts/361/171-kids-2.jpg" /></a></li>
 			
 		</ul>
 	</div></div>
@@ -839,7 +827,7 @@
 </div>
 
 
-<script src="/_public/Framework/Assets/JavaScript/server.php?js=630679564&amp;css=3323657267"></script>
+<script src="/_public/Framework/Assets/JavaScript/server.php?js=557098010&amp;css=3257227289"></script>
 <script>
 jQuery(document).ready(function() {
 	jQuery('#slide_note').insertAfter(jQuery('#identity'));
@@ -863,7 +851,7 @@ g_arrFormValidations['nav_login'].push(function()
 		var strVal = nItem.options[nItem.selectedIndex].value;
 		if(!strVal || strVal == 'null')
 		{
-			strError += 'Please select a value.\r\n';
+			strError += 'Please select a value\r\n';
 		}
 	}
 	else if(nItem.getAttribute('data-validation-mandatory'))
@@ -872,19 +860,34 @@ g_arrFormValidations['nav_login'].push(function()
 	}
 	else if(typeof(nItem.value) != 'undefined' && !nItem.value.length)
 	{
-		strError += 'Please enter a value.\r\n';
+		strError += 'Please fill in this field\r\n';
 	}
 
 	if(strError)
 	{
 		while(nItem.offsetWidth == 0 && nItem.offsetHeight == 0) { nItem = nItem.parentNode; }
-		jQuery(nItem).qtip({
-			content: { text: strError },
-			show: { event: false, ready: true },
-			hide: { event: 'keypress change', leave: false },
-			position: { my: 'middle left', at: 'middle right', container: jQuery(nItem.parentNode) },
-			style: {classes: 'qtip-s8-error qtip-rounded' }
-		});
+		if(nItem.nValidationContainer)
+		{
+			nItem.nValidationContainer.innerHTML = '';
+		}
+		else
+		{
+			var nValidationContainer = document.createElement('tooltipvalidation');
+			nItem.parentNode.appendChild(nValidationContainer);
+			nItem.nValidationContainer = nValidationContainer;
+		}
+		new ToolTip({
+			content: strError,
+			hideOn: ['keypress', 'change'],
+			container: nItem.nValidationContainer,
+			positionMyX: 'left',
+			positionMyY: 'center',
+			positionAt: nItem,
+			positionTargetX: 'right',
+			positionTargetY: 'center',
+			theme: 'error',
+			animation: 'bounce'
+		}).show();
 		try { if(nItem.focus) { nItem.focus(); } } catch (e) {}
    }
    return strError;
@@ -902,7 +905,7 @@ g_arrFormValidations['nav_login'].push(function()
 		var strVal = nItem.options[nItem.selectedIndex].value;
 		if(!strVal || strVal == 'null')
 		{
-			strError += 'Please select a value.\r\n';
+			strError += 'Please select a value\r\n';
 		}
 	}
 	else if(nItem.getAttribute('data-validation-mandatory'))
@@ -911,19 +914,34 @@ g_arrFormValidations['nav_login'].push(function()
 	}
 	else if(typeof(nItem.value) != 'undefined' && !nItem.value.length)
 	{
-		strError += 'Please enter a value.\r\n';
+		strError += 'Please fill in this field\r\n';
 	}
 
 	if(strError)
 	{
 		while(nItem.offsetWidth == 0 && nItem.offsetHeight == 0) { nItem = nItem.parentNode; }
-		jQuery(nItem).qtip({
-			content: { text: strError },
-			show: { event: false, ready: true },
-			hide: { event: 'keypress change', leave: false },
-			position: { my: 'middle left', at: 'middle right', container: jQuery(nItem.parentNode) },
-			style: {classes: 'qtip-s8-error qtip-rounded' }
-		});
+		if(nItem.nValidationContainer)
+		{
+			nItem.nValidationContainer.innerHTML = '';
+		}
+		else
+		{
+			var nValidationContainer = document.createElement('tooltipvalidation');
+			nItem.parentNode.appendChild(nValidationContainer);
+			nItem.nValidationContainer = nValidationContainer;
+		}
+		new ToolTip({
+			content: strError,
+			hideOn: ['keypress', 'change'],
+			container: nItem.nValidationContainer,
+			positionMyX: 'left',
+			positionMyY: 'center',
+			positionAt: nItem,
+			positionTargetX: 'right',
+			positionTargetY: 'center',
+			theme: 'error',
+			animation: 'bounce'
+		}).show();
 		try { if(nItem.focus) { nItem.focus(); } } catch (e) {}
    }
    return strError;
@@ -943,7 +961,7 @@ g_arrFormValidations['nav_newsletter'].push(function()
 		var strVal = nItem.options[nItem.selectedIndex].value;
 		if(!strVal || strVal == 'null')
 		{
-			strError += 'Please select a value.\r\n';
+			strError += 'Please select a value\r\n';
 		}
 	}
 	else if(nItem.getAttribute('data-validation-mandatory'))
@@ -952,19 +970,34 @@ g_arrFormValidations['nav_newsletter'].push(function()
 	}
 	else if(typeof(nItem.value) != 'undefined' && !nItem.value.length)
 	{
-		strError += 'Please enter a value.\r\n';
+		strError += 'Please fill in this field\r\n';
 	}
 
 	if(strError)
 	{
 		while(nItem.offsetWidth == 0 && nItem.offsetHeight == 0) { nItem = nItem.parentNode; }
-		jQuery(nItem).qtip({
-			content: { text: strError },
-			show: { event: false, ready: true },
-			hide: { event: 'keypress change', leave: false },
-			position: { my: 'middle left', at: 'middle right', container: jQuery(nItem.parentNode) },
-			style: {classes: 'qtip-s8-error qtip-rounded' }
-		});
+		if(nItem.nValidationContainer)
+		{
+			nItem.nValidationContainer.innerHTML = '';
+		}
+		else
+		{
+			var nValidationContainer = document.createElement('tooltipvalidation');
+			nItem.parentNode.appendChild(nValidationContainer);
+			nItem.nValidationContainer = nValidationContainer;
+		}
+		new ToolTip({
+			content: strError,
+			hideOn: ['keypress', 'change'],
+			container: nItem.nValidationContainer,
+			positionMyX: 'left',
+			positionMyY: 'center',
+			positionAt: nItem,
+			positionTargetX: 'right',
+			positionTargetY: 'center',
+			theme: 'error',
+			animation: 'bounce'
+		}).show();
 		try { if(nItem.focus) { nItem.focus(); } } catch (e) {}
    }
    return strError;
@@ -982,7 +1015,7 @@ g_arrFormValidations['nav_newsletter'].push(function()
 		var strVal = nItem.options[nItem.selectedIndex].value;
 		if(!strVal || strVal == 'null')
 		{
-			strError += 'Please select a value.\r\n';
+			strError += 'Please select a value\r\n';
 		}
 	}
 	else if(nItem.getAttribute('data-validation-mandatory'))
@@ -991,19 +1024,34 @@ g_arrFormValidations['nav_newsletter'].push(function()
 	}
 	else if(typeof(nItem.value) != 'undefined' && !nItem.value.length)
 	{
-		strError += 'Please enter a value.\r\n';
+		strError += 'Please fill in this field\r\n';
 	}
 
 	if(strError)
 	{
 		while(nItem.offsetWidth == 0 && nItem.offsetHeight == 0) { nItem = nItem.parentNode; }
-		jQuery(nItem).qtip({
-			content: { text: strError },
-			show: { event: false, ready: true },
-			hide: { event: 'keypress change', leave: false },
-			position: { my: 'middle left', at: 'middle right', container: jQuery(nItem.parentNode) },
-			style: {classes: 'qtip-s8-error qtip-rounded' }
-		});
+		if(nItem.nValidationContainer)
+		{
+			nItem.nValidationContainer.innerHTML = '';
+		}
+		else
+		{
+			var nValidationContainer = document.createElement('tooltipvalidation');
+			nItem.parentNode.appendChild(nValidationContainer);
+			nItem.nValidationContainer = nValidationContainer;
+		}
+		new ToolTip({
+			content: strError,
+			hideOn: ['keypress', 'change'],
+			container: nItem.nValidationContainer,
+			positionMyX: 'left',
+			positionMyY: 'center',
+			positionAt: nItem,
+			positionTargetX: 'right',
+			positionTargetY: 'center',
+			theme: 'error',
+			animation: 'bounce'
+		}).show();
 		try { if(nItem.focus) { nItem.focus(); } } catch (e) {}
    }
    return strError;
@@ -1021,7 +1069,7 @@ g_arrFormValidations['nav_newsletter'].push(function()
 		var strVal = nItem.options[nItem.selectedIndex].value;
 		if(!strVal || strVal == 'null')
 		{
-			strError += 'Please select a value.\r\n';
+			strError += 'Please select a value\r\n';
 		}
 	}
 	else if(nItem.getAttribute('data-validation-mandatory'))
@@ -1030,19 +1078,34 @@ g_arrFormValidations['nav_newsletter'].push(function()
 	}
 	else if(typeof(nItem.value) != 'undefined' && !nItem.value.length)
 	{
-		strError += 'Please enter a value.\r\n';
+		strError += 'Please fill in this field\r\n';
 	}
 
 	if(strError)
 	{
 		while(nItem.offsetWidth == 0 && nItem.offsetHeight == 0) { nItem = nItem.parentNode; }
-		jQuery(nItem).qtip({
-			content: { text: strError },
-			show: { event: false, ready: true },
-			hide: { event: 'keypress change', leave: false },
-			position: { my: 'middle left', at: 'middle right', container: jQuery(nItem.parentNode) },
-			style: {classes: 'qtip-s8-error qtip-rounded' }
-		});
+		if(nItem.nValidationContainer)
+		{
+			nItem.nValidationContainer.innerHTML = '';
+		}
+		else
+		{
+			var nValidationContainer = document.createElement('tooltipvalidation');
+			nItem.parentNode.appendChild(nValidationContainer);
+			nItem.nValidationContainer = nValidationContainer;
+		}
+		new ToolTip({
+			content: strError,
+			hideOn: ['keypress', 'change'],
+			container: nItem.nValidationContainer,
+			positionMyX: 'left',
+			positionMyY: 'center',
+			positionAt: nItem,
+			positionTargetX: 'right',
+			positionTargetY: 'center',
+			theme: 'error',
+			animation: 'bounce'
+		}).show();
 		try { if(nItem.focus) { nItem.focus(); } } catch (e) {}
    }
    return strError;
@@ -1054,8 +1117,15 @@ g_arrFormValidations['nav_newsletter'].push(function()
 		evt.preventDefault();
 		document.getElementById("forms_submitlink_1_input").value = '1';
 		var nForm = getClosest(nLink, 'form');
-		var bDoDefualt = triggerEventCrossBrowser(nForm, 'submit');
-		if(bDoDefualt)
+		if(nForm.getAttribute('id') && g_arrForms && g_arrForms[nForm.getAttribute('id')])
+		{
+			if(g_arrForms[nForm.getAttribute('id')].validate())
+			{
+				return;
+			}
+		}
+		var bDoDefault = triggerEventCrossBrowser(nForm, 'submit');
+		if(bDoDefault)
 		{
 			nForm.submit();
 		}

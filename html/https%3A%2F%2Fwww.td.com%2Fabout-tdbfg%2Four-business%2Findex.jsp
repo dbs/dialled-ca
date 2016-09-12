@@ -238,6 +238,92 @@ function getURLParameter(name) {
 	mboxCreate("tdcom_home_top");
 </script>
 
+<script type="text/javascript" src="/includes/javascript/corporate-responsibility/jquery.cycle.all.js"></script> 
+<script type="text/javascript" src="/includes/javascript/corporate-responsibility/jquery.jcarousel_chrome.js"></script>
+<style>
+.td-callout .td-callout-content ul>li{background-image: none !important;}
+.slideshow { position:relative; margin:0 auto; display:none; width:782px; height:342px; text-align:left; }
+.ss-container { position:relative; background-color:#ffffff; width:782px; text-align:left; }
+.ss-controls { position: relative; margin: -65px 0px 0px 850px; bottom:20px; padding:0px; border:0px; width:782px; height:15px; text-align:left; z-index:1111; }
+.ss-item .td-callout { height:305px; }
+ul.ss-control-items { margin:0 auto; padding:0px; border:0px; list-style:none; display:inline; }
+ul.ss-control-items li { margin:0px; padding:0px; border:0px; list-style:none; display:inline; cursor:pointer; background:none; }
+/* SLIDER */
+#mycarousel-prev, #mycarousel-next, #pbmycarousel-prev, #pbmycarousel-next { cursor:pointer; }
+.cr-video-carousel { margin:0 auto; width:100%; }
+.cr-video-carousel .carousel-wrapper { width:820px; float:left; }
+.cr-video-carousel .cr-video-item { margin:0 auto; width:165px; }
+.jcarousel { position:relative; overflow:hidden; height:230px; }
+.pbjcarousel { position:relative; overflow:hidden; height:310px; }
+.jcarousel ul, .pbjcarousel ul { position:absolute; list-style:none; margin:0; padding:0; width:20000em; }
+.jcarousel li, .pbjcarousel li { float:left; background:none; }
+.jcarousel-controls, .pbjcarousel-controls { position:absolute; margin:10px 0px 0px 0px; bottom:20px; padding:0px; border:0px; width:100%; height:15px; text-align:center; z-index:1112; }
+ul.jcarousel-control-items, ul.pbjcarousel-control-items { margin:0 auto; padding:0px; border:0px; list-style:none; display:inline; }
+ul.jcarousel-control-items li, ul.pbjcarousel-control-items li { margin:0px; padding:0px; border:0px; list-style:none; display:inline; cursor:pointer; background:none; }
+.landing-callouts { height:290px; }
+</style>
+<script type="text/javascript">
+
+function ss(index){
+ 
+ var dots = ["/images/corporate-responsibility/cr-2013/cr-grey-dot.png","/images/corporate-responsibility/cr-2013/cr-orange-dot.png"];
+ 
+ $('.slideshow').cycle({
+  fx: 'fade',
+  sync: 1,
+  startingSlide:index,
+  delay: -500,
+  speed: 200,
+  timeout: 6000,
+  requeueOnImageNotLoaded:true,
+  before:function(curr,next,opts){
+   // get next index
+   var inc = 0;
+   var nextindex = 0;
+   $('.ss-item').each(function(){
+    if($(this).attr('id') == next.id){
+     nextindex = inc;
+    }
+    ++inc;
+   });
+   $('.ss-control-items img').attr("src",dots[0]);
+   $('.ss-control-items img').eq(nextindex).attr("src",dots[1]);
+  }
+ });
+ window.setTimeout("", 6000);
+ $('.slideshow').show();
+}
+
+/* PAGE ON-LOAD */
+$(document).ready(function(){
+ 
+ /* SLIDESHOW */
+
+ $(function(){
+  $('.ss-control-items li').bind('click',function(){
+   var cli = Number($(this).find("img").eq(0).attr("alt").split("carousel page ")[1]) - 1;
+   $('.slideshow').cycle('pause');
+   $('.slideshow').cycle(cli);
+  });
+  // start cycle
+  ss(0);
+ });
+ 
+ 
+ $(document.documentElement).keyup(function (event) { 
+  if (event.keyCode == 39) {
+  $('#mycarousel-next').click();
+  } else if (event.keyCode == 37) {
+  $('#mycarousel-prev').click();
+  }
+ });
+
+ 
+  
+});
+ 
+</script>
+
 <link type="text/css" rel="stylesheet" href="/includes/styles/tdct-custom.css">
 <style>
 #primary_bg{background-color: #00A221;} 
@@ -252,27 +338,159 @@ function getURLParameter(name) {
 	right:0;
 }
 </style>
+<!-- Start Emergency Messaging Block -->
+
+
+  
+
+  
+<!--  Analytics Code Starts Here  -->
 
 
 
- <div class="td-callout td-callout-primary td-cs-highlight td-callout-clickable td-makeclickable td-margin-bottom-large">
- <div class="td-callout-heading td-copy-align-centre">
- <h4><a class="td-link-header td-makeclickable-target" href="https://www.tdcanadatrust.com/customer-service/contact-us/email/contact-fort-mcmurray.jsp" style="color: red;">Fort McMurray Fire Alert </a></h4>
- </div>
- <div class="td-callout-content">
- <p>TD is deeply saddened by the continuing devastation caused by the wildfire in Fort McMurray. 
-Our Fort McMurray TD Helps program is available for advice and assistance to those in need. Please call 1-844-352-1423.
-</p>
- </div>
- </div><!-- End .td-callout -->
+<!--  Analytics Code Ends Here  -->
+
+
+  
+
+  
+<!--  Analytics Code Starts Here  -->
+
+
+
+<!--  Analytics Code Ends Here  -->
+
+
+  
+
+  
+<!--  Analytics Code Starts Here  -->
+
+
+
+<!--  Analytics Code Ends Here  -->
+<!-- End Emergency Messaging Block -->
+
 
 <div class="td-layout-row">
 	<div class="td-layout-column td-layout-grid15 td-layout-column-first td-layout-column-last">
- 	<div class="td-callout td-callout-tertiary td-cs-tertiary " style="height:280px;">
-   <a href="https://www.tdcanadatrust.com/customer-service/contact-us/email/contact-fort-mcmurray.jsp"><img alt="Together we can help Fort McMurray. Donate now." class="td-fauxbgimage" src="/images/FortMcMurray.jpg" style="top: 0px; right: 0px"></a>  
+ 	
+		 <!-- slideshow content -->
+ <div class="ss-container">
+  <div class="clearfix">
+   <!-- slideshow content -->
+   <div id="ss" class="slideshow" >
+			
+    <div id="imgSS1" class="ss-item" style="width:948px !important;">
+     <div class="td-callout td-callout-tertiary td-cs-tertiary td-callout-fauxbgimage" style="height:280px; padding:0px 0px 0px !important;">
+      <img alt="Environmental focus at TD" class="td-fauxbgimage" src="/images/index-banner.jpg" style="width:948px !important;"/>
+      
+	<div class="td-callout-content">
+ <div class="td-layout-row td-padding-top-03 td-margin-top-large">
+  <div class="td-layout-column td-layout-column-first td-margin-top-none td-layout-column-last td-layout-grid6">
+  <div style="margin: 0px !important; height: 65px !important;" class="td-callout td-margin-top-none td-custom-lightGreen">
+  <div class="td-callout-heading">
+  <h2 style="margin-bottom: 5px !important;" class="td-copy-white td-margin-bottom-medium">TD is focused on the environment.</h2>
+  </div>
+  </div>
   </div>
  </div>
+ <div class="td-layout-row td-margin-bottom-none td-padding-bottom-12">
+  <div class="td-layout-column td-layout-column-first td-layout-column-last td-layout-grid5 td-push-up-22">
+  <div class="td-callout td-margin-bottom-large td-custom-darkGreen td-extend-right-36">
+  <div class="td-callout-heading">
+  <p class="td-copy-white td-margin-bottom-none td-copy-emphasized td-padding-bottom-12">
+   We're working to integrate environmental responsibility into every aspect of our business.
+  </p>
+  </div>
+  </div>
+  </div>
+ </div>
+ <div class="td-margin-left-12">
+					<a href="/corporate-responsibility/environment/index.jsp" class="td-button td-button-primary td-makeclickable-target" role="button"><span class="td-button-label td-copy-emphasized">Learn more</span></a> 
+				</div>
+ </div>
+     </div></div> <!-- End .td-callout -->
+    
+    <div id="imgSS2" class="ss-item" style="width:948px !important;">
+     <div class="td-callout td-callout-primary td-cs-tertiary td-callout-fauxbgimage td-padding-top-none" style="height: 280px !important; padding:0px 0px 0px !important;">
+      <img alt="TD’s responsibility progress" class="td-fauxbgimage" src="/images/cr2015-Lead-Carousel-communities.jpg" style="width:948px !important;" />
+      <div class="td-callout-content">
+						<div class="td-layout-row td-padding-top-03 td-margin-top-large td-extend-left-06">
+						 <div class="td-layout-column td-layout-column-first td-margin-top-none td-layout-column-last td-layout-grid7">
+						 <div style="margin: 0px !important;height: 55px !important;" class="td-callout td-margin-top-none td-custom-lightGreen">
+						 <div class="td-callout-heading">
+							<h2 style="margin-bottom: 5px !important;" class="td-copy-white td-margin-bottom-medium">Strengthening our Communities</h2>
+						 </div>
+						 </div>
+						 </div>
+						</div>
+						<div class="td-layout-row td-margin-bottom-none td-padding-bottom-12 td-extend-left-06">
+						 <div class="td-layout-column td-layout-column-first td-layout-column-last td-layout-grid9">
+						 <div class="td-callout td-margin-bottom-small td-custom-darkGreen">
+						 <div class="td-callout-heading">
+							<p class="td-copy-white td-margin-bottom-none td-copy-emphasized td-padding-bottom-12">
+							From corporate giving, volunteering and fundraising to responsible procurement, we work to enrich our communities by contributing to their social and economic development in long-lasting, sustainable ways.
+							</p>
+						 </div>
+						 </div>
+						 </div>
+						</div>
+						<div class="td-margin-left-12">
+										<a href="/corporate-responsibility/community/index.jsp" class="td-button td-button-primary td-makeclickable-target" role="button"><span class="td-button-label td-copy-emphasized">Learn more</span></a> 
+									</div>
+					 </div>
+     </div><!-- End .td-callout -->
+    </div>
+    <div id="imgSS3" class="ss-item" style="width:948px !important;">
+     <div class="td-callout td-callout-primary td-cs-tertiary td-callout-fauxbgimage td-padding-none" style="height:280px; padding:0px 0px 0px !important;">
+					<img alt="Diversity and inclusion at TD" class="td-fauxbgimage" src="/images/A-Banner_948x293.jpg" style="width:948px !important; height:280px;">
+      <div class="td-callout-content">
+						<div class="td-layout-row td-padding-top-03 td-margin-top-large">
+						 <div class="td-layout-column td-layout-column-first td-margin-top-none td-layout-column-last td-layout-grid5">
+						 <div style="margin: 0px !important;height: 50px !important;" class="td-callout td-margin-top-none td-custom-lightGreen">
+						 <div class="td-callout-heading">
+							<h2 style="margin-bottom: 5px !important;" class="td-copy-white td-margin-bottom-medium">Diversity & Inclusion</h2>
+						 </div>
+						 </div>
+						 </div>
+						</div>
+						<div class="td-layout-row td-margin-bottom-none td-padding-bottom-12">
+						 <div class="td-layout-column td-layout-column-first td-layout-column-last td-layout-grid6">
+						 <div class="td-callout td-margin-bottom-small td-custom-darkGreen">
+						 <div class="td-callout-heading">
+							<p class="td-copy-white td-margin-bottom-none td-copy-emphasized td-padding-bottom-12">
+								We're working to create a culture in which all employees thrive and all customers are welcome.
+							</p>
+						 </div>
+						 </div>
+						 </div>
+						</div>
+						<div class="td-margin-left-12">
+										<a href="/corporate-responsibility/diversity/diversity.jsp" class="td-button td-button-primary td-makeclickable-target" role="button"><span class="td-button-label td-copy-emphasized">Learn more</span></a> 
+									</div>
+					 </div>
+     </div><!-- End .td-callout -->
+    </div>
+    
+   </div>
+   <!-- / slideshow content -->
+  </div>
+  <!-- slideshow controls -->
+  <div class="ss-controls">
+   <ul class="ss-control-items">
+    <li><a href="#" title="carousel page 1"><img src="/images/corporate-responsibility/cr-2013/cr-grey-dot.png" alt="carousel page 1"/></a></li>
+    <li><a href="#" title="carousel page 2"><img src="/images/corporate-responsibility/cr-2013/cr-grey-dot.png" alt="carousel page 2"/></a></li>
+    <li><a href="#" title="carousel page 3"><img src="/images/corporate-responsibility/cr-2013/cr-grey-dot.png" alt="carousel page 3"/></a></li>
+    
+   </ul>
+  </div>
+  <!-- / slideshow controls -->
+ </div>
+ </div>
 </div>
+
+
 
 
 <div class="td-layout-row">

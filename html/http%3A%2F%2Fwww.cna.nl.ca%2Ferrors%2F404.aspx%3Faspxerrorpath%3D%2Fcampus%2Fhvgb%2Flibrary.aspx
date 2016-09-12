@@ -2,8 +2,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head id="Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="format-detection" content="telephone=no" /><meta name="keywords" content="college of the north atlantic, cona,cna,cna.nl.ca,collage of the north atlantic,www.cna.nl.ca,north atlantic college ,cona nl ,college of the north atlantic st. john&#39;s,college north atlantic,cna nl,cona newfoundland ,campus closures,College, North, Qatar, Atlantic, Newfoundland, Labrador, Public, College, public college, post-secondary, education, Atlantic, Canada, Canada, 100+, full-time, programs, 300+, part-time, course, programs, Applied, Arts, Business, Studies, Information, Technology, Engineering, Technology, Health, Sciences, Natural, Resources, Industrial, Trades, Continuing, Education, International, Students, student, College, Transfer, Distributed, Learning , Baie Verte, Bay St. George, Bonavista, Burin, Carbonear, Clarenville,Corner Brook, Gander, Grand Falls-Windsor, Happy Valley-Goose Bay, Labrador West, Placentia, Port aux Basque, Prince Philip Dr.,Ride Road, Seal Cove, St. Anthony, Distributed Learning Services, Contract, Training,campus,work,atlantic,prerequisite,semester,application,north,system,engineer,skill,business,graduate,design,education,learn" /><meta name="description" content="We are Newfoundland and Labrador&#39;s public college - one of the largest post-secondary educational and skills training centres in Atlantic Canada." /><link rel="shortcut icon" href="http://www.cna.nl.ca/favicon.ico" /><link media="all" rel="stylesheet" type="text/css" href="/css/all.css" /><link media="all" rel="stylesheet" type="text/css" href="/css/legacy.css" /><link media="all" rel="stylesheet" type="text/css" href="/css/target.css" /><link media="all" rel="stylesheet" type="text/css" href="/fonts/mp.css" /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-	
+<head id="Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="format-detection" content="telephone=no" /><meta name="keywords" content="college of the north atlantic, cona,cna,cna.nl.ca,collage of the north atlantic,www.cna.nl.ca,north atlantic college ,cona nl ,college of the north atlantic st. john&#39;s,college north atlantic,cna nl,cona newfoundland ,campus closures,College, North, Qatar, Atlantic, Newfoundland, Labrador, Public, College, public college, post-secondary, education, Atlantic, Canada, Canada, 100+, full-time, programs, 300+, part-time, course, programs, Applied, Arts, Business, Studies, Information, Technology, Engineering, Technology, Health, Sciences, Natural, Resources, Industrial, Trades, Continuing, Education, International, Students, student, College, Transfer, Distributed, Learning , Baie Verte, Bay St. George, Bonavista, Burin, Carbonear, Clarenville,Corner Brook, Gander, Grand Falls-Windsor, Happy Valley-Goose Bay, Labrador West, Placentia, Port aux Basque, Prince Philip Dr.,Ride Road, Seal Cove, St. Anthony, Distributed Learning Services, Contract, Training,campus,work,atlantic,prerequisite,semester,application,north,system,engineer,skill,business,graduate,design,education,learn" /><meta name="description" content="College of the North Atlantic is Newfoundland and Labrador&#39;s public college - one of the largest post-secondary educational and skills training centres in Atlantic Canada." /><link rel="shortcut icon" href="http://www.cna.nl.ca/favicon.ico" /><link media="all" rel="stylesheet" type="text/css" href="/css/all.css" /><link media="all" rel="stylesheet" type="text/css" href="/css/legacy.css" /><link media="all" rel="stylesheet" type="text/css" href="/css/target.css" /><link media="all" rel="stylesheet" type="text/css" href="/fonts/mp.css" /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /><link rel="stylesheet" href="/css/scroll-to-top-style.css" /> <!-- Gem style -->
+	<script src="/js/modernizr.js"></script> <!-- Modernizr -->
+
 	<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
 	<!--[if IE]><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
     <!--Javascript for top side menu and related pages section-->
@@ -70,7 +71,7 @@
 
     
     <script type='text/javascript'>
-        var ebSession = '2sn10bkwiakvvx1qglphhsfz';
+        var ebSession = 'bfyz43hhwi0sjyxqrvumk5qb';
         var ebRand = Math.random() + '';
         ebRand = ebRand * 1000000;
         //<![CDATA[ 
@@ -78,7 +79,7 @@
         //]]>
     </script>
     <noscript>
-    <img width="1" height="1" style="border:0" src="HTTP://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=735275&amp;Session=2sn10bkwiakvvx1qglphhsfz&amp;ns=1"/>
+    <img width="1" height="1" style="border:0" src="HTTP://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=735275&amp;Session=bfyz43hhwi0sjyxqrvumk5qb&amp;ns=1"/>
     </noscript>
     
     
@@ -95,6 +96,7 @@
 	<li><a href="/Careers/">Careers</a></li>
 	<li><a href="/Staff-Directory/">Staff Directory</a></li>
     <li><a href="/Admissions/contact-us.aspx">Contact Us</a></li>
+    <li><span style="color:#ffffff;"><i class="fa fa-phone fa-1x"></i>&nbsp;1-888-982-2268</span></li>
 </ul>
 <form action="/Search/" class="search-form">
 	<fieldset>
@@ -241,7 +243,7 @@
                     <div>
                         <img src='/images/info.png' alt="Info" class="imageleft" />
                         <div style="padding: 15px 10px 15px 50px;">
-                            <strong>Were you looking for... </strong><br /><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Baie-Verte.aspx'>Explore Our Campuses --> Baie Verte</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Bay-St-George.aspx'>Explore Our Campuses --> Bay St George</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Bonavista.aspx'>Explore Our Campuses --> Bonavista</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Burin.aspx'>Explore Our Campuses --> Burin</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Campus-Administrators.aspx'>Explore Our Campuses --> Campus Administrators</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Carbonear.aspx'>Explore Our Campuses --> Carbonear</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Clarenville.aspx'>Explore Our Campuses --> Clarenville</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Corner-Brook.aspx'>Explore Our Campuses --> Corner Brook</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Default.aspx'>Explore Our Campuses --> Home Directory</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Gander.aspx'>Explore Our Campuses --> Gander</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Grand-Falls-Windsor.aspx'>Explore Our Campuses --> Grand Falls Windsor</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Happy-Valley-Goose-Bay.aspx'>Explore Our Campuses --> Happy Valley Goose Bay</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Labrador-West.aspx'>Explore Our Campuses --> Labrador West</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Placentia.aspx'>Explore Our Campuses --> Placentia</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Port-Aux-Basques.aspx'>Explore Our Campuses --> Port Aux Basques</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Prince-Philip-Drive.aspx'>Explore Our Campuses --> Prince Philip Drive</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Ridge-Road.aspx'>Explore Our Campuses --> Ridge Road</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Seal-Cove.aspx'>Explore Our Campuses --> Seal Cove</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/St-Anthony.aspx'>Explore Our Campuses --> St Anthony</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Student-Development-Officers.aspx'>Explore Our Campuses --> Student Development Officers</a>
+                            <strong>Were you looking for... </strong><br /><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Baie-Verte.aspx'>Explore Our Campuses --> Baie Verte</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Bay-St-George.aspx'>Explore Our Campuses --> Bay St George</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Bonavista.aspx'>Explore Our Campuses --> Bonavista</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Burin.aspx'>Explore Our Campuses --> Burin</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Carbonear.aspx'>Explore Our Campuses --> Carbonear</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Clarenville.aspx'>Explore Our Campuses --> Clarenville</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Corner-Brook.aspx'>Explore Our Campuses --> Corner Brook</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Default.aspx'>Explore Our Campuses --> Home Directory</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Gander.aspx'>Explore Our Campuses --> Gander</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Grand-Falls-Windsor.aspx'>Explore Our Campuses --> Grand Falls Windsor</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Happy-Valley-Goose-Bay.aspx'>Explore Our Campuses --> Happy Valley Goose Bay</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Labrador-West.aspx'>Explore Our Campuses --> Labrador West</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Placentia.aspx'>Explore Our Campuses --> Placentia</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Port-Aux-Basques.aspx'>Explore Our Campuses --> Port Aux Basques</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Prince-Philip-Drive.aspx'>Explore Our Campuses --> Prince Philip Drive</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Ridge-Road.aspx'>Explore Our Campuses --> Ridge Road</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/Seal-Cove.aspx'>Explore Our Campuses --> Seal Cove</a><br /><a href='http://www.cna.nl.ca/Explore-Our-Campuses/St-Anthony.aspx'>Explore Our Campuses --> St Anthony</a>
                         </div>
                     </div>
                 </div>
@@ -286,41 +288,41 @@
         
             <article class="col slide">
 				<div class="img-wrap">
-					<a href='/news/News-Article.aspx?MessageID=1070&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_419201614744618.jpg' alt='CNA students contributing to Global Village build'></a>
+					<a href='/news/News-Article.aspx?MessageID=1084&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_9820169352145.jpg' alt='Canada and Newfoundland and Labrador invest to renew infrastructure at College of the North Atlantic'></a>
 				</div>
 				<div class="info" style="min-height:60px;">
 					
-                    <p>Students help&nbsp;with Global Village Build</p>
+                    <p>Centre of&nbsp;Excellence funding announced</p>
 				</div>
 			</article>
         
             <article class="col slide">
 				<div class="img-wrap">
-					<a href='/news/News-Article.aspx?MessageID=1069&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_414201611501813.jpg' alt='CNA students win record number of medals at Skills NL provincial competition'></a>
+					<a href='/news/News-Article.aspx?MessageID=1083&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_96201695718309.jpg' alt='Fall Orientation 2016 underway for new and returning students'></a>
 				</div>
 				<div class="info" style="min-height:60px;">
 					
-                    <p>Students win&nbsp;record number of medals</p>
+                    <p>Orientation&nbsp;2016 is underway!</p>
 				</div>
 			</article>
         
             <article class="col slide">
 				<div class="img-wrap">
-					<a href='/news/News-Article.aspx?MessageID=1068&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_482016133222577.jpg' alt='New CNA program to reward Skills Canada competition medalists'></a>
+					<a href='/news/News-Article.aspx?MessageID=1082&amp;newstype=QAT'><img src='/news/press_rel_pics/news_homepage_718201692127259.jpg' alt='Globalization sends home the need for experiential skills'></a>
 				</div>
 				<div class="info" style="min-height:60px;">
 					
-                    <p>CNA announces&nbsp;new awards program</p>
+                    <p>Experiential&nbsp;skills go global</p>
 				</div>
 			</article>
         
             <article class="col slide">
 				<div class="img-wrap">
-					<a href='/news/News-Article.aspx?MessageID=1067&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_342016152937205.jpg' alt='Student entrepreneur continues to impress'></a>
+					<a href='/news/News-Article.aspx?MessageID=1081&amp;newstype=REG'><img src='/news/press_rel_pics/news_homepage_614201614058526.jpg' alt='Ernest Harmon Air Force Base hits the silver screen'></a>
 				</div>
 				<div class="info" style="min-height:60px;">
 					
-                    <p>Student&nbsp;continues to impress</p>
+                    <p>High Alert&nbsp;to hit the silver screen</p>
 				</div>
 			</article>
         
@@ -392,8 +394,9 @@
 
     <span class="copyright">
         <span id="Footer1_dblblAddress">432 Massachusetts Dr.  Stephenville, NL, A2N 2Z6</span>
-
+        
     </span>
+    <div style="color:#ffffff; text-align:right;"><i class="fa fa-phone fa-1x"></i>&nbsp;1-888-982-2268</div>
     
 </div>
                     <!--FOOTER -->
@@ -402,6 +405,7 @@
 		</footer>
 	</div>
 
-
+    <a href="#0" class="cd-top">Top</a>
+    <script src="/js/scroll-to-top-main.js"></script> <!-- Gem jQuery -->
 </body>
 </html>

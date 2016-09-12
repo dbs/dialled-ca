@@ -202,11 +202,11 @@ function Go(){return}
 
 <div style="padding-top: 1px; clear: left;">
   <!-- LPM // -->
-      <h4>Winter Hours 2016</h4>
+      <h4>Fall Hours 2016</h4>
 
        <p>
-         <strong>Monday, Wednesday, Thursday</strong>: 8:00 am - 6:30 pm<br/>
-         <strong>Tuesday and Friday</strong>: 8:00 am - 5:00 pm (T), 8:00 am - 4:30 pm (F)       </p>
+         <strong>Monday - Thursday</strong>: 8:00 am - 5:00 pm<br/>
+         <strong>Friday</strong>: 8:00 am - 4:30 pm       </p>
        <p>
          <strong>Please Note</strong>: The Circulation Desk closes 15 minutes before closing each day.       </p>
 	   <h4>Contact Us</h4>

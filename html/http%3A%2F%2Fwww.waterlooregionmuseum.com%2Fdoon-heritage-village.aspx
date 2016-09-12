@@ -58,7 +58,11 @@
         	<a href="/doon-heritage-village/" class="yellow even">Doon Heritage Village</a>
         			<ul>
 			<li>
-        		<a href="/doon-heritage-village/new-harness-shop-coming-in-2016/">New Harness Shop - Coming in 2016</a>
+        		<a href="/doon-heritage-village/village-construction-in-september/">Village Construction in September</a>
+				
+			</li>
+			<li>
+        		<a href="/doon-heritage-village/new-harness-shop/">New Harness Shop</a>
 				
 			</li>
 			<li>
@@ -136,8 +140,8 @@
 	<h2>Doon Heritage Village</h2>
 	
 	
-	<p><img class="right" src="/media/1038/245-village.jpg" alt="Doon Heritage Village" width="338" height="225" /> <img class="right" src="/media/1041/289-blacksmith.jpg" alt="photo of blacksmith shop" width="338" height="225" /> <img class="right" src="/media/1067/repair-shop.jpg" alt="photo of Repair Shop" width="338" height="225" /> <img class="right" src="/media/1044/351-calf.jpg" alt="photo of village interpreter with calf" width="338" height="225" /> <img class="right" src="/media/7583/train.jpg" alt="photo of train" width="338" height="225" /> <img class="right" src="/media/1036/158-railway-station.jpg" alt="photo of railway station" width="338" height="225" />The Waterloo Region Museum is the entrance to Doon Heritage Village the living history village is open seasonally from May 1 to December 23. One admission price includes entry to the village and museum exhibit galleries. </p>
-<p><span>Doon Heritage Village is a picturesque 60 acre living history village that shows visitors what life was like in Waterloo Region in the year 1914.</span></p>
+	<p><img class="right" src="/media/1038/245-village.jpg" alt="Doon Heritage Village" width="338" height="225" /> <img class="right" src="/media/1041/289-blacksmith.jpg" alt="photo of blacksmith shop" width="338" height="225" /> <img class="right" src="/media/1067/repair-shop.jpg" alt="photo of Repair Shop" width="338" height="225" /> <img class="right" src="/media/1044/351-calf.jpg" alt="photo of village interpreter with calf" width="338" height="225" /> <img class="right" src="/media/7583/train.jpg" alt="photo of train" width="338" height="225" /> <img class="right" src="/media/1036/158-railway-station.jpg" alt="photo of railway station" width="338" height="225" />The Waterloo Region Museum is the entrance to Doon Heritage Village the living history village is open seasonally from May 1 to December 23. One admission price includes entry to the village and museum exhibit galleries.<strong><br /></strong></p>
+<p>Doon Heritage Village is a picturesque 60 acre living history village that shows visitors what life was like in Waterloo Region in the year 1914.</p>
 <p>The village comes to life with knowledgeable interpreters dressed in authentic 1914 clothing and features historic buildings, farm animals and fun activities the whole family will enjoy.<br /> <br /> Learn what was happening locally, provincially, nationally and internationally in the year 1914, the time period Doon Heritage Village is set in, by watching our <a href="/videos/doon-heritage-village-orientation/" title="Doon Heritage Village Orientation"><strong>Orientation Video</strong></a>. Visitors can also view this video in the Christie® Theatre located in the grand lobby of the museum before entering the living history village.<br /> <br /> In the settlement of Waterloo County, many small villages developed at the intersection of two roads. These crossroads became a natural point at which trades and services developed to serve the surrounding farm community. Tied to the land and the seasonal activities of farming, the rural community represented stability and continuity.</p>
 <p>The early 20th century saw an enormous growth in Canada's population with the influx of immigrants. Berlin, the centre of county government, grew from 9,700 in 1900 to more than 15,000 by 1912 when it became a city. Toronto, the provincial capital, grew from 209,000 to more than 380,000.</p>
 <p>People from many parts of the world arrived on Canada's shores. Most people from Great Britain and Europe were welcomed. And yet at the same time, some people were denied entry into the country due to restrictive immigration policies.</p>

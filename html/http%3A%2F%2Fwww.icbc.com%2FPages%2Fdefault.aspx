@@ -4,14 +4,14 @@
 	
     ICBC Home    
 
-</title><meta name="icbc.version.publishing" content="1.0.8.16111 build 195" />
-<link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=5vnvqGmlkKiZE7lIH7ENng%3D%3D"/>
+</title><meta name="icbc.version.publishing" content="1.0.10.16246 build 205" />
+<link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=OqAycmyMLoQIDkAlzHdMhQ%3D%3D"/>
 <link id="CSSHomepageLayout" rel="stylesheet" type="text/css" href="/_layouts/15/ICBC.Internet.Branding/Styles/layouts/layout-homepage.css"/>
 <link id="CSSScreenRegistration" rel="stylesheet" type="text/css" href="/_layouts/15/ICBC.Internet.Branding/Styles/screen.css"/>
 <link id="CSSTypography" rel="stylesheet" type="text/css" href="/_layouts/15/ICBC.Internet.Branding/Styles/typography.css"/>
 <link id="HomePageFooterStyle" rel="stylesheet" type="text/css" href="/_layouts/15/ICBC.Internet.Branding/Styles/webparts/wp-portal-MegaFooter.css"/>
 <link id="CssRegistration3" rel="stylesheet" type="text/css" href="/_layouts/15/ICBC.Internet.Branding/Styles/anonymous-styles.css"/>
-<script type="text/javascript" src="/_layouts/15/init.js?rev=o3x4BawuFCjTeVJ32Sy7bw%3D%3D"></script>
+<script type="text/javascript" src="/_layouts/15/init.js?rev=SDziXRzHVDHxjBcm8z0Y%2Bw%3D%3D"></script>
 <script type="text/javascript" src="/_layouts/15/icbc.sharedartifacts.library/scripts/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="/_layouts/15/icbc.internet.branding/scripts/plugins/jcarousel/jquery.jcarousel.min.js"></script>
 <script type="text/javascript" src="/_layouts/15/icbc.internet.branding/scripts/plugins/jquery.touchswipe.min.js"></script>
@@ -21,34 +21,34 @@
 <script type="text/javascript" src="/ScriptResource.axd?d=Xw5e2WAmNeotKhP2raKFjRQd_7d6hKv9a5WnmcbkpwQxR5_KBGzoftEO4kIMgWsL4ny_j_u-BpEX3Ue2j-cKPsOKDzCGiaW6snOusYG1K5hDkOcxHIzhvjbUzol36rTHQW2paHBF8id8zwSRy8F83_KjzoKnGt14R9ckAB94bXp9RJRIbKN_UvXaOJnzZdbh0&amp;t=ffffffffe9001610"></script>
 <script type="text/javascript" src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=KDvH3eKrOj-Mg53_bKJCaii-3UfQuY-ltcq0yLUddY93YMiOpY0aJxw16vIchQKdnAt-WgFVU08Jpt_nUQXnSTOA1GaSt8FQN-fb65M5GQh-EDx8QwqDiVbCfNIfuq5w86py_TOmFzmWUVW-c_eqKCRFuhcOrcKwjOfRejulGYMS3X158z702l3-41Hqrfg00&amp;t=ffffffffe9001610"></script>
-<script type="text/javascript">RegisterSod("initstrings.js", "\u002f_layouts\u002f15\u002f1033\u002finitstrings.js?rev=uNmvBiHdrBzcPQzXRpm\u00252FnQ\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("strings.js", "\u002f_layouts\u002f15\u002f1033\u002fstrings.js?rev=DY9A0USYODVw86N0trJTSw\u00253D\u00253D");RegisterSodDep("strings.js", "initstrings.js");</script>
-<script type="text/javascript">RegisterSod("sp.init.js", "\u002f_layouts\u002f15\u002fsp.init.js?rev=3nSw25FIGbfepznMSgi74A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("initstrings.js", "\u002f_layouts\u002f15\u002f1033\u002finitstrings.js?rev=2N3pk\u00252FwjnG3Tj9o5NrqHcg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("strings.js", "\u002f_layouts\u002f15\u002f1033\u002fstrings.js?rev=y6khbhv1Os2YPb5X0keqRg\u00253D\u00253D");RegisterSodDep("strings.js", "initstrings.js");</script>
+<script type="text/javascript">RegisterSod("sp.init.js", "\u002f_layouts\u002f15\u002fsp.init.js?rev=jvJC3Kl5gbORaLtf7kxULQ\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=yNk\u00252FhRzgBn40LJVP\u00252BqfgdQ\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002f15\u002fsp.ui.dialog.js?rev=0xf6wCIW4E1pN83I9nSIJQ\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.init.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f15\u002fcore.js?rev=EnWPG6M5V3EY8UwLILyWiA\u00253D\u00253D");RegisterSodDep("core.js", "strings.js");</script>
-<script type="text/javascript">RegisterSod("menu.js", "\u002f_layouts\u002f15\u002fmenu.js?rev=pcr83s11QGFA2kLt5rDQ1g\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002f15\u002fsp.ui.dialog.js?rev=3Oh2QbaaiXSb7ldu2zd6QQ\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.init.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f15\u002fcore.js?rev=eO228IFs9\u00252B4m4mcGscwRoQ\u00253D\u00253D");RegisterSodDep("core.js", "strings.js");</script>
+<script type="text/javascript">RegisterSod("menu.js", "\u002f_layouts\u002f15\u002fmenu.js?rev=cXv35JACAh0ZCqUwKU592w\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("mQuery.js", "\u002f_layouts\u002f15\u002fmquery.js?rev=VYAJYBo5H8I3gVSL3MzD6A\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("callout.js", "\u002f_layouts\u002f15\u002fcallout.js?rev=ryx2n4ePkYj1\u00252FALmcsXZfA\u00253D\u00253D");RegisterSodDep("callout.js", "strings.js");RegisterSodDep("callout.js", "mQuery.js");RegisterSodDep("callout.js", "core.js");</script>
-<script type="text/javascript">RegisterSod("clienttemplates.js", "\u002f_layouts\u002f15\u002fclienttemplates.js?rev=J\u00252BGzwlHEWSv11\u00252BqD9XeOaw\u00253D\u00253D");RegisterSodDep("clienttemplates.js", "initstrings.js");</script>
-<script type="text/javascript">RegisterSod("sharing.js", "\u002f_layouts\u002f15\u002fsharing.js?rev=EojJW\u00252FD7vytDfjPyrFWfzw\u00253D\u00253D");RegisterSodDep("sharing.js", "strings.js");RegisterSodDep("sharing.js", "mQuery.js");RegisterSodDep("sharing.js", "clienttemplates.js");RegisterSodDep("sharing.js", "core.js");</script>
-<script type="text/javascript">RegisterSod("suitelinks.js", "\u002f_layouts\u002f15\u002fsuitelinks.js?rev=LW8KECQqnuLhetUeLd3iSg\u00253D\u00253D");RegisterSodDep("suitelinks.js", "strings.js");RegisterSodDep("suitelinks.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("clienttemplates.js", "\u002f_layouts\u002f15\u002fclienttemplates.js?rev=tn9XfGb1fnXOYRYP\u00252BT3NJg\u00253D\u00253D");RegisterSodDep("clienttemplates.js", "initstrings.js");</script>
+<script type="text/javascript">RegisterSod("sharing.js", "\u002f_layouts\u002f15\u002fsharing.js?rev=XxxHIxIIc8BsW9ikVc6dgA\u00253D\u00253D");RegisterSodDep("sharing.js", "strings.js");RegisterSodDep("sharing.js", "mQuery.js");RegisterSodDep("sharing.js", "clienttemplates.js");RegisterSodDep("sharing.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("suitelinks.js", "\u002f_layouts\u002f15\u002fsuitelinks.js?rev=REwVU5jSsadDdOZlCx4wpA\u00253D\u00253D");RegisterSodDep("suitelinks.js", "strings.js");RegisterSodDep("suitelinks.js", "core.js");</script>
 <script type="text/javascript">RegisterSod("clientrenderer.js", "\u002f_layouts\u002f15\u002fclientrenderer.js?rev=PWwV4FATEiOxN90BeB5Hzw\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("srch.resources.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=Srch\u00252EResources\u0026rev=T\u00252BEc8BFdsTQbQuVAobKatQ\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("search.clientcontrols.js", "\u002f_layouts\u002f15\u002fsearch.clientcontrols.js?rev=wRs\u00252BKMxl5a0bBuIn1itBzw\u00253D\u00253D");RegisterSodDep("search.clientcontrols.js", "sp.init.js");RegisterSodDep("search.clientcontrols.js", "clientrenderer.js");RegisterSodDep("search.clientcontrols.js", "srch.resources.resx");</script>
+<script type="text/javascript">RegisterSod("srch.resources.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=Srch\u00252EResources\u0026rev=XDE4tiLBtKKfBTRJIu5neg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("search.clientcontrols.js", "\u002f_layouts\u002f15\u002fsearch.clientcontrols.js?rev=UGf\u00252BO28k\u00252Bxs1phvmqw0nNQ\u00253D\u00253D");RegisterSodDep("search.clientcontrols.js", "sp.init.js");RegisterSodDep("search.clientcontrols.js", "clientrenderer.js");RegisterSodDep("search.clientcontrols.js", "srch.resources.resx");</script>
 <script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002f15\u002fsp.runtime.js?rev=5f2WkYJoaxlIRdwUeg4WEg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("sp.search.js", "\u002f_layouts\u002f15\u002fsp.search.js?rev=uZlrSmuyYGO8yQWFVg\u00252BIdw\u00253D\u00253D");RegisterSodDep("sp.search.js", "sp.init.js");RegisterSodDep("sp.search.js", "sp.runtime.js");</script>
+<script type="text/javascript">RegisterSod("sp.search.js", "\u002f_layouts\u002f15\u002fsp.search.js?rev=dgd0nya\u00252FYKhefSSkau\u00252FgmQ\u00253D\u00253D");RegisterSodDep("sp.search.js", "sp.init.js");RegisterSodDep("sp.search.js", "sp.runtime.js");</script>
 <script type="text/javascript">RegisterSod("ajaxtoolkit.js", "\u002f_layouts\u002f15\u002fajaxtoolkit.js?rev=4rOiCbaFgJMmqw9Ojtpa6g\u00253D\u00253D");RegisterSodDep("ajaxtoolkit.js", "search.clientcontrols.js");</script>
-<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002f15\u002fsp.js?rev=VeGKENsMYUj54sNHNvx9SQ\u00253D\u00253D");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("userprofile", "\u002f_layouts\u002f15\u002fsp.userprofiles.js?rev=Pbfi3FBmvy2ewPqDZp16\u00252BQ\u00253D\u00253D");RegisterSodDep("userprofile", "sp.runtime.js");</script>
-<script type="text/javascript">RegisterSod("followingcommon.js", "\u002f_layouts\u002f15\u002ffollowingcommon.js?rev=sObFmln\u00252BGVrczIpXNeFRrg\u00253D\u00253D");RegisterSodDep("followingcommon.js", "strings.js");RegisterSodDep("followingcommon.js", "sp.js");RegisterSodDep("followingcommon.js", "userprofile");RegisterSodDep("followingcommon.js", "core.js");RegisterSodDep("followingcommon.js", "mQuery.js");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002f15\u002fsp.js?rev=KPbpRY0tqoo\u00252Bnf8LNKPvuQ\u00253D\u00253D");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("userprofile", "\u002f_layouts\u002f15\u002fsp.userprofiles.js?rev=p5tCOm\u00252FlHUwcfll7W3pKNw\u00253D\u00253D");RegisterSodDep("userprofile", "sp.runtime.js");</script>
+<script type="text/javascript">RegisterSod("followingcommon.js", "\u002f_layouts\u002f15\u002ffollowingcommon.js?rev=jWqEDmcjCSPmnQw2ZIfItQ\u00253D\u00253D");RegisterSodDep("followingcommon.js", "strings.js");RegisterSodDep("followingcommon.js", "sp.js");RegisterSodDep("followingcommon.js", "userprofile");RegisterSodDep("followingcommon.js", "core.js");RegisterSodDep("followingcommon.js", "mQuery.js");</script>
 <script type="text/javascript">RegisterSod("profilebrowserscriptres.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=ProfileBrowserScriptRes\u0026rev=J5HzNnB\u00252FO1Id\u00252FGI18rpRcw\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("sp.ui.mysitecommon.js", "\u002f_layouts\u002f15\u002fsp.ui.mysitecommon.js?rev=Ua8qmZSU9nyf53S7PEyJwQ\u00253D\u00253D");RegisterSodDep("sp.ui.mysitecommon.js", "sp.init.js");RegisterSodDep("sp.ui.mysitecommon.js", "sp.runtime.js");RegisterSodDep("sp.ui.mysitecommon.js", "userprofile");RegisterSodDep("sp.ui.mysitecommon.js", "profilebrowserscriptres.resx");</script>
 <script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f15\u002fie55up.js?rev=0R4dbpInVlmjoVSw2Gglmw\u00253D\u00253D");RegisterSodDep("browserScript", "strings.js");</script>
-<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002f15\u002finplview.js?rev=JuQvHna5pA8GjBqyCrETww\u00253D\u00253D");RegisterSodDep("inplview", "strings.js");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
-<script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002f15\u002fsp.core.js?rev=b89b6nnwOk\u00252FeDkJa0KhP5w\u00253D\u00253D");RegisterSodDep("sp.core.js", "strings.js");RegisterSodDep("sp.core.js", "sp.init.js");RegisterSodDep("sp.core.js", "core.js");</script>
-<script type="text/javascript">RegisterSod("dragdrop.js", "\u002f_layouts\u002f15\u002fdragdrop.js?rev=Wqcva7Vrjf6mkyjnPC6ssQ\u00253D\u00253D");RegisterSodDep("dragdrop.js", "strings.js");</script>
-<script type="text/javascript">RegisterSod("quicklaunch.js", "\u002f_layouts\u002f15\u002fquicklaunch.js?rev=SV6sY1PxQIso9KC9IL8e2Q\u00253D\u00253D");RegisterSodDep("quicklaunch.js", "strings.js");RegisterSodDep("quicklaunch.js", "dragdrop.js");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002f15\u002finplview.js?rev=3adeDef4Nq\u00252BgGmCxJ9kLlA\u00253D\u00253D");RegisterSodDep("inplview", "strings.js");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002f15\u002fsp.core.js?rev=tZDGLPOvY1bRw\u00252BsgzXpxTg\u00253D\u00253D");RegisterSodDep("sp.core.js", "strings.js");RegisterSodDep("sp.core.js", "sp.init.js");RegisterSodDep("sp.core.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("dragdrop.js", "\u002f_layouts\u002f15\u002fdragdrop.js?rev=1OsNsuzRnybSnpJuJwisVQ\u00253D\u00253D");RegisterSodDep("dragdrop.js", "strings.js");</script>
+<script type="text/javascript">RegisterSod("quicklaunch.js", "\u002f_layouts\u002f15\u002fquicklaunch.js?rev=\u00252BHeX6ARcp\u00252F9LpMq6FqQYyA\u00253D\u00253D");RegisterSodDep("quicklaunch.js", "strings.js");RegisterSodDep("quicklaunch.js", "dragdrop.js");</script>
  
 
         <!--[if gt IE 8]><!-->
@@ -125,7 +125,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x0977642F84AB2E32E682F9E1E93D5B661CCD32A65B4E2399E9F19D761FA4134D0E42BFDA640A8BC7CEAA7F86DE835101F46FA836F67B5ECBDFDDA8436A724844,09 May 2016 13:26:31 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x477FD110B1F6BE6670C891FCF46F21EA173DD99EEEF6D74C0EC5A03BD8E45043468F36598A1063ECE05D6F28A46D0F53784FF7C7AD2BF65C02E7C7A0206FC605,11 Sep 2016 15:55:49 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -136,7 +136,7 @@
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPBSpWU0tleTpkMmFlOTI5Yy1lZWZmLTRlZDktODljNy1lZjgzY2I2MmM1NTlkHkclY2xdj9tuIprhwsap3BFqaiP3/q9k+fAjqhHd5Mo=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBAIBD2QWBgIHD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAggPZBYCZg8WAh4EVGV4dAVIPG1ldGEgbmFtZT0iaWNiYy52ZXJzaW9uLnB1Ymxpc2hpbmciIGNvbnRlbnQ9IjEuMC4xMC4xNjI0NiBidWlsZCAyMDUiIC8+ZAIYD2QWAgIDD2QWBGYPZBYCZg88KwAGAGQCAQ9kFgJmDxYCHwFlZAILD2QWDgIBD2QWAgIBD2QWCgUmZ18yYmFlYjc1Nl9mY2Y0XzQzYjhfOGI0M19jMzA5NzEwYjFjMDcPZBYCAgEPD2QWAh4PZGF0YS1tb2JpbGVsaXN0BRhMaXN0cy9TbGlkZXJJbWFnZXNNb2JpbGUWBAIBDxYCHgtfIUl0ZW1Db3VudAIEFghmD2QWAmYPFQJUaHR0cDovL3d3dy5pY2JjLmNvbS9yb2FkLXNhZmV0eS9jcmFzaGVzLWhhcHBlbi9EaXN0cmFjdGVkLWRyaXZpbmcvUGFnZXMvZGVmYXVsdC5hc3B4Ni9MaXN0cy9TbGlkZXJJbWFnZXNEZXNrdG9wL2Rpc3RyYWN0ZWQtZHJpdmluZy0yMDE2LmpwZ2QCAQ9kFgJmDxUCPGh0dHA6Ly93d3cuaWNiYy5jb20vYXV0b3BsYW4vY29zdHMvUGFnZXMvcmF0ZS1wcmVzc3VyZXMuYXNweDIvTGlzdHMvU2xpZGVySW1hZ2VzRGVza3RvcC9yaXNpbmctY29zdHMtYmFubmVyLnBuZ2QCAg9kFgJmDxUCUmh0dHA6Ly93d3cuaWNiYy5jb20vcm9hZC1zYWZldHkvY3Jhc2hlcy1oYXBwZW4vaW1wYWlyZWQtZHJpdmluZy9QYWdlcy9EZWZhdWx0LmFzcHgvL0xpc3RzL1NsaWRlckltYWdlc0Rlc2t0b3AvaW1wYWlyZWQtZHJpdmluZy5qcGdkAgMPZBYCZg8VAkNodHRwOi8vd3d3LmljYmMuY29tL2F1dG9wbGFuL29wdGlvbmFsL1BhZ2VzL2V4dGVuZGVkLWxpYWJpbGl0eS5hc3B4Ii9MaXN0cy9TbGlkZXJJbWFnZXNEZXNrdG9wL1RQTC5qcGdkAgUPFgIfAwIEFghmD2QWAmYPFQE2L0xpc3RzL1NsaWRlckltYWdlc0Rlc2t0b3AvZGlzdHJhY3RlZC1kcml2aW5nLTIwMTYuanBnZAIBD2QWAmYPFQEyL0xpc3RzL1NsaWRlckltYWdlc0Rlc2t0b3AvcmlzaW5nLWNvc3RzLWJhbm5lci5wbmdkAgIPZBYCZg8VAS8vTGlzdHMvU2xpZGVySW1hZ2VzRGVza3RvcC9pbXBhaXJlZC1kcml2aW5nLmpwZ2QCAw9kFgJmDxUBIi9MaXN0cy9TbGlkZXJJbWFnZXNEZXNrdG9wL1RQTC5qcGdkBSZnX2I2ZWU1NDM4XzQ4ZjhfNDZiY185YTUzXzk4NGRjZDZkNmU5MQ9kFgwCAQ8WAh8BBRdGaW5kIGEgU2VydmljZSBMb2NhdGlvbmQCAw8WAh8BBeEBPG9wdGlvbiB2YWx1ZT0iMSwwIj5Ecml2ZXIgbGljZW5zaW5nIG9mZmljZTwvb3B0aW9uPjxvcHRpb24gdmFsdWU9IjIsMCI+QXV0b3BsYW4gYnJva2VyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0iNCwwIj5DbGFpbSBjZW50cmU8L29wdGlvbj48b3B0aW9uIHZhbHVlPSI1LDAiPkF1dG9ib2R5IGFuZCBHbGFzczwvb3B0aW9uPjxvcHRpb24gdmFsdWU9IjMsMCI+Q2hpcm9wcmFjdG9yPC9vcHRpb24+ZAIFDxYCHwEFJlNlYXJjaCBieSBhZGRyZXNzLCBjaXR5IG9yIHBvc3RhbCBjb2RlZAIHDxYCHwEFHC9sb2NhdG9ycy9QYWdlcy9kZWZhdWx0LmFzcHhkAgkPFgIfAQUERmluZGQCDQ8WAh8BBaMDPHNjcmlwdD52YXIgcGFnZVBhdGggPSAobG9jYXRpb24ucGF0aG5hbWUuY2hhckF0KDApPT0nLycpID8gbG9jYXRpb24ucGF0aG5hbWUgOiAnLycgKyBsb2NhdGlvbi5wYXRobmFtZTsgdmFyIHNlY3Rpb25Mb2NhdG9yTWFwID0geyIxLDAiIDogIi9saWNlbnNpbmcvIiwiMiwwIiA6ICIvYnJva2Vycy8iLCI0LDAiIDogIi9jbGFpbXMvIn07dmFyIGN1cnJlbnRTZWN0aW9uID0gcGFnZVBhdGguc3BsaXQoJy8nKVsxXS50b0xvd2VyQ2FzZSgpOyBpZiAoc2VjdGlvbkxvY2F0b3JNYXBbY3VycmVudFNlY3Rpb25dKSB7ICQoJyNsb2NhdG9ycy1zZWxlY3Qgb3B0aW9uW3ZhbHVlJD0iJyArIHNlY3Rpb25Mb2NhdG9yTWFwW2N1cnJlbnRTZWN0aW9uXSArICciXTplcSgwKScpLmF0dHIoJ3NlbGVjdGVkJywgJ3NlbGVjdGVkJyk7fTs8L3NjcmlwdD5kBSZnX2I4NzI0OWM3X2JkN2FfNDU2Zl85NjI2XzAwMmUyNjM0ZTNkZg9kFgRmDxYCHgdWaXNpYmxlaGQCAQ8WAh8EaGQFJmdfN2U4MWQxM2RfYzA5OV80OTJmX2IxODFfNWQ2ODBlY2NjMGI1D2QWBGYPFgIfBGhkAgEPFgIfBGhkBSZnXzAxOGFhNzExXzQ1MThfNDQ5M185YzUyX2JiMWQ5Y2VhMWMxMg9kFgJmDxYCHwMCAxYGAgEPZBYEZg8VAwEwDk5ldyB0byBkcml2aW5nNUhlcmUncyBob3cgdG8gZ2V0IHN0YXJ0ZWQgd2l0aCB5b3VyIGxpZmUgYXMgYSBkcml2ZXIuZAIBDxYCHwEFggk8dWwgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uLWxpc3QiPg0KPGxpIGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbiI+DQo8ZGl2IGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbi1jb250ZW50Ij48YSBocmVmPSJodHRwJiM1ODsvL3ByYWN0aWNldGVzdC5pY2JjLmNvbS8iIHRhcmdldD0iX2JsYW5rIj5UYWtlIHRoZSYjMTYwO3ByYWN0aWNlIGtub3dsZWRnZSB0ZXN0PC9hPjwvZGl2Pg0KPC9saT4NCjxsaSBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24iPg0KPGRpdiBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24tY29udGVudCI+PGEgaHJlZj0iL2RyaXZlci1saWNlbnNpbmcvZHJpdmluZy1ndWlkZXMvUGFnZXMvTGVhcm4tdG8tRHJpdmUtU21hcnQuYXNweCI+R2V0IHRoZSBMZWFybiB0byBEcml2ZSBTbWFydCBzdHVkeSBndWlkZeKAizwvYT48L2Rpdj4NCjwvbGk+DQo8bGkgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uIj4NCjxkaXYgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uLWNvbnRlbnQiPjxhIGhyZWY9Ii9kcml2ZXItbGljZW5zaW5nL3Zpc2l0LWRsLW9mZmljZS9QYWdlcy9Cb29rLWEtcm9hZC10ZXN0LmFzcHgiPkJvb2sgeW91ciByb2FkIHRlc3Q8L2E+PC9kaXY+DQo8L2xpPg0KPGxpIGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbiI+DQo8ZGl2IGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbi1jb250ZW50Ij48YSBocmVmPSIvZHJpdmVyLWxpY2Vuc2luZy9uZXctZHJpdmVycy9QYWdlcy9HZXQteW91ci1mdWxsLWxpY2VuY2UuYXNweCI+R2V0IHlvdXIgZnVsbCBsaWNlbmNlPC9hPjwvZGl2Pg0KPC9saT4NCjxsaSBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24iPg0KPGRpdiBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24tY29udGVudCI+PGEgaHJlZj0iL2RyaXZlci1saWNlbnNpbmcvZHJpdmluZy1ndWlkZXMvUGFnZXMvRGVmYXVsdC5hc3B4Ij5SZWFkIG91ciBvdGhlciBkcml2aW5nIGd1aWRlczwvYT48L2Rpdj4NCjwvbGk+DQo8bGkgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uIj4NCjxkaXYgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uLWNvbnRlbnQiPjxhIGhyZWY9Ii9kcml2ZXItbGljZW5zaW5nL25ldy1kcml2ZXJzL1BhZ2VzL0RlZmF1bHQuYXNweCI+TW9yZSBmb3IgbmV3IGRyaXZlcnM8L2E+PC9kaXY+DQo8L2xpPg0KPC91bD4NCmQCAg9kFgRmDxUDATELTmV3IHRvIEIuQy43V2VsY29tZSEgTGVhcm4gaG93IHRvIGdldCBvbiB0aGUgcm9hZCBpbiBiZWF1dGlmdWwgQi5DLmQCAQ8WAh8BBZoJPHVsIGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbi1saXN0Ij4NCjxsaSBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24iPg0KPGRpdiBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24tY29udGVudCI+PGEgaHJlZj0iL2F1dG9wbGFuL1BhZ2VzL0RlZmF1bHQuYXNweCI+R2V0IHlvdXIgbWFuZGF0b3J5IEF1dG9wbGFuIGNvdmVyYWdlPC9hPjwvZGl2Pg0KPC9saT4NCjxsaSBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24iPg0KPGRpdiBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24tY29udGVudCI+PGEgaHJlZj0iL2RyaXZlci1saWNlbnNpbmcvbW92aW5nLWJjL1BhZ2VzL1Byb3ZpbmcteW91ci1kcml2aW5nLWV4cGVyaWVuY2UuYXNweCI+UHJvdmluZyB5b3VyIGRyaXZpbmcgZXhwZXJpZW5jZTwvYT48L2Rpdj4NCjwvbGk+DQo8bGkgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uIj4NCjxkaXYgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uLWNvbnRlbnQiPjxhIGhyZWY9Ii9hdXRvcGxhbi9tb3ZpbmctaW5zdXJhbmNlL1BhZ2VzL0luc3VyYW5jZS1kaXNjb3VudC1mb3ItbmV3LXJlc2lkZW50cy5hc3B4Ij5HZXQgYSBkaXNjb3VudCBpZiB5b3UncmUgY2xhaW0tZnJlZTwvYT48L2Rpdj4NCjwvbGk+DQo8bGkgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uIj4NCjxkaXYgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uLWNvbnRlbnQiPjxhIHRhcmdldD0iX2JsYW5rIiBocmVmPSJodHRwJiM1ODsvL3d3dy5nb3YuYmMuY2EvYmNzZXJ2aWNlc2NhcmQiPkxlYXJuIGFib3V0IHRoZSBCLkMuIFNlcnZpY2VzIENhcmQ8L2E+PC9kaXY+DQo8L2xpPg0KPGxpIGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbiI+DQo8ZGl2IGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbi1jb250ZW50Ij48YSBocmVmPSIvdmVoaWNsZS1yZWdpc3RyYXRpb24vYnV5LXZlaGljbGUvUGFnZXMvSW1wb3J0aW5nLWEtdmVoaWNsZS1pbnRvLUItQy5hc3B4Ij5JbXBvcnQgYSB2ZWhpY2xlIHRvIEIuQy48L2E+PC9kaXY+DQo8L2xpPg0KPGxpIGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbiI+DQo8ZGl2IGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbi1jb250ZW50Ij48YSBocmVmPSIvZHJpdmVyLWxpY2Vuc2luZy9tb3ZpbmctYmMvUGFnZXMvRGVmYXVsdC5hc3B4Ij5Nb3JlIG9uIG1vdmluZyB0byBCLkMuPC9hPjwvZGl2Pg0KPC9saT4NCjwvdWw+DQpkAgMPZBYEZg8VAwEyEEN1cnJlbnQgQ3VzdG9tZXI1RmluZCB0aGUgcXVpY2tlc3Qgcm91dGUgdG8gb3VyIG1vc3QgcG9wdWxhciBzZXJ2aWNlcy5kAgEPFgIfAQXMBzx1bCBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24tbGlzdCI+DQo8bGkgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uIj4NCjxkaXYgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uLWNvbnRlbnQiPjxhIGhyZWY9Ii9kcml2ZXItbGljZW5zaW5nL2dldHRpbmctbGljZW5zZWQvUGFnZXMvUmVuZXcteW91ci1saWNlbmNlLW9yLUlELmFzcHgiPlJlbmV3IHlvdXIgbGljZW5jZTwvYT48L2Rpdj4NCjwvbGk+DQo8bGkgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uIj4NCjxkaXYgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uLWNvbnRlbnQiPjxhIGhyZWY9Ii9kcml2ZXItbGljZW5zaW5nL2dldHRpbmctbGljZW5zZWQvUGFnZXMvWW91ci1kcml2aW5nLXJlY29yZC5hc3B4Ij5HZXQgeW91ciBkcml2aW5nIHJlY29yZCBvciBhYnN0cmFjdDwvYT48L2Rpdj4NCjwvbGk+DQo8bGkgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uIj4NCjxkaXYgY2xhc3M9InBlcnNvbmFCb3gtYWN0aW9uLWNvbnRlbnQiPjxhIGhyZWY9Ii9kcml2ZXItbGljZW5zaW5nL2dldHRpbmctbGljZW5zZWQvUGFnZXMvQ2hhbmdlLXlvdXItYWRkcmVzcy1vci1uYW1lLmFzcHgiPkNoYW5nZSB5b3VyIGRyaXZlciBsaWNlbmNlIGFkZHJlc3M8L2E+PC9kaXY+DQo8L2xpPg0KPGxpIGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbiI+DQo8ZGl2IGNsYXNzPSJwZXJzb25hQm94LWFjdGlvbi1jb250ZW50Ij48YSBocmVmPSIvYXV0b3BsYW4vYnV5LXJlbmV3LWF1dG9wbGFuL1BhZ2VzL0RlZmF1bHQuYXNweCI+QnV5IG9yIHJlbmV3IHlvdXIgaW5zdXJhbmNlPC9hPjwvZGl2Pg0KPC9saT4NCjxsaSBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24iPg0KPGRpdiBjbGFzcz0icGVyc29uYUJveC1hY3Rpb24tY29udGVudCI+PGEgaHJlZj0iL2NsYWltcy9QYWdlcy9SZXBvcnQtYS1jbGFpbS1vbmxpbmUuYXNweCI+UmVwb3J0IGEgY2xhaW08L2E+PC9kaXY+DQo8L2xpPg0KPC91bD4NCmQCBQ9kFgICAQ9kFgICAg9kFgICBQ9kFgICAw8WAh8EaBYCZg9kFgQCAg9kFgYCAQ8WAh8EaGQCAw8WAh8EaGQCBQ8WAh8EaGQCAw8PFgIeCUFjY2Vzc0tleQUBL2RkAgkPZBYCAgEPDxYCHgtOYXZpZ2F0ZVVybAUTaHR0cDovL3d3dy5pY2JjLmNvbWRkAg0PZBYGAgEPFgIfBGhkAgMPDxYCHwRoZGQCBQ8WAh8EaGQCEQ9kFgICAQ8PFgYfAQUKQ29udGFjdCBVcx8GBSkvYWJvdXQtaWNiYy9jb250YWN0LXVzL1BhZ2VzL2RlZmF1bHQuYXNweB8EZ2RkAhMPZBYCAgEPDxYGHwEFDlJlcG9ydCBhIENsYWltHwYFKC9jbGFpbXMvUGFnZXMvUmVwb3J0LWEtY2xhaW0tb25saW5lLmFzcHgfBGdkZAIXD2QWAmYPFgIfBGhkZIE1KH5qw5OjYHqFwp1KeiyRfwo1+R1xOaIBZ9JKl10R" />
 </div>
 
 <script type="text/javascript">
@@ -169,7 +169,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'ICBCINTERNETROOT#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.icbc.com", siteAbsoluteUrl: "http:\u002f\u002fwww.icbc.com", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Home", webTemplate: "11002", tenantAppVersion: "0", webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T13:26:31.0200296Z") - new Date(), siteClientTag: "32767$$15.0.4551.1508", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{38d7a80f-bf65-45bc-a8a5-6265add0f73a}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.icbc.com", siteAbsoluteUrl: "http:\u002f\u002fwww.icbc.com", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Home", webTemplate: "11002", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-09-11T15:55:49.5351463Z") - new Date(), siteClientTag: "9638$$15.0.4763.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{38d7a80f-bf65-45bc-a8a5-6265add0f73a}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var _spWebPartComponents = new Object();//]]>
@@ -279,7 +279,7 @@ return true;
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAIU3tewPbabxwpatWwDWeETYE4chcfzoSkVu5/oiESvleiQ9w9O8gYcYFyfufbEnDwpdXKHjrkBg1FPQMqrpHJP" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAJfqNKEFqDQIfwVCf6nXCH/YE4chcfzoSkVu5/oiESvldNcAbiu3CznsYj37Yve3i4HRdGhvUFZALoK5yTp2Mgp" />
 </div>
             <script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
             <span>
@@ -899,7 +899,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             
                     <ul class="megamenu-list">
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/moving-insurance/Pages/Insurance-discount-for-new-residents.aspx?ga14" title="Insurance discount for new residents">Insurance discount for new residents</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/moving-insurance/Pages/Insurance-discount-for-new-residents.aspx" title="Insurance discount for new and returning residents">Insurance discount for new and returning residents</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/Pages/Driving-outside-of-B-C.aspx" title="Driving outside B.C.">Driving outside B.C.</a></li>
                 
                     </ul>
                 
@@ -921,6 +923,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                     <ul class="megamenu-list">
                 
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/buy-renew-autoplan/Insurance-payment-plan/Pages/Default.aspx" title="Autoplan payment plan">Autoplan payment plan</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/buy-renew-autoplan/Pages/insurance-system-updates.aspx" title="Customer notice: Insurance system updates">Customer notice: Insurance system updates</a></li>
                 
                     </ul>
                 
@@ -958,6 +962,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/costs/Pages/Discounts-and-savings.aspx" title="Discounts and savings">Discounts and savings</a></li>
                 
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/costs/Pages/Escalating-deductibles.aspx" title="Escalating deductible">Escalating deductible</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/costs/Pages/rate-pressures.aspx" title="Why are rates increasing?">Why are rates increasing?</a></li>
+                
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/autoplan/costs/Pages/basic-rate-application.aspx" title="Approved rate changes">Approved rate changes</a></li>
                 
                     </ul>
                 
@@ -1063,22 +1071,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/vehicle-registration/sell-vehicle/Pages/Repossess-or-seize-a-vehicle.aspx" title="Repossess or seize a vehicle">Repossess or seize a vehicle</a></li>
                 
                     <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/vehicle-registration/sell-vehicle/Pages/Transfer-vehicle-ownership.aspx" title="Transfer vehicle ownership">Transfer vehicle ownership</a></li>
-                
-                    </ul>
-                
-        </div>
-    
-        <div class="megamenu-item">
-            <a class="megamenu-item-link" href="http://www.icbc.com/vehicle-registration/vehicle-description-update/Pages/default.aspx" title="Vehicle Description Updates">
-                <img src="/PublishingImages/MegaMenu%20Icons/basic-autoplan.png" alt="" />
-                <span class="megamenu-item-text">Vehicle Description Updates</span>
-            </a>
-            <a class="megamenu-item-handle">Toggle Navigation Term</a>
-
-            
-                    <ul class="megamenu-list">
-                
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/vehicle-registration/vehicle-description-update/Pages/vehicle-description.aspx" title="Why we use vehicle description">Why we use vehicle description</a></li>
                 
                     </ul>
                 
@@ -1441,13 +1433,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             
                     <ul class="megamenu-list">
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/about-icbc/careers/Pages/Current-opportunities.aspx" title="Current opportunities">Current opportunities</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/about-icbc/careers/Pages/What-do-you-want-to-do.aspx" title="What do you want to do?">What do you want to do?</a></li>
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/about-icbc/careers/Pages/Student-opportunities.aspx" title="Student opportunities">Student opportunities</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/about-icbc/careers/Pages/working-with-us.aspx" title="Working with us">Working with us</a></li>
                 
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/about-icbc/careers/Pages/Working-with-us.aspx" title="Working with us">Working with us</a></li>
-                
-                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/about-icbc/careers/Pages/troubleshooting-tips-and-FAQs.aspx" title="Troubleshooting tips and FAQs">Troubleshooting tips and FAQs</a></li>
+                    <li class="megamenu-item"><a class="megamenu-item-link" href="http://www.icbc.com/about-icbc/careers/Pages/how-to-apply-and-FAQs.aspx" title="How to apply and FAQs">How to apply and FAQs</a></li>
                 
                     </ul>
                 
@@ -1522,7 +1512,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
                         
 
-                        
+                        <div id="ctl00_OutageAlert_divAmberAlert" class="alertWrapper">
+    <div id="outageAlert" class="centerContent customWidth noindex">
+        <div class="alertTitleWrapper">
+            <img class="alertImage" src="../../../_layouts/15/ICBC.Internet.Branding/Images/ctrl-outageAlertImg-icon.png" width="21" height="25" />
+  
+        <h4 class="alertTitle">Service notice</h4>
+            <div class="clearBoth"></div>
+        </div>
+        <div class="alertContentWrapper noindex">
+            <p class="alertContentFullWidth">We&#39;re upgrading to our new insurance system this weekend. Between the evening of Saturday, Sept. 10 and 12 noon on Sunday, Sept. 11, as well as Sunday evening from 6pm, the services Autoplan brokers can provide will be limited. Thank you for your patience </p>
+        <div class="clearBoth"></div>
+        </div>
+        <div class="clearBoth"></div>
+    </div>
+</div>
 
                     </div>
                 </div>
@@ -1544,7 +1548,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                         <div id="zz1_TopNavigationMenu" class=" noindex ms-core-listMenu-horizontalBox">
 	<ul id="zz2_RootAspMenu" class="root ms-core-listMenu-root static">
 		<li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/default.aspx" accesskey="1"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">About ICBC</span></span></a><ul class="dynamic">
-			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/service-commitments.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Service commitments</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/fraud.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Preventing fraud</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/Supplier-opportunities-and-complaints.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Goods and services suppliers</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/Our-privacy-policy.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Our privacy policy</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/web-application-tos.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Web application terms of service</span></span></a></li>
+			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/service-commitments.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Service commitments</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/fraud.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Preventing fraud</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/Supplier-opportunities-and-complaints.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Goods and services suppliers</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/about-icbc/Pages/Our-privacy-policy.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Our privacy policy</span></span></a></li>
 		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/autoplan/Pages/Default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Autoplan insurance</span></span></a><ul class="dynamic">
 			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/autoplan/Pages/Cancel-your-insurance.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Cancel insurance</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/autoplan/Pages/Driving-outside-of-B-C.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Driving outside B.C.</span></span></a></li>
 		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/claims/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Claims</span></span></a><ul class="dynamic">
@@ -1645,25 +1649,25 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             
                     <li>
                         <div class="slider-item-container">
-                            <div class="slider-image-container"><a href="http://www.icbc.com/road-safety/crashes-happen/Pages/Speed.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/high-risk-2016.png'/></a></div>
+                            <div class="slider-image-container"><a href="http://www.icbc.com/road-safety/crashes-happen/Distracted-driving/Pages/default.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/distracted-driving-2016.jpg'/></a></div>
                         </div>
                     </li>
                 
                     <li>
                         <div class="slider-item-container">
-                            <div class="slider-image-container"><a href="http://www.icbc.com/driver-licensing/getting-licensed/Pages/Your-driving-record.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/driving-record-homepage.jpg'/></a></div>
+                            <div class="slider-image-container"><a href="http://www.icbc.com/autoplan/costs/Pages/rate-pressures.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/rising-costs-banner.png'/></a></div>
+                        </div>
+                    </li>
+                
+                    <li>
+                        <div class="slider-item-container">
+                            <div class="slider-image-container"><a href="http://www.icbc.com/road-safety/crashes-happen/impaired-driving/Pages/Default.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/impaired-driving.jpg'/></a></div>
                         </div>
                     </li>
                 
                     <li>
                         <div class="slider-item-container">
                             <div class="slider-image-container"><a href="http://www.icbc.com/autoplan/optional/Pages/extended-liability.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/TPL.jpg'/></a></div>
-                        </div>
-                    </li>
-                
-                    <li>
-                        <div class="slider-item-container">
-                            <div class="slider-image-container"><a href="http://www.icbc.com/about-icbc/Pages/fraud.aspx"><img style="display: block;" data-src='/Lists/SliderImagesDesktop/icbc-fraud.jpg'/></a></div>
                         </div>
                     </li>
                 
@@ -1675,19 +1679,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         <ul id="second-carousel" class="jcarousel-skin-tango2">
             
                     <li>
-                        <img src="/Lists/SliderImagesDesktop/high-risk-2016.png" />
+                        <img src="/Lists/SliderImagesDesktop/distracted-driving-2016.jpg" />
                     </li>
                 
                     <li>
-                        <img src="/Lists/SliderImagesDesktop/driving-record-homepage.jpg" />
+                        <img src="/Lists/SliderImagesDesktop/rising-costs-banner.png" />
+                    </li>
+                
+                    <li>
+                        <img src="/Lists/SliderImagesDesktop/impaired-driving.jpg" />
                     </li>
                 
                     <li>
                         <img src="/Lists/SliderImagesDesktop/TPL.jpg" />
-                    </li>
-                
-                    <li>
-                        <img src="/Lists/SliderImagesDesktop/icbc-fraud.jpg" />
                     </li>
                 
         </ul>
@@ -1746,7 +1750,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 <div class="personaBox-action-content"><a href="/driver-licensing/driving-guides/Pages/Default.aspx">Read our other driving guides</a></div>
 </li>
 <li class="personaBox-action">
-<div class="personaBox-action-content"><a href="/driver-licensing/new-drivers/Pages/default.aspx">More for new drivers</a></div>
+<div class="personaBox-action-content"><a href="/driver-licensing/new-drivers/Pages/Default.aspx">More for new drivers</a></div>
 </li>
 </ul>
 
@@ -1827,7 +1831,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                 <div class="ms-webpart-zone ms-fullWidth">
 	<div id="MSOZoneCell_WebPartWPQ2" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="b87249c7-bd7a-456f-9626-002e2634e3df" HasPers="false" id="WebPartWPQ2" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><h3 class="custom-rteElement-h2blue">​<a href="/claims">Dial-a-Claim</a></h3><p><strong><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-800-910-4222<br/></span></strong><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">604-520-8222</span> (Lower Mainland)</p><p>You can also<br/><a href="/claims/Pages/Report-a-claim-online.aspx">Report online</a></p></div><div class="ms-clear"></div></div>
+			<div WebPartID="b87249c7-bd7a-456f-9626-002e2634e3df" HasPers="false" id="WebPartWPQ2" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><h3 class="custom-rteElement-h2blue"><a href="/autoplan/buy-renew-autoplan/Pages/insurance-system-updates.aspx">Customer notice</a></h3><p>We&#39;re upgrading our insurance sales system. Please allow extra time at your broker&#39;s office and consider renewing your insurance a few days early. <a href="/autoplan/buy-renew-autoplan/Pages/insurance-system-updates.aspx">Find out more</a></p></div><div class="ms-clear"></div></div>
 		</div>
 	</div>
 </div>
@@ -1844,7 +1848,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
     <div class="form1">
        <div class="inputSelectFindLoc">
            <select id="locators-select" class="inputSelect">
-               <option value="1,0">Driver licensing office</option><option value="2,0">Autoplan broker</option><option value="4,0">Claim centre</option><option value="6,0">Glass Express only</option><option value="5,0">Autobody shop</option><option value="3,0">Chiropractor</option>
+               <option value="1,0">Driver licensing office</option><option value="2,0">Autoplan broker</option><option value="4,0">Claim centre</option><option value="5,0">Autobody and Glass</option><option value="3,0">Chiropractor</option>
            </select>
 
        </div>
@@ -2367,7 +2371,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0x0977642F84AB2E32E682F9E1E93D5B661CCD32A65B4E2399E9F19D761FA4134D0E42BFDA640A8BC7CEAA7F86DE835101F46FA836F67B5ECBDFDDA8436A724844,09 May 2016 13:26:31 -0000';
+            formDigestElement.value = '0x14731FC2512B65DF376CF65D2879B60C4763A6D6178CBF644E52EE83EE49DB7079C74479F74320CDC350202600791BAC62F0A6F815E1321C6F9CF9ACE9C71B8E,11 Sep 2016 15:55:50 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>

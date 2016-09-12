@@ -73,7 +73,7 @@
 })(window,document,'script','dataLayer','GTM-TZDW9C');
 </script>
 
-    <a href="#main-content" class="sr-only element-focusable">Skip to main content</a>
+    <a href="#main-content" class="sr-only element-focusable skip-to-main">Skip to main content</a>
         
 <div class="page">
   <div class="header-wrapper">
@@ -123,7 +123,7 @@
   <label class="element-invisible" for="edit-search-block-form--2">Search </label>
  <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
 </div>
-<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-dbCC9CjsvpEDAYBaKtsFSYS8lPLt-rMkEN8UzQpxDFM" />
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-f-ZZx8k6Ki7KvmQSi_y1NZOey2Ab7gEOr3TE1YG2qG0" />
 <input type="hidden" name="form_id" value="search_block_form" />
 </div></form></div>
 <nav  class="block block-menu mobile-nav-footer-links " role="navigation">
@@ -156,7 +156,7 @@
   <div class='container'>
   </div>
 
-  <div class="view view-homepage-featured-banner view-id-homepage_featured_banner view-display-id-panel_pane_1 view-dom-id-c8b8c81c1904ef597ec4983b25c5b676">
+  <div class="view view-homepage-featured-banner view-id-homepage_featured_banner view-display-id-panel_pane_1 view-dom-id-2da85085a0909e6e165845f9109f1ff1">
         
   
   
@@ -202,7 +202,7 @@
   
 </div> 
   
-<div class="view view-fund-your-research view-id-fund_your_research view-display-id-panel_pane_1 view-dom-id-c6c8f027cddec6f03b43db2b7028fccc">
+<div class="view view-fund-your-research view-id-fund_your_research view-display-id-panel_pane_1 view-dom-id-e8a562a3f79237434c4a360da2937938">
         
   
   
@@ -213,10 +213,10 @@
       <div class="content-tile-wrapper">
                 
 <content-tile>
-    <h3 class="content-tile-title"><div class="field-content">IDRC Doctoral Research Awards</div></h3>
-    <div class="content-tile-body"><div class="field-content"><p>Approximately 20 grants of a maximum of CA$20,000 each.</p>
+    <h3 class="content-tile-title"><div class="field-content">Global Call for Research Proposals: Innovations in Livestock Vaccines</div></h3>
+    <div class="content-tile-body"><div class="field-content"><p>This call aims to support the use of the latest cutting-edge innovations to accelerate the development of new vaccines against livestock diseases.</p>
 </div></div>
-    <div class="btn-tertiary"><div class="field-content"><a href="https://www.idrc.ca/en/funding/graduate-student-awards/idrc-doctoral-research-awards">See if you're eligible to apply</a></div><span class="icon-button-chevron--blue"></span></div>
+    <div class="btn-tertiary"><div class="field-content"><a href="https://www.idrc.ca/en/funding/grants/global-call-research-proposals-innovations-livestock-vaccines">Learn more about this opportunity</a></div><span class="icon-button-chevron--blue"></span></div>
 </content-tile>
                 
 <content-tile>
@@ -238,7 +238,7 @@
 </div> <div class="panel-separator"></div><div class='container'>
   </div>
 
-  <div class="view view-homepage-project-n-stories view-id-homepage_project_n_stories view-display-id-panel_pane_2 view-dom-id-1e71fd134eb022f525b37c83129aee1c">
+  <div class="view view-homepage-project-n-stories view-id-homepage_project_n_stories view-display-id-panel_pane_2 view-dom-id-cb4322d79f0b5284ee16431a29f96a3c">
         
   
   
@@ -257,7 +257,7 @@
 <source data-srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/hero_banner_short_-_desktop/public/hero_banner_tall/ethiopia-farmer-water-harvesting-ciat-1200x300_1.png?itok=tyL9nzu_&amp;timestamp=1462387705 1x" media="(min-width: 600px)" />
 <source data-srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/hero_banner_short_mobile/public/hero_banner_tall/ethiopia-farmer-water-harvesting-ciat-1200x300_1.png?itok=GxdWoxlF&amp;timestamp=1462387705 1x" media="(min-width: 0px)" />
 <!--[if IE 9]></video><![endif]-->
-<img  class="lazyload" src="https://prd-idrc.azureedge.net/sites/default/files/styles/hero_banner_short_mobile/public/hero_banner_tall/ethiopia-farmer-water-harvesting-ciat-1200x300_1.png?itok=GxdWoxlF&amp;timestamp=1462387705" alt="" title="" />
+<img  class="lazyload" src="https://prd-idrc.azureedge.net/sites/default/files/styles/hero_banner_short_mobile/public/hero_banner_tall/ethiopia-farmer-water-harvesting-ciat-1200x300_1.png?itok=GxdWoxlF&amp;timestamp=1462387705" alt="An entrepreneurial farmer employing water harvesting in Ethiopia." title="" />
 </picture>
   <div class="feature-banner-overlay feature-banner-overlay--left">
       <div class="feature-banner-container">
@@ -315,7 +315,7 @@
 </div> <div class="panel-separator"></div><div class='container'>
   </div>
 
-  <div class="view view-homepage-project-n-stories view-id-homepage_project_n_stories view-display-id-panel_pane_3 view-dom-id-9f9571d6c1fbbf6271fc388a86bc30c1">
+  <div class="view view-homepage-project-n-stories view-id-homepage_project_n_stories view-display-id-panel_pane_3 view-dom-id-7ffdeff052c925233bfd543bf1f0db23">
         
   
   
@@ -326,7 +326,7 @@
   
   
 </div> <div class="panel-separator"></div>
-<div class="view view-partner-with-us view-id-partner_with_us view-display-id-panel_pane_1 view-dom-id-d88963a1b607265446a8f81defb9ced8">
+<div class="view view-partner-with-us view-id-partner_with_us view-display-id-panel_pane_1 view-dom-id-f52f749d26a586e703d3a04136c6ccc3">
         
   
   
@@ -360,7 +360,7 @@
   
   
 </div> <div class="panel-separator"></div>
-<div class="view view-featured-resources-and-tools view-id-featured_resources_and_tools view-display-id-panel_pane_1 view-dom-id-694b6375fd9435436a42adaad5ea7265">
+<div class="view view-featured-resources-and-tools view-id-featured_resources_and_tools view-display-id-panel_pane_1 view-dom-id-275f295f59046da2f7b56bcf33d6850a">
         
   
   
@@ -397,7 +397,7 @@
   <div class="container">
 	<h2 class="pane-title">News and events</h2>
 </div>
-<div class="view view-news-and-events view-id-news_and_events view-display-id-block view-dom-id-b0a837c40c143c6c93eef7b9a51f11cc">
+<div class="view view-news-and-events view-id-news_and_events view-display-id-block view-dom-id-1ced9ee7364e2c1f10a66a3c7b358dae">
 
 
 
@@ -406,54 +406,70 @@
       <div class="container">
 
           <div class="content-tile-wrapper">
-            <content-tile class="content-tile--shadow">
+            <content-tile class="content-tile--shadow news-tile">
     
       <div class="views-row views-row-1 views-row-odd views-row-first news-item">
         
-            <div class="field-content"></div>                              
-  <div class="content-tile__news-wrapper">
-                            
-        <div class="views-field views-field-nothing">                <span class="field-content"><span class='recent-news'>NEWS</span>
-<span class='upcoming-event'>UPCOMING EVENT</span></span>        </div>                        
-        <div class="views-field views-field-field-displayed-title">                <div class="field-content">Mekong Initiative research awardees announced</div>        </div>                        
-        <div class="views-field views-field-field-navigation-teaser">                <div class="field-content"></div>        </div>                        
-        <div class="views-field views-field-field-navigation-teaser-link-lab">                <div class="field-content"><a href="https://www.idrc.ca/en/news/mekong-initiative-research-awardees-announced">Learn more<span class="icon-button-chevron--blue"></span></a></div>        </div>            </div>
-
-      </div>
-    </content-tile>
-              <content-tile class="content-tile--event">
-    
-      <div class="views-row views-row-2 views-row-even event">
-                          
-      <div class="views-field views-field-nothing">            <span class="field-content"><span class='recent-news'>NEWS</span>
-<span class='upcoming-event'>UPCOMING EVENT</span></span>      </div>                
-      <div class="views-field views-field-field-displayed-title">            <div class="field-content">Governance in the Sustainable Development Goals: What difference does it make?</div>      </div>                
-      <div class="views-field views-field-field-navigation-teaser">            <div class="field-content"></div>      </div>                
-      <div class="views-field views-field-field-navigation-teaser-link-lab">            <div class="field-content"><a href="https://www.idrc.ca/en/events/governance-sustainable-development-goals-what-difference-does-it-make">Learn more<span class="icon-button-chevron--blue"></span></a></div>      </div>            </div>
-    </content-tile>
-              <content-tile class="content-tile--shadow">
-    
-      <div class="views-row views-row-3 views-row-odd views-row-last news-item">
-        
-            <div class="field-content"><div class="field-collection-view clearfix view-mode-full field-collection-view-final"><div class="entity entity-field-collection-item field-collection-item-field-news-image " about="/en/field-collection/field-news-image/8365" typeof="">
+            <div class="field-content"><div class="field-collection-view clearfix view-mode-full field-collection-view-final"><div class="entity entity-field-collection-item field-collection-item-field-news-image " about="/en/field-collection/field-news-image/11313" typeof="">
   <div class="field field-name-field-image-news-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><picture >
 <!--[if IE 9]><video style="display: none;"><![endif]-->
-<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/k2p_launch_in_lebanon.png?itok=QjE-H1xn&amp;timestamp=1460402224 1x" media="(min-width: 1280px)" />
-<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/k2p_launch_in_lebanon.png?itok=QjE-H1xn&amp;timestamp=1460402224 1x" media="(min-width: 960px)" />
-<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_mobile/public/images/news-images/k2p_launch_in_lebanon.png?itok=QR6RjEKg&amp;timestamp=1460402224 1x" media="(min-width: 600px)" />
-<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_mobile/public/images/news-images/k2p_launch_in_lebanon.png?itok=QR6RjEKg&amp;timestamp=1460402224 1x" media="(min-width: 0px)" />
+<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/idra-awards-richard-lord-peru.jpg?itok=mxsN81dt&amp;timestamp=1471372417 1x" media="(min-width: 1280px)" />
+<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/idra-awards-richard-lord-peru.jpg?itok=mxsN81dt&amp;timestamp=1471372417 1x" media="(min-width: 960px)" />
+<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_mobile/public/images/news-images/idra-awards-richard-lord-peru.jpg?itok=adla0ADu&amp;timestamp=1471372417 1x" media="(min-width: 600px)" />
+<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_mobile/public/images/news-images/idra-awards-richard-lord-peru.jpg?itok=adla0ADu&amp;timestamp=1471372417 1x" media="(min-width: 0px)" />
 <!--[if IE 9]></video><![endif]-->
-<img  src="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/k2p_launch_in_lebanon.png?itok=QjE-H1xn&amp;timestamp=1460402224" alt="" title="" />
-</picture></div></div></div><div class="field field-name-field-image-caption field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><p>Dr. John Lavis (left), Director of the McMaster Health Forum (Canada) and Dr. Fadi El Jardali, Director of K2P Center (Lebanon) during the 2015 event launch in Beirut.</p>
+<img  src="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/idra-awards-richard-lord-peru.jpg?itok=mxsN81dt&amp;timestamp=1471372417" alt="" title="" />
+</picture></div></div></div><div class="field field-name-field-image-credit field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><p>Richard Lord </p>
 </div></div></div></div>
 </div></div>                              
   <div class="content-tile__news-wrapper">
                             
         <div class="views-field views-field-nothing">                <span class="field-content"><span class='recent-news'>NEWS</span>
 <span class='upcoming-event'>UPCOMING EVENT</span></span>        </div>                        
-        <div class="views-field views-field-field-displayed-title">                <div class="field-content">Lebanon becomes public health global hub</div>        </div>                        
+        <div class="views-field views-field-field-displayed-title">                <div class="field-content">Peru receives new funds from Canada to improve research on public policies</div>        </div>                        
+        <div class="views-field views-field-field-navigation-teaser">                <div class="field-content">IDRC announced new international cooperation funds to support research in Peru. </div>        </div>                        
+        <div class="views-field views-field-field-navigation-teaser-link-lab">                <div class="field-content"><a href="https://www.idrc.ca/en/news/peru-receives-new-funds-canada-improve-research-public-policies">View more <span class="sr-only">Peru receives new funds from Canada to improve research on public policies</span><span class="icon-button-chevron--blue"></span></a></div>        </div>            </div>
+
+      </div>
+    </content-tile>
+              <content-tile class="content-tile--shadow news-tile">
+    
+      <div class="views-row views-row-2 views-row-even news-item">
+        
+            <div class="field-content"><div class="field-collection-view clearfix view-mode-full field-collection-view-final"><div class="entity entity-field-collection-item field-collection-item-field-news-image " about="/en/field-collection/field-news-image/11311" typeof="">
+  <div class="field field-name-field-image-news-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/world_bank_charlotte_kesl.jpg?itok=dhoAPryv&amp;timestamp=1471371804 1x" media="(min-width: 1280px)" />
+<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/world_bank_charlotte_kesl.jpg?itok=dhoAPryv&amp;timestamp=1471371804 1x" media="(min-width: 960px)" />
+<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_mobile/public/images/news-images/world_bank_charlotte_kesl.jpg?itok=fr8BIl8D&amp;timestamp=1471371804 1x" media="(min-width: 600px)" />
+<source srcset="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_mobile/public/images/news-images/world_bank_charlotte_kesl.jpg?itok=fr8BIl8D&amp;timestamp=1471371804 1x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<img  src="https://prd-idrc.azureedge.net/sites/default/files/styles/news_image_desktop/public/images/news-images/world_bank_charlotte_kesl.jpg?itok=dhoAPryv&amp;timestamp=1471371804" alt="girls in a school in Colombia" title="" />
+</picture></div></div></div><div class="field field-name-field-image-credit field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><p>Charlotte Kesl / World Bank </p>
+</div></div></div></div>
+</div></div>                              
+  <div class="content-tile__news-wrapper">
+                            
+        <div class="views-field views-field-nothing">                <span class="field-content"><span class='recent-news'>NEWS</span>
+<span class='upcoming-event'>UPCOMING EVENT</span></span>        </div>                        
+        <div class="views-field views-field-field-displayed-title">                <div class="field-content">IDRC and Fundación Capital announce new project enabling vulnerable Colombian youth to build a better future</div>        </div>                        
         <div class="views-field views-field-field-navigation-teaser">                <div class="field-content"></div>        </div>                        
-        <div class="views-field views-field-field-navigation-teaser-link-lab">                <div class="field-content"><a href="https://www.idrc.ca/en/news/lebanon-becomes-public-health-global-hub">Learn more<span class="icon-button-chevron--blue"></span></a></div>        </div>            </div>
+        <div class="views-field views-field-field-navigation-teaser-link-lab">                <div class="field-content"><a href="https://www.idrc.ca/en/news/idrc-and-fundacion-capital-announce-new-project-enabling-vulnerable-colombian-youth-build">View more <span class="sr-only">IDRC and Fundación Capital announce new project enabling vulnerable Colombian youth to build a better future</span><span class="icon-button-chevron--blue"></span></a></div>        </div>            </div>
+
+      </div>
+    </content-tile>
+              <content-tile class="content-tile--shadow news-tile">
+    
+      <div class="views-row views-row-3 views-row-odd views-row-last news-item">
+        
+            <div class="field-content"></div>                              
+  <div class="content-tile__news-wrapper">
+                            
+        <div class="views-field views-field-nothing">                <span class="field-content"><span class='recent-news'>NEWS</span>
+<span class='upcoming-event'>UPCOMING EVENT</span></span>        </div>                        
+        <div class="views-field views-field-field-displayed-title">                <div class="field-content">IDRC starts new work in ASEAN</div>        </div>                        
+        <div class="views-field views-field-field-navigation-teaser">                <div class="field-content">The Honourable Chrystia Freeland, Minister of International Trade, announced a new project to be...</div>        </div>                        
+        <div class="views-field views-field-field-navigation-teaser-link-lab">                <div class="field-content"><a href="https://www.idrc.ca/en/news/idrc-starts-new-work-asean">View more <span class="sr-only">IDRC starts new work in ASEAN</span><span class="icon-button-chevron--blue"></span></a></div>        </div>            </div>
 
       </div>
     </content-tile>
@@ -495,7 +511,8 @@
 <li class="first leaf"><a href="/en/about-idrc/careers" title="">Careers</a></li>
 <li class="leaf"><a href="/en/about-idrc/contact-us" title="">Contact Us</a></li>
 <li class="leaf"><a href="/en/subscribe-newsletter" title="">Subscribe</a></li>
-<li class="last leaf"><a href="/en/unsubscribe" title="">Unsubscribe</a></li>
+<li class="leaf"><a href="/en/unsubscribe" title="">Unsubscribe</a></li>
+<li class="last leaf"><a href="/en/site-map" title="">Site map</a></li>
 </ul>
 </nav>
 <div  class="block block-block">
@@ -525,7 +542,7 @@
             <div class="disclaimer">
               <div class="region region-footer">
   <div  class="block block-block">
-            <p>© 2015 IDRC. All rights reserved.</p>
+            <p>© 2016 IDRC. All rights reserved.</p>
 </div>
 </div>
             </div>
@@ -552,16 +569,10 @@ window.jQuery || document.write("<script src='/sites/all/libraries/replace/jquer
 document.createElement( "picture" );
 //--><!]]>
 </script>
-<script type="text/javascript" src="https://prd-idrc.azureedge.net/sites/default/files/js/js_I8yX6RYPZb7AtMcDUA3QKDZqVkvEn35ED11_1i7vVpc.js"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-3594456-10", {"cookieDomain":"auto","allowLinker":true});ga("require", "linkid", "linkid.js");ga("require", "displayfeatures");ga("require", "linker");ga("linker:autoLink", ["https:\/\/www.idrc.ca","https:\/\/www.crdi.ca","http:\/\/www.idrc.ca","http:\/\/www.crdi.ca","https:\/\/prd.idrc.ca\/en","https:\/\/prd.idrc.ca\/fr"]);ga("set", "anonymizeIp", true);ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");
-//--><!]]>
-</script>
 <script type="text/javascript" src="https://prd-idrc.azureedge.net/sites/default/files/js/js_JF7f1bm2Nr1z7NtcUdDKgPnuGnChFuhbDBGJbUTDRlw.js"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"idrc","theme_token":"pcDBRPkDSb22frKWA4FvbJ1Lxj8it0OfbSyhP2f9Rqc","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.1.4\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/picture\/lazysizes\/lazysizes.min.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.autocomplete.min.js":1,"sites\/all\/modules\/contrib\/gss\/scripts\/autocomplete.js":1,"1":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/idrc\/translate.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"sites\/all\/modules\/contrib\/workflow\/workflow_admin_ui\/workflow_admin_ui.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/flexible\/flexible.css":1,"modules\/locale\/locale.css":1}},"gss":{"key":"014450244913213934797:gl78nxgqewo"},"better_exposed_filters":{"views":{"news_and_events":{"displays":{"block":{"filters":[]}}},"making_an_impact":{"displays":{"block":{"filters":[]}}},"fund_your_research":{"displays":{"panel_pane_1":{"filters":[]}}},"homepage_project_n_stories":{"displays":{"panel_pane_2":{"filters":[]},"panel_pane_3":{"filters":[]}}},"partner_with_us":{"displays":{"panel_pane_1":{"filters":[]}}},"featured_resources_and_tools":{"displays":{"panel_pane_1":{"filters":[]}}},"homepage_featured_banner":{"displays":{"panel_pane_1":{"filters":[]}}}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":"2","trackCrossDomains":["https:\/\/www.idrc.ca","https:\/\/www.crdi.ca","http:\/\/www.idrc.ca","http:\/\/www.crdi.ca","https:\/\/prd.idrc.ca\/en","https:\/\/prd.idrc.ca\/fr"],"trackUrlFragments":1},"urlIsAjaxTrusted":{"\/en":true}});
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"idrc","theme_token":"M-hwOIQCIYw3jUNf_Ppo-Yy6apZn_LUdcv_a7ihgzxc","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.1.4\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/picture\/lazysizes\/lazysizes.min.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.autocomplete.min.js":1,"sites\/all\/modules\/contrib\/gss\/scripts\/autocomplete.js":1,"1":1,"sites\/all\/themes\/idrc\/translate.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"sites\/all\/modules\/contrib\/workflow\/workflow_admin_ui\/workflow_admin_ui.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/flexible\/flexible.css":1,"modules\/locale\/locale.css":1}},"gss":{"key":"014450244913213934797:gl78nxgqewo"},"better_exposed_filters":{"views":{"news_and_events":{"displays":{"block":{"filters":[]}}},"making_an_impact":{"displays":{"block":{"filters":[]}}},"fund_your_research":{"displays":{"panel_pane_1":{"filters":[]}}},"homepage_project_n_stories":{"displays":{"panel_pane_2":{"filters":[]},"panel_pane_3":{"filters":[]}}},"partner_with_us":{"displays":{"panel_pane_1":{"filters":[]}}},"featured_resources_and_tools":{"displays":{"panel_pane_1":{"filters":[]}}},"homepage_featured_banner":{"displays":{"panel_pane_1":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/en":true}});
 //--><!]]>
 </script>
       <!--<ko-iconset-svg name="icons" path="--><!--"></ko-iconset-svg>-->

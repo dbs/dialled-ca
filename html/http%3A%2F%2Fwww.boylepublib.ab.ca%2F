@@ -8,9 +8,16 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Boyle Public Library of Boyle, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Boyle, Alberta, Canada" />
+<meta name="google-site-verification" content="Wu64TxzY4BQJO0OMfX0MpALB89cPwW5fMSPtiGITl20" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,9 +28,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Boyle Public Library of Boyle, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Boyle, Alberta, Canada" />
-<meta name="google-site-verification" content="Wu64TxzY4BQJO0OMfX0MpALB89cPwW5fMSPtiGITl20" />
 
 
 	<meta property="og:url" CONTENT="http://www.boylepublib.ab.ca/" />
@@ -33,12 +37,10 @@
 	<meta property="og:locale" CONTENT="en_US" />
 	<meta property="fb:app_id" CONTENT="142916509104743" />
 	<meta property="og:type" CONTENT="website" />
-	<meta property="og:description" CONTENT=""/>
 
 	
-		
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -46,7 +48,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -54,10 +56,10 @@
 	<meta name="twitter:site" CONTENT="Boyle Public Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Boyle Public Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -259,7 +261,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -267,6 +268,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -281,6 +294,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -301,9 +320,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -335,47 +353,26 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/127" class="blog_link active_page" title="Discussions">Discussions</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=127" class="blog_link active_page" title="Discussions"><span>Discussions</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/127" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/127" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=127" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/150" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
     <li ><a href='/document/library/458'>Documents</a></li>
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -402,10 +399,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -420,9 +417,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li class="MenuOpen" id="active"><a href="http://www.boylepublib.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.boylepublib.ab.ca/Letter-from-the-Mayor" title="Letter from the mayor"><span>Letter from the Mayor</span></a></li><li><a href="http://www.boylepublib.ab.ca/TRACpac-GUIDE" title="Tracpac guide"><span>TRACpac GUIDE</span></a></li></ul></li><li><a href="http://www.boylepublib.ab.ca/Catalogue" title="Catalogue"><span>Catalogue</span></a></li><li><a href="http://www.boylepublib.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.boylepublib.ab.ca/Services" class="services_link parent_link" title="Services"><span>Services</span></a><ul><li><a href="http://www.boylepublib.ab.ca/New-Titles-Coming-to-the-" title="New titles coming to the "><span>New Titles Coming to the </span></a></li></ul></li><li><a href="http://www.boylepublib.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.boylepublib.ab.ca/Newsletter" title="Newsletter"><span>Newsletter</span></a></li><li><a href="http://www.boylepublib.ab.ca/Upcoming-Events" title="Upcoming events"><span>Upcoming Events</span></a></li>
-  
 </ul>
 
 	</nav>
@@ -560,36 +555,19 @@ if (typeof jQuery != 'undefined') {
 			<div class="ResourceBox insite latest_posts page_box" id="latest_posts_box">
   <h4 class="latest_posts_title">
     <a href="/blogs/show/127">Latest Discussions</a> 
-    <span class="latest_posts_count">(3)</span>
+    <span class="latest_posts_count">(2)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7052/xlarge/board%20members.jpg?1454184374" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Board%20members" src="http://files.townlife.com/public/asset_files/7052/thumb_400/board%20members.jpg?1454184374" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6205">				
-	  Annual General Meeting			 			
-        </a>
-        <p>When - 6:30 pm&nbsp; April 21, 2016 
-What - Annual General Meeting
-Where - Boyle Public Library
-Who - All are welcome
-
-        <!-- <a href="/blogs/show_entry/6205">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
-    
-      <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5900"><img alt="Board members" src="http://files.townlife.com/public/asset_files/7052/thumb_400/board members.jpg?1454184374" /></a></div>
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5900">				
-	  Looking for Board Members			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5900">
+	    Looking for Board Members
+          </a>
         <p>We are looking for 2 more Board Members
 Are you Interested?
 Give us a call
@@ -597,23 +575,17 @@ Hope to here from you soon!!
         <!--  --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5193">				
-	  Join our group on Facebook			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5193">
+	    Join our group on Facebook
+          </a>
         <p>Be sure to check out our facebook page and join our group
 looking forward to seeing you there
 
         <!--  --></p>
 	</div>      
 	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/127">+ MORE</a></h6>
 </div>
@@ -624,13 +596,9 @@ looking forward to seeing you there
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/127">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       There are currently no events in our calendar. Check back soon for updates.
-    
   </div>
-
 
 		
 
@@ -638,77 +606,40 @@ looking forward to seeing you there
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_683">
-	      
-              
-	      
+	    <dd id="action_683">
 	        <img alt="Call (780) 689-4161" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 689-4161" />
 		
 		Call (780) 689-4161
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_684">
-	      
-              
-	      
+		    <dd id="action_684">
 	        <img alt="Fax (780) 689-5660" class="action_steps_image" src="/images/icons/fff/printer.png?1445483283" title="Fax (780) 689-5660" />
 		
 		Fax (780) 689-5660
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/127" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1401&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1401&amp;return_url=http%3A%2F%2Fwww.boylepublib.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=127" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.boylepublib.ab.ca%2F&amp;site_id=127" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -719,12 +650,9 @@ looking forward to seeing you there
 		
 		<nav id="subNavigation" class="rightItem">
 			<h3>Links</h3>
-			
-
-<ul id="SubNav">
+			<ul id="SubNav">
   <li><a href="http://www.boylepublib.ab.ca/Letter-from-the-Mayor" class="letter_from_the_mayor_link123" target="" title="Letter from the mayor"><span>Letter from the Mayor</span></a></li><li><a href="http://www.boylepublib.ab.ca/TRACpac-GUIDE" class="tracpac_guide_link123" target="" title="Tracpac guide"><span>TRACpac GUIDE</span></a></li>
 </ul>
-
 
 		</nav>
 		
@@ -735,27 +663,17 @@ looking forward to seeing you there
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.boylealberta.com/default.aspx" class="action_steps_link" target="_blank">Village of Boyle</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.tracpac.ab.ca/" class="action_steps_link" target="_blank">TracPac Interlibrary Loans</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -772,16 +690,10 @@ looking forward to seeing you there
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -793,8 +705,6 @@ looking forward to seeing you there
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
 </div>
 
  </span>
@@ -833,8 +743,8 @@ looking forward to seeing you there
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781443419697 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781443419697.gif" />The garden of burning sand / Corban Addison.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399160455 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780399160455.gif" />Threat vector / Tom Clancy with Mark Greaney.</a>
 				
 				
 			
@@ -845,8 +755,8 @@ looking forward to seeing you there
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/images/no_books.jpg" /></a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781443419697 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781443419697.gif" />The garden of burning sand / Corban Addison.</a>
 				
 				
 			
@@ -869,8 +779,8 @@ looking forward to seeing you there
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399160455 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780399160455.gif" />Threat vector / Tom Clancy with Mark Greaney.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/images/no_books.jpg" /></a>
 				
 					
 					</div> <!-- end book group of 5 -->
@@ -908,7 +818,7 @@ looking forward to seeing you there
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -950,63 +860,40 @@ looking forward to seeing you there
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li class="MenuOpen" id="active"><a href="http://www.boylepublib.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.boylepublib.ab.ca/Letter-from-the-Mayor" title="Letter from the mayor"><span>Letter from the Mayor</span></a></li><li><a href="http://www.boylepublib.ab.ca/TRACpac-GUIDE" title="Tracpac guide"><span>TRACpac GUIDE</span></a></li></ul></li><li><a href="http://www.boylepublib.ab.ca/Catalogue" title="Catalogue"><span>Catalogue</span></a></li><li><a href="http://www.boylepublib.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.boylepublib.ab.ca/Services" class="services_link parent_link" title="Services"><span>Services</span></a><ul><li><a href="http://www.boylepublib.ab.ca/New-Titles-Coming-to-the-" title="New titles coming to the "><span>New Titles Coming to the </span></a></li></ul></li><li><a href="http://www.boylepublib.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.boylepublib.ab.ca/Newsletter" title="Newsletter"><span>Newsletter</span></a></li><li><a href="http://www.boylepublib.ab.ca/Upcoming-Events" title="Upcoming events"><span>Upcoming Events</span></a></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/127" class="blog_link active_page" title="Discussions">Discussions</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=127" class="blog_link active_page" title="Discussions"><span>Discussions</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/127" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/127" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=127" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/150" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
     <li ><a href='/document/library/458'>Documents</a></li>
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1015,7 +902,7 @@ looking forward to seeing you there
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1025,41 +912,23 @@ looking forward to seeing you there
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/127" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1196,6 +1065,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1222,3 +1116,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

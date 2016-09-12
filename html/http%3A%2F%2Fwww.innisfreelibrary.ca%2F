@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Innisfree public library in Ab, Canada" />
+<meta name="keywords" content="Innisfree public library, Innisfree, Ab, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Innisfree public library in Ab, Canada" />
-<meta name="keywords" content="Innisfree public library, Innisfree, Ab, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.innisfreelibrary.ca/" />
@@ -32,20 +36,18 @@
 	<meta property="og:locale" CONTENT="en_US" />
 	<meta property="fb:app_id" CONTENT="142916509104743" />
 	<meta property="og:type" CONTENT="website" />
-	<meta property="og:description" CONTENT=""/>
 
 	
-		
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT="           Join us at our FREE Family Events on September 30th!                                                                                          Embellishment Workshop 9am - 12pm\r                                                                                                         Story "/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
 	<meta itemprop="name" CONTENT="Village of Innisfree Public Library (Home)">
-	<meta itemprop="description" CONTENT="">
+	<meta itemprop="description" CONTENT="           Join us at our FREE Family Events on September 30th!                                                                                          Embellishment Workshop 9am - 12pm\r           ">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Village of Innisfree Public Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Village of Innisfree Public Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="           Join us at our FREE Family Events on September 30th!                                                                                          Embellishment Workshop 9am - 12pm\r           ">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -258,7 +260,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -266,6 +267,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -280,6 +293,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -300,9 +319,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -334,45 +352,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/389" class="blog_link active_page" title="Blog">Blog</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=389" class="blog_link active_page" title="Blog"><span>Blog</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/389" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/389" class="photos_link active_page" title="Photos"><span>Photos</span></a>
+      <a href="/galleries/show?site=389" class="photos_link active_page" title="Photos"><span>Photos</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/236" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -399,10 +397,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -417,9 +415,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
-    <li class="MenuOpen" id="active"><a href="http://www.innisfreelibrary.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.innisfreelibrary.ca/Board-" title="Board "><span>Board </span></a></li><li><a href="http://www.innisfreelibrary.ca/By---Laws-" title="By - laws "><span>By - Laws </span></a></li><li><a href="http://www.innisfreelibrary.ca/Community-Events" title="Community events"><span>Community Events</span></a></li><li><a href="http://www.innisfreelibrary.ca/FILS" title="Fils"><span>FILS</span></a></li><li><a href="http://www.innisfreelibrary.ca/Library-News" title="Library news"><span>Library News</span></a></li><li><a href="http://www.innisfreelibrary.ca/Photo-Gallery" title="Photo gallery"><span>Photo Gallery</span></a></li></ul></li><li><a href="http://www.innisfreelibrary.ca/Book-Club" title="Book club"><span>Book Club</span></a></li><li><a href="http://www.innisfreelibrary.ca/Programs" title="Programs"><span>Programs</span></a></li><li><a href="http://www.innisfreelibrary.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.innisfreelibrary.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
-  
+    <li class="MenuOpen" id="active"><a href="http://www.innisfreelibrary.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.innisfreelibrary.ca/Board-" title="Board "><span>Board </span></a></li><li><a href="http://www.innisfreelibrary.ca/By---Laws-" title="By - laws "><span>By - Laws </span></a></li><li><a href="http://www.innisfreelibrary.ca/Community-Events" title="Community events"><span>Community Events</span></a></li><li><a href="http://www.innisfreelibrary.ca/FILS" title="Fils"><span>FILS</span></a></li><li><a href="http://www.innisfreelibrary.ca/Library-News" title="Library news"><span>Library News</span></a></li><li><a href="http://www.innisfreelibrary.ca/Photo-Gallery" title="Photo gallery"><span>Photo Gallery</span></a></li></ul></li><li><a href="http://www.innisfreelibrary.ca/Book-Club" title="Book club"><span>Book Club</span></a></li><li><a href="http://www.innisfreelibrary.ca/Programs" title="Programs"><span>Programs</span></a></li><li><a href="http://www.innisfreelibrary.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.innisfreelibrary.ca/e-Resources" title="E-resources"><span>e-Resources</span></a></li>
 </ul>
 
 	</nav>
@@ -477,8 +473,8 @@ if (typeof jQuery != 'undefined') {
             <td>&nbsp;CLOSED</td>
         </tr>
         <tr>
-            <td>Holidays</td>
-            <td>&nbsp;CLOSED</td>
+            <td><strong>Holidays</strong></td>
+            <td>&nbsp;CLOSED&nbsp;<strong>&nbsp; </strong></td>
         </tr>
     </tbody>
 </table>
@@ -516,22 +512,67 @@ email: <a href="mailto:&#108;&#105;&#98;&#114;&#97;&#114;&#105;&#97;&#110;&#64;&
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="Library PressDisplay" src="http://files.townlife.com/public/uploads/photos/297486/PressDisplay_HomeSlideshow_xlarge.jpg" />
+					<img class="bigImg" alt="Paint Night 031" src="http://files.townlife.com/public/uploads/photos/499455/Paint_Night_031_xlarge.JPG" />
 					
 					
 					
 					
-						
-						<div class="infoBlock">
-							<b>Library PressDisplay</b>
-							<p><strong>&nbsp;<a target="_blank" href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com">Library PressDisplay</a> </strong>provides instant online access to today's newspapers from around the world in full-color, full-page format.</p>
-						</div>
 						
 					
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
 					<img class="bigImg" alt="read" src="http://files.townlife.com/public/uploads/photos/371273/read_xlarge.jpg" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Parade Float" src="http://files.townlife.com/public/uploads/photos/499487/008_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Birthday Celebration" src="http://files.townlife.com/public/uploads/photos/499520/SRP_Day_1_-_2016_007_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="SRP " src="http://files.townlife.com/public/uploads/photos/499531/SRP_Day_1_-_2016_021_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Wild Pink Yonder 2016" src="http://files.townlife.com/public/uploads/photos/502051/Wild_Pink_Yonder_012_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Wild Pink Yonder 16" src="http://files.townlife.com/public/uploads/photos/502073/Wild_Pink_Yonder_002_xlarge.JPG" />
 					
 					
 					
@@ -566,62 +607,64 @@ email: <a href="mailto:&#108;&#105;&#98;&#114;&#97;&#114;&#105;&#97;&#110;&#64;&
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/2131"><img alt="Library_pressdisplay" src="http://files.townlife.com/public/asset_files/3262/thumb_400/Library_PressDisplay.jpg?1363811784" /></a></div>
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/2131">				
-	  Library PressDisplay			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/6717">
+	    Thank you&#x27;s
+          </a>
+        <p>We have been pleasantly surprised to receive the following &quot;praises&quot; from some of our library patrons lately.
+
+From Betty Saik, a thank...
+        <!-- <a href="/blogs/show_entry/6717">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6716">
+	    Thank you&#x27;s
+          </a>
+        <p>We have been pleasantly surprised to receive the following &quot;praises&quot; from some of our library patrons lately.
+
+From Betty Saik, a thank...
+        <!-- <a href="/blogs/show_entry/6716">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6715">
+	    Thank you&#x27;s
+          </a>
+        <p>We have been pleasantly surprised to receive the following &quot;praises&quot; from some of our library patrons lately.
+
+From Betty Saik, a thank...
+        <!-- <a href="/blogs/show_entry/6715">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6714">
+	    Thank you&#x27;s
+          </a>
+        <p>We have been pleasantly surprised to receive the following &quot;praises&quot; from some of our library patrons lately.
+
+From Betty Saik, a thank...
+        <!-- <a href="/blogs/show_entry/6714">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/3262/xlarge/Library_PressDisplay.jpg?1363811784" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Library_pressdisplay" src="http://files.townlife.com/public/asset_files/3262/thumb_400/Library_PressDisplay.jpg?1363811784" />
+            </a>
+          </div>
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/2131">
+	    Library PressDisplay
+          </a>
         <p>Press Display is the world&rsquo;s largest online newspaper and magazine kiosk, offering instant access to over 2000 publications from 95 countries...
         <!-- <a href="/blogs/show_entry/2131">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
-      <li class="new_comment_on_post">
-        
-        <a href="/blogs/show_entry/1478#comment1137">				
-	  From South of the Border comment on Welcome Innisfree Public Library			 			
-        </a>        
-      </li>
-    
-  
-    
-      <li class="new_comment_on_post">
-        
-        <a href="/blogs/show_entry/1478#comment1086">				
-	  It is amazing! comment on Welcome Innisfree Public Library			 			
-        </a>        
-      </li>
-    
-  
-    
-      <li class="new_comment_on_post">
-        
-        <a href="/blogs/show_entry/1478#comment1082">				
-	  Congratulations! comment on Welcome Innisfree Public Library			 			
-        </a>        
-      </li>
-    
-  
-    
-      <li class="new_post">
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/1478">				
-	  Welcome Innisfree Public Library			 			
-        </a>
-        <p>Thank you for visiting the new website for Innisfree Public Library, if you have any comments or suggestions please share them below.
-        <!--  --></p>
-	</div>      
-	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/389">+ MORE</a></h6>
 </div>
@@ -632,54 +675,75 @@ email: <a href="mailto:&#108;&#105;&#98;&#114;&#97;&#114;&#105;&#97;&#110;&#64;&
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/389">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/389">Upcoming Events</a> 
-        <span class="latest_events_count">(2)</span>
+        <span class="latest_events_count">(5)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>30</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35310">Author Visit</a>
+            <a href="/calendars/show_event/37351">Embellishment Workshop</a>
             <span class="upcoming_time_frame">
-              (in 2 days)
-              
-                &nbsp;from  2:00 PM
-                
-              
+              (in 2 weeks)
+                &nbsp;from  9:00 AM
+                  &nbsp;to 12:00 PM
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>18</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>30</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35570">iPad Workshop Series</a>
+            <a href="/calendars/show_event/37353">Story Time with Mr. Ashton, Storyteller Extrodinaire</a>
             <span class="upcoming_time_frame">
-              (in 1 week)
-              
-                &nbsp;from  6:30 PM
-                
-              
+              (in 2 weeks)
+                &nbsp;from  1:00 PM
+                  &nbsp;to  2:00 PM
             </span>
           </li>
-        
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>30</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37354">Ukrainian Dance intro 101</a>
+            <span class="upcoming_time_frame">
+              (in 2 weeks)
+                &nbsp;from  3:45 PM
+                  &nbsp;to  5:45 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>30</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37356">Parent/Kid Paint Night</a>
+            <span class="upcoming_time_frame">
+              (in 2 weeks)
+                &nbsp;from  6:00 PM
+                  &nbsp;to  9:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>01</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37358">Beer/Wine Tasting with Quilt &amp; Art Show</a>
+            <span class="upcoming_time_frame">
+              (in 2 weeks)
+                &nbsp;from  7:00 PM
+                  &nbsp;to  9:00 PM
+            </span>
+          </li>
       </ul>
       <h6 class="more"><a href="/calendars/table/389">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -687,55 +751,26 @@ email: <a href="mailto:&#108;&#105;&#98;&#114;&#97;&#114;&#105;&#97;&#110;&#64;&
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-	 
-        
+ 
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/389" class="action_step_link">Contact Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=6357&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=6357&amp;return_url=http%3A%2F%2Fwww.innisfreelibrary.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=389" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.innisfreelibrary.ca%2F&amp;site_id=389" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -746,12 +781,9 @@ email: <a href="mailto:&#108;&#105;&#98;&#114;&#97;&#114;&#105;&#97;&#110;&#64;&
 		
 		<nav id="subNavigation" class="rightItem">
 			<h3>Links</h3>
-			
-
-<ul id="SubNav">
+			<ul id="SubNav">
   <li><a href="http://www.innisfreelibrary.ca/Board-" class="board__link123" target="" title="Board "><span>Board </span></a></li><li><a href="http://www.innisfreelibrary.ca/By---Laws-" class="by_laws__link123" target="" title="By - laws "><span>By - Laws </span></a></li><li><a href="http://www.innisfreelibrary.ca/Community-Events" class="community_events_link123" target="" title="Community events"><span>Community Events</span></a></li><li><a href="http://www.innisfreelibrary.ca/FILS" class="fils_link123" target="" title="Fils"><span>FILS</span></a></li><li><a href="http://www.innisfreelibrary.ca/Library-News" class="library_news_link123" target="" title="Library news"><span>Library News</span></a></li><li><a href="http://www.innisfreelibrary.ca/Photo-Gallery" class="photo_gallery_link123" target="" title="Photo gallery"><span>Photo Gallery</span></a></li>
 </ul>
-
 
 		</nav>
 		
@@ -771,16 +803,16 @@ email: <a href="mailto:&#108;&#105;&#98;&#114;&#97;&#114;&#105;&#97;&#110;&#64;&
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-<a href="/galleries/show_photo/477297"><img title="IMG_4458" alt="IMG_4458" src="http://files.townlife.com/public/uploads/photos/477297/IMG_4458_large.JPG" /></a>
+  <br />
+<div style="text-align: left"><a href="/galleries/show_photo/499444"><img title="240x400_2016_BRUSH" alt="240x400_2016_BRUSH" src="http://files.townlife.com/public/uploads/photos/499444/240x400_2016_BRUSH_large.jpg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Join us at our FREE&nbsp;Family Events on September 30th!<br />
+<br />
+</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embellishment Workshop 9am - 12pm<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Story Teller 1-2pm<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ukrainian Dance Intro 3:45-5:45pm<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parent/Children Paint Night 6-8pm</div>
 
 
 	</section>
@@ -792,48 +824,11 @@ email: <a href="mailto:&#108;&#105;&#98;&#114;&#97;&#114;&#105;&#97;&#110;&#64;&
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
     <div class="social_bookmark">
-      <a href="/galleries/show_photo/391651"><br />
-</a>
-<div style="text-align: center"><strong>Summer Employment Opportunity<br />
-</strong>Library Assistant <br />
-Hours: 30 hours per week Wage: $11.20 per hour<br />
-(Tentative) Start date: July 4, 2016 End date: August 26, 2016<br />
-<strong>Application Closing Date: May 16, 2016<br />
-</strong><br />
-To qualify for the position, applicants must:<br />
-&bull; be a minimum of 15 years of age<br />
-&bull; have been registered as a full-time student in the previous academic year and intend to return to school on a full-time basis in the next academic year<br />
-<br />
-Responsibilities:<br />
-Under the supervision and direction of the Library Manager; the Library Assistant will be responsible for the following tasks and responsibilities:<br />
-&bull; Develop, plan, promote and deliver programs for the Summer Reading Program<br />
-&bull; Decorate and operate the Library parade float<br />
-&bull; Promote and plan Cultural Day and Seniors Programs<br />
-&bull; Perform other duties as assigned<br />
-<br />
-Qualifications:<br />
-&bull; Experience working with children is preferred.<br />
-&bull; Experience preparing and presenting programs is an asset.<br />
-&bull; Related library experience is an asset<br />
-&bull; Ability to work independently and take initiative.<br />
-&bull; Effective time management skills.<br />
-&bull; Ability to contribute positively and work effectively within a team environment.<br />
-<br />
-Please drop off your resume in person, or send via mail or email to:<br />
-Village of Innisfree Library &#108;&#105;&#98;&#114;&#97;&#114;&#105;&#97;&#110;&#64;&#105;&#110;&#110;&#105;&#115;&#102;&#114;&#101;&#101;&#108;&#105;&#98;&#114;&#97;&#114;&#121;&#46;&#99;&#97;<br />
-Box 121 Innisfree, AB T0B 2G0 <br />
-<br />
-All qualified candidates are encouraged to apply; however, only those applicants selected for an interview will be contacted<br />
-</div>
+      <script>(function(t,e,o,n){var s,c,a;t.SMCX=t.SMCX||[],e.getElementById(n)||(s=e.getElementsByTagName(o),c=s[s.length-1],a=e.createElement(o),a.type="text/javascript",a.async=!0,a.id=n,a.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tMPKdJe9g7VnbH5_2BglFTLMEqL0OHU217y59vk8uJTDKckYfEDoSoa2NsFMXoXQ8h.js"].join(""),c.parentNode.insertBefore(a,c))})(window,document,"script","smcx-sdk");</script><a style="font: 12px Helvetica, sans-serif; color: #999; text-decoration: none;" href=https://www.surveymonkey.com/mp/customer-satisfaction-surveys/> Create your own user feedback survey </a>
     </div>
-  
-  
-    
           <!-- LIQUID LAYOUT -->    
     <ul class="social">
-        
           <li id="facebook">
             <div id="fb-root"></div>
             <script>
@@ -866,42 +861,29 @@ All qualified candidates are encouraged to apply; however, only those applicants
             </script>
             <div class="fb-like" data-href="http://www.innisfreelibrary.ca/" data-width="180" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
           </li>
-        
-        
           <li id="twitter">
             <a href="http://twitter.com/share" class="twitter-share-button" 
               data-count="horizontal">Tweet</a><script type="text/javascript" 
               src="http://platform.twitter.com/widgets.js"></script>
           </li>
-        
 
-        
           <li id="googleplus">
             <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
             <g:plusone></g:plusone>
           </li>
-        
 
-        
           <li id="linkedin">
             <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
             <script type="in/share" data-counter="right" data-onsuccess="LinkedInShare" data-url="http://www.innisfreelibrary.ca/" data-showZero="true"></script>
           </li>
-        
 
-        
           <li id="facebookshare">
             <div class="fb-share-button" data-layout="button_count" data-href="http://www.innisfreelibrary.ca/"></div>
           </li>
-        
     </ul>
 
-    
-    
       <img alt="Share" src="/images/social_bookmarks/share.png?1445483283" />
-    
 
-  
 </div>
 
  </span>
@@ -922,18 +904,7 @@ All qualified candidates are encouraged to apply; however, only those applicants
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
 			
 				
 			
@@ -955,32 +926,7 @@ All qualified candidates are encouraged to apply; however, only those applicants
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
 			
 				
 			
@@ -1002,7 +948,21 @@ All qualified candidates are encouraged to apply; however, only those applicants
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
 			
 				
 			
@@ -1013,7 +973,29 @@ All qualified candidates are encouraged to apply; however, only those applicants
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
 			
 				
 			
@@ -1038,7 +1020,7 @@ All qualified candidates are encouraged to apply; however, only those applicants
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
 			
 				
 			
@@ -1049,7 +1031,7 @@ All qualified candidates are encouraged to apply; however, only those applicants
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
 			
 				
 			
@@ -1071,7 +1053,7 @@ All qualified candidates are encouraged to apply; however, only those applicants
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
 			
 				
 			
@@ -1082,7 +1064,7 @@ All qualified candidates are encouraged to apply; however, only those applicants
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -1107,7 +1089,7 @@ All qualified candidates are encouraged to apply; however, only those applicants
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
 			
 				
 					</div><!-- end book group -->
@@ -1130,7 +1112,7 @@ All qualified candidates are encouraged to apply; however, only those applicants
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1172,54 +1154,32 @@ All qualified candidates are encouraged to apply; however, only those applicants
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
-    <li class="MenuOpen" id="active"><a href="http://www.innisfreelibrary.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.innisfreelibrary.ca/Board-" title="Board "><span>Board </span></a></li><li><a href="http://www.innisfreelibrary.ca/By---Laws-" title="By - laws "><span>By - Laws </span></a></li><li><a href="http://www.innisfreelibrary.ca/Community-Events" title="Community events"><span>Community Events</span></a></li><li><a href="http://www.innisfreelibrary.ca/FILS" title="Fils"><span>FILS</span></a></li><li><a href="http://www.innisfreelibrary.ca/Library-News" title="Library news"><span>Library News</span></a></li><li><a href="http://www.innisfreelibrary.ca/Photo-Gallery" title="Photo gallery"><span>Photo Gallery</span></a></li></ul></li><li><a href="http://www.innisfreelibrary.ca/Book-Club" title="Book club"><span>Book Club</span></a></li><li><a href="http://www.innisfreelibrary.ca/Programs" title="Programs"><span>Programs</span></a></li><li><a href="http://www.innisfreelibrary.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.innisfreelibrary.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
-  
+    <li class="MenuOpen" id="active"><a href="http://www.innisfreelibrary.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.innisfreelibrary.ca/Board-" title="Board "><span>Board </span></a></li><li><a href="http://www.innisfreelibrary.ca/By---Laws-" title="By - laws "><span>By - Laws </span></a></li><li><a href="http://www.innisfreelibrary.ca/Community-Events" title="Community events"><span>Community Events</span></a></li><li><a href="http://www.innisfreelibrary.ca/FILS" title="Fils"><span>FILS</span></a></li><li><a href="http://www.innisfreelibrary.ca/Library-News" title="Library news"><span>Library News</span></a></li><li><a href="http://www.innisfreelibrary.ca/Photo-Gallery" title="Photo gallery"><span>Photo Gallery</span></a></li></ul></li><li><a href="http://www.innisfreelibrary.ca/Book-Club" title="Book club"><span>Book Club</span></a></li><li><a href="http://www.innisfreelibrary.ca/Programs" title="Programs"><span>Programs</span></a></li><li><a href="http://www.innisfreelibrary.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.innisfreelibrary.ca/e-Resources" title="E-resources"><span>e-Resources</span></a></li>
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/389" class="blog_link active_page" title="Blog">Blog</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=389" class="blog_link active_page" title="Blog"><span>Blog</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/389" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/389" class="photos_link active_page" title="Photos"><span>Photos</span></a>
+      <a href="/galleries/show?site=389" class="photos_link active_page" title="Photos"><span>Photos</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/236" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -1239,6 +1199,8 @@ Canada&nbsp;&nbsp; T0B 2G0<br />
 <div style="width: 50%; float: right; text-align: right">&nbsp;</div>
 <div class="clear:both;">&nbsp;</div>
 </div>
+
+<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1247,7 +1209,7 @@ Canada&nbsp;&nbsp; T0B 2G0<br />
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1257,38 +1219,21 @@ Canada&nbsp;&nbsp; T0B 2G0<br />
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/389" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1425,6 +1370,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1451,3 +1421,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

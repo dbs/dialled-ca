@@ -20,7 +20,10 @@
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/wpl/javascript/lightSlider/css/lightSlider.css">
 	
 	<link rel="pingback" href="http://wellandlibrary.ca/xmlrpc.php" />
-		<link rel='archives' title='May 2016' href='http://wellandlibrary.ca/2016/05/' />
+		<link rel='archives' title='September 2016' href='http://wellandlibrary.ca/2016/09/' />
+	<link rel='archives' title='August 2016' href='http://wellandlibrary.ca/2016/08/' />
+	<link rel='archives' title='June 2016' href='http://wellandlibrary.ca/2016/06/' />
+	<link rel='archives' title='May 2016' href='http://wellandlibrary.ca/2016/05/' />
 	<link rel='archives' title='April 2016' href='http://wellandlibrary.ca/2016/04/' />
 	<link rel='archives' title='March 2016' href='http://wellandlibrary.ca/2016/03/' />
 	<link rel='archives' title='February 2016' href='http://wellandlibrary.ca/2016/02/' />
@@ -88,12 +91,19 @@
 	<link rel='archives' title='February 2010' href='http://wellandlibrary.ca/2010/02/' />
 <link rel="alternate" type="application/rss+xml" title="Welland Public Library &raquo; Home Comments Feed" href="http://wellandlibrary.ca/home/feed/" />
 <link rel='stylesheet' id='dashicons-css'  href='http://wellandlibrary.ca/wp-includes/css/dashicons.min.css?ver=4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='eme_stylesheet-css'  href='http://wellandlibrary.ca/wp-content/plugins/events-made-easy/events_manager.css?ver=4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wpecr-css'  href='http://wellandlibrary.ca/wp-content/plugins/the-events-calendar-extension-registration/public/css/event-registration-public.css?ver=1.0.0' type='text/css' media='all' />
 <link rel='stylesheet' id='HkMuob_styling-css'  href='http://wellandlibrary.ca/wp-content/plugins/hikari-email-url-obfuscator/HkMuob.css' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tribe_events_linked_posts = {"post_types":{"tribe_venue":"venue","tribe_organizer":"organizer"}};
+/* ]]> */
+</script>
 <script type='text/javascript' src='http://wellandlibrary.ca/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
 <script type='text/javascript' src='http://wellandlibrary.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var cforms2_ajax = {"url":"http:\/\/wellandlibrary.ca\/wp-admin\/admin-ajax.php","nonces":{"submitcform":"497c293b83"}};
+var cforms2_ajax = {"url":"http:\/\/wellandlibrary.ca\/wp-admin\/admin-ajax.php","nonces":{"submitcform":"40db7953ad"}};
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://wellandlibrary.ca/wp-content/plugins/cforms2/js/cforms.js?ver=14.11.4'></script>
@@ -103,81 +113,6 @@ var cforms2_ajax = {"url":"http:\/\/wellandlibrary.ca\/wp-admin\/admin-ajax.php"
 <meta name="generator" content="WordPress 4.0" />
 <link rel='canonical' href='http://wellandlibrary.ca/' />
 <link rel='shortlink' href='http://wellandlibrary.ca/' />
-<link rel='stylesheet' href='http://wellandlibrary.ca/wp-content/plugins/events-manager-extended/events_manager.css' type='text/css'/>
-<script type='text/javascript' src='http://wellandlibrary.ca/wp-content/plugins/events-manager-extended/eme_location_map.js'></script>
-   <script type='text/javascript'>
-      $j_eme_calendar=jQuery.noConflict();
-      $j_eme_calendar(document).ready( function() {
-         initCalendar();
-      });
-      
-      function initCalendar() {
-         $j_eme_calendar('a.prev-month').click(function(e){
-            e.preventDefault();
-            tableDiv = $j_eme_calendar(this).closest('table').parent();
-            ($j_eme_calendar(this).hasClass('full-link')) ? fullcalendar = 1 : fullcalendar = 0;
-            ($j_eme_calendar(this).hasClass('long_events')) ? long_events = 1 : long_events = 0;
-            prevMonthCalendar(tableDiv, fullcalendar, long_events);
-         } );
-         $j_eme_calendar('a.next-month').click(function(e){
-            e.preventDefault();
-            tableDiv = $j_eme_calendar(this).closest('table').parent();
-            ($j_eme_calendar(this).hasClass('full-link')) ? fullcalendar = 1 : fullcalendar = 0;
-            ($j_eme_calendar(this).hasClass('long_events')) ? long_events = 1 : long_events = 0;
-            nextMonthCalendar(tableDiv, fullcalendar, long_events);
-         } );
-      }
-      function prevMonthCalendar(tableDiv, fullcalendar, showlong_events) {
-         if (fullcalendar === undefined) {
-             fullcalendar = 0;
-         }
-         if (showlong_events === undefined) {
-             showlong_events = 0;
-         }
-         month_n = tableDiv.children('div.month_n').html();
-         year_n = tableDiv.children('div.year_n').html();
-         cat_chosen = tableDiv.children('div.cat_chosen').html();
-         author_chosen = tableDiv.children('div.author_chosen').html();
-         parseInt(month_n) == 1 ? prevMonth = 12 : prevMonth = parseInt(month_n,10) - 1 ; 
-            if (parseInt(month_n,10) == 1)
-            year_n = parseInt(year_n,10) -1;
-         $j_eme_calendar.get("http://wellandlibrary.ca", {eme_ajaxCalendar: 'true', calmonth: prevMonth, calyear: year_n, full: fullcalendar, long_events: showlong_events, category: cat_chosen, author: author_chosen}, function(data){
-            tableDiv.replaceWith(data);
-            initCalendar();
-         });
-      }
-      function nextMonthCalendar(tableDiv, fullcalendar, showlong_events) {
-         if (fullcalendar === undefined) {
-             fullcalendar = 0;
-         }
-         if (showlong_events === undefined) {
-             showlong_events = 0;
-         }
-         month_n = tableDiv.children('div.month_n').html();
-         year_n = tableDiv.children('div.year_n').html();
-         cat_chosen = tableDiv.children('div.cat_chosen').html();
-         author_chosen = tableDiv.children('div.author_chosen').html();
-         parseInt(month_n,10) == 12 ? nextMonth = 1 : nextMonth = parseInt(month_n,10) + 1 ; 
-            if (parseInt(month_n,10) == 12)
-            year_n = parseInt(year_n,10) + 1;
-         $j_eme_calendar.get("http://wellandlibrary.ca", {eme_ajaxCalendar: 'true', calmonth: nextMonth, calyear: year_n, full : fullcalendar, long_events: showlong_events, category: cat_chosen, author: author_chosen}, function(data){
-            tableDiv.replaceWith(data);
-            initCalendar();
-         });
-      }
-      
-      // function reloadCalendar(e) {
-      //    // e.preventDefault();
-      //    console.log($j_eme_calendar(this).parents('table'));
-      //     $j_eme_calendar.get("", {ajax: 'true'}, function(data){
-      //       tableDiv = table.parent();
-      //       tableDiv.html(data);
-      //             });
-      // }
-      //
-      
-   </script>
-   
 <!-- Google Analytics Tracking by Google Analyticator 6.4.7.3: http://www.videousermanuals.com/google-analyticator/ -->
 <script type="text/javascript">
                 var analyticsFileTypes = [''];
@@ -321,7 +256,6 @@ var cforms2_ajax = {"url":"http:\/\/wellandlibrary.ca\/wp-admin\/admin-ajax.php"
 		<li id="menu-item-13845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13845"><a href="http://wellandlibrary.ca/eresources/digital-media/oneclick-digital/">OneClick Digital</a></li>
 		<li id="menu-item-13843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13843"><a href="http://wellandlibrary.ca/eresources/digital-media/tumblebooks/">TumbleBooks</a></li>
 		<li id="menu-item-13839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13839"><a href="http://wellandlibrary.ca/eresources/digital-media/welland-eresources/">WPL Digital Collections</a></li>
-		<li id="menu-item-13847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13847"><a href="http://wellandlibrary.ca/eresources/digital-media/french-ebooks/">French eBooks</a></li>
 		<li id="menu-item-13841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13841"><a href="http://wellandlibrary.ca/eresources/digital-media/freegal/">Freegal</a></li>
 		<li id="menu-item-13840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13840"><a href="http://wellandlibrary.ca/eresources/digital-media/hoopla/">Hoopla</a></li>
 		<li id="menu-item-13842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13842"><a href="http://wellandlibrary.ca/eresources/digital-media/zinio/">Zinio</a></li>
@@ -400,62 +334,62 @@ var cforms2_ajax = {"url":"http:\/\/wellandlibrary.ca\/wp-admin\/admin-ajax.php"
 			<a href="/category/news/" class="all-news">All News</a>
 		</span>
 							<div class="post">
-									<a href="http://wellandlibrary.ca/2016/05/we-need-your-ideas/" class="thumbnail border-0">
-						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/14779.png&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
+									<a href="http://wellandlibrary.ca/2016/09/rip-childrens-author-anna-dewdney/" class="thumbnail border-0">
+						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/15193.jpg&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
 					</a>
 					<div class="right">
 								
-					<h3><a href="http://wellandlibrary.ca/2016/05/we-need-your-ideas/">We Need Your Ideas!</a></h3>
-					<div class="date">posted on May 3, 2016</div>
-					<p>The Welland Public Library (WPL) is developing a strategic plan for future services in 2020, and we want to hear directly from you . We are hosting three meetings in [&hellip;]</p>
+					<h3><a href="http://wellandlibrary.ca/2016/09/rip-childrens-author-anna-dewdney/">RIP Children&#8217;s Author Anna Dewdney</a></h3>
+					<div class="date">posted on September 8, 2016</div>
+					<p>It&#8217;s a sad day for children&#8217;s literature. Renown children&#8217;s author Anna Dewdney has passed away at the age of 50, after a 15 month battle with cancer. She will be [&hellip;]</p>
 					
 									</div>
 							</div>
 					<div class="post">
-									<a href="http://wellandlibrary.ca/2016/05/gardening-with-karin-vermeer/" class="thumbnail border-0">
-						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/14795.jpg&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
+									<a href="http://wellandlibrary.ca/2016/09/join-us-at-the-library-lounge-friday-september-9/" class="thumbnail border-0">
+						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/15138.jpg&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
 					</a>
 					<div class="right">
 								
-					<h3><a href="http://wellandlibrary.ca/2016/05/gardening-with-karin-vermeer/">Gardening Workshops with Karin Vermeer</a></h3>
-					<div class="date">posted on May 1, 2016</div>
-					<p>This spring we will be hosting a series of 3 workshops with Karin Vermeer, local garden coach and horticultural therapist. These are all make-and-take workshops and will be held on [&hellip;]</p>
+					<h3><a href="http://wellandlibrary.ca/2016/09/join-us-at-the-library-lounge-friday-september-9/">The Library Lounge: Friday, September 9</a></h3>
+					<div class="date">posted on September 6, 2016</div>
+					<p>On Friday, September 9, the WPL will host The Library Lounge: An Evening of Wine and Live Music. Doors open at 7:30pm. Enjoy an evening of live music, Niagara wines, [&hellip;]</p>
 					
 									</div>
 							</div>
 					<div class="post">
-									<a href="http://wellandlibrary.ca/2016/04/were-having-a-trunk-sale/" class="thumbnail border-0">
-						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/14600.jpg&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
+									<a href="http://wellandlibrary.ca/2016/09/welland-canal-fallen-workers-speaker-series/" class="thumbnail border-0">
+						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/15185.jpg&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
 					</a>
 					<div class="right">
 								
-					<h3><a href="http://wellandlibrary.ca/2016/04/were-having-a-trunk-sale/">We&#8217;re Having a Trunk Sale!</a></h3>
-					<div class="date">posted on April 29, 2016</div>
-					<p>Do you have treasures to sell? Mark your calendar for Saturday, May 28. Our trunk sale will be held in the lower parking lot (behind the Court House) from 8 am [&hellip;]</p>
+					<h3><a href="http://wellandlibrary.ca/2016/09/welland-canal-fallen-workers-speaker-series/">Welland Canal Fallen Workers Speaker Series</a></h3>
+					<div class="date">posted on September 6, 2016</div>
+					<p>Welland Public Library is proud to announce a new speaker series beginning this Fall. This series, taking place the last Tuesday of every month running September to April, focuses on [&hellip;]</p>
 					
 									</div>
 							</div>
 					<div class="post">
-									<a href="http://wellandlibrary.ca/2016/04/remembering-prince/" class="thumbnail border-0">
-						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/14758.png&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
+									<a href="http://wellandlibrary.ca/2016/09/freegal-streaming-is-now-available/" class="thumbnail border-0">
+						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/15175.png&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
 					</a>
 					<div class="right">
 								
-					<h3><a href="http://wellandlibrary.ca/2016/04/remembering-prince/">Remembering Prince</a></h3>
-					<div class="date">posted on April 27, 2016</div>
-					<p>Did you know that with your Welland Public Library card, you have access to Prince&#8217;s entire music catalogue using hoopla digital? Log in to hoopla digital  and enjoy your favourite Prince songs [&hellip;]</p>
+					<h3><a href="http://wellandlibrary.ca/2016/09/freegal-streaming-is-now-available/">Freegal streaming is now available</a></h3>
+					<div class="date">posted on September 1, 2016</div>
+					<p>Streaming is now available! Welland Public Library patrons will have access to Freegal Music Streaming. With this service, each and every patron of the Library, in addition to their five [&hellip;]</p>
 					
 									</div>
 							</div>
 					<div class="post">
-									<a href="http://wellandlibrary.ca/2016/04/cloud-printing-now-available-at-main-library/" class="thumbnail border-0">
-						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/14749.png&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
+									<a href="http://wellandlibrary.ca/2016/08/afternoon-book-club-now-held-at-the-black-sheep-lounge/" class="thumbnail border-0">
+						<img src='http://wellandlibrary.ca/wp-content/plugins/simple-post-thumbnails/timthumb.php?src=wp-content/thumbnails/15166.jpg&amp;w=100&amp;h=100&amp;zc=1&amp;ft=jpg' alt='Post Thumbnail' />
 					</a>
 					<div class="right">
 								
-					<h3><a href="http://wellandlibrary.ca/2016/04/cloud-printing-now-available-at-main-library/">Cloud Printing Now Available at Main Library</a></h3>
-					<div class="date">posted on April 25, 2016</div>
-					<p>With a free Google Account, you can send  print jobs to the printer at the Main Library from your computer or mobile device. Your print job is sent over the internet, [&hellip;]</p>
+					<h3><a href="http://wellandlibrary.ca/2016/08/afternoon-book-club-now-held-at-the-black-sheep-lounge/">Afternoon Book Club Now Held at The Black Sheep Lounge</a></h3>
+					<div class="date">posted on August 25, 2016</div>
+					<p>We are so excited to announce that our afternoon book club will now be taking place at The Black Sheep Lounge! Each member will receive a complimentary coffee (or similar [&hellip;]</p>
 					
 									</div>
 							</div>
@@ -587,17 +521,11 @@ var cforms2_ajax = {"url":"http:\/\/wellandlibrary.ca\/wp-admin\/admin-ajax.php"
 <script type='text/javascript' src='http://wellandlibrary.ca/wp-content/plugins/hikari-email-url-obfuscator/HkMuob.js'></script>
 <script type='text/javascript'>
  /* <![CDATA[ */ 
-HkMuobJS.write("hkmuob-id-7731",0,'znvygb:vasb@jryynaqyvoenel.pn',' ','info@wellandlibrary.ca',false);
-HkMuobJS.write("hkmuob-id-3064",0,'uggcf://jjj.fheirlzbaxrl.pbz/e/JCY2016','  gnetrg="_oynax"','https://www.surveymonkey.com/r/WPL2016',false);
-HkMuobJS.write("hkmuob-id-6940",0,'uggc://jryynaq.rinaprq.vasb/fvtahc/RiragQrgnvyf.nfck?RiragVq=1362&nzc;yvo=','  gnetrg="_oynax"','Early Spring Gardening',false);
-HkMuobJS.write("hkmuob-id-24",118,'deeaeae6b0a5a5eddbe2e2d7e4daa4dbecd7e4d9dbdaa4dfe4dce5a5e9dfdde4ebe6a5bbecdbe4eabadbead7dfe2e9a4d7e9e6eeb5bbecdbe4eabfdab3a7a9aca99cd7e3e6b1e2dfd8b3','9696ead7e8dddbeab398d5d8e2d7e4e198','Spring Flower Garden',false);
-HkMuobJS.write("hkmuob-id-2831",236,'5561615d271c1c645259594e5b511b52634e5b5052511b565b535c1c6056545b625d1c3263525b613152614e5659601b4e605d652c3263525b6136512a1e202321134e5a5d2859564f2a','0d0d614e5f5452612a0f4c4f594e5b580f','Herbs &amp; Veg Garden',false);
-HkMuobJS.write("hkmuob-id-4597",0,'uggcf://jjj.ubbcynqvtvgny.pbz/ubzr;wfrffvbavq=742OR28QP2OO55QO5P57S98Q159S3N92','  gnetrg="_oynax"','here',false);
-HkMuobJS.write("hkmuob-id-6918",192,'29353531faefef2e2a253826343535223126ee3634f1ee2d2a3435ed2e222f222826ee24302eef353322242cef242d2a242c0036fd27f6f3f3f127222425f322f3232625f0f7f325f7f9f9262227e6222e31fb2a25fd22f4f22623f726f8f1f1e6222e31fb26fdf7f3f8f623f2f5f5f8f8','e0','Entertainment Tonight',false);
-HkMuobJS.write("hkmuob-id-9089",0,'uggc://zvqjrfggncr.hf1.yvfg-znantr2.pbz/genpx/pyvpx?h=s6331snpq3n3orq073q799rns&nzc;vq=r54797p58n&nzc;r=7386o25588',' ','USA Today',false);
-HkMuobJS.write("hkmuob-id-1735",51,'9ba7a7a36d6262a09c97aa98a6a7a794a39861a8a664619f9ca6a760a094a1949a986196a2a062a7a594969e62969f9c969e72a870996966666499949697669466959897636a66976a6c6c9894995994a0a36e9c97706c6897636c996a956c655994a0a36e98706a666b69956568686b6b','53','Digital Spy',false);
-HkMuobJS.write("hkmuob-id-1075",0,'uggc://zvqjrfggncr.hf1.yvfg-znantr.pbz/genpx/pyvpx?h=s6331snpq3n3orq073q799rns&nzc;vq=2sn52455q7&nzc;r=7386o25588',' ','ABC News',false);
-HkMuobJS.write("hkmuob-id-675",156,'0511110dd6cbcb0a06011402101111fd0d02ca1210cdca09061011c90afd0bfd0402ca000c0acb110ffd0008cb0009060008db12d903d2cfcfcd03fd0001cffdcffe0201ccd3cf01d3d5d502fd03c2fd0a0dd70601d9d001fd02d5ce0103d003c2fd0a0dd702d9d3cfd4d2feced1d1d4d4','bc','People Magazine',false);
+HkMuobJS.write("hkmuob-id-6038",0,'uggc://choyvfurefjrrxyl.ghzoye.pbz/cbfg/150056066571/puvyqeraf-nhgube-vyyhfgengbe-naq-rqhpngbe-naan','gvgyr="Naan Qrjqarl Negvpyr"  ','click here.',false);
+HkMuobJS.write("hkmuob-id-3514",0,'uggc://uggcf://bypb.rag.fvefvqlavk.arg/pyvrag/ra_HF/jryynaq/frnepu/erfhygf?dh=naan+qrjqarl&nzc;eg=','gvgyr="Naan Qrjqarl"  ',' Click here',false);
+HkMuobJS.write("hkmuob-id-5643",168,'111d1d19e2d7d7200e15150a170dd60e1f0a170c0e0dd612170f18d71c1210171e19d70c0a150e170d0a1b','1d121d150ee5caf7171512170ec8eb0a150e170d0a1bcac8c8c81d0a1b100e1de5ca080b150a1714ca','online calendar.',false);
+HkMuobJS.write("hkmuob-id-6059",0,'uggc://jryynaq.serrtnyzhfvp.pbz/ubzrf/vaqrk','gvgyr="Serrtny Cntr"   gnetrg="_oynax"','Freegal Page',false);
+HkMuobJS.write("hkmuob-id-4805",240,'59656561642b202068565d5d525f551f5763565658525d5e66645a541f54605e2066645663642064555d60585a5f','11','<img class="alignnone size-full wp-image-15176" src="http://wellandlibrary.ca/wp-content/uploads/2016/09/FM_WEB_BUTTON_BANNER.png" alt="FM_WEB_BUTTON_BANNER" width="300" height="250" />',false);
  /* ]]> */ 
 </script>
 

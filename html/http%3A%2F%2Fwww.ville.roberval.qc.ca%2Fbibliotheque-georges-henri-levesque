@@ -5,31 +5,266 @@
 
 <head>
 
-      <base href="http://www.ville.roberval.qc.ca/bibliotheque-georges-henri-levesque" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="keywords" content="Bibliothèque" />
-  <meta name="rights" content="Copyright © 2015 Ville de Roberval. Tous droits réservés." />
-  <meta name="description" content="Bibliothèque" />
-  <meta name="generator" content="Joomla! - Open Source Content Management" />
-  <title>Ville de Roberval - Bibliothèque Georges-Henri-Lévesque</title>
-  <link href="/templates/20150404_01/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-  <link rel="stylesheet" href="http://ville.roberval.qc.ca/administrator/components/com_joooid/views/configuration/tmpl/joooidcontent.css" type="text/css" />
-  <link rel="stylesheet" href="http://ville.roberval.qc.ca/plugins/content/pdf_embed/assets/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="/media/com_phocadownload/css/main/phocadownload.css" type="text/css" />
-  <link rel="stylesheet" href="/media/plg_content_phocadownload/css/phocadownload.css" type="text/css" />
-  <link rel="stylesheet" href="/modules/mod_universal_ajaxlivesearch/cache/288/beafdd3268e6fbdfc11e7d785b181f81.css" type="text/css" />
-  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
-  <script src="/media/system/js/core.js" type="text/javascript"></script>
-  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
-  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
-  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
-  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
-  <script src="/media/system/js/caption.js" type="text/javascript"></script>
-  <script src="/modules/mod_universal_ajaxlivesearch/engine/dojo.js" type="text/javascript"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js" type="text/javascript"></script>
-  <script src="/modules/mod_universal_ajaxlivesearch/cache/288/55043b6f97c8df26b8774695b19c9654.js" type="text/javascript"></script>
-  <script type="text/javascript">
-jQuery(function($) {
+    	<base href="http://www.ville.roberval.qc.ca/bibliotheque-georges-henri-levesque" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Bibliothèque" />
+	<meta name="rights" content="Copyright © 2016 Ville de Roberval. Tous droits réservés." />
+	<meta name="author" content="mbeaudet" />
+	<meta name="description" content="Bibliothèque" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Ville de Roberval - bibliotheque-georges-henri-levesque</title>
+	<link href="/templates/20150404_01/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+	<link rel="stylesheet" href="http://ville.roberval.qc.ca/administrator/components/com_joooid/views/configuration/tmpl/joooidcontent.css" type="text/css" />
+	<link rel="stylesheet" href="http://ville.roberval.qc.ca/plugins/content/pdf_embed/assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="/media/com_phocadownload/css/main/phocadownload.css" type="text/css" />
+	<link rel="stylesheet" href="/media/plg_content_phocadownload/css/phocadownload.css" type="text/css" />
+	<link rel="stylesheet" href="/modules/mod_universal_ajaxlivesearch/cache/288/beafdd3268e6fbdfc11e7d785b181f81.css" type="text/css" />
+	<script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+	<script src="/media/system/js/core.js" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+	<script src="/media/system/js/modal.js" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js" type="text/javascript"></script>
+	<script src="/modules/mod_universal_ajaxlivesearch/engine/dojo.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js" type="text/javascript"></script>
+	<script src="/modules/mod_universal_ajaxlivesearch/cache/288/55043b6f97c8df26b8774695b19c9654.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		jQuery(function($) {
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($('a.modal').get(), {
+				parse: 'rel'
+			});
+		});
+
+		window.jModalClose = function () {
+			SqueezeBox.close();
+		};
+		
+		// Add extra modal close functionality for tinyMCE-based editors
+		document.onreadystatechange = function () {
+			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+			{
+				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+				{	
+					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+					
+					jModalClose = function () {
+						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+		
+				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+				{
+					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+		
+					SqueezeBox.close = function () {
+						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+			}
+		};
+		
+
+function showbigcalendar(id,calendarlink,randi,b_radius)
+{
+
+var xmlHttp;
+	try{
+		xmlHttp=new XMLHttpRequest();// Firefox, Opera 8.0+, Safari
+	}
+	catch (e){
+		try{
+			xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); // Internet Explorer
+		}
+		catch (e){
+		    try{
+				xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch (e){
+				alert("No AJAX!?");
+				return false;
+			}
+		}
+	}
+
+xmlHttp.onreadystatechange=function(){
+	if(xmlHttp.readyState==4){
+		document.getElementById(id).innerHTML=xmlHttp.responseText;
+	}
+}
+
+xmlHttp.open("GET",calendarlink,false);
+xmlHttp.send();
+
+		window.addEvent("domready", function() {
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$("a.modal"+randi), {
+				parse: "rel"
+			});
+
+
+		});
+
+if(jQuery("#bigcalendar"+randi+" #days")[0])
+{
+
+jQuery("#bigcalendar"+randi+" #days")[0].parentNode.lastChild.childNodes[6].style.borderBottomRightRadius=""+b_radius+"px";
+jQuery("#bigcalendar"+randi+" #days")[0].parentNode.lastChild.childNodes[0].style.borderBottomLeftRadius=""+b_radius+"px";
+
+
+}
+else
+{
+
+jQuery("#bigcalendar"+randi+" .last_table").last().css("border-bottom-right-radius",""+b_radius+"px")
+jQuery("#bigcalendar"+randi+" .last_table").last().css("border-bottom-left-radius",""+b_radius+"px")
+}
+
+
+
+var xxx;
+
+		jQuery(document).ready(function (){
+
+ 		    jQuery("#bigcalendar"+randi+" .views_select").toggle(function () {
+
+if(xxx!=1)
+    jQuery("#bigcalendar"+randi+" .drop_down_views").stop(true, true).delay(200).slideDown(500);
+
+	xxx=1;
+
+  }, function () {
+
+
+    jQuery("#bigcalendar"+randi+" .drop_down_views").stop(true, true).slideUp(500);
+
+  });
+
+
+
+  if(jQuery(window).width() > 640 )
+  {
+
+	jQuery("#bigcalendar"+randi+" .drop_down_views").hide();
+	   var parent_width = document.getElementById("bigcalendar"+randi).parentNode.clientWidth;
+   var cal_wdt=document.getElementById("cal_wdth"+randi).value;
+var responsive_width = (cal_wdt)/parent_width*100;
+
+if(responsive_width>100)
+responsive_width=100;
+
+
+
+document.getElementById("afterbig"+randi).style.width=responsive_width+"%";
+
+
+  }
+else
+{
+document.getElementById("afterbig"+randi).style.width="100%";
+
+}
+
+	});
+pp_size()
+};
+
+ document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+
+		window.parent.SqueezeBox.close();
+
+    }
+};
+
+SqueezeBox.presets.onClose=function (){window.parent.document.getElementById("sbox-content").innerHTML="";};
+	
+//////////////////////////////////POP-UP RESPONSIVE
+jQuery.fn.scr_center = function () {
+    this.css("position","absolute");
+    this.css("top", Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) +
+                                                jQuery(window).scrollTop()) + "px");
+    this.css("left", Math.max(0, ((jQuery(window).width() - jQuery(this).outerWidth()) / 2) +
+                                                jQuery(window).scrollLeft()) + "px");
+    return this;
+}
+
+jQuery(window).resize(function(){
+	jQuery('#sbox-window').scr_center();
+	width_orig=600;
+	height_orig=500;
+			////////////////////////
+	if(jQuery('#sbox-window iframe')[0])
+	{
+
+	popup_width_from_src=jQuery('#sbox-window iframe').attr('src').search('popup_width=');
+	str=jQuery('#sbox-window iframe').attr('src').substr(popup_width_from_src+12,150)
+	find_amp=str.search('&');
+	width_orig=str.substr(0,find_amp);
+
+	find_eq=str.search('=');
+	height_orig=str.substr(find_eq+1,5);
+	}
+	///////////////////////
+
+		if(jQuery(window).width()<640)
+			{
+
+				width=jQuery(window).width()-100;
+				height=jQuery(window).height()-100
+				jQuery('.modal612522168').attr('rel',"{handler: 'iframe', size: {x: "+width+", y: "+height+"}}")
+				jQuery('#sbox-window').css('width',width+'px')
+				jQuery('#sbox-window').css('height',height+'px')
+				jQuery('#sbox-content iframe').css('width',width+'px');
+				jQuery('#sbox-content iframe').css('height',height+'px');
+				jQuery('#sbox-overlay').css('width','100%');
+
+		}
+		else
+			{
+
+				jQuery('.modal612522168').attr('rel',"{handler: 'iframe', size: {x: "+width_orig+", y: "+height_orig+"}}")
+				jQuery('#sbox-window').css('width',width_orig+'px')
+				jQuery('#sbox-window').css('height',height_orig+'px')
+				jQuery('#sbox-content iframe').css('width',width_orig+'px');
+				jQuery('#sbox-content iframe').css('height',height_orig+'px');
+				jQuery('#sbox-overlay').css('width','100%');
+
+			}
+
+
+
+})
+
+///////////////////////////////////
+function pp_size()	{
+		if(jQuery(window).width()<640)
+			{
+
+				width=jQuery(window).width()-100;
+				height=jQuery(window).height()-100
+				jQuery('.modal612522168').attr('rel',"{handler: 'iframe', size: {x: "+width+", y: "+height+"}}")
+				jQuery('#sbox-window').css('width',width+'px')
+				jQuery('#sbox-window').css('height',height+'px')
+				jQuery('#sbox-content iframe').css('width',width+'px');
+				jQuery('#sbox-content iframe').css('height',height+'px');
+				jQuery('#sbox-overlay').css('width','100%');
+
+				}
+
+	}
+/////////////////////////////////////
+
+jQuery(function($) {
 			 $('.hasTip').each(function() {
 				var title = $(this).attr('title');
 				if (title) {
@@ -89,7 +324,7 @@ jQuery(function($) {
         voicesearch : '0'
       })
     });
-  </script>
+	</script>
 
     <link rel="stylesheet" href="/templates/system/css/system.css" />
     <link rel="stylesheet" href="/templates/system/css/general.css" />
@@ -185,7 +420,7 @@ jQuery(function($) {
 
 
 <div class="customart-nostyle"  >
-	<p style="padding-left: 10px; padding-bottom: 10px;"><span style="color: #7a9c1c;"><span style="color: #7a9c1c;">&nbsp;&nbsp;<a href="/" target="_self" title="Accueil">Accueil</a> &nbsp;</span><a href="/explorer" target="_self" title="Explorer par sujet"><span style="color: #7a9c1c;">Explorer par sujet</span></a></span>&nbsp;&nbsp;<a href="/nous-joindre" target="_self" title="Nous joindre"><span style="color: #7a9c1c;"><span style="color: #7a9c1c;">Nous joindre</span></span></a><span style="color: #7a9c1c;"><span style="color: #7a9c1c;"><br /></span></span></p></div>
+	<p style="padding-left: 10px; padding-bottom: 10px;"><span style="font-size: 12pt;"><span style="color: #7a9c1c;"><span style="color: #7a9c1c;"><a href="http://ville.roberval.qc.ca/index.php?option=com_content&amp;view=article&amp;id=617&amp;Itemid=974" target="_self" title="Accueil"><img src="http://ville.roberval.qc.ca/images/picto/billionphotos-1079964.png" alt="Accueil" width="18" height="18" style="vertical-align: middle;" /></a>&nbsp;<a href="/" target="_self" title="Accueil">Accueil</a> <a href="/explorer" target="_self" title="Explorer"><img src="http://ville.roberval.qc.ca/images/picto/billionphotos-1154833.png" alt="Explorer" width="18" height="18" style="vertical-align: middle;" /></a>&nbsp;</span><a href="/explorer" target="_self" title="Explorer par sujet"><span style="color: #7a9c1c;">Explorer par sujet</span></a></span>&nbsp;<a href="/nous-joindre" target="_self" title="Nous joindre"><img src="http://ville.roberval.qc.ca/images/picto/billionphotos-995039.png" alt="billionphotos 995039" width="18" height="18" style="vertical-align: middle;" /></a>&nbsp;<span style="color: #7a9c1c;"><span style="color: #7a9c1c;"><a href="/nous-joindre" target="_self" title="Nous joindre">Nous joindre</a>&nbsp;<a href="http://ville.roberval.qc.ca/index.php?option=com_phocagallery&amp;view=category&amp;id=32&amp;Itemid=992" target="_self" title="Galerie photo"><img src="http://ville.roberval.qc.ca/images/picto/billionphotos-953222.png" alt="billionphotos 953222" width="18" height="18" style="vertical-align: middle;" /></a>&nbsp;<a href="http://ville.roberval.qc.ca/index.php?option=com_phocagallery&amp;view=category&amp;id=32&amp;Itemid=992" target="_self" title="Galerie photo">Galerie photos</a></span></span></span><span style="color: #7a9c1c;"><span style="color: #7a9c1c;"><br /></span></span></p></div>
 <!-- end nostyle content -->
 </div>
 <!-- end nostyle -->
@@ -201,17 +436,28 @@ jQuery(function($) {
 
 <article class="art-post art-messages"><div class="art-postcontent clearfix">
 <div id="system-message-container">
-</div></div></article><div class="item-page" itemscope itemtype="http://schema.org/Article"><article class="art-post"><h2 class="art-postheader">Bibliothèque Georges-Henri-Lévesque</h2><div class="art-postcontent clearfix"><div class="art-article"><p><img src="/refcom/images/bibliotheque.png" alt="" /></p>
+</div></div></article><div class="item-page" itemscope itemtype="http://schema.org/Article"><article class="art-post"><h2 class="art-postheader">Bibliothèque Georges-Henri-Lévesque</h2><div class="art-postcontent clearfix"><div class="art-article"><p><img src="http://ville.roberval.qc.ca/refcom/images/bibliotheque.png" alt="" /></p>
 <p><span style="color: #7a9c1c;">Adresse :</span></p>
-<p>829, boul. Saint-Joseph, Roberval (Québec) &nbsp;G8H 2L6<br />Téléphone : 418 275-0202 &nbsp; &nbsp; Télécopieur : 418 275-7045</p>
-<h3>&nbsp; Une bibliothèque au coeur de la diffusion culturelle!</h3>
+<p>829, boul. Saint-Joseph, Roberval (Québec)  G8H 2L6<br />Téléphone : 418 275-0202     Télécopieur : 418 275-7045</p>
+<h3>  Une bibliothèque au coeur de la diffusion culturelle!</h3>
 <p>Véritable centre de ressources, la bibliothèque exerce un rôle éducatif, culturel et social d'importance et a le souci de répondre adéquatement aux besoins littéraires et musicaux ainsi qu'aux demandes diverses des usagers, de l'écolier au passionné de psychologie, sans oublier les personnes du troisième âge ou celles qui éprouvent des difficultés visuelles. Véritable « Sel de la Vie culturelle », elle essaie de stimuler le désir d'apprendre, de développer le goût de l'aventure auprès de tous les milieux et propose des collections à des fins de loisirs et d'information.</p>
 <p>Elle s'occupe également de promouvoir l'art sous toutes ses formes par le biais d'expositions de peintres et d'artisans jeannois, de lancements de livres, « Rendez-vous du soir qui penche » (soirées de lecture de textes et poésie), Samedis animés, atelier « Je me raconte», activités théâtrales en collaboration avec les écoles, les C.P.E. et la Maison de la famille Éveil-Naissance, contes animés, Dictée des écrivains, rencontres d'auteurs, lancements de volumes, vernissages, Cercles littéraires, participation aux « Journées de la Culture », activités dans le cadre de la Semaine de relâche, de l'aide à la recherche bibliographique et par les activités avec le Regroupement des artistes et artisans de Roberval.</p>
-<p>Le Salon du livre du Saguenay-Lac-Saint-Jean est un partenaire majeur de la Bibliothèque Georges-Henri-Lévesque.&nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p><a href="/citoyens/bibliotheque-georges-henri-levesque/activite" class="art-button">Activités</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/animation" class="art-button">Ateliers animés</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/exposition2" class="art-button">Expositions</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/horaire" class="art-button">Horaire d’ouverture et congés fériés</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/site-regionaux" class="art-button">Liens Web bibliothèque</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/mondossier" class="art-button">Mon dossier et catalogue en ligne</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/nouveautes" class="art-button">Nouveautés</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/parc-informatique" class="art-button">Parc informatique</a>&nbsp;&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/personneletbenevoles" class="art-button">Personnel et bénévoles</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/reglements" class="art-button">Règlements</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/rencontre" class="art-button">Rencontres litéraires</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/renseignements" class="art-button">Renseignements</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/salles" class="art-button">Salle</a>&nbsp;<a href="/citoyens/bibliotheque-georges-henri-levesque/livresnumeriques" class="art-button">Service de prêts numériques</a></p>
-<p>&nbsp;</p>
-<p>La Bibliothèque Georges-Henri-Lévesque honore la mémoire du Père Georges-Henri Lévesque, dominicain né à Roberval et décédé le 15 janvier 2000.</p>
-<p><img src="/images/bibliotheque/mabiblio/bus_georges.png" alt="bus georges" width="204" height="235" />&nbsp;<img src="/images/bibliotheque/mabiblio/bus.jpg" alt="bus" width="357" height="235" /></p> </div></div></article></div>
+<p>Le Salon du livre du Saguenay-Lac-Saint-Jean est un partenaire majeur de la Bibliothèque Georges-Henri-Lévesque.       </p>
+<p><a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/activite" class="art-button">Activités</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/animation" class="art-button">Ateliers animés</a> <a href="http://ville.roberval.qc.ca/index.php?option=com_content&amp;view=article&amp;id=663:expositions&amp;catid=69&amp;Itemid=245" class="art-button">Expositions</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/horaire" class="art-button">Horaire d’ouverture et congés fériés</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/site-regionaux" class="art-button">Liens Web bibliothèque</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/mondossier" class="art-button">Mon dossier et catalogue en ligne</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/nouveautes" class="art-button">Nouveautés</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/parc-informatique" class="art-button">Parc informatique</a>  <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/personneletbenevoles" class="art-button">Personnel et bénévoles</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/reglements" class="art-button">Règlements</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/rencontre" class="art-button">Rencontres littéraires</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/renseignements" class="art-button">Renseignements</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/salles" class="art-button">Salle</a> <a href="http://ville.roberval.qc.ca/citoyens/bibliotheque-georges-henri-levesque/livresnumeriques" class="art-button">Service de prêts numériques</a> <a href="http://ville.roberval.qc.ca/index.php?option=com_spidercalendar&amp;view=ajaxbigcalendar&amp;Itemid=1160" title="Calendrier des événements" target="_self" class="art-button">Calendrier des événements</a></p>
+<p><input type="hidden" value="700" id="cal_wdth612522168" />
+
+<div id='bigcalendar612522168'></div>
+
+<script>
+
+showbigcalendar( 'bigcalendar612522168','/component/spidercalendar/?view=bigcalendar&amp;def_view=month&amp;views=month,list,week,day,&amp;rand=612522168&amp;theme_id=13&amp;calendar=1&format=row&tmpl=component&Itemid=1091&date=2016-09','612522168','0')
+
+
+
+
+</script>
+
+</p> </div></div></article></div>
 
 
 
@@ -227,6 +473,17 @@ jQuery(function($) {
             </div>
 
 
+<!-- begin nostyle -->
+<div class="art-nostyle">
+<!-- begin nostyle content -->
+
+
+<div class="custom"  >
+	<p style="text-align: center;">Copyright © 2016 Ville de Roberval. Tous droits réservés. <a href="/administrator" target="_blank" title="Administration">Administration</a> / <a href="http://ville.roberval.qc.ca/index.php?option=com_phocadownload&amp;view=category&amp;id=17&amp;Itemid=1021" target="_blank" title="Intranet">Intranet</a><a href="http://ville.roberval.qc.ca/index.php?option=com_users&amp;view=login&amp;Itemid=454" target="_self" title="Connexion"><br /></a></p>
+<p style="text-align: center;">&nbsp;</p></div>
+<!-- end nostyle content -->
+</div>
+<!-- end nostyle -->
 
 
 

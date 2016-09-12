@@ -372,7 +372,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=jw-ygt
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xDF8608E1E1C69AA2E0947BD7570D1FFB35BE4D7D169CC335FFF45803748E0E04BC9A6469113FB0895F6B26F8973C83A93641D8F6C31D947EFA1094CE0E6E0380,09 May 2016 13:55:55 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xF08EFA81C8B2378EE568553B6AD1A9F99E8274AD5D6994BDDBCFC3B86F7A6928FC90BE6CADA607C0AC21DD009CC53AA2197A5B563025CA5F0A0DAE813349A135,11 Sep 2016 16:16:48 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -522,9 +522,9 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 	            </div>
 	            <div id="topLinks">
 	            <ul>
-	            	<li><a id="nuCampusLinks" href="#">Campuses</a>|</li>
-	                <li><a href="http://mail.nipissingu.ca/" target="_blank">NU Mail</a>|</li>
-	                <li><a href="https://my.nipissingu.ca/default.aspx" target="_blank">MyNipissing</a>|</li>
+	            	<li><a href="http://mail.nipissingu.ca/" target="_blank">NU Mail</a>|</li>
+	                <li><a href="https://my.nipissingu.ca/" target="_blank">MyNipissing</a>|</li>
+	                <li><a href="http://webadvisor.nipissingu.ca/" target="_blank">WebAdvisor</a>|</li>
                     <li><a id="nuDirectoriesLinks" href="#">Quick Links</a></li>
                 </ul>
                 </div>
@@ -545,10 +545,10 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
                         <div class="nuMegaMenuColumn">
                         	<h3><a href="http://www.eclibrary.ca/" target="_blank">Library</a></h3>
                         	<h3><a href="http://mail.nipissingu.ca/" target="_blank">NU Mail</a></h3>
-                        	<h3><a href="https://my.nipissingu.ca/default.aspx" target="_blank">MyNipissing</a></h3>
+                        	<h3><a href="https://my.nipissingu.ca/" target="_blank">MyNipissing</a></h3>
                             <h3><a href="http://webadvisor.nipissingu.ca/" target="_blank">WebAdvisor</a></h3>
                             <h3><a href="http://learn.nipissingu.ca/" target="_blank">Blackboard</a></h3>
-                            <h3><a href="/maps">Campus Maps & Floor Plans</a></h3>
+                            <h3><a href="/maps">Campus Maps &amp; Floor Plans</a></h3>
                         </div>
                         <div class="nuMegaMenuColumn">
                         	<h2>Directories</h2>
@@ -573,8 +573,16 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
                         <p>Our North Bay Campus is home to state-of-the-art facilities like the Harris Learning Library and the R.J. Surtees Student Athletics Centre. Customize your learning experience in our Applied and Professional Studies, Arts and Science, and Education degree programs.</p>
                     </div>
                     <div class="nuMegaMenuColumn">
-                    	<h2><a href="/departments/muskoka">Muskoka Campus</a></h2>
-                        <p>Located within driving distance of Orillia and Barrie, our stunning Muskoka Campus located in the heart of Bracebridge offers a number of humanities programs including Child and Family Studies and Liberal Arts.</p>
+                    	<h2>Muskoka Campus</h2>
+                        <p>As of Friday, June 24, 2016, the Muskoka Campus was closed. All programs have been moved and are now offered at the North Bay Campus. Please direct any inquiries to:</p>
+                        <p>Nipissing University<br/>
+                        100 College Drive<br/>
+                        Box 5002<br/>
+                        North Bay, ON  P1B 8L7</p>
+                        <p>Tel: 705.474.3450, ext.4200<br/>
+                        Toll Free (within Ontario): 800.655.5154<br/>
+                        TTY: 877.688.5507<br/>
+                        Email: <a href="mailto:nuinfo@nipissingu.ca">nuinfo@nipissingu.ca</a></p>
                     </div>
                     <div class="nuMegaMenuColumn">
                     	<h2><a href="/departments/brantford">Brantford Campus</a></h2>
@@ -607,7 +615,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item" href="/departments/give-to-nu"><span class="additional-background"><span class="menu-item-text">Giving</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item" title="Online donation form." href="https://secure.nipissingu.ca/donations/default.asp"><span class="additional-background"><span class="menu-item-text">Make a Donation</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" title="Giving opportunities." href="/departments/give-to-nu/ways-to-give/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Ways of Giving</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/give-to-nu/where-to-give/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Advancement Initiatives</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/give-to-nu/Donor-Recognition/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Donor Recognition</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item" href="/academics/research-services/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Research</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item" title="Research committees, funding and services information" href="/academics/research-services/ors/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Services</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/research-services/research-awards/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Awards</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/research-services/ethics/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Ethics</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/research-services/Pages/RC.aspx"><span class="additional-background"><span class="menu-item-text">Research Council</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/research-services/Pages/CRC-Chairs-and-Recognition.aspx"><span class="additional-background"><span class="menu-item-text">Canadian Research Chairs (CRC)</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item" title="Research committees, funding and services information" href="/academics/research-services/ors/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Services</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/graduate-studies/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">School of Graduate Studies</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/research-services/research-awards/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Awards</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/research-services/ethics/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Ethics</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/research-services/Pages/RC.aspx"><span class="additional-background"><span class="menu-item-text">Research Council</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/academics/research-services/Pages/CRC-Chairs-and-Recognition.aspx"><span class="additional-background"><span class="menu-item-text">Canadian Research Chairs (CRC)</span></span></a></li>
 			</ul></li>
 		</ul>
 	</div>
@@ -879,16 +887,51 @@ University. <br /></span></p>
 Student Success aims to provide equal access to postsecondary education for
 Aboriginal students through recruitment initiatives, transition planning and
 retention strategies. </span></p>
-<p class="MsoNormal"><br /><span style="font-family:'century gothic'"></span></p>
+<p class="MsoNormal"><span style="font-family:'century gothic'"><br /></span></p>
+<p class="MsoNormal"><font face="century gothic"><strong>Student Success Programming includes:</strong></font></p>
+<p class="MsoNormal"><ul><li><font face="century gothic">​Transitional programing</font></li>
+<li><font face="century gothic">Academic and personal support and counselling<br /></font></li>
+<li><font face="century gothic">Elder-in-Residence, individual and group sessions</font></li>
+<li><font face="century gothic">Financial advice and referrals,</font></li>
+<li><font face="century gothic">Tutoring Support, by drop in or appointment</font></li>
+<li><font face="century gothic">Academic and Cultural Workshops</font></li>
+<li><font face="century gothic">Peer Mentorship</font></li></ul></p>
+<p class="MsoNormal"><br /></p>
+<p class="MsoNormal"><span style="font-family:'century gothic'">To access supports or be added to our mailing list please register online or in person at the Office of Aboriginal Initiatives. </span></p>
+<p class="MsoNormal"><span style="font-family:'century gothic'"><br /></span></p>
+<p class="MsoNormal"><span style="font-family:'century gothic'">For more information or to speak with a Student Success Coordinator please call (705) 474-3450 Ext. 4252</span></p>
 
-<p class="MsoNormal"><span style="font-family:'century gothic'">To speak with the
-Student Success Coordinator please call (705) 474-3450 ext.4252​​​</span></p>
+
+
+
+
+​​​​​​​​​​​​​​​​<img alt="" /><img alt="" style="widows:1;font-size:0.9em;font-family:verdana, lucida, arial, helvetica, sans-serif" /><span style="widows:1;font-size:9.5pt;font-family:arial"> </span><span style="widows:1;font-size:9.5pt;font-family:arial">​</span>
 
 
 
 
 
-​​​​​​​​​​​​​​​​</div>
+
+
+<p style="margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:center;direction:ltr;unicode-bidi:embed;word-break:normal"><a href="/departments/aboriginal-initiatives/Pages/Student-Information-Form.aspx"><br /></a></p>
+<p style="margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:center;direction:ltr;unicode-bidi:embed;word-break:normal">
+
+
+
+
+
+
+
+
+
+</p>
+<p style="margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:center;direction:ltr;unicode-bidi:embed;word-break:normal"><a href="/departments/aboriginal-initiatives/Pages/Student-Information-Form.aspx"><span style="font-size:14pt;font-family:'century gothic';font-weight:bold">Online
+Registration/Intake Form</span>​</a></p>
+<p style="margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:center;direction:ltr;unicode-bidi:embed;word-break:normal"><br /></p>
+<p style="margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:center;direction:ltr;unicode-bidi:embed;word-break:normal"><div style="text-align:left"><br /></div>
+<div style="text-align:left"><br /></div>
+<span></span><div style="text-align:left"></div></p>
+<p style="margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:center;direction:ltr;unicode-bidi:embed;word-break:normal"><br /></p></div>
                     </div>
                     <div class="nu-article-bottomleft-content-zone">
                         
@@ -1006,11 +1049,11 @@ Student Success Coordinator please call (705) 474-3450 ext.4252​​​</span><
 			</ul></li><li class="static"><a class="static menu-item" href="/departments/aboriginal-initiatives/Pages/Aboriginal-Student-Self-Identification.aspx"><span class="additional-background"><span class="menu-item-text">Aboriginal Student Self-Identification</span></span></a></li><li class="static selected"><a class="static selected menu-item" href="/departments/aboriginal-initiatives/services/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Aboriginal Student Success</span><span class="ms-hidden">Currently selected</span></span></a></li><li class="static dynamic-children"><a class="static dynamic-children menu-item" href="/departments/aboriginal-initiatives/Pages/Debwendizon.aspx"><span class="additional-background"><span class="menu-item-text">Debwendizon</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/Pages/Events.aspx"><span class="additional-background"><span class="menu-item-text">Events</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/Pages/Event-Photos.aspx"><span class="additional-background"><span class="menu-item-text">Event Photos</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item" href="/departments/aboriginal-initiatives/csl/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Biidaaban Community Service Learning</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Youth-Group.aspx"><span class="additional-background"><span class="menu-item-text">Biidaaban Youth Group</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Academic-Support.aspx"><span class="additional-background"><span class="menu-item-text">Biidaaban Academic Support</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Community.aspx"><span class="additional-background"><span class="menu-item-text">Community</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Nipissing-University-Faculty.aspx"><span class="additional-background"><span class="menu-item-text">Nipissing University Faculty</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Youth-Group.aspx"><span class="additional-background"><span class="menu-item-text">Biidaaban Youth Group</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Academic-Support.aspx"><span class="additional-background"><span class="menu-item-text">Biidaaban Academic Support</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Community.aspx"><span class="additional-background"><span class="menu-item-text">Community Information</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Nipissing-University-Faculty.aspx"><span class="additional-background"><span class="menu-item-text">Nipissing University Faculty</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/A-Circle-of-Caring.aspx"><span class="additional-background"><span class="menu-item-text">A Circle of Caring - Pilot with COPA</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/csl/Pages/Nipissing-University-Student-Volunteer-Information.aspx"><span class="additional-background"><span class="menu-item-text">Nipissing University Student Volunteer Information</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item" href="/departments/aboriginal-initiatives/wiidooktaadwin/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Wiidooktaadwin - Aboriginal Mentorship Initiatives</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/wiidooktaadwin/Pages/Peer-2-Peer.aspx"><span class="additional-background"><span class="menu-item-text">Peer 2 Peer</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/wiidooktaadwin/Pages/Wiidooktaadwin.aspx"><span class="additional-background"><span class="menu-item-text">Wiidooktaadwin</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/wiidooktaadwin/Pages/Aasgaabitaadmin---Aboriginal-Youth-Conferences.aspx"><span class="additional-background"><span class="menu-item-text">Aasgaabwitaadwin - Aboriginal Youth Conferences</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item" href="/departments/aboriginal-initiatives/nuace/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">NUACE</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/nuace/Pages/Membership.aspx"><span class="additional-background"><span class="menu-item-text">Membership</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/nuace/Pages/Aboriginal-Student-Strategy.aspx"><span class="additional-background"><span class="menu-item-text">Aboriginal Student Strategy</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/nuace/Pages/Terms-of-Reference.aspx"><span class="additional-background"><span class="menu-item-text">Terms of Reference</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/nuace/Pages/Membership.aspx"><span class="additional-background"><span class="menu-item-text">Membership</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/nuace/Pages/Aboriginal-Strategic-Plan.aspx"><span class="additional-background"><span class="menu-item-text">Enji Giigdoyang Aboriginal Strategic Plan 2015-2019</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/nuace/Pages/Terms-of-Reference.aspx"><span class="additional-background"><span class="menu-item-text">Terms of Reference</span></span></a></li>
 			</ul></li><li class="static"><a class="static menu-item" href="/departments/aboriginal-initiatives/research/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Research</span></span></a></li><li class="static"><a class="static menu-item" href="/departments/aboriginal-initiatives/Events/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Events</span></span></a></li><li class="static dynamic-children"><a class="static dynamic-children menu-item" href="/departments/aboriginal-initiatives/archive/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Event Archive</span></span></a><ul class="dynamic">
 				<li class="dynamic dynamic-children"><a class="dynamic dynamic-children menu-item" href="/departments/aboriginal-initiatives/archive/2014-2015/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">2014-2015</span></span></a><ul class="dynamic">
 					<li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/archive/2014-2015/Pages/Jurisdiction-and-Relationships.aspx"><span class="additional-background"><span class="menu-item-text">Jurisdiction and Relationships</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/archive/2014-2015/Pages/Enji-Giidoyang-Speaker-Series-.aspx"><span class="additional-background"><span class="menu-item-text">Enji Giigdoyang Speaker Series </span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/archive/2014-2015/Pages/Redefining-Aboriginal-Student-Success-.aspx"><span class="additional-background"><span class="menu-item-text">Redefining Aboriginal Student Success </span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/archive/2014-2015/Pages/Guest-Speaker---Edmund-Metatawabin.aspx"><span class="additional-background"><span class="menu-item-text">Guest Speaker - Edmund Metatawabin</span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/archive/2014-2015/Pages/Trick-or-Treaty.aspx"><span class="additional-background"><span class="menu-item-text">Trick or Treaty </span></span></a></li><li class="dynamic"><a class="dynamic menu-item" href="/departments/aboriginal-initiatives/archive/2014-2015/Pages/National-Chief-Talk.aspx"><span class="additional-background"><span class="menu-item-text">National Chief Talk</span></span></a></li>
@@ -1082,22 +1125,12 @@ Student Success Coordinator please call (705) 474-3450 ext.4252​​​</span><
                         <div id="nuFooter1" class="noindex">
                             <div id="nuFooterAddress" class="noindex">
                                 <strong>Nipissing University</strong> <br />
-                                100 College Drive, Box 5002, North Bay, ON, Canada &nbsp;P1B 8L7 <br />
+                                100 College Drive, Box 5002, North Bay, ON, Canada &nbsp;P1B 8L7<br />
                                 Tel: 705.474.3450 | Fax: 705.474.1947 | TTY: 877.688.5507<br />
-								<a href="mailto:nuinfo@nipissingu.ca">nuinfo@nipissingu.ca                              
-                            	</a>                              
+								<a href="mailto:nuinfo@nipissingu.ca">nuinfo@nipissingu.ca</a>                              
                             </div>
                         </div>
                         <div id="nuFooter2" class="noindex">
-                            <div class="noindex footerAddressBlock">
-                                <strong><a href="/departments/muskoka">Muskoka Campus</a></strong><br />
-                                125 Wellington Street<br />
-                                Bracebridge, ON, Canada P1L 1E2<br />
-                                Tel: 705.645.2921 | Fax: 705.645.2922                                
-                           </div>
-                           
-                        </div>
-                        <div id="nuFooter3" class="noindex">
                             <div class="noindex footerAddressBlock">
                                 <strong><a href="/departments/brantford">Brantford Campus</a></strong><br />
                                 50 Wellington St.<br />

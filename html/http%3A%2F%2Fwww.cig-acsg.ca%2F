@@ -1,22 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" class="">
-  <head id="Head1"> 
+  <head id="Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9c545daf2e","applicationID":"29970346","transactionName":"ZFBbMEdYDUoHU0MLVl0adDJ2FjNYAVV0DVdHR1YIWVwRFjVYWBVpUlJc","queueTime":0,"applicationTime":460,"ttGuid":"4C7D5C27339BFD45","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script> 
 <meta name="viewport" content="width=device-width" />
-<link href="http://f.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/11e4080f/styles/newgadgets.css" rel="stylesheet" type="text/css" /><link href="http://f.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/11e4080f/styles/print.css" rel="stylesheet" type="text/css" /><link href="http://f.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/11e4080f/styles/print.theme.css" rel="stylesheet" type="text/css" /><link href="http://f.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/11e4080f/styles/shared.css" rel="stylesheet" type="text/css" /><link href="http://f.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/11e4080f/styles/theme.less" rel="stylesheet" type="text/css" /><link href="http://www.cig-acsg.ca/resources/theme/customStyles.css?t=635562524120000000" rel="stylesheet" type="text/css" /><link href="http://www.cig-acsg.ca/resources/theme/user_business_casual_wild_blue.v2.0.css?t=635354115800000000" rel="stylesheet" type="text/css" /><link href="http://www.cig-acsg.ca/resources/theme/user.css?t=635682443040000000" rel="stylesheet" type="text/css" /><link href="//f.wildapricot.org/WebUI/built5.7.4.1/css/shared/ui/shared-ui-compiled.css" rel="stylesheet" type="text/css" /><script type="text/javascript" language="javascript" id="idJavaScriptEnvironment">
-var bonaPage_BuildVer='5.7.4.1';
+<link href="http://sf.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/4ddb77f8/styles/newgadgets.css" rel="stylesheet" type="text/css" /><link href="http://sf.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/4ddb77f8/styles/print.css" rel="stylesheet" type="text/css" /><link href="http://sf.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/4ddb77f8/styles/print.theme.css" rel="stylesheet" type="text/css" /><link href="http://sf.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/4ddb77f8/styles/shared.css" rel="stylesheet" type="text/css" /><link href="http://sf.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/4ddb77f8/styles/theme.less" rel="stylesheet" type="text/css" /><link href="http://www.cig-acsg.ca/resources/theme/customStyles.css?t=635562524120000000" rel="stylesheet" type="text/css" /><link href="http://www.cig-acsg.ca/resources/theme/user_business_casual_wild_blue.v2.0.css?t=635354115800000000" rel="stylesheet" type="text/css" /><link href="http://www.cig-acsg.ca/resources/theme/user.css?t=635682443040000000" rel="stylesheet" type="text/css" /><link href="//sf.wildapricot.org/WebUI/built5.8.0.1/css/shared/ui/shared-ui-compiled.css" rel="stylesheet" type="text/css" /><script type="text/javascript" language="javascript" id="idJavaScriptEnvironment">var bonaPage_BuildVer='5.8.0.1';
 var bonaPage_AdminBackendUrl = '/admin/';
-var bonaPage_StatRes='http://f.wildapricot.org/WebUI/';
+var bonaPage_StatRes='http://sf.wildapricot.org/WebUI/';
 var bonaPage_InternalPageType = { isUndefinedPage : false,isWebPage : true,isAdminPage : false,isDialogPage : false,isSystemPage : false,isErrorPage : false,isError404Page : false };
 var bonaPage_PageView = { isAnonymousView : true,isMemberView : false,isAdminView : false };
-var javaScriptErrorsHandling = {logErrors:true, hideErrorMessages:true, errorHandlerUrl:'/JSLogger/LogJavaScriptException.ashx' };
 var WidgetMode = 0;
 var bonaPage_IsUserAnonymous = true;
-var bonaPage_ThemeVer='11e4080f635682443040000000635562524120000000'; var bonaPage_ThemeId = 'business_casual_wild_blue.v2.0'; var bonaPage_ThemeVersion = '2.0';
+var bonaPage_ThemeVer='4ddb77f8635682443040000000635562524120000000'; var bonaPage_ThemeId = 'business_casual_wild_blue.v2.0'; var bonaPage_ThemeVersion = '2.0';
 var bonaPage_id='1810931'; version_id='';
  try { if (parent && parent.BonaPage) parent.BonaPage.implementBonaPage(window); } catch (err) { }
  if (window.bonaPage_PageView && bonaPage_PageView.isAdminView && (!top.WA || !top.WA.AdminPanel)) { top.window.location = bonaPage_AdminBackendUrl; } 
-document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { display: none; } </style>');</script>
-<script type="text/javascript" language="javascript" src="http://canadianinstituteofgeomatics.wildapricot.org/b4d02732/CheckHttpsAuthentication.aspx" id="idCheckHttpsAuthentication"></script><script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/scripts/shared/bonapagetop/bonapagetop-compiled.js" id="idBonaPageTop"></script><script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/scripts/shared/ui/shared-ui-compiled.js" id="idSharedJs"></script><script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/General.js" id=""></script><script type="text/javascript" language="javascript" src="http://f.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/11e4080f/scripts/combined.js" id=""></script><title>Canadian Institute of Geomatics / Association canadienne des sciences g&#233;omatiques - Home</title>
+document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { display: none; } </style>');</script><script type="text/javascript" language="javascript" src="http://canadianinstituteofgeomatics.wildapricot.org/282ebf74/CheckHttpsAuthentication.aspx" id="idCheckHttpsAuthentication"></script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/scripts/shared/bonapagetop/bonapagetop-compiled.js" id="idBonaPageTop"></script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/scripts/shared/ui/shared-ui-compiled.js" id="idSharedJs"></script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/General.js" id=""></script><script type="text/javascript" language="javascript" src="http://sf.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/4ddb77f8/scripts/combined.js" id=""></script><title>Canadian Institute of Geomatics / Association canadienne des sciences g&#233;omatiques - Home</title>
 <link rel="shortcut icon" type="image/ico" href="/Resources/Pictures/favicon.ico"/><link rel="search" type="application/opensearchdescription+xml" title="www.cig-acsg.ca" href="/opensearch.ashx" /></head>
   <body id="PAGEID_1810931" class="publicContentView LayoutMain">
 <div id="idClipMainContainer" class="cnClipMainContainer">
@@ -523,13 +520,14 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 </a>
 </div>
 <ul>
-<li class="dir">
+<li class="">
 	<div class="itemContainer">
 <a href="http://www.cig-acsg.ca/Acceuil/~francais/nos-mbrs-soutien">
 <span>Nos Membres de soutien</span>
 </a>
 </div>
-<ul>
+</li>
+	
 <li class="">
 	<div class="itemContainer">
 <a href="http://www.cig-acsg.ca/Acceuil/~francais/Profil-Mbrs-soutien">
@@ -538,12 +536,9 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 </div>
 </li>
 	
-</ul>
-</li>
-	
 <li class="">
 	<div class="itemContainer">
-<a href="http://www.cig-acsg.ca/Renouvellement-des-Membres-de-soutien">
+<a href="http://www.cig-acsg.ca/Acceuil/~francais/Renouvellement-des-Membres-de-soutien">
 <span>Renouvellement des Membres de soutien</span>
 </a>
 </div>
@@ -845,10 +840,10 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 <ul class="orientationHorizontal alignLeft">
 
 <li>
-				<a href="https://groups.google.com/forum/#!forum/cig-nl" title="Google+" target="_blank"><img height="30" witdh="30" src="http://f.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/11e4080f/Gadgets/SocialProfile/Images/icon-google-plus.png" /></a>
+				<a href="https://groups.google.com/forum/#!forum/cig-nl" title="Google+" target="_blank"><img height="30" witdh="30" src="http://sf.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/4ddb77f8/Gadgets/SocialProfile/Images/icon-google-plus.png" /></a>
 			</li>
 <li>
-				<a href="https://www.linkedin.com/groups?gid=1095187&trk=myg_ugrp_ovr" title="LinkedIn" target="_blank"><img height="30" witdh="30" src="http://f.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/11e4080f/Gadgets/SocialProfile/Images/icon-linkedin.png" /></a>
+				<a href="https://www.linkedin.com/groups?gid=1095187&trk=myg_ugrp_ovr" title="LinkedIn" target="_blank"><img height="30" witdh="30" src="http://sf.wildapricot.org/BuiltTheme/business_casual_wild_blue.v2.0/4ddb77f8/Gadgets/SocialProfile/Images/icon-linkedin.png" /></a>
 			</li>
 </ul>
 
@@ -874,7 +869,7 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 	<div class="d9 d9HeaderContainer">
 	<div id="idHeaderHeightContainer"  class="inner innerHeaderContainer">
 <div id="header_headerContent" class="header_headerContent">
-<div id="idHeaderContentHolder" data-componentId="Header" class="WaPlaceHolder headerContentHolder WaPlaceHolderHeader" style="background-image:url(&#39;http://f.wildapricot.org/ThemeSharedRes/HeaderBackgroundImages/Bg-pattern-44.png&#39;);background-repeat:repeat-x;background-position:center top;min-height:150px;"><div style=""><div id="id_JxBa87i" class="WaGadgetOnly WaGadgetContent  gadgetStyle000" style="background-image:url(&#39;http://f.wildapricot.org/none&#39;);background-color:#FFFFFF;" data-componentId="JxBa87i" ><div class="gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
+<div id="idHeaderContentHolder" data-componentId="Header" class="WaPlaceHolder headerContentHolder WaPlaceHolderHeader" style="background-image:url(&#39;http://sf.wildapricot.org/ThemeSharedRes/HeaderBackgroundImages/Bg-pattern-44.png&#39;);background-repeat:repeat-x;background-position:center top;min-height:150px;"><div style=""><div id="id_JxBa87i" class="WaGadgetOnly WaGadgetContent  gadgetStyle000" style="background-image:url(&#39;http://sf.wildapricot.org/none&#39;);background-color:#FFFFFF;" data-componentId="JxBa87i" ><div class="gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
 <table watable="1" valign="center" class="contStyleExcSimpleTable" style="border-collapse: separate; border-style: solid; border-width: 0px;" align="right" cellspacing="0" height="171" width="919">
   <tbody>
     <tr>
@@ -929,12 +924,38 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 
 <p><br></p>
 
-<p><a href="/bio">Executive &amp; Council Biographies</a><br></p><br><p><a href="/branches">Branches</a></p><a href="/international-affiliations"><p><br></p>Affiliations</a><p><br></p><p><a href="/history">History</a></p>
+<p><a href="/bio">Executive &amp; Council Biographies</a><br></p><br>
+
+<p><a href="/branches">Branches</a></p>
+
+<p><br></p><a href="/international-affiliations">Affiliations</a>
+
+<p><br></p>
+
+<p><a href="/history">History</a></p>
+
+<p><br></p>
+
+<table border="2" width="100%">
+  <tbody>
+    <tr>
+      <td>
+        <table border="1" width="100%">
+          <tbody>
+            <tr bgcolor="#CCCCCC">
+              <td><div align="center"><font style="font-size: 14px;"><strong>Annual General Meeting</strong></font><br><font style="font-size: 14px;"><strong></strong></font></div><div align="center"><div align="center"><font style="font-size: 14px;"><strong>2016</strong></font><br></div><font style="font-size: 14px;"><strong></strong></font></div></td></tr><tr><td align="center"><div>Monday, 26 September 2016 during the <br></div><a href="http://www.geomaticsatlantic2016.com/" target="_blank">Geomatics Atlantic 2016</a><br>Fredericton, New Brunswick<br></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 </div>
 </div></div></div></td><td style="" data-componentId="7aNh4w2_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_l82VLSF" data-componentId="l82VLSF" class="WaLayoutItem" style="width:51%;"><div id="id_YpWO9s4" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="YpWO9s4" style=""><div style=""><div id="id_XyFrcTl" class="WaGadgetOnly WaGadgetContent  gadgetStyle000" style="" data-componentId="XyFrcTl" ><div class="gadgetContentEditableArea" style="padding-top:0px;padding-right:4px;padding-left:15px;" data-editableArea="0" data-areaHeight="auto">
 <p><strong><font style="font-size: 18px;">CIG Home</font></strong><br></p>
 
-<p><br></p>The Canadian Institute of Geomatics is the Canadian Not-for-Profit association that represents the interests of all groups in the geomatics community and is the Canadian member to the International Federation of Surveying (FIG), the International Society of Photogrammetry and Remote Sensing (ISPRS) and the International Cartographic Association (ICA).
+<p><br></p>The Canadian Institute of Geomatics is the Canadian Not-for-Profit association that represents the interests of all groups in the geomatics community and is the Canadian member to the International Federation of Surveying (FIG), the International Society of Photogrammetry and Remote Sensing (ISPRS), the International Cartographic Association (ICA)&nbsp; and is a Founding member of GeoAlliance.
 
 <p><br></p><strong>Goals</strong><br>
 
@@ -956,13 +977,8 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
   <li><a href="/join">Join us</a><br></li>
 </ul>
 </div>
-</div></div></div></td><td style="" data-componentId="l82VLSF_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_WPo4Y8D" data-componentId="WPo4Y8D" class="WaLayoutItem" style="width:27%;"><div id="id_9VG1cfF" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="9VG1cfF" style=""><div style=""><div id="id_MJKV9v5" class="WaGadgetOnly WaGadgetContent  gadgetStyle000" style="" data-componentId="MJKV9v5" ><div class="gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
-<table width="100%">
-  <tbody><tr>
-    <td><br></td>
-  </tr>
-</tbody></table>
-</div>
+</div></div></div></td><td style="" data-componentId="l82VLSF_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_WPo4Y8D" data-componentId="WPo4Y8D" class="WaLayoutItem" style="width:27%;"><div id="id_9VG1cfF" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="9VG1cfF" style=""><div style=""><div id="id_VYj8ohH" class="WaGadgetOnly WaGadgetContent  gadgetStyle000" style="" data-componentId="VYj8ohH" ><div class="gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
+&nbsp;</div>
 </div></div></div></td></tr></table> </div><div id="id_75CaJeH" data-componentId="75CaJeH" class="WaLayoutContainer" style=""><table cellspacing="0" cellpadding="0" class="WaLayoutTable" style=""><tr data-componentId="75CaJeH_row" class="WaLayoutRow"><td id="id_CSWsveK" data-componentId="CSWsveK" class="WaLayoutItem" style="width:100%;"><div id="id_MVEtamS" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="MVEtamS" style=""><div style=""><div id="id_RxEQWmr" data-componentId="RxEQWmr" class="WaLayoutContainerOnly" style="background-color:transparent;"><table cellspacing="0" cellpadding="0" class="WaLayoutTable" style=""><tr data-componentId="RxEQWmr_row" class="WaLayoutRow"><td id="id_aApY75w" data-componentId="aApY75w" class="WaLayoutItem" style="background-color:transparent;width:25%;"></td><td style="width:2px;" data-componentId="aApY75w_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_oFppU7w" data-componentId="oFppU7w" class="WaLayoutItem" style="background-color:transparent;width:25%;"></td><td style="width:2px;" data-componentId="oFppU7w_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_hAaFxfi" data-componentId="hAaFxfi" class="WaLayoutItem" style="background-color:transparent;width:25%;"></td><td style="width:2px;" data-componentId="hAaFxfi_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_GXyMY3r" data-componentId="GXyMY3r" class="WaLayoutItem" style="background-color:#E6E6E6;width:25%;"><div id="id_gyx8aLi" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="gyx8aLi" style=""><div style=""><div id="id_SFx4Nbi" class="WaGadgetOnly WaGadgetContent  gadgetStyle000" style="" data-componentId="SFx4Nbi" ><div class="gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
 <table hight="100%" style="" border="3" width="100%">
   <tbody>
@@ -1093,7 +1109,7 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 	<div class="d9">
 	<div  class="inner">
 <span id="idFooterPoweredByWA" class="cnFooterPoweredByWA">
-Powered by <a href="http://www.wildapricot.com">Wild Apricot</a> Membership Software</span>
+Powered by <a href="http://www.wildapricot.com" target="_blank">Wild Apricot</a> Membership Software</span>
 </div></div></div></div></div></div></div></div></div></div></div>
 <div id="idCustomJsContainer" class="cnCustomJsContainer">
 

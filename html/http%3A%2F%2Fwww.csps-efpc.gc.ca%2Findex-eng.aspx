@@ -12,7 +12,7 @@
 <meta name="DCTERMS.description" content="The Canada School of Public Service is the common learning provider for the Canadian federal public service."/>
 <meta name="DCTERMS.language" content="en"/>
 <meta name="DCTERMS.issued" content="2012-05-26"/>
-<meta name='DCTERMS.modified' content='2016-04-25'/>
+<meta name='DCTERMS.modified' content='2016-08-02'/>
 <meta name="dcterms.language" title="ISO639-2" content="eng" />
 
     <!--[if gte IE 9 | !IE ]><!-->
@@ -45,13 +45,13 @@
 <body vocab="http://schema.org/" typeof="WebPage">
 <form method="post" action="./index-eng.aspx" id="form1">
 <div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk1NTMxNzc0OQ9kFgJmD2QWBGYPZBYCAgIPZBYCAgEPFgIeBFRleHQFNDxtZXRhIG5hbWU9J0RDVEVSTVMubW9kaWZpZWQnIGNvbnRlbnQ9JzIwMTYtMDQtMjUnLz5kAgEPZBYMAgMPFgIfAAUUU2tpcCB0byBtYWluIGNvbnRlbnRkAgUPFgIfAAUjU2tpcCB0byAmcXVvdDtBYm91dCB0aGlzIHNpdGUmcXVvdDtkAgcPZBYCZg9kFgQCAQ8WAh4EaHJlZgUlaHR0cDovL2NzcHMtZWZwYy5nYy5jYS9pbmRleC1mcmEuYXNweGQCBw8WAh4HVmlzaWJsZWhkAgkPZBYGAgEPZBYeAgEPFgQeA3NyYwUlL2ltYWdlcy9Sb3RhdGluZ19GZWF0dXJlL2djY2FtcHVzLnBuZx4DYWx0BRBUYWIgMSA6IEdDY2FtcHVzZAIDDxYEHwMFHi9Db250YWN0X1VzL2ltYWdlcy9zc3QtZW5nLnBuZx8EBRlUYWIgMiA6IFNlbGYtc2VydmljZSB0aXBzZAIFDxYEHwMFKy9ldmVudHMvbWFuaW9ubGVjdHVyZS9pbWFnZXMvbHAyMDE2LWVuZy5wbmcfBAUbVGFiIDMgOiAyMDE2IE1hbmlvbiBMZWN0dXJlZAIHDxYEHwMFIS9ldmVudHMvbm1jMjAxNi9pbWFnZXMvbHAtZW5nLnBuZx8EBR9UYWIgNCA6IE1hbmFnZXJzJyBFeGNoYW5nZSAyMDE2ZAIJDxYEHwMFHC9ldmVudHMvY2YvaW1hZ2VzL2xwLWVuZy5wbmcfBAUdVGFiIDUgOiBDYW5hZGEncyBGcmFuY29waG9uaWVkAgsPFgQfAwUlL2ltYWdlcy9Sb3RhdGluZ19GZWF0dXJlL2djY2FtcHVzLnBuZx8EBQhHQ2NhbXB1c2QCDQ8WBB8BBTdodHRwczovL2xlYXJuLWFwcHJlbmRyZS5jc3BzLWVmcGMuZ2MuY2EvYXBwbGljYXRpb24vZW4gHglpbm5lcmh0bWwFWUxvZyBpbiB0byBHQ2NhbXB1cywgdGhlIFNjaG9vbOKAmXMgbGVhcm5pbmcgYXBwbGljYXRpb24sIHVzaW5nIHlvdXIgTXlBY2NvdW50IGNyZWRlbnRpYWxzZAIPDxYEHwMFHi9Db250YWN0X1VzL2ltYWdlcy9zc3QtZW5nLnBuZx8EBRFTZWxmLXNlcnZpY2UgdGlwc2QCEQ8WBB8BBRgvQ29udGFjdF9Vcy9zc3QtZW5nLmFzcHgfBQVFQmVmb3JlIGNhbGxpbmcgdGhlIENsaWVudCBDb250YWN0IENlbnRyZSwgY2hlY2sgb3VyIHNlbGYtc2VydmljZSB0aXBzZAITDxYEHwMFKy9ldmVudHMvbWFuaW9ubGVjdHVyZS9pbWFnZXMvbHAyMDE2LWVuZy5wbmcfBAUTMjAxNiBNYW5pb24gTGVjdHVyZWQCFQ8WBB8BBSQvZXZlbnRzL21hbmlvbmxlY3R1cmUvaW5kZXgtZW5nLmFzcHgfBQWkAUpvaW4gRGljayBQb3VuZCBvbiBNYXkgMTggYXQgdGhpcyB5ZWFyJ3MgTWFuaW9uIExlY3R1cmUgYXMgaGUgZGlzY3Vzc2VzIGhvdyB0byBtYW5hZ2UgZXRoaWNhbCBjaGFsbGVuZ2VzIGFuZCBjb21wbGV4aXRpZXMgaW4gbGVhZGVyc2hpcCByb2xlcy4gQXZhaWxhYmxlIG5hdGlvbndpZGUhZAIXDxYEHwMFIS9ldmVudHMvbm1jMjAxNi9pbWFnZXMvbHAtZW5nLnBuZx8EBRdNYW5hZ2VycycgRXhjaGFuZ2UgMjAxNmQCGQ8WBB8BBR4vZXZlbnRzL25tYzIwMTYvaW5kZXgtZW5nLmFzcHgfBQVcTWFuYWdlcnMgaW4gdGhlIE1vbnRyw6lhbCByZWdpb246IEludmVzdCBpbiB5b3VyIHByb2Zlc3Npb25hbCBkZXZlbG9wbWVudCBvbiBKdW5lIDE1IGFuZCAxNiFkAhsPFgQfAwUcL2V2ZW50cy9jZi9pbWFnZXMvbHAtZW5nLnBuZx8EBRVDYW5hZGEncyBGcmFuY29waG9uaWVkAh0PFgQfAQUZL2V2ZW50cy9jZi9pbmRleC1lbmcuYXNweB8FBVZHYWluIGluc2lnaHQgZnJvbSB0aGlzIG5vdGVkIHdyaXRlciBhbmQgbWVtYmVyIG9mIHRoZSBwcmVzdGlnaW91cyBBY2Fkw6ltaWUgZnJhbsOnYWlzZWQCBQ9kFgQCAQ8WBB4Lb25tb3VzZW92ZXIFJ3NyYz0nL2ltYWdlcy9HQ2NhbXB1cy9HQ2NhbXB1cy1lbmcucG5nJx8EZWQCAw8WAh8GBSVzcmM9Jy9pbWFnZXMvR0NjYW1wdXMvTHJuQ2hnLWVuZy5wbmcnZAIHD2QWDAIBDxYGHwYFLXNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL2V2ZW50cy1yZWQtaC1lbmcucG5nJx4Kb25tb3VzZW91dAUtc3JjPScvaW1hZ2VzL0NlbnRlckljb24vZXZlbnRzLXJlZC1hLWVuZy5wbmcnHwRlZAIDDxYGHwYFKnNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL3Bzby1yZWQtaC1lbmcucG5nJx8HBSpzcmM9Jy9pbWFnZXMvQ2VudGVySWNvbi9wc28tcmVkLWEtZW5nLnBuZycfBGVkAgUPFgYfBgUmc3JjPScvaW1hZ2VzL0NlbnRlckljb24vRkQyLWVuZy1oLnBuZycfBwUmc3JjPScvaW1hZ2VzL0NlbnRlckljb24vRkQyLWVuZy1hLnBuZycfBGVkAgcPFgYfBgUlc3JjPScvaW1hZ2VzL0NlbnRlckljb24vU0QtZW5nLWgucG5nJx8HBSVzcmM9Jy9pbWFnZXMvQ2VudGVySWNvbi9TRC1lbmctYS5wbmcnHwRlZAIJDxYGHwYFLnNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL1N1cE1hbi1yZWQyLWgtZW5nLnBuZycfBwUuc3JjPScvaW1hZ2VzL0NlbnRlckljb24vU3VwTWFuLXJlZDItYS1lbmcucG5nJx8EZWQCCw8WBh8GBS1zcmM9Jy9pbWFnZXMvQ2VudGVySWNvbi9FeGVjRC1yZWQyLWVuZy1oLnBuZycfBwUtc3JjPScvaW1hZ2VzL0NlbnRlckljb24vRXhlY0QtcmVkMi1lbmctYS5wbmcnHwRlZAILD2QWAmYPZBYEAgEPFgIeEWRhdGEtYWpheC1yZXBsYWNlBTgvL2Nkbi5jYW5hZGEuY2EvZ2N3ZWItY2RuLWxpdmUvZmVhdHVyZXMvZmVhdHVyZXMtZW4uaHRtbGQCAw8WAh8FBRw8aDI+UHJvZHVjdGlvbiBwbGF0Zm9ybTwvaDI+ZAINDxYCHwAFE0RhdGUgbW9kaWZpZWQ6JiMzMjtkZHh7tE1/96OdXwDbYKzu+bSWXaKUmM0cGznQjd7CsZ+9" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4Mjc1MTk4MTcPZBYCZg9kFgRmD2QWAgICD2QWAgIBDxYCHgRUZXh0BTQ8bWV0YSBuYW1lPSdEQ1RFUk1TLm1vZGlmaWVkJyBjb250ZW50PScyMDE2LTA4LTAyJy8+ZAIBD2QWDAIDDxYCHwAFFFNraXAgdG8gbWFpbiBjb250ZW50ZAIFDxYCHwAFI1NraXAgdG8gJnF1b3Q7QWJvdXQgdGhpcyBzaXRlJnF1b3Q7ZAIHD2QWAmYPZBYEAgEPFgIeBGhyZWYFKWh0dHA6Ly93d3cuY3Nwcy1lZnBjLmdjLmNhL2luZGV4LWZyYS5hc3B4ZAIHDxYCHgdWaXNpYmxlaGQCCQ9kFgYCAQ9kFh4CAQ8WBB4Dc3JjBSUvaW1hZ2VzL1JvdGF0aW5nX0ZlYXR1cmUvZ2NjYW1wdXMucG5nHgNhbHQFEFRhYiAxIDogR0NjYW1wdXNkAgMPFgQfAwUfL2V2ZW50cy9jY3RnYy9pbWFnZXMvbHAtZW5nLnBuZx8EBU1UYWIgMiA6IENvbnRyaWJ1dGluZyB0byBDaGFuZ2UgYW5kIFRyYW5zZm9ybWF0aW9uIGluIHRoZSBHb3Zlcm5tZW50IG9mIENhbmFkYWQCBQ8WBB8DBR8vZXZlbnRzL21od2xkL2ltYWdlcy9scC1lbmcucG5nHwQFL1RhYiAzIDogTWVudGFsIEhlYWx0aCBhbmQgV2VsbG5lc3MgTGVhcm5pbmcgRGF5ZAIHDxYEHwMFHS9ldmVudHMvcHNvL2ltYWdlcy9scC1lbmcucG5nHwQFK1RhYiA0IDogUHVibGljIFNlcnZpY2UgT3JpZW50YXRpb24gV29ya3Nob3BkAgkPFgQfAwUlL2ltYWdlcy13ci9MUF9iYW5uZXIvYXJtY2hhaXItZW5nLlBORx8EBVpUYWIgNSA6IE9mZmljaWFsIExhbmd1YWdlcyBMYXcgc2luY2UgMTk2OTogVGhlIEZvdXIgU2Vhc29ucyBvZiB0aGUgU3VwcmVtZSBDb3VydCBvZiBDYW5hZGFkAgsPFgQfAwUlL2ltYWdlcy9Sb3RhdGluZ19GZWF0dXJlL2djY2FtcHVzLnBuZx8EBQhHQ2NhbXB1c2QCDQ8WBB8BBUFodHRwczovL2xlYXJuLWFwcHJlbmRyZS5jc3BzLWVmcGMuZ2MuY2EvYXBwbGljYXRpb24vZW4/R0NDYW1wdXNfRR4JaW5uZXJodG1sBVhMb2cgaW4gdG8gR0NjYW1wdXMsIHRoZSBTY2hvb2wncyBsZWFybmluZyBhcHBsaWNhdGlvbiwgdXNpbmcgeW91ciBNeUFjY291bnQgY3JlZGVudGlhbHMuZAIPDxYEHwMFHy9ldmVudHMvY2N0Z2MvaW1hZ2VzL2xwLWVuZy5wbmcfBAVFQ29udHJpYnV0aW5nIHRvIENoYW5nZSBhbmQgVHJhbnNmb3JtYXRpb24gaW4gdGhlIEdvdmVybm1lbnQgb2YgQ2FuYWRhZAIRDxYEHwEFHC9ldmVudHMvY2N0Z2MvaW5kZXgtZW5nLmFzcHgfBQVGT24gU2VwdGVtYmVyIDE2LCBleHBlcnRzIGRpc2N1c3MgbGVhZGVyc2hpcCwgY2hhbmdlIGFuZCB0cmFuc2Zvcm1hdGlvbmQCEw8WBB8DBR8vZXZlbnRzL21od2xkL2ltYWdlcy9scC1lbmcucG5nHwQFJ01lbnRhbCBIZWFsdGggYW5kIFdlbGxuZXNzIExlYXJuaW5nIERheWQCFQ8WBB8BBRwvZXZlbnRzL21od2xkL2luZGV4LWVuZy5hc3B4HwUFcUpvaW4gdXMgYXQgdGhpcyBmdWxsLWRheSBldmVudCB0byBnZXQgYSBiZXR0ZXIgdW5kZXJzdGFuZGluZyBvZiB3aGF04oCZcyBpbnZvbHZlZCBpbiB3ZWxsLWJlaW5nIGFuZCBtZW50YWwgaGVhbHRoZAIXDxYEHwMFHS9ldmVudHMvcHNvL2ltYWdlcy9scC1lbmcucG5nHwQFI1B1YmxpYyBTZXJ2aWNlIE9yaWVudGF0aW9uIFdvcmtzaG9wZAIZDxYEHwEFGi9ldmVudHMvcHNvL2luZGV4LWVuZy5hc3B4HwUFggFOZXcgZW1wbG95ZWVzOiBhdHRlbmQgdGhpcyB3b3Jrc2hvcCBmb3IgbmV0d29ya2luZyBvcHBvcnR1bml0aWVzIGFuZCB0byBiZXR0ZXIgdW5kZXJzdGFuZCB5b3VyIHJvbGUgaW4gdGhlIGZlZGVyYWwgcHVibGljIHNlcnZpY2UuZAIbDxYEHwMFJS9pbWFnZXMtd3IvTFBfYmFubmVyL2FybWNoYWlyLWVuZy5QTkcfBAVST2ZmaWNpYWwgTGFuZ3VhZ2VzIExhdyBzaW5jZSAxOTY5OiBUaGUgRm91ciBTZWFzb25zIG9mIHRoZSBTdXByZW1lIENvdXJ0IG9mIENhbmFkYWQCHQ8WBB8BBSQvZXZlbnRzL2Fpci9pbmRleC1lbmcuYXNweCNhMjAxNjA5MDgfBQWUAUpvaW4gdGhlIGNvbnZlcnNhdGlvbiBvbiBTZXB0ZW1iZXIgOCB3aGVyZSBNaWNoZWwgRnJhbmPFk3VyIHdpbGwgZGlzY3VzcyB0aGUgcm9sZSBvZiB0aGUgU3VwcmVtZSBDb3VydCBvZiBDYW5hZGEgaW4gdGhlIGV2b2x1dGlvbiBvZiBsYW5ndWFnZSByaWdodHNkAgMPZBYEAgEPFgQeC29ubW91c2VvdmVyBSdzcmM9Jy9pbWFnZXMvR0NjYW1wdXMvR0NjYW1wdXMtZW5nLnBuZycfBGVkAgMPFgQfBgUlc3JjPScvaW1hZ2VzL0dDY2FtcHVzL0xybkNoZy1lbmcucG5nJx8EZWQCBQ9kFgwCAQ8WBh8GBS1zcmM9Jy9pbWFnZXMvQ2VudGVySWNvbi9ldmVudHMtcmVkLWgtZW5nLnBuZyceCm9ubW91c2VvdXQFLXNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL2V2ZW50cy1yZWQtYS1lbmcucG5nJx8EZWQCAw8WBh8GBSpzcmM9Jy9pbWFnZXMvQ2VudGVySWNvbi9wc28tcmVkLWgtZW5nLnBuZycfBwUqc3JjPScvaW1hZ2VzL0NlbnRlckljb24vcHNvLXJlZC1hLWVuZy5wbmcnHwRlZAIFDxYGHwYFJnNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL0ZEMi1lbmctaC5wbmcnHwcFJnNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL0ZEMi1lbmctYS5wbmcnHwRlZAIHDxYGHwYFJXNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL1NELWVuZy1oLnBuZycfBwUlc3JjPScvaW1hZ2VzL0NlbnRlckljb24vU0QtZW5nLWEucG5nJx8EZWQCCQ8WBh8GBS5zcmM9Jy9pbWFnZXMvQ2VudGVySWNvbi9TdXBNYW4tcmVkMi1oLWVuZy5wbmcnHwcFLnNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL1N1cE1hbi1yZWQyLWEtZW5nLnBuZycfBGVkAgsPFgYfBgUtc3JjPScvaW1hZ2VzL0NlbnRlckljb24vRXhlY0QtcmVkMi1lbmctaC5wbmcnHwcFLXNyYz0nL2ltYWdlcy9DZW50ZXJJY29uL0V4ZWNELXJlZDItZW5nLWEucG5nJx8EZWQCCw9kFgJmD2QWBAIBDxYCHhFkYXRhLWFqYXgtcmVwbGFjZQU4Ly9jZG4uY2FuYWRhLmNhL2djd2ViLWNkbi1saXZlL2ZlYXR1cmVzL2ZlYXR1cmVzLWVuLmh0bWxkAgMPFgIfBQUcPGgyPlByb2R1Y3Rpb24gcGxhdGZvcm08L2gyPmQCDQ8WAh8ABRNEYXRlIG1vZGlmaWVkOiYjMzI7ZGS7EYimkX+isJ2ItapgAsf+wwDwkTeioIWMXVzW/x3aZQ==" />
 </div>
 
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="78164D50" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAL1tqO1DQKst/niDQKYgfqBBwL4yPbwDdavbkuQTA9SN4wCO0XL6YsXs30e+T+KLzhL/VqQFtH9" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBALO6o2MCgKst/niDQKYgfqBBwL4yPbwDVjDh82PpUdzJcdCMs1uL9O8fuinmmexp45TTKvckKqQ" />
 </div>
 
     <div id="hdnInputPlaceholder">
@@ -77,7 +77,7 @@
                     <li><a href="http://www.canada.ca/en/gov/dept/index.html" rel="external">Departments</a></li>
                     <li id="wb-lng"><h2>Language selection</h2>
                         <ul class="list-inline">
-                            <li><a href="http://csps-efpc.gc.ca/index-fra.aspx" id="langSwitch" lang="fr">Français</a></li>
+                            <li><a href="http://www.csps-efpc.gc.ca/index-fra.aspx" id="langSwitch" lang="fr">Français</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -122,7 +122,6 @@
                 <li><a href="#">For learners</a></li>
                 <li><a href="#">For organizations</a></li>
                 <li><a href="#">Our faculty</a></li>
-                <li><a href="#">Why the School</a></li>
             </ul>
         </div>
     </div>
@@ -155,10 +154,10 @@
 <div class="wb-tabs carousel-s2 playing">
     <ul role="tablist">
     <li class="active"><a href="#panel1"><img src="/images/Rotating_Feature/gccampus.png" id="mainContent_RotatePictureHome_Image1" alt="Tab 1 : GCcampus" /></a></li>
-    <li><a href="#panel2"><img src="/Contact_Us/images/sst-eng.png" id="mainContent_RotatePictureHome_Image2" alt="Tab 2 : Self-service tips" /></a></li>
-    <li><a href="#panel3"><img src="/events/manionlecture/images/lp2016-eng.png" id="mainContent_RotatePictureHome_Image3" alt="Tab 3 : 2016 Manion Lecture" /></a></li>
-    <li><a href="#panel4"><img src="/events/nmc2016/images/lp-eng.png" id="mainContent_RotatePictureHome_Image4" alt="Tab 4 : Managers&#39; Exchange 2016" /></a></li>
-<li><a href="#panel5"><img src="/events/cf/images/lp-eng.png" id="mainContent_RotatePictureHome_Image5" alt="Tab 5 : Canada&#39;s Francophonie" /></a></li>
+    <li><a href="#panel2"><img src="/events/cctgc/images/lp-eng.png" id="mainContent_RotatePictureHome_Image2" alt="Tab 2 : Contributing to Change and Transformation in the Government of Canada" /></a></li>
+    <li><a href="#panel3"><img src="/events/mhwld/images/lp-eng.png" id="mainContent_RotatePictureHome_Image3" alt="Tab 3 : Mental Health and Wellness Learning Day" /></a></li>
+    <li><a href="#panel4"><img src="/events/pso/images/lp-eng.png" id="mainContent_RotatePictureHome_Image4" alt="Tab 4 : Public Service Orientation Workshop" /></a></li>
+<li><a href="#panel5"><img src="/images-wr/LP_banner/armchair-eng.PNG" id="mainContent_RotatePictureHome_Image5" alt="Tab 5 : Official Languages Law since 1969: The Four Seasons of the Supreme Court of Canada" /></a></li>
     
     </ul>
 
@@ -167,43 +166,43 @@
     <figure>
         <img src="/images/Rotating_Feature/gccampus.png" id="mainContent_RotatePictureHome_Image1a" alt="GCcampus" />
         <figcaption>
-            <p><a href="https://learn-apprendre.csps-efpc.gc.ca/application/en " id="mainContent_RotatePictureHome_HrefImage1">Log in to GCcampus, the School’s learning application, using your MyAccount credentials</a></p>
+            <p><a href="https://learn-apprendre.csps-efpc.gc.ca/application/en?GCCampus_E" id="mainContent_RotatePictureHome_HrefImage1">Log in to GCcampus, the School's learning application, using your MyAccount credentials.</a></p>
         </figcaption>
     </figure>
     </div>
    
     <div role="tabpanel" id="panel2" class="out fade">
     <figure>
-        <img src="/Contact_Us/images/sst-eng.png" id="mainContent_RotatePictureHome_Image2a" alt="Self-service tips" />
+        <img src="/events/cctgc/images/lp-eng.png" id="mainContent_RotatePictureHome_Image2a" alt="Contributing to Change and Transformation in the Government of Canada" />
         <figcaption>
-            <p><a href="/Contact_Us/sst-eng.aspx" id="mainContent_RotatePictureHome_HrefImage2">Before calling the Client Contact Centre, check our self-service tips</a></p>
+            <p><a href="/events/cctgc/index-eng.aspx" id="mainContent_RotatePictureHome_HrefImage2">On September 16, experts discuss leadership, change and transformation</a></p>
         </figcaption>
     </figure>
     </div>
 
     <div role="tabpanel" id="panel3" class="out fade">
     <figure>
-        <img src="/events/manionlecture/images/lp2016-eng.png" id="mainContent_RotatePictureHome_Image3a" alt="2016 Manion Lecture" />
+        <img src="/events/mhwld/images/lp-eng.png" id="mainContent_RotatePictureHome_Image3a" alt="Mental Health and Wellness Learning Day" />
         <figcaption>
-        <p><a href="/events/manionlecture/index-eng.aspx" id="mainContent_RotatePictureHome_HrefImage3">Join Dick Pound on May 18 at this year's Manion Lecture as he discusses how to manage ethical challenges and complexities in leadership roles. Available nationwide!</a></p>
+        <p><a href="/events/mhwld/index-eng.aspx" id="mainContent_RotatePictureHome_HrefImage3">Join us at this full-day event to get a better understanding of what’s involved in well-being and mental health</a></p>
         </figcaption>
     </figure>
     </div>
 
     <div role="tabpanel" id="panel4" class="out fade">
     <figure>
-        <img src="/events/nmc2016/images/lp-eng.png" id="mainContent_RotatePictureHome_Image4a" alt="Managers&#39; Exchange 2016" />
+        <img src="/events/pso/images/lp-eng.png" id="mainContent_RotatePictureHome_Image4a" alt="Public Service Orientation Workshop" />
         <figcaption>
-        <p><a href="/events/nmc2016/index-eng.aspx" id="mainContent_RotatePictureHome_HrefImage4">Managers in the Montréal region: Invest in your professional development on June 15 and 16!</a></p>
+        <p><a href="/events/pso/index-eng.aspx" id="mainContent_RotatePictureHome_HrefImage4">New employees: attend this workshop for networking opportunities and to better understand your role in the federal public service.</a></p>
         </figcaption>
     </figure>
     </div>
 
 <div role="tabpanel" id="panel5" class="out fade">
     <figure>
-        <img src="/events/cf/images/lp-eng.png" id="mainContent_RotatePictureHome_Image5a" alt="Canada&#39;s Francophonie" />
+        <img src="/images-wr/LP_banner/armchair-eng.PNG" id="mainContent_RotatePictureHome_Image5a" alt="Official Languages Law since 1969: The Four Seasons of the Supreme Court of Canada" />
         <figcaption>
-        <p><a href="/events/cf/index-eng.aspx" id="mainContent_RotatePictureHome_HrefImage5">Gain insight from this noted writer and member of the prestigious Académie française</a></p>
+        <p><a href="/events/air/index-eng.aspx#a20160908" id="mainContent_RotatePictureHome_HrefImage5">Join the conversation on September 8 where Michel Francœur will discuss the role of the Supreme Court of Canada in the evolution of language rights</a></p>
         </figcaption>
     </figure>
     </div>
@@ -218,12 +217,8 @@
 
 </aside>
 
-<!--Notice Box *** weekly notice-->
-<div id="mainContent_NBox" class="alert alert-warning">
-    <p><strong>NOTICE:</strong></p>
-    <p>The School's Client Contact Centre is experiencing higher than normal volume, which is resulting in delays in processing requests.</p>
-    <p>We apologize for any inconvenience and thank you for your patience.</p>
-</div>
+<!--Notice Box *** weekly notice -->
+
 
 
 
@@ -235,7 +230,7 @@
     <div class="row" id="GCcampusRow1">
     <div id="GCcampusTopDiv" class="col-sm-1" hidden="hidden"></div>
         <div id="CGcampusLeft" class="col-sm-6">
-            <a href="https://learn-apprendre.csps-efpc.gc.ca/application/en">
+            <a href="https://learn-apprendre.csps-efpc.gc.ca/application/en" rel="nofollow" >
                 <img src="/images/GCcampus/GCcampus-eng.png" id="mainContent_GCcampus1_Img1" class="img-responsive pull-right" onmouseover="src=&#39;/images/GCcampus/GCcampus-eng.png&#39;" alt="" />
                 <span class="wb-inv">GCcampus Login/Sign up</span>
             </a>
@@ -243,7 +238,7 @@
         
         <div id="CGcampusRight" class="col-sm-6">
             <a href="/le/index-eng.aspx">
-                <img src="/images/GCcampus/LrnChg-eng.png" id="mainContent_GCcampus1_Img2" class="img-responsive pull-left" onmouseover="src=&#39;/images/GCcampus/LrnChg-eng.png&#39;" />
+                <img src="/images/GCcampus/LrnChg-eng.png" id="mainContent_GCcampus1_Img2" class="img-responsive pull-left" onmouseover="src=&#39;/images/GCcampus/LrnChg-eng.png&#39;" alt="" />
                 <span class="wb-inv">Learning changing.</span>
             </a>
         </div>
@@ -472,7 +467,7 @@ if (myWidth <= 768) {
         <dd>
             <time property="dateModified">
                 
-2016-04-25
+2016-08-02
 
             </time>
         </dd>

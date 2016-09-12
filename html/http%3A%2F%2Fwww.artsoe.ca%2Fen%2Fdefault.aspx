@@ -97,13 +97,19 @@
           <div class="impact-impact col">
             <div class="impact-slider">
               <div class="slide">
-<a href="http://www.artsoe.ca/en/about/aoe%20gallery.aspx"><img src="/uploads/client_impact/71-1.jpg" alt="" width="690" height="313"></a>
+<a href="http://www.artsoe.ca/en/membership/selections.aspx" target="_blank"><img src="/uploads/client_impact/83-1.jpg" alt="" width="690" height="313"></a>
+<div class="tagline"><br> <br> </div>
+</div><div class="slide">
+<a href="http://culturedays.ca/activities/view/5798ff7c-b530-4b29-b595-7fa94c4a89be/language:en#disqus_thread" target="_blank"><img src="/uploads/client_impact/82-1.jpg" alt="" width="690" height="313"></a>
+<div class="tagline"><br> <br> </div>
+</div><div class="slide">
+<a href="http://www.artsoe.ca/en/about/aoe%20gallery.aspx"><img src="/uploads/client_impact/80-1.jpg" alt="" width="690" height="313"></a>
+<div class="tagline"><br> <br> </div>
+</div><div class="slide">
+<a href="http://www.eventbrite.ca/e/artinis-2016-tickets-24436382879" target="_blank"><img src="/uploads/client_impact/77-1.jpg" alt="" width="690" height="313"></a>
 <div class="tagline"><br> <br> </div>
 </div><div class="slide">
 <a href="http://www.articipate.ca/en/donate/donationform.aspx"><img src="/uploads/client_impact/53-1.jpg" alt="" width="690" height="313"></a>
-<div class="tagline"><br> <br> </div>
-</div><div class="slide">
-<a href="http://artsaccolade.ca/" target="_blank"><img src="/uploads/client_impact/2-1.jpg" alt="" width="690" height="313"></a>
 <div class="tagline"><br> <br> </div>
 </div>
 
@@ -139,13 +145,7 @@
 <hr />
 <p style="text-align: center;"><img src="/uploads/art place/fullcolor_blue.png" alt="" width="200" height="200" /></p>
 <p style="text-align: center;"><a href="/en/about/art%20place.aspx">Follow the 2015-16<br /></a><a href="http://www.artsoe.ca/en/about/art%20place.aspx">artists and projects</a><a href="/en/about/art%20place.aspx"><br /></a></p>
-<p style="text-align: center;"><img src="http://www.artsoe.ca/uploads/art%20place%202015-2016/approjects.jpg" alt="" width="207" height="122" /></p>
-<p style="text-align: center;"><strong>Sat. April 2, 2016</strong><a href="/en/about/art%20place.aspx"><strong><br /></strong></a><a href="https://www.facebook.com/ArtPlacedart/photos/?tab=album&amp;album_id=994232167319781">showcase photos</a><a href="/en/about/art%20place.aspx"><br /><br /></a></p>
-<p style="text-align: center;"><a href="/en/about/art%20place.aspx"><br /></a></p>
-<p>&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
 <hr />
-<p>&nbsp;</p>
 <p style="text-align: center;"><img src="http://www.artsoe.ca/uploads/feature%20home/artsaccolade.png" alt="" width="159" height="206" /></p>
 <p style="text-align: center;"><a href="http://artsaccolade.ca/">artsAccolade.ca<br />news about Ottawa's<br />arts scene</a></p>
 
@@ -169,55 +169,28 @@
             </div>
             <div id="pos_content" class="cms_position">
               <div id="mod_183" class="cms_module">
-<table style="width: 426px; height: 150px;" border="0" cellspacing="2" cellpadding="2">
+<table style="width: 441px; height: 413px;" border="0" cellspacing="2" cellpadding="2">
 <tbody>
 <tr>
-<td><img src="/uploads/selections/selectionsheader.png" alt="" width="227" height="67" /></td>
 <td>
-<p><strong>Call to artists for AOE Arts Council&rsquo;s 15th Annual Juried Art Show: <a href="/en/membership/selections/selections%20call.aspx">SELECTIONS 2016</a></strong></p>
-<p>Deadline: <strong>June 3, 2016</strong></p>
-</td>
+<p><img src="/uploads/selections/selections2016_artsoe.jpg" alt="" width="277" height="114" /></p>
+<strong>SELECTIONS marks milestone 15th group exhibition</strong><br /><strong>Vernissage and awards night: Thursday, 22 September 2016<br />On exhibit: 22 Sept to 18 Oct</strong><br /><a href="http://www.artsoe.ca/en/newsroom/releases/details.aspx?id=68">READ MORE</a></td>
 </tr>
 <tr>
 <td>
-<p><img src="/uploads/client_impact/40-1.jpg" alt="" width="235" height="117" /></p>
-<p><img src="/uploads/client_impact/43-1.jpg" alt="" width="234" height="117" /></p>
-</td>
-<td>
-<p>&nbsp;</p>
-<p><strong>ARTicipate Project Grant</strong></p>
-<p>Apply for a grant to exhibit or perform at the Shenkman Arts Centre.<strong><br /></strong></p>
-<p>Deadline: <strong>May 31, 2016</strong><br /><a href="http://artsoe.ca/en/resources/opportunities/details.aspx?id=435">Read more</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td><img src="/uploads/feature home/tulips_web.jpg" alt="" width="231" height="131" /></td>
-<td><strong>AOE Arts Council AGM and Reception to thank all of our supporters</strong><br /><strong>Wed. May 25 7pm</strong><br />Emmy &amp; Victor Abboud Music Studio, Shenkman Arts  Centre<br />Entertainment, refreshments, free parking. <a href="http://www.artsoe.ca/en/publications/events-calendar/details.aspx?id=1331">INFO/RSVP</a><br /></td>
-</tr>
-<tr>
-<td>&nbsp;<img src="/uploads/feature home/youthcommittee.jpg" alt="" width="230" height="133" /></td>
-<td><strong>Summer jobs in the arts for post-secondary students at AOE Arts Council</strong><br /><br />Subject to funding confirmation, we offer three opportunities for bilingual summer 2016 post-secondary students to help with planning and implementing upcoming and new initiatives. <a href="http://www.artsoe.ca/en/resources/opportunities/details.aspx?id=436">APPLY</a><br /></td>
-</tr>
-<tr>
-<td><img src="/uploads/feature home/springnest_web.jpg" alt="" width="230" height="126" /></td>
-<td><strong>Spring Creative Business Workshops</strong><br /><br />AOE Arts Council presents a spring workshop series to help artists and arts administrators, at all levels of practice, learn new skills, or brush up on old ones. <a href="http://artsoe.ca/en/membership/services.aspx">Read more</a></td>
-</tr>
-<tr>
-<td><strong><span class="big"><img src="/uploads/aoe gallery/2016images/svaillancourt_aoe.jpg" alt="" width="228" height="132" /></span></strong><strong>&nbsp;</strong><em>&nbsp;</em></td>
-<td>
-<p><a href="http://www.artsoe.ca/en/about/aoe%20gallery.aspx"><span style="font-size: 14px;"><strong>Once upon a time...</strong></span></a></p>
-<p><strong>April 29- May 31, 2016</strong><span style="font-weight: bold; background-color: initial;"><br /></span><span style="font-weight: bold; background-color: initial;">Sylvie Vaillancourt<br /></span><br /><em>Meet the artist:<br />Sunday&nbsp; May 22, 2016<br />from 1 to 3 p.m.</em></p>
-</td>
-</tr>
-<tr>
+<p><img src="/uploads/client_impact/82-1.jpg" alt="" width="277" height="114" /></p>
+<strong>CULTURE DAYS: MEET THE ARTISTS AT SHENKMAN ARTS CENTRE</strong><br /><strong>Sunday, 2 October 2016</strong><br /><a href="http://www.artsoe.ca/en/publications/events-calendar/details.aspx?id=1349">READ MORE<br /></a></td>
 <td><br /></td>
-<td><a href="mailto:info@artsoe.ca" target="_blank"></a></td>
+</tr>
+<tr>
+<td>
+<p><img src="http://www.artsoe.ca/uploads/about%20us/artinis2016eb_aoe.jpg" alt="" width="277" height="114" /></p>
+<strong>ARTINIS: A HAUNTINGLY GOOD PARTY</strong><br /><strong>Thursday, 27 October 2016</strong><br />Early Bird tickets on sale until Sept . 16<br /><a href="http://www.artsoe.ca/en/about/artinis.aspx">INFO | TICKETS</a></td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
-<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"><strong>ARTnews</strong> provides upcoming event information, highlights opportunities for professional development, addresses current issues in the arts sector, recognizes the achievements of artists and arts groups in the community, and profiles AOE members<strong>.</strong><strong> </strong></div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"><strong>ARTnews</strong> provides upcoming event informhighlights opportunities for professional development, addresses current issues in the arts sector, recognizes the achievements of artists and arts groups in the community, and profiles AOE members<strong>.</strong><strong> </strong></div>
 
 </div>
             </div>

@@ -8,9 +8,17 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Tofield Municipal Library of Tofield, Alberta, Canada" />
+ <meta name="keywords" content="Tofield, Alberta, library, municipal, libraries, service, public library, municipal library, lending library" />
+	<meta name="rating" content="general" />
+	<meta name="robots" content="index, follow" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,10 +29,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Tofield Municipal Library of Tofield, Alberta, Canada" />
- <meta name="keywords" content="Tofield, Alberta, library, municipal, libraries, service, public library, municipal library, lending library" />
-	<meta name="rating" content="general" />
-	<meta name="robots" content="index, follow" />
 
 
 	<meta property="og:url" CONTENT="http://www.tofieldlibrary.ca/" />
@@ -36,10 +40,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=""/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -47,7 +49,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -55,10 +57,10 @@
 	<meta name="twitter:site" CONTENT="Tofield Municipal Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Tofield Municipal Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -260,7 +262,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -268,6 +269,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -282,6 +295,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -302,9 +321,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -336,45 +354,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/151" class="blog_link active_page" title="Book Reviews">Book Reviews</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=151" class="blog_link active_page" title="Book Reviews"><span>Book Reviews</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/151" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/151" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=151" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/80" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -401,10 +399,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -419,9 +417,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.tofieldlibrary.ca/Home" title="Home"><span>Home</span></a></li><li class="drop"><a href="http://www.tofieldlibrary.ca/About" class="about_link parent_link" title="About"><span>About</span></a><ul><li><a href="http://www.tofieldlibrary.ca/History" title="History"><span>History</span></a></li><li><a href="http://www.tofieldlibrary.ca/Mission-Statement" title="Mission statement"><span>Mission Statement</span></a></li><li><a href="http://www.tofieldlibrary.ca/Quilts" title="Quilts"><span>Quilts</span></a></li><li><a href="http://www.tofieldlibrary.ca/Trustees" title="Trustees"><span>Trustees</span></a></li></ul></li><li><a href="http://www.tofieldlibrary.ca/Programs-and-Services" title="Programs and services"><span>Programs and Services</span></a></li><li class="drop"><a href="http://www.tofieldlibrary.ca/Links" class="links_link parent_link" title="Links"><span>Links</span></a><ul><li><a href="http://www.tofieldlibrary.ca/Readers-Corner" title="Readers corner"><span>Readers Corner</span></a></li></ul></li><li><a href="http://www.tofieldlibrary.ca/eResources" title="Eresources"><span>eResources</span></a></li>
-  
 </ul>
 
 	</nav>
@@ -535,82 +531,76 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5502"><img alt="Capturelogo" src="http://files.townlife.com/public/asset_files/6666/thumb_400/Capturelogo.JPG?1446672588" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6666/xlarge/Capturelogo.JPG?1446672588" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Capturelogo" src="http://files.townlife.com/public/asset_files/6666/thumb_400/Capturelogo.JPG?1446672588" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5502">				
-	  2015 Library Survey			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5502">
+	    2015 Library Survey
+          </a>
         <p>The 2015 Tofield Municipal Library Satisfaction Survey is now available online. Please click on http://goo.gl/forms/fZRWECr3an and take a moment to...
         <!-- <a href="/blogs/show_entry/5502">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/4199"><img alt="Wrp 2015" src="http://files.townlife.com/public/asset_files/5875/thumb_400/WRP 2015.jpg?1421357590" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/5875/xlarge/WRP%202015.jpg?1421357590" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Wrp%202015" src="http://files.townlife.com/public/asset_files/5875/thumb_400/WRP%202015.jpg?1421357590" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/4199">				
-	  Come Celebrate! Winter Reading Program 2015			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/4199">
+	    Come Celebrate! Winter Reading Program 2015
+          </a>
         <p>This year's Winter Reading Program will run for two months (January and February) and for every 7 hours of reading, you name goes into a draw for o...
         <!-- <a href="/blogs/show_entry/4199">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/3596"><img alt="00001" src="http://files.townlife.com/public/asset_files/5365/thumb_400/00001.jpg?1407366962" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/5365/xlarge/00001.jpg?1407366962" class="image-popup-vertical-fit" target="_blank">
+              <img alt="00001" src="http://files.townlife.com/public/asset_files/5365/thumb_400/00001.jpg?1407366962" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/3596">				
-	  Song Bird Banding at the BBO			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/3596">
+	    Song Bird Banding at the BBO
+          </a>
         <p>Mark your calendars and join us at the Beaverhill Bird Observatory as we get ready to band some song birds! We'll be meeting at 9 am at the BBO and...
         <!-- <a href="/blogs/show_entry/3596">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/3595"><img alt="Mullen magic 2014" src="http://files.townlife.com/public/asset_files/5364/thumb_400/mullen magic 2014.jpg?1407366841" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/5364/xlarge/mullen%20magic%202014.jpg?1407366841" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Mullen%20magic%202014" src="http://files.townlife.com/public/asset_files/5364/thumb_400/mullen%20magic%202014.jpg?1407366841" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/3595">				
-	  Magician visit at the Library			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/3595">
+	    Magician visit at the Library
+          </a>
         <p>On Wednesday, August 13 at 1 pm we welcome kids of all ages to come to the Library to attend this free event. Join us as we wrap up this year's Sum...
         <!-- <a href="/blogs/show_entry/3595">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/3430"><img alt="Shoes" src="http://files.townlife.com/public/asset_files/4489/thumb_400/Shoes.gif?1403111842" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/4489/xlarge/Shoes.gif?1403111842" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Shoes" src="http://files.townlife.com/public/asset_files/4489/thumb_400/Shoes.gif?1403111842" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/3430">				
-	  Special Guest			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/3430">
+	    Special Guest
+          </a>
         <p>Everyone is invited to attend and join us on July 15 at 10 am as we welcome Mary Lambert to the Tofield Municipal Library. Mary will be our guest e...
         <!-- <a href="/blogs/show_entry/3430">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/151">+ MORE</a></h6>
 </div>
@@ -621,13 +611,9 @@ if (typeof jQuery != 'undefined') {
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/151">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       There are currently no events in our calendar. Check back soon for updates.
-    
   </div>
-
 
 		
 
@@ -635,72 +621,39 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_733">
-	      
-              
-	      
+	    <dd id="action_733">
 	        <img alt="Call (780) 662-3838" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 662-3838" />
 		
 		Call (780) 662-3838
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_759">
-	      
-              
-	      
+		    <dd id="action_759">
 	        <img alt="Fax (780) 662-3929" class="action_steps_image" src="/images/icons/fff_action_steps/page.png?1445483283" title="Fax (780) 662-3929" />
 		
 		Fax (780) 662-3929
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1126">
-	      
-              
-	      
+		    <dd id="action_1126">
 	        <img alt="Follow us on Facebook" class="action_steps_image" src="/images/icons/fff/arrow_switch.png?1445483283" title="Follow us on Facebook" />
 		<a class='action_steps_link' href='http://www.facebook.com/pages/Tofield-Municipal-Library/121504484571639' target='_blank'>
 		Follow us on Facebook
 		</a>
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/151" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -716,27 +669,17 @@ if (typeof jQuery != 'undefined') {
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.tofieldalberta.ca" class="action_steps_link" target="_blank">Town of Tofield</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://catalogue.tracpac.ab.ca/polaris/logon.aspx" class="action_steps_link" target="_blank">My Library Account</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -753,16 +696,10 @@ if (typeof jQuery != 'undefined') {
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -774,8 +711,6 @@ if (typeof jQuery != 'undefined') {
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
 </div>
 
  </span>
@@ -796,29 +731,7 @@ if (typeof jQuery != 'undefined') {
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
 			
 				
 			
@@ -830,6 +743,28 @@ if (typeof jQuery != 'undefined') {
 				 
 			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
 			
 				
 			
@@ -854,18 +789,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
 			
 				
 			
@@ -887,32 +811,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
 			
 				
 			
@@ -934,19 +833,11 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
 			
 				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
-			
+					</div> <!-- end book group of 5 -->
+					<div>
 				
 			
 			
@@ -958,9 +849,6 @@ if (typeof jQuery != 'undefined') {
 			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
 			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
 				
 			
 			
@@ -981,7 +869,54 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
 			
 				
 					</div><!-- end book group -->
@@ -1004,7 +939,7 @@ if (typeof jQuery != 'undefined') {
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1046,61 +981,39 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.tofieldlibrary.ca/Home" title="Home"><span>Home</span></a></li><li class="drop"><a href="http://www.tofieldlibrary.ca/About" class="about_link parent_link" title="About"><span>About</span></a><ul><li><a href="http://www.tofieldlibrary.ca/History" title="History"><span>History</span></a></li><li><a href="http://www.tofieldlibrary.ca/Mission-Statement" title="Mission statement"><span>Mission Statement</span></a></li><li><a href="http://www.tofieldlibrary.ca/Quilts" title="Quilts"><span>Quilts</span></a></li><li><a href="http://www.tofieldlibrary.ca/Trustees" title="Trustees"><span>Trustees</span></a></li></ul></li><li><a href="http://www.tofieldlibrary.ca/Programs-and-Services" title="Programs and services"><span>Programs and Services</span></a></li><li class="drop"><a href="http://www.tofieldlibrary.ca/Links" class="links_link parent_link" title="Links"><span>Links</span></a><ul><li><a href="http://www.tofieldlibrary.ca/Readers-Corner" title="Readers corner"><span>Readers Corner</span></a></li></ul></li><li><a href="http://www.tofieldlibrary.ca/eResources" title="Eresources"><span>eResources</span></a></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/151" class="blog_link active_page" title="Book Reviews">Book Reviews</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=151" class="blog_link active_page" title="Book Reviews"><span>Book Reviews</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/151" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/151" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=151" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/80" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1109,7 +1022,7 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1119,44 +1032,25 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/151" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>, 
-			
 			
     <a href="http://www.kalynacountry.com">Kalyna Country</a>, 
 			
-			
      and <a href="http://www.goeastofedmonton.com">Go East of Edmonton</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1293,6 +1187,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1319,3 +1238,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

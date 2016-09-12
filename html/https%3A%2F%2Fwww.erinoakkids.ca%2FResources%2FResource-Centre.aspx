@@ -7,7 +7,7 @@
  
 <link href="/CMSPages/GetResource.ashx?stylesheetname=ErinOakKidsMain" type="text/css" rel="stylesheet"/> 
 <!-- <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700" rel="stylesheet" type="text/css"> -->
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -29,14 +29,14 @@
 <link href="/CMSPages/GetCSS.aspx?stylesheetname=ErinOakKidsPrint" type="text/css" rel="stylesheet" media="print" /> 
 <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/> 
 <link href="/favicon.ico" type="image/x-icon" rel="icon"/> 
-<script type='text/javascript'>var jTweet = [{"created_at":"Friday, May 6, 2016","id_str":"728579233929297921","text":"Have you signed up for #MovinForKids yet? This exciting fundraiser takes place May 29 at Lakeside Park #Mississauga <a href='https:\/\/t.co\/3S0wjevoFb' target='blank'>https:\/\/t.co\/3S0wjevoFb<\/a>"},{"created_at":"Thursday, May 5, 2016","id_str":"728330549484527616","text":"RT @AmazonPrincessW: I am looking forward to attending this event on May 29th to support the @ErinoakKids #amazonprincessw #wonderwoman htt…"},{"created_at":"Wednesday, May 4, 2016","id_str":"727875619162329088","text":"We’re at Connections Resource #Fair today at @MCCMississauga. Come say hi! #Mississauga #disabilities <a href='https:\/\/t.co\/VLvjrCHUym' target='blank'>https:\/\/t.co\/VLvjrCHUym<\/a>"},{"created_at":"Tuesday, May 3, 2016","id_str":"727599351577628672","text":"@_sumansinha Hi there! Here's a link to the poster. Note that this is only open to ErinoakKids clients. <a href='https:\/\/t.co\/vPxMKfEmHI' target='blank'>https:\/\/t.co\/vPxMKfEmHI<\/a>"},{"created_at":"Tuesday, May 3, 2016","id_str":"727597960587038720","text":"ErinoakKids runs a #Park Day every spring. A chance for parents to learn how to build a preschooler’s skills in a natural setting."},{"created_at":"Monday, May 2, 2016","id_str":"727228444442906625","text":"No plans on May 30? We’d love to see you out for a night of #theatre! #kids #disabilities <a href='https:\/\/t.co\/MDt63uky7X' target='blank'>https:\/\/t.co\/MDt63uky7X<\/a> <a href='https:\/\/t.co\/oY7iHMqtME' target='blank'>https:\/\/t.co\/oY7iHMqtME<\/a>"},{"created_at":"Friday, April 29, 2016","id_str":"726054746210091008","text":"Just one month until #MovinForKids! Join us at Lakeside Park in #Mississauga. Register here: <a href='https:\/\/t.co\/gpn8LEsmGF' target='blank'>https:\/\/t.co\/gpn8LEsmGF<\/a>"},{"created_at":"Thursday, April 28, 2016","id_str":"725796312239738880","text":"We’ll be at Connections Resource Fair next Wednesday at @MCCMississauga. Come check it out! <a href='https:\/\/t.co\/JAPPFBXa5y' target='blank'>https:\/\/t.co\/JAPPFBXa5y<\/a>"},{"created_at":"Wednesday, April 27, 2016","id_str":"725424814324854785","text":"You can sign up, create a personal fundraising page and collect pledges for #MovinForKids all through our website! <a href='https:\/\/t.co\/3S0wjeN03L' target='blank'>https:\/\/t.co\/3S0wjeN03L<\/a>"},{"created_at":"Tuesday, April 26, 2016","id_str":"725053529015091200","text":"Thanks to the volunteers from @suncorenergy who helped out at our Bristol Circle site today! #volunteering <a href='https:\/\/t.co\/v9zYlhpu16' target='blank'>https:\/\/t.co\/v9zYlhpu16<\/a>"},{"created_at":"Tuesday, April 26, 2016","id_str":"724994859375841280","text":"We’re hosting a Home &amp; Vehicle Modification Fair on May 14 and it’s open to everyone! Details: <a href='https:\/\/t.co\/507YswcF2F' target='blank'>https:\/\/t.co\/507YswcF2F<\/a> #disibilities"},{"created_at":"Tuesday, April 26, 2016","id_str":"724937835095150593","text":"We are so excited! <a href='https:\/\/t.co\/M0i27Bhq0A' target='blank'>https:\/\/t.co\/M0i27Bhq0A<\/a>"},{"created_at":"Tuesday, April 26, 2016","id_str":"724937740639428609","text":"RT @drama_way: Looking forward to seeing her okay #Annie at the #RBCTheatre at the @LivingArtsCtr on May 30 with @ErinoakKids #act! https:\/…"},{"created_at":"Monday, April 25, 2016","id_str":"724627667199361024","text":"RT @AutismWR: Don't miss these upcoming: workshops by @KidsAbility &amp; @ErinoakKids: Behaviour, Feeding, and Toileting. <a href='https:\/\/t.co\/QTTerr9s' target='blank'>https:\/\/t.co\/QTTerr9s<\/a>…"},{"created_at":"Monday, April 25, 2016","id_str":"724609756825038848","text":"Want to help kids with disabilities learn to ride a bike this summer? #Volunteer with our #iCanBike program! <a href='https:\/\/t.co\/iFPfwerlyf' target='blank'>https:\/\/t.co\/iFPfwerlyf<\/a>"},{"created_at":"Friday, April 22, 2016","id_str":"723599570127691778","text":"And thanks to our #MovinForKids kilometre sponsors! @LittleKickersCa #AutoEdge #OriginsofHealth"},{"created_at":"Friday, April 22, 2016","id_str":"723599523889745923","text":"Thanks to our #MovinForKids sponsors! @RaymondJamesCDN @LongosMarkets @IAFF1212 #ChampionExpressLtd #HabibCanadianBank @MetrolandMedia"},{"created_at":"Thursday, April 21, 2016","id_str":"723177788920893444","text":"RT @HaltonCResFair: Bring the kids &amp; meet agencies that support children &amp; parents, such as @ErinoakKids <a href='https:\/\/t.co\/slj0SyFSPp' target='blank'>https:\/\/t.co\/slj0SyFSPp<\/a> https:\/\/t.…"},{"created_at":"Wednesday, April 20, 2016","id_str":"722821469491691521","text":"You can sign up, create a personal fundraising page and collect pledges for #MovinForKids all through our website! <a href='https:\/\/t.co\/3S0wjevoFb' target='blank'>https:\/\/t.co\/3S0wjevoFb<\/a>"},{"created_at":"Wednesday, April 20, 2016","id_str":"722821438193840128","text":"The #MovinForKids fundraiser is coming up quickly! Are you joining us on May 29? <a href='https:\/\/t.co\/3S0wjevoFb' target='blank'>https:\/\/t.co\/3S0wjevoFb<\/a>"}];</script></head>
+<script type='text/javascript'>var jTweet = [{"created_at":"Sunday, September 11, 2016","id_str":"774954359771783169","text":"Matt was on the \"Erinoak Sunshine Foundation Dreams for Kids\" trip on 9\/11. His experience: <a href='https:\/\/t.co\/6I8FjQR8io' target='blank'>https:\/\/t.co\/6I8FjQR8io<\/a> <a href='https:\/\/t.co\/1hiEQcgUfJ' target='blank'>https:\/\/t.co\/1hiEQcgUfJ<\/a>"},{"created_at":"Friday, September 9, 2016","id_str":"774347546756079616","text":"We are cheering on former EOK clients @ReneeFoessel @wheelzontheline @austin_smeenk &amp; @TinyOxen8 as they compete in #Rio2016! #GoCanada"},{"created_at":"Friday, September 9, 2016","id_str":"774323031808307200","text":"We can’t wait to celebrate incredible clients and supporters at #EOKPrideandJoy on Oct 28! <a href='https:\/\/t.co\/hrGDHG8s5L' target='blank'>https:\/\/t.co\/hrGDHG8s5L<\/a>"},{"created_at":"Thursday, September 8, 2016","id_str":"773940743429820416","text":"It's #familyliteracyday at ErinoakKids! #Clifford <a href='https:\/\/t.co\/aZdjTdSiaO' target='blank'>https:\/\/t.co\/aZdjTdSiaO<\/a>"},{"created_at":"Thursday, September 8, 2016","id_str":"773894635034927105","text":".@MDV_Theatre in #Mississauga is presenting a special sensory-friendly show “Click, Clack, Moo” in November. #autism <a href='https:\/\/t.co\/u7bxgmIS7W' target='blank'>https:\/\/t.co\/u7bxgmIS7W<\/a>"},{"created_at":"Thursday, September 8, 2016","id_str":"773872854890864640","text":"RT @OntarioBrain: What do you think are the most important cerebral palsy research questions? <a href='https:\/\/t.co\/VNuDjvHFwG' target='blank'>https:\/\/t.co\/VNuDjvHFwG<\/a> @canchild_ca https:\/\/…"},{"created_at":"Wednesday, September 7, 2016","id_str":"773578023329226753","text":"RT @CDNParalympics: What to know more about the classification system for the @Paralympics ? Check out this content. <a href='https:\/\/t.co\/HbiXttSjMi' target='blank'>https:\/\/t.co\/HbiXttSjMi<\/a>"},{"created_at":"Tuesday, September 6, 2016","id_str":"773248779743035393","text":"RT @CTNKids: Helping your child with #specialneeds deal with the stress of the #firstdayofschool <a href='https:\/\/t.co\/VoNWdjSmch' target='blank'>https:\/\/t.co\/VoNWdjSmch<\/a> #backtoschool #aut…"},{"created_at":"Tuesday, September 6, 2016","id_str":"773230609544122368","text":"We are so grateful for the support of @Hydro1Brampton! <a href='https:\/\/t.co\/6RUfT2CQBp' target='blank'>https:\/\/t.co\/6RUfT2CQBp<\/a>"},{"created_at":"Tuesday, September 6, 2016","id_str":"773165730007101440","text":"RT @CBCOlympics: David Eng (@The_Real_DENG) named Canada's Paralympic opening ceremony flag-bearer <a href='https:\/\/t.co\/myCpqQ4QLF' target='blank'>https:\/\/t.co\/myCpqQ4QLF<\/a> <a href='https:\/\/t.co\/N3o' target='blank'>https:\/\/t.co\/N3o<\/a>…"},{"created_at":"Tuesday, September 6, 2016","id_str":"773133832820256768","text":"Thinking of all the ErinoakKids clients heading back to school today &amp; tomorrow! Have a GREAT day! #backtoschool"},{"created_at":"Friday, September 2, 2016","id_str":"771801455971803136","text":"It’s the most bittersweet long weekend of the summer. Enjoy the Labour Day weekend everyone!"},{"created_at":"Thursday, September 1, 2016","id_str":"771401228576325632","text":"We are excited too! <a href='https:\/\/t.co\/hGe2IyaOgT' target='blank'>https:\/\/t.co\/hGe2IyaOgT<\/a>"},{"created_at":"Wednesday, August 31, 2016","id_str":"771088630580408320","text":"RT @Rio2016_en: Did you know? Paralympic medals make sound telling visually impaired athletes if they are #gold, #silver or #bronze https:\/…"},{"created_at":"Wednesday, August 31, 2016","id_str":"771078482575159296","text":"Thanks to an in-hospital EOK hearing screener, Lauryn’s hearing loss was detected early. <a href='https:\/\/t.co\/KIM1LaD7Ih' target='blank'>https:\/\/t.co\/KIM1LaD7Ih<\/a> <a href='https:\/\/t.co\/FImA0tsjUw' target='blank'>https:\/\/t.co\/FImA0tsjUw<\/a>"},{"created_at":"Monday, August 29, 2016","id_str":"770337894372442112","text":"Less than 2 months til #EOKPrideandJoy. We're busy getting ready for this fantastic evening! <a href='https:\/\/t.co\/hrGDHG8s5L' target='blank'>https:\/\/t.co\/hrGDHG8s5L<\/a> <a href='https:\/\/t.co\/bEXnBWqAsL' target='blank'>https:\/\/t.co\/bEXnBWqAsL<\/a>"},{"created_at":"Monday, August 29, 2016","id_str":"770232556557967360","text":"RT @bikeMississauga: THANK YOU: (8) volunteer marshals (orange vests) came to ErinoakKids Ride today &amp; helped the kids #bikeMississauga! ht…"},{"created_at":"Saturday, August 27, 2016","id_str":"769666303292506112","text":"Such a fun morning! <a href='https:\/\/t.co\/BmHtKmaIKL' target='blank'>https:\/\/t.co\/BmHtKmaIKL<\/a>"},{"created_at":"Friday, August 26, 2016","id_str":"769359166876057600","text":"RT @bikeMississauga: ERINOAKKIDS ALL-TRAIL RIDE: Sat Aug 27 @ 10am *ALL Kids &amp; Families Welcome* \ud83d\udeb4\ud83c\udd93\ud83c\udf66FREE Regn: <a href='https:\/\/t.co\/PrSQcWnh3G' target='blank'>https:\/\/t.co\/PrSQcWnh3G<\/a> http…"},{"created_at":"Friday, August 26, 2016","id_str":"769230530369900544","text":"We're excited to watch Carly sing the national anthem at the Jays game tomorrow! #LetCarlySing #autism <a href='https:\/\/t.co\/6jxKBzkv1z' target='blank'>https:\/\/t.co\/6jxKBzkv1z<\/a>"}];</script></head>
 <body class="LTR Gecko Gecko43 ENUS ContentBody" >
     <form method="post" action="/Resources/Resource-Centre.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form">
 <div class="aspNetHidden">
 <input type="hidden" name="manScript_HiddenField" id="manScript_HiddenField" value="" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTYwODg0MzQ2Ng9kFgICARBkZBYCAgMPZBYCZg9kFgJmD2QWAgIJD2QWAmYPZBYCAgIPZBYCZg9kFgJmD2QWCgIJD2QWAmYPZBYCAgIPZBYIZg9kFgJmD2QWAmYPFQY7L0V2ZW50LUNhbGVuZGFyLzIwMTYvQXByaWwvQXV0aXNtLVBhcmVudC1TdXBwb3J0LUdyb3VwLmFzcHgbQXV0aXNtIFBhcmVudCBTdXBwb3J0IEdyb3VwLUNvbm5lY3Qgd2l0aCBvdGhlciBmYW1pbGllcyB0b3VjaGVkIGJ5IGF1dGlzbQxNYXkgMTEsIDIwMTYNZGlzcGxheTpibG9jazp3ZWVrbHkgb24gV2VkbmVzZGF5IGJldHdlZW4gQXByaWwgNiwgMjAxNiBhbmQgSnVuZSA4LCAyMDE2ZAIBD2QWAmYPZBYCZg8VBkkvRXZlbnQtQ2FsZW5kYXIvMjAxNi9NYXkvVGltZS10by1TbGVlcC0oUGFydC0xLW9mLWEtMi1wYXJ0LVdvcmtzaG9wKS5hc3B4D1NsZWVwIFNvbHV0aW9ucxxXb3Jrc2hvcCBvbiBzbGVlcCBzdHJhdGVnaWVzDE1heSAxMSwgMjAxNgxkaXNwbGF5Om5vbmU4d2Vla2x5IG9uICBiZXR3ZWVuIEphbnVhcnkgMSwgMTc1MyBhbmQgRGVjZW1iZXIgMzEsIDk5OTlkAgIPZBYCZg9kFgJmDxUGKi9FdmVudC1DYWxlbmRhci8yMDE2L01heS9BZHZvY2FjeS0oOCkuYXNweBxUZWFjaGluZyBEYWlseSBMaXZpbmcgU2tpbGxzLUxlYXJuIHRvIHVzZSBBcHBsaWVkIEJlaGF2aW91ciBBbmFseXNpcyAoQUJBKQxNYXkgMTEsIDIwMTYMZGlzcGxheTpub25lOHdlZWtseSBvbiAgYmV0d2VlbiBKYW51YXJ5IDEsIDE3NTMgYW5kIERlY2VtYmVyIDMxLCA5OTk5ZAIDD2QWAmYPZBYCZg8VBk8vRXZlbnQtQ2FsZW5kYXIvMjAxNi9OZXctZG9jdW1lbnQvTW90aGVyLXMtU3VwcG9ydC1Hcm91cC1Hci02LTEyLShUb3JicmFtKS5hc3B4KE1vdGhlcidzIFN1cHBvcnQgR3JvdXAgR3IgNi0xMiAoVG9yYnJhbSkxRm9yIG1vdGhlcnMgb2YgRXJpbm9ha0tpZHMgY2xpZW50cyBpbiBncmFkZXMgNi0xMgxNYXkgMTIsIDIwMTYNZGlzcGxheTpibG9ja0BiaS13ZWVrbHkgb24gVGh1cnNkYXkgYmV0d2VlbiBKYW51YXJ5IDE0LCAyMDE2IGFuZCBKdW5lIDE2LCAyMDE2ZAIVDw8WAh4EVGV4dAUUNC8yMC8yMDE1IDg6Mzk6MzYgQU1kZAIZD2QWAmYPZBYCAgIPZBYcZg9kFgJmD2QWAmYPFQIuL1NlcnZpY2VzL0FjY2Vzc2luZy1TZXJ2aWNlcy9BcHBvaW50bWVudHMuYXNweAxBcHBvaW50bWVudHNkAgEPZBYCZg9kFgJmDxUCL2h0dHA6Ly93d3cuZXJpbm9ha2tpZHMuY2EvUmVzb3VyY2VzL0F1dGlzbS5hc3B4DUFTRCBSZXNvdXJjZXNkAgIPZBYCZg9kFgJmDxUCE34vUG9ydGFsL0xvZ2luLmFzcHgMQm9hcmQgUG9ydGFsZAIDD2QWAmYPZBYCZg8VAhQvRXZlbnQtQ2FsZW5kYXIuYXNweBJDYWxlbmRhciBvZiBFdmVudHNkAgQPZBYCZg9kFgJmDxUCGS9SZXNvdXJjZXMvRm9yLVN0YWZmLmFzcHgJRm9yIFN0YWZmZAIFD2QWAmYPZBYCZg8VAkVodHRwOi8vZXJpbm9ha2tpZHMuY2EvU2VydmljZXMvQWNjZXNzaW5nLVNlcnZpY2VzL0hlYWx0aC1SZWNvcmRzLmFzcHgOSGVhbHRoIFJlY29yZHNkAgYPZBYCZg9kFgJmDxUCIS9BYm91dC1Vcy9Ib3Vycy1vZi1PcGVyYXRpb24uYXNweBJIb3VycyBvZiBPcGVyYXRpb25kAgcPZBYCZg9kFgJmDxUCHy9TZXJ2aWNlcy9Ib3ctQXJlLVdlLURvaW5nLmFzcHgRSG93IEFyZSBXZSBEb2luZz9kAggPZBYCZg9kFgJmDxUCUmh0dHA6Ly93d3cuZXJpbm9ha2tpZHMuY2EvQWJvdXQtVXMvQWNjb3VudGFiaWxpdHkvUHJpdmFjeS1hbmQtQ29uZmlkZW50aWFsaXR5LmFzcHgbUHJpdmFjeSBhbmQgQ29uZmlkZW50aWFsaXR5ZAIJD2QWAmYPZBYCZg8VAjsvU2VydmljZXMvQWNjZXNzaW5nLVNlcnZpY2VzL1NldmVyZS1XZWF0aGVyLVByb2NlZHVyZXMuYXNweBhTZXZlcmUgV2VhdGhlciBQcm9jZWR1cmVkAgoPZBYCZg9kFgJmDxUCLmh0dHA6Ly9lcmlub2Fra2lkcy5jYS9BYm91dC1Vcy9PdXItRnV0dXJlLmFzcHgVUmVkZXZlbG9wbWVudCBQcm9qZWN0ZAILD2QWAmYPZBYCZg8VAisvU2VydmljZXMvQWNjZXNzaW5nLVNlcnZpY2VzL1JlZmVycmFscy5hc3B4CVJlZmVycmFsc2QCDA9kFgJmD2QWAmYPFQINL1NpdGVtYXAuYXNweAdTaXRlbWFwZAIND2QWAmYPZBYCZg8VAi0vQWJvdXQtVXMvSW5mby1BYm91dC1Fcmlub2FrS2lkcy1XZWJzaXRlLmFzcHgTV2Vic2l0ZSBJbmZvcm1hdGlvbmQCGw9kFgICAQ9kFgICAQ8PFgIfAAXzAjxzdHJvbmc+RGlkIHlvdSBrbm93IHRoYXQgYXV0aXNtIHR5cGljYWxseSBwcmVzZW50cyB3aXRoaW4gdGhlIGZpcnN0IHRocmVlIHllYXJzIG9mIGxpZmU/PC9zdHJvbmc+PGJyIC8+DQo8YnIgLz4NClJlYWQgYWJvdXQgPGEgaHJlZj0ifi9TZXJ2aWNlcy9TZXJ2aWNlcy9BQkEtYmFzZWQtU2VydmljZXMtYW5kLVN1cHBvcnRzLmFzcHgiPkFCQS1iYXNlZCBTZXJ2aWNlcyBhbmQgU3VwcG9ydHM8L2E+IGFuZCA8YSBocmVmPSJ+L1NlcnZpY2VzL1NlcnZpY2VzL0ludGVuc2l2ZS1CZWhhdmlvdXJhbC1JbnRlcnZlbnRpb24tYW5kLUNvbm5lY3Rpb25zLmFzcHgiPkludGVuc2l2ZSBCZWhhdmlvdXJhbCBJbnRlcnZlbnRpb248L2E+IGF0IEVyaW5vYWtLaWRzZGQCHQ9kFgJmD2QWAgICD2QWAmYPZBYCZg9kFgJmDxUBygQ8aDE+DQoJQ29udGFjdCBJbmZvcm1hdGlvbjwvaDE+DQo8ZGl2IGNsYXNzPSJiYXNlVGV4dCI+DQoJPGltZyBhbHQ9IiIgaGVpZ2h0PSIxNiIgc3JjPSJ+L2ltYWdlcy9pY29uLWhvbWUucG5nIiB3aWR0aD0iMTkiIC8+Jm5ic3A7Jm5ic3A7PGEgaHJlZj0ifi9BYm91dC1Vcy9Mb2NhdGlvbnMuYXNweCI+RXJpbm9ha0tpZHMgTG9jYXRpb25zPC9hPg0KCTxkaXYgY2xhc3M9ImNsZWFyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4Ij4NCgkJJm5ic3A7PC9kaXY+DQoJPGltZyBhbHQ9IiIgaGVpZ2h0PSIxNiIgc3JjPSJ+L2ltYWdlcy9pY29uLXBob25lLnBuZyIgd2lkdGg9IjE5IiAvPiZuYnNwOyZuYnNwOyg5MDUpIDg1NS4yNjkwDQoJPGRpdiBjbGFzcz0iY2xlYXIiIHN0eWxlPSJoZWlnaHQ6IDE2cHgiPg0KCQkmbmJzcDs8L2Rpdj4NCgk8aW1nIGFsdD0iIiBoZWlnaHQ9IjE2IiBzcmM9In4vaW1hZ2VzL2ljb24tcGhvbmUucG5nIiB3aWR0aD0iMTkiIC8+Jm5ic3A7Jm5ic3A7MSAoODc3KSAzNzQuNjYyNQ0KCTxkaXYgY2xhc3M9ImNsZWFyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4Ij4NCgkJJm5ic3A7PC9kaXY+DQo8L2Rpdj4NCjxiciAvPg0KZGQIxftgi2UvtuG396Zp7G1gz7UAKw==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTYwODg0MzQ2Ng9kFgICARBkZBYCAgMPZBYCZg9kFgJmD2QWAgIJD2QWAmYPZBYCAgIPZBYCZg9kFgJmD2QWCgIJD2QWAmYPZBYCAgIPZBYIZg9kFgJmD2QWAmYPFQY1L0V2ZW50LUNhbGVuZGFyLzIwMTYvU2VwdGVtYmVyL0FDU0Qtd29ya3Nob3AtKDMpLmFzcHgNQUNTRCB3b3Jrc2hvcC9Xb3Jrc2hvcCBmb3IgbmV3IEFDU0QgaW5jb21lIHJldmlldyBhcHBsaWNhdGlvbhJTZXB0ZW1iZXIgMTIsIDIwMTYMZGlzcGxheTpub25lOHdlZWtseSBvbiAgYmV0d2VlbiBKYW51YXJ5IDEsIDE3NTMgYW5kIERlY2VtYmVyIDMxLCA5OTk5ZAIBD2QWAmYPZBYCZg8VBjUvRXZlbnQtQ2FsZW5kYXIvMjAxNi9TZXB0ZW1iZXIvQUNTRC13b3Jrc2hvcC0oNCkuYXNweA1BQ1NEIHdvcmtzaG9wL1dvcmtzaG9wIGZvciBuZXcgQUNTRCBpbmNvbWUgcmV2aWV3IGFwcGxpY2F0aW9uElNlcHRlbWJlciAxMywgMjAxNgxkaXNwbGF5Om5vbmU4d2Vla2x5IG9uICBiZXR3ZWVuIEphbnVhcnkgMSwgMTc1MyBhbmQgRGVjZW1iZXIgMzEsIDk5OTlkAgIPZBYCZg9kFgJmDxUGNS9FdmVudC1DYWxlbmRhci8yMDE2L1NlcHRlbWJlci9BQ1NELXdvcmtzaG9wLSg1KS5hc3B4DUFDU0Qgd29ya3Nob3AvV29ya3Nob3AgZm9yIG5ldyBBQ1NEIGluY29tZSByZXZpZXcgYXBwbGljYXRpb24SU2VwdGVtYmVyIDEzLCAyMDE2DGRpc3BsYXk6bm9uZTh3ZWVrbHkgb24gIGJldHdlZW4gSmFudWFyeSAxLCAxNzUzIGFuZCBEZWNlbWJlciAzMSwgOTk5OWQCAw9kFgJmD2QWAmYPFQY1L0V2ZW50LUNhbGVuZGFyLzIwMTYvU2VwdGVtYmVyL0FDU0Qtd29ya3Nob3AtKDYpLmFzcHgNQUNTRCB3b3Jrc2hvcC9Xb3Jrc2hvcCBmb3IgbmV3IEFDU0QgaW5jb21lIHJldmlldyBhcHBsaWNhdGlvbhJTZXB0ZW1iZXIgMTQsIDIwMTYMZGlzcGxheTpub25lOHdlZWtseSBvbiAgYmV0d2VlbiBKYW51YXJ5IDEsIDE3NTMgYW5kIERlY2VtYmVyIDMxLCA5OTk5ZAIVDw8WAh4EVGV4dAUTNy81LzIwMTYgMToyOTozMyBQTWRkAhkPZBYCZg9kFgICAg9kFhxmD2QWAmYPZBYCZg8VAi4vU2VydmljZXMvQWNjZXNzaW5nLVNlcnZpY2VzL0FwcG9pbnRtZW50cy5hc3B4DEFwcG9pbnRtZW50c2QCAQ9kFgJmD2QWAmYPFQIvaHR0cDovL3d3dy5lcmlub2Fra2lkcy5jYS9SZXNvdXJjZXMvQXV0aXNtLmFzcHgNQVNEIFJlc291cmNlc2QCAg9kFgJmD2QWAmYPFQITfi9Qb3J0YWwvTG9naW4uYXNweAxCb2FyZCBQb3J0YWxkAgMPZBYCZg9kFgJmDxUCFC9FdmVudC1DYWxlbmRhci5hc3B4EkNhbGVuZGFyIG9mIEV2ZW50c2QCBA9kFgJmD2QWAmYPFQIZL1Jlc291cmNlcy9Gb3ItU3RhZmYuYXNweAlGb3IgU3RhZmZkAgUPZBYCZg9kFgJmDxUCRWh0dHA6Ly9lcmlub2Fra2lkcy5jYS9TZXJ2aWNlcy9BY2Nlc3NpbmctU2VydmljZXMvSGVhbHRoLVJlY29yZHMuYXNweA5IZWFsdGggUmVjb3Jkc2QCBg9kFgJmD2QWAmYPFQIhL0Fib3V0LVVzL0hvdXJzLW9mLU9wZXJhdGlvbi5hc3B4EkhvdXJzIG9mIE9wZXJhdGlvbmQCBw9kFgJmD2QWAmYPFQIfL1NlcnZpY2VzL0hvdy1BcmUtV2UtRG9pbmcuYXNweBFIb3cgQXJlIFdlIERvaW5nP2QCCA9kFgJmD2QWAmYPFQJSaHR0cDovL3d3dy5lcmlub2Fra2lkcy5jYS9BYm91dC1Vcy9BY2NvdW50YWJpbGl0eS9Qcml2YWN5LWFuZC1Db25maWRlbnRpYWxpdHkuYXNweBtQcml2YWN5IGFuZCBDb25maWRlbnRpYWxpdHlkAgkPZBYCZg9kFgJmDxUCOy9TZXJ2aWNlcy9BY2Nlc3NpbmctU2VydmljZXMvU2V2ZXJlLVdlYXRoZXItUHJvY2VkdXJlcy5hc3B4GFNldmVyZSBXZWF0aGVyIFByb2NlZHVyZWQCCg9kFgJmD2QWAmYPFQIuaHR0cDovL2VyaW5vYWtraWRzLmNhL0Fib3V0LVVzL091ci1GdXR1cmUuYXNweBVSZWRldmVsb3BtZW50IFByb2plY3RkAgsPZBYCZg9kFgJmDxUCKy9TZXJ2aWNlcy9BY2Nlc3NpbmctU2VydmljZXMvUmVmZXJyYWxzLmFzcHgJUmVmZXJyYWxzZAIMD2QWAmYPZBYCZg8VAg0vU2l0ZW1hcC5hc3B4B1NpdGVtYXBkAg0PZBYCZg9kFgJmDxUCLS9BYm91dC1Vcy9JbmZvLUFib3V0LUVyaW5vYWtLaWRzLVdlYnNpdGUuYXNweBNXZWJzaXRlIEluZm9ybWF0aW9uZAIbD2QWAgIBD2QWAgIBDw8WAh8ABfwBPHN0cm9uZz5EaWQgeW91IGtub3cgdGhhdCB5b3UgY2FuIGV4cGVjdCB0byBoZWFyIGEgY2hpbGQmcnNxdW87cyBmaXJzdCB3b3JkcyBieSBoaXMgb3IgaGVyIGZpcnN0IGJpcnRoZGF5Pzwvc3Ryb25nPjxiciAvPg0KPGJyIC8+DQpMZWFybiBhYm91dCA8YSBocmVmPSJ+L1NlcnZpY2VzL1NlcnZpY2VzL1NwZWVjaC1hbmQtTGFuZ3VhZ2UtVGhlcmFweS5hc3B4Ij5TcGVlY2ggYW5kIExhbmd1YWdlIFRoZXJhcHk8L2E+IGF0IEVyaW5vYWtLaWRzZGQCHQ9kFgJmD2QWAgICD2QWAmYPZBYCZg9kFgJmDxUBygQ8aDE+DQoJQ29udGFjdCBJbmZvcm1hdGlvbjwvaDE+DQo8ZGl2IGNsYXNzPSJiYXNlVGV4dCI+DQoJPGltZyBhbHQ9IiIgaGVpZ2h0PSIxNiIgc3JjPSJ+L2ltYWdlcy9pY29uLWhvbWUucG5nIiB3aWR0aD0iMTkiIC8+Jm5ic3A7Jm5ic3A7PGEgaHJlZj0ifi9BYm91dC1Vcy9Mb2NhdGlvbnMuYXNweCI+RXJpbm9ha0tpZHMgTG9jYXRpb25zPC9hPg0KCTxkaXYgY2xhc3M9ImNsZWFyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4Ij4NCgkJJm5ic3A7PC9kaXY+DQoJPGltZyBhbHQ9IiIgaGVpZ2h0PSIxNiIgc3JjPSJ+L2ltYWdlcy9pY29uLXBob25lLnBuZyIgd2lkdGg9IjE5IiAvPiZuYnNwOyZuYnNwOyg5MDUpIDg1NS4yNjkwDQoJPGRpdiBjbGFzcz0iY2xlYXIiIHN0eWxlPSJoZWlnaHQ6IDE2cHgiPg0KCQkmbmJzcDs8L2Rpdj4NCgk8aW1nIGFsdD0iIiBoZWlnaHQ9IjE2IiBzcmM9In4vaW1hZ2VzL2ljb24tcGhvbmUucG5nIiB3aWR0aD0iMTkiIC8+Jm5ic3A7Jm5ic3A7MSAoODc3KSAzNzQuNjYyNQ0KCTxkaXYgY2xhc3M9ImNsZWFyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4Ij4NCgkJJm5ic3A7PC9kaXY+DQo8L2Rpdj4NCjxiciAvPg0KZGR9T0TFxVgslS6fg//Xu01o2097xA==" />
 </div>
 
 <script type="text/javascript">
@@ -220,16 +220,7 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
 
 
 	<!-- GOOGLE LANGUAGE -->
-      	 <div class="pageToolsLang">
-
-
-<div id="google_translate_element"></div><script>
-                                             function googleTranslateElementInit() {
-                                                 new google.translate.TranslateElement({
-                                                     pageLanguage: 'en'
-                                                 }, 'google_translate_element');
-                                             }
-</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></div>
+      	 
          
 	</div>
 
@@ -265,6 +256,7 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
 		</li>
 		<li class="CMSListMenuLI"><a href="/Resources/Fun.aspx" class="CMSListMenuLink" >Fun</a>
 		<ul class="CMSListMenuUL">
+			<li class="CMSListMenuLI"><a href="/Resources/Fun/Airplane-Travel.aspx" class="CMSListMenuLink" >Airplane Travel</a></li>
 			<li class="CMSListMenuLI"><a href="/Resources/Fun/Inclusion-and-special-needs-programming-by-munic.aspx" class="CMSListMenuLink" >Inclusion and special needs programming by municipality</a></li>
 			<li class="CMSListMenuLI"><a href="/Resources/Fun/Aquatics-and-therapeutic-pools.aspx" class="CMSListMenuLink" >Aquatics and Therapeutic Pools</a></li>
 			<li class="CMSListMenuLI"><a href="/Resources/Fun/Sport-and-Fitness.aspx" class="CMSListMenuLink" >Sport and Fitness</a></li>
@@ -273,7 +265,11 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
 			<li class="CMSListMenuLI"><a href="/Resources/Fun/Funding-Assistance.aspx" class="CMSListMenuLink" >Funding Assistance</a></li>
 		</ul>
 		</li>
-		<li class="CMSListMenuLI"><a href="/Resources/My-Centre.aspx" class="CMSListMenuLink" >My Centre</a></li>
+		<li class="CMSListMenuLI"><a href="/Resources/My-Centre.aspx" class="CMSListMenuLink" >My Centre</a>
+		<ul class="CMSListMenuUL">
+			<li class="CMSListMenuLI"><a href="/Resources/My-Centre/CP-NET.aspx" class="CMSListMenuLink" >CP-NET</a></li>
+		</ul>
+		</li>
 		<li class="CMSListMenuLI"><a href="/Resources/Modification-and-Equipment.aspx" class="CMSListMenuLink" >Modification and Equipment</a>
 		<ul class="CMSListMenuUL">
 			<li class="CMSListMenuLI"><a href="/Resources/Modification-and-Equipment/Home-and-Vehicle-Modifications.aspx" class="CMSListMenuLink" >Home and Vehicle Modifications</a></li>
@@ -319,46 +315,46 @@ Sys.WebForms.PageRequestManager._initialize('manScript', 'form', [], [], [], 90,
 
 
 	<li>
-		<div class="EventsColName"><a href='/Event-Calendar/2016/April/Autism-Parent-Support-Group.aspx'>Autism Parent Support Group</a></div>
+		<div class="EventsColName"><a href='/Event-Calendar/2016/September/ACSD-workshop-(3).aspx'>ACSD workshop</a></div>
 		<div class="EventsColBrief">
-			Connect with other families touched by autism</div>
+			Workshop for new ACSD income review application</div>
                         
-   <div class="EventsColDate">May 11, 2016</div>
-   <div class="recurring" style='display:block'>
- 	This event occurs weekly on Wednesday between April 6, 2016 and June 8, 2016
-   </div>
-	</li>
-
-	<li>
-		<div class="EventsColName"><a href='/Event-Calendar/2016/May/Time-to-Sleep-(Part-1-of-a-2-part-Workshop).aspx'>Sleep Solutions</a></div>
-		<div class="EventsColBrief">
-			Workshop on sleep strategies</div>
-                        
-   <div class="EventsColDate">May 11, 2016</div>
+   <div class="EventsColDate">September 12, 2016</div>
    <div class="recurring" style='display:none'>
  	This event occurs weekly on  between January 1, 1753 and December 31, 9999
    </div>
 	</li>
 
 	<li>
-		<div class="EventsColName"><a href='/Event-Calendar/2016/May/Advocacy-(8).aspx'>Teaching Daily Living Skills</a></div>
+		<div class="EventsColName"><a href='/Event-Calendar/2016/September/ACSD-workshop-(4).aspx'>ACSD workshop</a></div>
 		<div class="EventsColBrief">
-			Learn to use Applied Behaviour Analysis (ABA)</div>
+			Workshop for new ACSD income review application</div>
                         
-   <div class="EventsColDate">May 11, 2016</div>
+   <div class="EventsColDate">September 13, 2016</div>
    <div class="recurring" style='display:none'>
  	This event occurs weekly on  between January 1, 1753 and December 31, 9999
    </div>
 	</li>
 
 	<li>
-		<div class="EventsColName"><a href='/Event-Calendar/2016/New-document/Mother-s-Support-Group-Gr-6-12-(Torbram).aspx'>Mother's Support Group Gr 6-12 (Torbram)</a></div>
+		<div class="EventsColName"><a href='/Event-Calendar/2016/September/ACSD-workshop-(5).aspx'>ACSD workshop</a></div>
 		<div class="EventsColBrief">
-			For mothers of ErinoakKids clients in grades 6-12</div>
+			Workshop for new ACSD income review application</div>
                         
-   <div class="EventsColDate">May 12, 2016</div>
-   <div class="recurring" style='display:block'>
- 	This event occurs bi-weekly on Thursday between January 14, 2016 and June 16, 2016
+   <div class="EventsColDate">September 13, 2016</div>
+   <div class="recurring" style='display:none'>
+ 	This event occurs weekly on  between January 1, 1753 and December 31, 9999
+   </div>
+	</li>
+
+	<li>
+		<div class="EventsColName"><a href='/Event-Calendar/2016/September/ACSD-workshop-(6).aspx'>ACSD workshop</a></div>
+		<div class="EventsColBrief">
+			Workshop for new ACSD income review application</div>
+                        
+   <div class="EventsColDate">September 14, 2016</div>
+   <div class="recurring" style='display:none'>
+ 	This event occurs weekly on  between January 1, 1753 and December 31, 9999
    </div>
 	</li>
 
@@ -410,7 +406,7 @@ Hours of Operation: Tuesday &amp; Thursday 9:30 a.m. to 1:30 p.m.<br />
 Hours of Operation: Tuesday &amp; Thursday 9:30 a.m. to 1:30 p.m.<br />
 &nbsp;<br />
 <div>
-	For more information, please contact Ishtar Gabriel, Family Resource Centre Assistant at 905-855-2690 ext 2529.</div>
+	For more information, please contact Sandra Black, Family Resource Centre Assistant at 905-855-2690 ext 2480.</div>
 
         
      <div class="clear"></div>  
@@ -418,7 +414,7 @@ Hours of Operation: Tuesday &amp; Thursday 9:30 a.m. to 1:30 p.m.<br />
          
      
      <div style="float:left;width:100%;margin-top:25px;text-align:right">
-     	Last Modified: <i><span id="p_lt_zoneContent_pageplaceholder_pageplaceholder_lt_lblModified">4/20/2015 8:39:36 AM</span></i>
+     	Last Modified: <i><span id="p_lt_zoneContent_pageplaceholder_pageplaceholder_lt_lblModified">7/5/2016 1:29:33 PM</span></i>
      </div>
  </div>
     
@@ -531,9 +527,9 @@ Hours of Operation: Tuesday &amp; Thursday 9:30 a.m. to 1:30 p.m.<br />
       
  <h1>Did you know?</h1>
 <div class="baseText">
-    <span id="p_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneBaseCol02_EOK_DidYouKnow_lblDidYouKnow"><strong>Did you know that autism typically presents within the first three years of life?</strong><br />
+    <span id="p_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneBaseCol02_EOK_DidYouKnow_lblDidYouKnow"><strong>Did you know that you can expect to hear a child&rsquo;s first words by his or her first birthday?</strong><br />
 <br />
-Read about <a href="/Services/Services/ABA-based-Services-and-Supports.aspx">ABA-based Services and Supports</a> and <a href="/Services/Services/Intensive-Behavioural-Intervention-and-Connections.aspx">Intensive Behavioural Intervention</a> at ErinoakKids</span>
+Learn about <a href="/Services/Services/Speech-and-Language-Therapy.aspx">Speech and Language Therapy</a> at ErinoakKids</span>
 </div>
       </div>
       

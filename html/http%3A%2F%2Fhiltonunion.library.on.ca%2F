@@ -1,169 +1,354 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+INSTRUCTIONS
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server" >
-    	<title>Hilton Union Public Library</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        
+1.To crop images use this code:    
+  		 <div class="focal-point left-5 down-3">
+ 				<div><img src="img/header.png" alt="logo"></div>
+           </div>
+2. Add cushycms class to areas you want clients to edit and add editor account to cushyCMS for client. 
+3. Change the OPLD library ID in the variable
+4. JASI libraries: change the enterprise search string library name and enable the new book scroller.
 
-<link rel="stylesheet" type="text/css" href="css/site1.css"/>
-		<link rel="stylesheet" type="text/css" href="css/fsizer.css"/>
-		<link rel="stylesheet" type="text/css" href="css/vertical.css"/>   
-        <link rel="stylesheet" type="text/css" href="css/hiltonunion.css"/>     
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+-->  
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+<title>Hilton Union Public Library</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+<!-- forces IE to use it's native mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+
+<link rel="stylesheet" href="css/horizontal_rwd.css" />
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="plugins/jquery.rwdImageMaps.js"></script>
+<script type="text/javascript" src="plugins/jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript" src="js/jquery-color.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery.jfontsizer.min.js"></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type="text/javascript" src="js/fancydropdown.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<!--Script for hours slider-->
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<!--Scripts to read Google Calendar-->
+<script type="text/javascript" src="js/jquery.googlecalreader-1.0.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<script type="text/javascript">
+   jQuery(function ($) {
+       $.gCalReader({
+		   		  //Enter the calendar ID in between the feeds/  and  /public
+                  feedUri: 'http://www.google.com/calendar/feeds/ami4h2ao0g8brkj6d80v8acd94@group.calendar.google.com/public/full',
+                  maxresults: 1
+		        });
+		    });
+		
+		
+</script>
+
 <script>
-$(document).ready(function(){
-	$('#sizer').jfontsizer({
-		applyTo: '#content',
+$(document).ready(function() {
+    $('.search').keydown(function(event) {
+        if (event.keyCode == 13) {
+search_cat();
+            return false;
+         }
+    });
+});
+</script>
+
+
+</head>
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	//Load Hours Slider
+    $("#hours-slider").flexisel({
+        visibleItems: 3,
+        animationSpeed: 4000,
+        autoPlay: true,
+		clone: true,
+        autoPlaySpeed: 2000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+           
+            tablet: { 
+                changePoint:1200,
+                visibleItems: 1
+            }
+        }	
+    });
+	    $("#eventlist").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 1000,            
+        pauseOnHover: true
+
+    });
+
+		//Load main content
+		$(".topContent").load("home.asp");
+		
+		$(".events").load("calendar.html");
+		
+		
+		
+		//Load Font Sizer
+		$('#sizer').jfontsizer({
+		applyTo: '.content',
 		changesmall: '2',
 		changelarge: '2',
 		expire: 30
 	});
+
+
+
 });
-			
-			
-function loadContent(id, page) 
-{
-	$("#content").load(id);
-}
-
-activateMenu = function(nav) {
-
-/* currentStyle restricts the Javascript to IE only */
-	if (document.all &&
- document.getElementById(nav).currentStyle) {  
-        var navroot = document.getElementById(nav);
-        
-        /* Get all the list items within the menu */
-
-        var lis=navroot.getElementsByTagName("LI");  
-        for (i=0; i<lis.length; i++) {
-        
-           /* If the LI has another menu level */
-            if(lis[i].lastChild.tagName=="UL"){
-            
-                /* assign the function to the LI */
-             	lis[i].onmouseover=function() {	
-                
-                   /* display the inner menu */
-                   this.lastChild.style.display="block";
-                }
-                lis[i].onmouseout=function() {   
-                   this.lastChild.style.display="none";
-                }
-            }
-        }
-    }
-}
-window.onload= function(){
-    /* pass the function the id of the top level UL */
-
-    /* remove one, when only using one menu */
-    activateMenu("vertnav"); 
-
-}
-
 
 </script>
-</head>
-<body>
-    
- <div id="wrapper">
-<div id="sizer"></div>
-	<div id="header"></div>
-    <div id="main"><meta name="keywords" content="Hilton Union, Public Library, Hilton Union Public Library, St. Joseph Island, Library, Algoma District" />
-<meta name="description" content="Hilton Union Public Library" />
+<script type="text/javascript">
+   google.load("gdata", "1.x", { packages: ["calendar"] });
+</script> 
+<!-- facebook script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-    <div id="menu">
-            <ul id="vertnav" >
-                     <li><a href="index.asp">Home</a>            
-                     <li><a href="javascript:loadContent('about_us.html');">About Us</a>
-                      <!-- <ul>
-                    	<li><a href="javascript:loadContent('history.html');">History</a></li>
-                   	  <li><a href="javascript:loadContent('programs.html');">Programs</a></li>
-
-                    </ul> -->
-                </li>
-             
-                <li>
-                    <a href="javascript:loadContent('special_events.html');">Special Events</a>
-                    <!-- <ul>
-                        <li><a href="javascript:loadContent('history.html');">History</a></li>
-                        <li><a href="javascript:loadContent('programs.html');">Programs</a></li>
-                    </ul> -->
-                </li>
-                
-                <li>
-                    <a href="javascript:loadContent('red_chair_reads.html');">Red Chair Reads</a></li>
-                                <li>
-                    <a href="javascript:loadContent('services.html');">Services</a>
-                  </li>
-                <li>
-                    <a href="javascript:loadContent('resources.asp');">eResources</a>
-                    </li>
-                                 <li>
-                    <a href="http://downloadcentre.library.on.ca/" target="_blank">Overdrive</a>
-                    </li>   
-              </ul>
-    </div>
-    <div id="content">
-      <h1>Welcome to Hilton Union Public Library!      </h1>
-      <span class="cushycms">
-      <p>We are located at 3085 Marks Street, Hilton Beach, Ontario, Canada.</p>
-      <p><img src="images/Hilton_Union_Public_Library.jpg" alt="Hilton Union Public Library" width="333" height="250" class="img_std" /></p>
-      <h2>Contact Us</h2>
-      <p><strong>Telephone:</strong> (705) 255-3520</p>
-      <p><strong>Email:</strong> <a href="mailto:hiltonlibrary@hotmail.ca">hiltonlibrary@hotmail.ca</a></p>
-      <h2>Library Hours</h2>
-      <table width="450" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td colspan="2" align="center"><strong>September - June</strong></td>
-        </tr>
-        <tr>
-          <td width="100" align="right"><strong>Monday:</strong>&nbsp;</td>
-          <td width="350" align="left">&nbsp;3:00pm - 5:00pm &amp; 7:00pm - 9:00pm</td>
-        </tr>
-        <tr>
-          <td align="right"><strong>Wednesday:</strong>&nbsp;</td>
-          <td align="left">&nbsp;1:00pm - 5:00pm</td>
-        </tr>
-        <tr>
-          <td align="right"><strong>Saturday:</strong>&nbsp;</td>
-          <td align="left">&nbsp;1:00pm - 5:00pm</td>
-        </tr>
-        <tr>
-          <td align="right">&nbsp;</td>
-          <td align="left">&nbsp;</td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center"><strong>July - August</strong></td>
-        </tr>
-        <tr>
-          <td width="100" align="right"><strong>Monday:</strong>&nbsp;</td>
-          <td width="275" align="left">&nbsp;1:00pm - 5:00pm &amp; 7:00pm - 9:00pm</td>
-        </tr>
-        <tr>
-          <td align="right"><strong>Wednesday:</strong>&nbsp;</td>
-          <td align="left">&nbsp;1:00pm - 5:00pm</td>
-        </tr>
-        <tr>
-          <td align="right"><strong>Saturday:</strong>&nbsp;</td>
-          <td align="left">&nbsp;11:00am - 5:00pm</td>
-        </tr>
-      </table>      
-    </div>
+     
+    <body>
     
-</div>
-    <div id="footer">&copy; Hilton Union Public Library</div>
-</div>	
-</span>
-<script type="text/javascript"> 
- activateMenu("nav"); 
- activateMenu("vertnav"); 
-</script>
+    <section class="hide" id="sizer"></section>
+    <section class="hide" id="button-bar">
+<a href="https://www.facebook.com/Hilton-Union-Public-Library-1629569227328783/"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/facebook.png" alt="facebook"></a>
+	<a href="http://www.twitter.com"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/twitter.png" alt="twitter"></a>    
 	
+    <!--Email automatically pulled as long as it's in OPLD-->
+    <a href="mailto:hiltonlibrary@hotmail.ca?Subject=Email from a website visitor"><img height="32" width="32" src="http://www.olsn.ca/global/global_img/mail.png" alt="email the library"></a>      
+    </section>
+    
+    
+    <!-- HEADER -->
+    <header class="mainHeader">  
+               <img src="img/full.png" class="full" alt="Full Public Library Logo">
+               <img src="img/landscape.png" class="tablet" alt="Landscape Public Library Logo">
+               <img src="img/portrait.png" class="mobile" alt="portrait Public Library Logo">
+               
+            
+            
+                  
+        <!--NAV-->
+         <nav class="animenu">	
+            <input type="checkbox" id="button">
+            <label for="button" onclick>Menu</label>
+             <!-- the hide class will remove these items from the menu when on mobile device -->
+            <ul>
+                               
+  
+                              
+                <li><a href="?id=home.asp&label=home" alt="home">Home</a></li>
+                 <li><a alt="about us">Hilton Union Public Library</a>           
+                	 <ul>
+                		<li><a href="?id=redchair.asp&label=redchair&lang=en" title="Red Chair" alt="Red Chair">Red Chair</a></li>
+                		<li><a href="?id=services.asp&label=services&lang=en" alt="Services">Services</a></li>
+                		<li><a href="?id=special.asp&label=special&lang=en" title="Special" alt="Special">Special Events</a></li>
+                		<li><a href="?id=staff.asp&label=staff&lang=en" title="Staff" alt="Staff">Staff and Board</a></li>
+                        <li><a href="?id=picture.asp&label=picture=en" title="picture" alt="Picture Gallery">Picture Gallery</a></li>
+               		   <!--<li><a href="?id=value.asp&label=value&lang=en" alt="Value">Value</a></li>-->
+					</ul>
+                
+                </li>
+                <li><a href="http://ancestrylibrary.proquest.com/aleweb/ale/do/login" title="Ancestry" target="_blank" alt="Ancestry">Ancestry</a></li>
+               <li><a href="http://downloadcentre.library.on.ca/00FBB228-70B2-45D2-A55E-8CA0E6EE0D3D/10/50/en/Default.htm" title="Overdrive" target="_blank" alt="Overdrive">Overdrive</a></li>
+  <!-- <li><a href="?id=events.asp&label=events" alt="links">Events</a></li>-->
+                 <!--  developing script to read a google event so clients dont have to update the site. -->
+                 
+                 
+            </ul>
+         </nav>    
+        <!-- end of NAV -->
+        
+  
+        
+     
+          <section class="hoursContent">
+              <article><span class="tdhourstxt">Today's hours:&nbsp; </span>   
+                <ul id="hours-slider">
+                       
+                        
+                        <li>Hilton Union  </li>
+                    
+                             
+                        </ul> 
+                            
+                            
+              </article>
+         </section>
+        
+    </header>
+        <!-- End of HEADER -->
+        
+        
+      
+        
+    <!-- MAIN CONTENT. This is used only for the articles. -->
+
+         
+   		
+       <section class="full"> 
+         <section class="mainContent">		
+
+           		<div class="content">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		  <article class="topContent"></article>  
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <aside class="topSidebar">
+                <article>
+                           <h2>Hours & Location</h2>
+                        <ul>  
+                            
+                            <h3>Hilton Union </h3>
+                          		3085 Marks Street<br>
+                                Hilton Beach,&nbsp;ON<br>
+                                P0R 1G0<br>
+                                <a href="tel:(705) 255-3520">(705) 255-3520</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+								Mon 3:00-5:00,7:00-9:00<BR>
+Wed 1:00-5:00<BR>
+Sat 1:00-5:00<BR>
+
+                                </details>
+
+                               
+                      </ul>  
+          </article>
+    </aside>
+     
+
+        
+    <aside class="bottomSidebar">
+        
+         <article>
+            
+                <h2>Facebook</h2>
+                <div class="fb-page" data-href="https://www.facebook.com/Hilton-Union-Public-Library-1629569227328783/" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"></div></div>
+                
+        </article>   
+    </aside>
+    </section>
+    
+    
+    
+  
+  
+  
+    <!-- MOBILE         ------------------------------------------------------------------------------------------------------------------------------>
+    <section class="mobile">
+     <section class="mainContent">		
+
+           		<div class="Bar">
+                <!-- menu item links content are loaded into "topContent" article -->
+              		 <details><summary>Home</summary><article class="topContent"></article>  </details>
+           		 </div>
+   		 </section>
+    <!-- end of MAIN CONTENT -->
+        
+   
+   
+   
+    <!-- start of SIDEBARS -->
+    <!--NOTE: The content of these sidebars should not be directly related to the articles they are located near. When viewed on small screens they stack below the content. -->
+   
+    <div class="Bar">
+               
+                         <details><summary>Hours & Location</summary>
+                        <ul>  
+                            
+                            <h3>Hilton Union </h3>
+                          		3085 Marks Street<br>
+                                Hilton Beach,&nbsp;ON<br>
+                                P0R 1G0<br>
+                                <a href="tel:(705) 255-3520">(705) 255-3520</a><br>
+                            
+                            
+                            <details><summary>Hours</summary><br>
+                             Mon 3:00-5:00,7:00-9:00<BR>
+Wed 1:00-5:00<BR>
+Sat 1:00-5:00<BR>
+</details>
+                               
+                      </ul>  </details>
+         
+    </div>
+     
+    
+            
+    <div class="Bar">
+        <details><summary>Events</summary><article class="events"></article></details>  
+    </div>   
+     
+        
+
+    
+    </section> 
+    
+    
+    <!-- end of SIDEBARS -->
+    
+
+        
+    <!-- start of FOOTER -->
+    <footer class="mainFooter">
+        <p>Hilton Union Public Library&nbsp;2016<br>
+        This website meets WCAG 2.0 (Level AA) Compliance</p> 
+    </footer>
+    
+<!-- end of FOOTER -->   
 
 </body>
+
 </html>

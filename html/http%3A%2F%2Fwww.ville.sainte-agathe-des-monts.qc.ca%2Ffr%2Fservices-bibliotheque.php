@@ -11,8 +11,8 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta http-equiv="content-language" name="language" content="fr" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link href="/css/commun/screen.css?2016032901" rel="stylesheet" type="text/css" media="screen" />
-<link href="/css/fr/screen.css?2016032901" rel="stylesheet" type="text/css" media="screen" />
+<link href="/css/commun/screen.css?2016080401" rel="stylesheet" type="text/css" media="screen" />
+<link href="/css/fr/screen.css?2016080401" rel="stylesheet" type="text/css" media="screen" />
 <link href="/css/commun/print.css" rel="stylesheet" type="text/css" media="print" />
 <!--[if lte IE 7]>
 	<link href="/css/commun/cBase2.0/ie.css" rel="stylesheet" type="text/css" media="all" />
@@ -101,7 +101,7 @@ document.observe('dom:loaded', function() {
 				<li><a href="#pageFooter" title="Aller directement au pied de page." tabindex="5" accesskey="0">Aller directement au pied de page</a></li>
 			</ul>
     	</div>
-		
+
 		<a href="http://www.facebook.com/home.php#!/pages/Ville-de-Sainte-Agathe-des-Monts-Page-officielle/225450294138311" class="btn-facebook blank">Facebook</a>
         <a href="https://twitter.com/VilleSteAgathe" class="btn-twitter blank">Twitter</a>
         <a href="https://www.youtube.com/channel/UC0Nl6IzKevg-W-vdM4ooxDA" class="btn-youtube blank">Youtube</a>
@@ -109,9 +109,9 @@ document.observe('dom:loaded', function() {
 		<div id="like-facebook">
 			<div id="fb-root"></div><script src="http://connect.facebook.net/fr_CA/all.js#appId=145112858895847&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/home.php#!/pages/Ville-de-Sainte-Agathe-des-Monts-Page-officielle/225450294138311" send="false" width="240" show_faces="false" font=""></fb:like>
 		</div>
-		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4de7ab9373d544c6"></script>
+		<!--<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4de7ab9373d544c6"></script>-->
 		<!-- AddThis Button END -->
-			
+
 		<div id="bannerHeader_holder">
 		
 		</div>
@@ -161,6 +161,7 @@ document.observe('dom:loaded', function() {
             <li><a href="services-camp-de-jour.php">Camp de jour</a>
             			</li>
 			<li><a href="https://www.sport-plus-online.com/Prmsinsc/Pages/Accueil.aspx?VirId=167&amp;ArrId=226" target="_blank">Inscription en ligne</a></li>
+			<li><a href="/fr/services-info-travaux.php">Info Travaux</a></li>
 			<li><a href="services-carte-agathoise.php">Carte AGATHOISE</a></li>
 		</ul>
 	</div>
@@ -270,7 +271,7 @@ document.observe('dom:loaded', function() {
 
 			<div id="pageColumn2">
 			<!-- pageColumn2 start here -->									
-				<div id="bannerSection"><img src="images/flash_section-ete.jpg" alt="Sainte-Agathe-des-Monts" /></div>
+				<div id="bannerSection"><img src="images/flash_section-automne.jpg" alt="Sainte-Agathe-des-Monts" /></div>
 				<div class="titleSection"><h3 class="sIFR_helveticaSection">BibliothÃ¨que</h3></div>
 				<div class="content_holder">
 				
@@ -278,19 +279,19 @@ document.observe('dom:loaded', function() {
 					
 				  <p>10, rue Saint-Donat, Sainte-Agathe-des-Monts</p>
 				  <h5>Les heures d'ouverture de la bibliothÃ¨que</h5>
-				  <p>Le lundi et vendredi :Â 12  h Ã  17 h<br />
-					Mardi et mercredi :Â 9  h Ã  17 h<br />
-					Jeudi :Â 12  h Ã  20 h<br />
+				  <p>Le lundi et vendredi :Â 12  h Ã  18 h<br />
+					Mardi, mercredi et jeudi:Â 9  h Ã  18 h<br />
 				  Samedi :Â 9  h Ã  17 h</p>
 				  <h5>CoÃ»t d'abonnement :Â Â Â </h5>
 				  <h5>Gratuit: RÃ©sidentÂ Â Â Â Â Â Â  </h5>
-				  <p>35 $ :Â Non-rÃ©sident <br />
-			      2 $ : Remplacement d'une carte d'abonnÃ©</p>
+				  <p>35 $ :Â Non-rÃ©sident annuel</p>
+				  <p>25 $ :Â Non-rÃ©sident saisonnier (15 mai au 30 sept.)<br />
+			      5 $ : Remplacement d'une carte d'abonnÃ©</p>
 				  <p>La <em>BibliothÃ¨que Gaston-Miron,</em> nommÃ©e ainsi en lâhonneur du grand poÃ¨te  quÃ©bÃ©cois natif de Sainte-Agathe-des-Monts, est installÃ©e depuis 1981 dans un magnifique Ã©difice patrimonial de style  Beaux-Arts, datant de 1912. Ayant jadis servi de bureau de poste, lâÃ©difice  abrite Ã©galement les bureaux du comitÃ© du patrimoine de Sainte-Agathe-des-Monts  et du service de la culture de la Ville. </p>
 				  <p>La bibliothÃ¨que propose Ã  sa clientÃ¨le une collection de  prÃ¨s de 33 000 livres, une cinquantaine de pÃ©riodiques, quatre postes de  travail internet disponibles sur rÃ©servation ainsi qu'un rÃ©seau internet sans  fil.</p>
 				  <p><a href="http://www.reseaubiblioduquebec.qc.ca/portail/index.aspx?page=2&amp;RID=5" class="blank">L'adhÃ©sion au rÃ©seau Biblio</a> permet entre autres la recherche  de documents en ligne ainsi que le prÃªt auprÃ¨s de bibliothÃ¨ques situÃ©es au  QuÃ©bec, au Canada ainsi qu'aux Ãtats-Unis. </p>
 				  <p>Pour se prÃ©valoir des services du RÃ©seau Biblio, un NIP est  nÃ©cessaire et disponible au comptoir de prÃªt de la bibliothÃ¨que.</p>
-				  <p>La BibliothÃ¨que rend hommage Ã  Gaston Miron en prÃ©sentant la  collection d'estampes Miron le Magnifique ainsi qu'une armoire dÃ©diÃ©e aux prix  et honneurs du cÃ©lÃ¨bre poÃ¨te dÃ©cÃ©dÃ© en 1996. Elle offre Ã©galement <a href="../CGUploadDir/documents/programmationavril2016_u160330091906.pdf">un programme  d'animation pour les enfants</a> tel que &quot;Une naissance un livre &quot;,  l'heure du conte et le club des Aventuriers du livre.</p>
+				  <p>La BibliothÃ¨que rend hommage Ã  Gaston Miron en prÃ©sentant la  collection d'estampes Miron le Magnifique ainsi qu'une armoire dÃ©diÃ©e aux prix  et honneurs du cÃ©lÃ¨bre poÃ¨te dÃ©cÃ©dÃ© en 1996. Elle offre Ã©galement <a href="../contribute_documents/ProgSteAgatheautomne.pdf">un programme  d'animation pour les enfants</a> tel que &quot;Une naissance un livre &quot;,  l'heure du conte et le club des Aventuriers du livre.</p>
 				  <ul>
 					<li><a href="http://www.mabibliotheque.ca/laurentides/fr/bibliotheques-horaire-et-localisation/B710-sainte-agathe-des-monts-bibliotheque-gaston-miron/index.aspx">Catalogue en ligne</a></li>
 					<li><a href="../contribute_documents/Reglementation2010versioncorrigeenovembre2014.pdf" target="_blank" class="blank">Les rÃ¨glements</a></li>
@@ -316,6 +317,7 @@ document.observe('dom:loaded', function() {
 			<ul>
 				<li class="noBorder"><a href="plan.php">Plan du site</a></li>
 						<li><a href="/en/services-bibliotheque.php" title="English">English</a></li>
+				<li><a target="_blank" href="https://portail.ville.sainte-agathe-des-monts.qc.ca/finnet/login.asp" title="English">AccÃ¨s employÃ©s</a></li>
 			</ul>
 		</div>
 		<!-- quickMenu end here -->
@@ -368,6 +370,7 @@ document.observe('dom:loaded', function() {
                         <li><a href="/fr/services-incendie.php">Service incendie</a></li>
                         <li><a href="/fr/services-camp-de-jour.php">Camp de jour</a></li>
 						<li><a href="https://www.sport-plus-online.com/Prmsinsc/Pages/Accueil.aspx?VirId=167&amp;ArrId=226" target="_blank">Inscription en ligne</a></li>
+						<li><a href="/fr/services-info-travaux.php">Info Travaux</a></li>
 						<li><a href="services-carte-agathoise.php">Carte AGATHOISE</a></li>
 					</ul>
 					<!--[if lte IE 6]></td></tr></table></a><![endif]-->

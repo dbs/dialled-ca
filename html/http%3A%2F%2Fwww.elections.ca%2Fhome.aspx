@@ -6,7 +6,7 @@
 	<meta charset="iso-8859-1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <meta name="dcterms.modified" content="April-25-2016" />
+    <meta name="dcterms.modified" content="September-01-2016" />
     <meta name="dcterms.language" content="en" /> 
 	<meta name="dcterms.creator" content="Elections Canada" /> 
     <link href="/templates/styles/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -177,18 +177,23 @@
 
 	<!--BEGIN - Col 1 - left --> 
 	<!--BEGIN - Col 1 - left --> 
-<div class="col4ge shortcol"> 
+<div class="col4ge longcol"> 
 <h2 class="other">What's New</h2>
 
 <ul class="col4">
 
-<li><a href="/content.aspx?section=med&amp;document=may0316&amp;dir=pre&amp;lang=e">May&nbsp;3, 2016: <span class="allcaps">News Release:</span></a><br />
+<li><a href="/content.aspx?section=med&amp;document=sep0916&amp;dir=pre&amp;lang=e">September&nbsp;9, 2016: <span class="allcaps">News Release:</span></a><br />
+    <div class="text">Deregistration of Forces et D&eacute;mocratie and the Canada Party</div></li>
 
-    <div class="text">Registered Political Parties' First Quarter Financial Returns for 2016 Now Online</div></li>
+	<li><a href="/content.aspx?section=med&amp;document=aug3016&amp;dir=pre&amp;lang=e">August&nbsp;30, 2016: <span class="allcaps">News Release:</span></a><br />
+    <div class="text">Chief Electoral Officer of Canada Receives Notice of Vacancy in House of Commons for Calgary Heritage</div></li>
+    
+    
 
+	
 </ul>
 
-<br />
+
 
 <p class="alignLeft"><a href="/content.aspx?section=new&amp;lang=e&amp;document=index" class="check check2">Go to the What's New section &gt;</a></p>
 
@@ -201,7 +206,7 @@
 
 
 
-<div class="col2ge shortcol">
+<div class="col2ge longcol">
 
 <h2 class="vis">Voter Information Service</h2>
       
@@ -227,7 +232,7 @@
 	<!--BEGIN - Col 3 - Right --> 
 	<!--BEGIN - Col 3 - Right --> 
 
-<div class="col4ge shortcol"> 
+<div class="col4ge longcol"> 
 <h2 class="other">Useful Information</h2>
 <ul class="col4">
  <!--   <li><a href="/content.aspx?section=pol&amp;document=index&amp;dir=dis/tfa&amp;lang=e">Training for Financial Agents of Electoral District Associations</a></li> -->
@@ -338,7 +343,7 @@
     <div class="span-2">
         <h4 class="FontcolorWhite">Useful Links</h4>
                 <ul>
-                    <!--<li><a href="/sub.aspx?lang=e">Subscription Service</a></li> -->
+                    <li><a href="/sub.aspx?lang=e">Subscription Service</a></li> 
                     <li><a href="/content.aspx?section=new&amp;lang=e">What's New</a></li>
 					<li><a href="/content.aspx?section=aid&amp;dir=sitemap&amp;lang=e&amp;document=index">Site Map</a></li>
 
@@ -353,7 +358,7 @@
         <h4 class="FontcolorWhite">Contact us</h4>
                 <ul>
                     <li><a href="/content.aspx?section=cont&amp;document=index&amp;lang=e">Questions, Complaints, Feedback</a></li>
-
+                    <li><a href="/content.aspx?section=emp&dir=pro&document=index&lang=e">Become a supplier to Elections Canada</a></li>
               </ul>
 
 
@@ -372,7 +377,7 @@
   <!--BEGIN - Page Bottom -->
   <!--BEGIN - Page Bottom -->
   <div id="footerwrap3">
-    <div class="column1">Date Modified: April 25, 2016</div>
+    <div class="column1">Date Modified: September 01, 2016</div>
     <div class="column2"><a href="/content.aspx?section=pri&amp;lang=e&amp;document=index">Terms and Conditions</a></div>
     <br />
   </div><!--END div footerwrap3--> 

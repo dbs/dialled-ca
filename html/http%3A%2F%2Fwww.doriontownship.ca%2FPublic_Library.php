@@ -310,11 +310,11 @@
   <td align="left" valign="top" class="sohotext" width="100%">   	<p></p>
 	<p align="center"><b><span style="color: rgb(153, 51, 102); font-size: xx-large;" size="6" color="#993366"><span style="font-family: comic sans ms,sand;" face="comic sans ms,sand">VISIT YOUR PUBLIC LIBRARY TODAY </span></span><img title="Smile" alt="Smile" src="sohoadmin/program/modules/tiny_mce/plugins/emotions/images/smiley-smile.gif" border="0"></b></p>
 	<p></p>
-	<p align="center"> </p>
+	<p align="center">�</p>
 	<p></p>
 	<p align="center"><b><span style="color: rgb(0, 0, 0); font-size: x-large;" size="5" color="#000000">****************************************** </span></b></p>
 	<p></p>
-	<p align="center">  <span style="color: rgb(0, 128, 0); font-size: x-large;" size="5" color="#008000"><b><span style="font-family: tahoma,arial,helvetica,sans-serif;" face="tahoma,arial,helvetica,sans-serif">LIBRARY HOURS</span></b></span></p>
+	<p align="center">� <span style="color: rgb(0, 128, 0); font-size: x-large;" size="5" color="#008000"><b><span style="font-family: tahoma,arial,helvetica,sans-serif;" face="tahoma,arial,helvetica,sans-serif">LIBRARY HOURS</span></b></span></p>
 	<p></p>
 	<p align="center"><span style="color: rgb(0, 0, 0); font-family: arial,helvetica,sans-serif; font-size: medium;" size="3" face="arial,helvetica,sans-serif" color="#000000"><b>Monday, Wednesday, Friday -- 7 pm - 9 pm</b></span></p>
 	<p></p>
@@ -322,29 +322,29 @@
 	<p></p>
 	<p align="center"><b><span style="color: rgb(0, 0, 0); font-family: tahoma,arial,helvetica,sans-serif; font-size: large;" size="4" face="tahoma,arial,helvetica,sans-serif" color="#000000">*********************</span></b></p>
 	<p></p>
-	<p align="center"><span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: medium;" size="3" face="tahoma,arial,helvetica,sans-serif">  <strong><span style="font-size: x-large;" size="5">CAP HOURS</span></strong></span></p>
+	<p align="center"><span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: medium;" size="3" face="tahoma,arial,helvetica,sans-serif">� <strong><span style="font-size: x-large;" size="5">CAP HOURS</span></strong></span></p>
 	<p></p>
 	<p align="center"><strong><span style="font-family: Arial; font-size: medium;" size="3" face="Arial">Currently Unavailable</span></strong></p>
 	<p></p>
 	<p align="center"><strong><span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: large;" size="4" face="tahoma,arial,helvetica,sans-serif">*************************</span></strong></p>
 	<p></p>
-	<p align="center"> </p>
+	<p align="center">�</p>
 	<p></p>
-	<p align="center"> <span style="color: rgb(0, 128, 128);" color="#008080"> </span><span style="font-size: large;" size="4"><span style="color: rgb(0, 0, 0); font-family: comic sans ms,sand;" face="comic sans ms,sand" color="#000000"><span style="color: rgb(255, 0, 0);" color="#ff0000"><span style="font-size: medium;" size="3"><span style="color: rgb(128, 0, 128);" color="#800080"><span style="color: rgb(255, 0, 0);" color="#ff0000">NEWS FROM THE BOOK NOOK</span> </span><span style="color: rgb(153, 51, 102);" color="#993366">~ <a href="pgm-download_media.php?name=NOV_2012_-_Book_Nook.pdf"><span style="color: rgb(0, 0, 0); font-size: large;" size="4" color="#000000">November 2012</span> </a></span></span></span><span style="color: rgb(153, 51, 102);" color="#993366">~</span><span style="color: rgb(0, 204, 255);" color="#00ccff"> </span><span style="color: rgb(255, 0, 0); font-size: medium;" size="3" color="#ff0000">Your Dorion Public Library</span></span></span><span style="color: rgb(255, 102, 0);" color="#ff6600"> </span></p>
-	<p></p>
-	<div align="center"></div>
-	<p></p>
-	<p align="center">  <span style="font-size: large;" size="4"><b><span style="color: rgb(0, 0, 0);" color="#000000">or </span></b></span></p>
+	<p align="center">�<span style="color: rgb(0, 128, 128);" color="#008080"> </span><span style="font-size: large;" size="4"><span style="color: rgb(0, 0, 0); font-family: comic sans ms,sand;" face="comic sans ms,sand" color="#000000"><span style="color: rgb(255, 0, 0);" color="#ff0000"><span style="font-size: medium;" size="3"><span style="color: rgb(128, 0, 128);" color="#800080"><span style="color: rgb(255, 0, 0);" color="#ff0000">NEWS FROM THE BOOK NOOK</span> </span><span style="color: rgb(153, 51, 102);" color="#993366">~ <a href="pgm-download_media.php?name=NOV_2012_-_Book_Nook.pdf"><span style="color: rgb(0, 0, 0); font-size: large;" size="4" color="#000000">November 2012</span> </a></span></span></span><span style="color: rgb(153, 51, 102);" color="#993366">~</span><span style="color: rgb(0, 204, 255);" color="#00ccff"> </span><span style="color: rgb(255, 0, 0); font-size: medium;" size="3" color="#ff0000">Your Dorion Public Library</span></span></span><span style="color: rgb(255, 102, 0);" color="#ff6600"> </span></p>
 	<p></p>
 	<div align="center"></div>
 	<p></p>
-	<p align="center"><span style="font-family: comic sans ms,sand; font-size: large;" size="4" face="comic sans ms,sand"><b><span style="color: rgb(0, 0, 0);" color="#000000"><span style="color: rgb(128, 0, 128);" color="#800080">Visit our website @ <span style="font-family: tahoma,arial,helvetica,sans-serif;" face="tahoma,arial,helvetica,sans-serif"><a href="http://www.dorionpubliclibrary.ca/">www.dorionpubliclibrary.ca</a></span></span></span></b></span></p>
+	<p align="center">� <span style="font-size: large;" size="4"><b><span style="color: rgb(0, 0, 0);" color="#000000">or </span></b></span></p>
 	<p></p>
-	<p align="center"> </p>
+	<div align="center"></div>
 	<p></p>
-	<p align="left"> </p>
+	<p align="center"><span style="font-family: comic sans ms,sand; font-size: large;" size="4" face="comic sans ms,sand"><b><span style="color: rgb(0, 0, 0);" color="#000000"><span style="color: rgb(128, 0, 128);" color="#800080">Visit our website @�<span style="font-family: tahoma,arial,helvetica,sans-serif;" face="tahoma,arial,helvetica,sans-serif"><a href="http://www.dorionpubliclibrary.ca/">www.dorionpubliclibrary.ca</a></span></span></span></b></span></p>
 	<p></p>
-	<p align="center"> </p>
+	<p align="center">�</p>
+	<p></p>
+	<p align="left">�</p>
+	<p></p>
+	<p align="center">�</p>
 	
 
   </td>

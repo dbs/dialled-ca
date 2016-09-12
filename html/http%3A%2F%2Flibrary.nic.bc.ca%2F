@@ -11,25 +11,34 @@
     <script type="text/javascript" src="/scripts/functions.js"></script>
     <script type="text/javascript" src="/scripts/jquery.js"></script>
 
-    <link href="/styles/initialization.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/site_layout.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/content_presentation.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/homepage.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/library.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/tabs.css" rel="stylesheet" type="text/css" media="all" /><link rel="shortcut icon" href="http://www.nic.bc.ca/nic.ico" /><link rel="shortcut icon" href="http://www.nic.bc.ca/favicon.ico" />
+    <link href="/styles/initialization.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/site_layout.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/content_presentation.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/homepage.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/library.css" rel="stylesheet" type="text/css" media="all" /><link rel="shortcut icon" href="http://www.nic.bc.ca/nic.ico" /><link rel="shortcut icon" href="http://www.nic.bc.ca/favicon.ico" />
 	<style type="text/css">
 
     </style>
     
+    
+    
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript" ></script>
+    <link href="/styles/quote.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/homepage_tabs.css" type="text/css" media="screen" />
+    
+    <script src="/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="/scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
     <script type="text/javascript" src="/scripts/jquery.hint.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        $(function () {
-            // find all the input elements with title attributes
-            $('input[title!=""]').hint();
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#ebsco_tabs").tabs();
+
+            $(".homepage_details_left2:nth-child(2)").css("border-width", "0px");
+
         });
     </script>
-    <meta name="Classification" content="Education" />
-    <meta name="Description" content="North Island College on Vancouver Island, British Columbia, Canada. NIC ensures relevant learning through accessible, quality education and teaches academic, vocational, technical, health programs at 8 locations and offers innovative programs that bring specialized training to your door." />
-    <meta name="keywords" content="North Island College, NIC, Canadian College, British Columbia, accessible, education,  academic, technical, vocational, health, programs, technology, courses, distributed learning, distance learning, onsite teaching, online learning, coop, co-op education, prior learning, adult basic, diploma, certificate, degree, university transfers, careers, employment, foundation, bursaries, scholarships, industry training, international education, trades & technology,tourism, eldercollege, Vancouver Island" />
-    
-    
+    <style type="text/css">
+      
+
+
+    </style>
 
 
     <!--[if lte IE 7]>
@@ -51,7 +60,7 @@
         <div id="wrap">
             <form name="aspnetForm" method="post" action="./" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzA4MzI5NjA1D2QWAmYPZBYCZg9kFgRmD2QWBAILDxUCAABkAgwPZBYCAgEPZBYCZg8VAgAAZAIBD2QWDAIDDxYCHglpbm5lcmh0bWwFtQQKPGxpPjxhIHRpdGxlPSdGaW5kJyBocmVmPScvZmluZC9kZWZhdWx0LmFzcHgnIGlkPSdmaW5kJz4gPGltZyBzcmM9Jy9pbWFnZXMvbmF2aWdhdGlvbi90b3BiYXIvZmluZC5naWYnIGFsdD0nRmluZCcgLz48L2E+PC9saT4KPGxpPjxhIHRpdGxlPSdSZXNlYXJjaCcgaHJlZj0nL3Jlc2VhcmNoL2RlZmF1bHQuYXNweCcgaWQ9J3Jlc2VhcmNoJz4gPGltZyBzcmM9Jy9pbWFnZXMvbmF2aWdhdGlvbi90b3BiYXIvcmVzZWFyY2guZ2lmJyBhbHQ9J1Jlc2VhcmNoJyAvPjwvYT48L2xpPgo8bGk+PGEgdGl0bGU9J1NlcnZpY2VzJyBocmVmPScvc2VydmljZXMvZGVmYXVsdC5hc3B4JyBpZD0nc2VydmljZXMnPiA8aW1nIHNyYz0nL2ltYWdlcy9uYXZpZ2F0aW9uL3RvcGJhci9zZXJ2aWNlcy5naWYnIGFsdD0nU2VydmljZXMnIC8+PC9hPjwvbGk+CjxsaT48YSB0aXRsZT0nQWJvdXQgVXMnIGhyZWY9Jy9hYm91dF91cy9kZWZhdWx0LmFzcHgnIGlkPSdhYm91dF91cyc+IDxpbWcgc3JjPScvaW1hZ2VzL25hdmlnYXRpb24vdG9wYmFyL2Fib3V0X3VzLmdpZicgYWx0PSdBYm91dCBVcycgLz48L2E+PC9saT4KZAIGDxUBFWNsYXNzPSJub19icmVhZGNydW1iImQCBw9kFgICAQ88KwAFAQAPFgIeB1Zpc2libGVoZGQCCA8VARRzdHlsZT0iZGlzcGxheTpub25lImQCCQ8WBB8ABaECCgkJPHVsPgoJCQk8bGkgY2xhc3M9ImNsb3NlZF9zdWJtZW51Ij48YSAgaHJlZj0iL2ZpbmQvIj5GaW5kPC9hPjwvbGk+CgkJCTxsaSBjbGFzcz0iY2xvc2VkX3N1Ym1lbnUiPjxhICBocmVmPSIvcmVzZWFyY2gvIj5SZXNlYXJjaDwvYT48L2xpPgoJCQk8bGkgY2xhc3M9ImNsb3NlZF9zdWJtZW51Ij48YSAgaHJlZj0iL3NlcnZpY2VzLyI+U2VydmljZXM8L2E+PC9saT4KCQkJPGxpIGNsYXNzPSJjbG9zZWRfc3VibWVudSI+PGEgIGhyZWY9Ii9hYm91dF91cy8iPkFib3V0IFVzPC9hPjwvbGk+CgkJPC91bD4KCR8BaGQCCg8VARpjbGFzcz0ibm9fc2lkZWJhcl9jb250ZW50ImQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFEmN0bDAwJGN0bDAwJHNlYXJjaIYL+z7+ypyN1Vs95ufNcco9fgmRMROvbkqbwRHE6ss9" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE5MTk4NTk3NTQPZBYCZg9kFgJmD2QWBGYPZBYEAgoPFQIAAGQCCw9kFgICAQ9kFgJmDxUCAABkAgEPZBYOAgMPFgIeCWlubmVyaHRtbAWzBAo8bGk+PGEgdGl0bGU9J0ZpbmQnIGhyZWY9Jy9maW5kL2RlZmF1bHQuYXNweCcgaWQ9J2ZpbmQnPiA8aW1nIHNyYz0nL2ltYWdlcy9uYXZpZ2F0aW9uL3RvcGJhci9maW5kLmdpZicgYWx0PSdGaW5kJyAvPjwvYT48L2xpPgo8bGk+PGEgdGl0bGU9J1Jlc2VhcmNoJyBocmVmPScvcmVzZWFyY2gvZGVmYXVsdC5hc3B4JyBpZD0ncmVzZWFyY2gnPiA8aW1nIHNyYz0nL2ltYWdlcy9uYXZpZ2F0aW9uL3RvcGJhci9yZXNlYXJjaC5naWYnIGFsdD0nUmVzZWFyY2gnIC8+PC9hPjwvbGk+CjxsaT48YSB0aXRsZT0nU2VydmljZXMnIGhyZWY9Jy9zZXJ2aWNlcy9kZWZhdWx0LmFzcHgnIGlkPSdzZXJ2aWNlcyc+IDxpbWcgc3JjPScvaW1hZ2VzL25hdmlnYXRpb24vdG9wYmFyL3NlcnZpY2VzLmdpZicgYWx0PSdTZXJ2aWNlcycgLz48L2E+PC9saT4KPGxpPjxhIHRpdGxlPSdBYm91dCBVcycgaHJlZj0nL2Fib3V0X3VzL2hvdXJzLmFzcHgnIGlkPSdhYm91dF91cyc+IDxpbWcgc3JjPScvaW1hZ2VzL25hdmlnYXRpb24vdG9wYmFyL2Fib3V0X3VzLmdpZicgYWx0PSdBYm91dCBVcycgLz48L2E+PC9saT4KZAIGDxUBFWNsYXNzPSJub19icmVhZGNydW1iImQCBw9kFgICAQ88KwAFAQAPFgIeB1Zpc2libGVoZGQCCA8VARRzdHlsZT0iZGlzcGxheTpub25lImQCCQ8WBB8ABZQCCgkJPHVsPgoJCQk8bGkgY2xhc3M9ImNsb3NlZF9zdWJtZW51Ij48YSAgaHJlZj0iL2ZpbmQvIj5GaW5kPC9hPjwvbGk+CgkJCTxsaSBjbGFzcz0iY2xvc2VkX3N1Ym1lbnUiPjxhICBocmVmPSIvcmVzZWFyY2gvIj5SZXNlYXJjaDwvYT48L2xpPgoJCQk8bGkgY2xhc3M9ImNsb3NlZF9zdWJtZW51Ij48YSAgaHJlZj0iL3NlcnZpY2VzLyI+U2VydmljZXM8L2E+PC9saT4KCQkJPGxpPjxhICBocmVmPSIvYWJvdXRfdXMvaG91cnMuYXNweCI+QWJvdXQgVXM8L2E+PC9saT4KCQk8L3VsPgoJHwFoZAIKDxUBGmNsYXNzPSJub19zaWRlYmFyX2NvbnRlbnQiZAILD2QWAgIBD2QWBAIDD2QWAgIDDxAPFgIeC18hRGF0YUJvdW5kZ2RkZGQCBQ9kFgICAw8QDxYCHwJnZGRkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUSY3RsMDAkY3RsMDAkc2VhcmNodA1X+ve/KHBn4XtUQ+fWItpORbMdAu8B8iJUQg6Rrtw=" />
 </div>
 
 <div>
@@ -59,7 +68,7 @@
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
 	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAXxzWhpm1WbzvOHO5TEGok3Wn7whX8q+WqJGQqyZKdhw7ovTJxEzyxIKlWITktGYfn6fTWZiv+Iudfn4biVGV6npEqTnU5VipP4Pv3ee3KCOFyTXpJ7gi7t7g8Iy7TRHfpAJZCsBtSXAUH8nTOby81x" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABFshZiYaHYNxE7w1jPwkZYZWn7whX8q+WqJGQqyZKdhw7ovTJxEzyxIKlWITktGYfmHEhixzpz+YRCt1E/pUl3Fkw4JcZk/YbHCio9TRgOJDPg1rGkygn2b5zaSsT4pcyMsQj7MkQpGolXq4fqUevEoUV0WVU4ZjPAEmsITzw5Q8BOFdAzKD8F7YT8tl9OyKnpZRWyA5NATsxcjuliJbM1VQJYQbm0NVwirX/IR7sk4HU0SI32DlmDIsXAjIKWTmyE3qgaIyPv7pC+CnlYdOqpsn5jRKqA8fSbqDK3rNOCNfoHiEaJdLq973ZGhvW87GEx74V0v9ihxyKYn1BE/SMureyGcNGiMA1Z7W+y2GuoTn8j9Tqjsrn/Ws/F6oka7wLah9QZObIlew9BU1yUkOjDA" />
 </div>
             
             <div id="header" style="padding-bottom: 2px;">
@@ -88,7 +97,7 @@
 <li><a title='Find' href='/find/default.aspx' id='find'> <img src='/images/navigation/topbar/find.gif' alt='Find' /></a></li>
 <li><a title='Research' href='/research/default.aspx' id='research'> <img src='/images/navigation/topbar/research.gif' alt='Research' /></a></li>
 <li><a title='Services' href='/services/default.aspx' id='services'> <img src='/images/navigation/topbar/services.gif' alt='Services' /></a></li>
-<li><a title='About Us' href='/about_us/default.aspx' id='about_us'> <img src='/images/navigation/topbar/about_us.gif' alt='About Us' /></a></li>
+<li><a title='About Us' href='/about_us/hours.aspx' id='about_us'> <img src='/images/navigation/topbar/about_us.gif' alt='About Us' /></a></li>
 </ul>
                     <div id="ctl00_ctl00_SearchPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_search&#39;)">
 	
@@ -120,89 +129,126 @@
                					
 	<div>
         
+
+
     <div class="homepage_container">
         <div class="homepage_left_column">
             <div class="homepage_main_image">
-                <div class="homepage_main_message">
-    
-                    Welcome to the North Island College library. For information on the library at your nearest campus,visit <a href="/about_us/hours.aspx" style="color:white; text-decoration:underline;">Contact Info & Hours</a>.
-
-                    
-                    
-                   
-
-                    
-                    
-
-                    
-                             
 
 
-                    
-
-
-
-
-                </div>
+                
             </div>
 
-            <div class="bottomtext">
-                <!--<p>
-                    NIC's library serves the needs of students, faculty, and communities across the
-                    North Island.<br />
-                    Let us support you in your academic and vocational goals!</p>-->
-                <div>
-                    <div>
-                        <div class="homepage_details_left">
-                            <div style="text-align: center;">
-                                <h3>
-                                    <a href='/find/default.aspx'>Find</a></h3>
-                                <!--<div id="ctl00_ctl00_content_presentation_ColumnOne_CatPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_content_presentation_ColumnOne_FindButton&#39;)">
-	
-                                    <input name="ctl00$ctl00$content_presentation$ColumnOne$FindTextBox" type="text" id="ctl00_ctl00_content_presentation_ColumnOne_FindTextBox" title="Search the Catalogue" />
-                                    &nbsp;<input type="submit" name="ctl00$ctl00$content_presentation$ColumnOne$FindButton" value="Search" id="ctl00_ctl00_content_presentation_ColumnOne_FindButton" />
-                                
-</div>-->
-                                <p>
-                                    <a href='https://catalogue.nic.bc.ca/uhtbin/cgisirsi.exe/x/0/0/49/'>Catalogue (Books,
-                                        DVDs) </a>
-                                </p>
-                                <p>
-                                    <a href="/find/articles_and_databases.aspx">Articles &amp; Databases </a>
-                                </p>
-                                <p>
-                                    <a href="/find/e_reference.aspx">Dictionaries &amp; Encyclopedias</a>
-                                </p>
-                                <p>
-                                    <a href="http://cufts2.lib.sfu.ca/CJDB/BCOMN/browse" target="_blank">Journal Titles
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="http://bcuc-agent.auto-graphics.com/mvc?cid=bcuc&lid=bcom&reset=force"
-                                        target="_blank">Search BC Libraries
-                                        <img alt="external link" src="/images/icons/leave_site.gif" /></a></p>
+            <div style="text-align:left;margin:0px 20px 30px 20px;">
+                <h1 style="color:black;">Library &amp; Learning Commons </h1>
 
+                
+
+
+
+                <p style="color:black;">The Library &amp; Learning Commons is a collaborative, inclusive environment providing learning opportunities, study and meeting spaces and access to information resources and services such as research help, peer tutoring, math, writing and student technical support.</p>
+            </div>
+
+            <div id="homepage_tabs_title">Discovery Search:</div>
+            <div id="ebsco_tabs_wrapper">
+                <div id="ebsco_tabs">
+                    <ul>
+                        <li><a href="#tab-1"><span>Search Everything</span></a></li>
+                        <li><a href="#tab-2"><span>Books and Media</span></a></li>
+                        <li><a href="#tab-3"><span>Course Reserves</span></a></li>
+                        <li><a href="#tab-4"><span>Articles and Databases</span></a></li>
+                        <li><a href="#tab-5"><span>Journals</span></a></li>
+
+                    </ul>
+                    <div id="tab-1">
+                        <div id="ctl00_ctl00_content_presentation_ColumnOne_SearchEverythingPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_content_presentation_ColumnOne_SearchEverythingButton&#39;)">
+	
+                            <div class="search_wrapper">
+                                <p>Search for articles, books, videos and more</p>
+                                <input name="ctl00$ctl00$content_presentation$ColumnOne$SearchEverythingTextBox" type="text" id="ctl00_ctl00_content_presentation_ColumnOne_SearchEverythingTextBox" class="search_everything_text" /><input type="submit" name="ctl00$ctl00$content_presentation$ColumnOne$SearchEverythingButton" value="Search" id="ctl00_ctl00_content_presentation_ColumnOne_SearchEverythingButton" class="search_button" />
+                            </div>
+                        
+</div>
+                        <p><a href="http://search.ebscohost.com/login.aspx?direct=true&authtype=ip,guest&setup=1&groupid=main&profile=eds&custid=s5672520" target="_blank">Advanced Search</a></p>
+                    </div>
+                    <!-- Books tab content-->
+                    <div id="tab-2">
+                        <div id="ctl00_ctl00_content_presentation_ColumnOne_SearchCataloguePanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_content_presentation_ColumnOne_CatalogueSearchButton&#39;)">
+	
+                            <div class="search_wrapper">
+                                <p>Search the library catalogue for books, e-books, and videos</p>
+                                <input name="ctl00$ctl00$content_presentation$ColumnOne$CatalogueSearchTextBox" type="text" id="ctl00_ctl00_content_presentation_ColumnOne_CatalogueSearchTextBox" class="catalogue_search_text" />
+
+                                <select name="ctl00$ctl00$content_presentation$ColumnOne$CatalogueSearchDropDownList" id="ctl00_ctl00_content_presentation_ColumnOne_CatalogueSearchDropDownList" class="catalogue_search_dropdown">
+		<option value="GENERAL^GENERAL^SUBJECTS^^Keyword anywhere">Search All</option>
+		<option value="AU^AUTHOR^AUTHORS^Author Processing^Author">Author</option>
+		<option value="TI^TITLE^SERIES^Title Processing^Title">Title</option>
+		<option value="SU^SUBJECT^SUBJECTS^^Subject">Subject</option>
+		<option value="PER^PERTITLE^SERIES^Title Processing^Journal title">Journal Title</option>
+
+	</select><input type="submit" name="ctl00$ctl00$content_presentation$ColumnOne$CatalogueSearchButton" value="Search Catalogue" id="ctl00_ctl00_content_presentation_ColumnOne_CatalogueSearchButton" class="search_button" />
+                            </div>
+                        
+</div>
+                        <p><a href="https://catalogue.nic.bc.ca/uhtbin/cgisirsi.exe/x/0/0/60/495/X" target="_blank">Advanced Search</a></p>
+
+                    </div>
+                    <!-- Articles tab content-->
+                    <div id="tab-3">
+                        <div id="ctl00_ctl00_content_presentation_ColumnOne_ReserveSearchPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_content_presentation_ColumnOne_ReserveSearchButton&#39;)">
+	
+                            <div class="search_wrapper">
+                                <input name="ctl00$ctl00$content_presentation$ColumnOne$ReserveSearchTextBox" type="text" id="ctl00_ctl00_content_presentation_ColumnOne_ReserveSearchTextBox" class="catalogue_search_text" />
+
+                                <select name="ctl00$ctl00$content_presentation$ColumnOne$ReserveSearchDropDownList" id="ctl00_ctl00_content_presentation_ColumnOne_ReserveSearchDropDownList" class="catalogue_search_dropdown">
+		<option value="RSV_INSTRUCTOR">Search by Instructor </option>
+		<option value="RSV_COURSE_ID">Search by Course Number</option>
+		<option value="RSV_COURSE_NAME">Search by Course Name</option>
+
+	</select><input type="submit" name="ctl00$ctl00$content_presentation$ColumnOne$ReserveSearchButton" value="Search Course Reserves" id="ctl00_ctl00_content_presentation_ColumnOne_ReserveSearchButton" class="search_button" />
+                            </div>
+                        
+</div>
+                    </div>
+                    <div id="tab-4">
+                        <!--PLACE HOLDER-->
+                        <p>
+                            <a href="http://library.nic.bc.ca/find/articles_and_databases.aspx">Browse</a>
+                        library databases by title
+                    </div>
+                    <!--  tab content-->
+                    <div id="tab-5">
+                        <!--PLACE HOLDER-->
+                        <p>
+                            <a href="http://cufts2.lib.sfu.ca/CJDB/BCOMN/browse" target="_blank">Browse</a>
+                        journals by title
+                    </div>
+                </div>
+            </div>
+            <div class="bottomtext">
+                <div>
+                    
+
+                        <div class="homepage_details_left">
+                            <div style="text-align: left;margin:0px auto;width:110px;">
+                                
+                                <h3><a href='/research/default.aspx'>Research</a></h3>
+
+                                <p>
+                                    <a href='http://libguides.nic.bc.ca/'>Research Guides </a>
+                                </p>
+                                <p>
+                                    <a href='/research/citing_sources/'>Citing Sources</a>
+                                </p>
+
+                                <p>
+                                    <a href='/research/tutorials.aspx'>Tutorials</a>
+                                </p>
                             </div>
                         </div>
-                        <div class="homepage_details_right">
-                            <h3>
-                                <a href='/research/default.aspx'>Research</a></h3>
-                            <p>
-                            </p>
-                            <p>
-                                <a href='http://libguides.nic.bc.ca/'>Subject Guides </a>
-                            </p>
-                            <p>
-                                <a href='/research/citing_sources/'>Citing Sources</a></p>
-                            <p>
-                                <a href='/research/writing_guides/'>Writing Guides</a></p>
-                            <p>
-                                <a href='/research/tutorials.aspx'>Tutorials</a></p>
-                        </div>
-                        <div style='clear: both;'>
-                        </div>
-                        <div class="homepage_details_left" style="border-top: solid 1px silver">
-                            <div style="text-align: center;">
+                        <div class="homepage_details_middle">
+
+                            <div style="text-align: left;margin:0px auto;width:140px;">
                                 <h3>
                                     <a href='/services/default.aspx'>Services</a></h3>
                                 <p>
@@ -212,18 +258,44 @@
                                     <a href='/services/ask_a_librarian.aspx'>Ask a Librarian</a>
                                 </p>
                                 <p>
-                                    <a href='/services/interlibrary_loans.aspx'>Interlibrary Loans</a>
+                                    <a href='/services/interlibrary_loans.aspx'>Search BC Libraries</a>
+                                </p>
+                                <p>
+                                    <a href='http://libguides.nic.bc.ca/roombookings'>Book A Study Room</a>
+                                </p>
+                                <p>
+                                    <a href='http://libguides.nic.bc.ca/c.php?g=492543'>How Do I...?</a>
                                 </p>
                             </div>
                         </div>
-                        <div class="homepage_details_right" style="border-top: solid 1px silver">
-                            <h3>
-                                <a href='/about_us/default.aspx'>About Us</a></h3>
-                            <p>
-                                <a href='/about_us/hours.aspx'>Contact Info and Hours</a></p>
-                            <p>
-                                <a href='/about_us/faq.aspx'>FAQs</a></p>
+                            
+                        
+                        <div class="homepage_details_right">
+
+                            <div style="text-align: left;margin:0px auto;width:160px;">
+                            
+
+                                <h3 style="color:black;">Academic Supports</h3>
+
+
+                                <p>
+                                    <a href='http://libguides.nic.bc.ca/c.php?g=510722'>Research Help</a>
+                                </p>
+                                <p>
+                                    <a href='http://libguides.nic.bc.ca/StudentTech'>Student Technical Services</a>
+                                </p>
+                                <p>
+                                   
+                                    <a href='http://libguides.nic.bc.ca/c.php?g=519338&p=3551516'>Peer Tutoring</a>
+                                </p>
+                                <p>
+                                    
+                                    <a href='http://libguides.nic.bc.ca/c.php?g=485807&p=3322477'>Writing Support</a>
+                                </p>
+                            </div>
+
                         </div>
+                        <div style="clear:both;"></div>
                     </div>
                 </div>
             </div>
@@ -247,24 +319,44 @@
                 </div>
             </div>
         </div>
-    </div>
+    
+
     <div class="homepage_right_column">
         <div class="homepage_adverts">
-
+            
             <br />
             <br />
             Chat with a Librarian!
-            <div style="text-align:center;width:160px;" >
+            <div style="text-align:center; width: 160px;">
 
-                <div id="questionpoint.chatwidget" qwidgetno="1" style="text-align:center;"></div> 
-                <script id="questionpoint.bootstrap1" qwidgetno="1" type="text/javascript" src="http://www.questionpoint.org/crs/qwidgetV4/js/qwidget.bootstrap.js?langcode=1&instid=12369&skin=green&size=small" charset="utf-8">//<noscript>Please enable javascript to chat with librarians online</noscript></script>
+                <div id="questionpoint.chatwidget" qwidgetno="1" style="text-align: center;"></div>
+                <script id="questionpoint.bootstrap1" qwidgetno="1" type="text/javascript" src="http://www.questionpoint.org/crs/qwidgetV4/js/qwidget.bootstrap.js?langcode=1&instid=12369&size=small&customSkin=http%3A%2F%2Flibrary.nic.bc.ca%2Fstyles%2Fqw-custom.css" charset="utf-8">//<noscript>Please enable javascript to chat with librarians online</noscript></script>
 
 
                 <!-- Beginning of QuestionPoint qwidget code. -->
-
+                
             </div>
+
+            <div class="cluster_main_quote" style="margin-right:10px;">
+                <div class="cluster_main_quote_image" style="float:none;">
+                    <img alt="quote" src="/images/icons/quote.png">
+                </div>
+                <div class="cluster_main_quote_right">
+                    <div class="cluster_main_quote_text">
+                        The Library and Learning Commons is a vibrant space where students can access academic support services such as research, writing, math, peer tutoring and IT help. Flexible, collaborative and individual study spaces provide students with a rich learning environment where ideas are shared and learning is enhanced.
+                    </div>
+                    <div class="cluster_main_quote_ref">
+                        Mary Anne Guenther, Coordinator, Library Services, North Island College
+                    </div>
+                </div>
+                <div style="clear: left;"></div>
+            </div>
+
         </div>
+
     </div>
+
+
 
     </div>
 

@@ -8,9 +8,16 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Edgerton Public Library of Edgerton, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Edgerton, Alberta, Canada" />
+<meta name="google-site-verification" content="DtiSzQziskjLCqKaxUGlpqqAKV_dogrZ2XWoUHnXKt8" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,9 +28,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Edgerton Public Library of Edgerton, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Edgerton, Alberta, Canada" />
-<meta name="google-site-verification" content="DtiSzQziskjLCqKaxUGlpqqAKV_dogrZ2XWoUHnXKt8" />
 
 
 	<meta property="og:url" CONTENT="http://www.edgertonlibrary.ab.ca/" />
@@ -33,12 +37,10 @@
 	<meta property="og:locale" CONTENT="en_US" />
 	<meta property="fb:app_id" CONTENT="142916509104743" />
 	<meta property="og:type" CONTENT="website" />
-	<meta property="og:description" CONTENT="    "/>
 
 	
-		
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT="    "/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -46,7 +48,7 @@
 	<meta itemprop="description" CONTENT="    ">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -54,10 +56,10 @@
 	<meta name="twitter:site" CONTENT="Edgerton Public Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Edgerton Public Library">
-	<meta name="twitter:text:description" CONTENT="    ">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="    ">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -259,7 +261,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -267,6 +268,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -281,6 +294,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -301,9 +320,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -335,51 +353,28 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/121" class="blog_link active_page" title="Discussions">Discussions</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=121" class="blog_link active_page" title="Discussions"><span>Discussions</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/121" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/121" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=121" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/92" class="map_link active_page" title="Edgerton Map"><span>Edgerton Map</span></a>
         </li>
-      
-    
-      
 	<li >
           <a href="/map/show/222" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -406,10 +401,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -424,9 +419,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.edgertonlibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.edgertonlibrary.ab.ca/Catalogue" title="Catalogue"><span>Catalogue</span></a></li><li><a href="http://www.edgertonlibrary.ab.ca/eResources" title="Eresources"><span>eResources</span></a></li><li><a href="http://www.edgertonlibrary.ab.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.edgertonlibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li>
-  
 </ul>
 
 	</nav>
@@ -458,26 +451,29 @@ if (typeof jQuery != 'undefined') {
         <tr>
             <td>Monday</td>
             <td>
-            <p>4:00-6:00 p.m.</p>
+            <p>9:30-12:00 p.m.<br />
+            12:30-4:30 p.m.</p>
             </td>
         </tr>
         <tr>
             <td>Tuesday</td>
-            <td>9:30 a.m.-12:00 p.m.<br />
-            4:30-8:30 p.m.</td>
+            <td>1:30-8:30 p.m.</td>
         </tr>
         <tr>
             <td>Wednesday</td>
-            <td>4:00-6:00 p.m.</td>
+            <td>9:30-12:00 p.m.<br />
+            12:30-4:30 p.m.</td>
         </tr>
         <tr>
             <td>Thursday</td>
-            <td>4:00-6:00 p.m.</td>
+            <td>9:30-12:00 p.m.<br />
+            12:30-4:30 p.m.</td>
         </tr>
         <tr>
             <td>Friday</td>
             <td>
-            <p>4:00-6:00 p.m.</p>
+            <p>9:30-12:00 p.m.<br />
+            12:30-4:30. p.m.</p>
             </td>
         </tr>
         <tr>
@@ -597,22 +593,20 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(1)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/2023"><img alt="Library_pressdisplay" src="http://files.townlife.com/public/asset_files/3248/thumb_400/Library_PressDisplay.jpg?1363811347" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/3248/xlarge/Library_PressDisplay.jpg?1363811347" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Library_pressdisplay" src="http://files.townlife.com/public/asset_files/3248/thumb_400/Library_PressDisplay.jpg?1363811347" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/2023">				
-	  Library PressDisplay			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/2023">
+	    Library PressDisplay
+          </a>
         <p>Press Display is the world&rsquo;s largest online newspaper and magazine kiosk, offering instant access to over 2000 publications from 95 countries...
         <!-- <a href="/blogs/show_entry/2023">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/121">+ MORE</a></h6>
 </div>
@@ -623,13 +617,9 @@ if (typeof jQuery != 'undefined') {
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/121">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       There are currently no events in our calendar. Check back soon for updates.
-    
   </div>
-
 
 		
 
@@ -637,62 +627,32 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-	
-	<style>
+			<style>
 	    dl.action_steps dd img{margin-left:2px;margin-right:2px;}	
 	</style>
-    
-    
       <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd style='float:left;' id="action_671">
-	      
-              
-	      
+	    <dd style='float:left; padding-right:0;' id="action_671">
 		
 		<img alt="Call (780) 755-3814" class="action_steps_image" src="/images/other" title="Call (780) 755-3814" />
 	        				
-	      
 	    </dd>
 	   
-		  	    <dd style='float:left;' id="action_672">
-	      
-              
-	      
+		    <dd style='float:left; padding-right:0;' id="action_672">
 		
 		<img alt="Fax (780) 755-2667" class="action_steps_image" src="/images/other" title="Fax (780) 755-2667" />
 	        				
-	      
 	    </dd>
 	   
 	 
-        
-	  <dd style='float:left;' id="action_def_email">
-  	     
-	    
+	  <dd style='float:left; padding-right:0;' id="action_def_email">
 	      <a href="/page/contact/121" class="action_step_link"><img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" /></a>
-	    
 	  </dd>
-        
-	
-        
-          <dd style='float:left;' id="action_def_print">
-            
-	    
+          <dd style='float:left; padding-right:0;' id="action_def_print">
 	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;"><img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" /></a>
-	    
           </dd>
-        
-	
-        
-        
 	  <dd style="clear:both;width:1px;height:1px"></dd>
-	
       </dl>
-  
 
 
 	</nav>
@@ -708,27 +668,17 @@ if (typeof jQuery != 'undefined') {
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.edgerton-oasis.ca" class="action_steps_link" target="_blank">Village of Edgerton</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.theweathernetwork.com/weather/CAAB0102" class="action_steps_link" target="_blank">Weather Report</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -745,16 +695,10 @@ if (typeof jQuery != 'undefined') {
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-&nbsp;<a href="https://www.facebook.com/pages/Edgerton-Public-Library/331802943646548" target="_blank"><img src="http://s3.amazonaws.com:/townlife_production/public/uploads/photos/414685/Capture_medium_medium.JPG" alt="Capture_medium" title="Capture_medium" /></a>   &nbsp; &nbsp; 
+  &nbsp;<a href="https://www.facebook.com/pages/Edgerton-Public-Library/331802943646548" target="_blank"><img src="http://s3.amazonaws.com:/townlife_production/public/uploads/photos/414685/Capture_medium_medium.JPG" alt="Capture_medium" title="Capture_medium" /></a>   &nbsp; &nbsp; 
 <br>
 <br>
 
@@ -772,8 +716,6 @@ if (typeof jQuery != 'undefined') {
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
 </div>
 
  </span>
@@ -794,29 +736,7 @@ if (typeof jQuery != 'undefined') {
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
 			
 				
 			
@@ -838,79 +758,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
 			
 				
 			
@@ -932,6 +780,20 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
 			
 				
@@ -943,7 +805,29 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
 			
 				
 			
@@ -968,18 +852,76 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
 			
 				
 					</div><!-- end book group -->
@@ -1002,7 +944,7 @@ if (typeof jQuery != 'undefined') {
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1044,67 +986,42 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.edgertonlibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.edgertonlibrary.ab.ca/Catalogue" title="Catalogue"><span>Catalogue</span></a></li><li><a href="http://www.edgertonlibrary.ab.ca/eResources" title="Eresources"><span>eResources</span></a></li><li><a href="http://www.edgertonlibrary.ab.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.edgertonlibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/121" class="blog_link active_page" title="Discussions">Discussions</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=121" class="blog_link active_page" title="Discussions"><span>Discussions</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/121" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/121" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=121" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/92" class="map_link active_page" title="Edgerton Map"><span>Edgerton Map</span></a>
         </li>
-      
-    
-      
 	<li >
           <a href="/map/show/222" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1113,7 +1030,7 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1123,41 +1040,23 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/121" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1294,6 +1193,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1320,3 +1244,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

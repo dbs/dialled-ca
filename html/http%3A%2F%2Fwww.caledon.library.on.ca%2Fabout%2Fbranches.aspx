@@ -35,7 +35,7 @@
 <body class="BodyStyle">
 <form name="aspnetForm" method="post" action="/about/branches.aspx" id="aspnetForm">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjE3MzYyNTUzD2QWAmYPZBYCZg9kFgQCAQ9kFgICDQ8VCRovbGF5b3V0L0pTL2pxdWVyeS4xLjQuNC5qcx4vbGF5b3V0L0pTL2pxdWVyeS5jeWNsZS5taW4uanMfL2xheW91dC9KUy9qcXVlcnkuZWFzaW5nLjEuMy5qcx4vbGF5b3V0L0pTL2ZvbnRzaXplc3dpdGNoZXIuanMpL2xheW91dC9KUy9qcXVlcnktdWktMS44LjE2LmN1c3RvbS5taW4uanMcL2xheW91dC9KUy9hdXRvY29sdW1uLm1pbi5qcyQvbGF5b3V0L2pzL2pxdWVyeS50d2l0dGVyLmZldGNoZXIuanMVL2xheW91dC9KUy9zY3JpcHRzLmpzES9sYXlvdXQvSlMvUElFLmpzZAIDDxYCHgZhY3Rpb24FFC9hYm91dC9icmFuY2hlcy5hc3B4FghmD2QWBGYPEGQWAh4FY2xhc3MFBVJhZGlvZGQCAg8QZBYCHwEFBVJhZGlvZGQCAQ8PFgIeB1Zpc2libGVoZGQCAg8PFgIeCEltYWdlVXJsBT0vZmlsZS5hc3B4P2lkPTRkNTgyMWQzLWI4YmMtNGIxNi04OGEyLTY5M2UwNWViNmYyZSZ3PTI1MyZoPTcwZGQCAw9kFgICBQ9kFgYCAw8PFgIfAmdkFgICAQ9kFgQCAQ8PFgQeC05hdmlnYXRlVXJsBRMvYWJvdXQvZGVmYXVsdC5hc3B4HgRUZXh0BQhBYm91dCBVc2RkAgMPFgIfBQW3Cjx1bD48bGk+PGEgY2xhc3M9J0FjdGl2ZScgaHJlZj0nL2Fib3V0L2JyYW5jaGVzLmFzcHgnPkJyYW5jaCBIb3VycyAmIExvY2F0aW9uczwvYT48L2xpPjxsaT48YSBocmVmPScvYWJvdXQvYWNjZXNzaWJpbGl0eS5hc3B4Jz5BY2Nlc3NpYmlsaXR5PC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9ib2FyZC9kZWZhdWx0LmFzcHgnPkxpYnJhcnkgQm9hcmQgYW5kIFBvbGljaWVzPC9hPjx1bD48bGk+PGEgaHJlZj0nL2Fib3V0L2JvYXJkL21lZXRpbmctc2NoZWR1bGUuYXNweCc+Qm9hcmQgTWVldGluZyBTY2hlZHVsZSAmIE1pbnV0ZXM8L2E+PC9saT48L3VsPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9wYXJ0bmVyc2hpcHMuYXNweCc+Q29tbXVuaXR5IFBhcnRuZXJzaGlwcyA8L2E+PHVsPjxsaT48YSBocmVmPScvY29tbXVuaXR5IHBhcnRuZXJzaGlwcy9DQ1Nqb2JzY2FsZWRvbi5hc3B4Jz5DQ1MgSm9icyBDYWxlZG9uIC0gU2F0ZWxsaXRlIFNlcnZpY2VzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9jb21tdW5pdHkgcGFydG5lcnNoaXBzL3ZvbHVudGVlcm1iYy9kZXRhaWxzLmFzcHgnPlZvbHVudGVlciBNQkMgLSBDYWxlZG9uIENlbnRyZTwvYT48L2xpPjxsaT48YSBocmVmPScvY29tbXVuaXR5IHBhcnRuZXJzaGlwcy9QYXNzZXMnPlBBTUEgLyBUUkNBICYgQ1ZDIH4gRnJlZSBGYW1pbHkgUGFzc2VzIDwvYT48L2xpPjwvdWw+PC9saT48bGk+PGEgaHJlZj0nL2Fib3V0dXMvY3VzdG9tZXJzYXRpc2ZhY3Rpb25zdXJ2ZXkuYXNweCc+Q3VzdG9tZXIgU2F0aXNmYWN0aW9uIFN1cnZleTwvYT48L2xpPjxsaT48YSBocmVmPScvYWJvdXQvZG9uYXRpb25zLmFzcHgnPkRvbmF0aW9uczwvYT48L2xpPjxsaT48YSBocmVmPScvYWJvdXQvdm9sdW50ZWVyaW5nLmFzcHgnPkVtcGxveW1lbnQgYW5kIFZvbHVudGVlciBPcHBvcnR1bml0aWVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9pbmZvcm1hdGlvbnRlY2hub2xvZ3lzZXJ2aWNlcy5hc3B4Jz5JbmZvcm1hdGlvbiBUZWNobm9sb2d5IFNlcnZpY2VzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9tZWRpYXJlbGVhc2VzLmFzcHgnPk1lZGlhIFJlbGVhc2VzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9yZWN5Y2xpbmcuYXNweCc+UmVjeWNsaW5nPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9zZXJ2aWNlcy5hc3B4Jz5TZXJ2aWNlczwvYT48L2xpPjxsaT48YSBocmVmPScvYWJvdXQvYXJjaGl2ZS9kZWZhdWx0LmFzcHgnPmVOZXdzIEFyY2hpdmU8L2E+PC9saT48bGk+PGEgaHJlZj0nL2Fib3V0L2N1bHR1cmUuYXNweCc+Q3VsdHVyZSBJcyBZb3VyIExpYnJhcnk8L2E+PC9saT48L3VsPmQCBQ9kFgICAw8WAh8FZWQCBw9kFgICAw8WAh8FZWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFIWN0bDAwJGN0bDAwJFJhZGlvQnV0dG9uX0NhdGFsb2d1ZQUfY3RsMDAkY3RsMDAkUmFkaW9CdXR0b25fV2Vic2l0ZQUfY3RsMDAkY3RsMDAkUmFkaW9CdXR0b25fV2Vic2l0ZQUeY3RsMDAkY3RsMDAkSW1hZ2VCdXR0b25fU2VhcmNogcDKVgHUucPic3HZPliriBuLniyTMgSzd0D5TTD5jBA=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjE3MzYyNTUzD2QWAmYPZBYCZg9kFgQCAQ9kFgICDQ8VCRovbGF5b3V0L0pTL2pxdWVyeS4xLjQuNC5qcx4vbGF5b3V0L0pTL2pxdWVyeS5jeWNsZS5taW4uanMfL2xheW91dC9KUy9qcXVlcnkuZWFzaW5nLjEuMy5qcx4vbGF5b3V0L0pTL2ZvbnRzaXplc3dpdGNoZXIuanMpL2xheW91dC9KUy9qcXVlcnktdWktMS44LjE2LmN1c3RvbS5taW4uanMcL2xheW91dC9KUy9hdXRvY29sdW1uLm1pbi5qcyQvbGF5b3V0L2pzL2pxdWVyeS50d2l0dGVyLmZldGNoZXIuanMVL2xheW91dC9KUy9zY3JpcHRzLmpzES9sYXlvdXQvSlMvUElFLmpzZAIDDxYCHgZhY3Rpb24FFC9hYm91dC9icmFuY2hlcy5hc3B4FghmD2QWBGYPEGQWAh4FY2xhc3MFBVJhZGlvZGQCAg8QZBYCHwEFBVJhZGlvZGQCAQ8PFgIeB1Zpc2libGVoZGQCAg8PFgIeCEltYWdlVXJsBT0vZmlsZS5hc3B4P2lkPTRkNTgyMWQzLWI4YmMtNGIxNi04OGEyLTY5M2UwNWViNmYyZSZ3PTI1MyZoPTcwZGQCAw9kFgICBQ9kFgYCAw8PFgIfAmdkFgICAQ9kFgQCAQ8PFgQeC05hdmlnYXRlVXJsBRMvYWJvdXQvZGVmYXVsdC5hc3B4HgRUZXh0BQhBYm91dCBVc2RkAgMPFgIfBQXSCjx1bD48bGk+PGEgY2xhc3M9J0FjdGl2ZScgaHJlZj0nL2Fib3V0L2JyYW5jaGVzLmFzcHgnPkJyYW5jaCBIb3VycyAmIExvY2F0aW9uczwvYT48L2xpPjxsaT48YSBocmVmPScvYWJvdXQvYWNjZXNzaWJpbGl0eS5hc3B4Jz5BY2Nlc3NpYmlsaXR5PC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9ib2FyZC9kZWZhdWx0LmFzcHgnPkxpYnJhcnkgQm9hcmQgYW5kIFBvbGljaWVzPC9hPjx1bD48bGk+PGEgaHJlZj0nL2Fib3V0L2JvYXJkL21lZXRpbmctc2NoZWR1bGUuYXNweCc+Qm9hcmQgTWVldGluZyBTY2hlZHVsZSAmIE1pbnV0ZXM8L2E+PC9saT48L3VsPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9wYXJ0bmVyc2hpcHMuYXNweCc+Q29tbXVuaXR5IFBhcnRuZXJzaGlwcyA8L2E+PHVsPjxsaT48YSBocmVmPScvY29tbXVuaXR5IHBhcnRuZXJzaGlwcy9DQ1Nqb2JzY2FsZWRvbi5hc3B4Jz5DQ1MgSm9icyBDYWxlZG9uIDwvYT48L2xpPjxsaT48YSBocmVmPScvY29tbXVuaXR5IHBhcnRuZXJzaGlwcy92b2x1bnRlZXJtYmMvZGV0YWlscy5hc3B4Jz5Wb2x1bnRlZXIgTUJDIC0gQ2FsZWRvbiBDZW50cmU8L2E+PC9saT48bGk+PGEgaHJlZj0nL2NvbW11bml0eSBwYXJ0bmVyc2hpcHMvUGFzc2VzJz5QQU1BIC8gVFJDQSAmIENWQyB+IEZyZWUgRmFtaWx5IFBhc3NlcyA8L2E+PC9saT48L3VsPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9kb25hdGlvbnMuYXNweCc+RG9uYXRpb25zPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC92b2x1bnRlZXJpbmcuYXNweCc+RW1wbG95bWVudCBhbmQgVm9sdW50ZWVyIE9wcG9ydHVuaXRpZXM8L2E+PC9saT48bGk+PGEgaHJlZj0nL2Fib3V0L2luZm9ybWF0aW9udGVjaG5vbG9neXNlcnZpY2VzLmFzcHgnPkluZm9ybWF0aW9uIFRlY2hub2xvZ3kgU2VydmljZXM8L2E+PC9saT48bGk+PGEgaHJlZj0nL2Fib3V0L21lZGlhcmVsZWFzZXMuYXNweCc+TWVkaWEgUmVsZWFzZXM8L2E+PC9saT48bGk+PGEgaHJlZj0nL2Fib3V0L3JlY3ljbGluZy5hc3B4Jz5SZWN5Y2xpbmc8L2E+PC9saT48bGk+PGEgaHJlZj0nL2Fib3V0L3NlcnZpY2VzLmFzcHgnPlNlcnZpY2VzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hYm91dC9hcmNoaXZlL2RlZmF1bHQuYXNweCc+ZU5ld3MgQXJjaGl2ZTwvYT48L2xpPjxsaT48YSBocmVmPScvYWJvdXQvY3VsdHVyZS5hc3B4Jz5DdWx0dXJlIElzIFlvdXIgTGlicmFyeTwvYT48L2xpPjxsaT48YSBocmVmPScvYWJvdXQvMjAxNXJlcG9ydC5hc3B4Jz5Bbm51YWwgUmVwb3J0IDIwMTU8L2E+PC9saT48bGk+PGEgaHJlZj0nL2Fib3V0L3JlZ2lzdHJhdGlvbi5hc3B4Jz5PbmxpbmUgUHJvZ3JhbSBSZWdpc3RyYXRpb248L2E+PC9saT48L3VsPmQCBQ9kFgICAw8WAh8FZWQCBw9kFgICAw8WAh8FZWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFIWN0bDAwJGN0bDAwJFJhZGlvQnV0dG9uX0NhdGFsb2d1ZQUfY3RsMDAkY3RsMDAkUmFkaW9CdXR0b25fV2Vic2l0ZQUfY3RsMDAkY3RsMDAkUmFkaW9CdXR0b25fV2Vic2l0ZQUeY3RsMDAkY3RsMDAkSW1hZ2VCdXR0b25fU2VhcmNoP0HCN1O5iJV81ytfc55QL8yQiR0/uBlRzh/ZuMkIxBs=" />
 </div>
 
 <div>
@@ -43,7 +43,7 @@
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="65E7F3AF" />
 	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAvYZVNSKhy8QHNDwk0p5FzVmwl+2pJif24TFlCYJmIXIl/gO/QVC1T/wiUViQydix9SdWKua+kuycmHbAyjiRJjwmFSOh8/ySvnAoZSLeaPVhyz0JJOGx76ytgycZKrFSZoNGDmzaDwGwM8Anu/EkuVzg/fcnGvVCogB5CKVgw8eJlgRGxm1XxjmYmifWPpXS0JgD8NAdMez9DuNAOU7FAd1R5PFcjHVETxvfh94jM7hQt3c7+DK2bbIHf7N/bacCRdrGL9YcBJgGs6/mX5R7ae" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAum46cDgx8cXrxey5CWhAt6mwl+2pJif24TFlCYJmIXIl/gO/QVC1T/wiUViQydix9SdWKua+kuycmHbAyjiRJjwmFSOh8/ySvnAoZSLeaPVhyz0JJOGx76ytgycZKrFSZoNGDmzaDwGwM8Anu/EkuVzg/fcnGvVCogB5CKVgw8eJlgRGxm1XxjmYmifWPpXS0JgD8NAdMez9DuNAOU7FAd1R5PFcjHVETxvfh94jM7hUCqEb9O6VbDokGlAbevW3RT1es0VvvOeO+CfP86KVuJ" />
 </div>
 
 <div id="PrintHeader"><img src="/images/logo.png" alt="Caledon Public Library" /></div>
@@ -106,7 +106,8 @@
                 <li class="Children"><a href="/children/default.aspx">CHILDREN</a></li>
                 <li class="Teens"><a href="/teens/default.aspx">TEENS</a></li>
                 <li class="Lending"><a href="/lending/default.aspx">LENDING</a></li>
-                <li class="Calendar"><a href="/calendar/default.aspx">CALENDAR</a></li>
+                <!-- <li class="Calendar"><a href="/calendar/default.aspx">CALENDAR</a></li> -->
+                <li class="Calendar"><a href="http://engagedpatrons.org/EventsCalendar.cfm?SiteID=8142">CALENDAR</a></li>
             </ul>
         </div>
 	</div><!-- end Wrapper -->
@@ -123,6 +124,10 @@
 		
     <h4>
 	Caledon Public Library is enormously proud to service the Caledon and neighbouring communities with seven (7)&nbsp;branches.&nbsp; Conveniently located across Caledon, &quot;you&#39;re never more than 15 minutes away from a library branch!&quot;</h4>
+<h2 style="font-size: 21px; padding-top: 2px; line-height: 23px">
+	Have a question? We&#39;ve got answers.</h2>
+<p>
+	Send Us A Text: (416) 828 7086. <a href="http://caledon.library.on.ca/ask-librarian/default.aspx">Click here</a> to learn more.</p>
 <div class="HR">
 	<hr />
 	<p style="text-align: center">
@@ -131,7 +136,7 @@
 		&nbsp;</p>
 </div>
 <h4>
-	<span style="color: rgb(10, 148, 214); font-size: 20px; line-height: 22px;">Albion-Bolton Branch</span></h4>
+	<span style="font-size: 20px; color: rgb(10,148,214); line-height: 22px">Albion-Bolton Branch</span></h4>
 <div class="ImageFloatRight">
 	<p>
 		<img alt="Albion-Bolton Branch" height="167" src="/uploads/userfiles/images/albion-bolton.jpg" width="251" /></p>
@@ -192,12 +197,14 @@
 <h3>
 	Hours Of Operation</h3>
 <p>
-	*New hours <a href="/uploads/userfiles/files/Caledon%20Public%20Library%20-%20Belfountain%20Hours%20-%20Media%20Release.pdf" target="_blank">pilot project</a>&nbsp;until June 2016.</p>
+	*New hours <a href="/uploads/userfiles/files/Caledon%20Public%20Library%20-%20Belfountain%20Hours%20-%20Media%20Release.pdf" target="_blank">pilot project</a>&nbsp;extended until September 2016</p>
 <p>
 	Tuesday: 4pm &ndash; 8pm<br />
 	Saturday: 10am &ndash; 4pm</p>
 <p>
-	(Also open Thursdays 10am &ndash; 2pm during the March Break).</p>
+	*Thursdays 10am - 2pm during July and August</p>
+<p>
+	&nbsp;</p>
 <div class="HR">
 	<hr />
 </div>
@@ -318,7 +325,7 @@
 <div class="SideNav">
     
     <h2><a id="ctl00_ctl00_ContentPlaceHolder_Content_ContentPlaceHolder_SideNav_Layout_SideNav_HyperLink_BasePage" href="/about/default.aspx">About Us</a></h2>
-    <ul><li><a class='Active' href='/about/branches.aspx'>Branch Hours & Locations</a></li><li><a href='/about/accessibility.aspx'>Accessibility</a></li><li><a href='/about/board/default.aspx'>Library Board and Policies</a><ul><li><a href='/about/board/meeting-schedule.aspx'>Board Meeting Schedule & Minutes</a></li></ul></li><li><a href='/about/partnerships.aspx'>Community Partnerships </a><ul><li><a href='/community partnerships/CCSjobscaledon.aspx'>CCS Jobs Caledon - Satellite Services</a></li><li><a href='/community partnerships/volunteermbc/details.aspx'>Volunteer MBC - Caledon Centre</a></li><li><a href='/community partnerships/Passes'>PAMA / TRCA & CVC ~ Free Family Passes </a></li></ul></li><li><a href='/aboutus/customersatisfactionsurvey.aspx'>Customer Satisfaction Survey</a></li><li><a href='/about/donations.aspx'>Donations</a></li><li><a href='/about/volunteering.aspx'>Employment and Volunteer Opportunities</a></li><li><a href='/about/informationtechnologyservices.aspx'>Information Technology Services</a></li><li><a href='/about/mediareleases.aspx'>Media Releases</a></li><li><a href='/about/recycling.aspx'>Recycling</a></li><li><a href='/about/services.aspx'>Services</a></li><li><a href='/about/archive/default.aspx'>eNews Archive</a></li><li><a href='/about/culture.aspx'>Culture Is Your Library</a></li></ul>
+    <ul><li><a class='Active' href='/about/branches.aspx'>Branch Hours & Locations</a></li><li><a href='/about/accessibility.aspx'>Accessibility</a></li><li><a href='/about/board/default.aspx'>Library Board and Policies</a><ul><li><a href='/about/board/meeting-schedule.aspx'>Board Meeting Schedule & Minutes</a></li></ul></li><li><a href='/about/partnerships.aspx'>Community Partnerships </a><ul><li><a href='/community partnerships/CCSjobscaledon.aspx'>CCS Jobs Caledon </a></li><li><a href='/community partnerships/volunteermbc/details.aspx'>Volunteer MBC - Caledon Centre</a></li><li><a href='/community partnerships/Passes'>PAMA / TRCA & CVC ~ Free Family Passes </a></li></ul></li><li><a href='/about/donations.aspx'>Donations</a></li><li><a href='/about/volunteering.aspx'>Employment and Volunteer Opportunities</a></li><li><a href='/about/informationtechnologyservices.aspx'>Information Technology Services</a></li><li><a href='/about/mediareleases.aspx'>Media Releases</a></li><li><a href='/about/recycling.aspx'>Recycling</a></li><li><a href='/about/services.aspx'>Services</a></li><li><a href='/about/archive/default.aspx'>eNews Archive</a></li><li><a href='/about/culture.aspx'>Culture Is Your Library</a></li><li><a href='/about/2015report.aspx'>Annual Report 2015</a></li><li><a href='/about/registration.aspx'>Online Program Registration</a></li></ul>
 </div>
 
 <a id="ctl00_ctl00_ContentPlaceHolder_Content_ContentPlaceHolder_SideNav_Layout_SideNav_HyperLink_Librarian" href="../ask-librarian/default.aspx"><img id="ctl00_ctl00_ContentPlaceHolder_Content_ContentPlaceHolder_SideNav_Layout_SideNav_Image_AskLibrarian" class="AskLibrarian" src="../images/ask-librarian-adult.jpg" alt="Ask a Librarian" style="border-width:0px;" /></a>
@@ -348,7 +355,7 @@
         
         <div class="FooterLinks">
             <p class="TextSize">Text Size: <a href="javascript:setActiveStyleSheet('default');">S</a> <a class="Medium" href="javascript:setActiveStyleSheet('medium');">M</a> <a class="Large Last" href="javascript:setActiveStyleSheet('large');">L</a></p>
-            <p class="SiteLinks"><a href="/contact/default.aspx">Contact Us</a> | <a href="http://caledon.countingopinions.com/" target="_blank">Customer Survey</a> | <a href="http://www.caledon.ca/jobs/" target="_blank">Employment Opportunities</a> | <a href="/sitemap.aspx">Site Map</a> | <a class="Last" href="/staff/signin.aspx">Staff Login</a></p>
+            <p class="SiteLinks"><a href="/contact/default.aspx">Contact Us</a> <!--| <a href="http://caledon.countingopinions.com/" target="_blank">Customer Survey</a>--> | <a href="http://www.caledon.ca/jobs/" target="_blank">Employment Opportunities</a> | <a href="/sitemap.aspx">Site Map</a> | <a class="Last" href="/staff/signin.aspx">Staff Login</a></p>
         </div>            
     </div><!-- end Wrapper -->
     

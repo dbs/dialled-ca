@@ -7,16 +7,16 @@
     <meta name="generator" content="LANEC Solutions Web 2012" />
     <meta name="revisit-after" content="14 days" /><meta http-equiv="Content-Language" content="fr_CA" />
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" /><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="/themes/style.css?v=2.245" rel='stylesheet' type='text/css' />
-    <link href="/themes/contenu.css?v=2.245" rel='stylesheet' type='text/css' />
-    <link href="/themes/style-new.css?v=2.245" rel='stylesheet' type='text/css' />
+    <link href="/themes/style.css?v=2.247" rel='stylesheet' type='text/css' />
+    <link href="/themes/contenu.css?v=2.247" rel='stylesheet' type='text/css' />
+    <link href="/themes/style-new.css?v=2.247" rel='stylesheet' type='text/css' />
     <!--[if IE 9]>
-    <link href="/themes/style_IE9.css?v=2.245" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE9.css?v=2.247" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if IE 8]>
-    <link href="/themes/style_IE8.css?v=2.245" rel="stylesheet" type="text/css" />
+    <link href="/themes/style_IE8.css?v=2.247" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link href="/themes/print.css?v=2.245" rel='stylesheet' type='text/css' media="print" />
+    <link href="/themes/print.css?v=2.247" rel='stylesheet' type='text/css' media="print" />
     <link href="http://fonts.googleapis.com/css?family=Vollkorn|Lato:normal,bold|Amaranth|Actor|Open+Sans|Droid+Sans|Open+Sans|Days+One" rel="stylesheet" type="text/css" /><link href="/saguenay-lac-saint-jean/fr/rss/nouvelles.aspx" rel="alternate" type="application/rss+xml" title="Réseau BIBLIO du Saguenay-Lac-Saint-Jean" />
     <meta property="og:title" content="Réseau BIBLIO du Saguenay-Lac-Saint-Jean" />
     <meta property="og:image" content="http://www.mabibliotheque.ca/images/facebook/partage.jpg" />
@@ -25,7 +25,7 @@
     <meta property="og:description" content="" />
 
 <style type="text/css">
-  .imgEnteteContenu { background:#D69038 url(/images/entete/entete_fleurs.jpg) no-repeat center top; height:35px;}
+  .imgEnteteContenu { background:#815226 url(/images/entete/entete_automne.jpg) no-repeat center top; height:35px;}
 </style>
 
 
@@ -167,12 +167,6 @@
       "Section": "Autres liens",
       "Liste": [
         {
-          "Nom": "Google.ca",
-          "URL": "http://www.google.ca",
-          "Methode": null,
-          "Parametres": null
-        },
-        {
           "Nom": "Loi 51",
           "URL": "http://www.mcc.gouv.qc.ca/index.php?id=4436",
           "Methode": null,
@@ -187,6 +181,18 @@
         {
           "Nom": "Ministère Culture et Communications",
           "URL": "http://www.mcc.gouv.qc.ca/",
+          "Methode": null,
+          "Parametres": null
+        },
+        {
+          "Nom": "Club de lecture d’été TD",
+          "URL": "http://www.clubdelecturetd.ca/",
+          "Methode": null,
+          "Parametres": null
+        },
+        {
+          "Nom": "ASTED",
+          "URL": "http://asted.org/",
           "Methode": null,
           "Parametres": null
         }
@@ -257,7 +263,7 @@
   "LienAccesPrive": "http://www.reseaubiblioduquebec.qc.ca/login.aspx?Type=2&RID=10",
   "TitreAccessPrive": null,
   "LienExtranet": null,
-  "LienAutre": "/gestion/connexion/gestion/calendrier-des-activites-du-reseau",
+  "LienAutre": "/saguenay-lac-saint-jean/fr/calendrier-des-activites-du-reseau",
   "LienAutreNom": "Calendrier – activités",
   "LogoGestion": "/images/entete/logo/SLSJ.png",
   "LogoGestionAlt": "Réseau BIBLIO SLSJ",
@@ -379,7 +385,7 @@
   "FormationSingulier": "Activité",
   "FormationPluriel": "Activités",
   "NbJoursAvantFermetureInscriptionParDefaut": 2,
-  "CalendrierFormationsAccessibleHorsLigne": false,
+  "CalendrierFormationsAccessibleHorsLigne": true,
   "CalendrierFormationsLibelleBoutonInscription": "Inscription",
   "FormationSingulierLower": "activité",
   "FormationPlurielLower": "activités"
@@ -402,7 +408,7 @@
     
     <script language="javascript" type="text/javascript" src="/scripts/jquery.cycle.all.min.js"></script>
     
-        <script language="javascript" type="text/javascript" src="/scripts/promo_accueil.js?v=2.245"></script>
+        <script language="javascript" type="text/javascript" src="/scripts/promo_accueil.js?v=2.247"></script>
     
     <style type="text/css">
         .btRSSInfolettre
@@ -444,7 +450,7 @@
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjc2MDI0MjIwD2QWAmYPZBYCZg9kFgRmD2QWDgIBDxYCHgdjb250ZW50ZGQCAg8WBB8AZB4HVmlzaWJsZWhkAgMPFgIfAWhkAgUPFgIeBFRleHQFODxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtTGFuZ3VhZ2UiIGNvbnRlbnQ9ImZyX0NBIiAvPgoNZAIJDxYCHwIFmwE8bGluayBocmVmPSIvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIGR1IFNhZ3VlbmF5LUxhYy1TYWludC1KZWFuIiAvPmQCCg8WAh8CBbcDDQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkdSBTYWd1ZW5heS1MYWMtU2FpbnQtSmVhbiIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvaW1hZ2VzL2ZhY2Vib29rL3BhcnRhZ2UuanBnIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp1cmwiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2Evc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvaW5kZXguYXNweCIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkdSBTYWd1ZW5heS1MYWMtU2FpbnQtSmVhbiIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6ZGVzY3JpcHRpb24iIGNvbnRlbnQ9IiIgLz4NCmQCCw8WAh8CBZUBCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CiAgLmltZ0VudGV0ZUNvbnRlbnUgeyBiYWNrZ3JvdW5kOiNENjkwMzggdXJsKC9pbWFnZXMvZW50ZXRlL2VudGV0ZV9mbGV1cnMuanBnKSBuby1yZXBlYXQgY2VudGVyIHRvcDsgaGVpZ2h0OjM1cHg7fQo8L3N0eWxlPgpkAgEPFgIeBmFjdGlvbgUmL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2luZGV4LmFzcHgWGgIBDw8WAh4LTmF2aWdhdGVVcmwFJi9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9pbmRleC5hc3B4ZBYCZg8PFgIeCEltYWdlVXJsBSAvaW1hZ2VzL2VudGV0ZS9sb2dvL1NMU0oucG5nP3Y9MmRkAgIPDxYCHwUFIi9pbWFnZXMvZW50ZXRlL2xvZ28vcHJpbnQvU0xTSi5qcGdkZAIDDxYCHgtfIUl0ZW1Db3VudAIFFgoCAQ9kFgICAw8PFgYfAgUHQWNjdWVpbB4GVGFyZ2V0BQVfc2VsZh8EBSYvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvaW5kZXguYXNweGRkAgIPZBYCAgMPDxYGHwIFCkxlIFLDqXNlYXUfBwUFX3NlbGYfBAUwL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2xlLXJlc2VhdS9pbmRleC5hc3B4ZGQCAw9kFgICAw8PFgYfAgUDRkFRHwcFBV9zZWxmHwQFKi9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9mYXEvaW5kZXguYXNweGRkAgQPZBYCAgMPDxYGHwIFDUFjY8OocyBwcml2w6kfBwUFX3NlbGYfBAU8L3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2xlLXJlc2VhdS9hY2Nlcy1wcml2ZS9pbmRleC5hc3B4ZGQCBQ9kFgQCAQ8WAh8CBRBpZD0iZGVybmllckl0ZW0iZAIDDw8WBh8CBQxOb3VzIGpvaW5kcmUfBwUFX3NlbGYfBAUzL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL25vdXMtam9pbmRyZS9pbmRleC5hc3B4ZGQCBA8PFgwfBwUGX2JsYW5rHwIFKU1vbiBkb3NzaWVyIGQndXNhZ2VyIDxzcGFuPiYjOTY1NDs8L3NwYW4+HgdUb29sVGlwBRRNb24gZG9zc2llciBkJ3VzYWdlch8EBSRodHRwOi8vaWJpc3Ryby1zbHNqLnJlc2VhdWJpYmxpby5jYS8eCENzc0NsYXNzBQ1idEFqb3V0ZXJDc3MgHgRfIVNCAgIWAh4Hb25jbGljawVQX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnRW50w6p0ZScsICdNb24gZG9zc2llciBkIHVzYWdlciddKTtkAgYPFgIfAgWvATxkaXYgY2xhc3M9ImZiLWxpa2UiIGRhdGEtaHJlZj0iaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Jlc2VhdWJpYmxpb1NMU0oiIGRhdGEtbGF5b3V0PSJidXR0b25fY291bnQiIGRhdGEtY29sb3JzY2hlbWU9ImRhcmsiIGRhdGEtc2hvdy1mYWNlcz0iZmFsc2UiIGRhdGEtYWN0aW9uPSJsaWtlIj48L2Rpdj5kAggPFgIfBgIFFgoCAQ9kFgQCAQ8WAh8CBRFjbGFzcz0iY2F0YWxvZ3VlImQCAw8PFgQfAgUqPHN0cm9uZz5DYXRhbG9ndWU8L3N0cm9uZz48YnIgLz4NCmVuIGxpZ25lHwQFJGh0dHA6Ly9pYmlzdHJvLXNsc2oucmVzZWF1YmlibGlvLmNhL2RkAgIPZBYEAgEPFgIfAgUYY2xhc3M9ImxpdnJlc1Jlc3NvdXJjZXMiZAIDDw8WBh8CBUE8c3Ryb25nPkxpdnJlcyAmYW1wOzxiciAvPg0KcmVzc291cmNlczwvc3Ryb25nPjxiciAvPiBudW3DqXJpcXVlcx8HBQVfc2VsZh8EBUYvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvbGl2cmVzLWV0LXJlc3NvdXJjZXMtbnVtZXJpcXVlcy9pbmRleC5hc3B4ZGQCAw9kFgQCAQ8WAh8CBQxjbGFzcz0icHJldCJkAgMPDxYGHwIFOjxzdHJvbmc+UHImIzIzNDt0IGVudHJlPC9zdHJvbmc+PGJyIC8+DQpiaWJsaW90aCYjMjMyO3F1ZXMfBwUFX3NlbGYfBAU/L3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3ByZXQtZW50cmUtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4ZGQCBA9kFgQCAQ8WAh8CBRJjbGFzcz0iZXZlbmVtZW50cyJkAgMPDxYGHwIFPTxzdHJvbmc+QWN0aXZpdCYjMjMzO3M8L3N0cm9uZz48YnIgLz4NCmRlcyBiaWJsaW90aCYjMjMyO3F1ZXMfBwUFX3NlbGYfBAVCL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2FjdGl2aXRlcy1kZXMtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4ZGQCBQ9kFgQCAQ8WAh8CBRVjbGFzcz0iYmlibGlvdGhlcXVlcyJkAgMPDxYGHwIFQjxzdHJvbmc+QmlibGlvdGgmIzIzMjtxdWVzPC9zdHJvbmc+PGJyIC8+DQpIb3JhaXJlIGV0IGxvY2FsaXNhdGlvbh8HBQVfc2VsZh8EBUwvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvYmlibGlvdGhlcXVlcy1ob3JhaXJlLWV0LWxvY2FsaXNhdGlvbi9pbmRleC5hc3B4ZGQCCQ9kFgICAQ9kFgICAQ8WAh8GAgQWCAIBD2QWAmYPFgIfAgXdBDxkaXYgaWQ9ImZvbmRfZmFjZWJvb2tUd2l0dGVyIiBjbGFzcz0icHJvbW9GYWNlYm9va1R3aXR0ZXIiPgogIDxkaXYgY2xhc3M9InRpdHJlIiBzdHlsZT0ibWFyZ2luLWJvdHRvbTo4cHg7Ij4KICAgIDxlbT5BY3R1YWxpdMOpcywgc3VnZ2VzdGlvbnMgZGUgbGVjdHVyZSwgbm91dmVsbGVzIGR1IHLDqXNlYXUuLjwvZW0+CiAgICA8YnIgLz4KICAgIDxzdHJvbmcgc3R5bGU9ImZvbnQtc2l6ZToxLjFlbTsiPlN1aXZlei1ub3VzIHN1ciBGYWNlYm9vayA8YnIgLz4KZXQgVHdpdHRlciBwb3VyIHRvdXQgc2F2b2lyITwvc3Ryb25nPgogIDwvZGl2PgogIDxkaXYgY2xhc3M9InRpdHJlIiBzdHlsZT0ibWFyZ2luLWJvdHRvbToxNnB4OyI+Ck9uIHZvdXMgeSBhdHRlbmQhPC9kaXY+CiAgPHNwYW4gY2xhc3M9InRleHRlTGllbiI+QWNjw6lkZXIgw6Agbm90cmUgcGFnZSZuYnNwOzxhIGhyZWY9Imh0dHA6Ly93d3cuZmFjZWJvb2suY29tL3Jlc2VhdWJpYmxpb1NMU0oiIHRhcmdldD0iX2JsYW5rIj5GYWNlYm9vazwvYT4gb3UgPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9yZXNlYXViaWJsaW8iIHRhcmdldD0iX2JsYW5rIj5Ud2l0dGVyPC9hPjwvc3Bhbj4KPC9kaXY+ZAICD2QWAmYPFgIfAgWcAjxkaXYgaWQ9ImZvbmRfbGl2cmVzX251bWVyaXF1ZXMiIGNsYXNzPSJwcm9tbzAyIj4NCiAgPGRpdiBjbGFzcz0idGl0cmUiPkRlcyA8c3Ryb25nPmxpdnJlcyBudW3DqXJpcXVlczwvc3Ryb25nPjxiciAvPiBwb3VyIHRvdXMgbGVzIGdvw7t0cyAhPC9kaXY+DQogIDxhIGhyZWY9Ii9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9saXZyZXMtZXQtcmVzc291cmNlcy1udW1lcmlxdWVzL2luZGV4LmFzcHgiPlZvaXIgbGUgcsOpcGVydG9pcmUgZGUgbGl2cmVzIG51bcOpcmlxdWVzPC9hPg0KPC9kaXY+ZAIDD2QWAmYPFgIfAgWvCTxkaXYgaWQ9ImZvbmRfYm9va215bmUiIGNsYXNzPSJwcm9tbzA0Ij4NCiAgPGRpdiBjbGFzcz0idGl0cmUiIHN0eWxlPSJtYXJnaW4tYm90dG9tOjE2cHg7Ij4NCiAgICA8c3Ryb25nIHN0eWxlPSJmb250LXNpemU6MS4xZW07Ij5BY2MmIzIzMztkZXogJiMyMjQ7IG5vdHJlIGNhdGFsb2d1ZSBhdmVjPGJyIC8+DQp2b3RyZSBhcHBhcmVpbCBtb2JpbGUgITwvc3Ryb25nPg0KICAgIDxiciAvPg0KICAgIDxzcGFuIHN0eWxlPSJmb250LXNpemU6MC45ZW07Ij5UJiMyMzM7bCYjMjMzO2NoYXJnZXogbCYjODIxNzthcHBsaWNhdGlvbiBCb29rTXluZTwvc3Bhbj4NCiAgPC9kaXY+DQogIDxkaXYgY2xhc3M9ImJ0QXBwU3RvcmUiPg0KICAgIDxhIGhyZWY9Imh0dHA6Ly9pdHVuZXMuYXBwbGUuY29tL2NhL2FwcC9ib29rbXluZS9pZDM1MDYyNTQ2MT9tdD04IiB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9IkFwcCBTdG9yZSI+DQogICAgPC9hPg0KICA8L2Rpdj4NCiAgPGRpdiBjbGFzcz0iYnRHb29nbGVQbGF5Ij4NCiAgICA8YSBocmVmPSJodHRwczovL3BsYXkuZ29vZ2xlLmNvbS9zdG9yZS9hcHBzL2RldGFpbHM/aWQ9c2lyc2lkeW5peC5ib29rbXluZSIgdGFyZ2V0PSJfYmxhbmsiIHRpdGxlPSJHb29nbGUgUGxheSI+DQogICAgPC9hPg0KICA8L2Rpdj4NCiAgPGRpdiBzdHlsZT0iZmxvYXQ6bGVmdDsiPg0KICAgIDxhIGhyZWY9Ii9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9ib29rbXluZS9pbmRleC5hc3B4Ij4NCiAgICAgIDxpbWcgYWx0PSJFbiBzYXZvaXIgcGx1cyIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2FwaXRhbGUtbmF0aW9uYWxlL2ZyYW5jYWlzL2ltYWdlcy9wcm9tby9idF9zYXZvaXJQbHVzLnBuZyIgb25tb3VzZW92ZXI9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2FwaXRhbGUtbmF0aW9uYWxlL2ZyYW5jYWlzL2ltYWdlcy9wcm9tby9idF9zYXZvaXJQbHVzX292ZXIucG5nJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jYXBpdGFsZS1uYXRpb25hbGUvZnJhbmNhaXMvaW1hZ2VzL3Byb21vL2J0X3Nhdm9pclBsdXMucG5nJyI+DQogICAgICA8L2ltZz4NCiAgICA8L2E+DQogIDwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJjbGVhciI+DQogIDwvZGl2Pg0KPC9kaXY+ZAIED2QWAmYPFgIfAgWhAzxkaXYgaWQ9ImZvbmRfaGV1cmVDb250ZSIgY2xhc3M9InByb21vMDMiPg0KICA8ZGl2IGNsYXNzPSJ0aXRyZSIgc3R5bGU9Im1hcmdpbi1ib3R0b206OHB4OyI+DQogICAgPHN0cm9uZyBzdHlsZT0iZm9udC1zaXplOjEuMWVtOyI+Q+KAmWVzdCBs4oCZaGV1cmUgZHUgY29udGUhPC9zdHJvbmc+DQogIDwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJ0aXRyZSIgc3R5bGU9Im1hcmdpbi1ib3R0b206MTZweDsiPiDigKZEYW5zIHVuZSBiaWJsaW90aMOocXVlIHB1YmxpcXVlJm5ic3A7PGJyIC8+IHByw6hzIGRlIGNoZXogdm91cyE8L2Rpdj4NCiAgPGEgaHJlZj0iL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2FjdGl2aXRlcy1kZXMtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4Ij5BY2PDqWRlciBhdXggYWN0aXZpdMOpczwvYT4NCjwvZGl2PmQCCg8PFgIfAWhkFgICAQ8PFgIfAgUHQWNjdWVpbGRkAgsPZBYEZg8PZBYCHgpkYXRhLXRpdGxlBRpBYm9ubmVtZW50IMOgIGwnaW5mb2xldHRyZWQCAQ9kFgICAQ8PFgIfBAUuL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3Jzcy9ub3V2ZWxsZXMuYXNweGRkAgwPZBYCAgEPZBYOZg8WAh8CBQ5RdW9pIGRlIG5ldWYgP2QCAQ8PFgIfBAUuL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3Jzcy9ub3V2ZWxsZXMuYXNweGRkAgIPDxYCHwQFPy9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9pbnNjcmlwdGlvbi1hLWluZm9sZXR0cmUvaW5kZXguYXNweBYCHwwFGkFib25uZW1lbnQgw6AgbCdpbmZvbGV0dHJlZAIDDxYCHwYCAhYEAgEPZBYCZg8VBA0xNCBhdnJpbCAyMDE2Si9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9xdW9pLWRlLW5ldWYvMjAxNi8wNC91bi1saXZyZS1ldC11bmUtcm9zZS5hc3B4FFVuIGxpdnJlIGV0IHVuZSByb3NlAGQCAg9kFgJmDxUEDTE0IGF2cmlsIDIwMTZTL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3F1b2ktZGUtbmV1Zi8yMDE2LzA0L2xhLWJpYmxpby12ZW50ZS1jLWVzdC1iaWVudG90LmFzcHghTGEgQklCTElPLVZFTlRFLCBjJ2VzdCBiaWVudMO0dCAhAGQCBA8PFgQfBAU7L3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3F1b2ktZGUtbmV1Zi8yMDE2LzA0L2luZGV4LmFzcHgfAgUZVm9pciB0b3V0ZXMgbGVzIG5vdXZlbGxlc2RkAgYPFgIfAgUoUHJvY2hhaW5lcyBhY3Rpdml0w6lzIGRlcyBiaWJsaW90aMOocXVlc2QCBw8WAh8GAgEWAgIBD2QWAgIBDxYCHwIFvwM8c2NyaXB0PihmdW5jdGlvbih0LGUsbixvKXt2YXIgcyxjLHI7dC5TTUNYPXQuU01DWHx8W10sZS5nZXRFbGVtZW50QnlJZChvKXx8KHM9ZS5nZXRFbGVtZW50c0J5VGFnTmFtZShuKSxjPXNbcy5sZW5ndGgtMV0scj1lLmNyZWF0ZUVsZW1lbnQobiksci50eXBlPSJ0ZXh0L2phdmFzY3JpcHQiLHIuYXN5bmM9ITAsci5pZD1vLHIuc3JjPVsiaHR0cHM6Ij09PWxvY2F0aW9uLnByb3RvY29sPyJodHRwczovLyI6Imh0dHA6Ly8iLCJ3aWRnZXQuc3VydmV5bW9ua2V5LmNvbS9jb2xsZWN0L3dlYnNpdGUvanMvVzlnbEo3RzAwbFptNUhfMkZmZXhyMlJMZ0dySDJiSWJ2MHZLMENMZG9xWnBhcU10VE1uck9KV3VBenkzdzRONmxDLmpzIl0uam9pbigiIiksYy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShyLGMpKX0pKHdpbmRvdyxkb2N1bWVudCwic2NyaXB0Iiwic21jeC1zZGsiKTs8L3NjcmlwdD5kAg0PDxYCHwFnZBYCAgEPDxYCHwQFKWh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9yZXNlYXViaWJsaW9TTFNKFgIfCwVJX2dhcS5wdXNoKFsnX3RyYWNrRXZlbnQnLCAnTGllbnMgc29ydGFudHMnLCAnUGllZCBkZSBwYWdlJywgJ0ZhY2Vib29rJ10pO2QCEg8WAh8GAgMWBmYPZBYCAgEPFgIfAgXoBDxhIGhyZWY9Imh0dHA6Ly93d3cuYmFucS5xYy5jYS9hcHBlbF9udW1lcmlzYXRpb24vaW5kZXguaHRtbCIgdGFyZ2V0PSJfYmxhbmsiIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBcHBlbCBudW0mIzIzMztyaXNhdGlvbiddKTsiPg0KICA8aW1nIG9ubW91c2VvdmVyPSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYXBwZWxfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYXBwZWwuanBnJyIgYWx0PSJTaWduZXogbCdBcHBlbCBwb3VyIGxhIG51bSYjMjMzO3Jpc2F0aW9uIGR1IFBhdHJpbW9pbmUgY3VsdHVyZWwgcXUmIzIzMztiJiMyMzM7Y29pcyIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9hcHBlbC5qcGciPg0KICA8L2ltZz4NCjwvYT5kAgEPZBYCAgEPFgIfAgWzBDxhIGhyZWY9Imh0dHA6Ly93d3cubWNjY2YuZ291di5xYy5jYS9pbmRleC5waHA/aWQ9NDQzNiIgdGFyZ2V0PSJfYmxhbmsiIG9uY2xpY2s9Il9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdMb2kgNTEnXSk7Ij4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxX292ZXIuanBnJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxLmpwZyciIGFsdD0iTG9pIDUxIC0gTnVsIG4nZXN0IGNlbnMmIzIzMzsgaWdub3JlciBsYSBsb2kgZHUgbGl2cmUiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvbG9pNTEuanBnIj4NCiAgPC9pbWc+DQo8L2E+ZAICD2QWAgIBDxYCHwIFmwQ8YSBocmVmPSIvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvcHJlc2VudGF0aW9uLWNvcnBvcmF0aXZlL3ByaXgtZC1leGNlbGxlbmNlLWdlcmFyZC1kZXNyb3NpZXJzL2luZGV4LmFzcHgiPg0KICA8aW1nIG9ubW91c2VvdmVyPSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVyc19vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9nZXJhcmRkZXNyb3NpZXJzLmpwZyciIGFsdD0iUHJpeCBkJ2V4Y2VsbGVuY2UgRyYjMjMzO3JhcmQgRGVzcm9zaWVycyIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9nZXJhcmRkZXNyb3NpZXJzLmpwZyI+DQogIDwvaW1nPg0KPC9hPmQCFQ9kFgYCAQ8WAh8BaGQCAw9kFgJmDxYKHglpbm5lcmh0bWwFFUFjYyYjMjMyO3MgcHJpdiYjMjMzOx4FdGl0bGUFDUFjY8OocyBwcml2w6keBGhyZWYFPmh0dHA6Ly93d3cucmVzZWF1YmlibGlvZHVxdWViZWMucWMuY2EvbG9naW4uYXNweD9UeXBlPTImUklEPTEwHwsFTl9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdBY2PDqHMgcHJpdsOpJ10pOx4GdGFyZ2V0BQZfYmxhbmtkAgUPZBYCZg8WBh8NBR1DYWxlbmRyaWVyIOKAkyBhY3Rpdml0JiMyMzM7cx8OBRlDYWxlbmRyaWVyIOKAkyBhY3Rpdml0w6lzHw8FPS9nZXN0aW9uL2Nvbm5leGlvbi9nZXN0aW9uL2NhbGVuZHJpZXItZGVzLWFjdGl2aXRlcy1kdS1yZXNlYXVkZAok2ncENy4S5+8fL1qr+eaT2/3X1xShxh8RDoEHDpPM" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjc2MDI0MjIwD2QWAmYPZBYCZg9kFgRmD2QWDgIBDxYCHgdjb250ZW50ZGQCAg8WBB8AZB4HVmlzaWJsZWhkAgMPFgIfAWhkAgUPFgIeBFRleHQFODxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtTGFuZ3VhZ2UiIGNvbnRlbnQ9ImZyX0NBIiAvPgoNZAIJDxYCHwIFmwE8bGluayBocmVmPSIvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvcnNzL25vdXZlbGxlcy5hc3B4IiByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcnNzK3htbCIgdGl0bGU9IlLDqXNlYXUgQklCTElPIGR1IFNhZ3VlbmF5LUxhYy1TYWludC1KZWFuIiAvPmQCCg8WAh8CBbcDDQogICAgPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkdSBTYWd1ZW5heS1MYWMtU2FpbnQtSmVhbiIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2EvaW1hZ2VzL2ZhY2Vib29rL3BhcnRhZ2UuanBnIiAvPg0KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp1cmwiIGNvbnRlbnQ9Imh0dHA6Ly93d3cubWFiaWJsaW90aGVxdWUuY2Evc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvaW5kZXguYXNweCIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJSw6lzZWF1IEJJQkxJTyBkdSBTYWd1ZW5heS1MYWMtU2FpbnQtSmVhbiIgLz4NCiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6ZGVzY3JpcHRpb24iIGNvbnRlbnQ9IiIgLz4NCmQCCw8WAh8CBZYBCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CiAgLmltZ0VudGV0ZUNvbnRlbnUgeyBiYWNrZ3JvdW5kOiM4MTUyMjYgdXJsKC9pbWFnZXMvZW50ZXRlL2VudGV0ZV9hdXRvbW5lLmpwZykgbm8tcmVwZWF0IGNlbnRlciB0b3A7IGhlaWdodDozNXB4O30KPC9zdHlsZT4KZAIBDxYCHgZhY3Rpb24FJi9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9pbmRleC5hc3B4FhoCAQ8PFgIeC05hdmlnYXRlVXJsBSYvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvaW5kZXguYXNweGQWAmYPDxYCHghJbWFnZVVybAUgL2ltYWdlcy9lbnRldGUvbG9nby9TTFNKLnBuZz92PTJkZAICDw8WAh8FBSIvaW1hZ2VzL2VudGV0ZS9sb2dvL3ByaW50L1NMU0ouanBnZGQCAw8WAh4LXyFJdGVtQ291bnQCBRYKAgEPZBYCAgMPDxYGHwIFB0FjY3VlaWweBlRhcmdldAUFX3NlbGYfBAUmL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2luZGV4LmFzcHhkZAICD2QWAgIDDw8WBh8CBQpMZSBSw6lzZWF1HwcFBV9zZWxmHwQFMC9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9sZS1yZXNlYXUvaW5kZXguYXNweGRkAgMPZBYCAgMPDxYGHwIFDE5vdXMgam9pbmRyZR8HBQVfc2VsZh8EBTMvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvbm91cy1qb2luZHJlL2luZGV4LmFzcHhkZAIED2QWAgIDDw8WBh8CBQNGQVEfBwUFX3NlbGYfBAUqL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2ZhcS9pbmRleC5hc3B4ZGQCBQ9kFgQCAQ8WAh8CBRBpZD0iZGVybmllckl0ZW0iZAIDDw8WBh8CBQ1BY2PDqHMgcHJpdsOpHwcFBV9zZWxmHwQFPC9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9sZS1yZXNlYXUvYWNjZXMtcHJpdmUvaW5kZXguYXNweGRkAgQPDxYMHwcFBl9ibGFuax8CBSlNb24gZG9zc2llciBkJ3VzYWdlciA8c3Bhbj4mIzk2NTQ7PC9zcGFuPh4HVG9vbFRpcAUUTW9uIGRvc3NpZXIgZCd1c2FnZXIfBAUkaHR0cDovL2liaXN0cm8tc2xzai5yZXNlYXViaWJsaW8uY2EvHghDc3NDbGFzcwUNYnRBam91dGVyQ3NzIB4EXyFTQgICFgIeB29uY2xpY2sFUF9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ0VudMOqdGUnLCAnTW9uIGRvc3NpZXIgZCB1c2FnZXInXSk7ZAIGDxYCHwIFrwE8ZGl2IGNsYXNzPSJmYi1saWtlIiBkYXRhLWhyZWY9Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9yZXNlYXViaWJsaW9TTFNKIiBkYXRhLWxheW91dD0iYnV0dG9uX2NvdW50IiBkYXRhLWNvbG9yc2NoZW1lPSJkYXJrIiBkYXRhLXNob3ctZmFjZXM9ImZhbHNlIiBkYXRhLWFjdGlvbj0ibGlrZSI+PC9kaXY+ZAIIDxYCHwYCBRYKAgEPZBYEAgEPFgIfAgURY2xhc3M9ImNhdGFsb2d1ZSJkAgMPDxYEHwIFKjxzdHJvbmc+Q2F0YWxvZ3VlPC9zdHJvbmc+PGJyIC8+DQplbiBsaWduZR8EBSRodHRwOi8vaWJpc3Ryby1zbHNqLnJlc2VhdWJpYmxpby5jYS9kZAICD2QWBAIBDxYCHwIFGGNsYXNzPSJsaXZyZXNSZXNzb3VyY2VzImQCAw8PFgYfAgVBPHN0cm9uZz5MaXZyZXMgJmFtcDs8YnIgLz4NCnJlc3NvdXJjZXM8L3N0cm9uZz48YnIgLz4gbnVtw6lyaXF1ZXMfBwUFX3NlbGYfBAVGL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2xpdnJlcy1ldC1yZXNzb3VyY2VzLW51bWVyaXF1ZXMvaW5kZXguYXNweGRkAgMPZBYEAgEPFgIfAgUMY2xhc3M9InByZXQiZAIDDw8WBh8CBTo8c3Ryb25nPlByJiMyMzQ7dCBlbnRyZTwvc3Ryb25nPjxiciAvPg0KYmlibGlvdGgmIzIzMjtxdWVzHwcFBV9zZWxmHwQFPy9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9wcmV0LWVudHJlLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweGRkAgQPZBYEAgEPFgIfAgUSY2xhc3M9ImV2ZW5lbWVudHMiZAIDDw8WBh8CBT08c3Ryb25nPkFjdGl2aXQmIzIzMztzPC9zdHJvbmc+PGJyIC8+DQpkZXMgYmlibGlvdGgmIzIzMjtxdWVzHwcFBV9zZWxmHwQFQi9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9hY3Rpdml0ZXMtZGVzLWJpYmxpb3RoZXF1ZXMvaW5kZXguYXNweGRkAgUPZBYEAgEPFgIfAgUVY2xhc3M9ImJpYmxpb3RoZXF1ZXMiZAIDDw8WBh8CBUI8c3Ryb25nPkJpYmxpb3RoJiMyMzI7cXVlczwvc3Ryb25nPjxiciAvPg0KSG9yYWlyZSBldCBsb2NhbGlzYXRpb24fBwUFX3NlbGYfBAVML3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2JpYmxpb3RoZXF1ZXMtaG9yYWlyZS1ldC1sb2NhbGlzYXRpb24vaW5kZXguYXNweGRkAgkPZBYCAgEPZBYCAgEPFgIfBgIEFggCAQ9kFgJmDxYCHwIFuQI8ZGl2IGlkPSJmb25kX2JlbmV2b2xlc0NOQ0EiIGNsYXNzPSJwcm9tb0JlbmV2b2xlc0NOQ0EiPg0KICA8ZGl2IGNsYXNzPSJ0aXRyZSIgc3R5bGU9Im1hcmdpbi1ib3R0b206OHB4OyI+DQogICAgPHN0cm9uZz5NZXJjaSBhdXggNDAwPC9zdHJvbmc+IGLDqW7DqXZvbGVzJm5ic3A7PHN0cm9uZz4hPC9zdHJvbmc+PC9kaXY+DQogIDxhIGhyZWY9Ii9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9ldHJlLWJlbmV2b2xlLWF1LXNlaW4tZHUtcmVzZWF1L2luZGV4LmFzcHgiPkxlIGLDqW7DqXZvbGF0IHZvdXMgaW50w6lyZXNzZSA/PC9hPg0KPC9kaXY+ZAICD2QWAmYPFgIfAgWcAjxkaXYgaWQ9ImZvbmRfbGl2cmVzX251bWVyaXF1ZXMiIGNsYXNzPSJwcm9tbzAyIj4NCiAgPGRpdiBjbGFzcz0idGl0cmUiPkRlcyA8c3Ryb25nPmxpdnJlcyBudW3DqXJpcXVlczwvc3Ryb25nPjxiciAvPiBwb3VyIHRvdXMgbGVzIGdvw7t0cyAhPC9kaXY+DQogIDxhIGhyZWY9Ii9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9saXZyZXMtZXQtcmVzc291cmNlcy1udW1lcmlxdWVzL2luZGV4LmFzcHgiPlZvaXIgbGUgcsOpcGVydG9pcmUgZGUgbGl2cmVzIG51bcOpcmlxdWVzPC9hPg0KPC9kaXY+ZAIDD2QWAmYPFgIfAgWvCTxkaXYgaWQ9ImZvbmRfYm9va215bmUiIGNsYXNzPSJwcm9tbzA0Ij4NCiAgPGRpdiBjbGFzcz0idGl0cmUiIHN0eWxlPSJtYXJnaW4tYm90dG9tOjE2cHg7Ij4NCiAgICA8c3Ryb25nIHN0eWxlPSJmb250LXNpemU6MS4xZW07Ij5BY2MmIzIzMztkZXogJiMyMjQ7IG5vdHJlIGNhdGFsb2d1ZSBhdmVjPGJyIC8+DQp2b3RyZSBhcHBhcmVpbCBtb2JpbGUgITwvc3Ryb25nPg0KICAgIDxiciAvPg0KICAgIDxzcGFuIHN0eWxlPSJmb250LXNpemU6MC45ZW07Ij5UJiMyMzM7bCYjMjMzO2NoYXJnZXogbCYjODIxNzthcHBsaWNhdGlvbiBCb29rTXluZTwvc3Bhbj4NCiAgPC9kaXY+DQogIDxkaXYgY2xhc3M9ImJ0QXBwU3RvcmUiPg0KICAgIDxhIGhyZWY9Imh0dHA6Ly9pdHVuZXMuYXBwbGUuY29tL2NhL2FwcC9ib29rbXluZS9pZDM1MDYyNTQ2MT9tdD04IiB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9IkFwcCBTdG9yZSI+DQogICAgPC9hPg0KICA8L2Rpdj4NCiAgPGRpdiBjbGFzcz0iYnRHb29nbGVQbGF5Ij4NCiAgICA8YSBocmVmPSJodHRwczovL3BsYXkuZ29vZ2xlLmNvbS9zdG9yZS9hcHBzL2RldGFpbHM/aWQ9c2lyc2lkeW5peC5ib29rbXluZSIgdGFyZ2V0PSJfYmxhbmsiIHRpdGxlPSJHb29nbGUgUGxheSI+DQogICAgPC9hPg0KICA8L2Rpdj4NCiAgPGRpdiBzdHlsZT0iZmxvYXQ6bGVmdDsiPg0KICAgIDxhIGhyZWY9Ii9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9ib29rbXluZS9pbmRleC5hc3B4Ij4NCiAgICAgIDxpbWcgYWx0PSJFbiBzYXZvaXIgcGx1cyIgc3JjPSIvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2FwaXRhbGUtbmF0aW9uYWxlL2ZyYW5jYWlzL2ltYWdlcy9wcm9tby9idF9zYXZvaXJQbHVzLnBuZyIgb25tb3VzZW92ZXI9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2FwaXRhbGUtbmF0aW9uYWxlL2ZyYW5jYWlzL2ltYWdlcy9wcm9tby9idF9zYXZvaXJQbHVzX292ZXIucG5nJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jYXBpdGFsZS1uYXRpb25hbGUvZnJhbmNhaXMvaW1hZ2VzL3Byb21vL2J0X3Nhdm9pclBsdXMucG5nJyI+DQogICAgICA8L2ltZz4NCiAgICA8L2E+DQogIDwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJjbGVhciI+DQogIDwvZGl2Pg0KPC9kaXY+ZAIED2QWAmYPFgIfAgWhAzxkaXYgaWQ9ImZvbmRfaGV1cmVDb250ZSIgY2xhc3M9InByb21vMDMiPg0KICA8ZGl2IGNsYXNzPSJ0aXRyZSIgc3R5bGU9Im1hcmdpbi1ib3R0b206OHB4OyI+DQogICAgPHN0cm9uZyBzdHlsZT0iZm9udC1zaXplOjEuMWVtOyI+Q+KAmWVzdCBs4oCZaGV1cmUgZHUgY29udGUhPC9zdHJvbmc+DQogIDwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJ0aXRyZSIgc3R5bGU9Im1hcmdpbi1ib3R0b206MTZweDsiPiDigKZEYW5zIHVuZSBiaWJsaW90aMOocXVlIHB1YmxpcXVlJm5ic3A7PGJyIC8+IHByw6hzIGRlIGNoZXogdm91cyE8L2Rpdj4NCiAgPGEgaHJlZj0iL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL2FjdGl2aXRlcy1kZXMtYmlibGlvdGhlcXVlcy9pbmRleC5hc3B4Ij5BY2PDqWRlciBhdXggYWN0aXZpdMOpczwvYT4NCjwvZGl2PmQCCg8PFgIfAWhkFgICAQ8PFgIfAgUHQWNjdWVpbGRkAgsPZBYEZg8PZBYCHgpkYXRhLXRpdGxlBRpBYm9ubmVtZW50IMOgIGwnaW5mb2xldHRyZWQCAQ9kFgICAQ8PFgIfBAUuL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3Jzcy9ub3V2ZWxsZXMuYXNweGRkAgwPZBYCAgEPZBYOZg8WAh8CBQ5RdW9pIGRlIG5ldWYgP2QCAQ8PFgIfBAUuL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3Jzcy9ub3V2ZWxsZXMuYXNweGRkAgIPDxYCHwQFPy9zYWd1ZW5heS1sYWMtc2FpbnQtamVhbi9mci9pbnNjcmlwdGlvbi1hLWluZm9sZXR0cmUvaW5kZXguYXNweBYCHwwFGkFib25uZW1lbnQgw6AgbCdpbmZvbGV0dHJlZAIDDxYCHwYCAhYEAgEPZBYCZg8VBAwyMiBqdWluIDIwMTZlL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3F1b2ktZGUtbmV1Zi8yMDE2LzA2L3Zpcy1sLWF2ZW50dXJlLWF1LWNsdWItZGUtbGVjdHVyZS1kLWV0ZS10ZC0yMDE2LmFzcHg0IlZpcyBsJ2F2ZW50dXJlISIgYXUgQ2x1YiBkZSBsZWN0dXJlIGQnw6l0w6kgVEQgMjAxNgBkAgIPZBYCZg8VBAszMSBtYWkgMjAxNmcvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvcXVvaS1kZS1uZXVmLzIwMTYvMDUvZ2FsYS1yZWNvbm5haXNzYW5jZS1sZXMtZ2FnbmFudHMtZGVzLW1lcml0YXMtMjAxNi5hc3B4NEdhbGEgUmVjb25uYWlzc2FuY2UgLSBsZXMgZ2FnbmFudHMgZGVzIG3DqXJpdGFzIDIwMTYAZAIEDw8WBB8EBTsvc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvcXVvaS1kZS1uZXVmLzIwMTYvMDYvaW5kZXguYXNweB8CBRlWb2lyIHRvdXRlcyBsZXMgbm91dmVsbGVzZGQCBg8WAh8CBShQcm9jaGFpbmVzIGFjdGl2aXTDqXMgZGVzIGJpYmxpb3Row6hxdWVzZAIHDxYEHwZmHwFoZAINDw8WAh8BZ2QWAgIBDw8WAh8EBSlodHRwczovL3d3dy5mYWNlYm9vay5jb20vcmVzZWF1YmlibGlvU0xTShYCHwsFSV9nYXEucHVzaChbJ190cmFja0V2ZW50JywgJ0xpZW5zIHNvcnRhbnRzJywgJ1BpZWQgZGUgcGFnZScsICdGYWNlYm9vayddKTtkAhIPFgIfBgIDFgZmD2QWAgIBDxYCHwIF6AQ8YSBocmVmPSJodHRwOi8vd3d3LmJhbnEucWMuY2EvYXBwZWxfbnVtZXJpc2F0aW9uL2luZGV4Lmh0bWwiIHRhcmdldD0iX2JsYW5rIiBvbmNsaWNrPSJfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnQXBwZWwgbnVtJiMyMzM7cmlzYXRpb24nXSk7Ij4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2FwcGVsX292ZXIuanBnJyIgb25tb3VzZW91dD0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2FwcGVsLmpwZyciIGFsdD0iU2lnbmV6IGwnQXBwZWwgcG91ciBsYSBudW0mIzIzMztyaXNhdGlvbiBkdSBQYXRyaW1vaW5lIGN1bHR1cmVsIHF1JiMyMzM7YiYjMjMzO2NvaXMiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvYXBwZWwuanBnIj4NCiAgPC9pbWc+DQo8L2E+ZAIBD2QWAgIBDxYCHwIFswQ8YSBocmVmPSJodHRwOi8vd3d3Lm1jY2NmLmdvdXYucWMuY2EvaW5kZXgucGhwP2lkPTQ0MzYiIHRhcmdldD0iX2JsYW5rIiBvbmNsaWNrPSJfZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnTG9pIDUxJ10pOyI+DQogIDxpbWcgb25tb3VzZW92ZXI9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9sb2k1MV9vdmVyLmpwZyciIG9ubW91c2VvdXQ9InRoaXMuc3JjPScvZG9jX3VwbG9hZHMvcmVzZWF1X2JpYmxpb19kdV9xdWViZWMvY2VudHJlLWR1LXF1ZWJlYy9mcmFuY2Fpcy9pbWFnZXMvYmFuZGVhdS9sb2k1MS5qcGcnIiBhbHQ9IkxvaSA1MSAtIE51bCBuJ2VzdCBjZW5zJiMyMzM7IGlnbm9yZXIgbGEgbG9pIGR1IGxpdnJlIiBzcmM9Ii9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2xvaTUxLmpwZyI+DQogIDwvaW1nPg0KPC9hPmQCAg9kFgICAQ8WAh8CBZsEPGEgaHJlZj0iL3NhZ3VlbmF5LWxhYy1zYWludC1qZWFuL2ZyL3ByZXNlbnRhdGlvbi1jb3Jwb3JhdGl2ZS9wcml4LWQtZXhjZWxsZW5jZS1nZXJhcmQtZGVzcm9zaWVycy9pbmRleC5hc3B4Ij4NCiAgPGltZyBvbm1vdXNlb3Zlcj0idGhpcy5zcmM9Jy9kb2NfdXBsb2Fkcy9yZXNlYXVfYmlibGlvX2R1X3F1ZWJlYy9jZW50cmUtZHUtcXVlYmVjL2ZyYW5jYWlzL2ltYWdlcy9iYW5kZWF1L2dlcmFyZGRlc3Jvc2llcnNfb3Zlci5qcGcnIiBvbm1vdXNlb3V0PSJ0aGlzLnNyYz0nL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGcnIiBhbHQ9IlByaXggZCdleGNlbGxlbmNlIEcmIzIzMztyYXJkIERlc3Jvc2llcnMiIHNyYz0iL2RvY191cGxvYWRzL3Jlc2VhdV9iaWJsaW9fZHVfcXVlYmVjL2NlbnRyZS1kdS1xdWViZWMvZnJhbmNhaXMvaW1hZ2VzL2JhbmRlYXUvZ2VyYXJkZGVzcm9zaWVycy5qcGciPg0KICA8L2ltZz4NCjwvYT5kAhUPZBYGAgEPFgIfAWhkAgMPZBYCZg8WCh4JaW5uZXJodG1sBRVBY2MmIzIzMjtzIHByaXYmIzIzMzseBXRpdGxlBQ1BY2PDqHMgcHJpdsOpHgRocmVmBT5odHRwOi8vd3d3LnJlc2VhdWJpYmxpb2R1cXVlYmVjLnFjLmNhL2xvZ2luLmFzcHg/VHlwZT0yJlJJRD0xMB8LBU5fZ2FxLnB1c2goWydfdHJhY2tFdmVudCcsICdMaWVucyBzb3J0YW50cycsICdQaWVkIGRlIHBhZ2UnLCAnQWNjw6hzIHByaXbDqSddKTseBnRhcmdldAUGX2JsYW5rZAIFD2QWAmYPFgYfDQUdQ2FsZW5kcmllciDigJMgYWN0aXZpdCYjMjMzO3MfDgUZQ2FsZW5kcmllciDigJMgYWN0aXZpdMOpcx8PBT4vc2FndWVuYXktbGFjLXNhaW50LWplYW4vZnIvY2FsZW5kcmllci1kZXMtYWN0aXZpdGVzLWR1LXJlc2VhdWRkwMSPBH1p6hejS78VsEnuLfC5qZH/SSXPrW8r9476I1Y=" />
 </div>
 
 <script type="text/javascript">
@@ -510,11 +516,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspne
                                 
                                     <li ><a id="ctl00_ctl00_rptMenuEntete_ctl02_hlLien" href="/saguenay-lac-saint-jean/fr/le-reseau/index.aspx" target="_self">Le Réseau</a></li>
                                 
-                                    <li ><a id="ctl00_ctl00_rptMenuEntete_ctl03_hlLien" href="/saguenay-lac-saint-jean/fr/faq/index.aspx" target="_self">FAQ</a></li>
+                                    <li ><a id="ctl00_ctl00_rptMenuEntete_ctl03_hlLien" href="/saguenay-lac-saint-jean/fr/nous-joindre/index.aspx" target="_self">Nous joindre</a></li>
                                 
-                                    <li ><a id="ctl00_ctl00_rptMenuEntete_ctl04_hlLien" href="/saguenay-lac-saint-jean/fr/le-reseau/acces-prive/index.aspx" target="_self">Accès privé</a></li>
+                                    <li ><a id="ctl00_ctl00_rptMenuEntete_ctl04_hlLien" href="/saguenay-lac-saint-jean/fr/faq/index.aspx" target="_self">FAQ</a></li>
                                 
-                                    <li id="dernierItem"><a id="ctl00_ctl00_rptMenuEntete_ctl05_hlLien" href="/saguenay-lac-saint-jean/fr/nous-joindre/index.aspx" target="_self">Nous joindre</a></li>
+                                    <li id="dernierItem"><a id="ctl00_ctl00_rptMenuEntete_ctl05_hlLien" href="/saguenay-lac-saint-jean/fr/le-reseau/acces-prive/index.aspx" target="_self">Accès privé</a></li>
                                 </ul>
                             <div class="clear"></div>
                         </div>
@@ -577,16 +583,10 @@ Horaire et localisation</a></li></ul>
     
    <div class="fondBlocPromo">
         <div class="corpsMaster">
-            <div id="blocPromoBtn"><div id="fond_facebookTwitter" class="promoFacebookTwitter">
+            <div id="blocPromoBtn"><div id="fond_benevolesCNCA" class="promoBenevolesCNCA">
   <div class="titre" style="margin-bottom:8px;">
-    <em>Actualités, suggestions de lecture, nouvelles du réseau..</em>
-    <br />
-    <strong style="font-size:1.1em;">Suivez-nous sur Facebook <br />
-et Twitter pour tout savoir!</strong>
-  </div>
-  <div class="titre" style="margin-bottom:16px;">
-On vous y attend!</div>
-  <span class="texteLien">Accéder à notre page&nbsp;<a href="http://www.facebook.com/reseaubiblioSLSJ" target="_blank">Facebook</a> ou <a href="https://twitter.com/reseaubiblio" target="_blank">Twitter</a></span>
+    <strong>Merci aux 400</strong> bénévoles&nbsp;<strong>!</strong></div>
+  <a href="/saguenay-lac-saint-jean/fr/etre-benevole-au-sein-du-reseau/index.aspx">Le bénévolat vous intéresse ?</a>
 </div><div id="fond_livres_numeriques" class="promo02">
   <div class="titre">Des <strong>livres numériques</strong><br /> pour tous les goûts !</div>
   <a href="/saguenay-lac-saint-jean/fr/livres-et-ressources-numeriques/index.aspx">Voir le répertoire de livres numériques</a>
@@ -648,20 +648,20 @@ votre appareil mobile !</strong>
         
             <ul>
                     <li>
-                        <div><b>14 avril 2016</b></div>
-                        <div><a href="/saguenay-lac-saint-jean/fr/quoi-de-neuf/2016/04/un-livre-et-une-rose.aspx">Un livre et une rose</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
+                        <div><b>22 juin 2016</b></div>
+                        <div><a href="/saguenay-lac-saint-jean/fr/quoi-de-neuf/2016/06/vis-l-aventure-au-club-de-lecture-d-ete-td-2016.aspx">"Vis l'aventure!" au Club de lecture d'été TD 2016</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
                         <div class="description"></div>
                     </li>
                 
                     <li>
-                        <div><b>14 avril 2016</b></div>
-                        <div><a href="/saguenay-lac-saint-jean/fr/quoi-de-neuf/2016/04/la-biblio-vente-c-est-bientot.aspx">La BIBLIO-VENTE, c'est bientôt !</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
+                        <div><b>31 mai 2016</b></div>
+                        <div><a href="/saguenay-lac-saint-jean/fr/quoi-de-neuf/2016/05/gala-reconnaissance-les-gagnants-des-meritas-2016.aspx">Gala Reconnaissance - les gagnants des méritas 2016</a><img alt="" src="/images/puce_liens.gif" class="puceTitreNouvelles" /></div>
                         <div class="description"></div>
                     </li>
                 </ul>
 
             <div class="voirToutes">
-                <a id="ctl00_ctl00_ContenuGlobal_Contenu_hlToutesNouvelles" href="/saguenay-lac-saint-jean/fr/quoi-de-neuf/2016/04/index.aspx">Voir toutes les nouvelles</a>
+                <a id="ctl00_ctl00_ContenuGlobal_Contenu_hlToutesNouvelles" href="/saguenay-lac-saint-jean/fr/quoi-de-neuf/2016/06/index.aspx">Voir toutes les nouvelles</a>
             </div>
         </div>
         <div id="ctl00_ctl00_ContenuGlobal_Contenu_EchangesDeLaSemaine" class="btEchangesSemaine">
@@ -693,9 +693,7 @@ votre appareil mobile !</strong>
                 <a data-bind='attr: {"href": window.baseLink + "activites-des-bibliotheques/index.aspx" }'>Voir toutes les activités</a>
             </div>
 
-            <div class="sondagesPixule"><h1>Question du mois</h1>
-                    <script>(function(t,e,n,o){var s,c,r;t.SMCX=t.SMCX||[],e.getElementById(o)||(s=e.getElementsByTagName(n),c=s[s.length-1],r=e.createElement(n),r.type="text/javascript",r.async=!0,r.id=o,r.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/W9glJ7G00lZm5H_2Ffexr2RLgGrH2bIbv0vK0CLdoqZpaqMtTMnrOJWuAzy3w4N6lC.js"].join(""),c.parentNode.insertBefore(r,c))})(window,document,"script","smcx-sdk");</script>
-                </div>
+            
 
             
         </div>
@@ -772,7 +770,7 @@ votre appareil mobile !</strong>
                                 <ul id="ctl00_ctl00_accesPriveUl">
                                     
                                     <li id="ctl00_ctl00_consoleGestionLi"><a href="http://www.reseaubiblioduquebec.qc.ca/login.aspx?Type=2&RID=10" id="ctl00_ctl00_consoleGestionAncre" title="Accès privé" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Liens sortants&#39;, &#39;Pied de page&#39;, &#39;Accès privé&#39;]);" target="_blank">Acc&#232;s priv&#233;</a></li>
-                                    <li id="ctl00_ctl00_autreLi" class="noCadenas"><a href="/gestion/connexion/gestion/calendrier-des-activites-du-reseau" id="ctl00_ctl00_autreAncre" title="Calendrier – activités">Calendrier – activit&#233;s</a></li>
+                                    <li id="ctl00_ctl00_autreLi" class="noCadenas"><a href="/saguenay-lac-saint-jean/fr/calendrier-des-activites-du-reseau" id="ctl00_ctl00_autreAncre" title="Calendrier – activités">Calendrier – activit&#233;s</a></li>
                                 </ul>
                             </div>
                             <div id="copyright">
@@ -803,8 +801,8 @@ votre appareil mobile !</strong>
 </script>
 
 <script type="text/javascript" src="/scripts/jquery.inputmask/jquery.inputmask-3.1.js"></script>
-<script src="/scripts/hammer.min.js?v=2.245" type="text/javascript"></script>
-<script src="/scripts/css-accordeon.js?v=2.245" type="text/javascript"></script>
+<script src="/scripts/hammer.min.js?v=2.247" type="text/javascript"></script>
+<script src="/scripts/css-accordeon.js?v=2.247" type="text/javascript"></script>
 <script src="/scripts/json2.js" type="text/javascript"></script>
 <script src="/scripts/jquery.autosize-min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
@@ -814,8 +812,8 @@ votre appareil mobile !</strong>
 <script src="/scripts/knockout-custom.js" type="text/javascript"></script>
 <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
 <script src="/scripts/jquery.cookie.js" type="text/javascript"></script>
-<script src="/scripts/knockout.grid.js?v=2.245" type="text/javascript"></script>
-<script src="/scripts/script_global.js?v=2.245" type="text/javascript"></script> 
+<script src="/scripts/knockout.grid.js?v=2.247" type="text/javascript"></script>
+<script src="/scripts/script_global.js?v=2.247" type="text/javascript"></script> 
     </form>
 </div>
 
@@ -841,14 +839,14 @@ votre appareil mobile !</strong>
         
 
     
-    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=10&count=2&BiblioId=0&apresAujourdhui=1&LastModified=635983836476100000&v=2.245' type='text/javascript'></script>
+    <script src='/pages/json/ActivitesAVenir.aspx?ReseauId=10&count=2&BiblioId=0&apresAujourdhui=1&LastModified=636091482832200000&v=2.247' type='text/javascript'></script>
 
-    <script src="/scripts/classes/Arrays.js?v=2.245" type="text/javascript"></script>
+    <script src="/scripts/classes/Arrays.js?v=2.247" type="text/javascript"></script>
     <script src="/scripts/jquery.cycle.all.min.js" type="text/javascript"></script>
     <script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
-    <script src="/scripts/script_onglets.js?v=2.245" type="text/javascript"></script> 
-    <script src="/scripts/classes/Maths.js?v=2.245" type="text/javascript"></script> 
-    <script src="/scripts/classes/ActiviteViewModel.js?v=2.245" type="text/javascript"></script> 
+    <script src="/scripts/script_onglets.js?v=2.247" type="text/javascript"></script> 
+    <script src="/scripts/classes/Maths.js?v=2.247" type="text/javascript"></script> 
+    <script src="/scripts/classes/ActiviteViewModel.js?v=2.247" type="text/javascript"></script> 
 
     <script type="text/javascript">
 

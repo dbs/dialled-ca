@@ -46,7 +46,7 @@ function gov_afterSetupPage() {
 </style>
 
 <link rel="stylesheet" type="text/css" href="../css/format.css"/><!-- TCHSCP css -->
-<link rel="stylesheet" type="text/css" href="css/format.css"/><!-- Archives css -->
+<link rel="stylesheet" type="text/css" href="css/archives.css"/><!-- Archives css -->
 <link rel="stylesheet" type="text/css" href="css/lightbox.css"/><!-- lightbox css -->
 
 <!-- InstanceBeginEditable name="css" --><!-- InstanceEndEditable -->
@@ -72,105 +72,122 @@ function gov_afterSetupPage() {
 
 <!-- InstanceBeginEditable name="javascript" --><!-- InstanceEndEditable -->
 
-<!-- InstanceParam name="above_content" type="boolean" value="false" -->
-<!-- InstanceParam name="below_sidemenu" type="boolean" value="true" -->
-<!-- InstanceParam name="banners" type="boolean" value="true" -->
 <!-- InstanceParam name="dublin_core" type="boolean" value="false" -->
-<!-- InstanceParam name="pdf_reader" type="boolean" value="false" -->
 <!-- InstanceParam name="mobile" type="boolean" value="false" -->
-<!-- InstanceParam name="information" type="boolean" value="true" -->
-<!-- InstanceParam name="minister" type="boolean" value="true" -->
-<!-- InstanceParam name="resources" type="boolean" value="false" --> 
-<!-- InstanceParam name="quick_info" type="boolean" value="false" -->
-<!-- InstanceParam name="social_network" type="boolean" value="true" -->
-<!-- InstanceParam name="below_content" type="boolean" value="false" -->
-<!-- InstanceParam name="above_sidemenu" type="boolean" value="false" -->
-<!-- InstanceParam name="toc" type="boolean" value="true" -->
-<!-- InstanceParam name="titleHeader" type="boolean" value="false" -->
-<!-- InstanceParam name="relatedLinks" type="boolean" value="false" -->
 <!-- InstanceParam name="language_toggle" type="boolean" value="true" -->
 <!-- InstanceParam name="text_resizer" type="boolean" value="false" -->
+<!-- InstanceParam name="above_content" type="boolean" value="false" -->
+<!-- InstanceParam name="pdf_reader" type="boolean" value="false" -->
+<!-- InstanceParam name="twitter" type="boolean" value="true" -->
+<!-- InstanceParam name="quick_links" type="boolean" value="false" -->
+<!-- InstanceParam name="banners" type="boolean" value="true" -->
+<!-- InstanceParam name="social_network" type="boolean" value="true" -->
 <!-- InstanceParam name="share" type="boolean" value="true" -->
 
 </head>
-<body onload="gov_beforeSetupPage(); gov_setupPage(); gov_afterSetupPage(); readCookie();">
-<div id="container">
-  <noscript>
-  <div class="enablejs">Please enable javascript in your browser to view the printer friendly page.</div>
-  </noscript>
-  <div id="pageinfo">
-    <div id="skipto"><a href="#sidebar" accesskey="2">Skip to Navigation</a> | <a href="#content" accesskey="3">Skip to Content</a> | <a href="#search" accesskey="0">Skip to Search</a> | </div>
-  
- 
-    <div id="printable"><a href="?print" id="print" target="_blank" title="Open Printer Friendly Page">Printer Friendly</a> | </div>
-<div id="language"> <!-- InstanceBeginEditable name="language_toggle" --><a href="index.fr.html">Fran&ccedil;ais</a><!-- InstanceEndEditable --> |
-    </div> 
-    <div id="headerlinks">
-		<a href="sitemap.html">Site Map</a> | 
-		<a href="http://www.gov.mb.ca/contact/index.html">Contact Us (1-866-MANITOBA)</a>
-    </div>
-  </div>
-  <div id="printheader"><img src="http://manitoba.ca/templates/custom/_resources1/en/images/printer_header.jpg" alt="Manitoba" /></div>
-  <div id="header"><a href="http://www.gov.mb.ca/index.html"><img src="http://manitoba.ca/templates/custom/_resources1/en/images/mb-logo.png" alt="Manitoba Government" width="214" height="41" class="buffy"/></a>
-    <div class="search">
-      <form id='gov_search_form' action="http://discovery.gov.mb.ca/search" method="get" onsubmit="return gov_switch_search_url();">
-        <p class="searchlabel"><a name="search" rel="Search"><img src="http://manitoba.ca/templates/custom/_resources1/en/images/search-label.png" alt="Search"/></a></p>
-        <p class="labels">
-          <label for="gov_search_form_url" style="display:none;">Search</label>
-          <select id="gov_search_form_url" class="selectfield">
-          <option value="archives_mb">Archives of Manitoba</option>
-            <option value="chc">Tourism, Culture, Heritage, Sport</option> 
-            <option value="manitoba">manitoba.ca</option>
-          </select>
-        </p>
-        <p class="labels">
-          <label for="gov_search_form_q">Enter Keywords</label>
-          <input type="text" id="gov_search_form_q" class="textfield" name="q"/>
-        </p>
-        <p class="labels">
-          <label for="gov_search_form_go" style="display:none;">GO</label>
-          <input type="image" src="http://manitoba.ca/templates/custom/_resources1/en/images/nav/form-go-button.jpg" alt="GO" id="gov_search_form_go" class="form-go-button" value="GO"/>
-        </p>
-        <input type="hidden" name="entqr" value="0"/>
-        <input type="hidden" name="output" value="xml_no_dtd"/>
-        <input type="hidden" name="sort" value="date:D:L:d1"/>
-        <input type="hidden" name="ud" value="1"/>
-        <input type="hidden" name="oe" value="iso-8859-1" id="gov_search_form_oe"/>
-        <input type="hidden" name="filter" value="0"/>
-        <input type="hidden" name="ie" value="iso-8859-1" id="gov_search_form_ie"/>
-        <input type="hidden" name="client" id="gov_search_form_client" value="manitoba"/>
-        <input type="hidden" name="proxystylesheet" id="gov_search_form_css" value="manitoba"/>
-        <input type="hidden" name="site" id="gov_search_form_site" value="default_collection"/>
-      </form>
-    </div>
-    <div style="clear:both;"><a name="navigation" id="navigation" rel="Header Navigation"></a>
-      <ul class="nav">
-        <li class="nav-government"><a href="http://www.gov.mb.ca/government/index.html" title="Your Government"><em>Your Government</em></a></li>
-        <li class="nav-business"><a href="http://www.gov.mb.ca/business/index.html" title="Business"><em>Business</em></a></li>
-        <li class="nav-residents"><a href="http://residents.gov.mb.ca/index.html" title="Residents"><em>Residents</em></a></li>
-        <li class="nav-services"><a href="http://www.gov.mb.ca/services/index.html" title="Online Services"><em>Online Services</em></a></li>
-        <li class="nav-visitors"><a href="http://www.travelmanitoba.com" target="_blank" title="Visitors"><em>Visitors</em></a></li>
-      </ul>
-    </div>
-  </div>
-  <div id="title" style="clear:both;">
-    <h1 id="orgtitle"><!-- InstanceBeginEditable name="page_title" --><!-- #BeginLibraryItem "/Library/archives_en_pagetitle.lbi" -->Archives of Manitoba<!-- #EndLibraryItem --><!-- InstanceEndEditable --></h1>
-  </div>
- <div id="textResize" style="float: right; padding: 3px 5px 0px 0px;">
-    		<img src="../textresize/images/font_small.jpg" alt="Set text to smallest size" name="font_small" width="20" height="19" border="0" id="font_small" onclick="fontSize('fsmall')" />
-        	<img src="../textresize/images/font_normal.jpg" alt="Set text to normal size" name="font_normal" width="20" height="19" border="0" id="font_normal" onclick="fontSize('fnormal')" />
-        	<img src="../textresize/images/font_medium.jpg" alt="Set text to larger size" name="font_medium" width="20" height="19" border="0" id="font_medium" onclick="fontSize('fmedium')" />
-        	<img src="../textresize/images/font_large.jpg" alt="Set text to largest size" name="font_large" width="20" height="19" border="0" id="font_large" onclick="fontSize('flarge')" /></div>
-  <div id="breadcrumb">
-	<a href="http://manitoba.ca/index.html">manitoba.ca</a> 
-	&gt; <a href="http://www.gov.mb.ca/chc/index.html">Tourism, Culture, Heritage, Sport, and Consumer Protection</a> 
-	&gt; Archives of Manitoba
-	</div>
 
-  <div id="threecolumn">
-    <div id="left">
-      <div class="narrow-title-green">Get Started</div>
-      <div id="sidemenu"><!-- InstanceBeginEditable name="sidemenu" --><!-- #BeginLibraryItem "/Library/archives_en_sidemenu.lbi" --><ul>
+<body onload="gov_beforeSetupPage(); gov_setupPage(); gov_afterSetupPage(); readCookie();">
+
+<div id="container">
+	<noscript>
+		<div class="enablejs">Please enable javascript in your browser to view the printer friendly page.</div>
+	</noscript>
+	<div id="pageinfo">
+		<div id="skipto">
+			<a href="#sidebar" accesskey="2">Skip to Navigation</a> | 
+			<a href="#content" accesskey="3">Skip to Content</a> | 
+			<a href="#search" accesskey="0">Skip to Search</a> | 
+		</div>
+		
+ 
+		<div id="printable">
+			<a href="?print" id="print" target="_blank" title="Open Printer Friendly Page">Printer Friendly</a> | 
+		</div>
+
+		
+		<div id="language" lang="fr">
+			<!-- InstanceBeginEditable name="language_toggle" --><a href="index.fr.html">Fran&ccedil;ais</a><!-- InstanceEndEditable --> | 
+		</div><!-- end#language -->
+		
+	
+		<div id="headerlinks">
+			<a href="sitemap.html">Site Map</a> | 
+			<a href="http://www.gov.mb.ca/contact/index.html">Contact Us (1-866-MANITOBA)</a>
+		</div>
+	</div><!-- end#pageinfo -->
+
+	<div id="printheader"><img src="http://manitoba.ca/templates/custom/_resources1/en/images/printer_header.jpg" alt="Manitoba" /></div>
+	
+	<div id="header">
+		<a href="http://www.gov.mb.ca/index.html">
+			<img src="http://manitoba.ca/templates/custom/_resources1/en/images/mb-logo.png" alt="Manitoba Government" width="214" height="41" class="buffy"/>
+		</a>
+		
+		<div class="search">
+			<form id='gov_search_form' action="http://discovery.gov.mb.ca/search" method="get" onsubmit="return gov_switch_search_url();">
+				<p class="searchlabel"><a name="search" rel="Search"><img src="http://manitoba.ca/templates/custom/_resources1/en/images/search-label.png" alt="Search"/></a></p>
+				<p class="labels">
+					<label for="gov_search_form_url" style="display:none;">Search</label>
+					<select id="gov_search_form_url" class="selectfield">
+						<option value="archives_mb">Archives of Manitoba</option>
+						<option value="chc">Sport, Culture and Heritage</option> 
+						<option value="manitoba">manitoba.ca</option>
+					</select>
+				</p>
+				<p class="labels">
+					<label for="gov_search_form_q">Enter Keywords</label>
+					<input type="text" id="gov_search_form_q" class="textfield" name="q"/>
+				</p>
+				<p class="labels">
+					<label for="gov_search_form_go" style="display:none;">GO</label>
+					<input type="image" src="http://manitoba.ca/templates/custom/_resources1/en/images/nav/form-go-button.jpg" alt="GO" id="gov_search_form_go" class="form-go-button" value="GO"/>
+				</p>
+				<input type="hidden" name="entqr" value="0"/>
+				<input type="hidden" name="output" value="xml_no_dtd"/>
+				<input type="hidden" name="sort" value="date:D:L:d1"/>
+				<input type="hidden" name="ud" value="1"/>
+				<input type="hidden" name="oe" value="iso-8859-1" id="gov_search_form_oe"/>
+				<input type="hidden" name="filter" value="0"/>
+				<input type="hidden" name="ie" value="iso-8859-1" id="gov_search_form_ie"/>
+				<input type="hidden" name="client" id="gov_search_form_client" value="manitoba"/>
+				<input type="hidden" name="proxystylesheet" id="gov_search_form_css" value="manitoba"/>
+				<input type="hidden" name="site" id="gov_search_form_site" value="default_collection"/>
+			</form>
+		</div>
+		
+		<div style="clear:both;">
+			<a name="navigation" id="navigation" rel="Header Navigation"></a>
+			<ul class="nav">
+				<li class="nav-government"><a href="http://www.gov.mb.ca/government/index.html" title="Your Government"><em>Your Government</em></a></li>
+				<li class="nav-business"><a href="http://www.gov.mb.ca/business/index.html" title="Business"><em>Business</em></a></li>
+				<li class="nav-residents"><a href="http://residents.gov.mb.ca/index.html" title="Residents"><em>Residents</em></a></li>
+				<li class="nav-services"><a href="http://www.gov.mb.ca/services/index.html" title="Online Services"><em>Online Services</em></a></li>
+				<li class="nav-visitors"><a href="http://www.travelmanitoba.com" target="_blank" title="Visitors"><em>Visitors</em></a></li>
+			</ul>
+		</div>
+	</div><!-- end#header -->
+	
+	<div id="title" style="clear:both;">
+		<h1 id="orgtitle"><!-- InstanceBeginEditable name="page_title" --><!-- #BeginLibraryItem "/Library/archives_en_pagetitle.lbi" -->Archives of Manitoba<!-- #EndLibraryItem --><!-- InstanceEndEditable --></h1>
+	</div>
+	
+	
+
+	<div id="breadcrumb">
+		<!-- InstanceBeginEditable name="breadcrumb" -->
+<ul class="crumbs"><!-- #BeginLibraryItem "/Library/archives_en_breadcrumb.lbi" --><li><a href="http://www.gov.mb.ca/index.html">manitoba.ca</a></li>
+<li>&gt; <a href="../index.html">Sport, Culture and Heritage</a></li>
+<li>&gt; <a href="index.html">Archives of Manitoba</a></li><!-- #EndLibraryItem --></ul>
+		<!-- InstanceEndEditable -->
+	</div><!-- end#breadcrumb -->
+
+	<div id="threecolumn">
+	
+		<div id="left">
+		
+			<div class="narrow-title-green">Get Started</div>
+			<div id="sidemenu">
+			<!-- InstanceBeginEditable name="sidemenu" --><!-- #BeginLibraryItem "/Library/archives_en_sidemenu_old.lbi" --><ul>
 <li><a href="index.html">Archives Home</a></li>
 <li><a href="about.html">About Us</a>
 	<ul>
@@ -238,7 +255,12 @@ function gov_afterSetupPage() {
 		<li><a href="donate/acquired.html">What has the Archives acquired recently?</a></li>
 	</ul>
 </li>
-<li><a href="hbca/index.html">Hudson's Bay Company Archives</a></li>
+<li><a href="hbca/index.html">Hudson&#39;s Bay Company Archives</a>
+		<ul>
+			<li><a href="hbca/names_knowlege/index.html">The Names and Knowledge Initiative</a></li>
+			<li><a href="hbca/spotlight/index.html">Spotlight: HBCA in Words and Images</a></li>
+		</ul>
+</li>
 <li><a href="gpsa/index.html">Government and Private Sector Archives</a>
 	<ul>
 		<li><a href="gpsa/services.html">Services to Government</a></li>
@@ -251,33 +273,44 @@ function gov_afterSetupPage() {
 </ul>
 
 <!-- #EndLibraryItem --><!-- InstanceEndEditable -->
-      </div>
-        <!-- InstanceBeginEditable name="below_sidemenu" --><!-- InstanceEndEditable --> 
+			</div>
   
-  
+		
+		<div class="narrow-title-green-sc">
+			Stay Connected
+ 			<div class="narrow-title-sub"></div>
+		</div>
+		<div class="section" id="sc">
+			<ul>
+				<li><a id="twitter" href="http://www.twitter.com/mbgovarchives" target="_blank"><span>Follow us on Twitter</span></a></li>
+			</ul>
+		</div>
+		
      
-      <div class="narrow-title-green-sc">Stay Connected
-        <div class="narrow-title-sub"></div>
-      </div>
-      <div class="section" id="sc">
-        <ul>
-          <li></li>
-          <li><a id="twitter" href="http://www.twitter.com/mbgovarchives" target="_blank"><span>Follow us on Twitter</span></a></li>
-          
-        </ul>
-      </div>
-      
-     
-	  </div>
-    <div id="center">
-      <a name="content"></a>
-        <div class="body">
-        <div id="content"><!-- InstanceBeginEditable name="content" -->
+		
+		
+		</div><!-- end#left -->
+		
+		<div id="center">
+			<a name="content"></a>
+			
+        	
+			<div class="body">
+        		<div id="content">
+				<!-- InstanceBeginEditable name="content" -->
 <div style="margin: -10px 0px 20px -15px">
 	<img src="images/home_page_banner.jpg" width="456" height="164" alt="Archives of Manitoba" />
 </div>
 
 <p>Manitoba&#39;s rich documentary past is  accessible to you at the Archives of Manitoba. You will discover a treasure of  information about Manitobans and their history.</p>
+
+<img src="images/hr_custom.jpg" width="449" height="5" alt="" class="divider"/>
+
+<h2 class="center">Notice</h2>
+
+<p>From September 12-16, the Archives Research Room will be closed for inventory.</p>
+
+<p>For more information, contact (204) 945-3971 or <a href="mailto:archives@gov.mb.ca">archives@gov.mb.ca</a>.</p>
 
 <img src="images/hr_custom.jpg" width="449" height="5" alt="" class="divider"/>
 
@@ -289,35 +322,43 @@ function gov_afterSetupPage() {
 
 <img src="images/hr_custom.jpg" width="449" height="5" alt="" class="divider"/>
 
-          <!-- InstanceEndEditable -->
- <div id="closewindow">
- <div class="close-printer-friendly"><a href="javascript:window.close();">Close Window</a></div>
-<div class="printer-footer">manitoba.ca | 1-866-MANITOBA</div>
 
- </div>
- 
-          <!-- AddThis Button BEGIN -->
-         <!-- InstanceBeginEditable name="share" --> 
+
+          <!-- InstanceEndEditable -->
+				
+					<div id="closewindow">
+						<div class="close-printer-friendly"><a href="javascript:window.close();">Close Window</a></div>
+						<div class="printer-footer">manitoba.ca | 1-866-MANITOBA</div>
+					</div>
+
+					<!-- AddThis Button BEGIN -->
+					<!-- InstanceBeginEditable name="share" --> 
           <div class="addthis_toolbox addthis_default_style"><a href="http://www.addthis.com/bookmark.php?v=250&amp;username=csmwebeditor" class="addthis_button_compact"><img src="http://www.gov.mb.ca/templates/en/template_images/share-this.gif" alt="Share This"/></a></div>
           <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
           <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=department"></script><!-- InstanceEndEditable --> 
-          <!-- AddThis Button END --> 
-        </div>
-      </div>
-    </div>
-    <div id="right">
-      <div class="narrow-title-green">Need More Info?</div>
-      <div class="section-no-footer"><!-- InstanceBeginEditable name="info" -->
-        <p class="center">Archives of Manitoba<br />
-          130-200 Vaughan St.
-            <br />
-            Winnipeg, MB R3C 1T5
-            <br />
-        <a href="mailto:archives@gov.mb.ca">archives@gov.mb.ca</a><br />
-        <a href="how.html">More Contact Info</a></p>
-      <!-- InstanceEndEditable --></div> 
-      <div class="narrow-title-green">Twitter Feed</div>
-      <!-- InstanceBeginEditable name="twitter" -->
+					<!-- AddThis Button END --> 
+				
+				</div><!-- end#content -->
+			</div><!-- end#body -->
+	    </div><!-- end#center -->
+		
+		<div id="right">
+			<div class="narrow-title-green">Need More Info?</div>
+			<div class="section-no-footer"><!-- InstanceBeginEditable name="info" -->
+<p class="center">
+	Archives of Manitoba<br />
+	130-200 Vaughan St.<br />
+	Winnipeg, MB R3C 1T5<br />
+	<a href="mailto:archives@gov.mb.ca">archives@gov.mb.ca</a><br />
+	<a href="how.html">More Contact Info</a>
+</p>
+      <!-- InstanceEndEditable -->
+			</div> 
+			
+			
+			<div class="narrow-title-green">Twitter Feed</div>
+			<div class="section">
+			<!-- InstanceBeginEditable name="twitter" -->
 	 
 <div id="twitter">
 
@@ -329,24 +370,28 @@ function gov_afterSetupPage() {
 </div>
 
 	  <!-- InstanceEndEditable -->
-     </div>
-      
-    <div id="footer">
-      <div id="links">
-        <ul> 
-          <li><a href="http://www.gov.mb.ca/accessibility/index.html">Accessibility</a></li>
-          <li><a href="http://www.gov.mb.ca/legal/disclaimer.html">Disclaimer</a></li>
-          <li><a href="http://www.gov.mb.ca/legal/copyright.html">Copyright</a></li>
-          <li><a href="http://www.gov.mb.ca/legal/privacy.html">Privacy</a></li>
-          <!-- InstanceBeginEditable name="footercontact" --> 
-          <li class='last-li'><a href="http://www.gov.mb.ca/contact/">Contact Government</a></li>
+			</div><!-- end.section -->
+			
+			
+			
+		</div><!-- end#right -->
+				
+		<div id="footer">
+			<div id="links">
+				<ul> 
+					<li><a href="http://www.gov.mb.ca/accessibility/index.html">Accessibility</a></li>
+					<li><a href="http://www.gov.mb.ca/legal/disclaimer.html">Disclaimer</a></li>
+					<li><a href="http://www.gov.mb.ca/legal/copyright.html">Copyright</a></li>
+					<li><a href="http://www.gov.mb.ca/legal/privacy.html">Privacy</a></li>
+					<li><a href="http://www.gov.mb.ca/contact/">Contact Government</a></li>
+				</ul> 
+			</div><!-- end#links -->
+		</div><!-- end#footer -->
+	
+	</div><!-- end#threecolumn -->
+	
+</div><!-- end#container -->
+<!-- InstanceBeginEditable name="widget" -->
           <!-- InstanceEndEditable -->
-          <!-- InstanceBeginEditable name="widget" -->
-          <!-- InstanceEndEditable -->
-        </ul> 
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 <!-- InstanceEnd --></html>

@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-CA">
+<html class="no-js" lang="en-CA" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page not found | Lake of the Woods Museum</title>
+  <title>Page not found - Lake of the Woods Museum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-  <meta name='robots' content='noindex,follow' />
+  
+<!-- This site is optimized with the Yoast SEO plugin v3.2.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noindex,follow"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="object" />
+<meta property="og:title" content="Page not found - Lake of the Woods Museum" />
+<meta property="og:site_name" content="Lake of the Woods Museum" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Page not found - Lake of the Woods Museum" />
+<!-- / Yoast SEO plugin. -->
+
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.lakeofthewoodsmuseum.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};
 			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
@@ -25,12 +35,28 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel="stylesheet" href="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/css/jquery.mmenu.all.css">
-<link rel="stylesheet" href="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/css/default.css">
-<link rel="stylesheet" href="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/css/navigation.css">
-<link rel="stylesheet" href="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/css/responsive.css">
+<link rel="stylesheet" href="/wp-content/themes/lotwmuseum/assets/css/jquery.mmenu.all.css">
+<link rel="stylesheet" href="/wp-content/themes/lotwmuseum/assets/css/default.css">
+<link rel="stylesheet" href="/wp-content/themes/lotwmuseum/assets/css/navigation.css">
+<link rel="stylesheet" href="/wp-content/themes/lotwmuseum/assets/css/responsive.css">
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 <script>window.jQuery || document.write('<script src="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+<script type='text/javascript' src='/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.9'></script>
+<!-- Google Analytics Tracking by Google Analyticator 6.4.9: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'disabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-78947206-1', 'auto');
+ 
+	ga('send', 'pageview');
+</script>
 
 </head>
 <body class="error404" style="background: url(http://www.lakeofthewoodsmuseum.ca/wp-content/uploads/2015/05/lotw_museum_bkgnd_photo_1.png) center top no-repeat, url(http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/img/bg-gradient.png) left top repeat-x;">
@@ -81,108 +107,108 @@ img.emoji {
 	<div style="float: left;">
         <ul id="pageMenu">
 
-                 <li ><a href="http://www.lakeofthewoodsmuseum.ca/education/school-programs/" class="pageMenuLink">School Programs</a></li>
+                 <li ><a href="/education/school-programs/" class="pageMenuLink">School Programs</a></li>
 
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/education/school-programs/teacher-resources/" class="pageSubMenuLink">Teacher Resources</a></li>
-
-	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/education/school-programs/plan-a-school-visit/" class="pageSubMenuLink">Plan a School Visit</a></li>
-
-	    <li ><a href="http://www.lakeofthewoodsmuseum.ca/education/school-programs/teacher-resources/" class="pageMenuLink">Teacher Resources</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/education/school-programs/plan-a-school-visit/" class="pageMenuLink">Plan a School Visit</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/" class="pageMenuLink">Home</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/about-us/mission-and-vision-statement/" class="pageMenuLink">Mission and Vision Statement</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/plan-your-visit/getting-here/" class="pageMenuLink">Getting Here</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/membership/" class="pageMenuLink">Membership</a></li>
-
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/membership/become-a-member/" class="pageSubMenuLink">Become a Member</a></li>
-
-	    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/giving/monetary-donations/" class="pageMenuLink">Monetary Donations</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/membership/become-a-member/" class="pageMenuLink">Become a Member</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/volunteering/volunteer-application-and-interest-form/" class="pageMenuLink">Volunteer Application and Interest Form</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/museum-collection/" class="pageMenuLink">Museum Collection</a></li>
-
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/museum-collection/collections-management-policy/" class="pageSubMenuLink">Collections Management Policy</a></li>
-
-	    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/museum-collection/collections-management-policy/" class="pageMenuLink">Collections Management Policy</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/archives/textual-material/" class="pageMenuLink">Textual Material</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/exhibits/current-and-upcoming-exhibits/" class="pageMenuLink">Current and Upcoming Exhibits</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/services/meeting-facilities-and-rentals/" class="pageMenuLink">Meeting Facilities and Rentals</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/" class="pageMenuLink">Books</a></li>
-
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/local-interest/" class="pageSubMenuLink">Local Interest</a></li>
+		<li ><a href="/education/school-programs/teacher-resources/" class="pageSubMenuLink">Teacher Resources</a></li>
 
 	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/fiction/" class="pageSubMenuLink">Fiction</a></li>
+		<li ><a href="/education/school-programs/plan-a-school-visit/" class="pageSubMenuLink">Plan a School Visit</a></li>
+
+	    <li ><a href="/education/school-programs/teacher-resources/" class="pageMenuLink">Teacher Resources</a></li>
+    <li ><a href="/education/school-programs/plan-a-school-visit/" class="pageMenuLink">Plan a School Visit</a></li>
+    <li ><a href="/" class="pageMenuLink">Home</a></li>
+    <li ><a href="/about-us/mission-and-vision-statement/" class="pageMenuLink">Mission and Vision Statement</a></li>
+    <li ><a href="/plan-your-visit/getting-here/" class="pageMenuLink">Getting Here</a></li>
+    <li ><a href="/get-involved/membership/" class="pageMenuLink">Membership</a></li>
+
+		<li ><a href="/get-involved/membership/become-a-member/" class="pageSubMenuLink">Become a Member</a></li>
+
+	    <li ><a href="/get-involved/giving/monetary-donations/" class="pageMenuLink">Monetary Donations</a></li>
+    <li ><a href="/get-involved/membership/become-a-member/" class="pageMenuLink">Become a Member</a></li>
+    <li ><a href="/get-involved/volunteering/volunteer-application-and-interest-form/" class="pageMenuLink">Volunteer Application and Interest Form</a></li>
+    <li ><a href="/collections-and-research/museum-collection/" class="pageMenuLink">Museum Collection</a></li>
+
+		<li ><a href="/collections-and-research/museum-collection/collections-management-policy/" class="pageSubMenuLink">Collections Management Policy</a></li>
+
+	    <li ><a href="/collections-and-research/museum-collection/collections-management-policy/" class="pageMenuLink">Collections Management Policy</a></li>
+    <li ><a href="/collections-and-research/archives/textual-material/" class="pageMenuLink">Textual Material</a></li>
+    <li ><a href="/exhibits/current-and-upcoming-exhibits/" class="pageMenuLink">Current and Upcoming Exhibits</a></li>
+    <li ><a href="/services/meeting-facilities-and-rentals/" class="pageMenuLink">Meeting Facilities and Rentals</a></li>
+    <li ><a href="/gift-shop/books/" class="pageMenuLink">Books</a></li>
+
+		<li ><a href="/gift-shop/books/local-interest/" class="pageSubMenuLink">Local Interest</a></li>
 
 	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/non-fiction/" class="pageSubMenuLink">Non-Fiction</a></li>
+		<li ><a href="/gift-shop/books/fiction/" class="pageSubMenuLink">Fiction</a></li>
 
 	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/children/" class="pageSubMenuLink">Children</a></li>
-
-	    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/local-interest/" class="pageMenuLink">Local Interest</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/stationery/cards/" class="pageMenuLink">Cards</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/about-us/" class="pageMenuLink">About Us</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/about-us/board-and-staff/" class="pageMenuLink">Board and Staff</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/plan-your-visit/hours-and-admission/" class="pageMenuLink">Hours and Admission</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/giving/" class="pageMenuLink">Giving</a></li>
-
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/giving/monetary-donations/" class="pageSubMenuLink">Monetary Donations</a></li>
+		<li ><a href="/gift-shop/books/non-fiction/" class="pageSubMenuLink">Non-Fiction</a></li>
 
 	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/giving/artifact-donations/" class="pageSubMenuLink">Artifact Donations</a></li>
+		<li ><a href="/gift-shop/books/children/" class="pageSubMenuLink">Children</a></li>
+
+	    <li ><a href="/gift-shop/books/local-interest/" class="pageMenuLink">Local Interest</a></li>
+    <li ><a href="/gift-shop/stationery/cards/" class="pageMenuLink">Cards</a></li>
+    <li ><a href="/about-us/" class="pageMenuLink">About Us</a></li>
+    <li ><a href="/about-us/board-and-staff/" class="pageMenuLink">Board and Staff</a></li>
+    <li ><a href="/plan-your-visit/hours-and-admission/" class="pageMenuLink">Hours and Admission</a></li>
+    <li ><a href="/get-involved/giving/" class="pageMenuLink">Giving</a></li>
+
+		<li ><a href="/get-involved/giving/monetary-donations/" class="pageSubMenuLink">Monetary Donations</a></li>
 
 	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/giving/income-tax-receipts/" class="pageSubMenuLink">Income Tax Receipts</a></li>
-
-	    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/giving/artifact-donations/" class="pageMenuLink">Artifact Donations</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/research-facilities/" class="pageMenuLink">Research Facilities</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/archives/photographic-collection/" class="pageMenuLink">Photographic Collection</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/exhibits/permanent-exhibits/" class="pageMenuLink">Permanent Exhibits</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/fiction/" class="pageMenuLink">Fiction</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/stationery/" class="pageMenuLink">Stationery</a></li>
-
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/stationery/cards/" class="pageSubMenuLink">Cards</a></li>
+		<li ><a href="/get-involved/giving/artifact-donations/" class="pageSubMenuLink">Artifact Donations</a></li>
 
 	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/stationery/other-stationary-items/" class="pageSubMenuLink">Other Stationary Items</a></li>
+		<li ><a href="/get-involved/giving/income-tax-receipts/" class="pageSubMenuLink">Income Tax Receipts</a></li>
 
-	    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/stationery/other-stationary-items/" class="pageMenuLink">Other Stationary Items</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/about-us/history-of-the-museum/" class="pageMenuLink">History of the Museum</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/plan-your-visit/" class="pageMenuLink">Plan Your Visit</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/plan-your-visit/tours/" class="pageMenuLink">Tours</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/giving/income-tax-receipts/" class="pageMenuLink">Income Tax Receipts</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/volunteering/" class="pageMenuLink">Volunteering</a></li>
+	    <li ><a href="/get-involved/giving/artifact-donations/" class="pageMenuLink">Artifact Donations</a></li>
+    <li ><a href="/collections-and-research/research-facilities/" class="pageMenuLink">Research Facilities</a></li>
+    <li ><a href="/collections-and-research/archives/photographic-collection/" class="pageMenuLink">Photographic Collection</a></li>
+    <li ><a href="/exhibits/permanent-exhibits/" class="pageMenuLink">Permanent Exhibits</a></li>
+    <li ><a href="/gift-shop/books/fiction/" class="pageMenuLink">Fiction</a></li>
+    <li ><a href="/gift-shop/stationery/" class="pageMenuLink">Stationery</a></li>
 
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/volunteering/volunteer-application-and-interest-form/" class="pageSubMenuLink">Volunteer Application and Interest Form</a></li>
-
-	    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/archives/" class="pageMenuLink">Archives</a></li>
-
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/archives/textual-material/" class="pageSubMenuLink">Textual Material</a></li>
+		<li ><a href="/gift-shop/stationery/cards/" class="pageSubMenuLink">Cards</a></li>
 
 	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/archives/photographic-collection/" class="pageSubMenuLink">Photographic Collection</a></li>
+		<li ><a href="/gift-shop/stationery/other-stationary-items/" class="pageSubMenuLink">Other Stationary Items</a></li>
+
+	    <li ><a href="/gift-shop/stationery/other-stationary-items/" class="pageMenuLink">Other Stationary Items</a></li>
+    <li ><a href="/about-us/history-of-the-museum/" class="pageMenuLink">History of the Museum</a></li>
+    <li ><a href="/plan-your-visit/" class="pageMenuLink">Plan Your Visit</a></li>
+    <li ><a href="/plan-your-visit/tours/" class="pageMenuLink">Tours</a></li>
+    <li ><a href="/get-involved/giving/income-tax-receipts/" class="pageMenuLink">Income Tax Receipts</a></li>
+    <li ><a href="/get-involved/volunteering/" class="pageMenuLink">Volunteering</a></li>
+
+		<li ><a href="/get-involved/volunteering/volunteer-application-and-interest-form/" class="pageSubMenuLink">Volunteer Application and Interest Form</a></li>
+
+	    <li ><a href="/collections-and-research/archives/" class="pageMenuLink">Archives</a></li>
+
+		<li ><a href="/collections-and-research/archives/textual-material/" class="pageSubMenuLink">Textual Material</a></li>
 
 	
-		<li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/archives/photo-reproduction-and-conditions/" class="pageSubMenuLink">Photo Reproduction and Conditions</a></li>
+		<li ><a href="/collections-and-research/archives/photographic-collection/" class="pageSubMenuLink">Photographic Collection</a></li>
 
-	    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/archives/photo-reproduction-and-conditions/" class="pageMenuLink">Photo Reproduction and Conditions</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/exhibits/traveling-exhibits/" class="pageMenuLink">Traveling Exhibits</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/non-fiction/" class="pageMenuLink">Non-Fiction</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/food/" class="pageMenuLink">Food</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/about-us/links-to-our-partners-funders-supporters/" class="pageMenuLink">Links to Our Partners, Funders &#038; Supporters</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/plan-your-visit/accessibility/" class="pageMenuLink">Accessibility</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/" class="pageMenuLink">Get Involved</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/sponsorship/" class="pageMenuLink">Sponsorship</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/historical-timeline/" class="pageMenuLink">Historical Timeline</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/exhibits/virtual-exhibits/" class="pageMenuLink">Virtual Exhibits</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/books/children/" class="pageMenuLink">Children</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/housewares/" class="pageMenuLink">Housewares</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/about-us/contact-us/" class="pageMenuLink">Contact Us</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/get-involved/thanks-and-acknowledgements/" class="pageMenuLink">Thanks and Acknowledgements</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/" class="pageMenuLink">Collections and Research</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/collections-and-research/stories/" class="pageMenuLink">Stories</a></li>
+	
+		<li ><a href="/collections-and-research/archives/photo-reproduction-and-conditions/" class="pageSubMenuLink">Photo Reproduction and Conditions</a></li>
+
+	    <li ><a href="/collections-and-research/archives/photo-reproduction-and-conditions/" class="pageMenuLink">Photo Reproduction and Conditions</a></li>
+    <li ><a href="/exhibits/traveling-exhibits/" class="pageMenuLink">Traveling Exhibits</a></li>
+    <li ><a href="/gift-shop/books/non-fiction/" class="pageMenuLink">Non-Fiction</a></li>
+    <li ><a href="/gift-shop/food/" class="pageMenuLink">Food</a></li>
+    <li ><a href="/about-us/links-to-our-partners-funders-supporters/" class="pageMenuLink">Links to Our Partners, Funders &#038; Supporters</a></li>
+    <li ><a href="/plan-your-visit/accessibility/" class="pageMenuLink">Accessibility</a></li>
+    <li ><a href="/get-involved/" class="pageMenuLink">Get Involved</a></li>
+    <li ><a href="/get-involved/sponsorship/" class="pageMenuLink">Sponsorship</a></li>
+    <li ><a href="/collections-and-research/historical-timeline/" class="pageMenuLink">Historical Timeline</a></li>
+    <li ><a href="/exhibits/virtual-exhibits/" class="pageMenuLink">Virtual Exhibits</a></li>
+    <li ><a href="/gift-shop/books/children/" class="pageMenuLink">Children</a></li>
+    <li ><a href="/gift-shop/housewares/" class="pageMenuLink">Housewares</a></li>
+    <li ><a href="/about-us/contact-us/" class="pageMenuLink">Contact Us</a></li>
+    <li ><a href="/get-involved/thanks-and-acknowledgements/" class="pageMenuLink">Thanks and Acknowledgements</a></li>
+    <li ><a href="/collections-and-research/" class="pageMenuLink">Collections and Research</a></li>
+    <li ><a href="/collections-and-research/stories/" class="pageMenuLink">Stories</a></li>
 
                                         <li ><a href="http://www.lakeofthewoodsmuseum.ca/stories/boats/" class="pageSubMenuLink">Boats</a></li>
 
@@ -210,15 +236,15 @@ img.emoji {
                                 
                                         <li class="lastLI"><a href="http://www.lakeofthewoodsmuseum.ca/stories/sports/" class="pageSubMenuLink">Sports</a></li>
 
-                                    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/outdoor/" class="pageMenuLink">Outdoor</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/exhibits/" class="pageMenuLink">Exhibits</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/children/" class="pageMenuLink">Children</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/events/" class="pageMenuLink">Events</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/education/" class="pageMenuLink">Education</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/services/" class="pageMenuLink">Services</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/gift-shop/" class="pageMenuLink">Gift Shop</a></li>
-    <li ><a href="http://www.lakeofthewoodsmuseum.ca/home/privacy-policy/" class="pageMenuLink">Privacy Policy</a></li>
-    <li class="lastLI"><a href="http://www.lakeofthewoodsmuseum.ca/home/disclaimer/" class="pageMenuLink">Disclaimer</a></li>
+                                    <li ><a href="/gift-shop/outdoor/" class="pageMenuLink">Outdoor</a></li>
+    <li ><a href="/exhibits/" class="pageMenuLink">Exhibits</a></li>
+    <li ><a href="/gift-shop/children/" class="pageMenuLink">Children</a></li>
+    <li ><a href="/events/" class="pageMenuLink">Events</a></li>
+    <li ><a href="/education/" class="pageMenuLink">Education</a></li>
+    <li ><a href="/services/" class="pageMenuLink">Services</a></li>
+    <li ><a href="/gift-shop/" class="pageMenuLink">Gift Shop</a></li>
+    <li ><a href="/home/privacy-policy/" class="pageMenuLink">Privacy Policy</a></li>
+    <li class="lastLI"><a href="/home/disclaimer/" class="pageMenuLink">Disclaimer</a></li>
 
         </ul>
 	</div>
@@ -248,14 +274,12 @@ img.emoji {
     <div style="text-align: center; font-weight: bold;">
       <p>RENEW YOUR MEMBERSHIP or BECOME A MEMBER ONLINE!<br />
 <a href="/?p=600" title="Become a Member">Online application ...</a></p>
-<p>LIFE OF A POW<br />
-Book Launch by Duncan Pringle<br />
-Thursday May 12  7:00 pm<br />
-<a href="/?p=754" title="Life of a Pow Book Launch">more info ...</a></p>
-<p>IN THIS PLACE ... McLeod Park<br />
-The History of McLeod Park<br />
-Saturday, May 14  3 pm<br />
-<a href="/?p=761" title="The History of McLeod Park">more info ...</a></p>
+<p>WE ARE WHAT WE EAT: Fall Encore<br />
+Celebrating<br />
+Kenora's Culinary Diversity<br />
+Saturday Sep 10 & Sep 17 2-3:30 pm<br />
+<a href=http://www.lakeofthewoodsmuseum.ca/?p=413><br />
+  more info ...</a></p>
     </div>
   </div>
     <div id="exhibits">
@@ -263,12 +287,11 @@ Saturday, May 14  3 pm<br />
       <img src="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/img/sidebar_inourgallery_title.png" alt="In Our Temporary Exhibit Gallery">
     </div>
     <div style="text-align: center; font-weight: bold;">
-      <p>SEARCHING FOR SOMETHING DIFFERENT<br />
-An Exhibit of Paintings & Fabric Art<br />
-by Local Artists<br />
-Nancy Bergman & Patricia Schwartz<br />
-May 3 - 28<br />
-<a href="/?p=175" title="Something Different">more  ...</a></p>
+      <p>Coming Soon!</p>
+<p>K is for KENORA:<br />
+A Lake of the Woods Alphabet<br />
+October 4 - November 12</p>
+<p><a href="http://www.lakeofthewoodsmuseum.ca/exhibits/current-and-upcoming-exhibits/" title="Full Steam Ahead">more  ...</a></p>
     </div>
   </div>
           
@@ -280,7 +303,7 @@ May 3 - 28<br />
         <div class="clear"></div>
       </div>
 
-      <div id="footer"><a href="http://www.lakeofthewoodsmuseum.ca/wp-login.php">Log in</a> | 
+      <div id="footer"><a rel="nofollow" href="http://www.lakeofthewoodsmuseum.ca/wp-login.php">Log in</a> | 
 <a href="/?p=449">Privacy Policy</a> | 
 <a href="/?p=451">Disclaimer</a> | 
 <a href="/?p=19">Contact Us</a>
@@ -296,10 +319,10 @@ Phone: (807) 467-2105 | Fax: (807)467-2109 | Email: <a href="mailto:museum@kmts.
 </div>
 
 
-<script type='text/javascript' src='http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/js/jquery.mmenu.min.all.js'></script>
-<script type='text/javascript' src='http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/js/custom.js'></script>
-<script type='text/javascript' src='http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/js/scripts.min.js?ver=0fc6af96786d8f267c8686338a34cd38'></script>
-<script type='text/javascript' src='http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/js/nested_menu.js'></script>
+<script type='text/javascript' src='/wp-content/themes/lotwmuseum/assets/js/jquery.mmenu.min.all.js'></script>
+<script type='text/javascript' src='/wp-content/themes/lotwmuseum/assets/js/custom.js'></script>
+<script type='text/javascript' src='/wp-content/themes/lotwmuseum/assets/js/scripts.min.js?ver=0fc6af96786d8f267c8686338a34cd38'></script>
+<script type='text/javascript' src='/wp-content/themes/lotwmuseum/assets/js/nested_menu.js'></script>
 </div>
 
     </div>
@@ -426,14 +449,12 @@ Phone: (807) 467-2105 | Fax: (807)467-2109 | Email: <a href="mailto:museum@kmts.
     <div style="text-align: center; font-weight: bold;">
       <p>RENEW YOUR MEMBERSHIP or BECOME A MEMBER ONLINE!<br />
 <a href="/?p=600" title="Become a Member">Online application ...</a></p>
-<p>LIFE OF A POW<br />
-Book Launch by Duncan Pringle<br />
-Thursday May 12  7:00 pm<br />
-<a href="/?p=754" title="Life of a Pow Book Launch">more info ...</a></p>
-<p>IN THIS PLACE ... McLeod Park<br />
-The History of McLeod Park<br />
-Saturday, May 14  3 pm<br />
-<a href="/?p=761" title="The History of McLeod Park">more info ...</a></p>
+<p>WE ARE WHAT WE EAT: Fall Encore<br />
+Celebrating<br />
+Kenora's Culinary Diversity<br />
+Saturday Sep 10 & Sep 17 2-3:30 pm<br />
+<a href=http://www.lakeofthewoodsmuseum.ca/?p=413><br />
+  more info ...</a></p>
     </div>
   </div>
     <div id="exhibits">
@@ -441,12 +462,11 @@ Saturday, May 14  3 pm<br />
       <img src="http://www.lakeofthewoodsmuseum.ca/wp-content/themes/lotwmuseum/assets/img/sidebar_inourgallery_title.png" alt="In Our Temporary Exhibit Gallery">
     </div>
     <div style="text-align: center; font-weight: bold;">
-      <p>SEARCHING FOR SOMETHING DIFFERENT<br />
-An Exhibit of Paintings & Fabric Art<br />
-by Local Artists<br />
-Nancy Bergman & Patricia Schwartz<br />
-May 3 - 28<br />
-<a href="/?p=175" title="Something Different">more  ...</a></p>
+      <p>Coming Soon!</p>
+<p>K is for KENORA:<br />
+A Lake of the Woods Alphabet<br />
+October 4 - November 12</p>
+<p><a href="http://www.lakeofthewoodsmuseum.ca/exhibits/current-and-upcoming-exhibits/" title="Full Steam Ahead">more  ...</a></p>
     </div>
   </div>
   </div>

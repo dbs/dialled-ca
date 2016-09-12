@@ -8,9 +8,16 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Gibbons Municipal Library of Gibbons, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Gibbons, Alberta, Canada" />
+<meta name="google-site-verification" content="LgLCk6Qitkfwxw_e0MpDMiiNQVExZ0x2bMyxPdxgcCI" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,9 +28,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Gibbons Municipal Library of Gibbons, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Gibbons, Alberta, Canada" />
-<meta name="google-site-verification" content="LgLCk6Qitkfwxw_e0MpDMiiNQVExZ0x2bMyxPdxgcCI" />
 
 
 	<meta property="og:url" CONTENT="http://www.gibbonslibrary.ab.ca/" />
@@ -33,12 +37,10 @@
 	<meta property="og:locale" CONTENT="en_US" />
 	<meta property="fb:app_id" CONTENT="142916509104743" />
 	<meta property="og:type" CONTENT="website" />
-	<meta property="og:description" CONTENT=""/>
 
 	
-		
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -46,7 +48,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -54,10 +56,10 @@
 	<meta name="twitter:site" CONTENT="Gibbons Municipal Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Gibbons Municipal Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -259,7 +261,6 @@ if (typeof jQuery != 'undefined') {
 	@import url('http://cloud.townlife.ca/themes/Shared/nav/dropdown/dropdown.css');
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -267,6 +268,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -281,6 +294,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -301,9 +320,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -335,45 +353,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/130" class="blog_link active_page" title="Blog Posts">Blog Posts</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=130" class="blog_link active_page" title="Blog Posts"><span>Blog Posts</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/130" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/130" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=130" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/215" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -400,10 +398,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -418,9 +416,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
-    <li id="active"><a href="http://www.gibbonslibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Programs" title="Programs"><span>Programs</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Services" title="Services"><span>Services</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/TRAC-Consortium-" target="_blank" title="Trac consortium "><span>TRAC Consortium </span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li>
-  
+    <li id="active"><a href="http://www.gibbonslibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Programs" title="Programs"><span>Programs</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Services" title="Services"><span>Services</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/TRAC-Consortium-" target="_blank" title="Trac consortium "><span>TRAC Consortium </span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/TD-Summer-Reading-Club" title="Td summer reading club"><span>TD Summer Reading Club</span></a></li>
 </ul>
 
 	</nav>
@@ -506,7 +502,7 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="OPEN LATE" src="http://files.townlife.com/public/uploads/photos/467595/OPEN_LATE_xlarge.jpg" />
+					<img class="bigImg" alt="Book Sale" src="http://files.townlife.com/public/uploads/photos/502590/Book_Sale_xlarge.jpg" />
 					
 					
 					
@@ -516,7 +512,17 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="Bedtime Story Hour" src="http://files.townlife.com/public/uploads/photos/469918/Bedtime_Story_Hour_xlarge.jpg" />
+					<img class="bigImg" alt="Art Attack" src="http://files.townlife.com/public/uploads/photos/502989/Art_Attack_xlarge.jpg" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Bedtime Story Hour (1)" src="http://files.townlife.com/public/uploads/photos/502612/Bedtime_Story_Hour__1__xlarge.jpg" />
 					
 					
 					
@@ -536,27 +542,7 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="Adult Book Club" src="http://files.townlife.com/public/uploads/photos/454565/Adult_Book_Club_xlarge.png" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
 					<img class="bigImg" alt="fireplace" src="http://files.townlife.com/public/uploads/photos/438579/fireplace_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="crafts 4 kids (1)" src="http://files.townlife.com/public/uploads/photos/469929/crafts_4_kids__1__xlarge.jpg" />
 					
 					
 					
@@ -611,61 +597,58 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6195"><img alt="Happy-easter" src="http://files.townlife.com/public/asset_files/7255/thumb_400/Happy-Easter.jpg?1458840652" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7255/xlarge/Happy-Easter.jpg?1458840652" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Happy-easter" src="http://files.townlife.com/public/asset_files/7255/thumb_400/Happy-Easter.jpg?1458840652" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6195">				
-	  Easter Holiday Closure			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/6195">
+	    Easter Holiday Closure
+          </a>
         <p>&nbsp;The Library will be closed on Friday March 25, Saturday March 26, and Monday March 28 for Easter. We will reopen on Tuesday March 29 for regu...
         <!-- <a href="/blogs/show_entry/6195">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6057"><img alt="Clock1" src="http://files.townlife.com/public/asset_files/7143/thumb_400/clock1.jpg?1456783519" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7143/xlarge/clock1.jpg?1456783519" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Clock1" src="http://files.townlife.com/public/asset_files/7143/thumb_400/clock1.jpg?1456783519" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6057">				
-	  Open Late!			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/6057">
+	    Open Late!
+          </a>
         <p>With the help of our wonderful volunteers, the Gibbons Library will be open late one extra day a week. Starting in March &nbsp;2016, we&nbsp;will r...
         <!-- <a href="/blogs/show_entry/6057">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5938"><img alt="Blinddate" src="http://files.townlife.com/public/asset_files/7093/thumb_400/blinddate.jpg?1455064683" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7093/xlarge/blinddate.jpg?1455064683" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Blinddate" src="http://files.townlife.com/public/asset_files/7093/thumb_400/blinddate.jpg?1455064683" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5938">				
-	  Book Display			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5938">
+	    Book Display
+          </a>
         <p>&nbsp;They say you shouldn't judge a book (or a person for that matter) by its cover. The Gibbons library dares you to go on a &quot;blind date&quo...
         <!-- <a href="/blogs/show_entry/5938">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5646"><img alt="Img_20151207_121059" src="http://files.townlife.com/public/asset_files/6755/thumb_400/IMG_20151207_121059.jpg?1449516594" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6755/xlarge/IMG_20151207_121059.jpg?1449516594" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Img_20151207_121059" src="http://files.townlife.com/public/asset_files/6755/thumb_400/IMG_20151207_121059.jpg?1449516594" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5646">				
-	  Red Hat Tree			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5646">
+	    Red Hat Tree
+          </a>
         <p>&nbsp;
 
 Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautiful tree at the Gibbons Library! &nbsp;
@@ -673,23 +656,20 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
         <!-- <a href="/blogs/show_entry/5646">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5559"><img alt="Trac" src="http://files.townlife.com/public/asset_files/6707/thumb_400/trac.jpg?1447883851" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6707/xlarge/trac.jpg?1447883851" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Trac" src="http://files.townlife.com/public/asset_files/6707/thumb_400/trac.jpg?1447883851" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5559">				
-	  Get on TRAC!			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5559">
+	    Get on TRAC!
+          </a>
         <p>Did you know that your Gibbons Library card is connected to over 170 libraries across Alberta through the TRAC system? The TRAC (The Regional Autom...
         <!-- <a href="/blogs/show_entry/5559">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/130">+ MORE</a></h6>
 </div>
@@ -700,34 +680,25 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/130">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/130">Upcoming Events</a> 
         <span class="latest_events_count">(1)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>09</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
             <a href="/calendars/show_event/32268">Library Program Schedule</a>
             <span class="upcoming_time_frame">
               (today)
-              
             </span>
           </li>
-        
       </ul>
       <h6 class="more"><a href="/calendars/table/130">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -735,77 +706,40 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_691">
-	      
-              
-	      
+	    <dd id="action_691">
 	        <img alt="Call (780) 923-2004" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 923-2004" />
 		
 		Call (780) 923-2004
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_692">
-	      
-              
-	      
+		    <dd id="action_692">
 	        <img alt="Fax (780) 923-2015" class="action_steps_image" src="/images/icons/fff/printer.png?1445483283" title="Fax (780) 923-2015" />
 		
 		Fax (780) 923-2015
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/130" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1410&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1410&amp;return_url=http%3A%2F%2Fwww.gibbonslibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=130" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.gibbonslibrary.ab.ca%2F&amp;site_id=130" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -821,59 +755,37 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
-	  <a href="http://www.gibbons.ca/" class="action_steps_link" target="_blank">Town of Gibbons</a>
+	  <a href="http://gws.ala.org/category/arts" class="action_steps_link" target="_blank">Websites for Kids</a>
         </dd>
-      	
-	
-	  
-	
-	<dd>
-	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
-	  <a href="http://www.sturgeoncounty.ca/" class="action_steps_link" target="_blank">Sturgeon County</a>
-        </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.nlls.ab.ca/" class="action_steps_link" target="_blank">Northern Lights Library System</a>
         </dd>
-      	
-	
-	  
-	
+	<dd>
+	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
+	  <a href="http://www.gibbons.ca/" class="action_steps_link" target="_blank">Town of Gibbons</a>
+        </dd>
+	<dd>
+	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
+	  <a href="http://www.sturgeoncounty.ca/" class="action_steps_link" target="_blank">Sturgeon County</a>
+        </dd>
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="https://melibraries.ca/" class="action_steps_link" target="_blank">ME Libraries</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.careersunderconstruction.ca/" class="action_steps_link" target="_blank">Careers Under Construction </a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.sunflowerinfoline.ca/" class="action_steps_link" target="_blank">Sunflower Community Resource Program</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -890,16 +802,10 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -911,12 +817,8 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
-    
           <!-- LIQUID LAYOUT -->    
     <ul class="social">
-        
           <li id="facebook">
             <div id="fb-root"></div>
             <script>
@@ -949,22 +851,13 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
             </script>
             <div class="fb-like" data-href="http://www.gibbonslibrary.ab.ca/" data-width="180" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
           </li>
-        
-        
 
-        
 
-        
 
-        
     </ul>
 
-    
-    
       <img alt="Share" src="/images/social_bookmarks/share.png?1445483283" />
-    
 
-  
 </div>
 
  </span>
@@ -985,113 +878,8 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
 			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
 				
 			
 			
@@ -1112,7 +900,7 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
 			
 				
 			
@@ -1123,18 +911,7 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
 			
 				
 			
@@ -1159,6 +936,122 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 				 
 				 
 			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
 			
 				
@@ -1170,7 +1063,7 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
 			
 				
 					</div><!-- end book group -->
@@ -1193,7 +1086,7 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1235,61 +1128,41 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
-    <li id="active"><a href="http://www.gibbonslibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Programs" title="Programs"><span>Programs</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Services" title="Services"><span>Services</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/TRAC-Consortium-" target="_blank" title="Trac consortium "><span>TRAC Consortium </span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li>
-  
+    <li id="active"><a href="http://www.gibbonslibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Programs" title="Programs"><span>Programs</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Services" title="Services"><span>Services</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/TRAC-Consortium-" target="_blank" title="Trac consortium "><span>TRAC Consortium </span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.gibbonslibrary.ab.ca/TD-Summer-Reading-Club" title="Td summer reading club"><span>TD Summer Reading Club</span></a></li>
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/130" class="blog_link active_page" title="Blog Posts">Blog Posts</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=130" class="blog_link active_page" title="Blog Posts"><span>Blog Posts</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/130" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/130" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=130" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/215" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			<a href="/galleries/show_photo/439360"><img src="http://files.townlife.com/public/uploads/photos/439360/FOR_EVERYTHING_SocialL__1_.jpg" alt="FOR_EVERYTHING_SocialL__1_" title="FOR_EVERYTHING_SocialL__1_" /></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://www.facebook.com/gibbonslibrary" target="_blank"><span style="font-size: 0.833333em;">Facebook</span></a><span class="Apple-tab-span" style="font-size: 0.833333em; white-space: pre;">										</span><span style="font-size: 0.833333em;"><a href="https://twitter.com/gibbonslibrary" target="_blank">Twitter</a></span>
+			<a href="/galleries/show_photo/439360"><img title="FOR_EVERYTHING_SocialL__1_" alt="FOR_EVERYTHING_SocialL__1_" src="http://files.townlife.com/public/uploads/photos/439360/FOR_EVERYTHING_SocialL__1_.jpg" /></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a target="_blank" href="https://www.facebook.com/gibbonslibrary"><span style="font-size: 0.833333em;">Facebook</span></a><span style="font-size: 0.833333em; white-space: pre;" class="Apple-tab-span">										</span><span style="font-size: 0.833333em;"><a target="_blank" href="https://twitter.com/gibbonslibrary">Twitter</a></span>
+
+<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1298,7 +1171,7 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1308,41 +1181,23 @@ Thank You to the Wild Rose Mama's Red Hat Society for setting up another beautif
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/130" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1479,6 +1334,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1505,3 +1385,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

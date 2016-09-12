@@ -13,7 +13,7 @@
 <meta http-equiv="Expires" content="0" />
 
 
-<meta property="og:image" content="http://www.retsd.mb.ca/_layouts/15/Images/Scholantis/Web/Wave 4/ogImage.png" />
+<meta property="og:image" content="http://www.retsd.mb.ca/_layouts/15/Images/Scholantis/Shared/Wave%204/ogImage.png" />
 
 
 
@@ -28,13 +28,15 @@
 <link rel="apple-touch-icon-precomposed" href="/_layouts/15/Images/Scholantis/Web/Wave 4/Icons/apple-touch-icon.png" />
 
 
+<script type="text/javascript">window.SL=window.SL||{};SL.Context=SL.Context||{};SL.Context.CorrelationId="74c2a29d-b52d-c0f8-ac43-82ff4f523cc3";</script>
 
 
 
 
-<script type="text/javascript" src="/_layouts/15/init.js?rev=0%2BjgcYFw8Xoj0N42kzP%2BcQ%3D%3D"></script>
-<script type="text/javascript" src="/_layouts/15/1033/initstrings.js?rev=2N3pk%2FwjnG3Tj9o5NrqHcg%3D%3D"></script>
-<script type="text/javascript" src="/_layouts/15/1033/strings.js?rev=y6khbhv1Os2YPb5X0keqRg%3D%3D"></script>
+
+<script type="text/javascript" src="/_layouts/15/init.js?rev=v4vAU%2Bw4fHSKHbcpMvHDqQ%3D%3D"></script>
+<script type="text/javascript" src="/_layouts/15/1033/initstrings.js?rev=pRgiaBWoVWlT3BVtOSGI3g%3D%3D"></script>
+<script type="text/javascript" src="/_layouts/15/1033/strings.js?rev=kHuug6I4CV98h72DIrODHA%3D%3D"></script>
 <script type="text/javascript" src="/_layouts/15/ie55up.js?rev=0R4dbpInVlmjoVSw2Gglmw%3D%3D"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=fZhScVR75Mn3BE44wf5Nkq1w-nOOA2CF1v27ewQarGquxkqiWapy-jWi7T0zquuf5W-2H--FvinzwCbd0KfkwEODBIIw7BBT6zWjFD2zg6cgPDhAq56tDJ98IMnbddyTedvbsRy5sD5H_u14s88RLvKs9YbDaIW8bZbWfqiUEEU_eNYSMavtctAdasAjh-fe0&amp;t=72e85ccd"></script>
 <script type="text/javascript" src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D"></script>
@@ -42,27 +44,27 @@
 <script type="text/javascript" src="/_layouts/15/sp.init.js?rev=jvJC3Kl5gbORaLtf7kxULQ%3D%3D"></script>
 <script type="text/javascript" src="/_layouts/15/clientrenderer.js?rev=PWwV4FATEiOxN90BeB5Hzw%3D%3D"></script>
 <script type="text/javascript" src="/_layouts/15/ScriptResx.ashx?culture=en%2Dus&amp;name=Srch%2EResources&amp;rev=XDE4tiLBtKKfBTRJIu5neg%3D%3D"></script>
-<script type="text/javascript" src="/_layouts/15/search.clientcontrols.js?rev=3KWUZKiQHQRm2qtL4ps4tA%3D%3D"></script>
+<script type="text/javascript" src="/_layouts/15/search.clientcontrols.js?rev=JsSAiNWD%2BfNQEauHDblIJw%3D%3D"></script>
 <script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=yNk\u00252FhRzgBn40LJVP\u00252BqfgdQ\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002f15\u002fsp.ui.dialog.js?rev=0xf6wCIW4E1pN83I9nSIJQ\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f15\u002fcore.js?rev=SPYouC\u00252FXklFUaVfqGqtEHQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002f15\u002fsp.ui.dialog.js?rev=3Oh2QbaaiXSb7ldu2zd6QQ\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f15\u002fcore.js?rev=RhXbfmYVZPAVfMw9wg96gw\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("menu.js", "\u002f_layouts\u002f15\u002fmenu.js?rev=cXv35JACAh0ZCqUwKU592w\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("mQuery.js", "\u002f_layouts\u002f15\u002fmquery.js?rev=VYAJYBo5H8I3gVSL3MzD6A\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("callout.js", "\u002f_layouts\u002f15\u002fcallout.js?rev=ryx2n4ePkYj1\u00252FALmcsXZfA\u00253D\u00253D");RegisterSodDep("callout.js", "mQuery.js");RegisterSodDep("callout.js", "core.js");</script>
-<script type="text/javascript">RegisterSod("clienttemplates.js", "\u002f_layouts\u002f15\u002fclienttemplates.js?rev=fvbAZKplGd7BZlG3xJ8SbQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("clienttemplates.js", "\u002f_layouts\u002f15\u002fclienttemplates.js?rev=NcvlCZrrR5\u00252FEFAAzFoZjyg\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("sharing.js", "\u002f_layouts\u002f15\u002fsharing.js?rev=XxxHIxIIc8BsW9ikVc6dgA\u00253D\u00253D");RegisterSodDep("sharing.js", "mQuery.js");RegisterSodDep("sharing.js", "clienttemplates.js");RegisterSodDep("sharing.js", "core.js");</script>
 <script type="text/javascript">RegisterSod("suitelinks.js", "\u002f_layouts\u002f15\u002fsuitelinks.js?rev=REwVU5jSsadDdOZlCx4wpA\u00253D\u00253D");RegisterSodDep("suitelinks.js", "core.js");</script>
 <script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002f15\u002fsp.runtime.js?rev=5f2WkYJoaxlIRdwUeg4WEg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("sp.search.js", "\u002f_layouts\u002f15\u002fsp.search.js?rev=nmyEEOXg53kzfXV9RnWsNw\u00253D\u00253D");RegisterSodDep("sp.search.js", "sp.runtime.js");</script>
+<script type="text/javascript">RegisterSod("sp.search.js", "\u002f_layouts\u002f15\u002fsp.search.js?rev=dMkPlEXpdY6iJ\u00252FsY5RsB0g\u00253D\u00253D");RegisterSodDep("sp.search.js", "sp.runtime.js");</script>
 <script type="text/javascript">RegisterSod("ajaxtoolkit.js", "\u002f_layouts\u002f15\u002fajaxtoolkit.js?rev=4rOiCbaFgJMmqw9Ojtpa6g\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002f15\u002fsp.js?rev=AAVN2ASApkrUQA7cHBtN8A\u00253D\u00253D");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("userprofile", "\u002f_layouts\u002f15\u002fsp.userprofiles.js?rev=Pbfi3FBmvy2ewPqDZp16\u00252BQ\u00253D\u00253D");RegisterSodDep("userprofile", "sp.runtime.js");</script>
-<script type="text/javascript">RegisterSod("followingcommon.js", "\u002f_layouts\u002f15\u002ffollowingcommon.js?rev=sObFmln\u00252BGVrczIpXNeFRrg\u00253D\u00253D");RegisterSodDep("followingcommon.js", "sp.js");RegisterSodDep("followingcommon.js", "userprofile");RegisterSodDep("followingcommon.js", "core.js");RegisterSodDep("followingcommon.js", "mQuery.js");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002f15\u002fsp.js?rev=obJ8eqVKwO\u00252Fi\u00252FhAir30iQQ\u00253D\u00253D");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("userprofile", "\u002f_layouts\u002f15\u002fsp.userprofiles.js?rev=p5tCOm\u00252FlHUwcfll7W3pKNw\u00253D\u00253D");RegisterSodDep("userprofile", "sp.runtime.js");</script>
+<script type="text/javascript">RegisterSod("followingcommon.js", "\u002f_layouts\u002f15\u002ffollowingcommon.js?rev=jWqEDmcjCSPmnQw2ZIfItQ\u00253D\u00253D");RegisterSodDep("followingcommon.js", "sp.js");RegisterSodDep("followingcommon.js", "userprofile");RegisterSodDep("followingcommon.js", "core.js");RegisterSodDep("followingcommon.js", "mQuery.js");</script>
 <script type="text/javascript">RegisterSod("profilebrowserscriptres.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=ProfileBrowserScriptRes\u0026rev=J5HzNnB\u00252FO1Id\u00252FGI18rpRcw\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("sp.ui.mysitecommon.js", "\u002f_layouts\u002f15\u002fsp.ui.mysitecommon.js?rev=Ua8qmZSU9nyf53S7PEyJwQ\u00253D\u00253D");RegisterSodDep("sp.ui.mysitecommon.js", "sp.runtime.js");RegisterSodDep("sp.ui.mysitecommon.js", "userprofile");RegisterSodDep("sp.ui.mysitecommon.js", "profilebrowserscriptres.resx");</script>
-<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002f15\u002finplview.js?rev=Uv\u00252BQls0Zz16uHFi33RrTcA\u00253D\u00253D");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002f15\u002finplview.js?rev=gj\u00252BiqPqpNPU131h9hI01nA\u00253D\u00253D");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
 <script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002f15\u002fsp.core.js?rev=tZDGLPOvY1bRw\u00252BsgzXpxTg\u00253D\u00253D");RegisterSodDep("sp.core.js", "core.js");</script>
-<script type="text/javascript">RegisterSod("dragdrop.js", "\u002f_layouts\u002f15\u002fdragdrop.js?rev=\u00252FlbcPNAdxvx6ol\u00252BJ5Sir4g\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("dragdrop.js", "\u002f_layouts\u002f15\u002fdragdrop.js?rev=FWJk59qsoUn1boCKG1qUIg\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("quicklaunch.js", "\u002f_layouts\u002f15\u002fquicklaunch.js?rev=\u00252BHeX6ARcp\u00252F9LpMq6FqQYyA\u00253D\u00253D");RegisterSodDep("quicklaunch.js", "dragdrop.js");</script>
 
 
@@ -72,7 +74,7 @@
 
 <link type="text/xml" rel="alternate" href="/_vti_bin/spsdisco.aspx" />
 		
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.min.js?sha1=2439711705752FAC5DD1A6A8D6B1BE63FFCBC76D"></script>
+<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.flexslider.min.js?sha1=55973533EB2F6C1E65FDFA5B9B1D447676511E85"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.cycle2.min.js?sha1=A3DE9AF2595FA644D2EF62FF622E7035A7DAA593"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.lightbox.min.js?sha1=864063D2D0AB92BB6B62F01D8609DDE8D97300EE"></script>
@@ -80,15 +82,18 @@
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.oembed.min.js?sha1=EA5DE084FF0EC7B09D3E98C9D3D771F025821CE4"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.masonry.min.js?sha1=4EFC58E52FED3DA8C6504511D680A322BCE2D4E3"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/bootstrap/bootstrap.min.js?sha1=7ABDF3D60ADAB756D9B8D84022E5C9A6B59877EE"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/selectivizr.min.js?sha1=65DE9F570BF7FDFF1B496CA80AB5FD90599D9E39"></script>
+<!--[if IE 8]><script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/selectivizr.min.js?sha1=65DE9F570BF7FDFF1B496CA80AB5FD90599D9E39"></script><![endif]-->
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/lodash-fp.min.js?sha1=BB369F268163101BC64663ECDED1414BE9CD756F"></script>
 		
 <!--[if lt IE 9]><script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/html5shiv.min.js?sha1=3C9649A10A16AD02EC92F1C020C3F9D1A9E6A0E6"></script><![endif]-->
        
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/respond.js&sha1=044C5AA968C66729BD2232D1DF5755E0D297022E"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/shared.core.js&sha1=1EE03F7D00EE3CA1CA28B7F29169C72C088B667C"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.core.js&sha1=975F0F9AC7F3B75228E71585C2DF4F0295DCEE05"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.custom.js&sha1=059CA992F5AA67DF9DA023A98A58BBF9BF1A187A"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/respond.js&sha1=5BCB7665714336A5AB03B6AE1200B5A5E5A336F5"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/shared.core.js&sha1=90287D95EDF99D52732C7D788051BAAE4B6A9E9D"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.core.js&sha1=3F5DE11A451AA0724C176217D35454CF2BCBFD16"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.custom.js&sha1=DBA6251121D4D13840C49FDC8C39C9CA7852EDF5"></script>
+
+
+
 <script type="text/javascript">function ProcessImn() { };function ProcessImnMarkers() { }</script>
 
 
@@ -181,11 +186,11 @@
 
 				 - River East Transcona School Division
             
-</title><link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=OqAycmyMLoQIDkAlzHdMhQ%3D%3D"/>
+</title><link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=Enh7f%2BrXncl4CuQdAWs6MQ%3D%3D"/>
 <link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/searchv15.css?rev=qarmmE3eURu3ZS2Wsbpf2w%3D%3D"/>
 
-            <link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.core.less&sha1=953A6BC1F1C2559DD7381D53A5763224357E6E63&theme=web.District"></link>
-            <!--[if IE]><link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.ie.less&sha1=A696BC19FC753AF68A465B82840D22B5D69B4C4B&theme=web.District"></link><![endif]-->
+            <link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.core.less&sha1=5A59036E99D8A77B5F6DD720B3EDEACD99C8D4B4&theme=web.District"></link>
+            <!--[if IE]><link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.ie.less&sha1=BF15CF1BFA53A36780EBA11000E6A328D4E5AD32&theme=web.District"></link><![endif]-->
         <link rel="canonical" href="http://www.retsd.mb.ca:80/Pages/home.aspx" /></head>
 
     <body class="
@@ -193,7 +198,7 @@
     sl-Web
     
     sl-Anonymous
-
+	sl-AnonymousSite
     sl-District
     sl-SiteTemplateSts
     sl-LayoutScholantisHome
@@ -224,7 +229,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x4BB57FE0E88E6D11E29155E5703AE2A7B11DD1AF68CA33C38FD6F6D92617108A848DB4068A7C6ED92F88B5DDDE1D46BBE8771CF1F0BD4D137A0900CB16E37299,09 May 2016 13:34:23 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xE0612711662315268F9CAC0BD22A529AD1D9E2033A377CB31A75AF2EFF136B2BFEFDFE8FABFF5393A3AA5F17275549FEC18EF178D7CA360CC95E99913E0DCB42,11 Sep 2016 16:00:24 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -235,7 +240,7 @@
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzc1NDg3MTg4D2QWAmYPZBYCAgMPZBYEAgEPZBYIAgEPZBYCZg9kFgICAQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAWQCBg9kFgJmD2QWAmYPPCsABgBkAgcPDxYCHgdWaXNpYmxlaGRkAggPDxYCHwFoZGQCGQ9kFgYCAQ9kFggFJmdfYmM0MmJlMDhfOTU3Nl80OGIxXzhhNjNfOTRkOWM2YjcxMGMwD2QWAmYPZBYCAgIPFgQeBWNsYXNzBRpzbC1GZWF0dXJlZFN0b3JpZXNEaXN0cmljdB8BZxYEAgEPFgIfAWhkAgIPFgIeC18hSXRlbUNvdW50AgUWCmYPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHgtOYXZpZ2F0ZVVybAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTQfAWgWAh4Hb25jbGljawWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTQnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh4Gc3Jjc2V0BTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy8yX2pwZy5qcGdkAgUPFgQeA3NyYwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvMi5qcGceA2FsdAUNV2UgYmVsaWV2ZSB3ZWQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIeCWlubmVyaHRtbAUNV2UgYmVsaWV2ZSB3ZWQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBTYgPHA+4oCLSW5zcGlyZSBza2lsbGVkICZhbXA7IHJlc3BvbnNpYmxlIGNpdGl6ZW5zPC9wPiBkAgcPFgIfAWhkAgEPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHwQFa2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD0zHwFoFgIfBQWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTMnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh8GBTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy8xX2pwZy5qcGdkAgUPFgQfBwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvMS5qcGcfCAUNV2UgYmVsaWV2ZSBpbmQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIfCQUNV2UgYmVsaWV2ZSBpbmQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBR4gPHA+UmVzcGVjdCAmYW1wOyBkaWduaXR5PC9wPiBkAgcPFgIfAWhkAgIPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHwQFa2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD03HwFoFgIfBQWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTcnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh8GBTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy81X2pwZy5qcGdkAgUPFgQfBwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvNS5qcGcfCAUNV2UgYmVsaWV2ZSBpbmQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIfCQUNV2UgYmVsaWV2ZSBpbmQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBSwgPHA+U2VydmluZyBzdHVkZW50cyAmYW1wOyBjb21tdW5pdHnigIs8L3A+IGQCBw8WAh8BaGQCAw9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTUfAWgWAh8FBY0BTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NScpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHwYFM2h0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzL193LzNfanBnLmpwZ2QCBQ8WBB8HBSxodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy8zLmpwZx8IBQpXZSBiZWxpZXZlZAIHDxYCHwIFDmZlYXR1cmVkLWVudHJ5FgYCAQ8WAh8JBQpXZSBiZWxpZXZlZAIFDxYCHwIFFmVudHJ5LXN1bW1hcnkgY29tcGxldGUWAgIBDxYCHwkFHiA8cD5FdmVyeW9uZSBpcyB1bmlxdWXigIs8L3A+IGQCBw8WAh8BaGQCBA9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTYfAWgWAh8FBY0BTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NicpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHwYFM2h0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzL193LzRfanBnLmpwZ2QCBQ8WBB8HBSxodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy80LmpwZx8IBQ1XZSBiZWxpZXZlIGluZAIHDxYCHwIFDmZlYXR1cmVkLWVudHJ5FgYCAQ8WAh8JBQ1XZSBiZWxpZXZlIGluZAIFDxYCHwIFFmVudHJ5LXN1bW1hcnkgY29tcGxldGUWAgIBDxYCHwkFLyA8cD5TYWZlJiMxNjA7JmFtcDsgY2FyaW5nIGVudmlyb25tZW50c+KAizwvcD4gZAIHDxYCHwFoZAUmZ185MGViYjM1Nl9jZGE1XzRlYTNfYTI0Zl85MmZlNjg1MmI5M2IPZBYEZg8WAh8BaGQCAQ8WAh8BaGQFJmdfNmQyNGQ0NDZfODVlMF80NTZmX2I2YzVfMWQ5OWNiMzYxZjc3D2QWBGYPFgIfAWhkAgEPFgIfAWhkBSZnX2FjODVjNDc0X2ZlYzFfNGY5ZV9iYmEyX2Y4Yjg0M2Y1MzQ2Yw9kFgRmDxYCHwFoZAIBDxYCHwFoZAIFD2QWAgICD2QWAgIBD2QWAgIDD2QWAgIBD2QWAgIVD2QWAgIBDxYCHwFoFgJmD2QWBAICD2QWAgIBDxYCHwFoZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCIw9kFgICAg8PFgIfAWhkZBgBBSljdGwwMCRQbGFjZUhvbGRlclRvcE5hdiRUb3BOYXZpZ2F0aW9uTWVudQ8PZAUESG9tZWRrDHzC1HsXw00Xh5K4L7bYDoQoJ/n1+TKns9hslugCuA==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzc1NDg3MTg4D2QWAmYPZBYCAgMPZBYEAgEPZBYIAgEPZBYCZg9kFgICAQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAWQCBg9kFgJmD2QWAmYPPCsABgBkAgcPDxYCHgdWaXNpYmxlaGRkAggPDxYCHwFoZGQCGw9kFgYCAQ9kFggFJmdfYmM0MmJlMDhfOTU3Nl80OGIxXzhhNjNfOTRkOWM2YjcxMGMwD2QWAmYPZBYCAgIPFgQeBWNsYXNzBRpzbC1GZWF0dXJlZFN0b3JpZXNEaXN0cmljdB8BZxYEAgEPFgIfAWhkAgIPFgIeC18hSXRlbUNvdW50AgUWCmYPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHgtOYXZpZ2F0ZVVybAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTUfAWgWAh4Hb25jbGljawWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTUnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh4Gc3Jjc2V0BTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy8zX2pwZy5qcGdkAgUPFgQeA3NyYwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvMy5qcGceA2FsdAUKV2UgYmVsaWV2ZWQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIeCWlubmVyaHRtbAUKV2UgYmVsaWV2ZWQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBR4gPHA+RXZlcnlvbmUgaXMgdW5pcXVl4oCLPC9wPiBkAgcPFgIfAWhkAgEPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHwQFa2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD02HwFoFgIfBQWNAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTYnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh8GBTNodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy9fdy80X2pwZy5qcGdkAgUPFgQfBwUsaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvNC5qcGcfCAUNV2UgYmVsaWV2ZSBpbmQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPFgIfCQUNV2UgYmVsaWV2ZSBpbmQCBQ8WAh8CBRZlbnRyeS1zdW1tYXJ5IGNvbXBsZXRlFgICAQ8WAh8JBS8gPHA+U2FmZSYjMTYwOyZhbXA7IGNhcmluZyBlbnZpcm9ubWVudHPigIs8L3A+IGQCBw8WAh8BaGQCAg9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVraHR0cDovL3d3dy5yZXRzZC5tYi5jYS9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs4N2Q4ZjlhZC1hMzVhLTRhMTktYjE1NC03MDAyZGEzNWIxNGR9JklEPTcfAWgWAh8FBY0BTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NycpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHwYFM2h0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzL193LzVfanBnLmpwZ2QCBQ8WBB8HBSxodHRwOi8vd3d3LnJldHNkLm1iLmNhL0ZlYXR1cmVkU3Rvcmllcy81LmpwZx8IBQ1XZSBiZWxpZXZlIGluZAIHDxYCHwIFDmZlYXR1cmVkLWVudHJ5FgYCAQ8WAh8JBQ1XZSBiZWxpZXZlIGluZAIFDxYCHwIFFmVudHJ5LXN1bW1hcnkgY29tcGxldGUWAgIBDxYCHwkFLCA8cD5TZXJ2aW5nIHN0dWRlbnRzICZhbXA7IGNvbW11bml0eeKAizwvcD4gZAIHDxYCHwFoZAIDD2QWAgIBDxYCHwIFEGZlYXR1cmVkLWFydGljbGUWCAIBDw8WBB8EBWtodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9NB8BaBYCHwUFjQFOZXdJdGVtMihldmVudCwgJ2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD00Jyk7IHJldHVybiBmYWxzZTtkAgMPFgIfBgUzaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvX3cvMl9qcGcuanBnZAIFDxYEHwcFLGh0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzLzIuanBnHwgFDVdlIGJlbGlldmUgd2VkAgcPFgIfAgUOZmVhdHVyZWQtZW50cnkWBgIBDxYCHwkFDVdlIGJlbGlldmUgd2VkAgUPFgIfAgUWZW50cnktc3VtbWFyeSBjb21wbGV0ZRYCAgEPFgIfCQU2IDxwPuKAi0luc3BpcmUgc2tpbGxlZCAmYW1wOyByZXNwb25zaWJsZSBjaXRpemVuczwvcD4gZAIHDxYCHwFoZAIED2QWAgIBDxYCHwIFEGZlYXR1cmVkLWFydGljbGUWCAIBDw8WBB8EBWtodHRwOi8vd3d3LnJldHNkLm1iLmNhL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezg3ZDhmOWFkLWEzNWEtNGExOS1iMTU0LTcwMDJkYTM1YjE0ZH0mSUQ9Mx8BaBYCHwUFjQFOZXdJdGVtMihldmVudCwgJ2h0dHA6Ly93d3cucmV0c2QubWIuY2EvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17ODdkOGY5YWQtYTM1YS00YTE5LWIxNTQtNzAwMmRhMzViMTRkfSZJRD0zJyk7IHJldHVybiBmYWxzZTtkAgMPFgIfBgUzaHR0cDovL3d3dy5yZXRzZC5tYi5jYS9GZWF0dXJlZFN0b3JpZXMvX3cvMV9qcGcuanBnZAIFDxYEHwcFLGh0dHA6Ly93d3cucmV0c2QubWIuY2EvRmVhdHVyZWRTdG9yaWVzLzEuanBnHwgFDVdlIGJlbGlldmUgaW5kAgcPFgIfAgUOZmVhdHVyZWQtZW50cnkWBgIBDxYCHwkFDVdlIGJlbGlldmUgaW5kAgUPFgIfAgUWZW50cnktc3VtbWFyeSBjb21wbGV0ZRYCAgEPFgIfCQUeIDxwPlJlc3BlY3QgJmFtcDsgZGlnbml0eTwvcD4gZAIHDxYCHwFoZAUmZ185MGViYjM1Nl9jZGE1XzRlYTNfYTI0Zl85MmZlNjg1MmI5M2IPZBYEZg8WAh8BaGQCAQ8WAh8BaGQFJmdfYWM4NWM0NzRfZmVjMV80ZjllX2JiYTJfZjhiODQzZjUzNDZjD2QWBGYPFgIfAWhkAgEPFgIfAWhkBSZnXzBmNzkzMWM3XzY5NjlfNDBkYl85MjBjXzIzYjlkN2JjODE2ZA8PFgIeCkNocm9tZVR5cGUCAmRkAgUPZBYCAgIPZBYCAgEPZBYCAgMPZBYCAgEPZBYCAhkPZBYCAgEPFgIfAWgWAmYPZBYEAgIPZBYCAgEPFgIfAWhkAgMPDxYCHglBY2Nlc3NLZXkFAS9kZAIlD2QWAgICDw8WAh8BaGRkGAEFKWN0bDAwJFBsYWNlSG9sZGVyVG9wTmF2JFRvcE5hdmlnYXRpb25NZW51Dw9kBQRIb21lZGinJ4AKrB0YnFMbEBVDjNpl76YVBOVMkDbkAsDb1hr+" />
 </div>
 
 <script type="text/javascript">
@@ -268,7 +273,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.retsd.mb.ca", siteAbsoluteUrl: "http:\u002f\u002fwww.retsd.mb.ca", serverRequestPath: "\u002fPages\u002fhome.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "River East Transcona School Division", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T13:34:23.2642770Z") - new Date(), siteClientTag: "15$$15.0.4719.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:200801},pageListId:"{7d682e8a-1b1e-422f-9275-8a1eda0d3eb3}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.retsd.mb.ca", siteAbsoluteUrl: "http:\u002f\u002fwww.retsd.mb.ca", serverRequestPath: "\u002fPages\u002fhome.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "River East Transcona School Division", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-09-11T16:00:24.3457214Z") - new Date(), siteClientTag: "15$$15.0.4815.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:200801},pageListId:"{7d682e8a-1b1e-422f-9275-8a1eda0d3eb3}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var _spWebPartComponents = new Object();//]]>
@@ -368,7 +373,7 @@ document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){remo
             registerOverride(101);
             registerOverride(700);
         });
-    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 4, 9),showWeeks:0,timeZone:'-05:00:00.0008973',timeZoneInHours:-5,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
+    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 8, 11),showWeeks:0,timeZone:'-05:00:00.0005976',timeZoneInHours:-5,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
 UpdateFormDigest('\u002f', 1440000);if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;};
 return true;
 }
@@ -451,7 +456,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                     <div class="sl-SocialMedia">
                                         <span></span><a class='sl-twitter' target="_blank" href='http://www.twitter.com/RETSDschools'></a><a class='sl-facebook'  target="_blank" href='http://www.facebook.com/retsd'></a><a class='sl-vimeo'  target="_blank" href='http://www.vimeo.com/retsdvideo'></a><br>
                                     </div>
-                                    <span class="sl-SchoolDayContent"></span>
+                                    <script language="javascript">var ctx = new ContextInfo();ctx.listName = "{5a1f6df2-05d4-47d0-a5fa-896101382530}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_5a1f6df2-05d4-47d0-a5fa-896101382530'] = ctx;</script><div class="sl-SchooldaySummary">
+	  
+	 <div class="SchoolDayContainer">
+	<div class="Date">Sep 11, 2016</div>
+	<div class="SchoolDay hidden">School Day 0</div>
+	<div class="noSchoolDay show">No School Today</div>
+</div></div>
                                     <div id="sl-TopShadow"></div>
                                 </div>
 
@@ -464,17 +475,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 								
 									<div id="zz1_TopNavigationMenu" class=" noindex ms-core-listMenu-horizontalBox">
 	<ul id="zz2_RootAspMenu" class="root ms-core-listMenu-root static">
-		<li class="static selected"><a class="static selected menu-item ms-core-listMenu-item ms-displayInline ms-core-listMenu-selected ms-navedit-linkNode" tabindex="0" href="/" accesskey="1"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Home</span><span class="ms-hidden">Currently selected</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Your RETSD</span></span></a><ul class="static">
+		<li class="static selected"><a class="static selected menu-item ms-core-listMenu-item ms-displayInline ms-bold ms-core-listMenu-selected ms-navedit-linkNode" tabindex="0" href="/" accesskey="1"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Home</span><span class="ms-hidden">Currently selected</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Your RETSD</span></span></a><ul class="static">
 			<li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/SeniorAdministration/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Senior Administration</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/SeniorAdministration/SuperintendentMessage/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Superintendent's Message</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Board of Trustees</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/rept15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Annual Report</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Board meeting dates 2015-16.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Meeting Dates</span></span></a></li><li class="dynamic dynamic-children"><a class="dynamic dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/BoardMinutes/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Board Minutes</span></span></a><ul class="dynamic">
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/rept15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Annual Report</span></span></a></li><li class="dynamic dynamic-children"><a class="dynamic dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/BoardMinutes/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Board Minutes</span></span></a><ul class="dynamic">
 					<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board of Trustees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annrepor13-14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Annual Report</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Documents/Board meeting dates 2014-15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Meeting Dates 2014-15</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.mbschoolboards.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">MB School Boards Association</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.schoolboardswork.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">School Boards Work</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan</span></span></a></li>
-				</ul></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/BoardStandingCommittees/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Standing Committees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Budget/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Public presentations to the board of trustees041316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Presentations to the Board</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/code_conduct.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.mbschoolboards.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Manitoba School Board Association</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://web2.gov.mb.ca/laws/statutes/ccsm/p250e.php" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Schools Act</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan</span></span></a></li>
+				</ul></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/BoardStandingCommittees/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Standing Committees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/BoardofTrustees/Budget/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/code_conduct.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Concern Protocol 100516.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Concern Protocol</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Public presentations to the board of trustees041316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Presentations to the Board</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://web2.gov.mb.ca/laws/statutes/ccsm/p250e.php" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Public Schools Act</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.mbschoolboards.ca/" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Manitoba School Board Association</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/DivisionFacts/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Division Facts</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/info_booklet.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Information Book</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan 2011-16</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_strat_plan.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Strategic Plan 2011-16</span></span></a></li>
 			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Our History/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Our History</span></span></a></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Policies</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/CodeofConduct/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/PolicyDocuments/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Policy Documents</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Introduction to Policies A to K.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Introduction to Policies A–K</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/Documents/Cross Index Alphabetical 031516.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Cross Index Alphabetical</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/code_conduct.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Gender Identity Guidelines - Employees 1215.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gender Identity Guidelines - Employees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Gender Identity Guidelines - Students 0316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gender Identity Guidelines - Students</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/CodeofConduct/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/PolicyDocuments/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Policy Documents</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Introduction to Policies A to K.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Introduction to Policies A–K</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/Policies/Documents/Cross Index Alphabetical 031516.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Cross Index Alphabetical</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/code_conduct.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Code of Conduct</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Gender Identity Guidelines - Employees 1215.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gender Identity Guidelines - Employees</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Gender Identity Guidelines - Students 0616.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gender Identity Guidelines - Students</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/yourretsd/ExternalResearch/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">External Research</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/yourretsd/ExternalResearch/Documents/RETSD External Research Guidelines v9.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Research Guidelines</span></span></a></li>
 			</ul></li>
@@ -504,11 +515,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/AnnualReports/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Annual Reports</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/rept15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">2014–15</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annrepor13-14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">2013–14</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/AnnRept2013.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">2012–13</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annRept1112.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">2011–12</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annRept1011.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">2010–11</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annRept0910.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">2009–10</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annRept0809.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">2008–09</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/annRept0708.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">2007–08</span></span></a></li>
 			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/InfofortheMedia/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Info for the Media</span></span></a></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/MediaReleases/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Media Releases</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/BurgosRETSDrelease110316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">March 11, 2016 - Human rights settlement reached</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/RETSD budget announcement 020316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">March 2, 2016 - Board passes 2016-17 budget</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Transcona boundary changes.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Jan 19, 2016 – Boundaries changing for some Transcona schools</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Making the move 120215.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Dec. 2, 2015 – RETSD “Making the Move”</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/RETSD Hateless 111015.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Nov. 10, 2015 – Bullying prevention focus of presentations</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Carswell elected chair 091115.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Sept. 9, 2015 – Colleen Carswell elected board chair</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Carswell elected chair for 2016-17.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Sept. 7, 2016 - Carswell elected chair for 2016-17</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/BurgosRETSDrelease110316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">March 11, 2016 - Human rights settlement reached</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/RETSD budget announcement 020316.pdf"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">March 2, 2016 - Board passes 2016-17 budget</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Transcona boundary changes.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Jan 19, 2016 – Boundaries changing for some Transcona schools</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Making the move 120215.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Dec. 2, 2015 – RETSD “Making the Move”</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/RETSD Hateless 111015.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Nov. 10, 2015 – Bullying prevention focus of presentations</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Carswell elected chair 091115.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Sept. 9, 2015 – Colleen Carswell elected board chair</span></span></a></li>
 			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/newsarchive/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">News Archive</span></span></a></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/OtherPublications/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Other Publications</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_medication.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Administering Medication</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/attendance_bro.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Attendance Brochure</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_countKinderBroch.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Countdown to Kindergarten</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/ey_brochureFINAL.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Early Years Brochure</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_iepBooklet.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">IEP Booklet</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/info_booklet.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Information Book</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_lunchProgPar.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Lunch Supervision Guide</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/mid_yrs_book12FINAL.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Middle Years Booklet</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_sen_yrs_book.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Senior Years Booklet</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_medication.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Administering Medication</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/attendance_bro.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Attendance Brochure</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_countKinderBroch.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Countdown to Kindergarten</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/ey_brochureFINAL.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Early Years Brochure</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_iepBooklet.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">IEP Booklet</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_lunchProgPar.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Lunch Supervision Guide</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/mid_yrs_book12FINAL.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Middle Years Booklet</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/other_sen_yrs_book.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Senior Years Booklet</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news/torch/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">The Torch</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_ap16.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">April 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/budget16.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_2_2_16w.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">February 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_12_07_15W.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">December 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_10_15_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">October 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_05_25_15web.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">June 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_04_09_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">April 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Budget_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_02_09_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">February 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_12_12_14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">December 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_10_23_14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">October 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_su14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Summer 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_s14W.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Spring 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_w14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Winter 2014</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_jn16.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">June 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_ap16.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">April 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/budget16.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_2_2_16w.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">February 2016</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_12_07_15W.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">December 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_10_15_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">October 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_05_25_15web.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">June 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_04_09_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">April 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/Budget_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Budget 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_02_09_15.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">February 2015</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_12_12_14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">December 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_10_23_14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">October 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_su14.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Summer 2014</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/Lists/Publications/torch_s14W.pdf" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Spring 2014</span></span></a></li>
 			</ul></li>
 		</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Contact/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Contact Us</span></span></a></li>
 	</ul>
@@ -580,9 +591,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
     
 <section id="sl-ContentMain">
 	<section class="col-lg-12"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ2" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	<div id="MSOZoneCell_WebPartWPQ3" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="342a0d03-a73f-4096-b48e-9752fc083db3" HasPers="false" id="WebPartWPQ2" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{b7af3bba-98b1-40c0-93d3-dc86a802d14e}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_b7af3bba-98b1-40c0-93d3-dc86a802d14e'] = ctx;</script><div class="sl-SpecialAnnouncementsSummary sl-CLVSummary">
+			<div WebPartID="342a0d03-a73f-4096-b48e-9752fc083db3" HasPers="false" id="WebPartWPQ3" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{b7af3bba-98b1-40c0-93d3-dc86a802d14e}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_b7af3bba-98b1-40c0-93d3-dc86a802d14e'] = ctx;</script><div class="sl-SpecialAnnouncementsSummary sl-CLVSummary" id="g_342a0d03_a73f_4096_b48e_9752fc083db3">
+	<script type="text/javascript">
+		$(document).ready(function () {	
+			$('#g_342a0d03_a73f_4096_b48e_9752fc083db3.sl-SpecialAnnouncementsSummary .sl-Items').magnificPopup({  
+				type:'inline',
+				midClick: true,
+				mainClass: 'mfp-fade',
+				delegate: '.sl-saTitle', 
+				removalDelay: 300,
+			});				
+		});
+	</script>
 	
 	
 	<div class="sl-Items"></div></div><div class="ms-clear"></div></div>
@@ -592,9 +614,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 	<div class="bgLight">
 		<section class="col-lg-12"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ3" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	<div id="MSOZoneCell_WebPartWPQ4" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="bc42be08-9576-48b1-8a63-94d9c6b710c0" HasPers="false" id="WebPartWPQ3" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0">
+			<div WebPartID="bc42be08-9576-48b1-8a63-94d9c6b710c0" HasPers="false" id="WebPartWPQ4" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0">
 				
 
 
@@ -655,21 +677,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/2_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/2.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_itemImg" alt="We believe we" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/3_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/3.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_itemImg" alt="We believe" /> 
                                 </picture>       
                             </div>                         
 
                             <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_entryDiv" class="featured-entry">
                                 <div class="entry-title-container">
-                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_entryHeader" class="entry-title">We believe we</h2>
+                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_entryHeader" class="entry-title">We believe</h2>
                                 
                                 <a href="javascript:" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
 
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_summarySpan" class="entry-summary-body"> <p>​Inspire skilled &amp; responsible citizens</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl00_summarySpan" class="entry-summary-body"> <p>Everyone is unique​</p> </span>                         
                                 </div>
 
                                   
@@ -684,8 +706,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/1_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/1.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_itemImg" alt="We believe in" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/4_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/4.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_itemImg" alt="We believe in" /> 
                                 </picture>       
                             </div>                         
 
@@ -698,7 +720,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_summarySpan" class="entry-summary-body"> <p>Respect &amp; dignity</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl01_summarySpan" class="entry-summary-body"> <p>Safe&#160;&amp; caring environments​</p> </span>                         
                                 </div>
 
                                   
@@ -742,21 +764,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/3_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/3.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_itemImg" alt="We believe" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/2_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/2.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_itemImg" alt="We believe we" /> 
                                 </picture>       
                             </div>                         
 
                             <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_entryDiv" class="featured-entry">
                                 <div class="entry-title-container">
-                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_entryHeader" class="entry-title">We believe</h2>
+                                <h2 id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_entryHeader" class="entry-title">We believe we</h2>
                                 
                                 <a href="javascript:" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
 
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_summarySpan" class="entry-summary-body"> <p>Everyone is unique​</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl03_summarySpan" class="entry-summary-body"> <p>​Inspire skilled &amp; responsible citizens</p> </span>                         
                                 </div>
 
                                   
@@ -771,8 +793,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/4_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
-                                    <img src="http://www.retsd.mb.ca/FeaturedStories/4.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_itemImg" alt="We believe in" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_itemImgSmall" srcset="http://www.retsd.mb.ca/FeaturedStories/_w/1_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.retsd.mb.ca/FeaturedStories/1.jpg" id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_itemImg" alt="We believe in" /> 
                                 </picture>       
                             </div>                         
 
@@ -785,7 +807,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_summaryDiv" class="entry-summary complete" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_summarySpan" class="entry-summary-body"> <p>Safe&#160;&amp; caring environments​</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_bc42be08_9576_48b1_8a63_94d9c6b710c0_ctl00_FeaturedRepeater_ctl04_summarySpan" class="entry-summary-body"> <p>Respect &amp; dignity</p> </span>                         
                                 </div>
 
                                   
@@ -810,9 +832,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 			</div><div class="ms-clear"></div></div>
 		</div><div class="ms-PartSpacingVertical"></div>
-	</div><div id="MSOZoneCell_WebPartWPQ4" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	</div><div id="MSOZoneCell_WebPartWPQ5" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="90ebb356-cda5-4ea3-a24f-92fe6852b93b" HasPers="false" id="WebPartWPQ4" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><div class="sl-AudienceLinksSummary sl-CLVSummary slvzr-first-child" sizzle-1409868497293="[object Object]">
+			<div WebPartID="90ebb356-cda5-4ea3-a24f-92fe6852b93b" HasPers="false" id="WebPartWPQ5" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><div class="sl-AudienceLinksSummary sl-CLVSummary slvzr-first-child" sizzle-1409868497293="[object Object]">
    <div class="sl-WPHeader slvzr-first-child" sizzle-1409868497293="[object Object]">
       <h2 class=" slvzr-first-child" sizzle-1409868497293="[object Object]">Browse by user group</h2>
    </div>
@@ -848,11 +870,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		<section class="col-lg-12"><div class="ms-webpart-zone ms-fullWidth">
 	<div id="MSOZoneCell_WebPartWPQ11" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="ac85c474-fec1-4f9e-bba2-f8b843f5346c" HasPers="false" id="WebPartWPQ11" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><p style="text-align: center;">​<a href="/makingthemove/Pages/default.aspx"><img src="/PublishingImages/Pages/home/move_img.jpg" alt="" style="margin: 5px; width: 1184px;"/></a></p><p style="text-align: center;"><a href="/Makingthemovetranscona/Pages/default.aspx"><img src="/PublishingImages/Pages/home/move_img2.jpg" alt="" style="margin: 5px; width: 1186px;"/></a>&#160;</p></div><div class="ms-clear"></div></div>
+			<div WebPartID="ac85c474-fec1-4f9e-bba2-f8b843f5346c" HasPers="false" id="WebPartWPQ11" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><p style="text-align: center;">​<a href="/makingthemove/Pages/default.aspx"><img src="/PublishingImages/Pages/home/move_img.jpg" alt="" style="margin: 5px; width: 1189px;"/></a></p><p style="text-align: center;"><a href="/Makingthemovetranscona/Pages/default.aspx"><img src="/PublishingImages/Pages/home/move_img2.jpg" alt="" style="margin: 5px; width: 1186px;"/></a>&#160;</p></div><div class="ms-clear"></div></div>
 		</div><div class="ms-PartSpacingVertical"></div>
-	</div><div id="MSOZoneCell_WebPartWPQ5" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	</div><div id="MSOZoneCell_WebPartWPQ6" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="3685710c-3650-4993-8fa2-08c319750d61" HasPers="false" id="WebPartWPQ5" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{65de5814-d176-4fcc-8d55-3f0f93cd58b7}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_65de5814-d176-4fcc-8d55-3f0f93cd58b7'] = ctx;</script><div class="sl-AnnouncementsImgSummary sl-CLVSummary">
+			<div WebPartID="3685710c-3650-4993-8fa2-08c319750d61" HasPers="false" id="WebPartWPQ6" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{65de5814-d176-4fcc-8d55-3f0f93cd58b7}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_65de5814-d176-4fcc-8d55-3f0f93cd58b7'] = ctx;</script><div class="sl-AnnouncementsImgSummary sl-CLVSummary">
 	<div class="sl-WPHeader">
 	    <h2><a href="//www.retsd.mb.ca/Pages/newsarchive.aspx">Division News</a></h2>
 		<a class="sl-More top" href="//www.retsd.mb.ca/Pages/newsarchive.aspx">View all <span class="screen-tablet-hide">Division News</span></a>
@@ -860,46 +882,39 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	
 			  <div class="sl-Items">
 			  <li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=148&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/news/PublishingImages/retsd_logo-large.jpg" alt="retsd_logo-large.jpg"/></div>
-          <div class="sl-Title">Learn more about our trustees</div>
-		  <div class="sl-Date">May 05, 2016</div>
-          <div class="sl-Body">   The members of the RETSD Board of Trustees are a varied and dedicated group...</div>
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=163&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/FBT.jpg" alt="FBT.jpg"/></div>
+          <div class="sl-Title">RETSD on Facebook & Twitter</div>
+		  <div class="sl-Date">September 08, 2016</div>
+          <div class="sl-Body">   ​Just a reminder that RETSD is on Facebook and Twitter, so when you get...</div>
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=147&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/news/PublishingImages/retsd_logo-large.jpg" alt="retsd_logo-large.jpg"/></div>
-          <div class="sl-Title">Making the Move work continues</div>
-		  <div class="sl-Date">May 05, 2016</div>
-          <div class="sl-Body">  ​ The work is continuing in preparation for moving Grade 9 students into Miles...</div>
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=162&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/Colleen-Michael.jpg" alt="Colleen-Michael.jpg"/></div>
+          <div class="sl-Title">New board chair, vice-chair elected</div>
+		  <div class="sl-Date">September 07, 2016</div>
+          <div class="sl-Body">  ​ Congratulations to Ward 1 trustee Colleen Carswell, who was re-elected chair of the...</div>
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=146&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/spring16.jpg" alt="spring16.jpg"/></div>
-          <div class="sl-Title">Spring concerts in RETSD</div>
-		  <div class="sl-Date">April 27, 2016</div>
-          <div class="sl-Body">  ​ The warm weather of spring is just about upon us and many of...</div>
-	</a>
-</li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=145&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=161&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
           <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/retsd_logo.jpg" alt="retsd_logo.jpg"/></div>
-          <div class="sl-Title">Byelection for RETSD trustee</div>
-		  <div class="sl-Date">April 27, 2016</div>
-          <div class="sl-Body">   Are you considering running for school trustee in RETSD? Click   here   for more information.​...</div>
+          <div class="sl-Title">Welcome back!</div>
+		  <div class="sl-Date">September 07, 2016</div>
+          <div class="sl-Body">   ​It's back to school for our 16,000-plus students and 1,750 school-based staff.   A warm...</div>
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=143&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/NewForm/torch_ap16_Page_1.jpg" alt="torch_ap16_Page_1.jpg"/></div>
-          <div class="sl-Title">April Torch online</div>
-		  <div class="sl-Date">April 13, 2016</div>
-          <div class="sl-Body">  ​ The April issue of the RETSD newsletter,  The Torch , was distributed throughout...</div>
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=160&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/news/PublishingImages/retsd_logo-large.jpg" alt="retsd_logo-large.jpg"/></div>
+          <div class="sl-Title">Grade 6-8 divisional choir looking for singers</div>
+		  <div class="sl-Date">September 06, 2016</div>
+          <div class="sl-Body">  ​ If you are in Grade 6, 7, or 8 and love to sing,...</div>
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=137&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/Announcements/EditForm/summer.jpg" alt="summer.jpg"/></div>
-          <div class="sl-Title">Summer school registration</div>
-		  <div class="sl-Date">March 23, 2016</div>
-          <div class="sl-Body">   &#160;  River East Transcona will once again offer a summer school program administered by...</div>
+	<a href="//www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=157&ListID=65de5814-d176-4fcc-8d55-3f0f93cd58b7&TemplateID=Announcement_Item">
+          <div class="sl-imgFrame"><img class="sl-CLVFieldImage content" src="/news/PublishingImages/retsd_logo-large.jpg" alt="retsd_logo-large.jpg"/></div>
+          <div class="sl-Title">Get sneak peek at gender identity guidelines article</div>
+		  <div class="sl-Date">June 30, 2016</div>
+          <div class="sl-Body">  ​ River East Transcona was pleased to be invited to submit an article about...</div>
 	</a>
 </li></div>                                                                                                                                                                                           <div class="sl-WPFooter"><a class="sl-More bottom" href="//www.retsd.mb.ca/Pages/newsarchive.aspx">View Announcements</a>          
    </div>
@@ -912,9 +927,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
     <div class="bgLight">
     <div class="row">
 		<section class="col-lg-12"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ6" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	<div id="MSOZoneCell_WebPartWPQ7" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="f9edebdd-9261-40e3-8ce4-2fc11f959f05" HasPers="false" id="WebPartWPQ6" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{6dd55b38-0883-478c-a90c-9d3dabf4da00}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_6dd55b38-0883-478c-a90c-9d3dabf4da00'] = ctx;</script><div class="sl-EventsSummary sl-CLVSummary" id="g_f9edebdd_9261_40e3_8ce4_2fc11f959f05"> 
+			<div WebPartID="f9edebdd-9261-40e3-8ce4-2fc11f959f05" HasPers="false" id="WebPartWPQ7" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{6dd55b38-0883-478c-a90c-9d3dabf4da00}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_6dd55b38-0883-478c-a90c-9d3dabf4da00'] = ctx;</script><div class="sl-EventsSummary sl-CLVSummary" id="g_f9edebdd_9261_40e3_8ce4_2fc11f959f05"> 
    <script type="text/javascript">
         $(document).ready(function () {       
             $('#g_f9edebdd_9261_40e3_8ce4_2fc11f959f05.sl-EventsSummary .sl-ItemsContainer').flexslider({
@@ -949,421 +964,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
  
 		  <div class="sl-ItemsContainer">
 	      <div class="sl-Items EventsSummary_g_f9edebdd_9261_40e3_8ce4_2fc11f959f05">
-          <a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00264" data-event-start="May 11, 2016 0:00:00 -500" data-event-end="May 11, 2016 23:59:00 -500" data-event-type="allday">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/11/2016 12:00:00 AM");
-			var endDate = new Date("5/11/2016 11:59:00 PM");
-			var type = "all";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00264 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eAll+schools+dismiss+45+minutes+early.%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">11</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-Title">Early Dismissal</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00264">
-		  			
-	
-		<div class="sl-Title">Early Dismissal</div>	 
-		<div class="sl-Date">May 11, 2016 </div>	
-		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
-		</div>		
-		<div class="sl-Location">All Schools </div>				
-		<div class="sl-Body"><div>All schools dismiss 45 minutes early.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Early Dismissal" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=264&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=264&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal&Body=Early Dismissal http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=264&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00290" data-event-start="May 17, 2016 18:30:00 -500" data-event-end="May 17, 2016 20:00:00 -500" data-event-type="single">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/17/2016 6:30:00 PM");
-			var endDate = new Date("5/17/2016 8:00:00 PM");
-			var type = "time";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00290 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Board+Meeting&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e*+8%26%2358%3b00+p.m.+is+the+estimated+time+of+the+meeting%27s+conclusion.+This+time+may+vary+depending+on+the+content+of+the+meeting.%3c%2fdiv%3e&location=RETSD+Administration+Offices%2c+589+Roch+St.&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">17</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-Title">Board Meeting</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00290">
-		  			
-	
-		<div class="sl-Title">Board Meeting</div>	 
-		<div class="sl-Date">May 17, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">06:30 PM -  08:00 PM</div>
-		</div>		
-		<div class="sl-Location">RETSD Administration Offices, 589 Roch St. </div>				
-		<div class="sl-Body"><div>* 8&#58;00 p.m. is the estimated time of the meeting's conclusion. This time may vary depending on the content of the meeting.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Board Meeting" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=290&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=290&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Board Meeting&Body=Board Meeting http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=290&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00265" data-event-start="May 23, 2016 0:00:00 -500" data-event-end="May 23, 2016 23:59:00 -500" data-event-type="allday">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/23/2016 12:00:00 AM");
-			var endDate = new Date("5/23/2016 11:59:00 PM");
-			var type = "all";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00265 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Victoria+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+classes.%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">23</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-Title">Victoria Day</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00265">
-		  			
-	
-		<div class="sl-Title">Victoria Day</div>	 
-		<div class="sl-Date">May 23, 2016 </div>	
-		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
-		</div>		
-		<div class="sl-Location">All Schools </div>				
-		<div class="sl-Body"><div>No classes.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Victoria Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=265&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=265&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Victoria Day&Body=Victoria Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=265&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00291" data-event-start="June 07, 2016 18:30:00 -500" data-event-end="June 07, 2016 20:00:00 -500" data-event-type="single">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("6/7/2016 6:30:00 PM");
-			var endDate = new Date("6/7/2016 8:00:00 PM");
-			var type = "time";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00291 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Board+Meeting&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e*+8%26%2358%3b00+p.m.+is+the+estimated+time+of+the+meeting%27s+conclusion.+This+time+may+vary+depending+on+the+content+of+the+meeting.%3c%2fdiv%3e&location=RETSD+Administration+Offices%2c+589+Roch+St.&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">07</div>
-		<div class="sl-dateiconMonth">Jun</div>
-	</div>
-	<div class="sl-Title">Board Meeting</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00291">
-		  			
-	
-		<div class="sl-Title">Board Meeting</div>	 
-		<div class="sl-Date">Jun 07, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">06:30 PM -  08:00 PM</div>
-		</div>		
-		<div class="sl-Location">RETSD Administration Offices, 589 Roch St. </div>				
-		<div class="sl-Body"><div>* 8&#58;00 p.m. is the estimated time of the meeting's conclusion. This time may vary depending on the content of the meeting.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Board Meeting" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=291&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=291&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Board Meeting&Body=Board Meeting http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=291&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00292" data-event-start="June 21, 2016 18:30:00 -500" data-event-end="June 21, 2016 20:00:00 -500" data-event-type="single">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("6/21/2016 6:30:00 PM");
-			var endDate = new Date("6/21/2016 8:00:00 PM");
-			var type = "time";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00292 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Board+Meeting&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e*+8%26%2358%3b00+p.m.+is+the+estimated+time+of+the+meeting%27s+conclusion.+This+time+may+vary+depending+on+the+content+of+the+meeting.%3c%2fdiv%3e&location=RETSD+Administration+Offices%2c+589+Roch+St.&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">21</div>
-		<div class="sl-dateiconMonth">Jun</div>
-	</div>
-	<div class="sl-Title">Board Meeting</div>
-	<div class="sl-EventTimeicon">		
-		<div class="sl-Hour">06</div><div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00292">
-		  			
-	
-		<div class="sl-Title">Board Meeting</div>	 
-		<div class="sl-Date">Jun 21, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">06:30 PM -  08:00 PM</div>
-		</div>		
-		<div class="sl-Location">RETSD Administration Offices, 589 Roch St. </div>				
-		<div class="sl-Body"><div>* 8&#58;00 p.m. is the estimated time of the meeting's conclusion. This time may vary depending on the content of the meeting.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Board Meeting" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=292&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=292&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Board Meeting&Body=Board Meeting http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=292&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00266" data-event-start="June 30, 2016 0:00:00 -500" data-event-end="June 30, 2016 23:59:00 -500" data-event-type="allday">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("6/30/2016 12:00:00 AM");
-			var endDate = new Date("6/30/2016 11:59:00 PM");
-			var type = "all";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00266 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Last+Day+of+School!+(Early+Dismissal)&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eAll+schools+dismiss+one+hour+early.%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">30</div>
-		<div class="sl-dateiconMonth">Jun</div>
-	</div>
-	<div class="sl-Title">Last Day of School! (Early Dismissal)</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00266">
-		  			
-	
-		<div class="sl-Title">Last Day of School! (Early Dismissal)</div>	 
-		<div class="sl-Date">Jun 30, 2016 </div>	
-		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
-		</div>		
-		<div class="sl-Location">All Schools </div>				
-		<div class="sl-Body"><div>All schools dismiss one hour early.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Last Day of School! (Early Dismissal)" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=266&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=266&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Last Day of School! (Early Dismissal)&Body=Last Day of School! (Early Dismissal) http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=266&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00295" data-event-start="September 05, 2016 0:00:00 -500" data-event-end="September 05, 2016 23:59:00 -500" data-event-type="allday">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("9/5/2016 12:00:00 AM");
-			var endDate = new Date("9/5/2016 11:59:00 PM");
-			var type = "all";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00295 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Labour+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">05</div>
-		<div class="sl-dateiconMonth">Sep</div>
-	</div>
-	<div class="sl-Title">Labour Day</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00295">
-		  			
-	
-		<div class="sl-Title">Labour Day</div>	 
-		<div class="sl-Date">Sep 05, 2016 </div>	
-		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
-		</div>		
-		<div class="sl-Location">All Schools </div>				
-		<div class="sl-Body"><div>No Classes</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Labour Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=295&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=295&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Labour Day&Body=Labour Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=295&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00296" data-event-start="September 06, 2016 0:00:00 -500" data-event-end="September 06, 2016 23:59:00 -500" data-event-type="allday">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("9/6/2016 12:00:00 AM");
-			var endDate = new Date("9/6/2016 11:59:00 PM");
-			var type = "all";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00296 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Co-ordinated+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">06</div>
-		<div class="sl-dateiconMonth">Sep</div>
-	</div>
-	<div class="sl-Title">Co-ordinated Day</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00296">
-		  			
-	
-		<div class="sl-Title">Co-ordinated Day</div>	 
-		<div class="sl-Date">Sep 06, 2016 </div>	
-		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
-		</div>		
-		<div class="sl-Location">All Schools </div>				
-		<div class="sl-Body"><div>No Classes</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Co-ordinated Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=296&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=296&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Co-ordinated Day&Body=Co-ordinated Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=296&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00297" data-event-start="September 07, 2016 0:00:00 -500" data-event-end="September 07, 2016 23:59:00 -500" data-event-type="allday">
-  	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("9/7/2016 12:00:00 AM");
-			var endDate = new Date("9/7/2016 11:59:00 PM");
-			var type = "all";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00297 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=First+Day+Of+Classes&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
-		});		
-	</script>   
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">07</div>
-		<div class="sl-dateiconMonth">Sep</div>
-	</div>
-	<div class="sl-Title">First Day Of Classes</div>
-	<div class="sl-EventTimeicon">		
-		<div class='sl-EventType'>All Day</div>
-	</div>	
-	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00297">
-		  			
-	
-		<div class="sl-Title">First Day Of Classes</div>	 
-		<div class="sl-Date">Sep 07, 2016 </div>	
-		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
-		</div>		
-		<div class="sl-Location">All Schools </div>				
-		<div class="sl-Body"><div></div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="First Day Of Classes" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=297&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=297&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=First Day Of Classes&Body=First Day Of Classes http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=297&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-	
-</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00298" data-event-start="October 05, 2016 0:00:00 -500" data-event-end="October 05, 2016 23:59:00 -500" data-event-type="allday">
+          <a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00298" data-event-start="October 05, 2016 0:00:00 -500" data-event-end="October 05, 2016 23:59:00 -500" data-event-type="allday">
   	<script type="text/javascript">
 		$(document).ready(function () {
 			var startDate = new Date("10/5/2016 12:00:00 AM");
@@ -2513,6 +2114,144 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		</div>				
 	</div>		
 	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00323" data-event-start="May 10, 2017 0:00:00 -500" data-event-end="May 10, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/10/2017 12:00:00 AM");
+			var endDate = new Date("5/10/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00323 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal+&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eDismiss+45+min+early.+%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">10</div>
+		<div class="sl-dateiconMonth">May</div>
+	</div>
+	<div class="sl-Title">Early Dismissal </div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00323">
+		  			
+	
+		<div class="sl-Title">Early Dismissal </div>	 
+		<div class="sl-Date">May 10, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Dismiss 45 min early. </div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Early Dismissal " data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=323&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=323&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal &Body=Early Dismissal  http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=323&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00324" data-event-start="May 22, 2017 0:00:00 -500" data-event-end="May 22, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("5/22/2017 12:00:00 AM");
+			var endDate = new Date("5/22/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00324 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Victoria+Day&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eNo+Classes%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">22</div>
+		<div class="sl-dateiconMonth">May</div>
+	</div>
+	<div class="sl-Title">Victoria Day</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00324">
+		  			
+	
+		<div class="sl-Title">Victoria Day</div>	 
+		<div class="sl-Date">May 22, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>No Classes</div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Victoria Day" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=324&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=324&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Victoria Day&Body=Victoria Day http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=324&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
+</a><a class="sl-Item" href="#6dd55b38-0883-478c-a90c-9d3dabf4da00325" data-event-start="June 30, 2017 0:00:00 -500" data-event-end="June 30, 2017 23:59:00 -500" data-event-type="allday">
+  	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("6/30/2017 12:00:00 AM");
+			var endDate = new Date("6/30/2017 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#6dd55b38-0883-478c-a90c-9d3dabf4da00325 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Early+Dismissal+-+Last+Day+of+School&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eDismiss+1+hour+early.+%3c%2fdiv%3e&location=All+Schools&trp=false&sprop=&sprop=name:");
+		});		
+	</script>   
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">30</div>
+		<div class="sl-dateiconMonth">Jun</div>
+	</div>
+	<div class="sl-Title">Early Dismissal - Last Day of School</div>
+	<div class="sl-EventTimeicon">		
+		<div class='sl-EventType'>All Day</div>
+	</div>	
+	<div class="mfp-hide modalPopup" id="6dd55b38-0883-478c-a90c-9d3dabf4da00325">
+		  			
+	
+		<div class="sl-Title">Early Dismissal - Last Day of School</div>	 
+		<div class="sl-Date">Jun 30, 2017 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location">All Schools </div>				
+		<div class="sl-Body"><div>Dismiss 1 hour early. </div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Early Dismissal - Last Day of School" data-url="//www.retsd.mb.ca/Pages/eventitem.aspx?ItemID=325&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.retsd.mb.ca/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=6dd55b38-0883-478c-a90c-9d3dabf4da00&CacheControl=1&ID=325&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Early Dismissal - Last Day of School&Body=Early Dismissal - Last Day of School http://www.retsd.mb.ca/Pages/newsitem.aspx?ItemID=325&ListID=6dd55b38-0883-478c-a90c-9d3dabf4da00&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+	
 </a></div><span class="sl-GradientTransition"></span>
         <div class="sl-SliderControl">​</div>
 
@@ -2533,9 +2272,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
     <div class="row">
 		<section class="col-lg-12"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ7" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	<div id="MSOZoneCell_WebPartWPQ8" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="1c78681f-b0ac-4e97-89e9-2eefad185543" HasPers="false" id="WebPartWPQ7" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{fb5f1b8b-cd46-4d7a-9ef9-9ba10df4773d}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_fb5f1b8b-cd46-4d7a-9ef9-9ba10df4773d'] = ctx;</script><div class="sl-SchoolSearchDropdownContainer"><div class="sl-SchoolSearchDropdown sl-CLVSummary"><div class="sl-WPHeader">
+			<div WebPartID="1c78681f-b0ac-4e97-89e9-2eefad185543" HasPers="false" id="WebPartWPQ8" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{fb5f1b8b-cd46-4d7a-9ef9-9ba10df4773d}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_fb5f1b8b-cd46-4d7a-9ef9-9ba10df4773d'] = ctx;</script><div class="sl-SchoolSearchDropdownContainer"><div class="sl-SchoolSearchDropdown sl-CLVSummary"><div class="sl-WPHeader">
          <h2>Find a School</h2><a class="sl-More top" href="//www.retsd.mb.ca/schools/Pages/default.aspx">View schools</a></div>
 	<div class="sl-SchoolSelector">Select...</div>
 		<ul class="schoollist dropdown"><li> 
@@ -2584,9 +2323,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<a class="sl-More bottom" href="//www.retsd.mb.ca/schools/Pages/default.aspx">See all schools</a></div>
 </div></div><div class="ms-clear"></div></div>
 		</div><div class="ms-PartSpacingVertical"></div>
-	</div><div id="MSOZoneCell_WebPartWPQ8" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	</div><div id="MSOZoneCell_WebPartWPQ9" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="9435d8ae-53c6-4609-a4a8-4ce0bcf5bc6c" HasPers="false" id="WebPartWPQ8" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{8b5e54e3-07e0-419a-ba60-54e79ac3b4e9}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_8b5e54e3-07e0-419a-ba60-54e79ac3b4e9'] = ctx;</script><div class="sl-SchoolAnnouncementsImgSummary sl-AnnouncementsImgSummary sl-CLVSummary">
+			<div WebPartID="9435d8ae-53c6-4609-a4a8-4ce0bcf5bc6c" HasPers="false" id="WebPartWPQ9" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{8b5e54e3-07e0-419a-ba60-54e79ac3b4e9}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_8b5e54e3-07e0-419a-ba60-54e79ac3b4e9'] = ctx;</script><div class="sl-SchoolAnnouncementsImgSummary sl-AnnouncementsImgSummary sl-CLVSummary">
 	<div class="sl-WPHeader">
 	    <h2><a href="//www.retsd.mb.ca/Pages/schoolnewsarchive.aspx">In Our Schools</a></h2>
 		<a class="sl-More top" href="//www.retsd.mb.ca/Pages/schoolnewsarchive.aspx">View all <span class="screen-tablet-hide">school news</span></a>
@@ -2594,69 +2333,69 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	
 			  <div class="sl-Items">
 			  <li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=176&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=218&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
           <div class="sl-imgFrame">
             
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Siloam_jpg.jpg" alt="Siloam.jpg"/></span>
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/Mrs.%20Kusner%201a.jpg" alt="Mrs.%20Kusner%201a.jpg"/></span>
           </div>
-          <div class="sl-SchoolName">International Education Program</div>
-          <div class="sl-Title">International students volunteer at Siloam Mission</div>      
-		  <div class="sl-Body">   ​Students from the RETSD International Education Program, along with Kildonan-East Collegiate educational assistant Nelia...</div>
+          <div class="sl-SchoolName">Transcona Collegiate</div>
+          <div class="sl-Title">Centenarian honoured for generosity</div>      
+		  <div class="sl-Body">  ​ Transcona Collegiate hosted a very special guest during its graduation ceremonies on June...</div>
 	</a>		  
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=175&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=217&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
           <div class="sl-imgFrame">
             
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/wedding_jpg.jpg" alt="wedding.jpg"/></span>
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Nicole1a_jpg.jpg" alt="Nicole1a.jpg"/></span>
           </div>
-          <div class="sl-SchoolName">Kildonan-East Collegiate</div>
-          <div class="sl-Title">KEC talents shine at mock wedding</div>      
-		  <div class="sl-Body">   ​Kildonan-East Collegiate students from a variety of programs got to show off their talents...</div>
+          <div class="sl-SchoolName">River East Collegiate</div>
+          <div class="sl-Title">REC student receives prestigious award</div>      
+		  <div class="sl-Body">  ​ Congratulations to River East Collegiate student Nicole Rogowsky, who was one of 54...</div>
 	</a>		  
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=174&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=215&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
           <div class="sl-imgFrame">
             
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Easter_jpg.jpg" alt="Easter.jpg"/></span>
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/soccer%20group1a.jpg" alt="soccer%20group1a.jpg"/></span>
           </div>
-          <div class="sl-SchoolName">English-Ukrainian Bilingual Program</div>
-          <div class="sl-Title">Happy Ukrainian Easter! </div>      
-		  <div class="sl-Body">  ​ Staff, students and parents from the English-Ukrainian Bilingual Program, along with guests, celebrated...</div>
+          <div class="sl-SchoolName">English-German Bilingual Program</div>
+          <div class="sl-Title">German Soccer Adventure Camp</div>      
+		  <div class="sl-Body">  ​ RETSD held its second annual German Soccer Adventure Camp from June 20–24, with...</div>
 	</a>		  
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=173&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=214&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
           <div class="sl-imgFrame">
             
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/Music%20Monday.jpg" alt="Music%20Monday.jpg"/></span>
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Mural_jpg.jpg" alt="Mural.jpg"/></span>
           </div>
-          <div class="sl-SchoolName">Transcona-areas schools</div>
-          <div class="sl-Title">Transcona schools celebrate Music Monday</div>      
-		  <div class="sl-Body">  ​ May 2 was Music Monday, a national celebration of music and school music...</div>
+          <div class="sl-SchoolName">Harold Hatcher Elementary School </div>
+          <div class="sl-Title">Harold Hatcher home to beautiful mural</div>      
+		  <div class="sl-Body">  ​ Harold Hatcher&#160;Elementary School is home to a beautiful new mural. Students were fortunate...</div>
 	</a>		  
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=172&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=213&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
           <div class="sl-imgFrame">
             
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/IMG_3412_JPG.jpg" alt="IMG_3412.JPG"/></span>
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/Youth%20day%20of%20caring%201a.jpg" alt="Youth%20day%20of%20caring%201a.jpg"/></span>
           </div>
           <div class="sl-SchoolName">Miles Macdonell Collegiate</div>
-          <div class="sl-Title">Miles Mac students win eco-awards</div>      
-		  <div class="sl-Body">  ​ Congratulations to Miles Macdonell Collegiate students Marianna Pozdirca and Madeline Mann for placing...</div>
+          <div class="sl-Title">United Way Youth Day of Caring</div>      
+		  <div class="sl-Body">  ​ Recently, a class taking global issues at Miles Macdonell Collegiate took part in...</div>
 	</a>		  
 	</a>
 </li><li class="sl-Item">
-	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=171&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
+	<a href="//www.retsd.mb.ca/Pages/schoolnewsitem.aspx?ItemID=212&ListID=8b5e54e3-07e0-419a-ba60-54e79ac3b4e9&TemplateID=School_Announcement_Item">
           <div class="sl-imgFrame">
             
-            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/20160428_130427_resized_jpg.jpg" alt="20160428_130427_resized.jpg"/></span>
+            <span class="show"><img class="sl-CLVFieldImage content" src="/PublishingImages/Lists/SchoolAnnouncements/NewForm/_w/Invention_jpg.jpg" alt="Invention.jpg"/></span>
           </div>
           <div class="sl-SchoolName">John Henderson Junior High School</div>
-          <div class="sl-Title">Local community activist makes big impression</div>      
-		  <div class="sl-Body">  ​ John Henderson Junior High School was visited by award-winning public speaker, published author...</div>
+          <div class="sl-Title">Students investigate, invent & innovate</div>      
+		  <div class="sl-Body">   Grade 8 students from John Henderson Junior High School got especially creative recently, when...</div>
 	</a>		  
 	</a>
 </li></div>                                                                                                                                                                                           <div class="sl-WPFooter"><a class="sl-More bottom" href="//www.retsd.mb.ca/Pages/schoolnewsarchive.aspx">View Announcements</a>          
@@ -2675,18 +2414,35 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 	<div class="row">
 		<section class="bottomLeft col-xs-12 col-sm-6 col-md-6"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ10" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-		<div class="ms-webpart-chrome ms-webpart-chrome-vertical " style="width:550px">
-			<div class="ms-webpart-chrome-title" id="WebPartWPQ10_ChromeTitle" style="width:550px;">
-				<span title="Videos - Allows authors to enter rich text content." id="WebPartTitleWPQ10" class="js-webpart-titleCell"><h2 class="ms-webpart-titleText" style="overflow:hidden;text-overflow:ellipsis;text-align:justify;"><nobr><span>Videos</span><span id="WebPartCaptionWPQ10"></span></nobr></h2></span>
-			</div><div WebPartID="6d24d446-85e0-456f-b6c5-1d99cb361f77" HasPers="false" id="WebPartWPQ10" class="ms-WPBody noindex ms-wpContentDivSpace " allowDelete="false" style="width:550px;overflow:auto;" ><div class="ms-rtestate-field"><p><a href="https://vimeo.com/157623128" target="_blank"><img alt="video.jpg" src="/PublishingImages/Pages/home/video.jpg" style="margin: 5px;"/></a>This video highlights RETSD&#39;s commitment to preventing bullying, as well as recent anti-bullying presentations by the group &quot;Hateless,&quot; who were invited to middle years schools in the division.</p></div><div class="ms-clear"></div></div>
+	<div id="MSOZoneCell_WebPartctl00_SPWebPartManager1_g_0f7931c7_6969_40db_920c_23b9d7bc816d" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="0f7931c7-6969-40db-920c-23b9d7bc816d" HasPers="false" id="WebPartctl00_SPWebPartManager1_g_0f7931c7_6969_40db_920c_23b9d7bc816d" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><div id="ctl00_SPWebPartManager1_g_0f7931c7_6969_40db_920c_23b9d7bc816d">
+				
+
+
+<div class="sl-ContentInjector">
+    <div id="ctl00_SPWebPartManager1_g_0f7931c7_6969_40db_920c_23b9d7bc816d_ctl00_InjectorHeader" class="sl-WPHeader">
+        <h2>
+            <span id="ctl00_SPWebPartManager1_g_0f7931c7_6969_40db_920c_23b9d7bc816d_ctl00_InjectorTitle">Videos</span>
+        </h2>
+    </div>
+    
+    <div id="ctl00_SPWebPartManager1_g_0f7931c7_6969_40db_920c_23b9d7bc816d_ctl00_InjectorBody" class="sl-WPBody"><iframe width="580" height="300" src="https://player.vimeo.com/video/172795814" frameborder="0"></iframe>
+<p> 
+   <a href="https://vimeo.com/172795814">Memories of 2015–16</a> from 
+   <a href="https://vimeo.com/retsdvideo">River East Transcona</a> on 
+   <a href="https://vimeo.com/">Vimeo</a>.</p><p>A few moments captured in the 2015-16 school year at RETSD schools. </p></div>
+</div>
+ 
+
+			</div><div class="ms-clear"></div></div>
 		</div>
 	</div>
 </div></section>
 		<section class="bottomRight col-xs-12 col-sm-6 col-md-6"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ9" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	<div id="MSOZoneCell_WebPartWPQ10" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="e209bf04-4487-481a-9a0e-aee9301f4e46" HasPers="false" id="WebPartWPQ9" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{98329f13-0164-4d40-8e66-8a85d26f881e}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_98329f13-0164-4d40-8e66-8a85d26f881e'] = ctx;</script><div class="sl-FeaturedLinksSummary sl-CLVSummary">
+			<div WebPartID="e209bf04-4487-481a-9a0e-aee9301f4e46" HasPers="false" id="WebPartWPQ10" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{98329f13-0164-4d40-8e66-8a85d26f881e}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_98329f13-0164-4d40-8e66-8a85d26f881e'] = ctx;</script><div class="sl-FeaturedLinksSummary sl-CLVSummary">
     <div class="sl-WPHeader">    
 		 <h2>Quick Links</h2>		 <a class="sl-Icon sl-IconRss" href="//www.retsd.mb.ca/_layouts/listfeed.aspx?List=98329f13-0164-4d40-8e66-8a85d26f881e"></a>
 		 <a class="sl-Icon sl-IconAlert" href="//www.retsd.mb.ca/_layouts/SubNew.aspx?List=98329f13-0164-4d40-8e66-8a85d26f881e&Source=http%3a%2f%2fwww.retsd.mb.ca%2fPages%2fhome.aspx"></a>
@@ -2694,18 +2450,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	 
 			  <div class="sl-FeaturedLinksWrapper"><div class="display sl-FeaturedLinks ">
 		
-	<a href="https://retsd.mb.ca/Lists/Publications/School%20List%202015-16%20v2.pdf" target="">
-		School List 2015-16
+	<a href="https://retsd.mb.ca/Lists/Publications/School%20List%202016-17.pdf" target="_blank">
+		School List 2016-17
 	</a>
 </div><div class="display sl-FeaturedLinks sl-Highlight">
 		
 	<a href="http://mybaragar.com/index.cfm?event=page.SchoolLocatorPublic&DistrictCode=MB09" target="_blank">
 		School Locator
-	</a>
-</div><div class="display sl-FeaturedLinks ">
-		
-	<a href="https://retsd.mb.ca/Lists/Publications/RETSD%20School%20Calendar%202015-16.pdf" target="">
-		2015-16 Division Calendar
 	</a>
 </div><div class="display sl-FeaturedLinks ">
 		
@@ -2725,7 +2476,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 </div><div class="display sl-FeaturedLinks ">
 		
 	<a href="https://app.aesopcanada.com/login2.asp" target="_blank">
-		AESOP
+		Absence Management (formerly AESOP)
 	</a>
 </div><div class="display sl-FeaturedLinks ">
 		
@@ -2820,7 +2571,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 									            
 										            
 											            <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
-	<div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ1" width="100%" class="ms-WPBody noindex " OnlyForMePart="true" allowDelete="false" style="" ><div componentid="ctl00_PlaceHolderFooterContact_PlaceHolderSearchAreaCustom_PlaceHolderSearchArea_SearchBoxScriptWebPart_csr" id="ctl00_PlaceHolderFooterContact_PlaceHolderSearchAreaCustom_PlaceHolderSearchArea_SearchBoxScriptWebPart_csr"></div><noscript><div id="ctl00_PlaceHolderFooterContact_PlaceHolderSearchAreaCustom_PlaceHolderSearchArea_SearchBoxScriptWebPart_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderFooterContact_PlaceHolderSearchAreaCustom_PlaceHolderSearchArea_SearchBoxScriptWebPart">
+	<div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ2" width="100%" class="ms-WPBody noindex " OnlyForMePart="true" allowDelete="false" style="" ><div componentid="ctl00_PlaceHolderFooterContact_PlaceHolderSearchAreaCustom_PlaceHolderSearchArea_SearchBoxScriptWebPart_csr" id="ctl00_PlaceHolderFooterContact_PlaceHolderSearchAreaCustom_PlaceHolderSearchArea_SearchBoxScriptWebPart_csr"></div><noscript><div id="ctl00_PlaceHolderFooterContact_PlaceHolderSearchAreaCustom_PlaceHolderSearchArea_SearchBoxScriptWebPart_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderFooterContact_PlaceHolderSearchAreaCustom_PlaceHolderSearchArea_SearchBoxScriptWebPart">
 
 	</div><div class="ms-clear"></div></div>
 </div>
@@ -2901,7 +2652,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0x4BB57FE0E88E6D11E29155E5703AE2A7B11DD1AF68CA33C38FD6F6D92617108A848DB4068A7C6ED92F88B5DDDE1D46BBE8771CF1F0BD4D137A0900CB16E37299,09 May 2016 13:34:23 -0000';
+            formDigestElement.value = '0xE0612711662315268F9CAC0BD22A529AD1D9E2033A377CB31A75AF2EFF136B2BFEFDFE8FABFF5393A3AA5F17275549FEC18EF178D7CA360CC95E99913E0DCB42,11 Sep 2016 16:00:24 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>
@@ -2965,13 +2716,14 @@ function _RegisterWebPartPageCUI()
 function __RegisterWebPartPageCUI() {
 ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js");}
 _spBodyOnLoadFunctionNames.push("__RegisterWebPartPageCUI");var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';WPSC.Init(document);
-var varPartWPQ2 = WPSC.WebPartPage.Parts.Register('WPQ2','342a0d03-a73f-4096-b48e-9752fc083db3',document.getElementById('WebPartWPQ2'));
-var varPartWPQ3 = WPSC.WebPartPage.Parts.Register('WPQ3','bc42be08-9576-48b1-8a63-94d9c6b710c0',document.getElementById('WebPartWPQ3'));
-var varPartWPQ5 = WPSC.WebPartPage.Parts.Register('WPQ5','3685710c-3650-4993-8fa2-08c319750d61',document.getElementById('WebPartWPQ5'));
-var varPartWPQ6 = WPSC.WebPartPage.Parts.Register('WPQ6','f9edebdd-9261-40e3-8ce4-2fc11f959f05',document.getElementById('WebPartWPQ6'));
-var varPartWPQ7 = WPSC.WebPartPage.Parts.Register('WPQ7','1c78681f-b0ac-4e97-89e9-2eefad185543',document.getElementById('WebPartWPQ7'));
-var varPartWPQ8 = WPSC.WebPartPage.Parts.Register('WPQ8','9435d8ae-53c6-4609-a4a8-4ce0bcf5bc6c',document.getElementById('WebPartWPQ8'));
-var varPartWPQ9 = WPSC.WebPartPage.Parts.Register('WPQ9','e209bf04-4487-481a-9a0e-aee9301f4e46',document.getElementById('WebPartWPQ9'));
+var varPartWPQ3 = WPSC.WebPartPage.Parts.Register('WPQ3','342a0d03-a73f-4096-b48e-9752fc083db3',document.getElementById('WebPartWPQ3'));
+var varPartWPQ4 = WPSC.WebPartPage.Parts.Register('WPQ4','bc42be08-9576-48b1-8a63-94d9c6b710c0',document.getElementById('WebPartWPQ4'));
+var varPartWPQ6 = WPSC.WebPartPage.Parts.Register('WPQ6','3685710c-3650-4993-8fa2-08c319750d61',document.getElementById('WebPartWPQ6'));
+var varPartWPQ7 = WPSC.WebPartPage.Parts.Register('WPQ7','f9edebdd-9261-40e3-8ce4-2fc11f959f05',document.getElementById('WebPartWPQ7'));
+var varPartWPQ8 = WPSC.WebPartPage.Parts.Register('WPQ8','1c78681f-b0ac-4e97-89e9-2eefad185543',document.getElementById('WebPartWPQ8'));
+var varPartWPQ9 = WPSC.WebPartPage.Parts.Register('WPQ9','9435d8ae-53c6-4609-a4a8-4ce0bcf5bc6c',document.getElementById('WebPartWPQ9'));
+var varPartWPQ10 = WPSC.WebPartPage.Parts.Register('WPQ10','e209bf04-4487-481a-9a0e-aee9301f4e46',document.getElementById('WebPartWPQ10'));
+var varPartWPQ1 = WPSC.WebPartPage.Parts.Register('WPQ1','00000000-0000-0000-0000-000000000000',document.getElementById('WebPartWPQ1'));
 WPSC.WebPartPage.WebURL = 'http:\u002f\u002fwww.retsd.mb.ca';
 WPSC.WebPartPage.WebServerRelativeURL = '\u002f';
 
@@ -2997,35 +2749,6 @@ Sys.Application.add_init(function() {
 
 
         </div>
-
-        <script type="text/javascript">
-            var Today = new Date();
-            d = new Date();
-            strDate = dateFormat(Today, "longDate") + "&nbsp &bull; &nbsp";
-                September = new Array(0,0,0,0,0,0,0,1,2,3,4,0,0,5,6,1,2,3,0,0,4,5,6,1,2,0,0,3,4,5);
-    October = new Array(6,1,0,0,2,3,4,5,6,0,0,0,1,2,3,4,0,0,5,6,1,2,3,0,0,4,5,6,1,2,0);
-    November = new Array(0,3,4,5,6,1,0,0,2,3,0,4,5,0,0,6,1,2,3,4,0,0,5,6,1,2,3,0,0,4);
-    December = new Array(5,6,1,2,0,0,3,4,5,6,1,0,0,2,3,4,5,6,0,0,0,0,0,0,0,0,0,0,0,0,0);
-    January = new Array(0,0,0,1,2,3,4,5,0,0,6,1,2,3,4,0,0,5,6,1,2,3,0,0,4,5,6,1,2,0,0);    
-    February = new Array(3,4,5,6,1,0,0,2,3,4,5,6,0,0,0,1,2,3,4,0,0,5,6,1,2,3,0,0,4);
-    March = new Array(5,6,1,2,0,0,3,4,5,6,1,0,0,2,3,4,5,6,0,0,1,2,3,4,0,0,0,0,0,0,0);    
-    April = new Array(0,0,0,5,6,1,2,3,0,0,4,5,6,1,2,0,0,3,4,5,6,1,0,0,2,3,4,5,6,0);
-    May = new Array(0,1,2,3,4,5,0,0,6,1,2,3,4,0,0,5,6,1,2,3,0,0,0,4,5,6,1,0,0,2,3);
-    June = new Array(4,5,6,0,0,1,2,3,4,5,0,0,6,1,2,3,4,0,0,5,6,1,2,3,0,0,4,5,6,1);       July = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);         August = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                
-        
-        Pack = [January, February, March, April, May, June, July, August, September, October, November, December];
-        schoolDay = Pack[d.getMonth()][d.getDate() - 1];
-
-            if (schoolDay == 0) {
-                strDate += " No school today";
-            } else {
-                strDate += " School Day " + schoolDay + " ";
-            }
-
-            $(".sl-SchoolDay .sl-SchoolDayContent").html(strDate);
-        </script>
-
     </body>
 
 

@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Mannville Centennial Public Library of Mannville, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Mannville, Alberta, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Mannville Centennial Public Library of Mannville, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Mannville, Alberta, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.mannvillelibrary.ab.ca/" />
@@ -34,10 +38,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=""/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -45,7 +47,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Mannville Centennial Public Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Mannville Centennial Public Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -258,7 +260,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -266,6 +267,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -280,6 +293,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -300,9 +319,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -334,45 +352,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/137" class="blog_link active_page" title="Discussions">Discussions</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=137" class="blog_link active_page" title="Discussions"><span>Discussions</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/137" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/137" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=137" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/226" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -399,10 +397,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -417,9 +415,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
-    <li class="MenuOpen" id="active"><a href="http://www.mannvillelibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/Extra-Services" title="Extra services"><span>Extra Services</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Library-Board-Members" title="Library board members"><span>Library Board Members</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Mission-Statement" title="Mission statement"><span>Mission Statement</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Services" title="Services"><span>Services</span></a></li></ul></li><li><a href="http://www.mannvillelibrary.ab.ca/History-Books" title="History books"><span>History Books</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.mannvillelibrary.ab.ca/Forms" class="forms_link parent_link" title="Forms"><span>Forms</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/User-Survey" title="User survey"><span>User Survey</span></a></li></ul></li><li><a href="http://www.mannvillelibrary.ab.ca/Childrens-Books" title="Children's books"><span>Children's Books</span></a></li><li class="drop"><a href="http://www.mannvillelibrary.ab.ca/Board-Minutes" class="board_minutes_link parent_link" title="Board Minutes"><span>Board Minutes</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/January-2015" title="January 2015"><span>January 2015</span></a></li></ul></li>
-  
+    <li class="MenuOpen" id="active"><a href="http://www.mannvillelibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/Extra-Services" title="Extra services"><span>Extra Services</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Library-Board-Members" title="Library board members"><span>Library Board Members</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Mission-Statement" title="Mission statement"><span>Mission Statement</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Services" title="Services"><span>Services</span></a></li></ul></li><li><a href="http://www.mannvillelibrary.ab.ca/History-Books" title="History books"><span>History Books</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.mannvillelibrary.ab.ca/Forms" class="forms_link parent_link" title="Forms"><span>Forms</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/User-Survey" title="User survey"><span>User Survey</span></a></li></ul></li><li><a href="http://www.mannvillelibrary.ab.ca/Childrens-Books" title="Children&#x27;s books"><span>Children's Books</span></a></li><li class="drop"><a href="http://www.mannvillelibrary.ab.ca/Board-Minutes" class="board_minutes_link parent_link" title="Board Minutes"><span>Board Minutes</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/January-2015" title="January 2015"><span>January 2015</span></a></li></ul></li>
 </ul>
 
 	</nav>
@@ -495,7 +491,7 @@ if (typeof jQuery != 'undefined') {
 				
 				
 				<div class="slideContent">
-					<img class="bigImg" alt="food bank" src="http://files.townlife.com/public/uploads/photos/471495/food_bank_xlarge.jpg" />
+					<img class="bigImg" alt="DESIGN OUR LOGO 2" src="http://files.townlife.com/public/uploads/photos/498349/DESIGN_OUR_LOGO_2_xlarge.jpg" />
 					
 					
 					
@@ -505,7 +501,7 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="photography classes" src="http://files.townlife.com/public/uploads/photos/471352/photography_classes_xlarge.jpg" />
+					<img class="bigImg" alt="recycled cd" src="http://files.townlife.com/public/uploads/photos/495951/recycled_cd_xlarge.jpg" />
 					
 					
 					
@@ -515,7 +511,27 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="job opprt" src="http://files.townlife.com/public/uploads/photos/469951/job_opprt_xlarge.jpg" />
+					<img class="bigImg" alt="sprinkles the clown" src="http://files.townlife.com/public/uploads/photos/495929/sprinkles_the_clown_xlarge.jpg" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="fish group" src="http://files.townlife.com/public/uploads/photos/495907/fish_group_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="NEW PAINT AND POUR" src="http://files.townlife.com/public/uploads/photos/491890/NEW_PAINT_AND_POUR_xlarge.jpg" />
 					
 					
 					
@@ -526,16 +542,6 @@ if (typeof jQuery != 'undefined') {
 			   
 				<div class="slideContent">
 					<img class="bigImg" alt="ARP" src="http://files.townlife.com/public/uploads/photos/456043/ARP_xlarge.jpg" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="circuit banner" src="http://files.townlife.com/public/uploads/photos/477993/circuit_banner_xlarge.jpg" />
 					
 					
 					
@@ -590,78 +596,56 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6170"><img alt="Fullsizerender" src="http://files.townlife.com/public/asset_files/7237/thumb_400/FullSizeRender.jpg?1458339446" /></a></div>
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6170">				
-	  Winter Reading Program Winner			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/6843">
+	    RABC
+          </a>
+        <p>The Mannville Centennial Public Library is now the new location for the Rural Alberta Business Centre. &nbsp;People who are interested in starting ...
+        <!-- <a href="/blogs/show_entry/6843">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6840">
+	    Design Our Logo
+          </a>
+        <p>&nbsp;The Mannville Library is having a logo contest. &nbsp;This contest is open to the public of all ages. &nbsp;We are looking for simple, yet me...
+        <!-- <a href="/blogs/show_entry/6840">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6726">
+	    Summer Reading Program
+          </a>
+        <p>&nbsp;Many thanks to the FCSS &quot;Kids Make a Change&quot; program for once again attending our Summer Reading Program. &nbsp;This program is for...
+        <!-- <a href="/blogs/show_entry/6726">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7237/xlarge/FullSizeRender.jpg?1458339446" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Fullsizerender" src="http://files.townlife.com/public/asset_files/7237/thumb_400/FullSizeRender.jpg?1458339446" />
+            </a>
+          </div>
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6170">
+	    Winter Reading Program Winner
+          </a>
         <p>&nbsp;Congratulations Carol. Carol was one of six winners of a Samsung Tablet provided by the Northern Lights Library System. &nbsp;Congratulations...
         <!-- <a href="/blogs/show_entry/6170">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6066">				
-	  Footprints			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/6066">
+	    Footprints
+          </a>
         <p>&nbsp;We want to let everyone know how successful our walking project is. &nbsp;So far we have over 45 participants who walk on a regular basis. &n...
         <!-- <a href="/blogs/show_entry/6066">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
-      <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5899"><img alt="Img_0006" src="http://files.townlife.com/public/asset_files/7051/thumb_400/IMG_0006.JPG?1454178916" /></a></div>
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5899">				
-	  Happy Birds			 			
-        </a>
-        <p>&nbsp;We'll have some happy birds here in Mannville thanks to our crafty crafters. &nbsp;Hope everyone has hung their feeders outside and is enjoyi...
-        <!-- <a href="/blogs/show_entry/5899">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
-    
-      <li class="new_post">
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5638">				
-	  Fundraiser Winners			 			
-        </a>
-        <p>&nbsp;Congratulations to the winners of our annual Christmas fundraiser: Amy Shomachuk - Apple watch, Maryann Berg - Booklover's Basket and Brandan...
-        <!-- <a href="/blogs/show_entry/5638">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
-    
-      <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5636"><img alt="Mrs" src="http://files.townlife.com/public/asset_files/6751/thumb_400/Mrs. Claus 2015.JPG?1449273163" /></a></div>
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5636">				
-	  Mrs. Claus' First Visit			 			
-        </a>
-        <p>Mrs. Claus put in her first&nbsp;appearance at the library Thursday, Dec. 3&nbsp;to read to the kindergarten class.&nbsp; After several&nbsp;storie...
-        <!-- <a href="/blogs/show_entry/5636">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/137">+ MORE</a></h6>
 </div>
@@ -672,58 +656,47 @@ if (typeof jQuery != 'undefined') {
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/137">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/137">Upcoming Events</a> 
-        <span class="latest_events_count">(2)</span>
+        <span class="latest_events_count">(3)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>24</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>October</span> <span class='theDate'>01</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35041">Photography classes</a>
+            <a href="/calendars/show_event/37432">Author of the Month</a>
             <span class="upcoming_time_frame">
               (in 2 weeks)
-              
-                &nbsp;from  7:00 PM
-                
-                  &nbsp;to  9:00 PM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>June</span> <span class='theDate'>03</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>October</span> <span class='theDate'>01</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35042">BBQ Dinner</a>
+            <a href="/calendars/show_event/37433">BOOK BLAST</a>
             <span class="upcoming_time_frame">
-              (in 3 weeks)
-              
-                &nbsp;from 11:00 AM
-                
-                  &nbsp;to  1:30 PM
-                
-              
+              (in 2 weeks)
             </span>
           </li>
-        
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>07</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37434">Storytime</a>
+            <span class="upcoming_time_frame">
+              (in 3 weeks)
+                &nbsp;from 10:00 AM
+                  &nbsp;to 10:45 AM
+            </span>
+          </li>
       </ul>
       <h6 class="more"><a href="/calendars/table/137">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -731,77 +704,40 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_705">
-	      
-              
-	      
+	    <dd id="action_705">
 	        <img alt="Call (780) 763-3611" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 763-3611" />
 		
 		Call (780) 763-3611
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_760">
-	      
-              
-	      
+		    <dd id="action_760">
 	        <img alt="Fax (780)763-3688" class="action_steps_image" src="/images/icons/fff_action_steps/printer.png?1445483283" title="Fax (780)763-3688" />
 		
 		Fax (780)763-3688
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/137" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1431&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1431&amp;return_url=http%3A%2F%2Fwww.mannvillelibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=137" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.mannvillelibrary.ab.ca%2F&amp;site_id=137" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -812,12 +748,9 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="subNavigation" class="rightItem">
 			<h3>Links</h3>
-			
-
-<ul id="SubNav">
+			<ul id="SubNav">
   <li><a href="http://www.mannvillelibrary.ab.ca/Extra-Services" class="extra_services_link123" target="" title="Extra services"><span>Extra Services</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Library-Board-Members" class="library_board_members_link123" target="" title="Library board members"><span>Library Board Members</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Mission-Statement" class="mission_statement_link123" target="" title="Mission statement"><span>Mission Statement</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Services" class="services_link123" target="" title="Services"><span>Services</span></a></li>
 </ul>
-
 
 		</nav>
 		
@@ -828,19 +761,13 @@ if (typeof jQuery != 'undefined') {
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.mannville.com/" class="action_steps_link" target="_blank">Village of Mannville</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -857,16 +784,10 @@ if (typeof jQuery != 'undefined') {
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -878,8 +799,6 @@ if (typeof jQuery != 'undefined') {
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
 </div>
 
  </span>
@@ -900,6 +819,17 @@ if (typeof jQuery != 'undefined') {
 			
 				<div> <!-- start book group of 5 -->
 			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
 			
 				
@@ -911,7 +841,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
 			
 				
 			
@@ -933,18 +863,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -958,18 +877,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
 			
 				
 			
@@ -991,7 +899,18 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
 			
 				
 			
@@ -1016,29 +935,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
 			
 				
 			
@@ -1063,6 +960,28 @@ if (typeof jQuery != 'undefined') {
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
 			
 				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
+			
+				
 					</div> <!-- end book group of 5 -->
 					<div>
 				
@@ -1074,7 +993,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
 			
 				
 			
@@ -1085,7 +1004,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
 			
 				
 					</div><!-- end book group -->
@@ -1108,7 +1027,7 @@ if (typeof jQuery != 'undefined') {
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1150,61 +1069,39 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
-    <li class="MenuOpen" id="active"><a href="http://www.mannvillelibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/Extra-Services" title="Extra services"><span>Extra Services</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Library-Board-Members" title="Library board members"><span>Library Board Members</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Mission-Statement" title="Mission statement"><span>Mission Statement</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Services" title="Services"><span>Services</span></a></li></ul></li><li><a href="http://www.mannvillelibrary.ab.ca/History-Books" title="History books"><span>History Books</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.mannvillelibrary.ab.ca/Forms" class="forms_link parent_link" title="Forms"><span>Forms</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/User-Survey" title="User survey"><span>User Survey</span></a></li></ul></li><li><a href="http://www.mannvillelibrary.ab.ca/Childrens-Books" title="Children's books"><span>Children's Books</span></a></li><li class="drop"><a href="http://www.mannvillelibrary.ab.ca/Board-Minutes" class="board_minutes_link parent_link" title="Board Minutes"><span>Board Minutes</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/January-2015" title="January 2015"><span>January 2015</span></a></li></ul></li>
-  
+    <li class="MenuOpen" id="active"><a href="http://www.mannvillelibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/Extra-Services" title="Extra services"><span>Extra Services</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Library-Board-Members" title="Library board members"><span>Library Board Members</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Mission-Statement" title="Mission statement"><span>Mission Statement</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Services" title="Services"><span>Services</span></a></li></ul></li><li><a href="http://www.mannvillelibrary.ab.ca/History-Books" title="History books"><span>History Books</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.mannvillelibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.mannvillelibrary.ab.ca/Forms" class="forms_link parent_link" title="Forms"><span>Forms</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/User-Survey" title="User survey"><span>User Survey</span></a></li></ul></li><li><a href="http://www.mannvillelibrary.ab.ca/Childrens-Books" title="Children&#x27;s books"><span>Children's Books</span></a></li><li class="drop"><a href="http://www.mannvillelibrary.ab.ca/Board-Minutes" class="board_minutes_link parent_link" title="Board Minutes"><span>Board Minutes</span></a><ul><li><a href="http://www.mannvillelibrary.ab.ca/January-2015" title="January 2015"><span>January 2015</span></a></li></ul></li>
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/137" class="blog_link active_page" title="Discussions">Discussions</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=137" class="blog_link active_page" title="Discussions"><span>Discussions</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/137" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/137" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=137" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/226" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1213,7 +1110,7 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1223,41 +1120,23 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/137" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1394,6 +1273,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1420,3 +1324,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

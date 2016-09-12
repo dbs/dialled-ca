@@ -62,8 +62,8 @@
   <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.neural.modal.css" />
   <!-- link rel="stylesheet" type="text/css" href="/public/css/bootstrap-responsive.css" / -->
   <link rel="stylesheet" type="text/css" href="/public/css/bootstrap-theme.min.css" />
-  <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Vollkorn">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="/public/css/jquery.smartmenus.bootstrap.css" />
   <link rel="stylesheet" href="http://www.neural3.com/public/css/jquery.flexslider.css" type="text/css">
   <link rel="stylesheet" href="/commun/jquery.css" type="text/css">
@@ -88,9 +88,9 @@
   .nav > li > a {
     padding: 10px 7px;
   }
-  #calendrier {background-color:transparent}	
+  #calendrier {background-color:transparent;background-color:rgba(0,0,0,0.2);margin-right:5px;}	/*background-color:rgba(0,0,0,0.2);margin-right:5px;*/
   #haut{
-    background: #fff url(/images/f_entete1.jpg) no-repeat;
+    background: #fff url(/documents/images/2016/f_entete1.jpg) no-repeat;
     overflow:visible;
   }
   a.btn-primary:link {text-decoration: none; color:#ffffff;}
@@ -142,6 +142,11 @@
     }
   }
   #texte a.btn:link {text-decoration: none;}
+  #doc {	background-color: #fff;
+     -webkit-box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 9px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 9px 0px rgba(50, 50, 50, 0.75);
+    }
 </style>
 </head>
 <body><a name="haut"></a>
@@ -154,31 +159,31 @@
   	var aActualite=new Array();
   	aActualite[0]='<a title="MRC de RiviÃ¨re-du-Loup - La vraie vie!" href="http://www.riviereduloup.ca/" class="titrelavraievie">MRC de RiviÃ¨re-du-Loup - La vraie vie!</a>';
     
-      	aActualite[1]='<a href="http://www.municipalite.saint-arsene.qc.ca/communiques/?id=e20165640&amp;a=2016">Votre politique de la famille et des aÃ®nÃ©s a officiellement Ã©tÃ© lancÃ©e! </a>';
+      	aActualite[1]='<a href="http://www.municipalite.saint-arsene.qc.ca/agenda/?id=e2016964&amp;a=2016">Initiation au gÃ©ocaching</a>';
       
-      	aActualite[2]='<a href="http://www.municipalite.lisle-verte.qc.ca/communiques/?id=e20165359&amp;a=2016">Si câest LâIsle-Verte, jâachÃ¨te!</a>';
+      	aActualite[2]='<a href="http://www.municipalite.saint-arsene.qc.ca/agenda/?id=e2016961&amp;a=2016">Initiation au gÃ©ocaching</a>';
       
-      	aActualite[3]='<a href="http://www.municipalite.lisle-verte.qc.ca/communiques/?id=e20165356&amp;a=2016">Si câest LâIsle-Verte, jâachÃ¨te!</a>';
+      	aActualite[3]='<a href="http://www.municipalite.saint-arsene.qc.ca/agenda/?id=e2016960&amp;a=2016">Initiation au gÃ©ocaching</a>';
       
-      	aActualite[4]='<a href="http://www.municipalite.lisle-verte.qc.ca/communiques/?id=e20164291&amp;a=2016">Si câest LâIsle-Verte, jâachÃ¨te!</a>';
+      	aActualite[4]='<a href="http://www.municipalite.saint-arsene.qc.ca/agenda/?id=e2016960&amp;a=2016">Initiation au gÃ©ocaching</a>';
       
-      	aActualite[5]='<a href="http://www.riviereduloup.ca/sadc/?id=facebook_avance&amp;a=2016">FACEBOOK AVANCÃ : POUR OBTENIR DE VRAIS RÃSULTATS</a>';
+      	aActualite[5]='<a href="http://www.municipalite.saint-arsene.qc.ca/communiques/?id=e201683143&amp;a=2016">Retour sur lâÃ©tÃ© 2016</a>';
       
-      	aActualite[6]='<a href="http://www.riviereduloup.ca/communiques/?id=e20164844&amp;a=2016">LaurÃ©ats locaux DÃ©fi OSEntreprendre</a>';
+      	aActualite[6]='<a href="http://www.riviereduloup.ca/communiques/?id=e201683022&amp;a=2016">Le conseil dâadministration dâÃnergie Ãolienne du Bas-Saint-Laurent (ÃÃBSL) Ã  la rencontre du parc Ã©olien Nicolas-Riou!</a>';
       
-      	aActualite[7]='<a href="http://www.municipalite.saint-francois-xavier-de-viger.qc.ca/communiques/?id=e20164549&amp;a=2016">Atelier de tissage Â« FLÃCHÃ Â»</a>';
+      	aActualite[7]='<a href="http://www.municipalite.saint-antonin.qc.ca/communiques/?id=activite_des_nouveaux_arrivants&amp;a=2016">Bienvenue aux nouveaux rÃ©sidents de Saint-Antonin!</a>';
       
-      	aActualite[8]='<a href="http://www.riviereduloup.ca/communiques/?id=e201633141&amp;a=2016">Le CLD de la rÃ©gion de RiviÃ¨re-du-Loup,  un incontournable en dÃ©veloppement Ã©conomique</a>';
+      	aActualite[8]='<a href="http://www.riviereduloup.ca/evenements/?id=e201682333&amp;a=2016">Georges PrÃ©fontaine (1897-1986)</a>';
       
-      	aActualite[9]='<a href="http://www.riviereduloup.ca/evenements/?id=les_invisibles&amp;a=2016">Exposition Â« Les Invisibles Â» de lâartiste Gabrielle Gendron Ã  la Maison de la culture  </a>';
+      	aActualite[9]='<a href="http://www.municipalite.saint-arsene.qc.ca/communiques/?id=e201681840&amp;a=2016">Programmation dâactivitÃ©s automne 2016 Ã  Saint-ArsÃ¨ne</a>';
       
-      	aActualite[10]='<a href="http://www.municipalite.saint-antonin.qc.ca/communiques/?id=soiree_casino_2016&amp;a=2016">SoirÃ©e casino 2016</a>';
+      	aActualite[10]='<a href="http://www.municipalite.lisle-verte.qc.ca/communiques/?id=e20168137&amp;a=2016">Exposition Ã  la Cour de circuit</a>';
       
-      	aActualite[11]='<a href="http://www.cacouna.ca/communiques/?id=offres_demploi_pour_le_terrain_de_jeux_2016_de_cacouna&amp;a=2016">Offres dâemploi pour le terrain de jeux 2016</a>';
+      	aActualite[11]='<a href="http://www.municipalite.saint-arsene.qc.ca/communiques/?id=e201671329&amp;a=2016">Offre dâemploi</a>';
       
-      	aActualite[12]='<a href="http://www.riviereduloup.ca/communiques/?id=e201631757&amp;a=2016"> La Ville et la MRC soutiennent lâÃMAC</a>';
+      	aActualite[12]='<a href="http://www.riviereduloup.ca/communiques/?id=communique_vitrine_bsl&amp;a=2016">Le grand retour de la Vitrine du Bas-Saint-Laurent</a>';
       
-      	aActualite[13]='<a href="http://www.riviereduloup.ca/communiques/?id=communique_etude_opportunite_industrielle&amp;a=2016">Le CLD de la rÃ©gion de RiviÃ¨re-du-Loup va de lâavant avec une Ã©tude dâopportunitÃ©s en dÃ©veloppement industriel</a>';
+      	aActualite[13]='<a href="http://www.riviereduloup.ca/evenements/?id=tisser_lexistant&amp;a=2016">Lancement de la programmation 2016-2017 et vernissage de lâexposition Tisser lâexistant</a>';
       
     aBanMax[0] = aActualite.length;
   
@@ -217,7 +222,7 @@ function twAjusteLavraievie() {
 <div id="oLavraievie" style="height:1px;background: #000 url(/images/f_lavraievie.png) repeat-x;overflow:hidden;color:#999999;text-shadow: 0 1px 0 #ffffff;">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-    	<td width="60%"><ul><li><a href="http://www.municipalite.saint-arsene.qc.ca/communiques/?id=e20165640&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Votre politique de la famille et des aÃ®nÃ©s a officiellement Ã©tÃ© lancÃ©e! </a></li><li><a href="http://www.municipalite.lisle-verte.qc.ca/communiques/?id=e20165359&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Si câest LâIsle-Verte, jâachÃ¨te!</a></li><li><a href="http://www.municipalite.lisle-verte.qc.ca/communiques/?id=e20165356&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Si câest LâIsle-Verte, jâachÃ¨te!</a></li><li><a href="http://www.municipalite.lisle-verte.qc.ca/communiques/?id=e20164291&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Si câest LâIsle-Verte, jâachÃ¨te!</a></li><li><a href="http://www.riviereduloup.ca/sadc/?id=facebook_avance&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">FACEBOOK AVANCÃ : POUR OBTENIR DE VRAIS RÃSULTATS</a></li><li><a href="http://www.riviereduloup.ca/communiques/?id=e20164844&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">LaurÃ©ats locaux DÃ©fi OSEntreprendre</a></li></ul></td>
+    	<td width="60%"><ul><li><a href="http://www.municipalite.saint-arsene.qc.ca/agenda/?id=e2016964&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Initiation au gÃ©ocaching</a></li><li><a href="http://www.municipalite.saint-arsene.qc.ca/agenda/?id=e2016961&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Initiation au gÃ©ocaching</a></li><li><a href="http://www.municipalite.saint-arsene.qc.ca/agenda/?id=e2016960&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Initiation au gÃ©ocaching</a></li><li><a href="http://www.municipalite.saint-arsene.qc.ca/agenda/?id=e2016960&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Initiation au gÃ©ocaching</a></li><li><a href="http://www.municipalite.saint-arsene.qc.ca/communiques/?id=e201683143&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Retour sur lâÃ©tÃ© 2016</a></li><li><a href="http://www.riviereduloup.ca/communiques/?id=e201683022&amp;a=2016" style="font-size:.9em;color:#666666;text-shadow: 0 1px 0 #ffffff;">Le conseil dâadministration dâÃnergie Ãolienne du Bas-Saint-Laurent (ÃÃBSL) Ã  la rencontre du parc Ã©olien Nicolas-Riou!</a></li></ul></td>
     	<td align="right"><img src="/images/f_carte.png" width="232" height="195" alt="La vraie vie!" /></td>
     </tr>
   </table>
@@ -227,66 +232,39 @@ function twAjusteLavraievie() {
 <tr>
 	<td rowspan="3" width="450"><img src="/images/espaceur.gif" width="450" height="180" alt="Accueil de la MunicipalitÃ© de Notre-Dame-du-Portage" usemap="#accueil" border="0" /><map name="accueil"><area shape="rect" coords="45,30,125,160" href="/" alt="Accueil" /><area shape="rect" coords="135,110,235,190" href="http://www.beauxvillages.qc.ca/" target="_blank" alt="Association des plus beaux villages du QuÃ©bec" /></map></td>
 	<td width="167"><br /><img src="/images/espaceur.gif" width="167" height="63" alt="." /></td><td rowspan="3" align="center" valign="top">
-	  <a href="/agenda/" title="Consultez l'agenda"><img src="/images/b_calendrier.png" width="120" height="15" alt="Agenda" style="margin-top:20px;margin-bottom:4px;" /></a>
+	  <!-- a href="/agenda/" title="Consultez l'agenda"><img src="/images/b_calendrier.png" width="120" height="15" alt="Agenda" style="margin-top:20px;margin-bottom:4px;" /></a -->
 	  <br xmlns:atom="http://www.w3.org/2005/Atom"><div id="calendrier" xmlns:atom="http://www.w3.org/2005/Atom"></div><script language="javascript" type="text/javascript" xmlns:atom="http://www.w3.org/2005/Atom">
     	var oAgenda = new Array();
     
-  	var oAgenda1 = new twAgenda('20160331','20160522','Exposition Â« Les Invisibles Â» de lâartiste Gabrielle Gendron Ã  la Maison de la culture  ','Maison de la Culture, 67, rue du Rocher','/Agenda/?x=1');
+  	var oAgenda1 = new twAgenda('20160609','20170108','Lancement de la programmation 2016-2017 et vernissage de lâexposition Tisser lâexistant','MusÃ©e du Bas-Saint-Laurent, RiviÃ¨re-du-Loup (QuÃ©bec) - 300, rue Saint-Pierre','/Agenda/?x=1');
     oAgenda[0] = oAgenda1;
   
-  	var oAgenda2 = new twAgenda('20160526','20160526','SoirÃ©e spÃ©ciale dâinformation et dâinscription','Salle Gilles-Moreau','/Agenda/?x=1');
+  	var oAgenda2 = new twAgenda('20160823','20161001','Georges PrÃ©fontaine (1897-1986)','Cour de circuit, LâIsle-Verte','/Agenda/?x=1');
     oAgenda[1] = oAgenda2;
   
-  	var oAgenda3 = new twAgenda('20160526','20160526','SoirÃ©e spÃ©ciale dâinformation et dâinscription','Salle Gilles-Moreau','/Agenda/?x=1');
+  	var oAgenda3 = new twAgenda('20160926','20160926','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
     oAgenda[2] = oAgenda3;
   
-  	var oAgenda4 = new twAgenda('20160530','20160530','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
+  	var oAgenda4 = new twAgenda('20160930','20161002','ÃvÃ©nement biennal Livres dâartistes au Portage','Notre-Dame-du-Portage','/Agenda/?x=1');
     oAgenda[3] = oAgenda4;
   
-  	var oAgenda5 = new twAgenda('20160606','20160606','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
+  	var oAgenda5 = new twAgenda('20161003','20161003','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
     oAgenda[4] = oAgenda5;
   
-  	var oAgenda6 = new twAgenda('20160627','20160627','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
+  	var oAgenda6 = new twAgenda('20161024','20161024','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
     oAgenda[5] = oAgenda6;
   
-  	var oAgenda7 = new twAgenda('20160704','20160704','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
+  	var oAgenda7 = new twAgenda('20161107','20161107','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
     oAgenda[6] = oAgenda7;
   
-  	var oAgenda8 = new twAgenda('20160725','20160725','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
+  	var oAgenda8 = new twAgenda('20161128','20161128','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
     oAgenda[7] = oAgenda8;
   
-  	var oAgenda9 = new twAgenda('20160801','20160801','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
+  	var oAgenda9 = new twAgenda('20161205','20161205','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
     oAgenda[8] = oAgenda9;
   
-  	var oAgenda10 = new twAgenda('20160829','20160829','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
+  	var oAgenda10 = new twAgenda('20161226','20161226','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
     oAgenda[9] = oAgenda10;
-  
-  	var oAgenda11 = new twAgenda('20160906','20160906','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
-    oAgenda[10] = oAgenda11;
-  
-  	var oAgenda12 = new twAgenda('20160926','20160926','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
-    oAgenda[11] = oAgenda12;
-  
-  	var oAgenda13 = new twAgenda('20160930','20161002','ÃvÃ©nement biennal Livres dâartistes au Portage','Notre-Dame-du-Portage','/Agenda/?x=1');
-    oAgenda[12] = oAgenda13;
-  
-  	var oAgenda14 = new twAgenda('20161003','20161003','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
-    oAgenda[13] = oAgenda14;
-  
-  	var oAgenda15 = new twAgenda('20161024','20161024','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
-    oAgenda[14] = oAgenda15;
-  
-  	var oAgenda16 = new twAgenda('20161107','20161107','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
-    oAgenda[15] = oAgenda16;
-  
-  	var oAgenda17 = new twAgenda('20161128','20161128','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
-    oAgenda[16] = oAgenda17;
-  
-  	var oAgenda18 = new twAgenda('20161205','20161205','Conseil municipal','Salle Gilles-Moreau','/Agenda/?x=1');
-    oAgenda[17] = oAgenda18;
-  
-  	var oAgenda19 = new twAgenda('20161226','20161226','Date de tombÃ©e de lâInfo-Portage','','/Agenda/?x=1');
-    oAgenda[18] = oAgenda19;
   
 	   twGenereCalendrier();
     </script>
@@ -295,10 +273,11 @@ function twAjusteLavraievie() {
 <tr><td><img src="/images/espaceur.gif" width="167" height="59" alt="CommuniquÃ©s et publications" /></td></tr>
 </table>
 </div>
-
-	<div class="navbar navbar-default" role="navigation" style="background: #fff url(/images/f_menu.png) repeat-x;">
-  
+<div style="width:821px;padding:0;margin:0;background-color:#fff;">
+<div class="navbar navbar-default" role="navigation" style="background: #fff url(/images/f_menu.png) repeat-x;">
+	<img src="/images/espaceur.gif" width="822" height="1" alt="." />
   <div class="navbar-collapse collapse">
+  	<img src="/images/espaceur.gif" width="822" height="1" alt="." />
     <ul class="nav navbar-nav">
       <li><a href="/presentation_generale/">Bienvenue</a>
          
@@ -369,7 +348,7 @@ function twAjusteLavraievie() {
   <li><a href="/services_aux_citoyens/?id=ndp-programmation_automne&amp;a=2015">Programmation -  automne</a></li>
   <li><a href="/services_aux_citoyens/?id=ndp-programmation_hiver&amp;a=2015">Programmation -  hiver</a></li>
   <li><a href="/services_aux_citoyens/?id=ndp-evenements_speciaux&amp;a=2015">ÃvÃ¨nements spÃ©ciaux</a></li>
-  <li><a href="/services_aux_citoyens/?id=ndp-camp_de_jour&amp;a=2015">Camp de jour</a></li>
+  <li><a href="/services_aux_citoyens/?id=ndp-camp_de_jour&amp;a=2016">Camp de jour</a></li>
   <li><a href="/services_aux_citoyens/?id=ndp-soccer_recreatif&amp;a=2015">Soccer rÃ©crÃ©atif</a></li>
   <li><a href="/services_aux_citoyens/?id=ndp-habitation&amp;a=2010">Habitation</a></li>
   <li><a href="/loisirs/?id=ndp-accueil_des_nouveaux_residents&amp;a=2010">Accueil des nouveaux rÃ©sidents</a></li>
@@ -440,12 +419,14 @@ function twAjusteLavraievie() {
   </div><!--/.nav-collapse -->
 </div>
 
+
   <div id="hierarchique">
-  	<div class="date" style="float:right;width:250px;text-align:right">Le lundi 9 mai 2016 <img src="/images/g_heure.png" width="14" height="13" class="milieu" alt="H" /> 10:14 | <a href="javascript:twGrandeurdeTexte('100%')"><span style="font-size:10px"><b>A</b></span></a> <a href="javascript:twGrandeurdeTexte('large')"><span style="font-size:11px"><b>A</b></span></a>  <a href="javascript:twGrandeurdeTexte('x-large')"><span style="font-size:12px"><b>A+</b></span></a></div>
+  	<div class="date" style="float:right;width:250px;text-align:right">Le dimanche 11 septembre 2016 <img src="/images/g_heure.png" width="14" height="13" class="milieu" alt="H" /> 12:28 | <a href="javascript:twGrandeurdeTexte('100%')"><span style="font-size:10px"><b>A</b></span></a> <a href="javascript:twGrandeurdeTexte('large')"><span style="font-size:11px"><b>A</b></span></a>  <a href="javascript:twGrandeurdeTexte('x-large')"><span style="font-size:12px"><b>A+</b></span></a></div>
   	  <a href="/" title="Retour de la page dâaccueil : Services aux citoyens">Accueil</a>
   	   > <a href="/services_aux_citoyens/" title="Consultez la rubrique">Services aux citoyens</a>
-  </div><a name="contenu"></a>
+  </div>
   <div id="titre">
+  	<a name="contenu"></a>
 	  <h2 style="padding-left:70px;margin-bottom:5px;font-weight:normal;">
 		BibliothÃ¨que municipale
 	  </h2>
@@ -566,6 +547,7 @@ $(function() {
   });
 });
 </script>
+</div><!-- Frame -->
   </div><!-- doc -->
 </body>
 </html>

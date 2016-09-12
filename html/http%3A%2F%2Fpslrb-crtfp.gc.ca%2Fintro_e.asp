@@ -77,8 +77,7 @@
 	<li class="fiptext"><div><a href="/intro_e.asp" title="Home">Home</a></div></li>
 	<li class="fiptextc"><div><a href="/contactus_e.asp" title="Contact Us">Contact Us</a></div></li>
 	<li class="fiptext"><div><a href="/help_e.asp" title="Help">Help</a></div></li>
-	<li class="fiptext"><div><a href="http://search.pslrb-crtfp.gc.ca
-	/search?output=xml_no_dtd&amp;site=all&amp;hl=fr&amp;proxystylesheet=e&amp;client=e" title="Search">Search</a></div></li>
+    <li class="fiptext"><div><a href="http://recherche-search.gc.ca/rGs/s_r?st=s&s5bm3ts21rch=x&num=10&st1rt=0&langs=eng&cdn=canada" title="Search">Search</a></div></li>
 	<li class="fiptextb"><div><a href="http://www.canada.ca/en/index.html" title="Canada.ca - Government of Canada Web site">Canada.ca</a></div></li>
 </ul></div>
 <p class="breadcrumb">

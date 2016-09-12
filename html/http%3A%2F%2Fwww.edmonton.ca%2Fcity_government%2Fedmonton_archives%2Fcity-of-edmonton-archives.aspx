@@ -9,7 +9,7 @@
     <meta name="viewport" content="initial-scale=1.0" />
     <meta name="DC.Title" content="" />
     <meta name="DC.Creator" content="City of Edmonton" />
-    <meta name="DC.Date" content="5/9/2016" />
+    <meta name="DC.Date" content="9/11/2016" />
     <meta name="DC.DateAccepted" content="12/17/2015">
     <meta name="DC.Language" content="eng" scheme="ISO693-2" />
     <meta name="DC.Publisher" content="The City of Edmonton" />
@@ -18,8 +18,9 @@
     <meta name="DC.Description" content="Located in the historic Prince of Wales Armouries Heritage Centre, the City of Edmonton Archives is a public research facility housing civic government and private records of enduring significance that document Edmonton's history." />
     <meta name="DC.Subject" content="" />
     <meta name="Keywords" content="archives, edmonton archives, city of edmonton archives, Edmonton's history, history, history edmonton, city archives, edmonton photos, historical photos, research, genealogical, geneaology, obit, archive, obituary, family history, familty tree, heritage" />
+    
 
-        <link rel="stylesheet" type="text/css" href="/css/default.css?version=20151217" media="screen" /><link rel="stylesheet" type="text/css" href="/css/custom.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/default.css?version=20160809" media="screen" /><link rel="stylesheet" type="text/css" href="/css/custom.css" media="screen" />
         
 
         <!-- <link rel="stylesheet" type="text/css" href="/css/default2.css" media="screen" /> -->
@@ -147,7 +148,7 @@ function getIEVersionNumber() {
             <ul id="searchNav" onmouseover="mouseIsOver = true;" onmouseout="mouseIsOver = false;">
                     <li><img src="/city_government/images/button_search_x.png" onclick="hideSearchSuggestions()"/> </li>
                     
-                <li onclick="ssc('Big Bin Events')">Big Bin Events</li> <li onclick="ssc('Eco Stations')">Eco Stations</li> <li onclick="ssc('Edmonton Maps')">Edmonton Maps</li> <li onclick="ssc('Pay Tickets')">Pay Tickets</li> <li onclick="ssc('Permits')">Permits</li> <li onclick="ssc('Spray Parks')">Spray Parks</li> <li onclick="ssc('Street Cleaning')">Street Cleaning</li> 
+                <li onclick="ssc('Big Bin Events')">Big Bin Events</li> <li onclick="ssc('Business Licensing')">Business Licensing</li> <li onclick="ssc('Dog / Pet Licences')">Dog / Pet Licences</li> <li onclick="ssc('Eco Stations')">Eco Stations</li> <li onclick="ssc('Garbage Collection')">Garbage Collection</li> <li onclick="ssc('Park and Ride')">Park and Ride</li> <li onclick="ssc('Pay Tickets')">Pay Tickets</li> 
                 
             </ul>
             <input name="txtFakeControl" type="hidden" />
@@ -163,13 +164,13 @@ function getIEVersionNumber() {
 
                 <li>
             
-                    <a href="/activities-parks-recreation.aspx">Activities, Parks &<br/>Recreation</a>
+                    <a href="/activities-parks-recreation.aspx">Activities, Parks<br/>& Recreation</a>
                 
             </li>
         
                 <li>
             
-                    <a href="/attractions-events.aspx">Attractions &<br/>Events</a>
+                    <a href="/attractions-events.aspx">Attractions<br/>& Events</a>
                 
             </li>
         
@@ -179,21 +180,21 @@ function getIEVersionNumber() {
                 
             </li>
         
-                <li>
+                <li class="active">
             
-                    <a href="/bylaws-licences.aspx">Bylaws &<br/>Licences</a>
+                    <a href="/city-government.aspx">City<br/>Government</a>
                 
             </li>
         
-                <li class="active">
+                <li>
             
-                <a class="singleLine" href="/city-government.aspx">City Government</a>
-            
+                    <a href="/projects-plans.aspx">Projects<br/>& Plans</a>
+                
             </li>
         
                 <li>
             
-                    <a href="/programs-services.aspx">Programs &<br/>Services</a>
+                    <a href="/programs-services.aspx">Programs<br/>& Services</a>
                 
             </li>
         
@@ -205,13 +206,13 @@ function getIEVersionNumber() {
         
                 <li>
             
-                <a class="singleLine" href="/transportation.aspx">Transportation</a>
-            
+                    <a href="/transportation.aspx">Driving, Cycling<br/>& Walking</a>
+                
             </li>
         
                 <li>
             
-                    <a class="singleLine" href="/edmonton-transit-system-ets.aspx">Transit (ETS)</a>
+                    <a href="/edmonton-transit-system-ets.aspx">Transit<br/>(ETS)</a>
                 
             </li>
          
@@ -231,12 +232,14 @@ function getIEVersionNumber() {
       <div id="leftNav">
         <h1><a href="/city-government.aspx">City Government</a></h1>
         
-        <!-- Bylaws & Licences --><!-- Residential & Neighbourhoods --><!-- Activities, Parks & Recreation --><!-- Blatchford --><!-- Programs & Services --><!-- Attractions & Events --><!-- Business & Economy --><!-- Preview --><!-- Downtown --><!-- CITYlab --><!-- City Government --> 
+        <!-- Residential & Neighbourhoods --><!-- Activities, Parks & Recreation --><!-- Programs & Services --><!-- Attractions & Events --><!-- Business & Economy --><!-- CITYlab --><!-- City Government --> 
             <ul> 
                 
             <li><a href="/city_government/budget-and-taxes.aspx">Budget & Taxes</a></li>
         
             <!-- <li><a href="/city_government/by-election.aspx">By-Election</a></li> -->
+        
+            <li><a href="/city_government/bylaws.aspx">Bylaws</a></li>
         
             <li><a href="/city_government/municipal-census.aspx">Census</a></li>
         
@@ -246,15 +249,19 @@ function getIEVersionNumber() {
         
             <li><a href="/city_government/city-protocol.aspx">City Protocol</a></li>
         
-            <li><a href="/city_government/city-vision-and-strategic-plan.aspx">City Vision & Strategies</a></li>
+            <li><a href="/city_government/city-vision-and-strategic-plan.aspx">City Vision & Strategic Plans</a></li>
+        
+            <li><a href="/city_government/council-committee-meetings.aspx">Council & Committee Meetings</a></li>
         
             <li><a href="/city_government/mayor-city-councillors.aspx">Councillors & Mayor</a></li>
         
             <li><a href="/city_government/edmonton-elections.aspx">Elections</a></li>
         
-            <li><a href="/city_government/environmental-stewardship .aspx">Environmental Stewardship</a></li>
+            <li><a href="/city_government/environmental-stewardship.aspx">Environmental Stewardship</a></li>
         
             <li><a href="/city_government/facts-figures.aspx">Facts & Figures</a></li>
+        
+            <li><a href="/city_government/government-relations.aspx">Government Relations</a></li>
         
               <li><a class="isParent" href="/city_government/heritage-archives-arts.aspx">Heritage, Archives & The Arts</a>
                 <ul> 
@@ -302,30 +309,26 @@ function getIEVersionNumber() {
             <li><a href="/city_government/edmonton_archives/poet-laureate.aspx">Poet Laureate</a></li>
         
             <li><a href="/city_government/edmonton_archives/edmontons-public-art.aspx">Public Art </a></li>
+        
+            <li><a href="/city_government/edmonton_archives/edmontons-creative-lighting-pi.aspx">Creative Lighting Project</a></li>
          
                 </ul>
               </li>
             
             <li><a href="/city_government/initiatives-innovation.aspx">Initiatives & Innovation</a></li>
         
-            <li><a href="/city_government/jobs.aspx">Jobs - Talent Hub</a></li>
+            <li><a href="/city_government/jobs.aspx">Jobs: Talent Hub</a></li>
         
             <li><a href="/city_government/news-media.aspx">News & Media</a></li>
-        
-            <li><a href="/city_government/projects-redevelopment.aspx">Projects & Redevelopment</a></li>
         
             <li><a href="/city_government/urban-planning-and-design.aspx">Urban Planning & Design</a></li>
         
             <li><a href="/city_government/utilities.aspx">Utilities</a></li>
         
-            <!-- <li><a href="/city_government/fcm-golf-registration-form.aspx">FCM Golf Tournament Registration Form</a></li> -->
-        
-            <!-- <li><a href="/city_government/fcm-golf-tournament.aspx">FCM Golf Tournament</a></li> -->
-        
-            <!-- <li><a href="/city_government/fcm-golf-registration-thank-you.aspx">FCM Golf Registration - Thank You</a></li> -->
+            <!-- <li><a href="/city_government/projects-redevelopment.aspx">Redirect - Projects & Redevelopment</a></li> -->
          
             </ul>
-         <!-- Transportation --><!-- Transit (ETS) --><!-- Affordable Housing Edmonton -->
+         <!-- Driving, Cycling & Walking --><!-- Transit (ETS) --><!-- River for Life --><!-- Projects & Plans --><!-- Affordable Housing Edmonton -->
       </div>
       <!-- close leftNav -->
 
@@ -370,264 +373,7 @@ function getIEVersionNumber() {
     <h1>City of Edmonton Archives</h1>
 
 
-<script> 
-var facilityID= "78"; 
-</script>
- 
-<script type="text/javascript" src="http://www.edmonton.ca/javascript/jquery-collapser.js"></script>
- <script> 
-//http://cypressnorth.com/programming/cross-domain-ajax-request-with-json-response-for-iefirefoxchrome-safari-jquery/
- jQuery(function($){ 
-var url = "http://acc.edmonton.ca/COEAlerts/Alerts?$filter=FacilityID eq "+ facilityID +" & $orderby=StartDate";
- //var url = "http://acc.edmonton.ca/COEAlerts/Alerts?$filter=FacilityID eq 53 or FacilityID eq 55";
- var appURL = "http://coewebapps.edmonton.ca/facilitynotifications/default.aspx?args=";
- 
-var arrBanner = new Array; 
-var arrAquatics = new Array; 
-var $cm = $("#closure-message"); 
-var $acm = $("#aquatics-message"); 
-var $notification = $(".notifications"); 
-
-var holidays = new Array; 
-var currentDate = new Date(); 
-
-var $cm = $("#closure-message"); 
-var fullFacilityClosureName = "All"; 
-var fullAquaticClosureName = "All (Aquatic Wide)"; 
-
-var l = window.location; 
-var base_url = l.protocol + "//" + l.host + "/"; 
-
-
-$.ajax({ 
-type: 'GET', 
-async: false, 
-//url: url, 
-url: base_url + 'customscripts/facility-notifications-service.asp?fid=' + facilityID,
- contentType: "application/json", 
-dataType: 'json', 
-success: function (data) { 
-var c = 0; 
-var h = 0; 
-var noRightNotifications = 0; 
-
-if (data.value.length > 0) { 
-$.each( data.value, function( key, value ) { 
-//console.log(data.value[key].Service); 
-var service = data.value[key].Service; 
-var status = data.value[key].Status; 
-var reason = data.value[key].Reason; 
-var additionalInformation = data.value[key].AdditionalInformation; 
-var notificationURL = appURL + data.value[key].TypeID +","+ data.value[key].FacilityID;
- var hasHolidayHours = data.value[key].HasHolidayHours; 
-
-var startDate = data.value[key].StartDate; 
-var endDate = data.value[key].EndDate; 
-var dateInformation = data.value[key].DateInformation; 
-
-//var publishStartDate = convertISO8601toDate(data.value[key].PublishStartDate);
- //var publishEndDate = convertISO8601toDate(data.value[key].PublishEndDate); 
-var publishStartDate = convertDate(data.value[key].PublishStartDate, "start"); 
-var publishEndDate = convertDate(data.value[key].PublishEndDate, "end"); 
-
-//console.log (hasHolidayHours + " ----------- " + publishStartDate + " ----------- " + publishEndDate);
- if (hasHolidayHours === false) { 
-if((currentDate >= publishStartDate && currentDate <= publishEndDate) || (isNaN(publishEndDate.getTime()) && isNaN(publishEndDate.getTime())) ) {
- $notification.append('<div class="message">' + 
-'<h4>'+ status + ": " + service + '</h4>' + 
-'<p><a href="' + notificationURL +'">'+ dateInformation +'</a></p>' + 
-'</div>' 
-);
-noRightNotifications++;
-} 
-
-}else { 
-if((currentDate >= publishStartDate && currentDate <= publishEndDate) || (isNaN(publishEndDate.getTime()) && isNaN(publishEndDate.getTime())) ) {
- h++; 
-holidays[0] = h; 
-holidays[1] = notificationURL; 
-} 
-} 
-
-
-if(status == "Closed" && service == fullFacilityClosureName && currentDate >= publishStartDate && currentDate <= publishEndDate) {
- var tArr = [dateInformation, reason, publishStartDate, publishEndDate, additionalInformation];
- arrBanner.push(tArr); 
-} 
-
-//optional 
-if(status == "Closed" && service == "All (Aquatic Wide)" && currentDate >= publishStartDate && currentDate <= publishEndDate) {
- var tArr = [dateInformation, reason, publishStartDate, publishEndDate, additionalInformation];
- arrAquatics.push(tArr); 
-} 
-
-c++; 
-}); 
-
-
-//right notifications 
-if (noRightNotifications == 0 ){ 
-$notification.append('<div class="message"><p>No Notifications at this time</p></div>');
- } 
-//holiday hours link 
-if (holidays[0] > 0) { 
-$notification.append('<div class="message holidays" style=\"background: url(/icon_hours_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;\"><a href="'+ holidays[1] +'">View Holiday Hours</a></div>');
- } 
-
-//alert banner 
-if($cm.length && arrBanner.length > 0) { 
-$("#facility-closure").css("display", "block"); 
-jQuery.each(arrBanner, function(index, item) { 
-
-if(item[4].length > 1) { 
-$cm.append('<p><b>Dates</b>: ' + item[0].replace('Closed:','') + '<br/>' + 
-'<b>Reason</b>: ' + item[1] + '<br/>' + 
-'<b>Additional Information</b>: <br/>' + item[4] + 
-'</p>' 
-); 
-}else { 
-$cm.append('<p>Dates: ' + item[0].replace('Closed:','') + '<br/>' + 
-'Reason: ' + item[1] + 
-'</p>' 
-); 
-} 
-}); 
-}else { 
-$("#facility-closure").css("display", "none"); 
-} 
-
-//optional 
-if($acm.length && arrAquatics.length > 0) { 
-$("#aquatics-closure").css("display", "block"); 
-jQuery.each(arrAquatics, function(index, item) { 
-//alert(item[0]); 
-if(item[4].length > 1) { 
-$acm.append('<p><b>Dates</b>: ' + item[0].replace('Closed:','') + '<br/>' + 
-'<b>Reason</b>: ' + item[1] + '<br/>' + 
-'<b>Additional Information</b>: <br/>' + item[4] + 
-'</p>' 
-); 
-}else { 
-$acm.append('<p>Dates: ' + item[0].replace('Closed:','') + '<br/>' + 
-'Reason: ' + item[1] + 
-'</p>' 
-); 
-} 
-}); 
-}else { 
-$("#aquatics-closure").css("display", "none"); 
-} 
-
-}else { 
-$notification.append('<div class="message"><p>No Notifications at this time</p></div>');
- } 
-
-}, 
-complete: function (xml) { 
-$('.additionalNotes').collapser({ 
-mode: 'words', 
-speed: 'fast', 
-truncate: 15, 
-showText: '<i>read more<i>', 
-hideText: '<i>read less<i>' 
-}); 
-}, 
-error: function (xhr, textStatus, errorMessage) { 
-$('.notifications').css("display","block").html("<a class=\"link\" target=\"_blank\" href=\""+appURL+"\">View current notifications</a>");
- console.log(errorMessage); 
-} 
-}); 
-
-
-}); 
-function convertISO8601toDate(dtstr) { 
-// replace anything but numbers by spaces 
-dtstr = dtstr.replace(/\D/g," "); 
-// trim any hanging white space 
-dtstr = dtstr.replace(/\s+$/,""); 
-
-// split on space 
-var dtcomps = dtstr.split(" "); 
-
-// not all ISO 8601 dates can convert, as is 
-// unless month and date specified, invalid 
-if (dtcomps.length < 3) return "invalid date"; 
-// if time not provided, set to zero 
-if (dtcomps.length < 4) { 
-dtcomps[3] = 0; 
-dtcomps[4] = 0; 
-dtcomps[5] = 0; 
-} 
-
-// modify month between 1 based ISO 8601 and zero based Date 
-dtcomps[1]--; 
-
-var convdt = new 
-Date(Date.UTC(dtcomps[0],dtcomps[1],dtcomps[2],dtcomps[3],dtcomps[4],dtcomps[5]));
- 
-return convdt; 
-} 
-
-function convertDate(d, t) { 
-var p = new Date(d); 
-var offset = new Date().getTimezoneOffset(); 
-p.setMinutes(p.getMinutes() + offset); 
-if (t == "start") { 
-p.setHours(0,0,0); 
-} else { 
-p.setHours(23,59,59); 
-} 
-return p; 
-} 
-</script> 
-<style> 
-#ticketStatusMessage.error { 
-color: #D8000C; 
-background-color: #FFBABA; 
-border: 1px solid #D8000C; 
-padding: 15px; 
-
-} 
-.message.holidays{ 
-margin-top: 25px; 
-height: 20px; 
-padding-left: 25px; 
-padding-top: 2px; 
-} 
-
-</style>
- 
-<div id="facility-closure" style="display: none;">
-<table style="border: medium none;" cellspacing="0" cellpadding="1" width="100%" border="1">
- <tbody>
-<tr>
-<td style="border: medium none; width: 48px; background-color: #cc3333;" align="center"><img alt="" src="http://www.edmonton.ca/assets/Images/exclamation_bubble_48x48.png" /></td>
- <td style="border: medium none; background-color: #eeeeee;"><blockquote>
-<p><span style="font-size: 14px;"><strong>STATUS: CLOSED</strong></span></p>
-<div id="closure-message"></div>
-
-</blockquote></td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<div id="aquatics-closure" style="display: none;">
-
-<table style="border: medium none;" cellspacing="0" cellpadding="1" width="100%" border="1">
- <tbody>
-<tr>
-<td style="border: medium none; width: 48px; background-color: #FC931B;" align="center"><img alt="" src="http://www.edmonton.ca/assets/Images/exclamation_bubble_48x48.png" /></td>
- <td style="border: medium none; background-color: #eeeeee;"><blockquote>
-<p><span style="font-size: 14px;"><strong>STATUS: Aquatic Wide Closure</strong></span></p>
- <div id="aquatics-message"></div>
-
-</blockquote></td>
-</tr>
-</tbody>
-</table>
-</div>
- 
+        
         
         
         <p><img height="252" alt="City of Edmonton Archives entryway in 2012" src="/city_government/documents/city_archives/Archives_entrance(web).jpg" width="430" /></p>
@@ -642,24 +388,14 @@ padding-top: 2px;
 <div class="narrowFeatureContainer">
 
 
+<div class="neighbourhoodFeature" >
 
-<div class="neighbourhoodFeatureWide" style="margin-bottom:-1px;">
 <h2>Planning Your Visit</h2>
-
-
-    <div class="leftColumn">
-        <A href="/city_government/edmonton_archives/cea-plan-your-visit.aspx"><IMG height=139 alt="1912 Map of Edmonton [detail from EAM-1]" src="/city_government/documents/Images/old_city_map_212x139.jpg" width=212></A>    
-    </div>
-    <div class="rightColumn">   
-
-
- 
-   <H3><A href="/city_government/edmonton_archives/cea-plan-your-visit.aspx">Tips and Hints</A></H3>
-<P>How to get the most out of your archives experience.</P>
-    </div>
+<a href="/city_government/edmonton_archives/cea-plan-your-visit.aspx"><img src="/city_government/documents/ArchivesVisitImg.jpg" alt="Archived Map of Edmonton region"></a>
+        <h3 class="residents"><a href="/city_government/edmonton_archives/cea-plan-your-visit.aspx">Tips and Hints</a></h3>
+        <p>How to get the most out of your archives experience. </p>
+       
 </div>
-<div style="clear:both;font-size:10%;height:1px;">&nbsp;</div>
-<!-- close popularTopics -->
 
 <div class="neighbourhoodFeature" >
 
@@ -672,31 +408,21 @@ padding-top: 2px;
 
 <div class="neighbourhoodFeature" >
 
+<h2>Online Exhibits</h2>
+<a href="/city_government/edmonton_archives/virtual-exhibits.aspx"><img src="/city_government/documents/ExhibitsImg.jpg" alt="Ella May Walker Signature"></a>
+        <h3 class="residents"><a href="/city_government/edmonton_archives/virtual-exhibits.aspx">View our Online Exhibits</a></h3>
+        <p>We use the records at the City of Edmonton Archives to tell stories about Edmonton’s past. </p>
+       
+</div>
+
+<div class="neighbourhoodFeature" >
+
 <h2>Catalogue</h2>
 <a href="https://archivesphotos.edmonton.ca/Presto/home/Default.aspx"><img src="/city_government/documents/Images/archives_catalogue_212x80.jpg" alt="City of Edmonton Archives Online Catalogue"></a>
         <h3 class="residents"><a href="https://archivesphotos.edmonton.ca/Presto/home/Default.aspx">Online Catalogue</a></h3>
         <p>Digitized archival photographs and finding aids to the City of Edmonton Archives collections. </p>
        
 </div>
-
-
-<div class="neighbourhoodFeatureWide" style="margin-bottom:-1px;">
-<h2>Online Exhibits</h2>
-
-
-    <div class="leftColumn">
-        <H3><A href="/city_government/edmonton_archives/virtual-exhibits.aspx">View our Online Exhibits</A></H3>
-<P>We use the records at the City of Edmonton Archives to tell stories about Edmonton’s past.</P>    
-    </div>
-    <div class="rightColumn">   
-
-
- 
-   <A href="/city_government/edmonton_archives/virtual-exhibits.aspx"><IMG height=139 alt="Ella May Walker signature" src="/city_government/documents/city_archives/emw_signature_212x139.jpg" width=212></A>
-    </div>
-</div>
-<div style="clear:both;font-size:10%;height:1px;">&nbsp;</div>
-<!-- close popularTopics -->
 
 <div class="neighbourhoodFeature" >
 
@@ -784,29 +510,271 @@ padding-top: 2px;
     <div id="rightContainer">
 
 
-<script type="text/javascript" src="http://www.edmonton.ca/javascript/jquery-selectbox.js" ></script>
- <link rel="stylesheet" href="http://www.edmonton.ca/css/notifications-selectbox.css" type="text/css" />
- <link rel="stylesheet" href="http://www.edmonton.ca/css/notifications-banner.css" type="text/css" />
- 
-
-<div class="notification-banner"> 
-<h1>Notifications</h1> 
-<div class="notifications"> 
-</div> 
-</div>
- <div class="banner">
-    <h1>Hours &amp; Location</h1>
-    <a href="http://g.co/maps/xtjgq" target="_blank"><img alt="" src="/city_government/documents/map_prince_wales_armouries_234x79.jpg" /></a>
-<h6 align="right"><a href="http://g.co/maps/xtjgq" target="_blank" class="link">View Map</a></h6>
-<h3>10440 108 Avenue</h3>
-<h3>Hours:</h3>
-<p>Mon - Tues <strong>8:30am-4:30pm</strong><br />
-Wed <strong>8:30am-8pm</strong><br />
-Thurs - Fri <strong>8:30am-4:30pm</strong><br />
-Weekends &amp; Holidays <strong>Closed</strong></p>
-<p><strong>Note:</strong> There are certain periods of <a href="/city_government/edmonton_archives/cea-hours-access.aspx"><strong>limited service</strong></a>.<br />
-The Metro Line has <a href="/city_government/edmonton_archives/cea-hours-access.aspx"><strong>changed access</strong></a> to the Prince of Wales Armouries.</p>
     
+
+<script type="text/javascript" src="/javascript/jquery-collapser.js"></script>
+<script>
+    var facilityID = "78";
+	//http://cypressnorth.com/programming/cross-domain-ajax-request-with-json-response-for-iefirefoxchrome-safari-jquery/
+	jQuery(function($) {
+		var arrBanner = new Array;
+		var arrAquatics = new Array;
+		var $cm = $("#closure-message");
+		var $acm = $("#aquatics-message");
+		var $notification = $(".notifications");
+
+		var holidays = new Array;
+		var currentDate = new Date();
+
+		var $cm = $("#closure-message");
+		var fullFacilityClosureName = "All";
+		var fullAquaticClosureName = "All (Aquatic Wide)";
+
+		var l = window.location;
+		var base_url = l.protocol + "//" + l.host + "/";
+
+
+		$.ajax({
+			type: 'GET',
+			async: false,
+			url: base_url + 'customscripts/facility-notifications-service.asp?fid=' + facilityID,
+			contentType: "application/json",
+			dataType: 'json',
+			success: function(data) {
+				var c = 0;
+				var h = 0;
+				var noRightNotifications = 0;
+
+				if (data.value.length > 0) {
+					$.each(data.value, function(key, value) {
+						//console.log(data.value[key].Service);
+						var service = data.value[key].Service;
+						var status = data.value[key].Status;
+						var reason = data.value[key].Reason;
+						var additionalInformation = data.value[key].AdditionalInformation;
+						var notificationURL = "http://coewebapps.edmonton.ca/facilitynotifications/default.aspx?args=" + data.value[key].TypeID + "," + data.value[key].FacilityID;
+						var hasHolidayHours = data.value[key].HasHolidayHours;
+
+						var startDate = data.value[key].StartDate;
+						var endDate = data.value[key].EndDate;
+						var dateInformation = data.value[key].DateInformation;
+
+						//var publishStartDate = convertISO8601toDate(data.value[key].PublishStartDate);
+						//var publishEndDate = convertISO8601toDate(data.value[key].PublishEndDate);
+						var publishStartDate = convertDate(data.value[key].PublishStartDate, "start");
+						var publishEndDate = convertDate(data.value[key].PublishEndDate, "end");
+
+						//console.log (hasHolidayHours + " ----------- " + publishStartDate + " ----------- " + publishEndDate);
+						if (hasHolidayHours === false) {
+							if ((currentDate >= publishStartDate && currentDate <= publishEndDate) || (isNaN(publishEndDate.getTime()) && isNaN(publishEndDate.getTime()))) {
+								$notification.append('<div class="message">' +
+									'<h4>' + status + ": " + service + '</h4>' +
+									'<p><a href="' + notificationURL + '">' + dateInformation + '</a></p>' +
+									'</div>'
+								);
+								noRightNotifications++;
+							}
+
+						} else {
+							if ((currentDate >= publishStartDate && currentDate <= publishEndDate) || (isNaN(publishEndDate.getTime()) && isNaN(publishEndDate.getTime()))) {
+								h++;
+								holidays[0] = h;
+								holidays[1] = notificationURL;
+							}
+						}
+
+
+						if (status == "Closed" && service == fullFacilityClosureName && currentDate >= publishStartDate && currentDate <= publishEndDate) {
+							var tArr = [dateInformation, reason, publishStartDate, publishEndDate, additionalInformation];
+							arrBanner.push(tArr);
+						}
+
+						//optional
+						if (status == "Closed" && service == "All (Aquatic Wide)" && currentDate >= publishStartDate && currentDate <= publishEndDate) {
+							var tArr = [dateInformation, reason, publishStartDate, publishEndDate, additionalInformation];
+							arrAquatics.push(tArr);
+						}
+
+						c++;
+					});
+
+
+					//right notifications
+					if (noRightNotifications == 0) {
+						$notification.append('<div class="message"><p>No Notifications at this time</p></div>');
+					}
+					//holiday hours link
+					if (holidays[0] > 0) {
+						$notification.append('<div class="message holidays" style=\"background: url(/interface/icon_hours_20x20.png) no-repeat left;background-position:0 0;background-size:20px 20px;\"><a href="' + holidays[1] + '">View Holiday Hours</a></div>');
+					}
+
+                    
+                        //optional
+					    if (arrAquatics.length > 0) {
+					        closureMessageHtml = "";
+						    jQuery.each(arrAquatics, function(index, item) {
+							    //alert(item[0]);
+							    if (item[4].length > 1) {
+							        closureMessageHtml = '<p><b>Dates</b>: ' + item[0].replace('Closed:', '') + '<br/>' + '<b>Reason</b>: ' + item[1] + '<br/>' + '<b>Additional Information</b>: <br/>' + item[4] + '</p>';
+							    } else {
+							        closureMessageHtml = '<p>Dates: ' + item[0].replace('Closed:', '') + '<br/>' + 'Reason: ' + item[1] + '</p>';
+							    }
+						    });
+
+						    $('<div id="aquatics-closure"><table style="border: medium none;" cellspacing="0" cellpadding="1" width="100%" border="1"><tbody><tr><td style="border: medium none; width: 48px; background-color: #FC931B;" align="center"><img alt="" src="//www.edmonton.ca/assets/Images/exclamation_bubble_48x48.png" /></td><td style="border: medium none; background-color: #eeeeee;"><blockquote><p><span style="font-size: 14px;"><strong>STATUS: Aquatic Wide Closure</strong></span></p><div id="aquatics-message">' + closureMessageHtml + '</div><h5><a href="http://www.edmonton.ca/customeraccommodation/">Customer Accommodations For Facility Closures</a></h5></blockquote></td></tr></tbody></table></div>').insertAfter(jQuery('#contentArea h1:first'));
+					    }
+
+					    //alert banner
+					    if (arrBanner.length > 0) {
+					        closureMessageHtml = "";
+
+						    jQuery.each(arrBanner, function(index, item) {
+
+							    if (item[4].length > 1) {
+							        closureMessageHtml = '<p><b>Dates</b>: ' + item[0].replace('Closed:', '') + '<br/>' + '<b>Reason</b>: ' + item[1] + '<br/>' + '<b>Additional Information</b>: <br/>' + item[4] + '</p>';
+							    } else {
+							        closureMessageHtml = '<p>Dates: ' + item[0].replace('Closed:', '') + '<br/>' + 'Reason: ' + item[1] + '</p>';
+							    }
+						    });
+
+						    $('<div id="facility-closure"><table style="border: medium none;" cellspacing="0" cellpadding="1" width="100%" border="1"><tbody><tr><td style="border: medium none; width: 48px; background-color: #cc3333;" align="center"><img alt="" src="//www.edmonton.ca/assets/Images/exclamation_bubble_48x48.png" /></td><td style="border: medium none; background-color: #eeeeee;"><blockquote><p><span style="font-size: 14px;"><strong>STATUS: CLOSED</strong></span></p><div id="closure-message">' + closureMessageHtml + '</div><h5><a href="http://www.edmonton.ca/customeraccommodation/">Customer Accommodations For Facility Closures</a></h5></blockquote></td></tr></tbody></table></div>').insertAfter(jQuery('#contentArea h1:first'));
+
+					    }
+                        
+				} else {
+					$notification.append('<div class="message"><p>No Notifications at this time</p></div>');
+				}
+
+			},
+			complete: function(xml) {
+				$('.additionalNotes').collapser({
+					mode: 'words',
+					speed: 'fast',
+					truncate: 15,
+					showText: '<i>read more<i>',
+					hideText: '<i>read less<i>'
+				});
+			},
+			error: function(xhr, textStatus, errorMessage) {
+			    $('.notifications').css("display", "block").html("<a class=\"link\" target=\"_blank\" href=\"http://coewebapps.edmonton.ca/facilitynotifications/default.aspx?args=\">View current notifications</a>");
+				console.log(errorMessage);
+			}
+		});
+
+
+	});
+
+	function convertISO8601toDate(dtstr) {
+		// replace anything but numbers by spaces
+		dtstr = dtstr.replace(/\D/g, " ");
+		// trim any hanging white space
+		dtstr = dtstr.replace(/\s+$/, "");
+
+		// split on space
+		var dtcomps = dtstr.split(" ");
+
+		// not all ISO 8601 dates can convert, as is
+		// unless month and date specified, invalid
+		if (dtcomps.length < 3) return "invalid date";
+		// if time not provided, set to zero
+		if (dtcomps.length < 4) {
+			dtcomps[3] = 0;
+			dtcomps[4] = 0;
+			dtcomps[5] = 0;
+		}
+
+		// modify month between 1 based ISO 8601 and zero based Date
+		dtcomps[1]--;
+
+		var convdt = new
+		Date(Date.UTC(dtcomps[0], dtcomps[1], dtcomps[2], dtcomps[3], dtcomps[4], dtcomps[5]));
+
+		return convdt;
+	}
+
+	function convertDate(d, t) {
+		var p = new Date(d);
+		var offset = new Date().getTimezoneOffset();
+		p.setMinutes(p.getMinutes() + offset);
+		if (t == "start") {
+			p.setHours(0, 0, 0);
+		} else {
+			p.setHours(23, 59, 59);
+		}
+		return p;
+	}
+</script>
+<style>
+	#ticketStatusMessage.error {
+		color: #D8000C;
+		background-color: #FFBABA;
+		border: 1px solid #D8000C;
+		padding: 15px;
+	}
+
+	.message.holidays {
+		margin-top: 25px;
+		height: 20px;
+		padding-left: 25px;
+		padding-top: 2px;
+	}
+</style>
+
+
+
+<script type="text/javascript" src="/javascript/jquery-selectbox.js"></script>
+
+        <link rel="stylesheet" href="/css/notifications-selectbox.css" type="text/css" />
+        <link rel="stylesheet" href="/css/notifications-banner.css" type="text/css" />
+    
+
+<div class="notification-banner">
+	
+	<h1>
+		Notifications
+	</h1>
+	
+	<div class="notifications"></div>
+</div><div class="banner">
+    <h1>Hours</h1>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+<table width="100%" style="border-left-color: currentcolor; border-left-width: medium; border-left-style: none;">
+    <tbody>
+        <tr>
+            <td style="border: currentcolor; background-color: rgb(243, 243, 243);">Mon - Tue</td>
+            <td style="border: currentcolor; background-color: rgb(243, 243, 243);">8:30am-4:30pm</td>
+        </tr>
+        <tr>
+            <td style="border: currentcolor;">Wed</td>
+            <td style="border: currentcolor;">8:30am-8pm</td>
+        </tr>
+        <tr>
+            <td style="border: currentcolor; background-color: rgb(243, 243, 243);">Thu - Fri</td>
+            <td style="border: currentcolor; background-color: rgb(243, 243, 243);">8:30am-4:30pm</td>
+        </tr>
+        <tr>
+            <td style="border: currentcolor;">Weekends &amp; Holidays</td>
+            <td style="border: currentcolor;">Closed</td>
+        </tr>
+    </tbody>
+</table>
+<h6>Note: There are certain periods of <a href="/city_government/edmonton_archives/cea-hours-access.aspx">limited service</a>.</h6>
+</div>
+    
+</div>
+<div class="column">
+    
+
+    <h2>Location</h2>
+    <div class="google-image">
+        <a href="https://maps.google.com?q=10440+108+Avenue,+Edmonton,+Alberta" target="_blank">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyD9q40OocbulddLBRpc4GxvtRI287Dno2M&center=53.5540882+-113.50012149999998&zoom=15&size=430x200&maptype=roadmap&markers=color:red%7C53.5540882,-113.50012149999998" style="max-width: 100%;">
+        </a>
+        <address>
+            10440 108 Avenue<br>
+            Edmonton, Alberta
+        </address>
+    </div>
 </div>
 
       <div class="banner">
@@ -862,6 +830,22 @@ The Metro Line has <a href="/city_government/edmonton_archives/cea-hours-access
 
 
 
+    
+        <!-- /city_government/edmonton_archives/63839.htm -->
+        <div class="banner">
+            
+            <h1>Program Guide </h1>
+            
+            
+                            <a href="/city_government/documents/PDF/SchoolProgramGuide2016.pdf"> <img src="/city_government/documents/Images/SchoolProgramsImg2.jpg" alt="" /></a>
+                        
+            <h3>
+                
+                                <a href="/city_government/documents/PDF/SchoolProgramGuide2016.pdf">Attractions School Program Guide 2016-2017</a>
+                            
+            </h3>
+            <p>Hands-on interactive programs for schools at City Attractions and cultural sites.</p>
+        </div>
     
     </div>
     <!-- close rightContainer -->

@@ -21,7 +21,7 @@
     <div id="menu_box">
 	<div id="menu">
 		<ul>
-		<li class="active"><li><a href="?file=kop1.php" class="active">Home</a></li><li><a href="?file=kop3.php">About Us</a></li><li><a href="?file=kop4.php">Online Catalogue</a></li><li><a href="?file=kop5.php">Interlibrary Loans</a></li><li><a href="?file=kop6.php">Events</a></li><li><a href="?file=kop7.php">Volunteers</a></li><li><a href="?file=kop8.php">Resources</a></li><li><a href="?file=kop11.php">Friends of the Library</a></li><li><a href="?file=kop13.php">Contact Us</a></li>		</ul>
+		<li class="active"><li><a href="?file=kop1.php" class="active">Home</a></li><li><a href="?file=kop3.php">About Us</a></li><li><a href="?file=kop4.php">Online Catalogue</a></li><li><a href="?file=kop5.php">Interlibrary Loans</a></li><li><a href="?file=kop6.php">Children's Programs</a></li><li><a href="?file=kop7.php">Volunteers</a></li><li><a href="?file=kop8.php">Resources</a></li><li><a href="?file=kop11.php">Friends of the Library</a></li><li><a href="?file=kop13.php">Contact Us</a></li><li><a href="?file=kop14.php">New Arrivals</a></li>		</ul>
 	</div>
     </div>
 </div>
@@ -62,13 +62,18 @@
 </tr>
 <tr>
 <td>Saturday</td>
-<td>10:00 am to 3:00 pm</td>
+<td>10:00 am to 3:00 pm<br /></td>
 </tr>
 </tbody>
 </table>
-<p><br /><strong><span style="text-decoration: underline;">HOLIDAY HOURS</span></strong></p>
-<p>Good Friday - March 25 - <strong>CLOSED</strong><br />Saturday - March 26 - <strong>OPEN</strong> - 10:00 a.m. - 3:00 p.m.<strong> </strong><br />Sunday - March 27 - <strong>CLOSED</strong><br />Monday - March 28 -<strong> CLOSED </strong></p>
-<p> </p>	
+<h1></h1>
+<h4>
+<div style="text-align: center;"><span style="font-family: mceinline; font-size: small;"><span style="font-family: mceinline;">Labour Day Holiday Hours<br /><br />Saturday, September 3 - OPEN - 10:00 am to 3:00 pm<br /><br />Sunday, September 4 - CLOSED<br /><br />Monday, September 5 - CLOSED<br /><br /><br /><br />Please check out our "New Arrivals" page.  Each week the latest Adult Fiction and Non-Fiction will appear here.  The lists will be updated each week as new selections are processed.  To confirm whether a book is available or if you wish to reserve an item please use our online catalogue or contact the library at 613-584-4244.</span></span></div>
+<span style="font-size: medium;"><span style="font-size: small;"><br />
+<div style="text-align: center;"></div>
+</span></span></h4>
+<h4 style="font-size: 10px;"></h4>
+<p style="text-align: center;"><img style="font-family: mceinline; font-size: small; font-weight: bold; text-align: center;" src="images/Stackofbooksblackandwhite.png" alt="" /></p>	
                 
 		</div>
 	</div>

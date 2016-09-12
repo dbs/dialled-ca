@@ -27,100 +27,7 @@
     <title>St. John's Rehab - Sunnybrook Hospital</title>
     <base href="http://sunnybrook.ca/" />	
     <link type="text/css" rel="stylesheet" href="css/i4.css" media="all" />
-    <link type="text/css" rel="stylesheet" href="css/site.css" media="all" />
-
-    <style>
-	/* NEWS & MEDIA */
-.story  { overflow:auto; margin:0 0 12px 0; padding:4px 10px 4px 20px; background-color: #edf0f7; }
-.story a img, .story img {float:left; margin:0 .5em 1em 0;}
-.story.alt { background-color: #fff; }
-.story a.h4, .story a.h3, .story a.h2, .story a.news-title  { margin-bottom:0.5em; display: block; font-weight: bold; font-weight: 600; color: #2c55a6; }
-.story a:hover.news-title, .story a:focus.news-title { color: #4b7c1e; }
-#news_file { 
--webkit-transition: opacity 100ms ease-in;
--moz-transition: opacity 100ms ease-in;
--ms-transition: opacity 100ms ease-in;
--o-transition: opacity 100ms ease-in;
-transition: opacity 100ms ease-in;
-}
-
-#news_file .YouTubeVideoWrapper { margin-bottom: 0; }
-#news_file img { max-width: 100%; max-height: 460px; }
-
-.news_nav { padding: 8px 0; }
-.news_nav span { color: #999; }
-#news_body { padding: 0 0 8px 0; font-size: 0.9em; color: #676767; }
-#news_body p { margin-bottom: 4px;	}
-.news_author_date {  font-size: 0.9em; color: #676767; }
-.news_author_date .fa { margin-right: 0.25em; color: #aaa; }
-
-#news_other { width:250px; float:left; clear: left; margin-top: 1em; }
-.new #news_other { width: 17.5%; margin-right: 5%; float: left; margin-top: 4em; }
-
-#related_news h2 { font-size: 1.1em; padding-bottom:8px; color: #333; }
-#related_news p { border-bottom: 1px solid #ddd; padding-bottom: 0.66em; margin-bottom: 0.66em; padding-top: 0; margin-top: 0; font-size: 0.9em; }
-#related_news p:last-child { border-bottom: none; }
-#related_news.indexBox .innerPush { border-top: 3px solid #ddd; border-left: none; border-right: none; border-bottom: none; margin-bottom: 2em; padding-top: 0.66em; }
-#related_news .fa { margin-right: 0.5em; color: #aaa; }
-#news_container { width:100%; float: none; }
-#news_container.new { width:100%; float: left; }
-#news_container h1 { margin-bottom: 0.5em; }
-
-.new #news_left { width: 85%; clear: both; }
-.new.lowIE #news_left { width: 100%; }
-#news_left #news_flash { text-align:center; }
-#news_left ul { margin:0; padding:0; border-top:solid 1px #b3bce7; }
-#news_left ul li { list-style:none; margin:0; padding:0; background-color:#e3e5ef; border-bottom:solid 1px #b3bce7; height:24px; overflow:hidden; }
-#news_left ul li a { display:block; height:16px; margin:4px; text-decoration:none; color: #414ca0; }
-#news_left ul li a img { border:none; vertical-align:middle; }
-#news_right { float: right; width: 698px; background: #fff; }
-.new #news_right { width:62.5%; float: right; margin-left: 0; margin-right: 15%; margin-top: 2em; }
-.new.lowIE #news_right { width: 77.5%; margin-right: 0; }
-
-#news_right.noNewsLeft { float: left; width: 100%; background: #fff; }
-#news_right #backBtnRight { float: right; width: 135px; margin: 0; padding: 0; }
-#news_images { float: left; width: 100%; }
-#news_images a { position: relative; display: inline-block; }
-#news_images a .fa { position: absolute; top: 20px; left: 32px; font-size: 24px; color: #ccc; opacity: 0.75; pointer-events: none; }
-#news_images .news_thumb { display: block; float: left; margin:0 8px 6px 0 !important; border: none; border: 3px solid #ccc; width: 80px !important; height: 60px !important; }
-
-#news_images .news_thumb.selected { border: 3px solid #7bb843; }
-#news_image { padding: 5px 0; margin: 0; }
-/* Addthis News */
-#news_addthis { display: none; }
-.new #news_addthis { position: relative; display: block; width:10%; float: right; margin-top: 0.5em;  }
-#news_addthis .addthis_native_counter_sibling, #news_addthis .at-share-tbx-element .at-share-btn { float: left; clear: left; margin-bottom: 1.5em; max-width: 100% !important; width: 85%; background-color: transparent;border-bottom: 1px solid rgba(0,0,0,0.1); margin-left: 15%; clear: both; }
-#news_addthis .addthis_button_twitter, #news_addthis .addthis_button_facebook, #news_addthis .addthis_button_pinterest_share, #news_addthis .addthis_button_email { border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 1.5em !important; padding-top: 1em !important; clear: both; height: 32px; display: block; padding-left: 0 !important; margin-left: 20px; }
-#news_addthis .addthis_button_email { border-bottom: none; }
-#news_addthis .at-svc-facebook .at4-icon { background-color: #305891; }
-#news_addthis .at-svc-twitter .at4-icon { background-color: #2ca8d2; }
-#news_addthis .at-svc-pinterest_share .at4-icon { background-color: #c82828; }
-#news_addthis .at-svc-email .at4-icon { background-color: #738a8d; }
-#news_addthis .at-svc-compact .at4-icon { background-color: #f8694d; }
-#news_addthis .at_flat_counter { float: left; }
-#news_addthis .addthis_sharing_toolbox { float: right; width: 100%; border-top: 10px solid #333; padding-top: 12px; margin-top: 5px;  }
-#news_addthis span.sh, #news_addthis span.sh { color: #ccc; font-weight: bold; font-size: 24px; padding-bottom: 0.5em; display: block; letter-spacing: -0.05em; }
-#news_addthis .addthis_toolbox { position: absolute; width: 72px; }
-#news_right #social-sharing-news { height:40px; vertical-align: top; margin-top:8px; width: 320px; overflow: hidden; margin: 0 auto; }
-#news_right #social-sharing-news #share-googleplus { float: left; width:100px; margin:0px 0px 0px 0; margin-top:-10px; }
-#news_right #social-sharing-news #share-facebook { float: left; width:105px; margin-top:-10px; }
-#news_right #social-sharing-news #share-twitter { float: left; width:100px;margin-top:-10px; }
-@media(max-width:705px) {
-#news_addthis .addthis_toolbox { position: relative !important; }
-#news_addthis .addthis_toolbox .addthis_border { border: none; }
-#news_addthis .sh { float: left; margin-right: 1em;  }
-#news_addthis .addthis_native_counter_sibling, #news_addthis .addthis_button_email, #news_addthis .addthis_button_facebook, #news_addthis .addthis_button_pinterest_share, #news_addthis .at-share-tbx-element .at-share-btn  { float: none; clear: none; }
-#news_addthis .addthis_button_twitter, #news_addthis .addthis_button_facebook, #news_addthis .addthis_button_pinterest_share { width: auto !important; clear: none; display: inline; float: left; padding-top: 0 !important; padding-right: 1em !important; border-bottom: none; margin-left: 0; }
-#news_addthis .addthis_button_email { padding-top: 0 !important; }
-#news_addthis { width: 100%; }
-#news_addthis .at_flat_counter { float: none; }
-#news_addthis .addthis_sharing_toolbox span.sh, .addthis_toolbox span.sh { display: none; }
-}
-/* End Addthis News */
-
-
-	</style>    
-    
+    <link type="text/css" rel="stylesheet" href="css/site.cSs" media="all" />
     <link type="text/css" rel="stylesheet" href="css/responsive.css" media="all" />
     <link type="text/css" rel="stylesheet" href="css/other.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/prototip.css" />
@@ -200,7 +107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="logo"><a href="/"><img alt="Sunnybrook Health Sciences Centre homepage" src="images/logo-sb-hsc.png" /></a></div>
 <div id="menu-group">
 <ul id="utility_links"> 
-    <li class="last"><a href="https://donate.sunnybrook.ca/"><strong>DONATE NOW</strong></a></li>
+    <li class="last"><a href="https://donate.sunnybrook.ca/"><strong>DONATE NOW</strong></a></li> 
     <li><a href="/calendar/">Events</a></li>
     <li><a href="/media/">News</a></li>
     <li><a href="/contact/">Contact Us</a></li>
@@ -239,9 +146,9 @@ google.setOnLoadCallback(function() {
 	<div class="clear"></div>	
     <div class="menu">
 <ul id="menunav">
-<li class='home'><a href='/'><img src='/images/home-btn.png' alt='Return to Hospital homepage' height='19' width='20' /></a></li><li><a href='content/?page=welcome'>Welcome<span class='arr'>&#9660;</span></a><ul style='min-height:19em;'><li class='h1'><a href='content/?page=7'>Welcome</a></li><li class=''><a href="content/?page=about-us-home">About Sunnybrook</a></li><li class=''><a href="content/?page=sb-calendar-of-events-home">Calendar of Events</a></li><li class=''><a href="content/?page=contact-us">Contact, Maps &amp; Directions</a></li><li class=''><a href="content/?page=north-east-toronto-health-link-redirect">North East Toronto Health Link</a></li><li class=''><a href="content/?page=news-and-media">News Media &amp; Publications</a></li><li class=''><a href="content/?page=welcome-news-specnotices">Special Notices</a></li><li class=''><a href="content/?page=wel-ssm">Safety, Strategy, &amp; Management</a></li><li class='cBlock'><a href="enewsletter/signup"><img alt="Man and woman riding bikes" height="192" src="uploads/1/welcome/enewsletter.jpg" style="padding-bottom: 4px;" width="280" /><br />Sign-up for Your Health Matters e-newsletter &gt;</a></li><div class='clearance'></div></ul></li>
+<li class='home'><a href='/'><img src='/images/home-btn.png' alt='Return to Hospital homepage' height='19' width='20' /></a></li><li><a href='content/?page=welcome'>Welcome<span class='arr'>&#9660;</span></a><ul style='min-height:19em;'><li class='h1'><a href='content/?page=7'>Welcome</a></li><li class=''><a href="content/?page=about-us-home">About Sunnybrook</a></li><li class=''><a href="content/?page=sb-calendar-of-events-home">Calendar of Events</a></li><li class=''><a href="content/?page=contact-us">Contact, Maps &amp; Directions</a></li><li class=''><a href="content/?page=north-east-toronto-health-link-redirect">North East Toronto Health Link</a></li><li class=''><a href="content/?page=news-and-media">News Media &amp; Publications</a></li><li class=''><a href="content/?page=wel-ssm">Safety, Strategy, &amp; Management</a></li><li class='cBlock'><a href="enewsletter/signup"><img alt="Man and woman riding bikes" height="192" src="uploads/1/welcome/enewsletter.jpg" style="padding-bottom: 4px;" width="280" /><br />Sign-up for Your Health Matters e-newsletter &gt;</a></li><div class='clearance'></div></ul></li>
 <li><a href='content/?page=care-patients-visitors'>Patients &amp; Visitors<span class='arr'>&#9660;</span></a><ul style='min-height:19em;'><li class='h1'><a href='content/?page=50'>Patients & Visitors</a></li><li class=''><a href="content/?page=care-stay">About your hospital stay</a></li><li class=''><a href="content/?page=patients-clinics">Clinics at Sunnybrook</a></li><li class=''><a href="content/?page=care-emerg">Get emergency care</a></li><li class=''><a href="content/?page=directions-map-transit-ttc-parking">Getting here</a></li><li class=''><a href="content/?page=hospital-resources">Hospital resources</a></li><li class=''><a href="content/?page=patient-engagement-consultation">Patient engagement</a></li><li class=''><a href="content/?page=education-patients-visitors">Patient &amp; family education</a></li><li class=''><a href="content/?page=care-stay-priv">Privacy &amp; confidentiality</a></li><li class=''><a href="content/?page=patient-amenserv">Shops &amp; services</a></li><li class='col2' style='margin-top:-16.1em'><a href="content/?page=care-visit">Visiting hours &amp; information</a></li><li class='col2' ><a href="content/?page=pat-ope">Office of the Patient Experience (Patient Relations)</a></li><li class='col2' ><a href="content/?page=parking-fees-cost">Parking at Sunnybrook</a></li><li class='cBlock'><a href="http://health.sunnybrook.ca/"><img alt="Tips for living a long and healthy life" height="192" src="uploads/1/patients/healthtips2.jpg" style="padding-bottom: 4px;" width="280" /><br />Get health tips from Sunnybrook experts &gt;</a></li><div class='clearance'></div></ul></li>
-<li><a href='content/?page=care-programs'>Care Programs<span class='arr'>&#9660;</span></a><ul style='min-height:19em;'><li class='h1'><a href='content/?page=51'>Care Programs</a></li><li class=''><a href="content/?page=holland-musculoskeletal-program-toronto">Holland Musculoskeletal Program</a></li><li class=''><a href="content/?page=bsp">Hurvitz Brain Sciences Program</a></li><li class=''><a href="content/?page=odette-cancer-centre">Odette Cancer Centre </a></li><li class=''><a href="content/?page=schulich">Schulich Heart Centre</a></li><li class=''><a href="content/?page=st-johns-rehab">St. John's Rehab</a></li><li class=''><a href="content/?page=tecc">Trauma, Emergency &amp; Critical Care</a></li><li class=''><a href="content/?page=vcc-redirect">Veterans &amp; Community</a></li><li class=''><a href="content/?page=women-babies-obstetrics-gynaecology-toronto">Women &amp; Babies</a></li><li class='cBlock'><a href="content/?page=odette-cancer-centre"><img alt="Cancer surgeon" height="192" src="uploads/1/programs/menu-images/cancer-2.jpg" style="padding-bottom: 4px;" width="280" /></a><a href="content/?page=schulich-heart-centre"><br /></a><a href="content/?page=odette-cancer-centre">Odette Cancer Centre: Learn More &gt;</a></li><div class='clearance'></div></ul></li>
+<li><a href='content/?page=care-programs'>Care Programs<span class='arr'>&#9660;</span></a><ul style='min-height:19em;'><li class='h1'><a href='content/?page=51'>Care Programs</a></li><li class=''><a href="content/?page=holland-musculoskeletal-program-toronto">Holland Musculoskeletal Program</a></li><li class=''><a href="content/?page=bsp">Hurvitz Brain Sciences Program</a></li><li class=''><a href="content/?page=odette-cancer-centre">Odette Cancer Centre </a></li><li class=''><a href="content/?page=schulich">Schulich Heart Centre</a></li><li class=''><a href="content/?page=st-johns-rehab">St. John's Rehab</a></li><li class=''><a href="content/?page=tecc">Trauma, Emergency &amp; Critical Care</a></li><li class=''><a href="content/?page=vcc-redirect">Veterans &amp; Community</a></li><li class=''><a href="content/?page=women-babies-obstetrics-gynaecology-toronto">Women &amp; Babies</a></li><li class='cBlock'><a href="content/?page=odette-cancer-centre"><img alt="Hurvitz Brain Sciences Program" height="192" src="uploads/1/programs/menu-images/cancer-2.jpg" style="padding-bottom: 4px;" width="280" /></a><a href="content/?page=schulich-heart-centre"><br /></a><a href="content/?page=odette-cancer-centre">Odette Cancer Centre: Learn More &gt;</a></li><div class='clearance'></div></ul></li>
 <li><a href='content/?page=departments'>Departments<span class='arr'>&#9660;</span></a><ul style='min-height:19em;'><li class='h1'><a href='content/?page=52'>Departments</a></li><li class=''><a href="content/?page=dept-anaes">Anesthesia</a></li><li class=''><a href="content/?page=dept-cn">Clinical Nutrition</a></li><li class=''><a href="content/?page=news-media-home">Communications and stakeholder relations (CSR)</a></li><li class=''><a href="content/?page=dept-ccm">Critical Care Medicine</a></li><li class=''><a href="content/?page=dept-dent">Dentistry</a></li><li class=''><a href="content/?page=dept-ethics">Ethics Centre</a></li><li class=''><a href="content/?page=family-practice-unit-physicians-health-team">Family &amp; Community Medicine</a></li><li class=''><a href="content/?page=ipc-program-home">Infection Prevention &amp; Control</a></li><li class=''><a href="content/?page=dept-labs">Laboratory Medicine</a></li><li class='col2' style='margin-top:-16.1em'><a href="content/?page=dept-medimg">Medical Imaging</a></li><li class='col2' ><a href="content/?page=dept-med">Medicine</a></li><li class='col2' ><a href="content/?page=dept-nurse">Nursing</a></li><li class='col2' ><a href="content/?page=dept-opth">Ophthalmology &amp; Vision Sciences</a></li><li class='col2' ><a href="content/?page=otolaryngology-head-neck-surgery">Otolaryngology - Head &amp; Neck Surgery</a></li><li class='col2' ><a href="content/?page=palliative-care-consult-team">Palliative care consult team</a></li><li class='col2' ><a href="content/?page=dept-surg-plastics">Plastic Surgery</a></li><li class='col2' ><a href="content/?page=psychiatry">Psychiatry</a></li><li class='col2' ><a href="content/?page=dept-radonc">Radiation Oncology</a></li><li class='col3 heightfix' style='margin-top:-16.1em'><a href="content/?page=dept-sgs">Specialized Geriatric Services</a></li><div class='clearance'></div></ul></li>
 <li><a href='content/?page=careers-choose-sunnybrook'>Careers<span class='arr'>&#9660;</span></a><ul style='min-height:19em;'><li class='h1'><a href='content/?page=14'>Careers</a></li><li class=''><a href="content/?page=careers-choose-sunnybrook">Why Choose Sunnybrook?</a></li><li class=''><a href="content/?page=employment-opportunities">Employment Opportunities</a></li><li class=''><a href="content/?page=qualityworklife">Quality of Work Life</a></li><li class=''><a href="content/?page=nursing-at-sunnybrook">Nursing @ Sunnybrook</a></li><li class=''><a href="content/?page=workingintoronto">Living &amp; Working in Toronto</a></li><li class=''><a href="content/?page=careers-joinsunnybrook">Employee Stories</a></li><li class='cBlock'><a href="content/?page=careers-joinsunnybrook"><img alt="Hospital staff" height="192" src="uploads/1/careers/content/careers-closer.jpg" style="padding-bottom: 4px;" width="280" /><br /></a><a href="content/?page=careers-joinsunnybrook">Watch employee stories &gt;</a></li><div class='clearance'></div></ul></li>
 <li><a href='content/?page=volunteer-program'>Volunteers<span class='arr'>&#9660;</span></a><ul style='min-height:19em;'><li class='h1'><a href='content/?page=29446'>Volunteers</a></li><li class=''><a href="content/?page=volunteer-application">Becoming a volunteer</a></li><li class=''><a href="content/?page=returning-volunteers">Returning volunteers</a></li><li class=''><a href="content/?page=volunteer-opportunities-roles-positions">Where can I volunteer?</a></li><li class=''><a href="content/?page=volunteer-next-steps">Frequently asked questions</a></li><li class=''><a href="content/?page=current-volunteers">Current volunteers</a></li><li class=''><a href="content/?page=volunteer-associations">Volunteer Associations</a></li><li class=''><a href="content/?page=national-volunteer-week">National Volunteer Week 2016</a></li><li class='cBlock'><a href="content/?page=volunteer-regular-adult-program#recruit"><img alt="Volunteer opportunities at Sunnybrook" height="192" src="uploads/volunteers-nav.jpg" style="padding-bottom: 4px;" width="280" /><br />Currently recruiting volunteers: apply now ></a></li><div class='clearance'></div></ul></li>
@@ -271,42 +178,133 @@ google.setOnLoadCallback(function() {
             </div>
 		
         <div id="banner-outer-wrap">
-        <div id="banner-ad" class="cycle-slideshow" data-cycle-log="false" data-cycle-timeout="6000" data-cycle-fx="fade" data-cycle-slides="> img" data-cycle-overlay-template="<a href='{{href}}'><span class='title'>{{title}}</span><span class='desc'><span>{{desc}}</span></span></a><div class='clear'></div>">
+        <div id="banner-ad" class="cycle-slideshow" data-cycle-log="false" data-cycle-timeout="6000" data-cycle-fx="fade" data-cycle-slides="> img">
 
         <div class="cycle-overlay"></div>
 
 		
         <a id="b-prev" href="javascript:void(0);" class="cycle-prev"><span class="hidden" >Previous slide</span></a><a id="b-pause" href="javascript:void(0);" title="Pause slideshow">Pause</a><a id="b-play" href="javascript:void(0);" title="Play slideshow" class="cycle-resume">Play</a><a id="b-next" href="javascript:void(0);" class="cycle-next"><span class="hidden">Next slide</span></a>        
         
-			<img src="/uploads/b_sjr1.jpg" alt="" data-cycle-title="St. John's Rehab" data-cycle-desc="Rebuilding lives at our facility that is solely dedicated to specialized rehabilitation" data-href="javascript:void(0)" style="display: none;" />
+			<img src="/uploads/b_sjr1.jpg" alt=""  style="display: none;" data-overlay="#overlay1" />
+            <div id="overlay1" class="overlay-content" style="display: none;">
+            
+                <span class='title'>St. John's Rehab</span>
+                <span class='desc'><span>Rebuilding lives at our facility that is solely dedicated to specialized rehabilitation</span></span>
+                <div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_75_anni_2.jpg" alt="Rehabilitation 75 years ago" data-cycle-title="A history of possibilities" data-cycle-desc="For 75 years, we've been responding to the needs of our patients - mind, body & spirit " data-href="http://sunnybrook.ca/content/?page=sjr-corp-75" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=sjr-corp-75';" style="display: none;" />
+			<img src="/uploads/b_75_anni_2.jpg" alt="Rehabilitation 75 years ago"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=sjr-corp-75';"  style="display: none;" data-overlay="#overlay2" />
+            <div id="overlay2" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=sjr-corp-75' target="">
+                <span class='title'>A history of possibilities</span>
+                <span class='desc'><span>For 75 years, we've been responding to the needs of our patients - mind, body & spirit </span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_amputee.jpg" alt="Prosthetic leg" data-cycle-title="Amputee rehabilitation" data-cycle-desc="Comprehensive assessments, treatments & education including assistive devices & prosthetics" data-href="http://sunnybrook.ca/content/?page=sjr-patvis-prog-amp" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=sjr-patvis-prog-amp';" style="display: none;" />
+			<img src="/uploads/b_amputee.jpg" alt="Prosthetic leg"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=sjr-patvis-prog-amp';"  style="display: none;" data-overlay="#overlay3" />
+            <div id="overlay3" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=sjr-patvis-prog-amp' target="">
+                <span class='title'>Amputee rehabilitation</span>
+                <span class='desc'><span>Comprehensive assessments, treatments & education including assistive devices & prosthetics</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_burn.jpg" alt="Burn Rehabilitation Survivor" data-cycle-title="Burn rehabilitation" data-cycle-desc="Canada's burn rehab leader, addressing survivor's physical, psychosocial & vocational needs" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_prog_burn" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_burn';" style="display: none;" />
+			<img src="/uploads/b_burn.jpg" alt="Burn Rehabilitation Survivor"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_burn';"  style="display: none;" data-overlay="#overlay4" />
+            <div id="overlay4" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_burn' target="">
+                <span class='title'>Burn rehabilitation</span>
+                <span class='desc'><span>Canada's burn rehab leader, addressing survivor's physical, psychosocial & vocational needs</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_cardiac.jpg" alt="Cardiac rehab" data-cycle-title="Cardiac rehabilitation" data-cycle-desc="An intensive physical & occupational therapy program, providing education for a healthy heart" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_prog_cardiac" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_cardiac';" style="display: none;" />
+			<img src="/uploads/b_cardiac.jpg" alt="Cardiac rehab"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_cardiac';"  style="display: none;" data-overlay="#overlay5" />
+            <div id="overlay5" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_cardiac' target="">
+                <span class='title'>Cardiac rehabilitation</span>
+                <span class='desc'><span>An intensive physical & occupational therapy program, providing education for a healthy heart</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/sjr-pool.jpg" alt="Therapy pool at St. John's Rehab" data-cycle-title="Community rehab & wellness services" data-cycle-desc="Offering rehab services & wellness clinics for patients & members of the community" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_rehab" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_rehab';" style="display: none;" />
+			<img src="/uploads/sjr-pool.jpg" alt="Therapy pool at St. John's Rehab"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_rehab';"  style="display: none;" data-overlay="#overlay6" />
+            <div id="overlay6" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_rehab' target="">
+                <span class='title'>Community rehab & wellness services</span>
+                <span class='desc'><span>Offering rehab services & wellness clinics for patients & members of the community</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_msk.jpg" alt="Musculoskeletal Rehab" data-cycle-title="Musculoskeletal rehabilitation" data-cycle-desc="Interdisciplinary care for recovery from elective surgeries & complex orthopaedic conditions" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_prog_msk" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_msk';" style="display: none;" />
+			<img src="/uploads/b_msk.jpg" alt="Musculoskeletal Rehab"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_msk';"  style="display: none;" data-overlay="#overlay7" />
+            <div id="overlay7" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_msk' target="">
+                <span class='title'>Musculoskeletal rehabilitation</span>
+                <span class='desc'><span>Interdisciplinary care for recovery from elective surgeries & complex orthopaedic conditions</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_oncology.jpg" alt="Women embracing" data-cycle-title="Oncology rehabilitation" data-cycle-desc="Working toward increased strength, mobility & independence after cancer" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_prog_onc" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_onc';" style="display: none;" />
+			<img src="/uploads/b_oncology.jpg" alt="Women embracing"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_onc';"  style="display: none;" data-overlay="#overlay8" />
+            <div id="overlay8" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_onc' target="">
+                <span class='title'>Oncology rehabilitation</span>
+                <span class='desc'><span>Working toward increased strength, mobility & independence after cancer</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_organ.jpg" alt="Woman tying her shoes" data-cycle-title="Organ transplant rehabilitation" data-cycle-desc="Canada's only organ transplant rehab program - getting back to life following the Gift of Life" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_prog_org" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_org';" style="display: none;" />
+			<img src="/uploads/b_organ.jpg" alt="Woman tying her shoes"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_org';"  style="display: none;" data-overlay="#overlay9" />
+            <div id="overlay9" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_org' target="">
+                <span class='title'>Organ transplant rehabilitation</span>
+                <span class='desc'><span>Canada's only organ transplant rehab program - getting back to life following the Gift of Life</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_cardiac2.jpg" alt="Man working with his respiratory therapist" data-cycle-title="Personalized care" data-cycle-desc="Customized inpatient and outpatient rehabilitation care that focusses on the whole person" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_rehab" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_rehab';" style="display: none;" />
+			<img src="/uploads/b_cardiac2.jpg" alt="Man working with his respiratory therapist"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_rehab';"  style="display: none;" data-overlay="#overlay10" />
+            <div id="overlay10" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_rehab' target="">
+                <span class='title'>Personalized care</span>
+                <span class='desc'><span>Customized inpatient and outpatient rehabilitation care that focusses on the whole person</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_wii.jpg" alt="Using games in Rehab" data-cycle-title="Rehab innovations" data-cycle-desc="Using motion-sensored video games & virtual reality in rehab to maximize patient outcomes" data-href="http://sunnybrook.ca/content/?page=sjr-patvis-stories-seb" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=sjr-patvis-stories-seb';" style="display: none;" />
+			<img src="/uploads/b_wii.jpg" alt="Using games in Rehab"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=sjr-patvis-stories-seb';"  style="display: none;" data-overlay="#overlay11" />
+            <div id="overlay11" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=sjr-patvis-stories-seb' target="">
+                <span class='title'>Rehab innovations</span>
+                <span class='desc'><span>Using motion-sensored video games & virtual reality in rehab to maximize patient outcomes</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_stroke2.jpg" alt="Man working with his rehab specialist" data-cycle-title="Short-term active reconditioning" data-cycle-desc="Increasing strength and mobility following lengthy hospital stays" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_prog_star" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_star';" style="display: none;" />
+			<img src="/uploads/b_stroke2.jpg" alt="Man working with his rehab specialist"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_star';"  style="display: none;" data-overlay="#overlay12" />
+            <div id="overlay12" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_star' target="">
+                <span class='title'>Short-term active reconditioning</span>
+                <span class='desc'><span>Increasing strength and mobility following lengthy hospital stays</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_stroke.jpg" alt="Woman looking at herself in the mirror" data-cycle-title="Stroke & neurological rehabilitation" data-cycle-desc="Customized rehab following stroke, neurosurgery, and neuro-degenerative diseases" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_prog_stroke" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_stroke';" style="display: none;" />
+			<img src="/uploads/b_stroke.jpg" alt="Woman looking at herself in the mirror"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_stroke';"  style="display: none;" data-overlay="#overlay13" />
+            <div id="overlay13" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_stroke' target="">
+                <span class='title'>Stroke & neurological rehabilitation</span>
+                <span class='desc'><span>Customized rehab following stroke, neurosurgery, and neuro-degenerative diseases</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
-			<img src="/uploads/b_trauma.jpg" alt="Woman working with her therapist" data-cycle-title="Trauma & complex rehabilitation" data-cycle-desc="Ontario's largest & most comprehensive specialized program for traumatic injuries" data-href="http://sunnybrook.ca/content/?page=SJR_patvis_prog_trauma" onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_trauma';" style="display: none;" />
+			<img src="/uploads/b_trauma.jpg" alt="Woman working with her therapist"  onclick="javascript:location.href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_trauma';"  style="display: none;" data-overlay="#overlay14" />
+            <div id="overlay14" class="overlay-content" style="display: none;">
+            <a href='http://sunnybrook.ca/content/?page=SJR_patvis_prog_trauma' target="_blank">
+                <span class='title'>Trauma & complex rehabilitation</span>
+                <span class='desc'><span>Ontario's largest & most comprehensive specialized program for traumatic injuries</span></span>
+                </a><div class='clear'></div>  
+            </div>                    
 			
+
         </div></div><div class="clear"></div></div>
+<script>
+$(document).on('cycle-update-view', function( e, opts, slideOpts ) {
+    var overlay = $( slideOpts.overlay );
+    $(this).find('.cycle-overlay').html( overlay.html() );
+});
+</script>
     
    </div>
 	<!-- End New Banner Panel  -->    
@@ -378,13 +376,14 @@ google.setOnLoadCallback(function() {
 We are dedicated to specialized rehabilitation, rebuilding the lives of adults recovering from life-changing illness or injury.<br /><br />Home to Canada's only organ transplant rehabilitation program and Ontario's only burn rehabilitation program, we are recognized as a leader in delivering individually customized inpatient and outpatient rehabilitation services that focus on the whole person &mdash; mind, body and spirit.<br /><br />As an academic organization, we contribute to the advancement of rehabilitation science through research and the professional development of our staff and future rehabilitation care providers.<br /><br />
 <p><a href="content/?page=sjr-corp">&raquo;&nbsp;Learn more about St. John's Rehab</a></p>
 <h2 style="font-size: 1.4em; font-weight: normal;">Rehab blog</h2>
-<iframe class="auto-height" frameborder="0" height="0" scrolling="no" src="http://www.sunnybrook.ca/feedframe.asp?url=http://health.sunnybrook.ca/rehab/feed/&amp;max=2" width="100%"></iframe>
+<iframe class="auto-height" frameborder="0" height="0" scrolling="no" src="feedframe.asp?url=health.sunnybrook.ca/rehab/feed/&amp;max=2" width="100%"></iframe>
 <p style="text-align: center;"><a href="http://health.sunnybrook.ca/rehab/">More on our blog &raquo;</a></p>
 <h2 style="font-size: 1.4em; font-weight: normal;">Latest news</h2>
 <iframe class="auto-height" frameborder="0" height="1" scrolling="no" src="newsframe.asp?NewsID=16&amp;max=1" title="Latest St. John's Rehab news" width="100%"></iframe></div>
 </div><div id="ContentParagaphSection">
 	
 </div>
+<div class="clearance"></div>
 </div></div></div>
 
 <div id="contentRight">
@@ -392,8 +391,7 @@ We are dedicated to specialized rehabilitation, rebuilding the lives of adults r
 <li style="padding-bottom: 3px;"><a href="content/?page=sjr-patvis-health-tips">Self-help tips</a></li>
 <li style="padding-bottom: 3px;"><a href="content/?page=sjr-patvis-health-rc">Visit our resource centre</a></li>
 <li><a href="content/?page=sjr-patvis-health-links">Online resources</a></li>
-</ul></div><div class="otherItem"><h2>Using mirrors to manage pain</h2><p>Watch this video to see<a href="http://health.sunnybrook.ca/video/mirror-therapy-phantom-pain-rehab/"> how using a mirror can relieve phantom pain</a>:</p>
-<p><a href="http://health.sunnybrook.ca/video/mirror-therapy-phantom-pain-rehab/"><img alt="Patient and mirror" src="uploads/mirror-therapy-sjr.jpg" /></a></p></div><div class="otherItem"><h2>Rehab research</h2><p>Our <a href="http://www.sunnybrook.ca/research/content/?page=sri-prog-stjohnsrehab">research program develops and evaluates new treatment methods</a> by combining innovative studies with direct patient care.</p></div></div>
+</ul></div><div class="otherItem"><h2>Rehab research</h2><p>Our <a href="http://www.sunnybrook.ca/research/content/?page=sri-prog-stjohnsrehab">research program develops and evaluates new treatment methods</a> by combining innovative studies with direct patient care.</p></div><div class="otherItem"><h2>Donate </h2><div style="width: 100%; text-align: center;">Support St. John's Rehab by making a donation today.<br /> <a class="btn" href="https://donate.sunnybrook.ca/donatesjr" onclick="_gaq.push(['_trackEvent', 'AON', 'AON_Brain','rightColumn']);" style="margin: 10px 0; font-size: 16px; background: #2c55a6;">Donate now</a></div></div></div>
 </div>
 
 <div class="clearance"></div>

@@ -89,12 +89,14 @@ grunticon(["http://stmikes.utoronto.ca/wp-content/themes/simone-smc/icons.data.s
         </script>
         <noscript><link href="http://stmikes.utoronto.ca/wp-content/themes/simone-smc/icons.fallback.css" rel="stylesheet"></noscript>
 
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="University of St. Michael&#039;s College &raquo; Feed" href="https://stmikes.utoronto.ca/feed/" />
 <link rel="alternate" type="application/rss+xml" title="University of St. Michael&#039;s College &raquo; Comments Feed" href="https://stmikes.utoronto.ca/comments/feed/" />
 <link rel="alternate" type="text/calendar" title="University of St. Michael&#039;s College &raquo; iCal Feed" href="https://stmikes.utoronto.ca/events/?ical=1" />
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/stmikes.utoronto.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.2"}};
-			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/stmikes.utoronto.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
 img.wp-smiley,
@@ -110,12 +112,15 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='sdm-styles-css'  href='http://stmikes.utoronto.ca/wp-content/plugins/simple-download-monitor/css/sdm_wp_styles.css?ver=4.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sharify-css'  href='http://stmikes.utoronto.ca/wp-content/plugins/sharify/sharify-style.php' type='text/css' media='all' />
+<link rel='stylesheet' id='sharify-icon-css'  href='http://stmikes.utoronto.ca/wp-content/plugins/sharify/icon/css/sharify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sharify-font-css'  href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400' type='text/css' media='all' />
+<link rel='stylesheet' id='sdm-styles-css'  href='http://stmikes.utoronto.ca/wp-content/plugins/simple-download-monitor/css/sdm_wp_styles.css?ver=4.6.1' type='text/css' media='all' />
 <link rel='stylesheet' id='toc-screen-css'  href='http://stmikes.utoronto.ca/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=1509' type='text/css' media='all' />
-<link rel='stylesheet' id='simone-style-css'  href='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/style.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='simone-layout-css'  href='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/layouts/sidebar-content.css?ver=4.5.2' type='text/css' media='all' />
-<link rel='stylesheet' id='simone_fontawesome-css'  href='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/fonts/font-awesome/css/font-awesome.min.css?ver=4.5.2' type='text/css' media='all' />
-<!-- This site uses the Google Analytics by MonsterInsights plugin v5.5 - Universal enabled - https://www.monsterinsights.com/ -->
+<link rel='stylesheet' id='simone-style-css'  href='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/style.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='simone-layout-css'  href='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/layouts/sidebar-content.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='simone_fontawesome-css'  href='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/fonts/font-awesome/css/font-awesome.min.css?ver=4.6.1' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v5.5.2 - Universal enabled - https://www.monsterinsights.com/ -->
 <script type="text/javascript">
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -128,19 +133,24 @@ img.emoji {
 
 </script>
 <!-- / Google Analytics by MonsterInsights -->
-<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
-<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.0'></script>
-<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/plugins/setmore-appointments/script/setmoreFancyBox.js?ver=4.5.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tribe_events_linked_posts = {"post_types":{"tribe_venue":"venue","tribe_organizer":"organizer"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/plugins/setmore-appointments/script/setmoreFancyBox.js?ver=4.6.1'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var sdm_ajax_script = {"ajaxurl":"https:\/\/stmikes.utoronto.ca\/wp-admin\/admin-ajax.php"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/plugins/simple-download-monitor/js/sdm_wp_scripts.js?ver=4.5.2'></script>
+<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/plugins/simple-download-monitor/js/sdm_wp_scripts.js?ver=4.6.1'></script>
 <link rel='https://api.w.org/' href='https://stmikes.utoronto.ca/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://stmikes.utoronto.ca/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://stmikes.utoronto.ca/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.5.2" />
+<meta name="generator" content="WordPress 4.6.1" />
 <style type="text/css">div#toc_container ul li {font-size: 85%;}</style>    <style type="text/css">
         .site-branding {
             background: ;
@@ -284,8 +294,8 @@ var sdm_ajax_script = {"ajaxurl":"https:\/\/stmikes.utoronto.ca\/wp-admin\/admin
 
 	</header><!-- #masthead -->
 
-    <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><!-- Breadcrumb NavXT 5.4.0 -->
-<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to University of St. Michael&#039;s College." href="https://stmikes.utoronto.ca" class="home">   <i class="fa fa-home"></i>    </a></span> / <span typeof="v:Breadcrumb"><span property="v:title">404</span></span></div>
+    <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><!-- Breadcrumb NavXT 5.5.1 -->
+<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to University of St. Michael&#039;s College." href="https://stmikes.utoronto.ca" class="home">   <i class="fa fa-home"></i>    </a></span> / <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to News." href="https://stmikes.utoronto.ca/news/" class="post-root post post-post">News</a></span> / <span typeof="v:Breadcrumb"><span property="v:title">404</span></span></div>
 	<div id="content" class="site-content">
 
 
@@ -330,7 +340,7 @@ var sdm_ajax_script = {"ajaxurl":"https:\/\/stmikes.utoronto.ca\/wp-admin\/admin
 <li id="menu-item-3210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3210"><a href="https://stmikes.utoronto.ca/kelly/collections/">Collections</a></li>
 <li id="menu-item-2723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2723"><a href="https://stmikes.utoronto.ca/kelly/students/">Services for Students</a></li>
 <li id="menu-item-3217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3217"><a href="https://stmikes.utoronto.ca/kelly/faculty/">Services for Faculty</a></li>
-<li id="menu-item-3211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3211"><a href="https://stmikes.utoronto.ca/kelly/contacts/">Contact Kelly Library</a></li>
+<li id="menu-item-3211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3211"><a href="https://stmikes.utoronto.ca/kelly/contacts/">Contact the Kelly Library</a></li>
 <li id="menu-item-2725" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2725"><a href="https://onesearch.library.utoronto.ca/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://onesearch.library.utoronto.ca/', 'UofT Libraries');">UofT Libraries</a></li>
 </ul></div></aside><aside id="nav_menu-8" class="widget widget_nav_menu"><h1 class="widget-title">See Also</h1><div class="menu-kelly-side-menu-seealso-container"><ul id="menu-kelly-side-menu-seealso" class="menu"><li id="menu-item-2744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2744"><a href="https://stmikes.utoronto.ca/students/writing/">St. Michael&#8217;s College Writing Centre</a></li>
 <li id="menu-item-2745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2745"><a href="https://stmikes.utoronto.ca/archives/">University Archives</a></li>
@@ -397,7 +407,7 @@ var sdm_ajax_script = {"ajaxurl":"https:\/\/stmikes.utoronto.ca\/wp-admin\/admin
         <li><a href="http://www.utoronto.ca/">U of T Home</a></li>
         <li><a href="https://portal.utoronto.ca/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_12_1">Portal</a></li>
         <li><a href="http://www.rosi.utoronto.ca/">ACORN / ROSI</a></li>
-		<li><a href="https://portal.utoronto.ca/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_12_1">Webmail</a></li>
+		<li><a href="https://webmail.utoronto.ca">Webmail</a></li>
       </ul>
     </div>
 
@@ -449,6 +459,7 @@ var sdm_ajax_script = {"ajaxurl":"https:\/\/stmikes.utoronto.ca\/wp-admin\/admin
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/plugins/sharify/admin/inc/sharifycounts.js?ver=1.4'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var tocplus = {"visibility_show":"show","visibility_hide":"hide","width":"Auto"};
@@ -459,11 +470,12 @@ var tocplus = {"visibility_show":"show","visibility_hide":"hide","width":"Auto"}
 <script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/js/hide-search.js?ver=20120206'></script>
 <script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/js/superfish.min.js?ver=20140328'></script>
 <script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/js/superfish-settings.js?ver=20140328'></script>
-<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
 <script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/js/masonry-settings.js?ver=20140401'></script>
 <script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/js/enquire.min.js?ver=20140429'></script>
 <script type='text/javascript' src='http://stmikes.utoronto.ca/wp-content/themes/simone-smc/js/skip-link-focus-fix.js?ver=20130115'></script>
-<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/wp-embed.min.js?ver=4.5.2'></script>
+<script type='text/javascript' src='http://stmikes.utoronto.ca/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
 
 </body>
 </html>

@@ -8,7 +8,7 @@
     <!-- page title - overridden by asp:content on pages or page layouts -->
     <title>
 	
-	CNIB - CNIB Library
+	CNIB Literacy and Accessible Publishing
 
 </title>
     <!-- favicon -->
@@ -147,7 +147,20 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=Z_2WWy
 	</script>
 	<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1069145526445785&amp;ev=PixelInitialized" /></noscript> 
 
-    
+    <!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '1069145526445785');
+	fbq('track', "PageView");</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1069145526445785&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
      
 	<!-- JaveScript for the survey pop up box
     <script type="text/javascript" src="/Style%20Library/CNIB/scripts/surveypopup.js"></script> -->
@@ -185,7 +198,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=Z_2WWy
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xF225A181F9DEAB0C9BB69819AC6CAFFFA3BC2A33AFCF4BB54E79CBFC287896623F5BD406B0239A4C5C599047A222ACC99E37208CFC1B6613B6B2BBB38675F1ED,09 May 2016 14:05:25 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x4CDC7FF636B2419AB81F00ED53B6EBD2AE27ED5F16ACD418D6C64D0D2AD6E83668BB63A45DC033CE04D77FFD86F0FF2121A070987E4F4D23D7C2D7AE140AAF50,11 Sep 2016 16:22:36 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -196,7 +209,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=Z_2WWy
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBAIBD2QWAgIKD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgMPZBYGAgcPZBYCAgEPZBYEZg9kFgICAQ8WAh4HVmlzaWJsZWgWAmYPZBYEAgIPZBYGAgEPFgIfAWhkAgMPFggeE0NsaWVudE9uQ2xpY2tTY3JpcHQFiQFqYXZhU2NyaXB0OkNvcmVJbnZva2UoJ1Rha2VPZmZsaW5lVG9DbGllbnRSZWFsJywxLCA1MywgJ2h0dHA6XHUwMDJmXHUwMDJmd3d3LmNuaWIuY2FcdTAwMmZlblx1MDAyZnNlcnZpY2VzXHUwMDJmbGlicmFyeScsIC0xLCAtMSwgJycsICcnKR4YQ2xpZW50T25DbGlja05hdmlnYXRlVXJsZB4oQ2xpZW50T25DbGlja1NjcmlwdENvbnRhaW5pbmdQcmVmaXhlZFVybGQeDEhpZGRlblNjcmlwdAUiVGFrZU9mZmxpbmVEaXNhYmxlZCgxLCA1MywgLTEsIC0xKWQCBQ8WAh8BaGQCAw8PFgoeCUFjY2Vzc0tleQUBLx4PQXJyb3dJbWFnZVdpZHRoAgUeEEFycm93SW1hZ2VIZWlnaHQCAx4RQXJyb3dJbWFnZU9mZnNldFhmHhFBcnJvd0ltYWdlT2Zmc2V0WQLrA2RkAgEPZBYEAgUPZBYCAgEPEBYCHwFoZBQrAQBkAgcPZBYCZg9kFgJmDxQrAANkZGRkAgsPDxYCHgtfIURhdGFCb3VuZGdkZAIND2QWAgICD2QWBgIFDw8WAh8LZ2RkAgcPPCsABQEADxYCHg9TaXRlTWFwUHJvdmlkZXIFGkNvbWJpbmVkTmF2U2l0ZU1hcFByb3ZpZGVyZGQCCQ8WAh8ACysEAWRkt9L13jUo75v2FAZOed3iGIj/Jjk=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBAIBD2QWAgIKD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgMPZBYGAgcPZBYCAgEPZBYEZg9kFgICAQ8WAh4HVmlzaWJsZWgWAmYPZBYEAgIPZBYGAgEPFgIfAWhkAgMPFggeE0NsaWVudE9uQ2xpY2tTY3JpcHQFhgFqYXZhU2NyaXB0OkNvcmVJbnZva2UoJ1Rha2VPZmZsaW5lVG9DbGllbnRSZWFsJywxLCA1MywgJ2h0dHA6XHUwMDJmXHUwMDJmd3d3LmNuaWIuY2FcdTAwMmZlblx1MDAyZnNlcnZpY2VzXHUwMDJmQ0xBUCcsIC0xLCAtMSwgJycsICcnKR4YQ2xpZW50T25DbGlja05hdmlnYXRlVXJsZB4oQ2xpZW50T25DbGlja1NjcmlwdENvbnRhaW5pbmdQcmVmaXhlZFVybGQeDEhpZGRlblNjcmlwdAUiVGFrZU9mZmxpbmVEaXNhYmxlZCgxLCA1MywgLTEsIC0xKWQCBQ8WAh8BaGQCAw8PFgoeCUFjY2Vzc0tleQUBLx4PQXJyb3dJbWFnZVdpZHRoAgUeEEFycm93SW1hZ2VIZWlnaHQCAx4RQXJyb3dJbWFnZU9mZnNldFhmHhFBcnJvd0ltYWdlT2Zmc2V0WQLrA2RkAgEPZBYEAgUPZBYCAgEPEBYCHwFoZBQrAQBkAgcPZBYCZg9kFgJmDxQrAANkZGRkAgsPDxYCHgtfIURhdGFCb3VuZGdkZAIND2QWAgICD2QWBgIFDw8WAh8LZ2RkAgcPPCsABQEADxYCHg9TaXRlTWFwUHJvdmlkZXIFGkNvbWJpbmVkTmF2U2l0ZU1hcFByb3ZpZGVyZGQCCQ8WAh8ACysEAWRkw7o8EJ7tdlryh7KWdN8ICLqDOIA=" />
 </div>
 
 <script type="text/javascript">
@@ -233,11 +246,11 @@ var g_wsaEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
 var g_wsaListTemplateId = 850;
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fen\u002fservices\u002flibrary", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{5c176428-3f35-468a-8dcd-4198cbc9e961}",pageItemId:5, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fen\u002fservices\u002fCLAP", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{238c267c-bc05-4677-9c55-6976878b2951}",pageItemId:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};//]]>
 </script>
 <script type="text/javascript">
 <!--
-var L_Menu_BaseUrl="/en/services/library";
+var L_Menu_BaseUrl="/en/services/CLAP";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="";
 //-->
@@ -254,7 +267,7 @@ document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){remo
 <script type="text/javascript">
 //<![CDATA[
 if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
-UpdateFormDigest('\u002fen\u002fservices\u002flibrary', 1440000);if (typeof(vwpcm) != 'undefined') {vwpcm.SetWpcmVal();};return _spFormOnSubmitWrapper();
+UpdateFormDigest('\u002fen\u002fservices\u002fCLAP', 1440000);if (typeof(vwpcm) != 'undefined') {vwpcm.SetWpcmVal();};return _spFormOnSubmitWrapper();
 return true;
 }
 //]]>
@@ -363,7 +376,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
                                 <a href="/fr" lang="fr-ca">Fran&ccedil;ais</a>
                             </div>
                             <div id="cnib-hotline">
-                                <span class="label"><a href="/en/cnib-helpline">CNIB Helpline</a></span><span class="phone-number">1-800-563-2642</span></div>
+                                <span class="label"><a href="/en/cnib-helpline">Please contact us at</a></span> <span class="phone-number">1-800-563-2642</span></div>
                             <div class="button" id="book-an-appointment">
                                 <a href="/en/services/vision-support/request-for-service/Pages/request-services.aspx?&amp;Source=http://www.cnib.ca&amp;OpenIn=Browser">Request Services</a>
                             </div>
@@ -436,7 +449,10 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 	<a href="/en/services/vision-support/Pages/default.aspx"><span class="topcap"></span><span class="menutext">Rehabilitation and Support Services</span><span class="bottomcap"></span></a>
 	</li>
 	<li class=" active">
-	<a href="/en/services/library/Pages/default.aspx"><span class="topcap"></span><span class="menutext">CNIB Library</span><span class="bottomcap"></span></a>
+	<a href="/en/services/CLAP/Pages/default.aspx"><span class="topcap"></span><span class="menutext">CNIB Literacy and Accessible Publishing</span><span class="bottomcap"></span></a>
+	</li>
+	<li >
+	<a href="/en/services/Library-Services/Pages/default.aspx"><span class="topcap"></span><span class="menutext">CELA Library Services</span><span class="bottomcap"></span></a>
 	</li>
 	<li >
 	<a href="/en/services/community/Pages/default.aspx"><span class="topcap"></span><span class="menutext">In Your Community</span><span class="bottomcap"></span></a>
@@ -463,63 +479,48 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
         <div class="breadcrumbs" id="top-breadcrumb">
             <div class="bctext">You are here: </div>
 			<ul class="breadcrumb">
-		<li class="root-breadcrumb-item"><span class="s4-breadcrumb-arrowcont"><img src="/_layouts/images/nodearrow.png" alt="" style="border-width:0px;display:inline-block;padding-top:4px;" /></span><a title="Migration Site" class="root-breadcrumb-item" href="/Pages/default.aspx">CNIBSP10QA</a><ul class="root-breadcrumb-item"><li class="breadcrumb-item"><span class="s4-breadcrumb-arrowcont"><img src="/_layouts/images/nodearrow.png" alt="" style="border-width:0px;display:inline-block;padding-top:4px;" /></span><a class="breadcrumb-item" href="/en/Pages/default.aspx">English</a><ul class="breadcrumb-item"><li class="breadcrumb-item"><span class="s4-breadcrumb-arrowcont"><img src="/_layouts/images/nodearrow.png" alt="" style="border-width:0px;display:inline-block;padding-top:4px;" /></span><a class="breadcrumb-item" href="/en/services/Pages/default.aspx">Our Services</a><ul class="breadcrumb-item"><li class="current-breadcrumb-item"><span class="s4-breadcrumb-arrowcont"><img src="/_layouts/images/nodearrow.png" alt="" style="border-width:0px;display:inline-block;padding-top:4px;" /></span><span class="current-breadcrumb-item">CNIB Library</span></li></ul></li></ul></li></ul></li>
+		<li class="root-breadcrumb-item"><span class="s4-breadcrumb-arrowcont"><img src="/_layouts/images/nodearrow.png" alt="" style="border-width:0px;display:inline-block;padding-top:4px;" /></span><a title="Migration Site" class="root-breadcrumb-item" href="/Pages/default.aspx">CNIBSP10QA</a><ul class="root-breadcrumb-item"><li class="breadcrumb-item"><span class="s4-breadcrumb-arrowcont"><img src="/_layouts/images/nodearrow.png" alt="" style="border-width:0px;display:inline-block;padding-top:4px;" /></span><a class="breadcrumb-item" href="/en/Pages/default.aspx">English</a><ul class="breadcrumb-item"><li class="breadcrumb-item"><span class="s4-breadcrumb-arrowcont"><img src="/_layouts/images/nodearrow.png" alt="" style="border-width:0px;display:inline-block;padding-top:4px;" /></span><a class="breadcrumb-item" href="/en/services/Pages/default.aspx">Our Services</a><ul class="breadcrumb-item"><li class="current-breadcrumb-item"><span class="s4-breadcrumb-arrowcont"><img src="/_layouts/images/nodearrow.png" alt="" style="border-width:0px;display:inline-block;padding-top:4px;" /></span><span class="current-breadcrumb-item">CNIB Literacy and Accessible Publishing</span></li></ul></li></ul></li></ul></li>
 	</ul>
         </div>
         <div id="main-content">	
-            <div id="ctl00_PlaceHolderMain_MainContent_label" style='display:none'>Page Content</div><div id="ctl00_PlaceHolderMain_MainContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_MainContent_label"><h1 class="ms-rteElement-H1">CNIB Library</h1>
-<img width="418" height="123" src="/en/services/library/PublishingImages/CNI032_banner_cniblibrary_english_book_only.jpg" alt="CNIB Library - opening the door to reading for Canadians with print disabilities" style="width:414px;height:149px" /> <p class="ms-rteElement-P">The CNIB Library is Canada's largest library of accessible materials for people with print disabilities. </p>
-<p><a href="http://www.cniblibrary.ca/iguana/">Sign into your library account at cniblibrary.ca &gt;</a></p>
-<h2 class="ms-rteElement-H2">How We Help</h2>
-<p class="ms-rteElement-P">If you or someone you know has difficulty reading print because of a visual, physical or learning disability, we can help you:</p>
-<ul><li>Find books and magazines in audio, e-text and braille</li>
-<li>Read daily newspapers</li>
-<li>Enjoy classic movies, with the action described</li>
-<li>Help your kids discover a love of reading.</li></ul>
-<div><img width="183" height="145" src="/en/services/library/PublishingImages/DSCN0352_small.jpg" alt="Audio CDs and iPod" class="ms-rtePosition-2 ms-rteImage-0" style="margin:5px;width:160px;height:121px" /> </div>
-<p class="ms-rteElement-P">You can get our materials online or have them delivered to your home.</p>
-<p class="ms-rteElement-P">Our services are available in English and French, and they are <strong>free</strong> to you.</p>
-<p class="ms-rteElement-P"> </p>
-<div><img width="196" height="139" src="/en/services/library/PublishingImages/071311_1430_4SplashTDS9.jpg" alt="Boy touches a tactile picture of a lizard" class="ms-rtePosition-2" style="margin:5px;width:133px;height:100px" /> </div>
-<p class="ms-rteElement-P">Our programs help young people and their families develop literacy skills that are important to education, employment and independence - while having lots of fun!</p>
+            <div id="ctl00_PlaceHolderMain_MainContent_label" style='display:none'>Page Content</div><div id="ctl00_PlaceHolderMain_MainContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_MainContent_label"><h1 class="ms-rteElement-H1">CNIB Literacy and Accessible Publishing</h1>
+<img width="418" height="123" alt="CNIB Library - opening the door to reading for Canadians with print disabilities" src="/en/services/library/PublishingImages/CNI032_banner_cniblibrary_english_book_only.jpg" style="height:149px;width:414px" /> <p class="ms-rteElement-P">CNIB is Canada's primary producer of accessible format literature for people with print disabilities. CNIB also provides support for accessible reading technology, literacy programs, and advocacy for inclusive publishing and capacity building to support literacy development. </p>
+<h2 class="ms-rteElement-H2"><span>The Need for Accessible Format Materials</span></h2>
+<p class="ms-rteElement-P">Three million Canadians with print disabilities, including people with vision loss as well as a variety of learning and physical disabilities, are unable to read traditional print material. They require material in accessible/alternate formats such as braille, audio and large-print. Currently however, only seven per cent of published works worldwide are available in a format that can be read by people with print disabilities. </p>
+<p class="ms-rteElement-P"><span>Literacy is a fundamental human right as outlined in the UN Convention on the Rights of Persons with Disabilities. Access to published literature is vital to Canada’s economic growth, as it greatly impacts the education and employment opportunities citizens can access. With equal access to a broad spectrum of accessible/alternate format literature, Canadians with print disabilities can be contributing members of our society and economy.</span></p>
+<h3 class="ms-rteElement-H3">What are accessible formats?</h3>
+<p class="ms-rteElement-P"><span>Accessible format materials include DAISY (Digital Accessible Information System) audio books,; electronic text (e-text) in various formats, including DAISY; contracted and uncontracted braille, including electronic braille; printbraille; and described movies.​</span></p>
+<h3 class="ms-rteElement-H3">What is a print disability?</h3>
+<p class="ms-rteElement-P">A print disability is any learning disability (impairment relating to comprehension), physical disability (inability to hold/manipulate a book), or visual (severe or total impairment of sight) disability that prevents a person from reading conventional print.</p>
+<h2 class="ms-rteElement-H2">Our Programs</h2>
+<img width="196" height="139" class="ms-rtePosition-2" alt="Boy touches a tactile picture of a lizard" src="/en/services/library/PublishingImages/071311_1430_4SplashTDS9.jpg" style="height:100px;width:133px;margin:5px" /> <p class="ms-rteElement-P">Our programs help young people and their families develop literacy skills that are important to education, employment and independence - while having lots of fun!</p>
+<p class="ms-rteElement-P"><span lang="EN-CA">Programs</span><span lang="EN-CA"> </span><span>include Readasaurus – our Early Literacy Kit, the TD Summer Reading Club, the annual Braille Writing Contest, </span>and <a href="http://altlit.ca/">AltLit.ca​</a>, CNIB’s website about alternative literacy for kids and teens with vision loss.</p>
 <ul><li><a href="http://altlit.ca/td-summer-reading-club">TD Summer Reading Club</a></li>
-<li><a href="http://altlit.ca/braille-creative-writing-contest">Braille Creative Writing Contest</a></li>
-<li><a href="http://altlit.ca/raise-readasaurus">Early Literacy Kit</a><br /></li></ul>
-<h2 class="ms-rteElement-H2">The Difference We Make</h2>
-<div><img width="320" height="240" src="/en/services/library/PublishingImages/Womanheadphones_lores.jpg" alt="Senior woman wearing headphones smiles" class="ms-rtePosition-2" style="margin:5px;width:132px;height:99px" /> </div>
-<p class="ms-rteElement-P">&quot;I am writing on behalf of a client who receives DAISY books in the mail. I cannot begin to tell you what a difference you are all making in her life. Losing her sight so quickly had her depressed and angry. Hearing her laugh and having to rush to tell me which books arrived in the mail is like interacting with another woman.&quot; - Caregiver</p>
-<p class="ms-rteElement-P">&quot;The library gives me the opportunity to read what my classmates are reading. I feel included and not different from anyone else. It helps other students accept who I am and makes the concept of having a blind classmate less scary.&quot; - CNIB client</p>
-<p class="ms-rteElement-P">For more information on the CNIB Library call 1-800-268-8818 or visit <a href="http://www.cniblibrary.ca/">cniblibrary.ca</a>.</p>
+<li><a href="http://altlit.ca/raise-readasaurus">Early Literacy Kit</a></li>
+<li><a href="http://altlit.ca/braille-creative-writing-contest">Braille Creative Writing Contest</a></li></ul>
+<h2 class="ms-rteElement-H2">CELA Library Services</h2>
+<p class="ms-rteElement-P">Reading entertains us, informs us, and connects us. If you are finding it difficult to read because of low vision or blindness, <span lang="EN-CA"><a href="http://celalibrary.ca/"><span lang="EN-US">CELA, the Centre for Equitable Library Access</span></a></span>, can help.</p>
+<p class="ms-rteElement-P">CELA, a national not-for profit organization, is CNIB’s trusted partner in accessible literacy. CNIB produces materials in accessible formats including braille and audio, which are then provided to CELA for distribution through the public library system. CNIB clients have been able to access CELA services since its launch in 2014. By January 2017 all library services previously offered by CNIB Library<span> </span>will be fully transitioned to CELA.</p>
+<p class="ms-rteElement-P"><span>To start using CELA now, simply visit the </span><span lang="EN-CA"><a href="http://celalibrary.ca/"><span lang="EN-US">CELA website</span></a></span><span> and sign in using your current account number for and password for CNIB Library. If you don't have an account, ask about CELA service at your local public library or ask your local CNIB contact person to refer you. If you need additional support you can contact CELA at 1-855-655-2273 or email </span><span lang="EN-CA"><a href="mailto:help@celalibrary.ca"><span lang="EN-US">help@celalibrary.ca​</span></a></span></p>
 <h2>Quick Links</h2>
-<ul><li><a href="http://www.cniblibrary.ca/">Sign into your library account at cniblibrary.ca</a></li>
-<li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=librarynews">CNIB Library news</a></li>
-<li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=signup">How to sign up</a></li>
-<li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=services">Using our services</a></li>
-<li><a href="http://www.cniblibrary.ca/">Find books, movies and more</a></li>
-<li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=recommended">Recommended reading</a></li>
-<li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=newsstand">Newspapers and magazines</a></li>
-<li><a href="/en/about/awards/achievement/dmfm/Pages/default.aspx">Dr. Dayton M. Forman Memorial Award</a></li></ul>
+<ul><li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=services">Using our services</a></li>
+<li><a href="http://celalibrary.ca/">CELA</a><br /></li>
+<li><a href="/en/about/awards/achievement/dmfm/Pages/default.aspx">Dr. Dayton M. Forman Memorial Award</a></li>
+<li><a href="http://celalibrary.ca/">Recommended reading</a></li>
+<li><a href="http://celalibrary.ca/">Newspapers and magazines​</a></li></ul>
 <h3 class="ms-rteElement-H3">Information for:</h3>
-<ul><li><a href="http://www.altlit.ca/">Kids, teens and families</a><br /></li>
+<ul><li><a href="http://www.altlit.ca/">Kids, teens and families</a></li>
 <li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=internationallibraries">Resource centres and international libraries</a></li>
 <li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=volunteers">Volunteers</a></li>
 <li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=supportus">Donors</a></li>
 <li><a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=authorspublishers">Authors and publishers</a></li></ul>
-<div>  <h2>Year in Review</h2>
+<h2>Year in Review</h2>
 <p class="ms-rteElement-P">Read about the exciting achievements of the CNIB Library:</p>
-<ul><li><a href="/en/services/library/Documents/Library%20Year%20in%20Review-2014-2015_Eng_Accessible%20version.pdf" title="From Dream to Reality: CNIB Library Year in Review 2014-15">From Dream to Reality: CNIB Library Year in Review 2014-15</a> (Accessible PDF)<br /></li>
-<li><a href="http://cniblibrary.ca/iguana/uploads/files/About%20Us/LIBRARY_YEAR_IN_REVIEW_ENG_2014-FINAL%20FINAL-s.pdf" title="Broadening Access for All Canadians: CNIB Library Year in Review 2013-14">Broadening Access for All Canadians: CNIB Library Year in Review 2013-14</a> (Accessible PDF)</li>
-
-<li><a href="/en/services/library/Documents/LIBRARY_YEAR_IN_REVIEW_ENG_2013_FINAL%20FINAL-s.pdf" title="Literacy for Every Canadian: CNIB Library Year in Review 2012-13">Literacy for Every Canadian: CNIB Library Year in Review 2012-13</a> (Accessible PDF)</li>
-<li><a href="/en/services/library/Documents/CNIB%20Library%20Year%20in%20Review_2011-12_EN.pdf" title="A Library for the Future: CNIB Library 2011-12">A Library for the Future: CNIB Library 2011-12</a> (Accessible PDF)</li>
-<li><a href="/en/services/library/Documents/CNIB%20Library%20Year%20in%20Review_2010-11_EN.pdf" title="Opening the Door: CNIB Library 2010-11">Opening the Door: CNIB Library 2010-11</a> (Accessible PDF)</li></ul>
-<h2>Stay connected</h2>
-<p class="ms-rteElement-P">Keep up on great reads, books in the news, and the world of accessible reading with the <a href="http://www.cniblibrary.ca/iguana/www.main.cls?surl=digitaltimes">Digital Times newsletter.</a></p>
-<p class="ms-rteElement-P">Follow the CNIB Library on:</p>
-<ul><li><a href="https://twitter.com/cniblibrary">Twitter</a></li>
-<li><a href="https://www.facebook.com/pages/CNIB-Library/195806127107687">Facebook</a></li>
-<li><a href="http://blog.cnib.ca/Lists/Categories/Category.aspx?Name=Library">CNIB Blog</a></li></ul></div>
-</div>
+<ul><li><a title="From Dream to Reality: CNIB Library Year in Review 2014-15" href="/en/services/library/Documents/Library%20Year%20in%20Review-2014-2015_Eng_Accessible%20version.pdf">From Dream to Reality: CNIB Library Year in Review 2014-15</a> (Accessible PDF)</li>
+<li><a title="Broadening Access for All Canadians: CNIB Library Year in Review 2013-14" href="http://cniblibrary.ca/iguana/uploads/files/About%20Us/LIBRARY_YEAR_IN_REVIEW_ENG_2014-FINAL%20FINAL-s.pdf">Broadening Access for All Canadians: CNIB Library Year in Review 2013-14</a> (Accessible PDF)</li>
+<li><a title="Literacy for Every Canadian: CNIB Library Year in Review 2012-13" href="/en/services/library/Documents/LIBRARY_YEAR_IN_REVIEW_ENG_2013_FINAL%20FINAL-s.pdf">Literacy for Every Canadian: CNIB Library Year in Review 2012-13</a> (Accessible PDF)</li>
+<li><a title="A Library for the Future: CNIB Library 2011-12" href="/en/services/library/Documents/CNIB%20Library%20Year%20in%20Review_2011-12_EN.pdf">A Library for the Future: CNIB Library 2011-12</a> (Accessible PDF)</li>
+<li><a title="Opening the Door: CNIB Library 2010-11" href="/en/services/library/Documents/CNIB%20Library%20Year%20in%20Review_2010-11_EN.pdf">Opening the Door: CNIB Library 2010-11</a> (Accessible PDF)</li></ul></div>
              <div id="MainWebParts" class="AspNet-WebPartZone-Vertical">
 
 			</div>
@@ -604,7 +605,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
                             <h2>
                                 Our Services</h2>
                             <ul id="services-list">
-                                <li><a href="/en/services/library">CNIB Library</a></li>
+                                <li><a href="/en/services/library">CNIB Literacy and Accessible Publishing</a></li>
                                 <li><a href="/en/services/vision-support">Vision Support Services</a></li>
                                 <li><a href="/en/services/accessibilities">Accessibility</a></li>
                                 <li><a href="/en/services/products">Assistive Products &amp; Technologies</a></li>
@@ -739,7 +740,7 @@ pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
 }var _fV4UI = true;
 function _RegisterWebPartPageCUI()
 {
-    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{5c176428-3f35-468a-8dcd-4198cbc9e961}",itemId: 5,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: true,forceCheckout: true,rootFolderUrl: "\u002fen\u002fservices\u002flibrary\u002fPages",itemPermissions:{High:16,Low:196673}};
+    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{238c267c-bc05-4677-9c55-6976878b2951}",itemId: 1,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: true,forceCheckout: true,rootFolderUrl: "\u002fen\u002fservices\u002fCLAP\u002fPages",itemPermissions:{High:16,Low:196673}};
     SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
     var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
     var hid;

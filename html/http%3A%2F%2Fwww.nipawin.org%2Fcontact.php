@@ -28,6 +28,8 @@
 ========================================================= -->
 <link rel="pingback" href="http://nipawin.org/wp/xmlrpc.php" />
 
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="NBC &raquo; Feed" href="http://nipawin.org/feed/" />
 <link rel="alternate" type="application/rss+xml" title="NBC &raquo; Comments Feed" href="http://nipawin.org/comments/feed/" />
 
@@ -36,8 +38,8 @@ var MP3jPLAYLISTS = [];
 var MP3jPLAYERS = [];
 </script>
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/nipawin.org\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.3"}};
-			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/nipawin.org\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
 img.wp-smiley,
@@ -60,19 +62,20 @@ img.emoji {
 <link rel='stylesheet' id='stylesheet-css'  href='http://nipawin.org/wp/wp-content/themes/inovado/style.css?ver=1' type='text/css' media='all' />
 <link rel='stylesheet' id='retina-css'  href='http://nipawin.org/wp/wp-content/themes/inovado/framework/css/retina.css?ver=1' type='text/css' media='only screen and (-webkit-min-device-pixel-ratio: 2)' />
 <link rel='stylesheet' id='responsive-css'  href='http://nipawin.org/wp/wp-content/themes/inovado/framework/css/responsive.css?ver=1' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-css'  href='http://nipawin.org/wp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.4.1' type='text/css' media='all' />
-<link rel='stylesheet' id='cff-css'  href='http://nipawin.org/wp/wp-content/plugins/custom-facebook-feed/css/cff-style.css?ver=2.4.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://nipawin.org/wp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='cff-css'  href='http://nipawin.org/wp/wp-content/plugins/custom-facebook-feed/css/cff-style.css?ver=2.4.4' type='text/css' media='all' />
 <link rel='stylesheet' id='cff-font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?ver=4.5.0' type='text/css' media='all' />
 <link rel='stylesheet' id='wooslider-flexslider-css'  href='http://nipawin.org/wp/wp-content/plugins/flexslider/assets/css/flexslider.css?ver=1.0.1' type='text/css' media='all' />
 <link rel='stylesheet' id='wooslider-common-css'  href='http://nipawin.org/wp/wp-content/plugins/flexslider/assets/css/style.css?ver=1.0.1' type='text/css' media='all' />
-<link rel='stylesheet' id='sb_instagram_styles-css'  href='http://nipawin.org/wp/wp-content/plugins/instagram-feed/css/sb-instagram.css?ver=1.3.11' type='text/css' media='all' />
-<link rel='stylesheet' id='sb_instagram_icons-css'  href='//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css?1&#038;ver=4.2.0' type='text/css' media='all' />
-<link rel='stylesheet' id='rs-settings-css'  href='http://nipawin.org/wp/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=4.4.3' type='text/css' media='all' />
-<link rel='stylesheet' id='rs-captions-css'  href='http://nipawin.org/wp/wp-content/plugins/revslider/rs-plugin/css/captions.css?ver=4.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sb_instagram_styles-css'  href='http://nipawin.org/wp/wp-content/plugins/instagram-feed/css/sb-instagram.min.css?ver=1.4.7' type='text/css' media='all' />
+<link rel='stylesheet' id='dslc-frontend-css-css'  href='http://nipawin.org/wp/wp-content/plugins/live-composer-page-builder/css/frontend.min.css?ver=1.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dslc-font-awesome-css'  href='http://nipawin.org/wp/wp-content/plugins/live-composer-page-builder/css/font-awesome.min.css?ver=1.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-settings-css'  href='http://nipawin.org/wp/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-captions-css'  href='http://nipawin.org/wp/wp-content/plugins/revslider/rs-plugin/css/captions.css?ver=4.6.1' type='text/css' media='all' />
 <link rel='stylesheet' id='usp_style-css'  href='http://nipawin.org/wp/wp-content/plugins/user-submitted-posts/resources/usp.css' type='text/css' media='all' />
-<link rel='stylesheet' id='chosen-css'  href='http://nipawin.org/wp/wp-content/plugins/wp-job-manager/assets/css/chosen.css?ver=4.4.3' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-job-manager-frontend-css'  href='http://nipawin.org/wp/wp-content/plugins/wp-job-manager/assets/css/frontend.css?ver=4.4.3' type='text/css' media='all' />
-<link rel='stylesheet' id='custom-style-css'  href='http://nipawin.org/wp/wp-content/themes/inovado/framework/css/custom_script.css?ver=4.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='chosen-css'  href='http://nipawin.org/wp/wp-content/plugins/wp-job-manager/assets/css/chosen.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-job-manager-frontend-css'  href='http://nipawin.org/wp/wp-content/plugins/wp-job-manager/assets/css/frontend.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-css'  href='http://nipawin.org/wp/wp-content/themes/inovado/framework/css/custom_script.css?ver=4.6.1' type='text/css' media='all' />
 <style id='custom-style-inline-css' type='text/css'>
 
         	
@@ -391,10 +394,13 @@ img.emoji {
 
         
 </style>
-<link rel='stylesheet' id='mp3-jplayer-css'  href='http://nipawin.org/wp/wp-content/plugins/mp3-jplayer/css/dark.css?ver=2.7' type='text/css' media='all' />
+<link rel='stylesheet' id='mp3-jplayer-css'  href='http://nipawin.org/wp/wp-content/plugins/mp3-jplayer/css/dark.css?ver=2.7.1' type='text/css' media='all' />
 <link rel='stylesheet' id='colorbox-css'  href='http://nipawin.org/wp/wp-content/plugins/slideshow-gallery/views/default/css/colorbox.css?ver=1.3.19' type='text/css' media='all' />
 <link rel='stylesheet' id='slideshow-font-css'  href='http://nipawin.org/wp/wp-content/plugins/slideshow-gallery/views/default/css/font.css' type='text/css' media='all' />
-<!-- This site uses the Google Analytics by MonsterInsights plugin v5.4.9 - Universal enabled - https://www.monsterinsights.com/ -->
+<link rel='stylesheet' id='fontawesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='google-font-open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C700&#038;ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mb-css'  href='http://nipawin.org/wp/wp-content/plugins/mango-buttons/public/style/mb-button.css?ver=1.2.8' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v5.5.2 - Universal enabled - https://www.monsterinsights.com/ -->
 <script type="text/javascript">
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -414,11 +420,16 @@ img.emoji {
 			var usp_case_sensitivity = "false";
 			var usp_challenge_response = "2";
 		</script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script><script>jQueryWP = jQuery;</script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/pixelyoursite/js/public.js?ver=1.0'></script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?ver=4.4.3'></script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=4.4.3'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script><script>jQueryWP = jQuery;</script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var DSLCAjax = {"ajaxurl":"http:\/\/nipawin.org\/wp\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/live-composer-page-builder/js/frontend.all.min.js?ver=1.1.3'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=4.6.1'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/user-submitted-posts/resources/jquery.cookie.js'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/user-submitted-posts/resources/jquery.parsley.min.js'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/user-submitted-posts/resources/jquery.usp.core.js'></script>
@@ -429,10 +440,10 @@ img.emoji {
 <link rel='https://api.w.org/' href='http://nipawin.org/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://nipawin.org/wp/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://nipawin.org/wp/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.4.3" />
+<meta name="generator" content="WordPress 4.6.1" />
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 			<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-		
+		<style type="text/css">.dslc-modules-section-wrapper, .dslca-add-modules-section { width : 1110px; } .dslc-modules-section { background-image:disabled;background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;border-width:0px;border-style:solid;margin-left:0%;margin-right:0%;margin-bottom:0px;padding-bottom:80px;padding-top:80px;padding-left:0%;padding-right:0%; }</style>
 	<style>
 		
 				
@@ -444,12 +455,19 @@ img.emoji {
 				
 		
 				
-		.ninja-forms-form .label-above label, .ninja-forms-form .label-below label {display: block; float: none; width: 100% !important; 
+		body.page-id-5049 #page
+{
+  background-color: #000000;
+}
+
+.ninja-forms-form .label-above label, .ninja-forms-form .label-below label {display: block; float: none; width: 100% !important; 
 }
 
 .post-calendar {
 display: none;
 }
+
+font-family: 'Sorts Mill Goudy', serif;
 .post-icon.standard, .post-meta {
 display: none;
 }
@@ -663,19 +681,19 @@ background: none;
 </div>
 		</div>		<div id="recent-posts-3" class="widget widget_recent_entries four columns">		<h3>Recent News</h3>		<ul>
 					<li>
+				<a href="http://nipawin.org/cantata2016/">Cantata2016</a>
+						</li>
+					<li>
+				<a href="http://nipawin.org/overflow-camp-team-tour/">Overflow Camp Team Tour</a>
+						</li>
+					<li>
+				<a href="http://nipawin.org/fall-concert-tim-the-glory-boys/">Fall Concert: Tim &#038; the Glory Boys</a>
+						</li>
+					<li>
 				<a href="http://nipawin.org/nbc-graduation-2016/">NBC Graduation 2016</a>
 						</li>
 					<li>
 				<a href="http://nipawin.org/dessert-theater-update/">Dessert Theater Update</a>
-						</li>
-					<li>
-				<a href="http://nipawin.org/tourdates/">NBC is Coming to Your Hometown!</a>
-						</li>
-					<li>
-				<a href="http://nipawin.org/the-thomas-f-king-memorial-lectures/">The Thomas F. King Memorial Lectures</a>
-						</li>
-					<li>
-				<a href="http://nipawin.org/theology-lectureship-2016/">Theology Lectureship 2016</a>
 						</li>
 				</ul>
 		</div>		<div id="text-3" class="widget widget_text four columns"><h3>Apply Now</h3>			<div class="textwidget"><p>Do you want to attend<br />
@@ -737,19 +755,30 @@ var cfflinkhashtags = "true";
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/nipawin.org\/wp\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+var _wpcf7 = {"loaderUrl":"http:\/\/nipawin.org\/wp\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ..."};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.4.1'></script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/custom-facebook-feed/js/cff-scripts.js?ver=2.4.1.2'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.5'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/custom-facebook-feed/js/cff-scripts.js?ver=2.4.4'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/flexslider/assets/js/jquery.mousewheel.min.js?ver=2.1.0-20121206'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/flexslider/assets/js/jquery.flexslider.min.js?ver=2.1.0-20121206'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var sb_instagram_js_options = {"sb_instagram_at":"1351539520.97584da.b348af7e0f18485e94299364c15ebc07"};
+var sb_instagram_js_options = {"sb_instagram_at":"1351539520.3a81a9f.907c04f3266340668034d6f54509bf21"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/instagram-feed/js/sb-instagram.js?ver=1.3.11'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-content/plugins/instagram-feed/js/sb-instagram.min.js?ver=1.4.7'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mejsL10n = {"language":"en-US","strings":{"Close":"Close","Fullscreen":"Fullscreen","Turn off Fullscreen":"Turn off Fullscreen","Go Fullscreen":"Go Fullscreen","Download File":"Download File","Download Video":"Download Video","Play":"Play","Pause":"Pause","Captions\/Subtitles":"Captions\/Subtitles","None":"None","Time Slider":"Time Slider","Skip back %1 seconds":"Skip back %1 seconds","Video Player":"Video Player","Audio Player":"Audio Player","Volume Slider":"Volume Slider","Mute Toggle":"Mute Toggle","Unmute":"Unmute","Mute":"Mute","Use Up\/Down Arrow keys to increase or decrease volume.":"Use Up\/Down Arrow keys to increase or decrease volume.","Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds."}};
+var _wpmejsSettings = {"pluginPath":"\/wp\/wp-includes\/js\/mediaelement\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=2.22.0'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/themes/inovado/framework/js/shortcodes.js?ver=1.0'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/themes/inovado/framework/js/bootstrap.js?ver=1.0'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/themes/inovado/framework/js/superfish.js?ver=1.4'></script>
@@ -760,7 +789,7 @@ var sb_instagram_js_options = {"sb_instagram_at":"1351539520.97584da.b348af7e0f1
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/themes/inovado/framework/js/prettyPhoto.js?ver=3.1'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-content/themes/inovado/framework/js/twitter/jquery.tweet.js?ver=1.0'></script>
 <script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.4'></script>
-<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/wp-embed.min.js?ver=4.4.3'></script>
+<script type='text/javascript' src='http://nipawin.org/wp/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
 
 <script type="text/javascript">
 

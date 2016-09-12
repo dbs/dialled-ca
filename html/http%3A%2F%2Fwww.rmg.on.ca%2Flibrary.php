@@ -3,21 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<title>Page not found - The RMG</title>
+	<title>  Page not found</title>
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	
-<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="object" />
-<meta property="og:title" content="Page not found - The RMG" />
-<meta property="og:site_name" content="The RMG" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Page not found - The RMG"/>
-<!-- / Yoast SEO plugin. -->
-
-<link rel='stylesheet' id='fontellocss-css'  href='http://rmg.on.ca/wp-content/themes/RMG/fonts/fontello/css/fontello.css?ver=1.0.1' type='text/css' media='all' />
+	<link rel='stylesheet' id='fontellocss-css'  href='http://rmg.on.ca/wp-content/themes/RMG/fonts/fontello/css/fontello.css?ver=1.0.1' type='text/css' media='all' />
 <link rel='stylesheet' id='components-css'  href='http://rmg.on.ca/wp-content/themes/RMG/assets/css/components.min.css?ver=1.0.1' type='text/css' media='all' />
 <link rel='stylesheet' id='maincss-css'  href='http://rmg.on.ca/wp-content/themes/RMG/assets/css/main.min.css?ver=1.0.1' type='text/css' media='all' />
 <link rel='stylesheet' id='printcss-css'  href='http://rmg.on.ca/wp-content/themes/RMG/assets/css/print.min.css?ver=1.0.1' type='text/css' media='print' />
@@ -141,11 +131,11 @@ communications@rmg.on.ca<br />
 			<div class='medium-2 show-for-medium-up column footer-link-list'>
 				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/blog/' class='secondary'>Blog</a></li><li><a target='' href='http://rmg.on.ca/submissions/' class='secondary'>Submissions</a></li><li><a target='' href='http://rmg.on.ca/media-room/' class='secondary'>Media Room</a></li><li><a target='' href='http://rmg.on.ca/press-centre/' class='secondary'>Press Centre</a></li></ul>			</div>
 			<div class='medium-2 show-for-medium-up column footer-link-list'>
-				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/contact/' class='secondary'>Contact</a></li><li><a target='' href='http://rmg.on.ca/about/' class='secondary'>About</a></li><li><a target='' href='http://rmg.on.ca/board-portal/' class='secondary'>Board Portal</a></li><li><a target='_blank' href='https://launch.charityrepublic.com/auth/learning-login' class='secondary'>Volunteer Portal</a></li></ul>			</div>
+				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/contact/' class='secondary'>Contact</a></li><li><a target='_blank' href='https://issuu.com/thermg' class='secondary'>Publications</a></li><li><a target='' href='http://rmg.on.ca/board-portal/' class='secondary'>Board Portal</a></li><li><a target='_blank' href='https://launch.charityrepublic.com/auth/learning-login' class='secondary'>Volunteer Portal</a></li></ul>			</div>
 			<div class='small-6 show-for-small-only column footer-link-list'>
 				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/painters-11/' class='secondary'>Painters 11</a></li><li><a target='' href='http://rmg.on.ca/public-art/' class='secondary'>Public Art</a></li><li><a target='' href='http://rmg.on.ca/gallery-a-and-the-artlab/' class='secondary'>Gallery A</a></li><li><a target='' href='http://rmg.on.ca/submissions/' class='secondary'>Submissions</a></li><li><a target='' href='http://rmg.on.ca/blog/' class='secondary'>Blog</a></li><li><a target='' href='http://rmg.on.ca/support/donate-to-the-rmg/' class='secondary'>Donate</a></li></ul>			</div>
 			<div class='small-6 show-for-small-only column footer-link-list'>
-				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/support/membership/' class='secondary'>Membership</a></li><li><a target='' href='http://rmg.on.ca/contact/' class='secondary'>Contact</a></li><li><a target='' href='http://rmg.on.ca/press-centre/' class='secondary'>Press Centre</a></li><li><a target='' href='http://rmg.on.ca/media-room/' class='secondary'>Media Room</a></li><li><a target='' href='http://rmg.on.ca/board-portal/' class='secondary'>Board Portal</a></li><li><a target='_blank' href='https://launch.charityrepublic.com/auth/learning-login' class='secondary'>Volunteer Portal</a></li></ul>			</div>
+				<ul class='purple-top'><li><a target='' href='http://rmg.on.ca/contact/' class='secondary'>Contact</a></li><li><a target='_blank' href='https://issuu.com/thermg' class='secondary'>Publications</a></li><li><a target='' href='http://rmg.on.ca/press-centre/' class='secondary'>Press Centre</a></li><li><a target='' href='http://rmg.on.ca/media-room/' class='secondary'>Media Room</a></li><li><a target='' href='http://rmg.on.ca/board-portal/' class='secondary'>Board Portal</a></li><li><a target='_blank' href='https://launch.charityrepublic.com/auth/learning-login' class='secondary'>Volunteer Portal</a></li></ul>			</div>
 			<div class='small-12 show-for-small-only column '>
 				<div class='purple-top text-center'>
 					<form action="//rmg.us2.list-manage.com/subscribe/post?u=b18f1c347f32a0b2806a447b4&amp;id=3d2d02dc56" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -211,7 +201,7 @@ communications@rmg.on.ca<br />
 <script type='text/javascript' src='http://rmg.on.ca/wp-content/themes/RMG/assets/js/components.min.js?ver=1.0.1'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var ajaxobj = {"ajaxurl":"http:\/\/rmg.on.ca\/wp-admin\/admin-ajax.php","security":"a3c6fe516d"};
+var ajaxobj = {"ajaxurl":"http:\/\/rmg.on.ca\/wp-admin\/admin-ajax.php","security":"34db49bc01"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://rmg.on.ca/wp-content/themes/RMG/assets/js/main.min.js?ver=1.0.1'></script>
@@ -234,4 +224,4 @@ var ajaxobj = {"ajaxurl":"http:\/\/rmg.on.ca\/wp-admin\/admin-ajax.php","securit
 
 Page Caching using disk: enhanced
 
- Served from: rmg.on.ca @ 2016-05-09 10:00:04 by W3 Total Cache -->
+ Served from: rmg.on.ca @ 2016-09-11 12:18:54 by W3 Total Cache -->

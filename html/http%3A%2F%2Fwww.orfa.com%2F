@@ -4,23 +4,20 @@
 <!--[if IE 8 ]><html lang="en" class="no-js ie8 "> <![endif]-->
 <!--[if IE 9 ]><html lang="en" class="no-js ie9 "><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js "> <!--<![endif]-->
-  <head id="Head1">
+  <head id="Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9c545daf2e","applicationID":"29970346","transactionName":"ZFBbMEdYDUoHU0MLVl0adDJ2FjNYAVV0DVdHR1YIWVwRFjVYWBVpUlJc","queueTime":15,"applicationTime":2631,"ttGuid":"2D8A63B8E0904C89","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/3a5680b4/styles/newgadgets.css" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/3a5680b4/styles/print.css" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/3a5680b4/styles/shared.css" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/3a5680b4/styles/theme.less" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/resources/theme/customStyles.css?t=635762241470000000" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/resources/theme/user.css?t=635768089590000000" rel="stylesheet" type="text/css" /><link href="//f.wildapricot.org/WebUI/built5.7.4.1/css/shared/ui/shared-ui-compiled.css" rel="stylesheet" type="text/css" /><script type="text/javascript" language="javascript" id="idJavaScriptEnvironment">
-var bonaPage_BuildVer='5.7.4.1';
+<link href="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/28787eda/styles/newgadgets.css" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/28787eda/styles/print.css" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/28787eda/styles/shared.css" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/28787eda/styles/theme.less" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/resources/theme/customStyles.css?t=635762241470000000" rel="stylesheet" type="text/css" /><link href="http://www.orfa.com/resources/theme/user.css?t=635768089590000000" rel="stylesheet" type="text/css" /><link href="//sf.wildapricot.org/WebUI/built5.8.0.1/css/shared/ui/shared-ui-compiled.css" rel="stylesheet" type="text/css" /><script type="text/javascript" language="javascript" id="idJavaScriptEnvironment">var bonaPage_BuildVer='5.8.0.1';
 var bonaPage_AdminBackendUrl = '/admin/';
-var bonaPage_StatRes='http://f.wildapricot.org/WebUI/';
+var bonaPage_StatRes='http://sf.wildapricot.org/WebUI/';
 var bonaPage_InternalPageType = { isUndefinedPage : false,isWebPage : true,isAdminPage : false,isDialogPage : false,isSystemPage : false,isErrorPage : false,isError404Page : false };
 var bonaPage_PageView = { isAnonymousView : true,isMemberView : false,isAdminView : false };
-var javaScriptErrorsHandling = {logErrors:true, hideErrorMessages:true, errorHandlerUrl:'/JSLogger/LogJavaScriptException.ashx' };
 var WidgetMode = 0;
 var bonaPage_IsUserAnonymous = true;
-var bonaPage_ThemeVer='3a5680b4635768089590000000635762241470000000'; var bonaPage_ThemeId = 'white_space_black_and_white.v3.1'; var bonaPage_ThemeVersion = '3.1';
+var bonaPage_ThemeVer='28787eda635768089590000000635762241470000000'; var bonaPage_ThemeId = 'white_space_black_and_white.v3.1'; var bonaPage_ThemeVersion = '3.1';
 var bonaPage_id='1862079'; version_id='';
  try { if (parent && parent.BonaPage) parent.BonaPage.implementBonaPage(window); } catch (err) { }
  if (window.bonaPage_PageView && bonaPage_PageView.isAdminView && (!top.WA || !top.WA.AdminPanel)) { top.window.location = bonaPage_AdminBackendUrl; } 
-document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { display: none; } </style>');</script>
-<script type="text/javascript" language="javascript" src="http://orfa.wildapricot.org/988e9f61/CheckHttpsAuthentication.aspx" id="idCheckHttpsAuthentication"></script><script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/scripts/shared/bonapagetop/bonapagetop-compiled.js" id="idBonaPageTop"></script><script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/scripts/shared/ui/shared-ui-compiled.js" id="idSharedJs"></script><script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/General.js" id=""></script><script type="text/javascript" language="javascript" src="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/3a5680b4/scripts/combined.js" id=""></script><title>Ontario Recreation Facilities Association Inc. - ORFA Home</title>
+document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { display: none; } </style>');</script><script type="text/javascript" language="javascript" src="http://orfa.wildapricot.org/73e54051/CheckHttpsAuthentication.aspx" id="idCheckHttpsAuthentication"></script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/scripts/shared/bonapagetop/bonapagetop-compiled.js" id="idBonaPageTop"></script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/scripts/shared/ui/shared-ui-compiled.js" id="idSharedJs"></script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/General.js" id=""></script><script type="text/javascript" language="javascript" src="http://www.orfa.com/BuiltTheme/white_space_black_and_white.v3.1/28787eda/scripts/combined.js" id=""></script><title>Ontario Recreation Facilities Association Inc. - ORFA Home</title>
 <link rel="shortcut icon" type="image/ico" href="/Resources/Pictures/favicon.ico"  /><link rel="search" type="application/opensearchdescription+xml" title="www.orfa.com" href="/opensearch.ashx" /></head>
   <body id="PAGEID_1862079" class="publicContentView LayoutMain">
 <div class="mLayout layoutMain state1" id="mLayout">
@@ -48,7 +45,7 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 <div class="searchBoxOuter alignCenter">
 	<div class="searchBox">
 <form method="post" action="http://www.orfa.com/Sys/Search" id="id_6wgKbIo_form" class="generalSearchBox"  data-disableInAdminMode="true">
-<span class="searchBoxFieldContainer"><input class="searchBoxField" type="text" name="searchString" id="idid_6wgKbIo_searchBox" value="" maxlength="300" autocomplete="off"  placeholder="Enter search string"></span>
+<span class="searchBoxFieldContainer"><input class="searchBoxField" type="text" name="searchString" id="idid_6wgKbIo_searchBox" value="" maxlength="300" autocomplete="off"  placeholder="SEARCH"></span>
 <div class="autoSuggestionBox" id="idid_6wgKbIo_resultDiv"></div>
 </form></div>
 	</div>
@@ -106,6 +103,20 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 	<div class="item">
 		<a href="http://www.orfa.com/about/board"><span>Board of Directors</span></a>
 <ul class="secondLevel">
+<li class=" dir">
+	<div class="item">
+		<a href="http://www.orfa.com/page-1862405"><span>Nomination and Elections</span></a>
+<ul class="secondLevel">
+<li class=" ">
+	<div class="item">
+		<a href="http://www.orfa.com/page-1862406"><span>Election By-Law</span></a>
+</div>
+</li>
+	
+</ul>
+</div>
+</li>
+	
 <li class=" ">
 	<div class="item">
 		<a href="http://www.orfa.com/page-1694951"><span>Past Presidents</span></a>
@@ -216,6 +227,12 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 <ul class="secondLevel">
 <li class=" ">
 	<div class="item">
+		<a href="http://www.orfa.com/page-1862385"><span>Rick Cox, Tillsonburg</span></a>
+</div>
+</li>
+	
+<li class=" ">
+	<div class="item">
 		<a href="http://www.orfa.com/page-1862319"><span>Duncan Sanders, London</span></a>
 </div>
 </li>
@@ -246,6 +263,12 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 	<div class="item">
 		<a href="http://www.orfa.com/page-1862102"><span>ORFA News</span></a>
 <ul class="secondLevel">
+<li class=" ">
+	<div class="item">
+		<a href="http://www.orfa.com/page-1862328"><span>Recreation Facilities Asset Management (RFAM) Software Program Provided At No-Cost to ORFA Members</span></a>
+</div>
+</li>
+	
 <li class=" ">
 	<div class="item">
 		<a href="http://www.orfa.com/page-1862197"><span>NOTICE – Section 39: Operating Engineers Regulation</span></a>
@@ -594,13 +617,7 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 <ul class="secondLevel">
 <li class=" ">
 	<div class="item">
-		<a href="http://www.orfa.com/designations/cit/recertification/syllabus"><span>Challenge Exam Syllabus</span></a>
-</div>
-</li>
-	
-<li class=" ">
-	<div class="item">
-		<a href="http://www.orfa.com/cit_recertresources"><span>CIT Recertification Resources</span></a>
+		<a href="http://www.orfa.com/designations/cit/recertification/syllabus"><span>Syllabus - CIT Recertfication</span></a>
 </div>
 </li>
 	
@@ -692,6 +709,26 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 </div>
 </li>
 	
+<li class=" dir">
+	<div class="item">
+		<a href="http://www.orfa.com/page-1862110"><span>Media Centre</span></a>
+<ul class="secondLevel">
+<li class=" ">
+	<div class="item">
+		<a href="http://www.orfa.com/Videos"><span>Videos</span></a>
+</div>
+</li>
+	
+</ul>
+</div>
+</li>
+	
+<li class=" ">
+	<div class="item">
+		<a href="http://www.orfa.com/siro-online"><span>Safe Ice Resurfacer Operator Online</span></a>
+</div>
+</li>
+	
 <li class=" ">
 	<div class="item">
 		<a href="http://www.orfa.com/library/forum"><span>Discussion Board</span></a>
@@ -751,6 +788,10 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 
 	jq$(function(){
 
+		var imgAmount = jq$('#camera_wrap_eHxtQzD > div').size();
+		var cameraNavigation = ( imgAmount <= 1 ) ? false : false,
+			cameraAutoAdvance = ( imgAmount <= 1 ) ? false : true;
+
 		jq$('#camera_wrap_eHxtQzD').camera
 		(
 		  {
@@ -763,9 +804,11 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 			portrait: false,
 			playPause: false,
 			pauseOnClick: false,
-			thumbnails: false,
-			pagination: false,
-			navigation: false,
+			thumbnails: cameraNavigation,
+			pagination: cameraNavigation,
+			navigation: cameraNavigation,
+			autoAdvance: cameraAutoAdvance,
+			mobileAutoAdvance: cameraAutoAdvance,
 			height: '440px'		  }
 		);		
 	});
@@ -887,7 +930,7 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 		<div class="zoneFooter3">
 			<div class="container_12">
 				<div class="s1_grid_12 s2_grid_12 s3_grid_12">
-<div id="id_Footer2" data-componentId="Footer2" class="WaPlaceHolder WaPlaceHolderFooter2" style=""><div style="padding-top:50px;padding-right:20px;padding-bottom:50px;padding-left:20px;"><div id="id_HGlf5Fl" data-componentId="HGlf5Fl" class="WaLayoutContainerFirst footerLinks" style=""><table cellspacing="0" cellpadding="0" class="WaLayoutTable" style=""><tr data-componentId="HGlf5Fl_row" class="WaLayoutRow"><td id="id_aDhNoMT" data-componentId="aDhNoMT" class="WaLayoutItem" style="width:33%;"><div id="id_OV1qBKE" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="OV1qBKE" style=""><div style=""><div id="id_Jktjane" class="WaGadgetFirst WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="Jktjane" ><div class="gadgetStyleTitle" style=" "><h4>
+<div id="id_Footer2" data-componentId="Footer2" class="WaPlaceHolder WaPlaceHolderFooter2" style=""><div style="padding-top:50px;padding-right:20px;padding-bottom:50px;padding-left:20px;"><div id="id_HGlf5Fl" data-componentId="HGlf5Fl" class="WaLayoutContainerFirst footerLinks" style=""><table cellspacing="0" cellpadding="0" class="WaLayoutTable" style=""><tr data-componentId="HGlf5Fl_row" class="WaLayoutRow"><td id="id_aDhNoMT" data-componentId="aDhNoMT" class="WaLayoutItem" style="width:33%;"><div id="id_OV1qBKE" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="OV1qBKE" style=""><div style=""><div id="id_Jktjane" class="WaGadgetFirst WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="Jktjane" ><div class="gadgetStyleTitle" style=" "><h4 class="gadgetTitleH4">
 The Recreation Facility Profession</h4></div>
 <div class="gadgetStyleBody gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
 <ul>
@@ -904,7 +947,7 @@ The Recreation Facility Profession</h4></div>
   <li><span style=""><a href="/contact">Contact</a></span></li>
 </ul>
 </div>
-</div><div id="id_wiQro53" class="WaGadgetLast WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="wiQro53" ><div class="gadgetStyleTitle" style=" "><h4>
+</div><div id="id_wiQro53" class="WaGadgetLast WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="wiQro53" ><div class="gadgetStyleTitle" style=" "><h4 class="gadgetTitleH4">
 Professional Designations</h4></div>
 <div class="gadgetStyleBody gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
 <ul>
@@ -923,7 +966,7 @@ Professional Designations</h4></div>
   <li><span style=""><a href="/pdholders">Current Designation Holders</a></span></li>
 </ul>
 </div>
-</div></div></div></td><td style="width:40px;" data-componentId="aDhNoMT_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_7UeHn8i" data-componentId="7UeHn8i" class="WaLayoutItem" style="width:33%;"><div id="id_Eea4KBC" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="Eea4KBC" style=""><div style=""><div id="id_izjeXdV" class="WaGadgetFirst WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="izjeXdV" ><div class="gadgetStyleTitle" style=" "><h4>
+</div></div></div></td><td style="width:40px;" data-componentId="aDhNoMT_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_7UeHn8i" data-componentId="7UeHn8i" class="WaLayoutItem" style="width:33%;"><div id="id_Eea4KBC" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="Eea4KBC" style=""><div style=""><div id="id_izjeXdV" class="WaGadgetFirst WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="izjeXdV" ><div class="gadgetStyleTitle" style=" "><h4 class="gadgetTitleH4">
 Membership</h4></div>
 <div class="gadgetStyleBody gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
 <ul>
@@ -938,7 +981,7 @@ Membership</h4></div>
   <li><span style=""><a href="/Regions">Membership Regions</a></span></li>
 </ul>
 </div>
-</div><div id="id_SAKeNn3" class="WaGadgetLast WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="SAKeNn3" ><div class="gadgetStyleTitle" style=" "><h4>
+</div><div id="id_SAKeNn3" class="WaGadgetLast WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="SAKeNn3" ><div class="gadgetStyleTitle" style=" "><h4 class="gadgetTitleH4">
 Resource Center</h4></div>
 <div class="gadgetStyleBody gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
 <ul>
@@ -959,7 +1002,7 @@ Resource Center</h4></div>
   <li><span style=""><a href="/rfam">Recreation Facility Asset Management (RFAM)</a></span></li>
 </ul>
 </div>
-</div></div></div></td><td style="width:40px;" data-componentId="7UeHn8i_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_zlIF43f" data-componentId="zlIF43f" class="WaLayoutItem" style="width:33%;"><div id="id_8IbdJ6l" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="8IbdJ6l" style=""><div style=""><div id="id_D4ReOSk" class="WaGadgetFirst WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="D4ReOSk" ><div class="gadgetStyleTitle" style=" "><h4>
+</div></div></div></td><td style="width:40px;" data-componentId="7UeHn8i_separator" class="WaLayoutSeparator"><div style="width: inherit;"></div></td><td id="id_zlIF43f" data-componentId="zlIF43f" class="WaLayoutItem" style="width:33%;"><div id="id_8IbdJ6l" class="WaLayoutPlaceHolder placeHolderContainer" data-componentId="8IbdJ6l" style=""><div style=""><div id="id_D4ReOSk" class="WaGadgetFirst WaGadgetContent  gadgetStyleNone" style="margin-bottom:40px;" data-componentId="D4ReOSk" ><div class="gadgetStyleTitle" style=" "><h4 class="gadgetTitleH4">
 Events</h4></div>
 <div class="gadgetStyleBody gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
 <ul>
@@ -982,7 +1025,7 @@ Events</h4></div>
   <li><span style=""><a href="/fof">Facilities Operational Forum and AGM</a></span></li>
 </ul>
 </div>
-</div><div id="id_MAgFFaC" class="WaGadget WaGadgetContent  gadgetStyleNone" style="" data-componentId="MAgFFaC" ><div class="gadgetStyleTitle" style=" "><h4>
+</div><div id="id_MAgFFaC" class="WaGadget WaGadgetContent  gadgetStyleNone" style="" data-componentId="MAgFFaC" ><div class="gadgetStyleTitle" style=" "><h4 class="gadgetTitleH4">
 Careers</h4></div>
 <div class="gadgetStyleBody gadgetContentEditableArea" style="" data-editableArea="0" data-areaHeight="auto">
 <ul>
@@ -1005,7 +1048,7 @@ Careers</h4></div>
 				<div class="s1_grid_12 s2_grid_12 s3_grid_12">
 <div id="idFooterPoweredByContainer">
 	<span id="idFooterPoweredByWA">
-Powered by <a href="http://www.wildapricot.com">Wild Apricot</a> Membership Software</span>
+Powered by <a href="http://www.wildapricot.com" target="_blank">Wild Apricot</a> Membership Software</span>
 </div>
 </div>
 			</div>

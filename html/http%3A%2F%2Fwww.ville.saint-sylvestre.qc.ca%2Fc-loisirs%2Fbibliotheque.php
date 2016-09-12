@@ -63,7 +63,7 @@
 					</div>
 					<div id="date_jour">
 						<a class="txt_blanc_bold_header_14">
-							Lundi, le  9 mai 2016						</a>
+							Dimanche, le 11 septembre 2016						</a>
 					</div>
 					<div id="logo_mrc"><a href="http://www.mrclotbiniere.org/"> <img src="http://www.ville.saint-sylvestre.qc.ca/i-images/logo_small_mrc.gif" alt="Logo_MRC" />
 						<a class="txt_noir_header_mrc_12" href="http://www.mrclotbiniere.org/">Site officiel de la MRC de Lotbini&egrave;re</a>

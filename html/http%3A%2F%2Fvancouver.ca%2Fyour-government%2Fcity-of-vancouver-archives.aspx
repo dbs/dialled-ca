@@ -15,6 +15,7 @@
 
         <link rel="icon" href="/images/cov/ui/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/images/cov/ui/favicon.ico" type="image/x-icon" /> 
+        <link rel="canonical" href="http://vancouver.ca/your-government/city-of-vancouver-archives.aspx" />
         
         
         
@@ -33,7 +34,7 @@
         <meta name="rating" content="general" />
         <meta name="robots" content="index, follow" />
         
-        <meta name="published" content="Mon, 09 May 2016 04:44:13" />
+        <meta name="published" content="Fri, 09 Sep 2016 17:06:11" />
         <meta name="modified" content="Mon, 12 Aug 2013 10:44:13" />
         <meta name="guid" content="874C22934A5A4AD5AD5300234D6F6DCE" />
         <meta name="id" content="1272" />
@@ -79,11 +80,11 @@ dataLayer = [{}];
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMLTDN');</script>
 <!-- End Google Tag Manager -->
 
-        <link rel="stylesheet" href="/css/cov/layout.css?v201604" />
+        <link rel="stylesheet" href="/css/cov/layout.css?v201605" />
         <!--[if lte IE 8]><link rel="stylesheet" href="/css/cov/ieonly.css" /><![endif]-->
         <link rel="stylesheet" media="print" href="/css/cov/print.css" />
-        <link rel="stylesheet" href="/css/cov/nivo-slider.css" />
-        <link rel="stylesheet" href="/css/cov/activenet.css" />
+        <link rel="stylesheet" href="/css/cov/nivo-slider.css?v201605" />
+        <link rel="stylesheet" href="/css/cov/activenet.css?v201605" />
 
         <script type="text/javascript" src="/js/cov/common.js"></script>
         <script type="text/javascript" src="/js/cov/tweener.js"></script>
@@ -99,7 +100,7 @@ dataLayer = [{}];
         
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/css/cov/responsive.css?v201505" />
+        <link rel="stylesheet" href="/css/cov/responsive.css?v201605" />
         <script type="text/javascript" src="/js/cov/responsive.js"></script>
 
                 
@@ -187,7 +188,7 @@ dataLayer = [{}];
                         SetBackImage('5785640C8B3C4775A3C50AC844695609');
                     </script>
                     <ul id="topNav">
-                        <li id="s66ED949F063F4F5186AA9B8C51ECF602" class="isParent notSelected s66ED949F063F4F5186AA9B8C51ECF602"><a class="rounded-corners-mainNav" href="/green-vancouver.aspx">Green Vancouver</a></li><li id="s5785640C8B3C4775A3C50AC844695609" class="isParent isSelected s5785640C8B3C4775A3C50AC844695609"><a class="rounded-corners-mainNav" href="/your-government.aspx">Your Government</a></li><li id="s40817C78182C4DF6A38920F36FFA0369" class="isParent notSelected s40817C78182C4DF6A38920F36FFA0369"><a class="rounded-corners-mainNav" href="/about-vancouver.aspx">About Vancouver</a></li><li id="s3D48BA295D9A4E8FAE0F95755D65318D" class="isParent notSelected s3D48BA295D9A4E8FAE0F95755D65318D"><a class="rounded-corners-mainNav" href="/parks-recreation-culture.aspx">Parks, Recreation, and Culture</a></li><li id="s95C37A60D9EF4577B6E4DAFDE81CD315" class="isParent notSelected s95C37A60D9EF4577B6E4DAFDE81CD315"><a class="rounded-corners-mainNav" href="/home-property-development.aspx">Home, Property, and Development</a></li><li id="sC2B4C2DC13D8429385393D092BE31D4A" class="isParent notSelected sC2B4C2DC13D8429385393D092BE31D4A"><a class="rounded-corners-mainNav" href="/people-programs.aspx">People and Programs</a></li><li id="s1B48E3BC89AD4680B2E902C48640C64A" class="isParent notSelected s1B48E3BC89AD4680B2E902C48640C64A"><a class="rounded-corners-mainNav" href="/streets-transportation.aspx">Streets and Transportation</a></li><li id="s83B05EAE7905419981E4FC0BE75FA7D8" class="isParent notSelected s83B05EAE7905419981E4FC0BE75FA7D8"><a class="rounded-corners-mainNav" href="/doing-business.aspx">Doing Business</a></li>
+                        <li id="s66ED949F063F4F5186AA9B8C51ECF602" class="isParent notSelected s66ED949F063F4F5186AA9B8C51ECF602"><a href="/green-vancouver.aspx">Green Vancouver</a></li><li id="s5785640C8B3C4775A3C50AC844695609" class="isParent isSelected s5785640C8B3C4775A3C50AC844695609"><a href="/your-government.aspx">Your Government</a></li><li id="s40817C78182C4DF6A38920F36FFA0369" class="isParent notSelected s40817C78182C4DF6A38920F36FFA0369"><a href="/about-vancouver.aspx">About Vancouver</a></li><li id="s3D48BA295D9A4E8FAE0F95755D65318D" class="isParent notSelected s3D48BA295D9A4E8FAE0F95755D65318D"><a href="/parks-recreation-culture.aspx">Parks, Recreation, and Culture</a></li><li id="s95C37A60D9EF4577B6E4DAFDE81CD315" class="isParent notSelected s95C37A60D9EF4577B6E4DAFDE81CD315"><a href="/home-property-development.aspx">Home, Property, and Development</a></li><li id="sC2B4C2DC13D8429385393D092BE31D4A" class="isParent notSelected sC2B4C2DC13D8429385393D092BE31D4A"><a href="/people-programs.aspx">People and Programs</a></li><li id="s1B48E3BC89AD4680B2E902C48640C64A" class="isParent notSelected s1B48E3BC89AD4680B2E902C48640C64A"><a href="/streets-transportation.aspx">Streets and Transportation</a></li><li id="s83B05EAE7905419981E4FC0BE75FA7D8" class="isParent notSelected s83B05EAE7905419981E4FC0BE75FA7D8"><a href="/doing-business.aspx">Doing Business</a></li>
                     </ul>
                     <p id="cov-cta"><a href="/your-government/contact-the-city-of-vancouver.aspx" rel="nofollow">&nbsp;</a></p>
                 </div>
@@ -275,9 +276,7 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
                         
                                         <div class="landingBanner-group">
                                             <img id="landingBanner" src="/images/cov/feature/Archives-Main-520x160.jpg" alt="Detail from AM1551-S2-: 2010-006.161" title="Detail from AM1551-S2-: 2010-006.161" />
-                                            <div class="landingBanner-caption">
                                     
-                                            </div>
                                         </div>
                                     
                         
@@ -299,14 +298,13 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
                     <div class="modContainer">
                         
                         
-<div id="largeIconFeature2143" class="largeIconFeature rounded-corners ">
+<div id="largeIconFeature2143" class="largeIconFeature ">
     
 
     
     
-                <h2 class="modHeader">Search our holdings</h2>
-            
-    
+    <h2 class="modHeader">Search our holdings</h2>
+
     
     
     
@@ -343,18 +341,17 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
             $(InkArrowRightLinkTextObj).siblings().hide();
         }
     });
-    $('#largeIconFeature2143 .modHeader, #largeIconFeature2143 h3, #largeIconFeature2143 p').click(function() {
-        $('#largeIconFeature2143 .redirect .icon').click();
-    });
+    //$('#largeIconFeature2143 .modHeader, #largeIconFeature2143 h3, #largeIconFeature2143 p').click(function() {
+        //$('#largeIconFeature2143 .redirect .icon').click();
+    //});
 </script>
-<div id="largeIconFeature2144" class="largeIconFeature rounded-corners ">
+<div id="largeIconFeature2144" class="largeIconFeature ">
     
 
     
     
-                <h2 class="modHeader">Find out what's in the Archives</h2>
-            
-    
+    <h2 class="modHeader">Find out what's in the Archives</h2>
+
     
     
     
@@ -387,18 +384,17 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
             $(InkArrowRightLinkTextObj).siblings().hide();
         }
     });
-    $('#largeIconFeature2144 .modHeader, #largeIconFeature2144 h3, #largeIconFeature2144 p').click(function() {
-        $('#largeIconFeature2144 .redirect .icon').click();
-    });
+    //$('#largeIconFeature2144 .modHeader, #largeIconFeature2144 h3, #largeIconFeature2144 p').click(function() {
+        //$('#largeIconFeature2144 .redirect .icon').click();
+    //});
 </script>
-<div id="largeIconFeature2149" class="largeIconFeature rounded-corners ">
+<div id="largeIconFeature2149" class="largeIconFeature ">
     
 
     
     
-                <h2 class="modHeader">Buy or download a record</h2>
-            
-    
+    <h2 class="modHeader">Buy or download a record</h2>
+
     
     
     
@@ -431,18 +427,17 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
             $(InkArrowRightLinkTextObj).siblings().hide();
         }
     });
-    $('#largeIconFeature2149 .modHeader, #largeIconFeature2149 h3, #largeIconFeature2149 p').click(function() {
-        $('#largeIconFeature2149 .redirect .icon').click();
-    });
+    //$('#largeIconFeature2149 .modHeader, #largeIconFeature2149 h3, #largeIconFeature2149 p').click(function() {
+        //$('#largeIconFeature2149 .redirect .icon').click();
+    //});
 </script>
-<div id="largeIconFeature2145" class="largeIconFeature rounded-corners ">
+<div id="largeIconFeature2145" class="largeIconFeature ">
     
 
     
     
-                <h2 class="modHeader">Try it yourself</h2>
-            
-    
+    <h2 class="modHeader">Try it yourself</h2>
+
     
     
     
@@ -475,38 +470,86 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
             $(InkArrowRightLinkTextObj).siblings().hide();
         }
     });
-    $('#largeIconFeature2145 .modHeader, #largeIconFeature2145 h3, #largeIconFeature2145 p').click(function() {
-        $('#largeIconFeature2145 .redirect .icon').click();
-    });
+    //$('#largeIconFeature2145 .modHeader, #largeIconFeature2145 h3, #largeIconFeature2145 p').click(function() {
+        //$('#largeIconFeature2145 .redirect .icon').click();
+    //});
 </script>
                     </div>
                     
                     </div>
                 <div id="rightRail">
-                    <div id="basicBox9898" class="basicBox  rounded-corners ">
+                    <div class="">
+    
+    <style>
+
+
+#rightRail #basicBoxBlue .basicBox  {background-color: #F8F8F8 !important}
+
+#rightRail .basicBox p.icon.global-city-services {
+margin: 0;
+}
+
+#rightRail .basicBox p.icon.global-city-services em {
+margin-left: 20px;
+}
+
+#rightRail .basicBox p.icon.global-city-services, #rightRail .basicBox p.icon.global-city-services .fa  {font-size: 80px; color: #d9d9d5;}
+
+#rightRail .basicBox p.global-city-services {
+text-align: center;
+}
+
+#rightRail .basicBox h2.global-city-services {
+font-size:  1.5em;
+margin:10px 12px 10px 12px;
+padding:0px;
+text-align: center;
+
+}
+
+#rightRail .basicBox h4.global-city-services {
+font-weight: bold;
+margin:10px 12px 10px 12px;
+padding:0px;
+}
+
+#rightRail .basicBox hr.global-city-services {
+    border-right: 2px #e5e5e4 solid;
+opacity: 0.25;
+    margin: 1em;
+}
+
+</style>
+</div><div id="basicBox38814" class="basicBox  ">
     
     
     
-    <h2 class="modHeader">Ask. Tell. Connect.</h2>
+    
     
      
-    
-        <p style="text-align: center; margin-top: 8px;" id="cov-contact"><img alt="Phone 3-1-1 to ask, tell, and connect with the City" src="/images/cov/ui/Phone311.png" /></p>
-        <p style="text-align: center;">Outside Vancouver:<br />
-        604-873-7000</p>
-        <p style="text-align: center;"><a href="/your-government/contact-the-city-of-vancouver.aspx">Speak your own language</a></p>
-        <p style="text-align: center; padding-bottom: 0.5em; padding-left: 0px; padding-right: 0px; padding-top: 0.5em;"><a href="http://www.ecomm911.ca/non-emergency-calls/default.php" title="Find out when to phone 9-1-1" target="_blank"><img alt="When should you call 9-1-1? Click to find out" src="/images/cov/ui/911Emergencies.png" /></a>       <a href="http://www.telus.com/en/bc/get-help/accessibility/services/telus-relay-service/support.do" title="Hearing or speech difficulty? Use TTY to contact the City" target="_blank"><img alt="Deaf? Have difficulty speaking? Click to learn how to make a TTY call" src="/images/cov/ui/711TTY.png" /></a></p>
-    
+    <p class="icon global-city-services"><em aria-hidden="true" class="fa fa-laptop">&nbsp;</em></p>
+
+<h2 class="global-city-services">Access services</h2>
+
+<p class="global-city-services">Use our online tools to register for classes, pay bills, get permits, and more.</p>
+
+<hr class="global-city-services" />
+<h4 class="global-city-services"><a href="/online-services.aspx">Online services</a></h4>
+
+<h4 class="global-city-services"><a href="/vanconnect-desktop.aspx">Report issues now</a></h4>
+
+<h4 class="global-city-services"><a href="/download-apps.aspx">Download our apps</a></h4>
+
+<hr class="global-city-services" />
+<h4 class="global-city-services"><a href="/your-government/contact-the-city-of-vancouver.aspx">Find and contact us</a></h4>
     
      
-    
-        <a class="lnkArrowRight" href="/your-government/contact-the-city-of-vancouver.aspx">More ways to contact us</a>
     
 </div>
                     
                     
                     <span id="sectionRightRail">
-                        <div id="basicBox8938" class="basicBox  rounded-corners ">
+                        <div id="basicBox8938" class="basicBox  ">
     
     
     
@@ -524,7 +567,7 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
     
      
     
-</div><div id="basicBox8939" class="basicBox  rounded-corners ">
+</div><div id="basicBox8939" class="basicBox  ">
     
     
     
@@ -542,7 +585,7 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
     
      
     
-</div><div id="basicBox8937" class="basicBox  rounded-corners ">
+</div><div id="basicBox8937" class="basicBox  ">
     
     
     
@@ -555,21 +598,20 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
     
      
     
-</div><div id="basicBox20159" class="basicBox  rounded-corners ">
+</div><div id="basicBox20159" class="basicBox  ">
     
     
     
     <h2 class="modHeader">Annual report</h2>
     
      
-    
-        <p style="text-align: center;"><a href="/files/cov/archives-annual-report.pdf" target="_blank"><img alt="Archives annual report" src="/images/cov/content/archives-annual-report-cover.jpg" /></a></p>
-        <p><a href="/files/cov/archives-annual-report.pdf" target="_blank">Read our 2014 annual report</a> <img alt="PDF file" src="/images/cov/icons/pdf.png" /> (560 KB)</p>
-    
+    <p style="text-align: center;"><a href="/files/cov/archives-annual-report.pdf" target="_blank"><img alt="Archives annual report" height="212" src="/images/cov/content/archives-annual-report-cover.jpg" width="168" /></a></p>
+
+<p><a href="/files/cov/archives-annual-report.pdf" target="_blank">Read our 2015&nbsp;annual report</a> <img alt="PDF file" src="/images/cov/icons/pdf.png" /> (2.4&nbsp;MB)</p>
     
      
     
-</div><div id="basicBox12057" class="basicBox  rounded-corners ">
+</div><div id="basicBox12057" class="basicBox  ">
     
     
     
@@ -607,6 +649,7 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
             </p>
                         <p class="footer-map-link"><a target="_blank" href="https://vancouver.ca/map.aspx?q=453+West+12th+Ave,+Vancouver,+BC+V5K+1V4,+Canada">View Map</a></p>
                 <p class="footer-311"><span><i class="fa fa-phone"></i> 3-1-1</span></p>
+                <p class="footer-311"><span><i class="fa fa-phone"></i> 604-873-7000</span></p>
             </span>
             <span class="footer-map"><a data-mobile-link="https://vancouver.ca/map.aspx?q=453+West+12th+Ave,+Vancouver,+BC+V5K+1V4,+Canada" href="/your-government/getting-to-city-hall.aspx"><img alt="City Hall is located on the corner of Cambie Street and West 12th Avenue." title="City Hall is located on the corner of Cambie Street and West 12th Avenue." class="footer-map-img" src="/images/cov/ui/map-city-hall-homepage.jpg" /></a></span>
         </div>
@@ -704,6 +747,15 @@ notSelected"><a href="#" onclick="window.location = $(this).next().attr('href');
         <div style="display:none;">
             <a href="/your-government/about-the-archives.aspx">About the Archives</a><a href="/your-government/search-the-archives-holdings.aspx">Search the Archives holdings</a><a href="/your-government/holdings-descriptions.aspx">What's in our holdings</a><a href="/your-government/get-a-copy-of-an-archival-record.aspx">Get a copy of an archival document</a><a href="/your-government/research-at-the-archives.aspx">Research at the Archives</a>
         </div>
+        
+        <!--googleoff: all-->
+        
+        
+        
+    	                    <!-- BEGIN Optimal Workshop Intercept Snippet --><div id='owInviteSnippet' style='position:fixed;right:20px;bottom:20px;width:280px;padding:20px;margin:0;border-radius:6px;background:#F8F8F8;color:#444444;text-align:left;z-index:2200000000;opacity:0;transition:opacity 500ms;-webkit-transition:opacity 500ms;display:none;'><div id='owInviteMessage' style='padding:0;margin:0 0 20px 0;font-size:16px;'>Got a spare 5-10 minutes to help us improve our website?</div><a id='owInviteOk' href='https://78ez5ac2.optimalworkshop.com/treejack/4t0d3xe8-2' target='_blank' style='color:#5DA61B;font-size:16px;font-weight:bold;text-decoration:underline;'>I'll do it</a><a id='owInviteCancel' href='javascript:void(0)' onclick='this.parentNode.style.display="none";' style='color:#444444;font-size:14px;text-decoration:underline;float:right;'>No thanks</a></div><script>var surveyURL = ""; if (Math.random() > 0.5) { surveyURL="https://78ez5ac2.optimalworkshop.com/treejack/4t0d3xe8-2"; } else { surveyURL="https://78ez5ac2.optimalworkshop.com/treejack/4t0d3xe8-0-0-0-0"; } $("#owInviteOk").attr("href",surveyURL);var owOldOnload=window.onload;window.onload=function(){if(owOldOnload&&owOldOnload(),-1==document.cookie.indexOf('owInvite')){var o=new XMLHttpRequest;o.onloadend=function(){try{var o=document.getElementById('owInviteSnippet');this.response&&JSON.parse(this.response).active===!0&&(document.cookie='owInvite=Done',setTimeout(function(){o.style.display='block',o.style.opacity=1},2e3))}catch(e){}},o.open('POST','https://www.optimalworkshop.com/survey_status/treejack/6yxrr1ax/active'),o.send()}};</script><!-- END Optimal Workshop snippet -->
+                    
+        <!--googleon: all-->
+        
     </body>
     
 </html>

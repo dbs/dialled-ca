@@ -32,7 +32,7 @@
 <script type="text/javascript">//<![CDATA[
 	var startTimer = 0;
 	var mycarousel_itemList = [
-		{vig: '/upload/Attach/172_129/recipiendaire-25042016-214751.jpg', url: '/formation-collegiale/realisations/et-les-recipiendaires-sont.aspx', title: 'Et les récipiendaires sont...', desc: 'Félicitations aux finalistes et aux ...'},{vig: '/upload/Attach/172_129/loto-voyage-11032016-143222.jpg', url: '/formation-collegiale/realisations/loto-voyages-2016-2017.aspx', title: 'Loto-Voyages 2016-2017', desc: 'Elle est de retour avec plus de chances de gagner ...'},{vig: '/upload/Attach/172_129/sfc_formations_2016-14012016-113639.jpg', url: '/formation-collegiale/realisations/formation-continue.aspx', title: 'Formation continue', desc: 'Offre de formations pour les adultes et les ...'},{vig: '/upload/Attach/172_129/visuel_cegep.jpg', url: '/formation-collegiale/realisations/brochure-de-programmes-2017-2018.aspx', title: 'Brochure de programmes 2017-2018', desc: 'Voici la version imprimable de notre outil ...'},{vig: '/upload/Attach/172_129/je-donne_fondation.jpg', url: '/formation-collegiale/realisations/campagne-de-la-communaute-collegiale.aspx', title: 'Campagne de la communauté collégiale', desc: 'Enrichir l\'éducation de demain'},{vig: '/upload/Attach/172_129/cegep.jpg', url: '/formation-collegiale/realisations/le-cegep-un-atout-superieur.aspx', title: 'Le CÉGEP un atout supérieur', desc: 'Nouvelle campagne publicitaire du réseau collégial'},{vig: '/upload/Attach/172_129/section-parent.jpg', url: '/formation-collegiale/realisations/section-pour-les-parents-.aspx', title: 'Section Pour les parents !', desc: 'Toute une série de conseils utiles pour les ...'},{vig: '/upload/Attach/172_129/trouve-toi.jpg', url: '/formation-collegiale/realisations/trouve-ta-saveur-.aspx', title: 'Trouve ta saveur !', desc: 'Voyez nos nouveaux vidéos sur la formation ...'}
+		{vig: '/upload/Attach/172_129/realisation_rac.jpg', url: '/formation-collegiale/realisations/reconnaissance-des-acquis-2016-2017.aspx', title: 'Reconnaissance des acquis 2016-2017', desc: '(RAC)'},{vig: '/upload/Attach/172_129/loto-voyage-11032016-143222.jpg', url: '/formation-collegiale/realisations/loto-voyages-2016-2017.aspx', title: 'Loto-Voyages 2016-2017', desc: 'Elle est de retour avec plus de chances de gagner ...'},{vig: '/upload/Attach/172_129/cegep_web_miniature.jpg', url: '/formation-collegiale/realisations/depliant-des-programmes-2017-2018.aspx', title: 'Dépliant des programmes 2017-2018', desc: 'Voici la version imprimable de notre outil ...'},{vig: '/upload/Attach/172_129/je-donne_fondation.jpg', url: '/formation-collegiale/realisations/campagne-de-la-communaute-collegiale.aspx', title: 'Campagne de la communauté collégiale', desc: 'Enrichir l\'éducation de demain'},{vig: '/upload/Attach/172_129/cegep.jpg', url: '/formation-collegiale/realisations/le-cegep-un-atout-superieur.aspx', title: 'Le CÉGEP un atout supérieur', desc: 'Nouvelle campagne publicitaire du réseau collégial'},{vig: '/upload/Attach/172_129/section-parent.jpg', url: '/formation-collegiale/realisations/section-pour-les-parents-.aspx', title: 'Section Pour les parents !', desc: 'Toute une série de conseils utiles pour les ...'},{vig: '/upload/Attach/172_129/trouve-toi.jpg', url: '/formation-collegiale/realisations/trouve-ta-saveur-.aspx', title: 'Trouve ta saveur !', desc: 'Voyez nos nouveaux vidéos sur la formation ...'}
 	];
 	$(document).ready(function() {
 		initCarousel();
@@ -270,16 +270,17 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 
 			
 		</li>
-		<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/cegeps-en-spectacle.aspx" id="ctl00_hdrNav12" title="Vie étudiante et sportive"><strong>Vie étudiante et sportive</strong></a>
+		<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/improvisation.aspx" id="ctl00_hdrNav12" title="Vie étudiante et sportive"><strong>Vie étudiante et sportive</strong></a>
 			<ul>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/cegeps-en-spectacle.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_aLink" class="hasChild">Activités socioculturelles</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/improvisation.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_aLink" class="hasChild">Activités socioculturelles</a>
 					<ul>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/cegeps-en-spectacle.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl01_aLink">Cégeps en spectacle</a></li>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/comedie-musicale.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl02_aLink">Comédie musicale</a></li>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/galerie-dart.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl03_aLink">Galerie d'art</a></li>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/midis-concerts.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl04_aLink">Midis-concerts</a></li>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/mercredis-des-sciences-humaines.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl05_aLink">Mercredis des sciences humaines</a></li>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/theatre-etudiant-troupe-sans-nom.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl06_aLink">Théâtre étudiant-Troupe sans nom</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/improvisation.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl01_aLink">Improvisation</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/cegeps-en-spectacle.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl02_aLink">Cégeps en spectacle</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/comedie-musicale.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl03_aLink">Comédie musicale</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/galerie-dart.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl04_aLink">Galerie d'art</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/midis-concerts.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl05_aLink">Midis-concerts</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/mercredis-des-sciences-humaines.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl06_aLink">Mercredis des sciences humaines</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/activites-socioculturelles/theatre-etudiant-troupe-sans-nom.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl01_rMenu_ctl07_aLink">Théâtre étudiant-Troupe sans nom</a></li>
 					</ul>
 				</li>
 				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/grands-evenements/remise-des-diplomes.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl02_aLink" class="hasChild">Grands évènements</a>
@@ -299,41 +300,38 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/engagement-etudiant.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl04_aLink">Engagement étudiant</a>
 					
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/forces-avenir.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl05_aLink">Forces Avenir</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/cafe-etudiant.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl05_aLink">Café étudiant</a>
 					
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/cafe-etudiant.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl06_aLink">Café étudiant</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/scene-1425-a-victoriaville.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl06_aLink">Scène 1425 à Victoriaville</a>
 					
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/scene-1425-a-victoriaville.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl07_aLink">Scène 1425 à Victoriaville</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/la-vie-a-victoriaville.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl07_aLink">La vie à Victoriaville</a>
 					
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/la-vie-a-victoriaville.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl08_aLink">La vie à Victoriaville</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/equipes-sportives-vulkins.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl08_aLink">Équipes sportives Vulkins</a>
 					
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/equipes-sportives-vulkins.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl09_aLink">Équipes sportives Vulkins</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/la-classique-mauve.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl09_aLink">La Classique Mauve</a>
 					
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/la-classique-mauve.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl10_aLink">La Classique Mauve</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/intramural.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl10_aLink">Intramural</a>
 					
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/intramural.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl11_aLink">Intramural</a>
-					
-				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/sports-etudes/sport-intercollegial.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl12_aLink" class="hasChild">Sports-études</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/sports-etudes/sport-intercollegial.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl11_aLink" class="hasChild">Sports-études</a>
 					<ul>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/sports-etudes/sport-intercollegial.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl12_rMenu_ctl01_aLink">Sport intercollégial</a></li>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/sports-etudes/tigres-de-victoriaville-lhjmq.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl12_rMenu_ctl02_aLink">Tigres de Victoriaville LHJMQ</a></li>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/sports-etudes/titan-de-princeville-lhjaaaq.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl12_rMenu_ctl03_aLink">Titan de Princeville LHJAAAQ</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/sports-etudes/sport-intercollegial.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl11_rMenu_ctl01_aLink">Sport intercollégial</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/sports-etudes/tigres-de-victoriaville-lhjmq.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl11_rMenu_ctl02_aLink">Tigres de Victoriaville LHJMQ</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/sports-etudes/titan-de-princeville-lhjaaaq.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl11_rMenu_ctl03_aLink">Titan de Princeville LHJAAAQ</a></li>
 					</ul>
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/engagement-sport-etudiant.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl13_aLink">Engagement sport-étudiant</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/engagement-sport-etudiant.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl12_aLink">Engagement sport-étudiant</a>
 					
 				</li>
-				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/installations-sportives/pavillon-dactivites-physiques.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl14_aLink" class="hasChild">Installations sportives</a>
+				<li><a href="/formation-collegiale/vie-etudiante-et-sportive/installations-sportives/pavillon-dactivites-physiques.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl13_aLink" class="hasChild">Installations sportives</a>
 					<ul>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/installations-sportives/pavillon-dactivites-physiques.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl14_rMenu_ctl01_aLink">Pavillon d'activités physiques</a></li>
-						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/installations-sportives/salle-de-conditionnement-physique.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl14_rMenu_ctl02_aLink">Salle de conditionnement physique</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/installations-sportives/pavillon-dactivites-physiques.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl13_rMenu_ctl01_aLink">Pavillon d'activités physiques</a></li>
+						<li><a href="/formation-collegiale/vie-etudiante-et-sportive/installations-sportives/salle-de-conditionnement-physique.aspx" id="ctl00_ucMenuVieEtudiante_rMenu_ctl13_rMenu_ctl02_aLink">Salle de conditionnement physique</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -486,19 +484,37 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 		<div id="evnThumbs">
 		    <ul class="thumbs noscript">
 				<li>
-					<a href="/upload/Attach/561_256/aec_dao-mtl-25042016-155743.jpg" id="ctl00_cphContenu_rEvents_ctl01_aCarrousel" class="thumb" title="AEC en Conception et dessin assistés par ordinateur">1</a>
+					<a href="/upload/Attach/561_256/patrice-dufour.jpg" id="ctl00_cphContenu_rEvents_ctl01_aCarrousel" class="thumb" title="Exposition de l'artiste Claude Girard">1</a>
 					<div class="caption">
-						<h2><a href="/formation-collegiale/evenements/aec-en-conception-et-dessin-assistes-par-ordinateur.aspx" id="ctl00_cphContenu_rEvents_ctl01_aTitle">AEC en Conception et dessin assistés par ordinateur</a></h2>
-						<p>Le Service de formation continue du Cégep de Victoriaville offrira dès le 19 septembre 2016 l'attestation d'études collégiales en Conception et dessin assistés par ordinateur spécialisée dans le secteur du meuble et du bois ouvré, à son campus de Montréal, situé au 5445 avenue De Lorimier.</p>
-						<a href="/formation-collegiale/evenements/aec-en-conception-et-dessin-assistes-par-ordinateur.aspx" id="ctl00_cphContenu_rEvents_ctl01_aMore" class="evnDetails"><span>Plus de détails</span></a>
+						<h2><a href="/formation-collegiale/evenements/exposition-de-lartiste-claude-girard.aspx" id="ctl00_cphContenu_rEvents_ctl01_aTitle">Exposition de l'artiste Claude Girard</a></h2>
+						<p>Du 7 septembre au 12 octobre, venez admirer les oeuvres de l'artiste Patrice Dufour à la Galerie d'art du Cégep. Le vernissage aura lieu le 7 septembre, à 13 h 30, en présence de l'artiste.
+
+</p>
+						<a href="/formation-collegiale/evenements/exposition-de-lartiste-claude-girard.aspx" id="ctl00_cphContenu_rEvents_ctl01_aMore" class="evnDetails"><span>Plus de détails</span></a>
 					</div>
 				</li>
 				<li>
-					<a href="/upload/Attach/561_256/aec-eben_561x256.jpg" id="ctl00_cphContenu_rEvents_ctl02_aCarrousel" class="thumb" title="AEC Techniques d'ébénisterie">2</a>
+					<a href="/upload/Attach/561_256/ass_parent_sept16.jpg" id="ctl00_cphContenu_rEvents_ctl02_aCarrousel" class="thumb" title="Assemblée générale de parents">2</a>
 					<div class="caption">
-						<h2><a href="/formation-collegiale/evenements/aec-techniques-debenisterie.aspx" id="ctl00_cphContenu_rEvents_ctl02_aTitle">AEC Techniques d'ébénisterie</a></h2>
-						<p>Il reste encore quelques places disponibles pour l'AEC Techniques d'ébénisterie offerte à l'École nationale du meuble et de l'ébénisterie à Montréal. Les cours débutent le 25 août 2016, à raison de 12 à 16 heures par semaine (soir et weekend). De la conception à la fabrication, en passant par la planification et l'organisation du travail, vous verrez l'ensemble du processus de fabrication de meubles et de pièces de menuiserie architecturale. Pour vous inscrire, téléphonez au 514 528-8687.</p>
-						<a href="/formation-collegiale/evenements/aec-techniques-debenisterie.aspx" id="ctl00_cphContenu_rEvents_ctl02_aMore" class="evnDetails"><span>Plus de détails</span></a>
+						<h2><a href="/formation-collegiale/evenements/assemblee-generale-de-parents.aspx" id="ctl00_cphContenu_rEvents_ctl02_aTitle">Assemblée générale de parents</a></h2>
+						<p>Lors de cette soirée, une brève présentation du Cégep de Victoriaville, de ses services offerts ainsi que du rôle d'administrateur au conseil d'administration sera faite par le directeur général et le directeur des études.De plus, il y aura l'élection de parents qui siègeront au conseil d'administration du Cégep (...)</p>
+						<a href="/formation-collegiale/evenements/assemblee-generale-de-parents.aspx" id="ctl00_cphContenu_rEvents_ctl02_aMore" class="evnDetails"><span>Plus de détails</span></a>
+					</div>
+				</li>
+				<li>
+					<a href="/upload/Attach/561_256/evenement_web-07092016-103919.jpg" id="ctl00_cphContenu_rEvents_ctl03_aCarrousel" class="thumb" title="AEC en Conception et dessin assistés par ordinateur">3</a>
+					<div class="caption">
+						<h2><a href="/formation-collegiale/evenements/aec-en-conception-et-dessin-assistes-par-ordinateur.aspx" id="ctl00_cphContenu_rEvents_ctl03_aTitle">AEC en Conception et dessin assistés par ordinateur</a></h2>
+						<p>Le Service de formation continue du Cégep de Victoriaville offrira en janvier 2017 l'attestation d'études collégiales en Conception et dessin assistés par ordinateur spécialisée dans le secteur du meuble et du bois ouvré. Rencontre d'information obligatoire : mardi 4 octobre à 19 h.</p>
+						<a href="/formation-collegiale/evenements/aec-en-conception-et-dessin-assistes-par-ordinateur.aspx" id="ctl00_cphContenu_rEvents_ctl03_aMore" class="evnDetails"><span>Plus de détails</span></a>
+					</div>
+				</li>
+				<li>
+					<a href="/upload/Attach/561_256/evenements2016-30052016-214522.jpg" id="ctl00_cphContenu_rEvents_ctl04_aCarrousel" class="thumb" title="Toges, mortiers et réussite !">4</a>
+					<div class="caption">
+						<h2><a href="/formation-collegiale/evenements/toges-mortiers-et-reussite-.aspx" id="ctl00_cphContenu_rEvents_ctl04_aTitle">Toges, mortiers et réussite !</a></h2>
+						<p>Le samedi 29 octobre prochain sera un grand jour pour plus de 400 étudiantes et étudiants du Cégep de Victoriaville et de l'École nationale du meuble et de l'ébénisterie, aussi bien de Montréal que de Victoriaville, qui ont gradué au cours de la dernière année. Oui, ce sera un grand jour puisqu'ils ont été invités à la traditionnelle cérémonie de remise des diplômes, LEUR diplôme! Pour information : 819 758-6401 poste 2448</p>
+						<a href="/formation-collegiale/evenements/toges-mortiers-et-reussite-.aspx" id="ctl00_cphContenu_rEvents_ctl04_aMore" class="evnDetails"><span>Plus de détails</span></a>
 					</div>
 				</li>
 			</ul>
@@ -511,26 +527,26 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 		
 		<ul class="clearfix">
 			<li>
-				<a href="/formation-collegiale/nouvelles/communiques-de-presse/de-genereux-donateurs-se-joignent-a-la-fondation-pour-remettre-30-000--en-bourses	.aspx" id="ctl00_cphContenu_rNews_ctl01_aLink" class="clearfix">
-					<img src="/upload/Attach/84_63/donateurs-portail.jpg" id="ctl00_cphContenu_rNews_ctl01_imgMain" alt="De généreux donateurs se joignent à la Fondation pour remettre 30 000 $ en bourses	" />
+				<a href="/formation-collegiale/nouvelles/communiques-de-presse/eqmbo-entreprises-fait-place-a-inovem.aspx" id="ctl00_cphContenu_rNews_ctl01_aLink" class="clearfix">
+					<img src="/upload/Attach/84_63/inovem_640x480.jpg" id="ctl00_cphContenu_rNews_ctl01_imgMain" alt="EQMBO-Entreprises fait place à INOVEM" />
 					
-					<strong><em>3 mai 2016</em>De généreux donateurs se joignent à la Fondation pour remettre 30 000 $ en bourses	</strong>
-					
-				</a>
-			</li>
-			<li>
-				<a href="/formation-collegiale/nouvelles/communiques-de-presse/en-direct-du-champ---un-nouveau-service-de-bulletins-techniques.aspx" id="ctl00_cphContenu_rNews_ctl02_aLink" class="clearfix">
-					<img src="/upload/Attach/84_63/cetab-16022011-142454.jpg" id="ctl00_cphContenu_rNews_ctl02_imgMain" alt="En direct du champ : un nouveau service de bulletins techniques" />
-					
-					<strong><em>18 avr. 2016</em>En direct du champ : un nouveau service de bulletins techniques</strong>
+					<strong><em>25 août 2016</em>EQMBO-Entreprises fait place à INOVEM</strong>
 					
 				</a>
 			</li>
 			<li>
-				<a href="/formation-collegiale/nouvelles/communiques-de-presse/une-direction-distincte-pour-lecole-nationale-du-meuble-et-de-lebenisterie.aspx" id="ctl00_cphContenu_rNews_ctl03_aLink" class="clearfix">
-					<img src="/medias/communs/acc_nws_placeholder.jpg" id="ctl00_cphContenu_rNews_ctl03_imgMain" />
+				<a href="/formation-collegiale/nouvelles/communiques-de-presse/yves-dessureault-accede-a-la-direction-dinovem.aspx" id="ctl00_cphContenu_rNews_ctl02_aLink" class="clearfix">
+					<img src="/upload/Attach/84_63/640x480_yd.jpg" id="ctl00_cphContenu_rNews_ctl02_imgMain" alt="Yves Dessureault accède à la direction d'Inovem" />
 					
-					<strong><em>11 avr. 2016</em>Une direction distincte pour l'École nationale du meuble et de l'ébénisterie</strong>
+					<strong><em>25 août 2016</em>Yves Dessureault accède à la direction d'Inovem</strong>
+					
+				</a>
+			</li>
+			<li>
+				<a href="/formation-collegiale/nouvelles/communiques-de-presse/jean-duval-nomme-coordonnateur-du-cetab-.aspx" id="ctl00_cphContenu_rNews_ctl03_aLink" class="clearfix">
+					<img src="/upload/Attach/84_63/jean-duval.jpg" id="ctl00_cphContenu_rNews_ctl03_imgMain" alt="Jean Duval nommé coordonnateur du CETAB+" />
+					
+					<strong><em>22 juin 2016</em>Jean Duval nommé coordonnateur du CETAB+</strong>
 					
 				</a>
 			</li>
@@ -631,7 +647,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
 
 <div id="mstrFtrPrint" class="clearfix">
 	<span><strong>Cégep de Victoriaville</strong><br />475, rue Notre-Dame Est<br />Victoriaville (Québec) G6P 4B3<br /><br />Téléphone : 819 758-6401</span>	
-	<span><br />Courriel : information @ cgpvicto.qc.ca<br />Site web : www.cgpvicto.qc.ca<br /><br />Date d'impression : lundi 9 mai 2016</span>
+	<span><br />Courriel : information @ cgpvicto.qc.ca<br />Site web : www.cgpvicto.qc.ca<br /><br />Date d'impression : dimanche 11 septembre 2016</span>
 </div>
 
 <div id="mstrCopy">

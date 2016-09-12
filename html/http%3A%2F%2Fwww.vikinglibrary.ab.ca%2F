@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Viking Municipal Library of Viking, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Viking, Alberta, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Viking Municipal Library of Viking, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Viking, Alberta, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.vikinglibrary.ab.ca/" />
@@ -34,10 +38,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=""/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -45,7 +47,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Viking Municipal Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Viking Municipal Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -258,7 +260,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -266,6 +267,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -280,6 +293,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -300,9 +319,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -334,45 +352,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/155" class="blog_link active_page" title="Library  News">Library  News</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=155" class="blog_link active_page" title="Library  News"><span>Library  News</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/155" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/155" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=155" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/99" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -399,10 +397,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -417,9 +415,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.vikinglibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/New-at-the-Library" title="New at the library"><span>New at the Library</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/Staff" title="Staff"><span>Staff</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/Hours-and-Patron-Info" title="Hours and patron info"><span>Hours and Patron Info</span></a></li>
-  
 </ul>
 
 	</nav>
@@ -495,7 +491,7 @@ if (typeof jQuery != 'undefined') {
 				
 				
 				<div class="slideContent">
-					<img class="bigImg" alt="012" src="http://files.townlife.com/public/uploads/photos/472846/012_xlarge.JPG" />
+					<img class="bigImg" alt="010" src="http://files.townlife.com/public/uploads/photos/491717/010_xlarge.JPG" />
 					
 					
 					
@@ -505,7 +501,7 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="003" src="http://files.townlife.com/public/uploads/photos/472260/003_xlarge.JPG" />
+					<img class="bigImg" alt="005" src="http://files.townlife.com/public/uploads/photos/488321/005_xlarge.JPG" />
 					
 					
 					
@@ -515,47 +511,7 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="002" src="http://files.townlife.com/public/uploads/photos/472274/002_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="009" src="http://files.townlife.com/public/uploads/photos/472835/009_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="004" src="http://files.townlife.com/public/uploads/photos/472802/004_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="004" src="http://files.townlife.com/public/uploads/photos/476791/004_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="003" src="http://files.townlife.com/public/uploads/photos/476802/003_xlarge.JPG" />
+					<img class="bigImg" alt="017" src="http://files.townlife.com/public/uploads/photos/488310/017_xlarge.JPG" />
 					
 					
 					
@@ -575,7 +531,7 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="005" src="http://files.townlife.com/public/uploads/photos/476813/005_xlarge.JPG" />
+					<img class="bigImg" alt="013" src="http://files.townlife.com/public/uploads/photos/476846/013_xlarge.JPG" />
 					
 					
 					
@@ -585,7 +541,47 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="006" src="http://files.townlife.com/public/uploads/photos/476824/006_xlarge.JPG" />
+					<img class="bigImg" alt="008" src="http://files.townlife.com/public/uploads/photos/491728/008_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="029" src="http://files.townlife.com/public/uploads/photos/500429/029_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="031" src="http://files.townlife.com/public/uploads/photos/500440/031_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="030" src="http://files.townlife.com/public/uploads/photos/500451/030_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="f3917eb315815a98ecfcb186a5313a" src="http://files.townlife.com/public/uploads/photos/501863/f3917eb315815a98ecfcb186a5313a4d_1___2__xlarge.jpg" />
 					
 					
 					
@@ -620,82 +616,77 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6347"><img alt="004" src="http://files.townlife.com/public/asset_files/7372/thumb_400/004.JPG?1461863268" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7734/xlarge/IMG_9093.JPG?1472078363" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Img_9093" src="http://files.townlife.com/public/asset_files/7734/thumb_400/IMG_9093.JPG?1472078363" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6347">				
-	  Library Time Line			 			
-        </a>
-        <p>Interesting to see the History of your Library!
+          <a class="post_title" href="/blogs/show_entry/6916">
+	    Summer Fun 2016
+          </a>
+        <p>The Summer Reading Program 2016 has officially come to an end&nbsp;and what a great success it was!
+Thank you&nbsp;to all the kids who participate...
+        <!-- <a href="/blogs/show_entry/6916">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7733/xlarge/003.JPG?1472077386" class="image-popup-vertical-fit" target="_blank">
+              <img alt="003" src="http://files.townlife.com/public/asset_files/7733/thumb_400/003.JPG?1472077386" />
+            </a>
+          </div>
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6914">
+	    Sept 14
+          </a>
+        <p>September 14/2016
         <!--  --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6346"><img alt="006" src="http://files.townlife.com/public/asset_files/7371/thumb_400/006.JPG?1461862623" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7731/xlarge/007.JPG?1472077195" class="image-popup-vertical-fit" target="_blank">
+              <img alt="007" src="http://files.townlife.com/public/asset_files/7731/thumb_400/007.JPG?1472077195" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6346">				
-	  Volunteer Appreciation			 			
-        </a>
-        <p>The Viking Library, board, and Friends of the Viking Library were invited to a community BBQ.&nbsp;April 13, 2016
+          <a class="post_title" href="/blogs/show_entry/6913">
+	    Mary Lambert
+          </a>
+        <p>Mary Lambert
         <!--  --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6197"><img alt="001" src="http://files.townlife.com/public/asset_files/7256/thumb_400/001.JPG?1458844528" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7729/xlarge/025.JPG-2.jpg?1472073496" class="image-popup-vertical-fit" target="_blank">
+              <img alt="025.jpg-2" src="http://files.townlife.com/public/asset_files/7729/thumb_400/025.JPG-2.jpg?1472073496" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6197">				
-	  Its Here!!!! Downton Abbey Season 6			 			
-        </a>
-        <p>Place a hold or give us a call and we will place a hold for you.
+          <a class="post_title" href="/blogs/show_entry/6912">
+	    Sprinkles
+          </a>
+        <p>A Great Time with Sprinkles!!!!!
         <!--  --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5958"><img alt="011" src="http://files.townlife.com/public/asset_files/7108/thumb_400/011.JPG?1455236916" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7713/xlarge/cow_bus.jpg?1471559975" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Cow_bus" src="http://files.townlife.com/public/asset_files/7713/thumb_400/cow_bus.jpg?1471559975" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5958">				
-	  Blind Date with a Book			 			
-        </a>
-        <p>Go on a Blind date with a Book, now on at your Library, do a report on your date for a chance to win a Valentine Prize! 
-Sorry this is for Adults ...
-        <!-- <a href="/blogs/show_entry/5958">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6891">
+	    COW BUS
+          </a>
+        <p>ITS&nbsp;COMING!!!!!! The Cow Bus is Coming!!!!!
+        <!--  --></p>
 	</div>      
 	</li>
-    
-  
-    
-      <li class="new_post">
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5563">				
-	  New Faces			 			
-        </a>
-        <p>Some new Faces at the Library - Crystal Pollington :&nbsp;Assistant Library Manager
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n...
-        <!-- <a href="/blogs/show_entry/5563">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/155">+ MORE</a></h6>
 </div>
@@ -706,34 +697,63 @@ Sorry this is for Adults ...
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/155">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/155">Upcoming Events</a> 
-        <span class="latest_events_count">(1)</span>
+        <span class="latest_events_count">(4)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>09</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>14</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35508">Mothers Day Contest</a>
+            <a href="/calendars/show_event/36448">COW BUS!!!!!</a>
             <span class="upcoming_time_frame">
-              (today)
-              
+              (in 3 days)
+                &nbsp;from  2:00 PM
+                  &nbsp;to  4:00 PM
             </span>
           </li>
-        
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>14</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37202">MARY LAMBERT- Sponsored By The Friends of the Viking Library</a>
+            <span class="upcoming_time_frame">
+              (in 3 days)
+                &nbsp;from  4:00 PM
+                  &nbsp;to  5:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>14</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37203">COW BUS!!!!!</a>
+            <span class="upcoming_time_frame">
+              (in 3 days)
+                &nbsp;from  2:00 PM
+                  &nbsp;to  4:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>15</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37326">Vialta Lodge</a>
+            <span class="upcoming_time_frame">
+              (in 4 days)
+                &nbsp;from  2:00 PM
+                  &nbsp;to  3:00 PM
+            </span>
+          </li>
       </ul>
       <h6 class="more"><a href="/calendars/table/155">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -741,77 +761,40 @@ Sorry this is for Adults ...
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_741">
-	      
-              
-	      
+	    <dd id="action_741">
 	        <img alt="Call (780) 336-4992" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 336-4992" />
 		
 		Call (780) 336-4992
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_742">
-	      
-              
-	      
+		    <dd id="action_742">
 	        <img alt="Fax (780) 336-4992" class="action_steps_image" src="/images/icons/fff/printer.png?1445483283" title="Fax (780) 336-4992" />
 		
 		Fax (780) 336-4992
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/155" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1507&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1507&amp;return_url=http%3A%2F%2Fwww.vikinglibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=155" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.vikinglibrary.ab.ca%2F&amp;site_id=155" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -827,27 +810,17 @@ Sorry this is for Adults ...
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.town.viking.ab.ca" class="action_steps_link" target="_blank">Town of Viking</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.beaver.ab.ca" class="action_steps_link" target="_blank">Beaver County</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -864,16 +837,10 @@ Sorry this is for Adults ...
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -885,12 +852,8 @@ Sorry this is for Adults ...
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
-    
           <!-- LIQUID LAYOUT -->    
     <ul class="social">
-        
           <li id="facebook">
             <div id="fb-root"></div>
             <script>
@@ -923,24 +886,15 @@ Sorry this is for Adults ...
             </script>
             <div class="fb-like" data-href="http://www.vikinglibrary.ab.ca/" data-width="180" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
           </li>
-        
-        
 
-        
 
-        
 
-        
           <li id="facebookshare">
             <div class="fb-share-button" data-layout="button_count" data-href="http://www.vikinglibrary.ab.ca/"></div>
           </li>
-        
     </ul>
 
-    
-    
 
-  
 </div>
 
  </span>
@@ -967,146 +921,8 @@ Sorry this is for Adults ...
 				
 					<div> <!-- start book group of 5 -->
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780425259856&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780425259856.gif" />Dark witch :</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780765335241&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780765335241.gif" />Fingal O'Reilly, Irish doctor :</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312655471&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780312655471.gif" />How the light gets in :</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780758284938&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780758284938.gif" />Classified :</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781400065943&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781400065943.gif" />The all-girl filling station's last reunion :</a>
-				
-					
-					</div> <!-- end book group of 5 -->
-						<div>
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781455521319&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781455521319.gif" />King and Maxwell.</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780553808032&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780553808032.gif" />Innocence :</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250027658&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781250027658.gif" />Accused :</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781455527205&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781455527205.gif" />Identical :</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780345528896&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780345528896.gif" />Starry night :</a>
-				
-					
-					</div> <!-- end book group of 5 -->
-						<div>
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385537131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780385537131.gif" />Sycamore row :</a>
-				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385344340&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780385344340.gif" />Never go back :</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399164422&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780399164422.gif" />Thankless in death.</a>
 				
 				
 			
@@ -1129,8 +945,83 @@ Sorry this is for Adults ...
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781451678710&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781451678710.gif" />Hunted.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780345505750&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780345505750.gif" />Killer :</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250027658&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781250027658.gif" />Accused :</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780758284938&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780758284938.gif" />Classified :</a>
+				
+					
+					</div> <!-- end book group of 5 -->
+						<div>
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316210911&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780316210911.gif" />Cross my heart.</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780765335241&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780765335241.gif" />Fingal O'Reilly, Irish doctor :</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316211123&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780316211123.gif" />Private L.A.</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385344340&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780385344340.gif" />Never go back :</a>
 				
 				
 			
@@ -1156,8 +1047,20 @@ Sorry this is for Adults ...
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399164422&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780399164422.gif" />Thankless in death.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250020024&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781250020024.gif" />Silencing Eve :</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781455501519&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781455501519.gif" />Deadline :</a>
 				
 				
 			
@@ -1180,8 +1083,8 @@ Sorry this is for Adults ...
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316211239&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780316211239.gif" />NYPD Red 2.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780553808032&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780553808032.gif" />Innocence :</a>
 				
 				
 			
@@ -1195,18 +1098,6 @@ Sorry this is for Adults ...
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399157578&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
 			  <img src="/book_covers/9780399157578.gif" />Dust :</a>
 				
-				
-			
-		
-				
-					
-					 
-					 
-					 
-				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250020024&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781250020024.gif" />Silencing Eve :</a>
-				
 					
 					</div> <!-- end book group of 5 -->
 						<div>
@@ -1219,8 +1110,8 @@ Sorry this is for Adults ...
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781455501519&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781455501519.gif" />Deadline :</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781455521319&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781455521319.gif" />King and Maxwell.</a>
 				
 				
 			
@@ -1231,8 +1122,32 @@ Sorry this is for Adults ...
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316211123&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780316211123.gif" />Private L.A.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312655471&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780312655471.gif" />How the light gets in :</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780345528896&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780345528896.gif" />Starry night :</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385537131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780385537131.gif" />Sycamore row :</a>
 				
 				
 			
@@ -1246,6 +1161,9 @@ Sorry this is for Adults ...
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780345807953&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
 			  <img src="/book_covers/9780345807953.gif" />Bridget Jones :</a>
 				
+					
+					</div> <!-- end book group of 5 -->
+						<div>
 				
 			
 		
@@ -1255,8 +1173,8 @@ Sorry this is for Adults ...
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780345505750&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780345505750.gif" />Killer :</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781455527205&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781455527205.gif" />Identical :</a>
 				
 				
 			
@@ -1267,8 +1185,44 @@ Sorry this is for Adults ...
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316210911&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780316210911.gif" />Cross my heart.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781451678710&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781451678710.gif" />Hunted.</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781400065943&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781400065943.gif" />The all-girl filling station's last reunion :</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316211239&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780316211239.gif" />NYPD Red 2.</a>
+				
+				
+			
+		
+				
+					
+					 
+					 
+					 
+				
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780425259856&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780425259856.gif" />Dark witch :</a>
 				
 					
 						</div><!-- end book group of 5 -->
@@ -1291,7 +1245,7 @@ Sorry this is for Adults ...
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1333,61 +1287,39 @@ Sorry this is for Adults ...
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.vikinglibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/New-at-the-Library" title="New at the library"><span>New at the Library</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/Staff" title="Staff"><span>Staff</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li><a href="http://www.vikinglibrary.ab.ca/Hours-and-Patron-Info" title="Hours and patron info"><span>Hours and Patron Info</span></a></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/155" class="blog_link active_page" title="Library  News">Library  News</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=155" class="blog_link active_page" title="Library  News"><span>Library  News</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/155" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/155" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=155" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/99" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1396,7 +1328,7 @@ Sorry this is for Adults ...
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1406,41 +1338,23 @@ Sorry this is for Adults ...
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/155" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1577,6 +1491,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1603,3 +1542,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

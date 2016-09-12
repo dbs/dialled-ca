@@ -5,273 +5,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="EditTitleRegion" -->
 <title>Bracebridge Public Library</title>
+
 <!-- InstanceEndEditable -->
 <link href="css/default.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width; initial-scale=0.7; maximum-scale=1;">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
 <!--[if gte IE 7]>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #nav li a {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 padding: 0px 19px;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <![endif]-->
-
 <!--custom form-->
-
 <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" media="screen and (max-device-width:767px)" href="css/responsivemultimenu.css" type="text/css"/>
+<script type="text/javascript" src="js/responsivemultimenu.js"></script>
 <script type="text/javascript" src="js/custom-form-elements.js"></script>
-
 <!-- for dropdown -->
-
 <script type="text/javascript" src="js/custom.js"></script>
-
 <!-- /for dropdown -->
-
 <!-- for font sizing -->
-
 <script type="text/javascript" language="javascript" src="js/jquery.jfontsize-1.0.js"></script>
-
 <!-- /for font sizing -->
-
 <!--for google analytics-->
-
 <script type="text/javascript">
-
-
-
-
-
-
-
 var _gaq = _gaq || [];
-
-
-
 _gaq.push(['_setAccount', 'UA-40088832-1']);
-
-
 
 _gaq.push(['_trackPageview']);
 
-
-
-
-
-
-
 (function() {
-
-
 
 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 
-
-
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-
-
 
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 
-
-
 })();
-
-
 
 </script>
 
 <!--/for google analytics-->
-
+    <script type="text/javascript">
+          $(document).ready(function() { var randomImages = ['1','2','3','4']; var rndNum = Math.floor(Math.random() * randomImages.length); $("div.picture").css({ background: "url(bannerimg/" + randomImages[rndNum] + ".png) no-repeat" }); });
+          </script>
+<script>
+    $(document).ready(function(){
+	$('#nav').slicknav();
+});
+    </script>
 </head>
 
 <body>
@@ -289,330 +76,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
   
   <div class="topnav"> <span class="whiteLeft"></span>
     <div class="topNavigation"> <span class="topNavigationLeft"></span>
-      <div class="topNavigationMid"> 
-        
-        <!--<ul class="navDrop">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <li><a href="../index.html">Home</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <li><a href="../about-the-library/">About the Library</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <ul class="subnav">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <li><a href="../about-the-library/membership&amp;policies.html">Membership & Policies</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <li><a href="../about-the-library/purpose-and-strategic-plan.html">Purpose &amp; Strategic Plan</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <li><a href="../about-the-library/gallery.html">Photo Gallery</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <li class="last"><a href="../contact-us/">Contact Us</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          </ul>-->
-        
+      <div class="topNavigationMid">    
         <ul id="topnav">
           <li><a href="index.php">Home</a></li>
           <li><a href="about-the-library/">About the Library</a>
@@ -641,36 +105,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <div class="textSize"> <span class="txtSizeLeft"></span> <span class="txtSizeMid"> 
           
           <!--<div id="fontsizer"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <a href="#">A- / </a><a href="#">A+</a>--> 
           
@@ -740,9 +174,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <div class="bannerBg">
   <div class="banner">
     <div class="whiteBg"> 
-      <script type="text/javascript">
-          $(document).ready(function() { var randomImages = ['1','2','3','4']; var rndNum = Math.floor(Math.random() * randomImages.length); $("div.picture").css({ background: "url(bannerimg/" + randomImages[rndNum] + ".png) no-repeat" }); });
-          </script>
+      
       <div class="picture"> 
         <!--<img src="images/banner-girl.png" width="293" height="302" alt="Bracebridge" />--> 
       </div>
@@ -824,20 +256,46 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <div class="announcements">
       <div class="homeLeftCol home-cont-wrap">
         <p style="background:none;"></p>
-        <p>View the latest edition of the Bracebridge Public Library newsletter. <a href="/pdf/newsletter-may-2016.pdf">May 2016</a></p>
-        <h3>Armchair Traveller Series - Sat May 28</h3>
-        <img src="../images/announcements/travelogue.jpg" alt="Travelogue" class="contentImg" />
-        <p> Visit other cultures, see beautiful landscapes and experience adventure all from the comfort of the library. Our destination on Saturday May 28 at 10:30am will be India, presented by Christine Lees. No registration or cost. Refreshments served.</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <h3>2016 Google I/O Live Stream - Wed May 18</h3>
-        <p>Reg Fitchett will be  hosting the live stream of 2016 Google I/O Conference for Developers on Wednesday May 18, noon to 3:00pm.  Learn first hand the breaking news on software, devices and beyond, from the Google tech wizards. An RSVP would be appreciated at 705-645-4171 or info@bracebridgelibrary.ca</p>
-        <h3>One-on-One Internet Training </h3>
-        <p><span class="boldItalic"> Training will be available on Tuesdays and Wednesdays until mid-May by appointment only.</span> Training is free and offered on a one-to-one basis. Instruction is based on the need of the individual and can include basic Internet searching, email, social media, using Microsoft Word, editing photos, assistance with a new device, etc. Call to book an appointment. </p>
-        <img src="../images/announcements/scrabble-day-winner-2016.jpg" alt="Scrabble Day Winner" class="contentImg" />
-        <h3>National Scrabble Day winner</h3>
-        <p>Congratulations Ben for participated in the National Scrabble Day Climb and winning the Library's prize basket. Way to go!</p>
-      </div>
+        
+        
+        
+        <p class="noteGreen">In accordance with O. Reg. 191/11: INTEGRATED ACCESSIBILITY STANDARDS under Accessibility for Ontarians with Disabilities Act, 2005, S.O. 2005, c. 11, staff at the Bracebridge Public Library shall provide access to or arrange for the provision of access to accessible materials where they exist, upon request.</p>
+        
+        <p>View the latest edition of the Bracebridge Public Library newsletter. <a href="/pdf/newsletter-september-2016.pdf">September 2016</a></p>
+ 
+<h3>Internet Training is back!</h3>
+<img src="../images/announcements/computer-lessons.jpg" alt="Computer Lessons" class="contentImg" />
+<p>Internet Training with Kathy Ashby will begin September 6. For a free one-on-one computer lesson, call Kathy at 705-645-4171. Instruction will be by appointment only on Tuesdays and Wednesdays. One hour sessions are designed around what you need to learn. Sessions are free!</p>
+ 
+  
+ <h3>Author John McTavish - Wed Sept 14 at 7pm</h3>
+ 
+   <p>Join us for a presentation by local author John McTavish who will discuss his new book about the fiction of Pulitzer Prize winner, John Updike. Everyone welcome on Wednesday September 14 at 7pm</p>
+  
+  
+  
+  
+ 
+ 
+  <h3>Tech Time Sessions - Thursdays at 6:30pm</h3>
+  <img src="../images/announcements/tech-image.jpg" alt="Tech Time" class="contentImg" />
+  <p>Tech Time Sessions will begin Thursday September 15, 6:30 - 7:30pm. Reg Fitchett will present a different topic each week. Everyone welcome. No cost.</p>
+  <p>September 15 - Hardware &nbsp;
+ September 22 - Computer Security &nbsp; 
+September 29 - Ereaders</p>
+        
+     <h3>Supporting Your Reluctant Reader - Sat Sept 24  </h3> 
+     <p>Learning doesn't have to be this difficult. Find out what you can do to help your child. Presentations  by Samantha Tremaine (M.Ed,  Montessori teacher, Licensed Davis Facilitator, OG trained) and
+ Jane Tryon (BA, Licensed Davis Facilitator). This event is free and everyone is welcome to join us Saturday September 24 at 10:30am.</p>
+         
+     <h3>Sensational Summer Reading </h3>
+        <p><strong>Forms are due October 7!</strong> Join the summer reading program just for adults! (and teens) Register for free and receive your reading list. Read all 8 books, rate them and return your form in October to qualify for a prize. An excellent selection of fiction and non-fiction. </p>
+  
+  
+   
+        
+      
+  </div>
     </div>
     <div class="homeRightCol">
       <p align="right"><a href="https://www.facebook.com/BracebridgePublicLibrary" target="_blank" class="facebook" title="Find us on Facebook"><img src="../images/icon-fb.png" alt="Find us on Facebook" title="Find us on Facebook" /></a> <a href="http://www.twitter.com/bracebridgepl" target="_blank" title="Find us on Twitter"><img src="../images/icon-tw-2.png" alt="Find us on Twitter" title="Find us on Twitter" /></a> <a href="https://www.pinterest.com/ruth2135/" target="_blank" title="Find us on Pinterest"><img src="../images/icon-pinterest.png" alt="Find us on Pinterest" width="32" height="32" title="Find us on Pinterest" /></a> <!--<a href="http://www.twitter.com/librarycindy" target="_blank" title="Find Library Cindy on Twitter" class="twitter"><img src="../images/icon-tw-2.png" alt="Find Library Cindy on Twitter" title="Find Library Cindy on Twitter" /></a> --></p>
@@ -878,11 +336,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <!--main content ends-->
 </div>
 <!-- InstanceEndEditable -->
-</div>
+
 
 <!--main content ends-->
 
-</div>
+
 <div class="footer">
   <div class="footerWrapper paddingTop20">
     <div>
@@ -932,23 +390,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <div class="designCredit"> 
       
       <!--  <a href="http://creativeone.ca/" target="_blank"><img src="../images/designCredit.png" width="31" height="28" alt="Creative One Inc" /></a><span>Website Design &amp; Production By<br />
-
-
-
-
-
-
-
-
-
-
-
-
-
       <a href="http://creativeone.ca/" target="_blank">Creative One Inc.</a></span>
-
-      -->
-      
+      -->     
       <p class="produced" style="color:#FFF">Produced by <a href="http://www.creativeone.ca" style="color:#FFF; text-decoration:none;" target="_blank">CREATIVE ONE<span>&reg;</span></a></p>
     </div>
     <div class="copyright">All contents copyright &copy; <script language="javascript" type="text/javascript">
@@ -959,1158 +402,57 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
   </div>
 </div>
 <script type="text/javascript" language="javascript">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $('.indexContentMid p').jfontsize({
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        btnMinusClasseId: '#jfontsize-m',
+     btnDefaultClasseId: '#jfontsize-d',
+     btnPlusClasseId: '#jfontsize-p'
+  });
+$('.contentText h2').jfontsize({
 
         btnMinusClasseId: '#jfontsize-m',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnDefaultClasseId: '#jfontsize-d',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnPlusClasseId: '#jfontsize-p'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	$('.contentText h2').jfontsize({
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnMinusClasseId: '#jfontsize-m',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnDefaultClasseId: '#jfontsize-d',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnPlusClasseId: '#jfontsize-p'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ btnDefaultClasseId: '#jfontsize-d',
+   btnPlusClasseId: '#jfontsize-p'
+  });
 	$('.contentText h3').jfontsize({
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         btnMinusClasseId: '#jfontsize-m',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnDefaultClasseId: '#jfontsize-d',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       btnDefaultClasseId: '#jfontsize-d',
         btnPlusClasseId: '#jfontsize-p'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	 $('.contentText p').jfontsize({
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnMinusClasseId: '#jfontsize-m',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      btnMinusClasseId: '#jfontsize-m',
         btnDefaultClasseId: '#jfontsize-d',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         btnPlusClasseId: '#jfontsize-p'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	 $('.contentText li').jfontsize({
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         btnMinusClasseId: '#jfontsize-m',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         btnDefaultClasseId: '#jfontsize-d',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnPlusClasseId: '#jfontsize-p'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      btnPlusClasseId: '#jfontsize-p'
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	$('.footer ul li').jfontsize({
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         btnMinusClasseId: '#jfontsize-m',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         btnDefaultClasseId: '#jfontsize-d',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnPlusClasseId: '#jfontsize-p'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       btnPlusClasseId: '#jfontsize-p'
     });	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	$('.footerList').jfontsize({
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnMinusClasseId: '#jfontsize-m',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnDefaultClasseId: '#jfontsize-d',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        btnPlusClasseId: '#jfontsize-p'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      btnMinusClasseId: '#jfontsize-m',
+    btnDefaultClasseId: '#jfontsize-d',
+  btnPlusClasseId: '#jfontsize-p'
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    //remove all empty p tags
+$('p').each(function() {
+var $this = $(this);
+if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+$this.remove();
+});
 
 </script>
+
 </body>
 <!-- InstanceEnd -->
 </html>

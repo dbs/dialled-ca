@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Plamondon Municipal Library of Plamondon, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Plamondon, Alberta, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Plamondon Municipal Library of Plamondon, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Plamondon, Alberta, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.plamondonlibrary.ab.ca/" />
@@ -34,10 +38,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=""/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -45,7 +47,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Plamondon Municipal Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Plamondon Municipal Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -258,7 +260,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -266,6 +267,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -280,6 +293,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -300,9 +319,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -334,38 +352,19 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
-  
-  
     <li >
-      <a href="/galleries/show/143" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=143" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/132" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
     <li ><a href='/document/library/525'>APL</a></li>
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -392,10 +391,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -410,9 +409,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li><a href="http://www.plamondonlibrary.ab.ca/Books" title="Books"><span>Books</span></a></li><li id="active"><a href="http://www.plamondonlibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Events" title="Events"><span>Events</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.plamondonlibrary.ab.ca/Policies" class="policies_link parent_link" title="Policies"><span>Policies</span></a><ul><li><a href="http://www.plamondonlibrary.ab.ca/DONATIONS" title="Donations"><span>DONATIONS</span></a></li></ul></li><li><a href="http://www.plamondonlibrary.ab.ca/Remote-Circulation" title="Remote circulation"><span>Remote Circulation</span></a></li><li class="drop"><a href="http://www.plamondonlibrary.ab.ca/Services" class="services_link parent_link" title="Services"><span>Services</span></a><ul><li><a href="http://www.plamondonlibrary.ab.ca/Career-Centre-" title="Career centre "><span>Career Centre </span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Friends-of-the-Libraries" title="Friends of the libraries"><span>Friends of the Libraries</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Print-Disabled-Services" title="Print disabled services"><span>Print Disabled Services</span></a></li></ul></li><li class="drop"><a href="http://www.plamondonlibrary.ab.ca/Student-Services" class="student_services_link parent_link" title="Student Services"><span>Student Services</span></a><ul><li><a href="http://www.plamondonlibrary.ab.ca/Educator-Library-Card" title="Educator library card"><span>Educator Library Card</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Home-Schooling-Services" title="Home schooling services"><span>Home Schooling Services</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Web-Links" title="Web links"><span>Web Links</span></a></li></ul></li>
-  
 </ul>
 
 	</nav>
@@ -439,38 +436,38 @@ if (typeof jQuery != 'undefined') {
 	<div class="panes">
 		<div id="tabs-1" class="pane">
 			<div id="siteBanner">
-  <table cellspacing="0" cellpadding="1" width="60%">
+  <table width="60%" cellspacing="0" cellpadding="1">
     <tbody>
         <tr>
             <td>Monday</td>
-            <td>8:45 - 3:30</td>
+            <td>9 - 3:30</td>
         </tr>
         <tr>
             <td>Tuesday</td>
-            <td>8:45 - 3:30</td>
+            <td>9 - 3:30</td>
         </tr>
         <tr>
             <td>Wednesday</td>
-            <td>8:45 - 8:00</td>
+            <td>9 - 8:00</td>
         </tr>
         <tr>
             <td>Thursday</td>
-            <td>8:45 - 3:30</td>
+            <td>9 - 3:30</td>
         </tr>
         <tr>
             <td>Friday</td>
-            <td>8:45 - 3:30</td>
+            <td>9 - 3:30</td>
         </tr>
         <tr>
-            <td>Closed Daily</td>
-            <td><strong>11:00-2:15</strong></td>
+            <td><strong>Closed Daily</strong></td>
+            <td><strong>11:55 - 12:25</strong></td>
         </tr>
         <tr>
             <td>Saturday &amp; Sunday</td>
             <td>&nbsp;CLOSED</td>
         </tr>
         <tr>
-            <td><a target="_blank" href="http://s3.amazonaws.com:/townlife_production/public/system/143/2015-2016_NLSD_Calendar.pdf">School</a> &amp; Stat. Holidays</td>
+            <td><a href="http://www.nlsd.ab.ca/documents/general/2016-2017%20NLSD%20Calendar%20Approved%20151209.pdf" target="_blank">School</a> &amp; Stat. Holidays</td>
             <td>&nbsp;CLOSED</td>
         </tr>
         <tr>
@@ -494,7 +491,7 @@ if (typeof jQuery != 'undefined') {
 				
 				
 				<div class="slideContent">
-					<img class="bigImg" alt="Web Banner SRC slide" src="http://files.townlife.com/public/uploads/photos/475755/Web_Banner_SRC_slide_xlarge.jpg" />
+					<img class="bigImg" alt="Roaming RT" src="http://files.townlife.com/public/uploads/photos/492014/Roaming_RT_xlarge.jpg" />
 					
 					
 					
@@ -504,7 +501,17 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="Roaming RT" src="http://files.townlife.com/public/uploads/photos/378634/Roaming_RT_xlarge.jpg" />
+					<img class="bigImg" alt="Auther G Ecole slide" src="http://files.townlife.com/public/uploads/photos/495874/Auther_G_Ecole_slide_xlarge.jpg" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Cathy visit Plamondon Slide" src="http://files.townlife.com/public/uploads/photos/502868/Cathy_visit_Plamondon_Slide_xlarge.jpg" />
 					
 					
 					
@@ -515,6 +522,16 @@ if (typeof jQuery != 'undefined') {
 			   
 				<div class="slideContent">
 					<img class="bigImg" alt="Hoopla" src="http://files.townlife.com/public/uploads/photos/369203/Hoopla_xlarge.jpg" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="ME_Libraries_LCD" src="http://files.townlife.com/public/uploads/photos/399541/ME_Libraries_LCD_xlarge.jpg" />
 					
 					
 					
@@ -545,16 +562,6 @@ if (typeof jQuery != 'undefined') {
 			   
 				<div class="slideContent">
 					<img class="bigImg" alt="Other Resources" src="http://files.townlife.com/public/uploads/photos/420501/Other_Resources_xlarge.jpg" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="ME_Libraries_LCD" src="http://files.townlife.com/public/uploads/photos/399541/ME_Libraries_LCD_xlarge.jpg" />
 					
 					
 					
@@ -609,78 +616,53 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6372">				
-	  Library Hours			 			
-        </a>
-        <p>Both library locations in Lac La Biche County will be open today and all residents of Fort McMurray are welcome to visit us to use our Wifi and com...
-        <!-- <a href="/blogs/show_entry/6372">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6903">
+	    Sept. Library Programs
+          </a>
+        <p>Roaming Rhyme Time will be held on September 13th &amp; 27th at the Festival Centre starting at 10:30am. This free program is designed for 0-5 year...
+        <!-- <a href="/blogs/show_entry/6903">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6358">				
-	  Library Programs			 			
-        </a>
-        <p>Roaming Rhyme Time at the Festival Centre in Plamondon will run on Tuesday, May 10th and 24th from 10:30-11:30am.  This free program is designed fo...
-        <!-- <a href="/blogs/show_entry/6358">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6902">
+	    Library Programs
+          </a>
+        <p>The Plamondon Municipal Library will be closed during the month of August to allow the school time to prepare for their Fall opening.  In the meant...
+        <!-- <a href="/blogs/show_entry/6902">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6324">				
-	  Library Programs			 			
-        </a>
-        <p>Roaming Rhyme Time at the Festival Centre in Plamondon will run on Tuesday, May 10th and 24th from 10:30-11:30am.  This free program is designed fo...
-        <!-- <a href="/blogs/show_entry/6324">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6852">
+	    Library Programs
+          </a>
+        <p>The Plamondon Municipal Library will be closed during the month of August to allow the school time to prepare for their Fall opening.  In the meant...
+        <!-- <a href="/blogs/show_entry/6852">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6309"><img alt="Web banner src slide" src="http://files.townlife.com/public/asset_files/7344/thumb_400/Web Banner SRC slide.jpg?1461261258" /></a></div>
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6309">				
-	  SRC			 			
-        </a>
-        <p>
-TD Summer Reading Club 2016
-&quot;Let's Get Wild&quot; with the Lac La Biche County Libraries
+          <a class="post_title" href="/blogs/show_entry/6816">
+	    Library Hours
+          </a>
+        <p>The Plamondon Municipal Library will be closed during the month of August to allow the school time to prepare for their Fall opening.&nbsp; In the ...
+        <!-- <a href="/blogs/show_entry/6816">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/6788">
+	    Library Updates
+          </a>
+        <p>The Plamondon Municipal Library is open this Wednesday (July 27th)  from 9-4pm.
 
-    Registration for TD Summer Reading Club sta...
-        <!-- <a href="/blogs/show_entry/6309">More...</a> --></p>
+The library will be closed during the month of August to allow t...
+        <!-- <a href="/blogs/show_entry/6788">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
-      <li class="new_post">
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6291">				
-	  Library Programs			 			
-        </a>
-        <p>The Lac La Biche County Libraries has acquired Cypress Resume, an online tool that helps you effortlessly create a professional resume in just a fe...
-        <!-- <a href="/blogs/show_entry/6291">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/143">+ MORE</a></h6>
 </div>
@@ -691,94 +673,109 @@ TD Summer Reading Club 2016
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/143">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/143">Upcoming Events</a> 
-        <span class="latest_events_count">(4)</span>
+        <span class="latest_events_count">(8)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>10</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>13</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/30112">Roaming Rhyme Time</a>
+            <a href="/calendars/show_event/36615">Roaming Rhyme Time</a>
             <span class="upcoming_time_frame">
-              (Tomorrow)
-              
+              (in 2 days)
                 &nbsp;from 10:30 AM
-                
                   &nbsp;to 11:30 AM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>24</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>27</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/30113">Roaming Rhyme Time</a>
+            <a href="/calendars/show_event/36616">Roaming Rhyme Time</a>
             <span class="upcoming_time_frame">
               (in 2 weeks)
-              
                 &nbsp;from 10:30 AM
-                
                   &nbsp;to 11:30 AM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>June</span> <span class='theDate'>14</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>30</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/30114">Roaming Rhyme Time</a>
+            <a href="/calendars/show_event/36969">Author Visit: Gail De Vos</a>
             <span class="upcoming_time_frame">
-              (in 1 month)
-              
-                &nbsp;from 10:30 AM
-                
-                  &nbsp;to 11:30 AM
-                
-              
+              (in 2 weeks)
+                &nbsp;from  1:00 PM
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>July</span> <span class='theDate'>06</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>October</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35561">TD SRC - Sprinkles the Clown</a>
+            <a href="/calendars/show_event/36617">Roaming Rhyme Time</a>
             <span class="upcoming_time_frame">
               (in 1 month)
-              
+                &nbsp;from 10:30 AM
+                  &nbsp;to 11:30 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>25</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/36618">Roaming Rhyme Time</a>
+            <span class="upcoming_time_frame">
+              (in 1 month)
+                &nbsp;from 10:30 AM
+                  &nbsp;to 11:30 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>October</span> <span class='theDate'>27</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37403">Cathy Beveridge Author Visit</a>
+            <span class="upcoming_time_frame">
+              (in 1 month)
                 &nbsp;from 10:00 AM
-                
-              
             </span>
           </li>
-        
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>November</span> <span class='theDate'>08</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/36619">Roaming Rhyme Time</a>
+            <span class="upcoming_time_frame">
+              (in 1 month)
+                &nbsp;from 10:30 AM
+                  &nbsp;to 11:30 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>November</span> <span class='theDate'>22</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/36620">Roaming Rhyme Time</a>
+            <span class="upcoming_time_frame">
+              (in 2 months)
+                &nbsp;from 10:30 AM
+                  &nbsp;to 11:30 AM
+            </span>
+          </li>
       </ul>
       <h6 class="more"><a href="/calendars/table/143">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -786,99 +783,54 @@ TD Summer Reading Club 2016
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_717">
-	      
-              
-	      
+	    <dd id="action_717">
 	        <img alt="Call (780) 798-3852" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 798-3852" />
 		
 		Call (780) 798-3852
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1360">
-	      
-              
-	      
+		    <dd id="action_1360">
 	        <img alt="After hours &amp; to leave messages (780) 623-7467" class="action_steps_image" src="/images/icons/fff_action_steps/phone.png?1445483283" title="After hours &amp; to leave messages (780) 623-7467" />
 		
-		After hours & to leave messages (780) 623-7467
+		After hours &amp; to leave messages (780) 623-7467
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1193">
-	      
-              
-	      
+		    <dd id="action_1193">
 	        <img alt="Location &amp; Contacts" class="action_steps_image" src="/images/icons/fff/zoom.png?1445483283" title="Location &amp; Contacts" />
 		<a class='action_steps_link' href='http://www.townlife.com/world/Canada/Alberta/Plamondon/143/CONTACTS' target='_blank'>
-		Location & Contacts
+		Location &amp; Contacts
 		</a>
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1249">
-	      
-              
-	      
+		    <dd id="action_1249">
 	        <img alt="Check out our virtual library tour" class="action_steps_image" src="/images/icons/fff/star.png?1445483283" title="Check out our virtual library tour" />
 		<a class='action_steps_link' href='http://prezi.com/rmfkcymomylp/untitled-prezi/' target='_blank'>
 		Check out our virtual library tour
 		</a>
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/143" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1449&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1449&amp;return_url=http%3A%2F%2Fwww.plamondonlibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=143" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.plamondonlibrary.ab.ca%2F&amp;site_id=143" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -903,16 +855,10 @@ TD Summer Reading Club 2016
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -924,12 +870,9 @@ TD Summer Reading Club 2016
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
     <div class="social_bookmark">
               <a data-pin-do="embedUser" href="https://www.pinterest.com/directorsmpl/"data-pin-scale-width="80" data-pin-scale-height="200" data-pin-board-width="400">    Visit Lac La Biche County Libraries's profile on Pinterest.</a><!-- Please call pinit.js only once per page --><script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>    
     </div>
-  
-  
 </div>
 
  </span>
@@ -950,7 +893,7 @@ TD Summer Reading Club 2016
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
 			
 				
 			
@@ -961,7 +904,7 @@ TD Summer Reading Club 2016
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
 			
 				
 			
@@ -983,7 +926,7 @@ TD Summer Reading Club 2016
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
 			
 				
 			
@@ -994,22 +937,11 @@ TD Summer Reading Club 2016
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
 			
 				
 					</div> <!-- end book group of 5 -->
 					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
-			
 				
 			
 			
@@ -1030,7 +962,7 @@ TD Summer Reading Club 2016
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
 			
 				
 			
@@ -1041,7 +973,7 @@ TD Summer Reading Club 2016
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
 			
 				
 			
@@ -1052,54 +984,7 @@ TD Summer Reading Club 2016
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
 			
 				
 			
@@ -1124,7 +1009,40 @@ TD Summer Reading Club 2016
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
 			
 				
 			
@@ -1136,6 +1054,31 @@ TD Summer Reading Club 2016
 				 
 			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
 			
 				
 					</div><!-- end book group -->
@@ -1158,7 +1101,7 @@ TD Summer Reading Club 2016
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1198,54 +1141,35 @@ TD Summer Reading Club 2016
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li><a href="http://www.plamondonlibrary.ab.ca/Books" title="Books"><span>Books</span></a></li><li id="active"><a href="http://www.plamondonlibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Events" title="Events"><span>Events</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.plamondonlibrary.ab.ca/Policies" class="policies_link parent_link" title="Policies"><span>Policies</span></a><ul><li><a href="http://www.plamondonlibrary.ab.ca/DONATIONS" title="Donations"><span>DONATIONS</span></a></li></ul></li><li><a href="http://www.plamondonlibrary.ab.ca/Remote-Circulation" title="Remote circulation"><span>Remote Circulation</span></a></li><li class="drop"><a href="http://www.plamondonlibrary.ab.ca/Services" class="services_link parent_link" title="Services"><span>Services</span></a><ul><li><a href="http://www.plamondonlibrary.ab.ca/Career-Centre-" title="Career centre "><span>Career Centre </span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Friends-of-the-Libraries" title="Friends of the libraries"><span>Friends of the Libraries</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Print-Disabled-Services" title="Print disabled services"><span>Print Disabled Services</span></a></li></ul></li><li class="drop"><a href="http://www.plamondonlibrary.ab.ca/Student-Services" class="student_services_link parent_link" title="Student Services"><span>Student Services</span></a><ul><li><a href="http://www.plamondonlibrary.ab.ca/Educator-Library-Card" title="Educator library card"><span>Educator Library Card</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Home-Schooling-Services" title="Home schooling services"><span>Home Schooling Services</span></a></li><li><a href="http://www.plamondonlibrary.ab.ca/Web-Links" title="Web links"><span>Web Links</span></a></li></ul></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
-  
-  
     <li >
-      <a href="/galleries/show/143" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=143" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/132" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
     <li ><a href='/document/library/525'>APL</a></li>
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			<p><iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FLac-La-Biche-County-Libraries%2F189430861116117&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowtransparency="true"></iframe></p>
+			<p><iframe frameborder="0" allowtransparency="true" style="border:none; overflow:hidden; width:292px; height:62px;" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FLac-La-Biche-County-Libraries%2F189430861116117&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=true&amp;height=62"></iframe></p>
+
+<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1254,7 +1178,7 @@ TD Summer Reading Club 2016
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1264,41 +1188,23 @@ TD Summer Reading Club 2016
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/143" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1435,6 +1341,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1461,3 +1392,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

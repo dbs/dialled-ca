@@ -79,7 +79,7 @@
 					<table width="100%" cellpadding="0" cellspacing="0" border="0">
 						<tr>
 							<td class="DateTD" valign="top">
-								<span id="dnn_dnnCURRENTDATE_lblDate" class="DATE_object">Monday, May 09, 2016</span>
+								<span id="dnn_dnnCURRENTDATE_lblDate" class="DATE_object">Sunday, September 11, 2016</span>
 
 							</td>
 							<td class="SearchTD" valign="top">

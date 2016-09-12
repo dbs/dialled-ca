@@ -26,8 +26,8 @@
     <link xmlns="" href="http://ville.saguenay.ca/css/print.css" rel="stylesheet" type="text/css" media="print">
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
   
-    <link href="http://ville.saguenay.ca/css/bootstrap.css?t=1377893138" rel="stylesheet" type="text/css" media="screen" />
-<link href="http://ville.saguenay.ca/css/villedesaguenay.css?t=1000863514" rel="stylesheet" type="text/css" media="screen" />
+    <link href="http://ville.saguenay.ca/css/bootstrap.css?t=565508311" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://ville.saguenay.ca/css/villedesaguenay.css?t=913378613" rel="stylesheet" type="text/css" media="screen" />
  
     <!-- lightbox css -->
     <link href="http://ville.saguenay.ca/shared/css/jquery.lightbox.css" rel="stylesheet" media="screen" />
@@ -76,18 +76,32 @@
 
 
     <!--  Google analytics  -->
-    <script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-32187710-2']);
-	_gaq.push(['_trackPageview']);
-      
-	(function() {
-	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-    </script>
-    
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-32187710-2', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+	<script>
+	/**
+	* Function that tracks a click on an outbound link in Analytics.
+	* This function takes a valid URL string as an argument, and uses that URL string
+	* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+	* using 'navigator.sendBeacon' in browser that support it.
+	*/
+	var trackOutboundLink = function(url) {
+	   ga('send', 'event', 'outbound', 'click', url, {
+		 'transport': 'beacon',
+		 'hitCallback': function(){document.location = url;}
+	   });
+	}
+	</script>
+	
+	    
   <!--[if lt IE 9]>
      <style type="text/css">
 	  header,
@@ -382,15 +396,15 @@
     <li id="services-aux-citoyens" class="dropdown w3_megamenu-fw lvl1 not_active"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens" class="lvl1" >Citoyens</a>
         <ul id="services-aux-citoyens" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-services-aux-citoyens0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/transport-sts" class="lvl2" >Transport STS</a></span></li>        <li id="ville-saguenay-services-aux-citoyens1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/construire-et-renover" class="lvl2" >Construire et rÃ©nover</a></span></li>        <li id="ville-saguenay-services-aux-citoyens2" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/deneigement-et-nids-de-poule" class="lvl2" >DÃ©neigement et entretien des routes</a></span></li>        <li id="ville-saguenay-services-aux-citoyens3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/hydro-jonquiere" class="lvl2" >Hydro-JonquiÃ¨re</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-services-aux-citoyens4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/ombudsman" class="lvl2" >Ombudsman</a></span></li>        <li id="ville-saguenay-services-aux-citoyens5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/requetes-et-demande-dinformations" class="lvl2" >RequÃªtes et demandes d'information</a></span></li>        <li id="ville-saguenay-services-aux-citoyens6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/securite-public" class="lvl2" >SÃ©curitÃ© publique</a></span></li>        <li id="ville-saguenay-services-aux-citoyens7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/services-aux-aines" class="lvl2" >Services aux ainÃ©s</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-services-aux-citoyens8" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/services-aux-personnes-en-situation-de-handicap" class="lvl2" >Services aux personnes en situation de handicap</a></span></li>        <li id="ville-saguenay-services-aux-citoyens9" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/services-aux-nouveaux-arrivants" class="lvl2" >Services aux nouveaux arrivants</a></span></li>        <li id="ville-saguenay-services-aux-citoyens10" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/taxe-et-evaluation" class="lvl2" >Taxe et Ã©valuation</a></span></li>        <li id="ville-saguenay-services-aux-citoyens11" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/services-aux-citoyens/cour-municipale" class="lvl2" >Cour municipale</a></span></li>        </ul></li>
     <li id="environnement" class="dropdown w3_megamenu-fw lvl1 not_active"><a href="http://ville.saguenay.ca/fr/environnement" class="lvl1" >Environnement</a>
-        <ul id="environnement" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-environnement0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/algues-bleues" class="lvl2" >Algues bleu-vert</a></span></li>        <li id="ville-saguenay-environnement1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/arbres" class="lvl2" >Arbres</a></span></li>        <li id="ville-saguenay-environnement2" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/bornes-de-recharge-electrique" class="lvl2" >Bornes de recharge Ã©lectrique</a></span></li>        <li id="ville-saguenay-environnement3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/compostage" class="lvl2" >Compostage</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-environnement4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/developpement-durable" class="lvl2" >DÃ©veloppement durable</a></span></li>        <li id="ville-saguenay-environnement5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/don-de-biens-reutilisables" class="lvl2" >Don de biens rÃ©utilisables</a></span></li>        <li id="ville-saguenay-environnement6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/ecocentres" class="lvl2" >Ãcocentres</a></span></li>        <li id="ville-saguenay-environnement7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/fosses-septiques-et-eaux-usees" class="lvl2" >Fosses septiques et eaux usÃ©es</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-environnement8" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/herbyciclage" class="lvl2" >Herbicyclage</a></span></li>        <li id="ville-saguenay-environnement9" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/jardins-communautaires" class="lvl2" >Jardins communautaires</a></span></li>        <li id="ville-saguenay-environnement10" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/monstres-menagers" class="lvl2" >Monstres mÃ©nagers</a></span></li>        <li id="ville-saguenay-environnement11" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/ordures-menageres" class="lvl2" >Ordures mÃ©nagÃ¨res</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-environnement12" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/quartiers-blancs" class="lvl2" >Quartiers blancs</a></span></li>        <li id="ville-saguenay-environnement13" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/recyclage" class="lvl2" >Recyclage</a></span></li>        </ul></li>
+        <ul id="environnement" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-environnement0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/arbres" class="lvl2" >Arbres</a></span></li>        <li id="ville-saguenay-environnement1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/bornes-de-recharge-electrique" class="lvl2" >Bornes de recharge Ã©lectrique</a></span></li>        <li id="ville-saguenay-environnement2" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/compostage" class="lvl2" >Compostage</a></span></li>        <li id="ville-saguenay-environnement3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/developpement-durable" class="lvl2" >DÃ©veloppement durable</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-environnement4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/don-de-biens-reutilisables" class="lvl2" >Don de biens rÃ©utilisables</a></span></li>        <li id="ville-saguenay-environnement5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/ecocentres" class="lvl2" >Ãcocentres</a></span></li>        <li id="ville-saguenay-environnement6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/fosses-septiques-et-eaux-usees" class="lvl2" >Fosses septiques et eaux usÃ©es</a></span></li>        <li id="ville-saguenay-environnement7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/herbyciclage" class="lvl2" >Herbicyclage</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-environnement8" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/jardins-communautaires" class="lvl2" >Jardins communautaires</a></span></li>        <li id="ville-saguenay-environnement9" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/monstres-menagers" class="lvl2" >Monstres mÃ©nagers</a></span></li>        <li id="ville-saguenay-environnement10" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/ordures-menageres" class="lvl2" >Ordures mÃ©nagÃ¨res</a></span></li>        <li id="ville-saguenay-environnement11" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/algues-bleues" class="lvl2" >Protection des rives et du littoral</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-environnement12" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/quartiers-blancs" class="lvl2" >Quartiers blancs</a></span></li>        <li id="ville-saguenay-environnement13" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/recyclage" class="lvl2" >Recyclage</a></span></li>        <li id="ville-saguenay-environnement14" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/environnement/stations-de-vidange-pour-vr" class="lvl2" >Stations de vidange pour VR</a></span></li>        </ul></li>
     <li id="activites-et-loisirs" class="dropdown w3_megamenu-fw lvl1 active"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs" class="lvl1" >ActivitÃ©s et loisirs</a>
         <ul id="activites-et-loisirs" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-activites-et-loisirs0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/activites-recreatives-et-communautaires" class="lvl2" >ActivitÃ©s rÃ©crÃ©atives et communautaires</a></span></li>        <li id="ville-saguenay-activites-et-loisirs1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/arts-et-culture" class="lvl2" >Arts et culture</a></span></li>        <li id="ville-saguenay-activites-et-loisirs2" class="col-sm-3 w3_megamenu-content withdesc lvl2 active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/bibliotheque" class="lvl2" >BibliothÃ¨ques</a></span></li>        <li id="ville-saguenay-activites-et-loisirs3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/camps-de-jour-et-relache" class="lvl2" >Camps de jour</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-activites-et-loisirs4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/inscription-en-ligne" class="lvl2" >Inscription en ligne</a></span></li>        <li id="ville-saguenay-activites-et-loisirs5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/organiser-un-evenement" class="lvl2" >Organiser un Ã©vÃ©nement</a></span></li>        <li id="ville-saguenay-activites-et-loisirs6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/parcs-et-comites-de-loisirs" class="lvl2" >Parcs et comitÃ©s de loisirs</a></span></li>        <li id="ville-saguenay-activites-et-loisirs7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/patrimoine/activites" class="lvl2" >Patrimoine - ActivitÃ©s</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-activites-et-loisirs8" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/planifier-une-sortie" class="lvl2" >Planifier une sortie</a></span></li>        <li id="ville-saguenay-activites-et-loisirs9" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/activites-et-loisirs/sports-et-plein-air" class="lvl2" >Sports et plein air</a></span></li>        </ul></li>
     <li id="decouvrir-saguenay" class="dropdown w3_megamenu-fw lvl1 not_active"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay" class="lvl1" >DÃ©couvrir Saguenay</a>
         <ul id="decouvrir-saguenay" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-decouvrir-saguenay0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/cartes" class="lvl2" >Cartes</a></span></li>        <li id="ville-saguenay-decouvrir-saguenay1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/histoire-de-la-ville-et-archives" class="lvl2" >Histoire de la ville et archives</a></span></li>        <li id="ville-saguenay-decouvrir-saguenay2" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/industrie-et-commerce" class="lvl2" >Industrie et commerce</a></span></li>        <li id="ville-saguenay-decouvrir-saguenay3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/organisation-du-territoire" class="lvl2" >Organisation du territoire</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-decouvrir-saguenay4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/patrimoine" class="lvl2" >Patrimoine</a></span></li>        <li id="ville-saguenay-decouvrir-saguenay5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/photos-videos-et-cartes-postales" class="lvl2" >Photos, vidÃ©os et cartes postales</a></span></li>        <li id="ville-saguenay-decouvrir-saguenay6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/population-statistiques-et-territoire" class="lvl2" >Population, statistiques et territoire</a></span></li>        <li id="ville-saguenay-decouvrir-saguenay7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/port-descale" class="lvl2" >Port d'escale</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-decouvrir-saguenay8" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/decouvrir-saguenay/tourisme" class="lvl2" >Tourisme</a></span></li>        </ul></li>
     <li id="administration-municipale" class="dropdown w3_megamenu-fw lvl1 not_active"><a href="http://ville.saguenay.ca/fr/administration-municipale" class="lvl1" >Administration</a>
-        <ul id="administration-municipale" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-administration-municipale0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/cabinet-du-maire" class="lvl2" >Cabinet du maire</a></span></li>        <li id="ville-saguenay-administration-municipale1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/commissions-et-comites" class="lvl2" >Commissions et comitÃ©s</a></span></li>        <li id="ville-saguenay-administration-municipale2" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/conseils-municipaux-et-darrondissement" class="lvl2" >Conseils municipaux et d'arrondissement</a></span></li>        <li id="ville-saguenay-administration-municipale3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/elections" class="lvl2" >Ãlections</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-administration-municipale4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/hotel-de-ville-et-bureaux-darrondissement" class="lvl2" >HÃ´tel de ville et bureaux d'arrondissement</a></span></li>        <li id="ville-saguenay-administration-municipale5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/prix-et-reconnaissances" class="lvl2" >Prix et reconnaissances</a></span></li>        <li id="ville-saguenay-administration-municipale6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/proces-verbaux" class="lvl2" >ProcÃ¨s-verbaux</a></span></li>        <li id="ville-saguenay-administration-municipale7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/reglements-municipaux" class="lvl2" >RÃ¨glements municipaux</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-administration-municipale8" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/salle-des-medias" class="lvl2" >Salle des mÃ©dias</a></span></li>        <li id="ville-saguenay-administration-municipale9" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/services-municipaux" class="lvl2" >Services municipaux</a></span></li>        <li id="ville-saguenay-administration-municipale10" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/verificateur-general" class="lvl2" >VÃ©rificatrice gÃ©nÃ©rale</a></span></li>        </ul></li>
+        <ul id="administration-municipale" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-administration-municipale0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/cabinet-du-maire" class="lvl2" >Cabinet du maire</a></span></li>        <li id="ville-saguenay-administration-municipale1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/commissions-et-comites" class="lvl2" >Commissions et comitÃ©s</a></span></li>        <li id="ville-saguenay-administration-municipale2" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/conseils-municipaux-et-darrondissement" class="lvl2" >Conseils municipaux et d'arrondissement</a></span></li>        <li id="ville-saguenay-administration-municipale3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/elections" class="lvl2" >Ãlections</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-administration-municipale4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/hotel-de-ville-et-bureaux-darrondissement" class="lvl2" >HÃ´tel de ville et bureaux d'arrondissement</a></span></li>        <li id="ville-saguenay-administration-municipale5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/prix-et-reconnaissances" class="lvl2" >Prix et reconnaissances</a></span></li>        <li id="ville-saguenay-administration-municipale6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/proces-verbaux" class="lvl2" >ProcÃ¨s-verbaux</a></span></li>        <li id="ville-saguenay-administration-municipale7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/reglements-municipaux" class="lvl2" >RÃ¨glements municipaux</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-administration-municipale8" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/salle-des-medias" class="lvl2" >Salle des mÃ©dias</a></span></li>        <li id="ville-saguenay-administration-municipale9" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/services-municipaux" class="lvl2" >Services municipaux</a></span></li>        <li id="ville-saguenay-administration-municipale10" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/administration-municipale/verificateur-general" class="lvl2" >VÃ©rificateur gÃ©nÃ©ral</a></span></li>        </ul></li>
     <li id="restez-informe" class="dropdown w3_megamenu-fw lvl1 not_active"><a href="http://ville.saguenay.ca/fr/restez-informe" class="lvl1" >Restez informÃ©</a>
-        <ul id="restez-informe" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-restez-informe0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/a-surveiller" class="lvl2" >Ã surveiller</a></span></li>        <li id="ville-saguenay-restez-informe1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/appels-doffre-et-avis-publics" class="lvl2" >Appels d'offres et avis publics</a></span></li>        <li id="ville-saguenay-restez-informe2" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/communiques-de-presse" class="lvl2" >CommuniquÃ©s de presse</a></span></li>        <li id="ville-saguenay-restez-informe3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/dossiers-de-lheure" class="lvl2" >Dossiers de l'heure</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-restez-informe4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/liens-utiles" class="lvl2" >Liens utiles</a></span></li>        <li id="ville-saguenay-restez-informe5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/offres-demplois" class="lvl2" >Offres d'emplois</a></span></li>        <li id="ville-saguenay-restez-informe6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/travaux-et-avis" class="lvl2" >Travaux et avis</a></span></li>        <li id="ville-saguenay-restez-informe7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/publications" class="lvl2" >Publications</a></span></li>        </ul></li>
+        <ul id="restez-informe" class="dropdown-menu fullwidth lvl2"><div class='clearfix'></div>        <li id="ville-saguenay-restez-informe0" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/a-surveiller" class="lvl2" >Ã surveiller</a></span></li>        <li id="ville-saguenay-restez-informe1" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/appels-doffre-et-avis-publics" class="lvl2" >Appels d'offres et avis publics</a></span></li>        <li id="ville-saguenay-restez-informe2" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/communiques-de-presse" class="lvl2" >CommuniquÃ©s de presse</a></span></li>        <li id="ville-saguenay-restez-informe3" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/dossiers-de-lheure" class="lvl2" >Dossiers de l'heure</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-restez-informe4" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/liens-utiles" class="lvl2" >Liens utiles</a></span></li>        <li id="ville-saguenay-restez-informe5" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/offres-demplois" class="lvl2" >Offres d'emplois</a></span></li>        <li id="ville-saguenay-restez-informe6" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/travaux-et-avis" class="lvl2" >Travaux et avis</a></span></li>        <li id="ville-saguenay-restez-informe7" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/publications" class="lvl2" >Publications</a></span></li><div class='clearfix'></div>        <li id="ville-saguenay-restez-informe8" class="col-sm-3 w3_megamenu-content withdesc lvl2 not_active"><span id="bubble"><a href="http://ville.saguenay.ca/fr/restez-informe/projet-division-territoire-aux-fins-electorales" class="lvl2" >Projet de division du territoire aux fins Ã©lectorales</a></span></li>        </ul></li>
 </ul>			  
 			</div><!-- /.navbar-collapse -->
       
@@ -480,7 +494,7 @@
 	<section id="colonne-bannieres" class="hidden-xs hidden-sm">
 <center>
 
-									
+					
 									        																												                
         												
 		</center>	
@@ -744,7 +758,7 @@
                 <div class="row">
 		    <p>
 		     <strong>CoordonnÃ©es</strong><br/>
-		     6167, rue Notre-Dame<br/>
+		     6168, rue Notre-Dame<br/>
 		     LaterriÃ¨re<br/>
 		     G7N 1A1<br/>
 		     Lise Tremblay<br/>
@@ -883,11 +897,11 @@
 			    </tr>
 			    <tr class="tablelinecolor">
 				<td>Mardi</td>
-				<td>18 h - 20 h 30</td>
+				<td>17 h 30 - 20 h 30</td>
 			    </tr>
 			    <tr>
 				<td>Mercredi</td>
-				<td>18 h - 20 h 30</td>
+				<td>17 h 30 - 20 h 30</td>
 			    </tr>
 			    <tr class="tablelinecolor">
 				<td>Jeudi</td>
@@ -1021,7 +1035,7 @@
 			    </tr>
 			    <tr class="tablelinecolor">
 				<td>Samedi</td>
-				<td>FermÃ©</td>
+				<td>10 Ã  17 h</td>
 			    </tr>
 			    <tr>
 				<td>Dimanche</td>
@@ -1243,6 +1257,72 @@
             <div class="clearfix"></div>
         </div>
 	  
+	
+	<div class="col-xs-12 listentry">
+            <h3>BibliothÃ¨que de Lac-KÃ©nogami &nbsp;<img src="http://ville.saguenay.ca/images/skin/logo_handicape.jpg" class="pull-right"  /></h3><br/>
+
+            <div class="col-sm-6">
+                <div class="row">
+		    <p>
+		     <strong>CoordonnÃ©es</strong><br/>
+		     Point de service de Lac-KÃ©nogami<br/>
+		     3000, chemin de l'Ãglise<br/>
+		     Lac-KÃ©nogami<br/>
+		     G7X 7V6<br/><br/>
+		      <strong>Information</strong> <br/>
+		     418 695-4717 durant les heures d'ouverture<br/>
+			 Lise Richard 418 549-1250 en dehors des heures d'ouverture <br/>
+
+		      <a href="https://www.google.ca/maps/place/3000+Chemin+de+l'%C3%89glise,+Saguenay,+QC+G7X+7V6/@48.3528913,-71.3332942,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc02e6f890f7ecd:0x7c75005c816cfea7!8m2!3d48.3528913!4d-71.3311055">Localiser sur Google Maps</a>
+		    </p>
+		</div>
+            </div>
+	                <div class="clearfix"></div>
+   
+	    	    <br/>
+	    <div class="col-sm-6">
+                <div class="row">
+		    <strong>Horaire rÃ©gulier</strong><br/>
+		    <div class="table-responsive">
+			    <table class="table table-bordered table-striped">
+			    <tr>
+				<td>Lundi</td>
+				<td>FermÃ©</td>
+			    </tr>
+			    <tr class="tablelinecolor">
+				<td>Mardi</td>
+				<td>16 h - 18 h</td>
+			    </tr>
+			    <tr>
+				<td>Mercredi</td>
+				<td>18 h 30 - 20 h</td>
+			    </tr>
+			    <tr class="tablelinecolor">
+				<td>Jeudi</td>
+				<td>FermÃ©</td>
+			    </tr>
+			    <tr>
+				<td>Vendredi</td>
+				<td>FermÃ©</td>
+			    </tr>
+			    <tr class="tablelinecolor">
+				<td>Samedi</td>
+				<td>FermÃ©</td>
+			    </tr>
+			    <tr>
+				<td>Dimanche</td>
+				<td>FermÃ©</td>
+			    </tr>
+			</table>
+		    </div>
+		</div>
+		<br/>
+		            </div>
+           
+		</div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
 	
 	
 	

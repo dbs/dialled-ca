@@ -11,8 +11,10 @@
           <!--[if IE 8 ]> <html class="ie8"> <![endif]-->
           <!--[if IE 9 ]> <html class="ie9"> <![endif]-->
           <!--[if (gt IE 9)|!(IE)]><!--><!--<![endif]-->
-          <link href="https://www.uwo.ca/web_standards/css/styles.css" rel="stylesheet"/>
+          <link href="https://www.uwo.ca/web_standards/css/style-responsive.css" rel="stylesheet"/>
           <link href="https://www.uwo.ca/web_standards/css/standard-menu.css" rel="stylesheet"/>
+          <!--meta content="width=device-width, initial-scale=1" name="viewport"/-->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
           <link href="https://www.uwo.ca/web_standards/img/logo/apple-icon.png" rel="apple-touch-icon"/>
           <link href="https://www.uwo.ca/web_standards/img/logo/favicon.ico" rel="shortcut icon"/>
           <noscript>
@@ -43,13 +45,23 @@ iframe {
 }
 </style>
 </noscript>
+          <script language="javascript" src="//www.uwo.ca/web_standards/js/1.6.4.jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(document).ready(function($){
+$('img').each(function()
+{ $(this).removeAttr('width'); $(this).removeAttr('height'); }
+);
+});
+</script>
           
 </head>
 
 <body>
-
+    
     <!-- Ribbon include begins -->
         <script src="https://www.uwo.ca/web_standards/js/rbn/rbn-standardpage.js" type="text/javascript"></script>
+        
         
         <noscript>
   <div class="panelbck">
@@ -103,14 +115,31 @@ iframe {
     <!-- Ribbon include ends -->
      
    <div id="masthead">
-        <a href="http://www.lib.uwo.ca"><img alt="Western Libraries" src="http://www.uwo.ca/web_standards/img/logos-academic/Libraries.png "/></a>   
+        <a href="http://www.lib.uwo.ca"><img alt="Western Libraries" src="http://www.uwo.ca/web_standards/img/logos-academic/Libraries.png "/></a> 
+        <div class="lists-select"><label class="hidden" for="popular-list">Popular Links</label><select class="fields" id="popular-list" name="popular-list" onchange="location.href=this.options[this.selectedIndex].value;">
+<option selected="selected" value="#">Popular Links</option>
+<option value="http://www.uwo.ca/directory.html">Directory</option>
+<option value="http://mail.uwo.ca">WebMail</option>
+<option value="https://owl.uwo.ca/portal">OWL</option>
+<option value="https://studentservices.uwo.ca/secure/index.cfm">Student Services</option>
+<option value="http://www.uwo.ca/a-z.html">Websites A - Z</option>
+<option value="http://events.westernu.ca/">Events</option>
+<option value="http://www.lib.uwo.ca/">Libraries</option>
+<option value="http://www.uwo.ca/about/visit/maps.html">Maps</option>
+<option value="http://www.uwo.ca/parking/">Parking</option>
+<option value="http://www.uwo.ca/">WesternU</option>
+</select></div>
         <form action="https://find.uwo.ca/search" class="search"><label class="obscure" for="searchfield">Search Library Website</label> <input id="searchfield" maxlength="50" name="q" placeholder="Search Library Website" size="27" type="text"/> <input name="access" type="hidden" value="p"/> <input name="entqr" type="hidden" value="0"/> <input name="ud" type="hidden" value="1"/> <input name="sort" type="hidden" value="date:D:L:d1"/> <input name="output" type="hidden" value="xml_no_dtd"/> <input name="oe" type="hidden" value="UTF-8"/> <input name="ie" type="hidden" value="UTF-8"/> <input name="client" type="hidden" value="lib_public_frontend"/> <input name="proxystylesheet" type="hidden" value="lib_public_frontend"/> <input name="proxyreloadt" type="hidden" value="1"/> <input name="site" type="hidden" value="Library"/> <input class="search_btn" type="submit" value="Go!"/></form>
    </div> <!--end div masthead-->
 
     <div class="container_12">
            
         <div class="grid_12">
-            <ul class="clearfix" id="menu" style="margin-left: 0;"><li class="medium"><a class="ex-link" href="http://alpha.lib.uwo.ca/" target="_blank">Catalogue</a></li><li class="medium"><a class="drop" href="../services/index.html">Services</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../services/research_help.html">Research Help</a></li><li><a href="../services/borrowing_and_access.html">Borrowing and Access</a></li><li><a href="../services/study_space_equipment_and_facilities.html">Study Space, Equipment, and Facilities</a></li><li><a href="../services/archives_and_special_collections.html">Archives and Special Collections</a></li><li><a href="../teaching/index.html">Teaching Support</a></li><li><a href="../services/faculty_support.html">Faculty and Graduate Support</a></li><li><a href="../services/visitor_and_alumni_services.html">Visitor and Alumni Services</a></li><li><a href="../accessibility/index.html">Library Accessibility</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../researchtools/index.html">Research Tools</a><div class="dropdown_1column"><div class="col_1"><ul><li><a class="ex-link" href="http://guides.lib.uwo.ca" target="_blank">Research Guides</a></li><li><a class="ex-link" href="http://guides.lib.uwo.ca/az.php" target="_blank">Databases</a></li><li><a href="../essayhelp/index.html">Citing &amp; Writing</a></li><li><a href="../researchskillsworkshops/index.html">Research Skills Workshops</a></li><li><a href="../tutorials/index.html">Videos &amp; How-Tos</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../facultysupport/index.html">Faculty Support</a><div class="dropdown_1column"><div class="col_1"><ul><li><a class="ex-link" href="http://copyright.uwo.ca/" target="_blank">Copyright</a></li><li><a class="ex-link" href="https://www.lib.uwo.ca/cgi-bin/resform.pl" target="_blank">Submit Course Reserves</a></li><li><a href="../scholarship/index.html">Scholarly Publishing</a></li><li><a class="ex-link" href="http://ir.lib.uwo.ca/" target="_blank">Scholarship @ Western</a></li><li><a href="../teaching/index.html">Teaching Support</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../libraries/index.html">Locations</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="index.html">Archives and Research Collections Centre</a></li><li><a href="../business/index.html">C.B. "Bud" Johnston Library (Business)</a></li><li><a href="../education/index.html">Education Library</a></li><li><a href="../law/index.html">John &amp; Dotsa Bitove Family Law Library</a></li><li><a href="../music/index.html">Music Library</a></li><li><a href="../taylor/index.html">Allyn &amp; Betty Taylor Library</a></li><li><a href="../weldon/index.html">The D.B. Weldon Library</a></li><li><a href="../madgic/index.html">Map and Data Centre</a></li><li><a href="../libraries/affiliates.html">Affiliated University College Libraries</a></li><li><a href="../libraries/resourcecentres.html">Campus Resource Centres</a></li><li><a href="../libraries/other.html">Other Libraries</a></li><li><a href="../maps/index.html">Map of Library Locations</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../contact/index.html">Contacts</a><div class="dropdown_1column align_right"><div class="col_1"><ul><li><a href="../contact/index.html">Contacts</a></li><li><a href="../chat/index.html">Chat</a></li><li><a href="../contact/instruction/index.html">Subject Librarians</a></li><li><a class="ex-link" href="https://www.lib.uwo.ca/forms/contact/feedback.php" target="_blank">Feedback</a></li></ul></div></div></li></ul>
+            <ul class="clearfix" id="menu" style="margin-left: 0;"><li class="medium"><a class="ex-link" href="http://alpha.lib.uwo.ca/" target="_blank">Catalogue</a></li><li class="medium"><a class="drop" href="../services/index.html">Services</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../services/research_help.html">Research Help</a></li><li><a href="../services/borrowing_and_access.html">Borrowing and Access</a></li><li><a href="../services/study_space_equipment_and_facilities.html">Study Space, Equipment, and Facilities</a></li><li><a href="../services/archives_and_special_collections.html">Archives and Special Collections</a></li><li><a href="../teaching/index.html">Teaching Support</a></li><li><a href="../services/faculty_support.html">Faculty and Graduate Support</a></li><li><a href="../services/visitor_and_alumni_services.html">Visitor and Alumni Services</a></li><li><a href="../accessibility/index.html">Library Accessibility</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../researchtools/index.html">Research Tools</a><div class="dropdown_1column"><div class="col_1"><ul><li><a class="ex-link" href="http://guides.lib.uwo.ca" target="_blank">Research Guides</a></li><li><a class="ex-link" href="http://guides.lib.uwo.ca/az.php" target="_blank">Databases</a></li><li><a href="../essayhelp/index.html">Citing &amp; Writing</a></li><li><a href="../researchskillsworkshops/index.html">Research Skills Workshops</a></li><li><a href="../tutorials/index.html">Videos &amp; How-Tos</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../facultysupport/index.html">Faculty Support</a><div class="dropdown_1column"><div class="col_1"><ul><li><a class="ex-link" href="http://copyright.uwo.ca/" target="_blank">Copyright</a></li><li><a class="ex-link" href="http://coursereadings.lib.uwo.ca" target="_blank">Submit Course Readings</a></li><li><a href="../scholarship/index.html">Scholarly Publishing</a></li><li><a class="ex-link" href="http://ir.lib.uwo.ca/" target="_blank">Scholarship @ Western</a></li><li><a href="../teaching/index.html">Teaching Support</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../libraries/index.html">Locations</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="index.html">Archives and Research Collections Centre</a></li><li><a href="../business/index.html">C.B. "Bud" Johnston Library (Business)</a></li><li><a href="../education/index.html">Education Library</a></li><li><a href="../law/index.html">John &amp; Dotsa Bitove Family Law Library</a></li><li><a href="../music/index.html">Music Library</a></li><li><a href="../taylor/index.html">Allyn &amp; Betty Taylor Library</a></li><li><a href="../weldon/index.html">The D.B. Weldon Library</a></li><li><a href="../madgic/index.html">Map and Data Centre</a></li><li><a href="../libraries/affiliates.html">Affiliated University College Libraries</a></li><li><a href="../libraries/resourcecentres.html">Campus Resource Centres</a></li><li><a href="../libraries/other.html">Other Libraries</a></li><li><a href="../maps/index.html">Map of Library Locations</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../contact/index.html">Contacts</a><div class="dropdown_1column align_right"><div class="col_1"><ul><li><a href="../contact/index.html">Contacts</a></li><li><a href="../chat/index.html">Chat</a></li><li><a href="../contact/instruction/index.html">Subject Librarians</a></li><li><a class="ex-link" href="https://www.lib.uwo.ca/forms/contact/feedback.php" target="_blank">Feedback</a></li></ul></div></div></li></ul>
+            <!-- BEGINNING OF MOBILE DROP-DOWN NAV -->
+            <ul id="nav"><li><a class="drop" href="#">MENU</a><ul><li><a href="http://alpha.lib.uwo.ca/" target="_blank">Catalogue</a></li><li><a href="../services/index.html">Services</a></li><li><a href="../researchtools/index.html">Research Tools</a></li><li><a href="../facultysupport/index.html">Faculty Support</a></li><li><a href="../libraries/index.html">Locations</a></li><li><a href="../contact/index.html">Contacts</a></li></ul><div class="clear"></div></li></ul><div class="clear"></div>
+            <!-- END OF MOBILE NAV -->
+
         </div> <!--end div grid_12-->    
         
         <div class="grid_12"> 
@@ -118,9 +147,9 @@ iframe {
                   
         </div> <!--end div grid_12--> 
                 
-        <div id="left-sidebar">
+        <div class="top" id="left-sidebar">
            
-            <h2><a href="index.html">Archives and Research Collections Centre</a></h2><div id="leftnav"><ul><li><a class="" href="location.html">About the Archives</a></li><li><a class="" href="archivesservices.html">Archives Services</a></li><li><a class="" href="visitingthearchives.html">Visiting the Archives Reading Room</a></li><li><a class="ex-link" href="http://alpha.lib.uwo.ca/search~S1?/ftlist^bib15%2C1%2C0%2C17/mode=2" target="_blank">Recently Catalogued</a></li><li><a class="ex-link" href="http://www.lib.uwo.ca/hours/archives" target="_blank">Hours</a></li><li><a class="" href="records.html">Records Management Services</a></li><li><a class="ex-link" href="https://www.lib.uwo.ca/forms/archives/recordsrequest.php" target="_blank">Records Centre Request Form</a></li><li><a class="" href="library.html">Library Book Storage</a></li><li><a class="ex-link" href="http://www.lib.uwo.ca/contact/libraries/archives/index.html" target="_blank">Contact the Archives</a></li></ul></div>
+            <h2><a href="index.html">Archives and Research Collections Centre</a></h2><div id="leftnav"><ul><li><a class="" href="archivesandspecialcollectionsservices.html">Archives Services and Collections</a></li><li><a class="" href="findingarchivalmaterial.html">Finding Archival Material</a></li><li><a class="" href="visitingthearchives.html">Visiting the Archives</a></li><li><a class="ex-link" href="http://www.lib.uwo.ca/hours/archives" target="_blank">Hours</a></li><li><a class="ex-link" href="http://www.lib.uwo.ca/contact/libraries/archives/index.html" target="_blank">Contact the Archives</a></li><li><a class="ex-link" href="http://alpha.lib.uwo.ca/search~S1?/ftlist^bib15%2C1%2C0%2C17/mode=2" target="_blank">Recently Catalogued</a></li><li><a class="" href="records.html">Records Management Services</a></li><li><a class="" href="library.html">Library Book Storage</a></li></ul></div>
            
             <a href="../chat/index.html" title="Ask a Librarian"><img alt="Ask a Librarian" height="55" src="../files/askalibrarian/askalibrarian-wide-open.gif" width="215"/></a> 
                      
@@ -129,26 +158,20 @@ iframe {
         
         <div class="grid_9">
             
-            <h1>Archives and Research Collections Centre</h1><h1><span style="text-decoration: underline;">Summer hours begin May 2, 2016</span></h1>
-<p><b>From May 2 - September 2, the Western Archives Reading Room will be closed on Fridays. The Reading Room will be open from 10-4:30 Monday to Thursday. We will also be closed for Statutory Holidays on May 23, July 1, August 1 and September 5.</b></p>
-<p><strong><i><img alt="" height="300" hspace="NaN" src="ROOMgraphic.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="400"/></i></strong></p>
-<p><strong><i>Making Room: Selected literary manuscripts of Emma Donoghue</i></strong></p>
-<p>View never-before-seen original manuscripts and ephemera relating to Emma Donoghue&#8217;s best-selling novel, <i>Room</i>, now on exhibit at the Archives and Research Collections Centre. The exhibit features selected archival material from the Emma Donoghue fonds that details the writing and publication of the novel. <i>Room</i> was shortlisted for the 2010 Man-Booker Prize, and won the Hughes &amp; Hughes Irish Novel of the Year, the Rogers Writers&#8217; Trust Fiction Prize, and the Commonwealth Prize, amongst others. It is now an acclaimed feature film that has been nominated for four Academy Awards, including Best Adapted Screenplay for Emma Donoghue herself. <i>Making &#8220;Room&#8221;: Selected literary manuscripts of Emma Donoghue </i>will be on at the John A. Schweitzer Gallery at the Archives and Research Collections Centre until June 30, 2016.&#160;</p>
-<p><a href="http://minweb.lib.uwo.minisisinc.com/scripts/mwimain.dll/144/PUB_DESCRIPTION?DIRECTSEARCH">Search Archives Holdings Database</a><br/><a href="http://alpha.lib.uwo.ca/">Search Shared Library Catalogue&#160;</a><br/><a href="archivesfindingaids.html">Browse Archives Finding Aids</a><br/><a href="https://www.lib.uwo.ca/archives/virtualexhibits.html">Virtual Exhibits</a></p>
+            <h1>Archives and Research Collections Centre</h1><p style="text-align: center;"><img alt="Picture of Kingsmill's Department Store and text about exhibit at the ARCC" height="375" src="../files/archives/KingsmillsDisplay-4x3.jpg" width="500"/></p>
+<p style="text-align: center;"></p>
+<p style="text-align: left;">The Kingsmills of London exhibit will be at the John A. Schweitzer Gallery in the Archives and Research Collections Centre until Nov. 1, 2016. It can be viewed between 10:00-4:30 Monday to Friday. &#160;</p>
+<p style="text-align: left;"></p>
+<p style="text-align: center;"><b><span><img alt="" height="226" src="../files/archives/Signatures.jpg" width="200"/></span></b></p>
+<p>Do you recognize these names? Come to the John A. Schweitzer Gallery and check out our newest exhibit titled "Signing Off Famous Signatures from Western Archives." We have Justin Trudeau, Charles Darwin, Della Reese and many many more. In the Archives and Research Collections Centre accessible via the main floor of&#160;<a href="https://www.facebook.com/westernulibsDBW/">The D. B. Weldon Library at Western University</a>&#160;during our regular hours between August 8th&#160;and November 11th.</p>
+<h2><a href="findingarchivalmaterial.html">FIND ARCHIVAL MATERIAL</a></h2>
 <p><a href="https://www.lib.uwo.ca/archives/photographingthehdm.html"></a><a href="photographingthehdm.html">Photo Essay: Photographing the HDM by MJ Idzerda</a></p>
 <p>Follow us on <a href="https://www.facebook.com/WesternUniversityArchives"><img align="absmiddle" alt="Facebook" height="20" src="../files/icons/facebook20.png" width="20"/></a> <a href="https://twitter.com/westernulibsARC"><img align="absmiddle" alt="Twitter" height="20" src="../files/icons/twitter20.png" width="20"/></a>&#160;<a href="http://www.historypin.org/en/person/47683" title="History Pin"><img alt="Favicon for http://blog.historypin.com" height="20" src="https://i.embed.ly/1/display/resize?key=1e6a1a1efdb011df84894040444cdc60&amp;url=http%3A%2F%2Fwww.google.com%2Fs2%2Ffavicons%3Fdomain%3Dhttp%3A%2F%2Fblog.historypin.com" width="18"/></a></p>
 <p><a href="highlightedarchivalphotographs.html">Read more about these highlighted photographs from the Archives</a></p>
 <p><img align="left" alt="Archives Photographs" hspace="10" name="randomimg" src="../files/blank.gif"/></p>
 <div class="clear"></div>
-<table border="0" cellpadding="5" class="no-borders" summary="External Archives Websites">
-<tbody>
-<tr>
-<td><a href="http://www.cdncouncilarchives.ca/intro.html"><img alt="Archives Canada" src="../files/archives/archivescanada.gif" style="display: block; margin-left: auto; margin-right: auto;"/></a></td>
-<td><a href="http://www.archeion.ca/"><img alt="Archeion" height="61" src="../files/archives/AAO_Archeion_logo_button_small.jpg" title="Archeion" width="200"/></a></td>
-</tr>
-</tbody>
-</table>
-<br/><center>
+<div style="padding: 10px 0;"><a href="http://www.cdncouncilarchives.ca/intro.html"><img align="left" alt="Archives Canada" src="../files/archives/archivescanada.gif" style="padding-right: 20px;"/></a> <a href="http://www.archeion.ca/"><img align="left" alt="Archeion" height="61" src="../files/archives/AAO_Archeion_logo_button_small.jpg" title="Archeion" width="200"/></a></div>
+<br/>
 <div>
 <script type="text/javascript">// 
 var j,d="",l="",m="",p="",q="",z="",list= new Array();
@@ -161,8 +184,7 @@ j=parseInt(Math.random()*list.length);
 j=(isNaN(j))?0:j;
 document.randomimg.src = list[j];
 // </script>
-</div>
-</center> 
+</div> 
             
             
             <br/>
@@ -176,9 +198,13 @@ document.randomimg.src = list[j];
   ga('send', 'pageview');
 // ]]></script>
         </div> <!--end div grid_9-->
+        <div class="bottom" id="left-sidebar">
+            <h2><a href="index.html">Archives and Research Collections Centre</a></h2><div id="leftnav"><ul><li><a class="" href="archivesandspecialcollectionsservices.html">Archives Services and Collections</a></li><li><a class="" href="findingarchivalmaterial.html">Finding Archival Material</a></li><li><a class="" href="visitingthearchives.html">Visiting the Archives</a></li><li><a class="ex-link" href="http://www.lib.uwo.ca/hours/archives" target="_blank">Hours</a></li><li><a class="ex-link" href="http://www.lib.uwo.ca/contact/libraries/archives/index.html" target="_blank">Contact the Archives</a></li><li><a class="ex-link" href="http://alpha.lib.uwo.ca/search~S1?/ftlist^bib15%2C1%2C0%2C17/mode=2" target="_blank">Recently Catalogued</a></li><li><a class="" href="records.html">Records Management Services</a></li><li><a class="" href="library.html">Library Book Storage</a></li></ul></div>
+            
+            
+        </div>
          
-            <br class="clear"/>
-            <br class="clear"/>
+            
 
             <div class="grid_12" id="footer">
            
@@ -212,19 +238,16 @@ document.randomimg.src = list[j];
         
     <div class="clear"></div>
     
-    <!-- Pulls Twitter w/o Twitter chrome -->
-        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-        <script language="javascript" src="https://www.uwo.ca/web_standards/js/1.6.4.jquery.min.js" type="text/javascript"></script>
-        <script language="javascript" src="https://www.uwo.ca/web_standards/js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
-        <script language="javascript" src="https://www.uwo.ca/web_standards/js/jquery.tweet.js" type="text/javascript"></script>
-        <script src="https://www.uwo.ca/web_standards/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
-        <script language="javascript" src="https://www.uwo.ca/web_standards/js/facebox.js" type="text/javascript"></script>
-    <!-- End Twitterpull -->
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/1.6.4.jquery.min.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/jquery.tweet.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/facebox.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/flexslider/jquery.flexslider.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/jquery.client.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/scripts-responsive.js" type="text/javascript"></script>
 
-    <script language="javascript" src="https://www.uwo.ca/web_standards/flexslider/jquery.flexslider.js" type="text/javascript"></script>
-     <script language="javascript" src="https://www.uwo.ca/web_standards/js/jquery.client.js" type="text/javascript"></script>
-     <script language="javascript" src="https://www.uwo.ca/web_standards/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
-    <script language="javascript" src="https://www.uwo.ca/web_standards/js/scripts.js" type="text/javascript"></script>
 
         
     <script src="https://www.uwo.ca/web_standards/js/jquery.validate.js" type="text/javascript"></script>

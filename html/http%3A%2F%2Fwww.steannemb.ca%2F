@@ -1,249 +1,435 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 
+<!doctype html>
 
-<!--HEAD STARTS HERE-->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="title" content="Town of Ste. Anne / Ville de Sainte-Anne / Manitoba"/>
-<meta name="author" content="Town of Ste. Anne / Ville de Sainte-Anne / Manitoba"/>
-<meta name="Description" content="With a population of just over 1534 people, the Town of Sainte-Anne is a friendly rural community with a warm, close feeling among residents.  The Town is proud of its bilingual heritage, and its rich history that dates back almost two centuries."/>
-<meta name="robots" content="index, follow"/>
-<meta name="msnbot" content="NOODP" />
-<meta name="ROBOTS" content="NOODP" />
+<html>
 
-<title>Town of Ste. Anne, Manitoba</title>
-    <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
-    <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
-<link href="css-java/steanne.css" rel="stylesheet" type="text/css" />
+	<head>
+		<title>Home - Town of Ste Anne / Ville de Sainte-Anne</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="shortcut icon" href="_assets/img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/tables.css" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/sm-cal.css" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/fullcalendar.css" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/jquery.qtip.min.css" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/bjqs.css" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/fullcalendar.print.css" media="print" />
+		<link rel="stylesheet" type="text/css" href="_assets/css/weather.css" />
 
-<script language="javascript" type="text/javascript">
-<!--
+	
+		<script type="text/javascript" src="_assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="_assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script type="text/javascript" src="_assets/js/jquery.mousewheel.min.js"></script>
+		<script src="galleria/galleria-1.4.2.min.js"></script>
+		<!--[if lte IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
+		<![endif]-->		
+		<script type="text/javascript" src="_assets/js/bjqs-1.3.min.js"></script>
+	</head>
 
-function openWin(id){
+	<body >
+	
+<!-- ================================================
+	Mobile Menu (hidden on screens over 960px)
+==================================================-->                
+    <nav id="mobile">
+    <div id="toggle-bar">
+    <strong><a class="mtoggle" href="#">MENU</a></strong>
+    <a class="navicon mtoggle" href="#">MAIN MENU</a>
+    </div>
+    <ul id="mmenu"><li><a href="#">Government</a><div>
+					<div class="menu-column">
+						<ul><ul><li><a href="#">Council</a><div>
+					<div class="menu-column">
+						<ul><ul><li><a href="main.php?p=23">Council Members</a></li><li><a href="main.php?p=105">Minutes/Agenda</a></li><li><a href="main.php?p=109">Council Meetings</a></ul></div></div></li><li><a href="#">Staff</a><div>
+					<div class="menu-column">
+						<ul><ul><li><a href="main.php?p=61">Administration</a></li><li><a href="main.php?p=62">Public Works</a></li><li><a href="main.php?p=63">Police Department</a></li><li><a href="main.php?p=64">Fire Department</a></ul></div></div></li><li><a href="main.php?p=26">Financial Plan</a></li><li><a href="main.php?p=34">Employment/Tenders/Opportunities</a></li><li><a href="main.php?p=108">Files & Documents</a></ul></div></div></li><li><a href="#">Services</a><div>
+					<div class="menu-column">
+						<ul><ul><li><a href="main.php?p=35">Welcome Visitors</a></li><li><a href="main.php?p=36">History and Heritage</a></li><li><a href="main.php?p=46">Garbage & Recycling</a></li><li><a href="main.php?p=65">Police and Fire Department</a></li><li><a href="main.php?p=39">Health</a></li><li><a href="main.php?p=40">Community Messages</a></li><li><a href="#">Public Services</a><div>
+					<div class="menu-column">
+						<ul><ul><li><a href="main.php?p=110">Library</a></li><li><a href="main.php?p=111">Community Development Corporation</a></li><li><a href="main.php?p=112">Education / Daycare</a></li><li><a href="main.php?p=113">Food Bank</a></li><li><a href="main.php?p=114">Bilingual Services Center</a></li><li><a href="main.php?p=29">Animal By-Law Officer</a></ul></div></div></li><li><a href="main.php?p=59">Committees/Community Volunteers</a></ul></div></div></li><li><a href="#">Recreation</a><div>
+					<div class="menu-column">
+						<ul><ul><li><a href="#">Community Sports</a><div>
+					<div class="menu-column">
+						<ul><ul><li><a href="main.php?p=115">Arena</a></li><li><a href="arenacalendar.php?lang=en">Arena Calendar</a></li><li><a href="main.php?p=117">Curling</a></li><li><a href="main.php?p=118">Soccer and Baseball</a></ul></div></div></li><li><a href="main.php?p=43">Parks & Playgrounds</a></li><li><a href="main.php?p=75">Festival & Events</a></li><li><a href="main.php?p=76">Recreation Volunteers</a></ul></div></div></li><li><a href="contact.html?lang=en">Contact Us</a></li>    
+    </ul>
+	</nav>    
 
-  w = window.open('/f3cms_calendar/showevent.php?id='+id,'event'+id,'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=420,height=600');
+<!-- ================================================
+	Header 
+==================================================-->  
+<header>
 
-}
+	<div class="grid container">
+		<div class="col-1-1" id="headmain">
+			<div class="logo-title"><a href="index.html?lang=en"><img src="_assets/img/logo.jpg" alt="Town of Ste Anne"></a></div>
+			<div class="slogan"><p>PassÃ© fier, avenir prospÃ¨re.<br/><span>Proud Past, Promising Future</span></p></div>
+			<div class="search-bar">
+			<div id="search">
+ <input type="text" id="srchbox" name="s" value="" placeholder="Search..." onfocus="if (this.value == '') {this.value=''}" onblur="if (this.value == '') {this.value=''}">
+ <a href="#" id="btnsrch"></a>
+<script>
+$("#btnsrch").click(function(event) {
+  event.preventDefault();
+  var s=$("#srchbox").val();
+  $(".gsc-input").val(s);
+  $(".gsc-search-button").click();
+});
 
-// -->
+$(window).load(function() {
+  $(".gsc-search-box").hide();
+  $(".gsearch").show();
+});
 </script>
 
+			</div></div>
+			<div class="langsel">
+				<div class="langsel-text">
+					<i class="fa fa-globe"></i> en | <a href="index.html?lang=fr">fr</a>
+				</div>
+			</div>
 
-</head>
-<!--HEAD ENDS HERE-->
+			</div>
+	
+		</div>
+		
+	</div>
+
+<!-- ================================================
+	Main Menu (hidden on screens under 960px)
+==================================================-->     
+    <nav id="full">
+    <div class="grid menudiv">
+	<div class="col-1-1" style="padding-right:0;">
+	<div >
+    <ul id="menu" class="menu">
+    <li><a href="index.html"><i style="color:white;font-size:25px;padding:0px 6px 0px 2px;" class="fa fa-home"></i> Home</a></li><li class="has-sub"><a href="#">Government</a><ul><li class="has-sub"><a href="#">Council</a><ul><li><a href="main.php?p=23">Council Members</a></li><li><a href="main.php?p=105">Minutes/Agenda</a></li><li class="mlast"><a href="main.php?p=109">Council Meetings</a></ul></li><li class="has-sub"><a href="#">Staff</a><ul><li><a href="main.php?p=61">Administration</a></li><li><a href="main.php?p=62">Public Works</a></li><li><a href="main.php?p=63">Police Department</a></li><li class="mlast"><a href="main.php?p=64">Fire Department</a></ul></li><li><a href="main.php?p=26">Financial Plan</a></li><li><a href="main.php?p=34">Employment/Tenders/Opportunities</a></li><li class="mlast"><a href="main.php?p=108">Files & Documents</a></ul></li><li class="has-sub"><a href="#">Services</a><ul><li><a href="main.php?p=35">Welcome Visitors</a></li><li><a href="main.php?p=36">History and Heritage</a></li><li><a href="main.php?p=46">Garbage & Recycling</a></li><li><a href="main.php?p=65">Police and Fire Department</a></li><li><a href="main.php?p=39">Health</a></li><li><a href="main.php?p=40">Community Messages</a></li><li class="has-sub"><a href="#">Public Services</a><ul><li><a href="main.php?p=110">Library</a></li><li><a href="main.php?p=111">Community Development Corporation</a></li><li><a href="main.php?p=112">Education / Daycare</a></li><li><a href="main.php?p=113">Food Bank</a></li><li><a href="main.php?p=114">Bilingual Services Center</a></li><li class="mlast"><a href="main.php?p=29">Animal By-Law Officer</a></ul></li><li class="mlast"><a href="main.php?p=59">Committees/Community Volunteers</a></ul></li><li class="has-sub"><a href="#">Recreation</a><ul><li class="has-sub"><a href="#">Community Sports</a><ul><li><a href="main.php?p=115">Arena</a></li><li><a href="arenacalendar.php?lang=en">Arena Calendar</a></li><li><a href="main.php?p=117">Curling</a></li><li class="mlast"><a href="main.php?p=118">Soccer and Baseball</a></ul></li><li><a href="main.php?p=43">Parks & Playgrounds</a></li><li><a href="main.php?p=75">Festival & Events</a></li><li class="mlast"><a href="main.php?p=76">Recreation Volunteers</a></ul></li><li class="mlast"><a href="contact.html?lang=en">Contact Us</a></li>    
+   </ul>
+    </div>
+    </div>
+    </div>
+    </nav>
+
+</header>
+
+<!-- ================================================
+	Banner
+==================================================-->  
+
+<div id="banner">
+	<div id="home-slider">
+		<ul class="bjqs">	
+	<!-- Slide -->
+			<li style="display:block;"> 
+			<img src="banner/banner1_2.jpg"><div class="bjqs-caption" style="font-size:1.0em">
+			<div class="grid container" style="background-color: rgba(0, 0, 0, 0.7);margin-bottom:15px;">
+			<div class="col-1-1 bjqs-caption-box">
+				<div class="bjqs-caption-text">
+			<p style="text-align: center;">Splash Park is now open from 10:00am to 8:00pm!</p></div></div></div></div>
+			</li></ul>
+	</div>
+</div> <!--- Banner --->
+
+<!-- ================================================
+	Content Section
+==================================================-->  
 
 
-<!--BODY STARTS HERE-->
+<div id="content" class="content-home">
+<div class="grid grid-pad content-bottom">
+<div class="col-3-12 sidebar">
+	<div id="quicklinks">
+		<h3><i class="fa fa-chain"></i>&nbsp;&nbsp;&nbsp;Quick Links</h3>
+		<div class="list-group"><a class="list-group-item" href="main.php?p=40"><span class="list-group-bullet"><i class="fa fa-arrow-circle-right"></i></span> Community Messages</a><a class="list-group-item" href="main.php?p=46"><span class="list-group-bullet"><i class="fa fa-arrow-circle-right"></i></span> Garbage & Recycling</a><a class="list-group-item" href="main.php?p=75"><span class="list-group-bullet"><i class="fa fa-arrow-circle-right"></i></span> Festival & Events</a><a class="list-group-item" href="main.php?p=108"><span class="list-group-bullet"><i class="fa fa-arrow-circle-right"></i></span> Files & Documents</a>
+		</div>
+	</div>			
+				<div class="side-events">
+					<h3><i class="fa fa-bullhorn"></i>&nbsp;&nbsp;&nbsp;Annoucements</h3>
+					<div class="content">
+					<div id="events"><div id="e0" class="events current"><div class="uevents">
+			<div class="uevent-title">Public Notice - Annual Board of Revision</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Aug 24, 2016</p>
+			<p>To view the details on the Annual Board of Revision please <a href="/media/misc/Ad-english-2016-board-of-revision.pdf" target="_blank">click here.</a></p>
+			</div>
+		</div><div class="uevents">
+			<div class="uevent-title">New Website</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Jun 9, 2016</p>
+			<p><span style="text-align: left; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12px;">Welcome to the Town of Sainte-Anne's new website, where you will find useful information pertaining to our town. We hope you find what you are looking for, and any feedback is appreciated! Please <a href="/~steanne/contact.html?lang=en">contact us</a> </span><span style="text-align: left; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12px;">with any questions or requests that you may have.</span></p>
+			</div>
+		</div><div class="uevents">
+			<div class="uevent-title">SPLASH PAD IS NOW OPEN</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Jun 1, 2016</p>
+			<p><a href="/~steanne/media/misc/splashpad-press-release.pdf" target="_blank">News Release</a></p>
+<p>The Town of Sainte-Anne welcomes everyone to have the opportunity to enjoy the Splash Pad in a safe manner. Tentatively open from 10:00am to 8:00pm.</p>
+			</div>
+		</div><div class="uevents">
+			<div class="uevent-title">Bulky Waste Pickup</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Jan 6, 2016</p>
+			<p>On&nbsp;September 13, 2016, the town will accept/pick up bulky waste. What is considered bulky waste: "an item or thing having weight which exceeds 32kgs (75lbs.) or a total dimension which exceeds 3 cubic meters (7 cubic yards) and without limiting the generality of the foregoing includes appliances, furniture, auto parts, large crates, packing products, hay and straw".</p>
+<p>*** Tires are excluded from pick up ***</p>
+			</div>
+		</div><div class="uevents">
+			<div class="uevent-title">Animal By-Law 5-2008</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Jan 1, 2016</p>
+			<p><strong><span style="color: #ff0000;">Please be reminded that all cats and dogs must be on a leash at all times.</span></strong></p>
+			</div>
+		</div></div></div></div></div>	
+</div>
 
-
-<body class="layout">
-
-
-<a name="top" id="top"></a>
-
+<div class="col-6-12">
+			  <div class="content">
+			  <h1>Welcome to&nbsp;a friendly community</h1>
+<p><img style="margin: 10px; float: left;" src="/~steanne/media/images/sainte-anne-sign-coming-into-town.jpg" alt="" width="237" height="165" />With a population of 1626 people, the Town of Sainte-Anne is a friendly rural community with a warm, close feeling among residents. The Town is proud of its bilingual heritage, and its rich history that dates back almost two centuries.</p>
 <div id="container">
-
-
-<!-- ################################### HEADER BLOCK STARTS #################################### -->	
-<div id="header_block">  
-    <div id="header-left">&nbsp;</div>
-    
-	<div id="header-right"><a href="index_fr.php" class="link-supplemental">FRAN&Ccedil;AIS</a><br />
-    <a href="page.php?id=43" class="link-supplemental">directory</a> <span class="div-supplemental">&nbsp;.</span>&nbsp;&nbsp;<a href="page.php?id=46" class="link-supplemental">events</a> <span class="div-supplemental">&nbsp;.</span>&nbsp;&nbsp;<a href="page.php?section=7" class="link-supplemental">contact</a> <span class="div-supplemental">&nbsp;.</span>&nbsp;&nbsp;<a href="page.php?section=8" class="link-supplemental">sitemap</a></div>
+<div id="body">
+<p>The Town of Sainte-Anne is covered by prairie land to the west and the beginning of the wooded Canadian Shield to the east. The picturesque Seine River runs through the municipality and the Town of Sainte-Anne. The municipality is known as Dawson Trail Country because the historical trail ran through the town of Sainte-Anne on its way to Winnipeg. Sainte-Anne is largely a service-based community, which offers goods and services to the area at large rather than being a major agriculture centre. The economy is rooted in health care, education and tourism.</p>
+<p>The Sainte-Anne Hospital is a designated bilingual hospital offering a wide range of healthcare services, including obstetrics, surgery and acute in-patient care, 24 hour emergency services, palliative care and a full range of laboratory and radiological services. There is a cooperative community approach to health by combining the many resources in Sainte-Anne. The education sector is a major employer since the Seine River School Division office and four schools are all found in Sainte-Anne. The tourism industry also thrives in the area with the Quarry Oaks Golf &amp; Country Club, Cottonwood Golf and Country Club and Oakwood Golf &amp; Country Club drawing golf enthusiasts to the area. The Lilac Resort is another tourist destination in addition to the local campgrounds.</p>
+<p>Today, the Town of Sainte-Anne continues to serve the surrounding region with its recreational facilities, municipal and health services, and schools. The education and health sectors are the largest employers in the town. The Town is also a bedroom community for those commuting to nearby Winnipeg for employment.</p>
 </div>
-<!-- ################################### HEADER BLOCK ENDS #################################### -->
-  
-
-<!-- ################################### GLOBAL NAV BLOCK STARTS #################################### -->
-<div id="global"><div style="height: 79px;">
-
-
-
-
-
-
-
-   
-   
-                 
-<ul id="MenuBar1" class="MenuBarHorizontal">
-
-
-  <li><a class="MenuBarItemSubmenu" href="index.php"><img src="images/english/home.jpg" width="182" height="79" alt="HOME" border="0" /></a>
-
-  </li>
-  
-  
-    <li><a class="MenuBarItemSubmenu" href="page.php?section=2"><img src="images/english/government.jpg" width="182" height="79" alt="GOVERNMENT" border='0'/></a>
-      <ul>
-<li><a href="page.php?id=5" >Council</a></li><li><a href="page.php?id=2" >Departments</a></li><li><a href="page.php?id=16" >Employment and Volunteering</a></li><li><a href="page.php?id=17" >Municipal Emergency Plan</a></li><li><a href="page.php?id=19" >History</a></li>      </ul>
-  </li>
-  
-  
-    <li><a class="MenuBarItemSubmenu" href="page.php?section=3"><img src="images/english/residents.jpg" width="182" height="79" alt="RESIDENTS" border='0'/></a>
-      <ul>
-<li><a href="page.php?id=6" >Community Messages</a></li><li><a href="page.php?id=46" >Events</a></li><li><a href="page.php?id=7" >Health</a></li><li><a href="page.php?id=28" >Education</a></li><li><a href="page.php?id=30" >Sport and Recreation</a></li><li><a href="page.php?id=35" >Public Library</a></li><li><a href="page.php?id=36" >Public Services</a></li><li><a href="page.php?id=43" >Public Directory</a></li><li><a href="page.php?id=56" >Building Permits</a></li>      </ul>
-  </li>
-  
-  
-    <li><a class="MenuBarItemSubmenu" href="page.php?section=4"><img src="images/english/visitors.jpg" width="164" height="79" alt="VISITORS" border='0'/></a>
-      <ul>
-<li><a href="page.php?id=47" >Welcome Visitors</a></li><li><a href="page.php?id=40" >Town Map</a></li><li><a href="page.php?id=41" >Geographical Site</a></li><li><a href="page.php?id=42" >Festivals and Events</a></li>      </ul>
-  </li>
-  <li>
-  <img src="images/global.jpg" width="250" height="79" alt="" />
-  </li>
-
-
-
-</ul>
-
-
-<script type="text/javascript">
-<!--
-var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
-//-->
-</script>
-</div></div>
-<!-- ################################### GLOBAL NAV BLOCK ENDS #################################### -->
-
-
-    
-<!-- ################################### PAGE BANNER BLOCK STARTS #################################### -->
-<div id="banner-home" style="background-image: url(uploads/banner-home_english.jpg);"></div>
-<!-- ################################### PAGE BANNER BLOCK ENDS #################################### -->
-    
-<!-- ################################################################################################## -->
-<!-- ################################### BODY CONTENT BLOCK STARTS #################################### -->
-<!-- ################################################################################################## -->    
-  <div id="body">
-  
-<!-- ################################### CALENDAR BLOCK STARTS #################################### -->
-   	  <div id="local-container">
-   		  <div id="local-top"><img src="images/english/local-top_calendarofevents.jpg" width="250" height="39" alt="Calendar of Events" /></div>
-    		<div id="local-middle">
-             
-
-<span class="eventdate">May 9, 2016</span>
-<a href="javascript:openWin(432)" class="link-local2">KIDS GARDENING CLUB</a>
-            
-
-                      
-
-<span class="eventdate">May 9, 2016</span>
-<a href="javascript:openWin(420)" class="link-local2">COMMUNITY DEVELOPMENT CORPORATION (CDC) MEETING</a>
-            
-
-                      
-
-<span class="eventdate">May 12, 2016</span>
-<a href="javascript:openWin(436)" class="link-local2">BIKE REPAIR WORKSHOP</a>
-            
-
-                      
-
-<span class="eventdate">May 16, 2016</span>
-<a href="javascript:openWin(433)" class="link-local2">KIDS GARDENING CLUB</a>
-            
-
-                                            
-                      
-                      
-                      
-                      
-			<br />
-            <iframe src="f3cms_calendar/smallview.php" marginheight="0" marginwidth="0" width="192" height="144" frameborder="0" scrolling="auto" style="margin-left: 16px;"></iframe>
-            
-            <a href="page.php?id=46" class="link-local2">View All Events</a>
-            
-            </div>
-    		<div id="local-bottom">&nbsp;</div>
-
-   	  </div>
-<!-- ################################### CALENDAR BLOCK ENDS #################################### -->
-
-
-<h1>Welcome to the Town of Ste. Anne</h1>
-
-<!-- ################################### QUICK LINKS BLOCK STARTS #################################### -->
-		<div id="hot-container">
-           	<div id="hot-top"><img src="images/english/hot-top_quicklinks.jpg" width="175" height="53" alt="Quick Links" /></div>
-   		    <div id="hot-middle"> <a href="page.php?id=6" class="link-hot">Community Messages</a> <a href="page.php?id=56" class="link-hot">BUILDING PERMITS</a> <a href="page.php?id=55" class="link-hot">FINANCIAL PLAN</a> <a href="page.php?id=54" class="link-hot">Public NOTICES</a> </div>
-	      <div id="hot-bottom">&nbsp;</div>
-   	  	</div>
-<!-- ################################### QUICK LINKS BLOCK ENDS #################################### -->
-
+</div>
 <p>&nbsp;</p>
-<h3 style="text-align: center;"><span style="color: #ff0000;">COFFEE WITH COUNCIL</span></h3>
-<p><span style="color: #ff0000;"><strong><span style="color: #000000;">It was great to see so many residents at last night's Coffee with Council meeting. Thank you for coming out and we hope that you found the meeting as valuable as we did.</span></strong></span></p>
-<p><span style="color: #ff0000;"><strong><span style="color: #000000;">We are striving to be available and transparent to you as much as possible as we value your input, creativity and suggestions. </span></strong></span></p>
-<p><span style="color: #ff0000;"><strong><span style="color: #000000;">Additionally, we will be meeting again August 18, stay tuned for location.</span></strong></span><span style="color: #ff0000;"><strong><span style="color: #000000;"><br /></span></strong></span></p>
-<h3 style="text-align: center;"><span style="color: #ff0000;">2016 SPRING ROAD RESTRICTIONS WITHIN THE TOWN OF SAINTE-ANNE</span></h3>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: left;">Please be aware the annual spring road restrictions will be applied to all streets within the boundaries of the Town of Sainte-Anne. Exempt from these Town restrictions are Centrale Ave. and TraverseRoad, as they will be restricted as requied by Manitoba Highways&nbsp; Transportation.</p>
-<p style="text-align: left;">Spring road restriction is 65% of normal load axle units.</p>
-<p style="text-align: left;">Town of Sainte-Anne spring road restriction is in effect <strong>March 14 at 6:00 am</strong></p>
-<p style="text-align: left;"><strong>&nbsp;</strong>Provincial road restrictions is in effect <strong>March 11 at 6:00 am</strong></p>
-<p style="text-align: left;"><strong>&nbsp;</strong>To view more details please visit this web site <a href="http://www.gov.mb.ca/mit/srr/">http://www.gov.mb.ca/mit/srr/</a></p>
-<h3>TEXT - EMAIL UPDATES</h3>
-<p>Are you interested in getting quick easy text or emails to keep you updated on activities, events, important information and dates from the Town of Ste. Anne, follow these easy instructions to sign up for these important updates.</p>
-<p>To receive a message via text: &nbsp;text @town-ville to 204 800-5926 you will be asked to enter your name (of your choice) its that easy!! (you can opt-out at anytime by replying, 'unsubscribe @town-ville')</p>
-<p>To receive a message via email, send an emai to town-ville@mail.remind.com &nbsp;To unsubscribe, reply with 'unsubscribe' in the subject line.</p>
-<p style="text-align: left;"><span style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12px; text-align: left;">Welcome to the Town of Ste. Anne's new website, where you will find useful information pertaining to our town. We hope you find what you are looking for, and any feedback is appreciated! Please </span><a style="text-align: left;" href="../page.php?id=12">contact us</a><span style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12px; text-align: left;"> with any questions or requests that you may have.</span></p>
-<ul>
-<li class="ul-margin"><span style="line-height: normal;"><a href="../page.php?id=5">Government</a>: Learn about our local government.<br /><br /></span></li>
-<li class="ul-margin"><span style="line-height: normal;"><a href="../page.php?id=6">Residents</a>: Information with our residents in mind.<br /><br /></span></li>
-<li class="ul-margin"><span style="line-height: normal;"><a href="../page.php?id=47">Visitors</a>: Information with our visitors in mind. We look forward to your visit!<br /></span></li>
-</ul>
-<h3>A Friendly Rural Community</h3>
-<p>With a population of 1626 people, the Town of Sainte-Anne is a friendly rural community with a warm, close feeling among residents.&nbsp; The Town is proud of its bilingual heritage, and its rich history that dates back almost two centuries.</p>
-<p>The Town of Sainte-Anne is covered by prairie land to the west and the beginning of the wooded Canadian Shield to the east.&nbsp; The picturesque Seine River runs through the municipality and the Town of Sainte-Anne.&nbsp; The municipality is known as Dawson Trail Country because the historical trail ran through the town of Sainte-Anne on its way to Winnipeg.&nbsp; Sainte-Anne is largely a service-based community, which offers goods and services to the area at large rather than being a major agriculture centre.&nbsp; The economy is rooted in health care, education and tourism.</p>
-<p>The Sainte-Anne Hospital is a designated bilingual hospital offering a wide range of healthcare services, including obstetrics, surgery and acute in-patient care, 24 hour emergency services, palliative care and a full range of laboratory and radiological services.&nbsp; There is a cooperative community approach to health by combining the many resources in Sainte-Anne.&nbsp; The education sector is a major employer since the Seine River School Division office and four schools are all found in Sainte-Anne.&nbsp; The tourism industry also thrives in the area with the Quarry Oaks Golf &amp; Country Club, Cottonwood Golf and Country Club and Oakwood Golf &amp; Country Club drawing golf enthusiasts to the area.&nbsp; The Lilac Resort is another tourist destination in addition to the local campgrounds.</p>
-<p>Today, the Town of Sainte-Anne continues to serve the surrounding region with its recreational facilities, municipal and health services, and schools.&nbsp; The education and health sectors are the largest employers in the town.&nbsp; The Town is also a bedroom community for those commuting to nearby Winnipeg for employment.</p>
-<h3>A Safe and Comfortable Country Lifestyle</h3>
-<p>Residents enjoy the safe and comfortable country lifestyle afforded in the Town of Sainte-Anne and its excellent access to more urban amenities in Steinbach and Winnipeg.&nbsp; When discussing their community, many residents describe it as a good place to raise a family, noting that it has the lowest crime rate in Manitoba and excellent regional medical and educational services.</p>
-<p>The Town of Sainte-Anne is one of five communities outside of Winnipeg and Brandon that has an independent police force.&nbsp; The Sainte-Anne Police Department practices a visible, holistic approach to community policing, seeking to integrate with the neighborhoods, residents and community rather than focus solely on crime suppression.</p>
-<p>The Town of Sainte-Anne is a regional hub for many health services provided by Southern Health-Sant&eacute; Sud.&nbsp; The Southern Health region encompasses over 27,025 km<sup>2</sup> and approximately 183,000 residents.&nbsp;&nbsp;In addition&nbsp;there are several private practice clinics:&nbsp; Seine River Medical Clinic; Seine River Dental Service; Seine Pharmacy; Ste. Anne Physiotherapy &amp; Sports Injury Clinic, and Ste. Anne Chiropractic Clinic.&nbsp; In total, the medical sector is the largest employer in the Town of Sainte-Anne.&nbsp; This concentration of regional medical services makes it an attractive community to seniors for the services themselves and to families for the employment opportunities.</p>
-<p>The Town of Ste. Anne has seen steady growth since 1981.&nbsp; As of the 2011 census the population grew to 1626, a 6% increase from the previous census in 2006&nbsp;of 1534.&nbsp; This growth is higher than both the Rural Municipality of Ste. Anne and the Province of Manitoba, coming in at 3.9% and 5.2% respectively.</p>
-<p>Urban areas develop and grow because of advantages afforded their residents.&nbsp; This is measured either in terms of employment and/or quality of life.&nbsp; A municipality grows either because it creates employment opportunities that retain and attract young people to the community or it offers a pleasant living environment in the community, which has good access to an exterior source of employment.&nbsp; This living environment refers not only to pleasant residential areas but also, to the provision of other amenities that enhance one&rsquo;s quality of life.&nbsp; This includes shopping, educational, recreational, cultural, medical and protective services as well as a clean and attractive natural environment.</p>
+<p>&nbsp;</p>
+			  </div>
+			</div>			
+			<div class="col-3-12 sidebar">
+			
+			<h3><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Upcoming Events</h3><div id="eventsweek" style="margin-top:10px;"><div id="e0" class="nweek currweek"><div class="uevents">
+			<div class="uevent-title">Bulky Waste</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Sep 13, 2016</p>
+			</div>
+		</div><div class="uevents">
+			<div class="uevent-title">Council meeting</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Sep 13, 2016</p>
+			</div>
+		</div><div class="uevents">
+			<div class="uevent-title">Council meeting</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Sep 27, 2016</p>
+			</div>
+		</div><div class="uevents">
+			<div class="uevent-title">Ste. Anne Fall Supper</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Oct 2, 2016</p>
+			</div>
+		</div><div class="uevents">
+			<div class="uevent-title">Council meeting</div>
+			<div class="uevent-info">
+			<p class="uevent-date">Oct 11, 2016</p>
+			</div>
+		</div></div></div><div id="sm-cal"><div class="c-title dark-gray-3level">
+						<div class="left-button">&lsaquo;</div>
+						<div class="right-button">&rsaquo;</div>
+						<div id="caltitle" data-mth="2016-09-01" class="title">September 2016</div>
+					</div>
+					<table id="minical" class="c-days">
+					   <thead class="light-gray">
+						  <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th> </tr>
+					   </thead>
+					   <tbody>
+    <tr class="simple-lightgray"><td class="other-month" ><span>28</span></td>
+<td class="other-month" ><span>29</span></td>
+<td class="other-month" ><span>30</span></td>
+<td class="other-month" ><span>31</span></td>
+<td class="" ><span>1</span></td>
+<td class=" mark" data-date="2016-09-02"><span>2</span></td>
+<td class="" ><span>3</span></td>
+</tr><tr class="simple-lightgray">
+<td class="" ><span>4</span></td>
+<td class="" ><span>5</span></td>
+<td class="" ><span>6</span></td>
+<td class="" ><span>7</span></td>
+<td class="" ><span>8</span></td>
+<td class="" ><span>9</span></td>
+<td class=" mark" data-date="2016-09-10"><span>10</span></td>
+</tr><tr class="simple-lightgray">
+<td class="today" ><span>11</span></td>
+<td class="" ><span>12</span></td>
+<td class=" mark" data-date="2016-09-13"><span>13</span></td>
+<td class="" ><span>14</span></td>
+<td class="" ><span>15</span></td>
+<td class="" ><span>16</span></td>
+<td class="" ><span>17</span></td>
+</tr><tr class="simple-lightgray">
+<td class="" ><span>18</span></td>
+<td class="" ><span>19</span></td>
+<td class="" ><span>20</span></td>
+<td class="" ><span>21</span></td>
+<td class="" ><span>22</span></td>
+<td class="" ><span>23</span></td>
+<td class="" ><span>24</span></td>
+</tr><tr class="simple-lightgray">
+<td class="" ><span>25</span></td>
+<td class="" ><span>26</span></td>
+<td class=" mark" data-date="2016-09-27"><span>27</span></td>
+<td class="" ><span>28</span></td>
+<td class="" ><span>29</span></td>
+<td class="" ><span>30</span></td>
+<td class="other-month" ><span>1</span></td>
+</tr><tr class="simple-lightgray">
+</tbody>
+					</table>			</div>
+			<p class="text-right" style="margin-bottom:0px;"><a href="calendar.php?lang=en">View Calendar</a></p>
+			</div>
+		</div></div>
+<div id="modal-background"></div>
+    <div id="npopup" class="modal-window">
+    	<div id="modal-content" ></div>
+   		<p class="text-center"><a href="" onclick="return cancelpopup()" class="button">Close</a></p>
+		</div>
+<!-- ================================================
+	Footer
+==================================================-->  
+
+<footer>
+
+<div class="grid grid-pad container">
+	<div class="col-1-3">
+		<div style="display:inline-block;text-align:left;">
+			<p>Unit B-30 Dawson Road<br/>Sainte-Anne, Manitoba<Br/>R5H 1B5</p>
+		</div>
+	</div>
+	<div class="col-1-3">
+		<div style="display:inline-block;text-align:left;">
+			<p>Telephone: 204.422.5293<br/>Fax: 204.422.5459<br/>Email: town@steannemb.ca</p>
+		</div>
+	</div>
+	<div class="col-1-3">
+		<div style="display:inline-block;text-align:left;">
+			<p>Office Hours<br/>Mon-Fri: 9:00AM to 4:30PM</p>
+		</div>
+	</div>
+
+	<div class="col-1-1">
+     <p class="text-center"></p>
+     <p class="text-center">Town of Sainte-Anne, All rights reserved, Â©2016 <a href="http://www.elitedesigns.ca" target="_blank">Website designed by Elite Designs Winnipeg</a></p>
+	</div>
 
 
-
-<p class="p-top"><a href="#top">top</a></p>
-  </div>
-<!-- ################################################################################################## -->
-<!-- ################################### BODY CONTENT BLOCK ENDS ###################################### -->
-<!-- ################################################################################################## -->   
-  
-   
-
-
-<!-- ################################################################################################## -->
-<!-- ################################### FOOTER BLOCK STARTS ########################################## -->
-<!-- ################################################################################################## -->    
- <hr />    
- 
-  <div id="footer-left"> Copyright (c) 2013 <a href="http://www.steannemb.ca" class="link-supplemental">Town of Ste. Anne</a><br />
-    <br />
-Web by <a href="http://www.f3designs.ca" target="_blank">F3 Designs</a> (Dec 2010)<br />
-Maintained Via <a href="http://www.f3cms.ca" target="_blank">F3 CMS</a><br />
-    <br />
-  </div>
-    
-    
-    <div id="footer-right"><a href="#" class="link-supplemental"><br />
-</a><a href="index_fr.php" class="link-supplemental">FRAN&Ccedil;AIS</a><a href="#" class="link-supplemental"></a><br />
-  <a href="/" class="link-supplemental">home</a><span class="div-supplemental">&nbsp;.</span>&nbsp;<a href="page.php?section=2" class="link-supplemental">government</a><span class="div-supplemental">&nbsp;.</span>&nbsp;<a href="page.php?section=3" class="link-supplemental">residents</a><span class="div-supplemental">&nbsp;.</span>&nbsp;<a href="page.php?section=4" class="link-supplemental">visitors</a><span class="div-supplemental">&nbsp;.</span>&nbsp;<a href="page.php?id=43" class="link-supplemental">directory</a><span class="div-supplemental">&nbsp;.</span>&nbsp;<a href="page.php?id=46" class="link-supplemental">events</a><span class="div-supplemental">&nbsp;.</span>&nbsp;<a href="page.php?section=7" class="link-supplemental">contact</a><span class="div-supplemental">&nbsp;.</span>&nbsp;<a href="page.php?section=8" class="link-supplemental">sitemap</a></div>
 </div>
-<!-- ################################################################################################## -->
-<!-- ################################### FOOTER BLOCK ENDS ############################################ -->
-<!-- ################################################################################################## -->  
+</footer>
+
+<div class="gsearch" style="display:none;">
+<script>
+  (function() {
+    var cx = '017244889544749245515:cr83dmltwhc';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
+
+<a href="#" id="backToTop"><span class="fa fa-chevron-circle-up"></span></a>
+</div><!-- end #container !-->
 
 
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("#mmenu").hide();
+			$(".mtoggle").click(function() {
+				$("#mmenu").slideToggle(500);
+			});
+		});
+		jQuery(document).ready(function($){
+		    $(window).scroll(function(){
+		        if ($(this).scrollTop() > 50) {
+		            $('#backToTop').fadeIn('slow');
+		        } else {
+		            $('#backToTop').fadeOut('slow');
+		        }
+		    });
+		    $('#backToTop').click(function(){
+		        $("html, body").animate({ scrollTop: 0 }, 500);
+		        return false;
+		    });
+		});		
+		
+		</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			var divWidth = $("#banner").width();
+			var divHeight = 350/1400*divWidth;
+			$("#home-slider").bjqs({
+            height      : divHeight,
+            width       : divWidth,
+            responsive  : true,
+            nexttext    : ">",
+            prevtext    : "<",
+            showcontrols: true,
+            centermarkers: false,
+            animtype    : "slide"
+      });
+      
+    	$(document).on("click",".left-button",function() {
+    		var sen=$("#caltitle").attr("data-mth")+" -1 month";
+    		
+    		$.post("?lang=en", { getmth:sen })
+					.done(function(data) {
+						if(data.substring(0,5)=="@***@" && data.substring(data.length-5)=="@***@") {
+							var scr=data.substr(5);
+							scr=scr.substr(0,scr.length-5); 
+		  				$("#sm-cal").html(scr);
+						}
+					});
+					
+    	});
+    	$(document).on("click",".right-button",function() {
+    		var sen=$("#caltitle").attr("data-mth")+ " +1 month";
+    		
+    		$.post("?lang=en", { getmth:sen })
+					.done(function(data) {
+						if(data.substring(0,5)=="@***@" && data.substring(data.length-5)=="@***@") {
+							var scr=data.substr(5);
+							scr=scr.substr(0,scr.length-5); 
+		  				$("#sm-cal").html(scr);
+						}
+					});
+					
+    	});
+    	$(document).on("click",".mark",function() {
+    	  var sen=$(this).attr("data-date");
+    		$.post("?lang=en", { getinfo:sen })
+					.done(function(data) {
+						if(data.substring(0,5)=="@***@" && data.substring(data.length-5)=="@***@") {
+							var scr=data.substr(5);
+							scr=scr.substr(0,scr.length-5); 
+							$("#modal-background").show();
+							$("#modal-content").html(scr);
+							$("#npopup").slideDown();
+						}
+					});
+    	});
+    
+    $.each( $("*"), function() { 
+    if( $(this).width() > $("body").width()) {
+        console.log("Wide Element: ", $(this), "Width: ", $(this).width()); 
+    } 
+		});
+    
+    });
+    
+    function cancelpopup() {
+			$("#modal-background").hide();
+			$("#npopup").slideUp();
+			return false;
+		}
+  </script>		
 
-</body>
-<!--BODY ENDS HERE-->
 
-
+	</body>
 </html>

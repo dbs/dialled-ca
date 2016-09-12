@@ -33,12 +33,13 @@
         
         <div class="header-container">
             <div id="headerSlide">
-                                        <div id="headerBkg" style="background-image:url('/images/header8.jpg');"></div>
+                                        <div id="headerBkg" style="background-image:url('/images/header1.jpg');"></div>
 
             </div>
             <div id="topTrans"></div>
             <header class="wrapper clearfix">
                 <div id="siteLogo"><a href="/"><img src="/images/logoSaintIrenee.png" /></a></div>
+                <a href="https://www.facebook.com/municipalitesaintirenee/" id="facebookBtn"><img src="/images/FB.png" /></a>
                 <nav>
                     <ul id="mainMenu">
                         <li>
@@ -343,7 +344,7 @@ Centre d'études</a>
  <span> > </span>                         Réglementation<br/>
 et Urbanisme        </li>
             <li class="mainMenuSub2 ">
- <span> &#8226; </span>                                 <a href="/liens-rapides/reglementation-et-urbanisme/urbanisme.aspx#contentAnchor">Urbanisme</a>
+ <span> &#8226; </span>                                 <a href="/liens-rapides/reglementation-et-urbanisme/r&#232;glementation-durbanisme.aspx#contentAnchor">Urbanisme</a>
             </li>
             <li class="mainMenuSub2 ">
  <span> &#8226; </span>                                 <a href="/liens-rapides/reglementation-et-urbanisme/comit&#233;-consultatif-durbanisme-(ccu).aspx#contentAnchor">Comité Consultatif d'Urbanisme</a>
@@ -469,15 +470,15 @@ Réglementation<br/>
 et Urbanisme            <ul class="">
                 <li class="mainMenuSub2 notcurrent">
                    <span> &#8226; </span>
-                    <a href="/liens-rapides/reglementation-et-urbanisme/urbanisme.aspx#contentAnchor">Urbanisme</a>
-                </li>
-                <li class="mainMenuSub2 notcurrent">
-                   <span> &#8226; </span>
-                    <a href="/liens-rapides/reglementation-et-urbanisme/reglementation.aspx#contentAnchor">Réglementation</a>
+                    <a href="/liens-rapides/reglementation-et-urbanisme/r&#232;glementation-durbanisme.aspx#contentAnchor">Urbanisme</a>
                 </li>
                 <li class="mainMenuSub2 notcurrent">
                    <span> &#8226; </span>
                     <a href="/liens-rapides/reglementation-et-urbanisme/comit&#233;-consultatif-durbanisme-(ccu).aspx#contentAnchor">Comité Consultatif d'Urbanisme</a>
+                </li>
+                <li class="mainMenuSub2 notcurrent">
+                   <span> &#8226; </span>
+                    <a href="/liens-rapides/reglementation-et-urbanisme/r&#232;glementation-municipale.aspx#contentAnchor">Réglementation</a>
                 </li>
             </ul>
         </li>
@@ -632,26 +633,13 @@ Bibliothèque            <ul class="currentUL">
 <li><strong>le samedi de 10 h à midi</strong></li>
 </ul>
 <p class="sousTitre"><strong>Événements</strong></p>
-<p><strong>Du 15 avril au 14 juillet 2016 :</strong></p>
-<p style="padding-left: 30px;">Exposition de photos de <span style="text-decoration: underline;">François Rivard</span>.</p>
+<p><strong>Du 15 juillet au 14 octobre 2016 :</strong></p>
+<p style="padding-left: 30px;">Exposition de photos de <span style="text-decoration: underline;">Robert Tremblay</span>.</p>
 <p style="padding-left: 30px;"><em>En collaboration avec la CLIC (Corporation Lumière Image de Charlevoix)</em></p>
 <p style="padding-left: 30px;">L'exposition est accessible aux heures normales d'ouverture de la bibliothèque.</p>
 <p><strong>Le 24 juin 2016 :</strong></p>
-<p style="padding-left: 30px;"><span style="text-decoration: underline;">Le bazar annuel de la bibliothèque.</span></p>
-<p style="padding-left: 30px;">Lieu :         Stationnement de l'église ou à la salle municipale s'il pleuvait.<br />Heures :     De 10 heures à 15 heures.<br />Coût :        Gratuit<br />Animation : Normand Chouinard</p>
-<p style="padding-left: 30px;">Les profits de cet événement aideront la bibliothèque à étoffer sa collection.</p>
-<p style="padding-left: 30px;">Marché aux puces :</p>
-<p style="padding-left: 60px;">Après un bon ménage du printemps, venez vendre les objets<br />dont vous n'avez plus besoin.<br />Nous fournissons les tables au coût de 10 $ l'unité.<br />Si vous désirez quand même apporter vos tables,<br />elles vous seront facturées au coût de 10 $ chacune.<br /><span style="text-decoration: underline;">Appelez au 418-452-1146 ou au 418-452-9251 pour réserver une table.</span></p>
-<p style="padding-left: 30px;">Vente de livres :</p>
-<p style="padding-left: 60px;">Nous aurons un bon choix de livres usagés en vente à bas prix.<br /><br />Vous avez des livres en trop?<br /><span style="text-decoration: underline;">Venez nous les porter à la bibliothèque, au 400 rue Principale,<br />les mardis et les samedis pendant les heures normales d'ouverture (voir ci-haut).</span><br />Nous acceptons tout avec plaisir. Ce que nous ne vendrons pas sera donné<br />à des organismes de charité pour être expédié dans des pays en voie de développement.</p>
-<p style="padding-left: 30px;">Kiosque des fermières :</p>
-<p style="padding-left: 60px;">Cette année encore, les fermières de Saint-Irénée offriront en vente leurs magnifiques<br />produits faits main, tels que : catalognes, coussins, linges à vaisselle, etc.</p>
-<p style="padding-left: 30px;">Tirage : </p>
-<p style="padding-left: 60px;">Vous pourrez remporter un des nombreux prix offerts par des institutions<br />et des commerçants de la région, en achetant des billets de notre tirage :</p>
-<p style="padding-left: 90px;">1 billet  - 2$<br />3 billets - 5$<br />8 billets - 10$</p>
-<p style="padding-left: 60px;">Il y aura plusieurs tirages au cours de la journée.</p>
-<p style="padding-left: 30px;">En-cas et rafraîchissements :</p>
-<p style="padding-left: 60px;">De la nourriture et des boissons seront disponibles sur place.</p>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Le bazar annuel de la bibliothèque a été un franc succès.</span></p>
+<p style="padding-left: 30px;">Cette activité de collecte de fonds, animée par Normand Chouinard, nous a permis d’accroître notre budget d’achat de livres de plus de 50 %.<br /><br />Nous remercions chaleureusement tous les bénévoles qui ont contribué au bon déroulement de la journée ainsi que tous nos partenaires, donateurs et commanditaires :<br /><br /><strong>Le cercle des fermières de Saint-Irénée</strong><br /><strong>La fabrique de la paroisse de Saint-Irénée</strong><br /><br /><strong>Boutique Charlevoix                    Dépanneur Robin Tremblay</strong><br /><strong>Série Charlevoix                            Le Domaine Forget de Charlevoix</strong><br /><strong>Le Saint-Laurent Café                  Librairie Baie-Saint-Paul</strong><br /><strong>M. Jean-Claude Verreault            M. Yvon Béchard</strong><br /><strong>Mme Pauline Perron                      La municipalité de Saint-Irénée</strong><br /><strong>Musée de Charlevoix                      Pains d’exclamation</strong><br /><strong>Patrick Gagné construction inc.  Centre écologique de Port au saumon</strong><br /><strong>Série Charlevoix                              Boutik Ariel enr.</strong><br /><strong>Cinéma La Malbaie                          Ferme de la Côte des bouleaux</strong></p>
 <p class="sousTitre">Liens utiles</p>
 <p style="padding-left: 30px;"><strong>Bibliothèque et Archives nationales du Québec : </strong><a href="http://www.banq.qc.ca/accueil/" title="Lien BAnQ">http://www.banq.qc.ca/accueil/</a></p>
 <p style="padding-left: 30px;"><strong>Les libraires </strong>: <a href="http://www.leslibraires.ca/" title="LesLibraires">http://www.leslibraires.ca/</a></p>
@@ -718,7 +706,7 @@ Bibliothèque            <ul class="currentUL">
             Réglementation<br/>
 et Urbanisme                        <ul>
                     <li>
-<span> &#8226; </span>                        <a href="/liens-rapides/reglementation-et-urbanisme/urbanisme.aspx">Urbanisme</a>
+<span> &#8226; </span>                        <a href="/liens-rapides/reglementation-et-urbanisme/r&#232;glementation-durbanisme.aspx">Urbanisme</a>
                     </li>
                     <li>
 <span> &#8226; </span>                        <a href="/liens-rapides/reglementation-et-urbanisme/comit&#233;-consultatif-durbanisme-(ccu).aspx">Comité Consultatif d'Urbanisme</a>

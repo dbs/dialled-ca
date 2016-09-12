@@ -50,11 +50,14 @@
                                 s.parentNode.insertBefore( wf, s );
                             })();
                         </script>
-                    <link rel="alternate" type="application/rss+xml" title="Sooke School District &raquo; Feed" href="http://www.sd62.bc.ca/feed/" />
+                    <link rel='dns-prefetch' href='//districtwebsite.web.sd62.bc.ca' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sooke School District &raquo; Feed" href="http://www.sd62.bc.ca/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Sooke School District &raquo; Comments Feed" href="http://www.sd62.bc.ca/comments/feed/" />
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.sd62.bc.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.3"}};
-			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.sd62.bc.ca\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
 img.wp-smiley,
@@ -71,32 +74,33 @@ img.emoji {
 }
 </style>
 <link rel='stylesheet' id='ai1ec_style-css'  href='//districtwebsite.web.sd62.bc.ca/wp-content/plugins/all-in-one-event-calendar/cache/a0de5fa7_ai1ec_parsed_css.css?ver=2.3.4' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-css'  href='http://www.sd62.bc.ca/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.sd62.bc.ca/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.5' type='text/css' media='all' />
 <link rel='stylesheet' id='rs-plugin-settings-css'  href='http://www.sd62.bc.ca/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=4.6.5' type='text/css' media='all' />
 <style id='rs-plugin-settings-inline-css' type='text/css'>
 .tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
 </style>
-<link rel='stylesheet' id='style-css'  href='http://www.sd62.bc.ca/wp-content/themes/babykids/style.css?ver=4.3.3' type='text/css' media='all' />
-<link rel='stylesheet' id='responsive-css'  href='http://www.sd62.bc.ca/wp-content/themes/babykids/css/nicdark_responsive.css?ver=4.3.3' type='text/css' media='all' />
-<link rel='stylesheet' id='mytheme-montez-css'  href='http://fonts.googleapis.com/css?family=Montez&#038;ver=4.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='http://www.sd62.bc.ca/wp-content/themes/babykids/style.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='http://www.sd62.bc.ca/wp-content/themes/babykids/css/nicdark_responsive.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mytheme-montez-css'  href='http://fonts.googleapis.com/css?family=Montez&#038;ver=4.6.1' type='text/css' media='all' />
 <link rel='stylesheet' id='js_composer_custom_css-css'  href='http://districtwebsite.web.sd62.bc.ca/wp-content/uploads/sites/11/js_composer/custom.css?ver=4.3.5' type='text/css' media='screen' />
 <link rel='stylesheet' id='fancybox-css'  href='http://districtwebsite.web.sd62.bc.ca/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.7.min.css?ver=1.5.7' type='text/css' media='screen' />
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js?ver=4.6.5'></script>
 <script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=4.6.5'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/parallax/jquery.parallax-1.1.3.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/countdown/jquery.countdown.js?ver=4.3.3'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/parallax/jquery.parallax-1.1.3.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/countdown/jquery.countdown.js?ver=4.6.1'></script>
+<link rel='https://api.w.org/' href='http://www.sd62.bc.ca/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.sd62.bc.ca/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.sd62.bc.ca/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.3.3" />
+<meta name="generator" content="WordPress 4.6.1" />
 <style type="text/css">
 #ll_div a {
 color: ;
 }
 
 
-</style><script src='http://web.sd62.bc.ca/?dm=612bdb8f357622fc304ab9e3cf96ef91&amp;action=load&amp;blogid=11&amp;siteid=1&amp;t=624776187&amp;back=http%3A%2F%2Fwww.sd62.bc.ca%2FDepartments%2FDistrictResourceCentre.aspx' type='text/javascript'></script>		<script type="text/javascript">
+</style><script src='http://web.sd62.bc.ca/?dm=612bdb8f357622fc304ab9e3cf96ef91&amp;action=load&amp;blogid=11&amp;siteid=1&amp;t=80520006&amp;back=http%3A%2F%2Fwww.sd62.bc.ca%2FDepartments%2FDistrictResourceCentre.aspx' type='text/javascript'></script>		<script type="text/javascript">
 			jQuery(document).ready(function() {
 				// CUSTOM AJAX CONTENT LOADING FUNCTION
 				var ajaxRevslider = function(obj) {
@@ -112,7 +116,7 @@ color: ;
 					
 					data.action = 'revslider_ajax_call_front';
 					data.client_action = 'get_slider_html';
-					data.token = '9c8127e5d9';
+					data.token = '2efe708801';
 					data.type = obj.type;
 					data.id = obj.id;
 					data.aspectratio = obj.aspectratio;
@@ -162,7 +166,7 @@ color: ;
 
         /*start header*/
         .slowup{ margin-top: -30px; }
-        .nicdark_logo img{ width: 200px; margin-top: -10px; }
+        .nicdark_logo img{ width: 200px; margin-top: -5px; }
         /*end header*/
 
         
@@ -205,16 +209,16 @@ p.green,h1.green,h2.green,h3.green,h4.green,h5.green,h6.green,a.green,i.green,sp
 
 /****************************************START BLUE******************************************************/
 /*first*/
-.nicdark_bg_blue{ background-color: #557fc9; }
-.nicdark_bg_blue_hover:hover{ background-color: #557fc9 !important; }
-p.blue,h1.blue,h2.blue,h3.blue,h4.blue,h5.blue,h6.blue,a.blue,i.blue,span.blue, input[type="text"].blue, textarea.blue, input[type="submit"].blue, select.blue{ color:#557fc9; }
+.nicdark_bg_blue{ background-color: #1e73be; }
+.nicdark_bg_blue_hover:hover{ background-color: #1e73be !important; }
+p.blue,h1.blue,h2.blue,h3.blue,h4.blue,h5.blue,h6.blue,a.blue,i.blue,span.blue, input[type="text"].blue, textarea.blue, input[type="submit"].blue, select.blue{ color:#1e73be; }
 /*second*/
-.nicdark_border_blue, .nicdark_border_blue td, .nicdark_border_blue th{ border: 2px solid #557fc9; }
-.nicdark_bg_bluedark{ background-color: #557fc9; }
-.nicdark_iconbg.blue{ color: #557fc9; }
-.nicdark_triangle.blue{ border-color: #557fc9 transparent transparent transparent;  }
-.nicdark_bg_bluedark_hover:hover{ background-color: #557fc9 !important; }
-.nicdark_shadow.nicdark_bg_blue{ box-shadow: 0px 4px 0px 0px #557fc9; }
+.nicdark_border_blue, .nicdark_border_blue td, .nicdark_border_blue th{ border: 2px solid #1e73be; }
+.nicdark_bg_bluedark{ background-color: #1e73be; }
+.nicdark_iconbg.blue{ color: #1e73be; }
+.nicdark_triangle.blue{ border-color: #1e73be transparent transparent transparent;  }
+.nicdark_bg_bluedark_hover:hover{ background-color: #1e73be !important; }
+.nicdark_shadow.nicdark_bg_blue{ box-shadow: 0px 4px 0px 0px #1e73be; }
 /*third*/
 .nicdark_border_bluedark, .nicdark_border_bluedark td, .nicdark_border_bluedark th{ border: 2px solid #6dc0d5; }
 .nicdark_shadow.nicdark_bg_bluedark{ box-shadow: 0px 4px 0px 0px #6dc0d5; }
@@ -291,7 +295,7 @@ p.yellow,h1.yellow,h2.yellow,h3.yellow,h4.yellow,h5.yellow,h6.yellow,a.yellow,i.
 /****************************************START MENU******************************************************/
 /*divider and triangle color: FIRST COLOR*/
 .menu  > .green > a:after, .menu  > .green .sub-menu li:first-child:before, .menu  > .green .sub-menu li ul li:first-child:before{ color: #23876c; }
-.menu  > .blue > a:after, .menu  > .blue .sub-menu li:first-child:before, .menu  > .blue .sub-menu li ul li:first-child:before{ color: #557fc9; }
+.menu  > .blue > a:after, .menu  > .blue .sub-menu li:first-child:before, .menu  > .blue .sub-menu li ul li:first-child:before{ color: #1e73be; }
 .menu  > .violet > a:after, .menu  > .violet .sub-menu li:first-child:before, .menu  > .violet .sub-menu li ul li:first-child:before{ color: #97acd7; }
 .menu  > .orange > a:after, .menu  > .orange .sub-menu li:first-child:before, .menu  > .orange .sub-menu li ul li:first-child:before{ color: #124f8c; }
 .menu  > .red > a:after, .menu  > .red .sub-menu li:first-child:before, .menu  > .red .sub-menu li ul li:first-child:before{ color: #ffffff; }
@@ -299,7 +303,7 @@ p.yellow,h1.yellow,h2.yellow,h3.yellow,h4.yellow,h5.yellow,h6.yellow,a.yellow,i.
 /*dropdown: FIRST COLOR*/
 .menu  > .yellow > .sub-menu li{ background-color: #1e73be; }
 .menu  > .green > .sub-menu li{ background-color: #23876c; }
-.menu  > .blue > .sub-menu li{ background-color: #557fc9; }
+.menu  > .blue > .sub-menu li{ background-color: #1e73be; }
 .menu  > .violet > .sub-menu li{ background-color: #97acd7; }
 .menu  > .orange > .sub-menu li{ background-color: #124f8c; }
 .menu  > .red > .sub-menu li{ background-color: #ffffff; }
@@ -308,12 +312,12 @@ p.yellow,h1.yellow,h2.yellow,h3.yellow,h4.yellow,h5.yellow,h6.yellow,a.yellow,i.
 .nicdark_bg_orange .tinynav { color: #fff; background-color: #124f8c; box-shadow: 0px 4px 0px 0px #d8734c; }
 .nicdark_bg_red .tinynav { color: #fff; background-color: #bababa; box-shadow: 0px 4px 0px 0px #557fc9; }
 .nicdark_bg_green .tinynav { color: #fff; background-color: #23876c; box-shadow: 0px 4px 0px 0px #65ae83; }
-.nicdark_bg_blue .tinynav { color: #fff; background-color: #557fc9; box-shadow: 0px 4px 0px 0px #6dc0d5; }
+.nicdark_bg_blue .tinynav { color: #fff; background-color: #1e73be; box-shadow: 0px 4px 0px 0px #6dc0d5; }
 .nicdark_bg_violet .tinynav { color: #fff; background-color: #97acd7; box-shadow: 0px 4px 0px 0px #a675af; }
 /*border bottom li: SECOND COLOR*/
 .menu  > .yellow > .sub-menu li, .nicdark_megamenu.yellow ul li ol li a{ border-bottom:1px solid #1e73be; }
 .menu  > .green > .sub-menu li, .nicdark_megamenu.green ul li ol li a{ border-bottom:1px solid #23876c; }
-.menu  > .blue > .sub-menu li, .nicdark_megamenu.blue ul li ol li a{ border-bottom:1px solid #557fc9; }
+.menu  > .blue > .sub-menu li, .nicdark_megamenu.blue ul li ol li a{ border-bottom:1px solid #1e73be; }
 .menu  > .violet > .sub-menu li, .nicdark_megamenu.violet ul li ol li a{ border-bottom:1px solid #97acd7; }
 .menu  > .orange > .sub-menu li, .nicdark_megamenu.orange ul li ol li a{ border-bottom:1px solid #124f8c; }
 .menu  > .red > .sub-menu li, .nicdark_megamenu.red ul li ol li a{ border-bottom:1px solid #bababa; }
@@ -321,13 +325,13 @@ p.yellow,h1.yellow,h2.yellow,h3.yellow,h4.yellow,h5.yellow,h6.yellow,a.yellow,i.
 .menu  > .yellow .sub-menu li:last-child{ box-shadow: 0px 4px 0px 0px #1e73be; }
 .menu  > .orange .sub-menu li:last-child{ box-shadow: 0px 4px 0px 0px #124f8c; }
 .menu  > .red .sub-menu li:last-child{ box-shadow: 0px 4px 0px 0px #bababa; }
-.menu  > .blue .sub-menu li:last-child{ box-shadow: 0px 4px 0px 0px #557fc9; }
+.menu  > .blue .sub-menu li:last-child{ box-shadow: 0px 4px 0px 0px #1e73be; }
 .menu  > .green .sub-menu li:last-child{ box-shadow: 0px 4px 0px 0px #23876c; }
 .menu  > .violet .sub-menu li:last-child{ box-shadow: 0px 4px 0px 0px #97acd7; }
 /*hover li bgcolor: SECOND COLOR*/
 .menu  > .yellow > .sub-menu li:hover, .nicdark_megamenu.yellow > ul > li > a{ background-color:#1e73be; }
 .menu  > .green:not(.nicdark_megamenu) > .sub-menu li:hover, .nicdark_megamenu.green > ul > li > a{ background-color:#23876c; }
-.menu  > .blue:not(.nicdark_megamenu) > .sub-menu li:hover, .nicdark_megamenu.blue > ul > li > a{ background-color:#557fc9; }
+.menu  > .blue:not(.nicdark_megamenu) > .sub-menu li:hover, .nicdark_megamenu.blue > ul > li > a{ background-color:#1e73be; }
 .menu  > .violet:not(.nicdark_megamenu) > .sub-menu li:hover, .nicdark_megamenu.violet > ul > li > a{ background-color:#97acd7; }
 .menu  > .orange:not(.nicdark_megamenu) > .sub-menu li:hover, .nicdark_megamenu.orange > ul > li > a{ background-color:#124f8c; }
 .menu  > .red:not(.nicdark_megamenu) > .sub-menu li:hover, .nicdark_megamenu.red > ul > li > a{ background-color:#bababa; }
@@ -335,7 +339,7 @@ p.yellow,h1.yellow,h2.yellow,h3.yellow,h4.yellow,h5.yellow,h6.yellow,a.yellow,i.
 .nicdark_megamenu.yellow ol li a{ border-right: 1px solid #1e73be; }
 .nicdark_megamenu.orange ol li a{ border-right: 1px solid #124f8c; }
 .nicdark_megamenu.red ol li a{ border-right: 1px solid #bababa; }
-.nicdark_megamenu.blue ol li a{ border-right: 1px solid #557fc9; }
+.nicdark_megamenu.blue ol li a{ border-right: 1px solid #1e73be; }
 .nicdark_megamenu.green ol li a{ border-right: 1px solid #23876c; }
 .nicdark_megamenu.violet ol li a{ border-right: 1px solid #97acd7; }
 /****************************************END MENU******************************************************/
@@ -405,10 +409,10 @@ p.stars a.star-5:after { color: #1e73be; }
 .shipping_calculator h2,
 #customer_details .col-2 h3,
 #customer_details .col-1 h3,
-.woocommerce .addresses .col-1 h3 { background-color: #557fc9; }
+.woocommerce .addresses .col-1 h3 { background-color: #1e73be; }
 .woocommerce-info,
 .woocommerce .addresses .col-1 a,
-.widget.widget_shopping_cart .widget_shopping_cart_content p.buttons a.button { background-color:#557fc9; box-shadow: 0px 4px 0px 0px #557fc9; }
+.widget.widget_shopping_cart .widget_shopping_cart_content p.buttons a.button { background-color:#1e73be; box-shadow: 0px 4px 0px 0px #1e73be; }
 
 /*green*/
 .product .onsale,
@@ -591,32 +595,17 @@ span.signature
     </style>
     
 
-<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
-<!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://www.sd62.bc.ca/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]--><script type="text/javascript">
+
+<link rel="stylesheet" href="http://www.sd62.bc.ca/wp-content/plugins/wassup/css/wassup-widget.css?ver=1.9" type="text/css" /><meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://www.sd62.bc.ca/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]-->
+<script type="text/javascript">
 //<![CDATA[
-	var screen_res = ""; 
-	function writeCookie(name,value,hours) {
-		var the_cookie = name+"="+escape(value)+"; expires=";
-		var expires = "";
-		hours=hours+0; //convert to number
-		if (hours > 0) { //0==expires on browser close
-			var cdate = new Date();
-			cdate.setTime(cdate.getTime()+(hours*60*60*1000));
-			expires = expires+cdate.toGMTString();
-		} 
-		document.cookie = the_cookie+expires+"; path=/; domain=www.sd62.bc.ca";
-	}
-	screen_res = screen.width+" x "+screen.height;
-	if (screen_res==" x ") screen_res = window.screen.width+" x "+window.screen.height;
-	if (screen_res==" x ") screen_res = screen.availWidth+" x "+screen.availHeight;
-	if (screen_res!=" x ") { 
-		writeCookie("wassup_screen_res",screen_res,"48"); //keep 2 days
-	} else {
-		screen_res = "";
-	}
+	var screen_res=screen.width+" x "+screen.height;
+	if(screen_res==" x ") screen_res=window.screen.width+" x "+window.screen.height;
+	if(screen_res==" x ") screen_res=screen.availWidth+" x "+screen.availHeight;
+	if(screen_res!=" x "){document.cookie = "wassup_screen_resf70cad18ea68fc435032bade9ac15afb=" + encodeURIComponent(screen_res)+ "; path=/; domain=www.sd62.bc.ca";}
 //]]>
-</script>
-<style type="text/css" title="dynamic-css" class="options-output">body{background-color:#ffffff;}</style>
+</script><style type="text/css" title="dynamic-css" class="options-output">body{background-color:#ffffff;}</style>
 <!-- Easy FancyBox 1.5.7 using FancyBox 1.3.7 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) -->
 <script type="text/javascript">
 /* <![CDATA[ */
@@ -701,7 +690,7 @@ var easy_fancybox_handler = function(){
 
             <!--logo-->
             <div class="nicdark_logo nicdark_marginleft10">
-                <a href="http://www.sd62.bc.ca"><img alt="" src="http://districtwebsite.web.sd62.bc.ca/wp-content/uploads/sites/11/2015/11/SD62-logo-horizontal.jpg"></a>                                   
+                <a href="http://www.sd62.bc.ca"><img alt="" src="http://districtwebsite.web.sd62.bc.ca/wp-content/uploads/sites/11/2016/04/SD62TopLogo.jpg"></a>                                   
             </div>
             <!--end logo-->
 
@@ -710,110 +699,112 @@ var easy_fancybox_handler = function(){
 
             <div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-432"><a href="http://www.sd62.bc.ca/about/">About</a>
 <ul class="sub-menu">
-	<li id="menu-item--18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--18"><a href="http://www.sd62.bc.ca/about/admin/">Admin</a></li>
-	<li id="menu-item--19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--19"><a href="http://www.sd62.bc.ca/about/financial-information/">Finance</a>
+	<li id="menu-item--19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--19"><a href="http://www.sd62.bc.ca/about/admin/">Admin</a></li>
+	<li id="menu-item--20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--20"><a href="http://www.sd62.bc.ca/about/financial-information/">Finance</a>
 	<ul class="sub-menu">
-		<li id="menu-item--20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--20"><a href="http://www.sd62.bc.ca/about/financial-information/2162-2/">Information</a></li>
-		<li id="menu-item--21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--21"><a href="http://www.sd62.bc.ca/about/financial-information/payroll/">Payroll</a></li>
-		<li id="menu-item--22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--22"><a href="http://www.sd62.bc.ca/about/financial-information/purchasing/">Purchasing</a></li>
+		<li id="menu-item--21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--21"><a href="http://www.sd62.bc.ca/about/financial-information/2162-2/">Information</a></li>
+		<li id="menu-item--22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--22"><a href="http://www.sd62.bc.ca/about/financial-information/payroll/">Payroll</a></li>
+		<li id="menu-item--23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--23"><a href="http://www.sd62.bc.ca/about/financial-information/purchasing/">Purchasing</a></li>
 	</ul>
 </li>
-	<li id="menu-item--23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--23"><a href="http://www.sd62.bc.ca/about/facilities/">Facilities</a></li>
-	<li id="menu-item--24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--24"><a href="http://www.sd62.bc.ca/about/transportation/">Transportation</a>
+	<li id="menu-item--24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--24"><a href="http://www.sd62.bc.ca/about/facilities/">Facilities</a></li>
+	<li id="menu-item--25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--25"><a href="http://www.sd62.bc.ca/about/transportation/">Transportation</a>
 	<ul class="sub-menu">
-		<li id="menu-item--25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--25"><a href="http://www.sd62.bc.ca/about/transportation/safe-paths-to-school/">Safe Paths to School</a></li>
+		<li id="menu-item--26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--26"><a href="http://www.sd62.bc.ca/about/transportation/school-bus-routes/">School Bus Routes</a></li>
+		<li id="menu-item--27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--27"><a href="http://www.sd62.bc.ca/about/transportation/safe-paths-to-school/">Safe Paths to School</a></li>
 	</ul>
 </li>
-	<li id="menu-item--26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--26"><a href="http://www.sd62.bc.ca/about/information-technology/">Information Technology</a></li>
-	<li id="menu-item--27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--27"><a href="http://www.sd62.bc.ca/about/aboriginal-enhancement-agreement/">Aboriginal Enhancement Agreement</a></li>
-	<li id="menu-item--28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--28"><a href="http://www.sd62.bc.ca/about/district-expansion/">District Expansion</a></li>
-	<li id="menu-item--29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--29"><a href="http://www.sd62.bc.ca/about/district-contacts/">District Contacts</a></li>
+	<li id="menu-item--28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--28"><a href="http://www.sd62.bc.ca/about/information-technology/">Information Technology</a></li>
+	<li id="menu-item--29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--29"><a href="http://www.sd62.bc.ca/about/aboriginal-enhancement-agreement/">Aboriginal Enhancement Agreement</a></li>
+	<li id="menu-item--30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--30"><a href="http://www.sd62.bc.ca/about/district-expansion/">District Expansion</a></li>
+	<li id="menu-item--31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--31"><a href="http://www.sd62.bc.ca/about/district-contacts/">District Contacts</a></li>
 </ul>
 </li>
 <li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-443"><a href="http://www.sd62.bc.ca/board-of-education/">Board of Education</a>
 <ul class="sub-menu">
 	<li id="menu-item-1693" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1693"><a href="https://go.sd62.bc.ca/sites/public/policies/Policies/Home.aspx">Board Policies</a></li>
-	<li id="menu-item--30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--30"><a href="http://www.sd62.bc.ca/board-of-education/public-meetings/">Public Meetings</a>
+	<li id="menu-item--32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--32"><a href="http://www.sd62.bc.ca/board-of-education/public-meetings/">Public Meetings</a>
 	<ul class="sub-menu">
-		<li id="menu-item--31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--31"><a href="http://www.sd62.bc.ca/board-of-education/public-meetings/201617-budget-series/">2016/17 Budget Series</a></li>
+		<li id="menu-item--33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--33"><a href="http://www.sd62.bc.ca/board-of-education/public-meetings/201617-budget-series/">2016/17 Budget Series</a></li>
 	</ul>
 </li>
-	<li id="menu-item--32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--32"><a href="http://www.sd62.bc.ca/board-of-education/trustee-elections/">Trustee Elections</a></li>
+	<li id="menu-item--34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--34"><a href="http://www.sd62.bc.ca/board-of-education/trustee-elections/">Trustee Elections</a></li>
 </ul>
 </li>
 <li id="menu-item-449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-449"><a href="http://www.sd62.bc.ca/programs/">Programs</a>
 <ul class="sub-menu">
 	<li id="menu-item-1589" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1589"><a href="http://isp.sd62.bc.ca/">International Program</a></li>
-	<li id="menu-item--33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--33"><a href="http://www.sd62.bc.ca/programs/alternative/">Alternative</a></li>
-	<li id="menu-item--34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--34"><a href="http://www.sd62.bc.ca/programs/aboriginal-education/">Aboriginal Education</a>
+	<li id="menu-item--35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--35"><a href="http://www.sd62.bc.ca/programs/alternative/">Alternative</a></li>
+	<li id="menu-item--36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--36"><a href="http://www.sd62.bc.ca/programs/aboriginal-education/">Aboriginal Education</a>
 	<ul class="sub-menu">
-		<li id="menu-item--35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--35"><a href="http://www.sd62.bc.ca/programs/aboriginal-education/council-meetings/">Council Meetings</a></li>
-		<li id="menu-item--36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--36"><a href="http://www.sd62.bc.ca/programs/aboriginal-education/resources/">Resources</a></li>
+		<li id="menu-item--37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--37"><a href="http://www.sd62.bc.ca/programs/aboriginal-education/council-meetings/">Council Meetings</a></li>
+		<li id="menu-item--38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--38"><a href="http://www.sd62.bc.ca/programs/aboriginal-education/resources/">Resources</a></li>
 	</ul>
 </li>
-	<li id="menu-item--37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--37"><a href="http://www.sd62.bc.ca/programs/programs-of-academic-excellence/">Programs of Academic Excellence</a></li>
-	<li id="menu-item--38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--38"><a href="http://www.sd62.bc.ca/programs/avid/">Avid</a></li>
-	<li id="menu-item--39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--39"><a href="http://www.sd62.bc.ca/programs/career-education/">Career Education</a>
+	<li id="menu-item--39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--39"><a href="http://www.sd62.bc.ca/programs/programs-of-academic-excellence/">Programs of Academic Excellence</a></li>
+	<li id="menu-item--40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--40"><a href="http://www.sd62.bc.ca/programs/avid/">Avid</a></li>
+	<li id="menu-item--41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--41"><a href="http://www.sd62.bc.ca/programs/career-education/">Careers, Trades &#038; Dual Credit</a>
 	<ul class="sub-menu">
-		<li id="menu-item--40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--40"><a href="http://www.sd62.bc.ca/programs/career-education/dual-credit/">Dual Credit</a></li>
-		<li id="menu-item--41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--41"><a href="http://www.sd62.bc.ca/programs/career-education/ace-it/">Ace It</a></li>
-		<li id="menu-item--42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--42"><a href="http://www.sd62.bc.ca/programs/career-education/secondary-apprenticeships/">Secondary Apprenticeships</a></li>
-		<li id="menu-item--43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--43"><a href="http://www.sd62.bc.ca/programs/career-education/work-experience-12a-and-12b/">Work Experience 12A and 12B</a></li>
-		<li id="menu-item--44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--44"><a href="http://www.sd62.bc.ca/programs/career-education/resources-and-links/">Resources and Links</a></li>
+		<li id="menu-item--42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--42"><a href="http://www.sd62.bc.ca/programs/career-education/dual-credit/">Dual Credit</a></li>
+		<li id="menu-item--43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--43"><a href="http://www.sd62.bc.ca/programs/career-education/ace-it/">Ace It</a></li>
+		<li id="menu-item--44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--44"><a href="http://www.sd62.bc.ca/programs/career-education/secondary-apprenticeships/">Secondary Apprenticeships</a></li>
+		<li id="menu-item--45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--45"><a href="http://www.sd62.bc.ca/programs/career-education/work-experience-12a-and-12b/">Work Experience 12A and 12B</a></li>
+		<li id="menu-item--46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--46"><a href="http://www.sd62.bc.ca/programs/career-education/resources-and-links/">Resources and Links</a></li>
 	</ul>
 </li>
-	<li id="menu-item--45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--45"><a href="http://www.sd62.bc.ca/programs/early-learning/">Early Learning</a></li>
-	<li id="menu-item--46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--46"><a href="http://www.sd62.bc.ca/programs/ell-esl/">English Language Learners (ELL)</a>
+	<li id="menu-item--47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--47"><a href="http://www.sd62.bc.ca/programs/early-learning/">Early Learning</a></li>
+	<li id="menu-item--48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--48"><a href="http://www.sd62.bc.ca/programs/ell-esl/">English Language Learners (ELL)</a>
 	<ul class="sub-menu">
-		<li id="menu-item--47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--47"><a href="http://www.sd62.bc.ca/programs/ell-esl/resources-for-students-and-parents/">Resources for Students and Parents</a></li>
-		<li id="menu-item--48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--48"><a href="http://www.sd62.bc.ca/programs/ell-esl/teacher-resources/">Teacher Resources</a></li>
+		<li id="menu-item--49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--49"><a href="http://www.sd62.bc.ca/programs/ell-esl/resources-for-students-and-parents/">Resources for Students and Parents</a></li>
+		<li id="menu-item--50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--50"><a href="http://www.sd62.bc.ca/programs/ell-esl/teacher-resources/">Teacher Resources</a></li>
 	</ul>
 </li>
-	<li id="menu-item--49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--49"><a href="http://www.sd62.bc.ca/programs/french-immersion/">French Programs</a>
+	<li id="menu-item--51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--51"><a href="http://www.sd62.bc.ca/programs/french-immersion/">French Programs</a>
 	<ul class="sub-menu">
-		<li id="menu-item--50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--50"><a href="http://www.sd62.bc.ca/programs/french-immersion/useful-links-for-parents/">Useful Links For Parents</a></li>
+		<li id="menu-item--52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--52"><a href="http://www.sd62.bc.ca/programs/french-immersion/useful-links-for-parents/">Useful Links For Parents</a></li>
 	</ul>
 </li>
-	<li id="menu-item--51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--51"><a href="http://www.sd62.bc.ca/programs/gifted-and-pace/">Gifted and PACE</a></li>
-	<li id="menu-item--52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--52"><a href="http://www.sd62.bc.ca/programs/intercultural-certificate/">Intercultural Certificate</a></li>
-	<li id="menu-item--53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--53"><a href="http://www.sd62.bc.ca/programs/continuing-education/">Continuing Education</a></li>
+	<li id="menu-item--53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--53"><a href="http://www.sd62.bc.ca/programs/gifted-and-pace/">Gifted and PACE</a></li>
+	<li id="menu-item--54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--54"><a href="http://www.sd62.bc.ca/programs/intercultural-certificate/">Global &#038; Intercultural Focus Program</a></li>
+	<li id="menu-item--55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--55"><a href="http://www.sd62.bc.ca/programs/continuing-education/">Continuing Education</a></li>
 </ul>
 </li>
 <li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-464"><a href="http://www.sd62.bc.ca/schools/">Schools</a>
 <ul class="sub-menu">
 	<li id="menu-item-1897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1897"><a href="http://www.sd62.bc.ca/schools/calendar/">Calendars</a></li>
+	<li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a href="http://www.sd62.bc.ca/schools/school-locator/">School Locator</a></li>
 	<li id="menu-item-1636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1636"><a href="http://www.sd62.bc.ca/schools/kindergarten/">Kindergarten</a></li>
 	<li id="menu-item-1766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1766"><a href="http://www.sd62.bc.ca/schools/elementary/">Elementary</a></li>
 	<li id="menu-item-1765" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1765"><a href="http://www.sd62.bc.ca/schools/middle/">Middle</a></li>
 	<li id="menu-item-1767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1767"><a href="http://www.sd62.bc.ca/schools/secondary/">Secondary</a></li>
-	<li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a href="http://www.sd62.bc.ca/schools/school-locator/">School Locator</a></li>
 	<li id="menu-item-2192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2192"><a href="http://www.sd62.bc.ca/parents/registration">Registration</a></li>
+	<li id="menu-item-3012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3012"><a href="http://www.sd62.bc.ca/schools/school-supplies/">School Supplies</a></li>
 </ul>
 </li>
 <li id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-482"><a href="http://www.sd62.bc.ca/parents/">Parents</a>
 <ul class="sub-menu">
 	<li id="menu-item-1586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1586"><a href="http://www.sd62.bc.ca/about/district-contacts/">District Contacts</a></li>
-	<li id="menu-item--54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--54"><a href="http://www.sd62.bc.ca/parents/registration/">Registration</a></li>
-	<li id="menu-item--55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--55"><a href="http://www.sd62.bc.ca/parents/speac/">SPEAC</a>
+	<li id="menu-item--56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--56"><a href="http://www.sd62.bc.ca/parents/registration/">Registration</a></li>
+	<li id="menu-item--57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--57"><a href="http://www.sd62.bc.ca/parents/speac/">SPEAC</a>
 	<ul class="sub-menu">
-		<li id="menu-item--56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--56"><a href="http://www.sd62.bc.ca/parents/speac/useful-links/">Useful Links</a></li>
-		<li id="menu-item--57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--57"><a href="http://www.sd62.bc.ca/parents/speac/archives/">Archives</a></li>
-		<li id="menu-item--58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--58"><a href="http://www.sd62.bc.ca/parents/speac/speac-meetings/">SPEAC Meetings</a></li>
+		<li id="menu-item--58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--58"><a href="http://www.sd62.bc.ca/parents/speac/useful-links/">Useful Links</a></li>
+		<li id="menu-item--59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--59"><a href="http://www.sd62.bc.ca/parents/speac/archives/">Archives</a></li>
+		<li id="menu-item--60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--60"><a href="http://www.sd62.bc.ca/parents/speac/speac-meetings/">SPEAC Meetings</a></li>
 	</ul>
 </li>
-	<li id="menu-item--59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--59"><a href="http://www.sd62.bc.ca/parents/student-support/">Student Support</a>
+	<li id="menu-item--61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item--61"><a href="http://www.sd62.bc.ca/parents/student-support/">Student Support</a>
 	<ul class="sub-menu">
-		<li id="menu-item--60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--60"><a href="http://www.sd62.bc.ca/parents/student-support/services/">Services</a></li>
+		<li id="menu-item--62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--62"><a href="http://www.sd62.bc.ca/parents/student-support/services/">Services</a></li>
 	</ul>
 </li>
-	<li id="menu-item--61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--61"><a href="http://www.sd62.bc.ca/parents/foundation-skills-assessment/">Foundation Skills Assessment</a></li>
-	<li id="menu-item--62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--62"><a href="http://www.sd62.bc.ca/parents/comprehensive-school-health/">Comprehensive School Health</a></li>
+	<li id="menu-item--63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--63"><a href="http://www.sd62.bc.ca/parents/foundation-skills-assessment/">Foundation Skills Assessment</a></li>
+	<li id="menu-item--64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--64"><a href="http://www.sd62.bc.ca/parents/comprehensive-school-health/">Comprehensive School Health</a></li>
 </ul>
 </li>
 <li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="http://www.sd62.bc.ca/academies/">Academies</a></li>
 <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-484"><a href="http://www.sd62.bc.ca/test-event/">News &#038; Events</a>
 <ul class="sub-menu">
-	<li id="menu-item--63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--63"><a href="http://www.sd62.bc.ca/test-event/calendar-of-events/">Calendar of Events</a></li>
+	<li id="menu-item--65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item--65"><a href="http://www.sd62.bc.ca/test-event/calendar-of-events/">Calendar of Events</a></li>
 </ul>
 </li>
 </ul></div>    
@@ -987,44 +978,28 @@ Email: <a href=mailto:info@sd62.bc.ca style="color:#2e445a">info@sd62.bc.ca</a><
 <!--start google analytics-->
  <!--end google analytics-->
 
-
-<!--[if IE]>
-<script language=javascript>
-//<![CDATA[
-	if (screen_res=="") {
-		screen_res = screen.width + " x " + screen.height;
-	}
-	if (screen_res!=" x ") {
-		var cdate = new Date();
-		cdate.setTime(cdate.getTime()+(48*60*60*1000));
-		var cexpires = cdate.toGMTString();
-		//var the_cookie = "wassup_screen_res="+escape(screen_res)+"; expires="+cexpires;
-		document.cookie = "wassup_screen_res=" + escape(screen_res)+ "; path=/; domain=" + document.domain;
-
-	}
-//]]>
-</script>
-<![endif]--><!--
-<p class="small"> WassUp 1.8.7 timestamp: 2016-03-11 08:30:43PM UTC (12:30PM)<br />
+<!--
+<p class="small"> WassUp 1.9 timestamp: 2016-09-11 03:57:33PM UTC (08:57AM)<br />
 If above timestamp is not current time, this page is cached.</p> -->
 <script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/www.sd62.bc.ca\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+var _wpcf7 = {"loaderUrl":"http:\/\/www.sd62.bc.ca\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ...","cached":"1"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.1'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/main/jquery-ui.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/main/excanvas.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/menu/superfish.min.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/menu/tinynav.min.js?ver=4.3.3'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.5'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/main/jquery-ui.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/main/excanvas.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/menu/superfish.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/menu/tinynav.min.js?ver=4.6.1'></script>
 <script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/plugins/js_composer/assets/lib/isotope/dist/isotope.pkgd.min.js?ver=4.3.5'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/mpopup/jquery.magnific-popup.min.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/scroolto/scroolto.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/nicescrool/jquery.nicescroll.min.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/inview/jquery.inview.min.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/countto/jquery.countTo.js?ver=4.3.3'></script>
-<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/settings.js?ver=4.3.3'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/mpopup/jquery.magnific-popup.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/scroolto/scroolto.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/nicescrool/jquery.nicescroll.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/inview/jquery.inview.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/plugins/countto/jquery.countTo.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-content/themes/babykids/js/settings.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.sd62.bc.ca/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
 <script type='text/javascript' src='http://districtwebsite.web.sd62.bc.ca/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.7.min.js?ver=1.5.7'></script>
 <script type='text/javascript' src='http://districtwebsite.web.sd62.bc.ca/wp-content/plugins/easy-fancybox/jquery.easing.pack.js?ver=1.3'></script>
 <script type='text/javascript' src='http://districtwebsite.web.sd62.bc.ca/wp-content/plugins/easy-fancybox/jquery.mousewheel.min.js?ver=3.1.12'></script>
@@ -1040,4 +1015,4 @@ jQuery(document).on('ready post-load', easy_fancybox_handler );
 
 Page Caching using disk: enhanced
 
- Served from: www.sd62.bc.ca @ 2016-03-11 12:30:43 by W3 Total Cache -->
+ Served from: www.sd62.bc.ca @ 2016-09-11 08:57:33 by W3 Total Cache -->

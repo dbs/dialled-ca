@@ -13,7 +13,99 @@
     
      <script type='text/javascript' src='/Scripts/date.js'></script>
  
-     <style type='text/css'>
+    
+	<!-- canada150 slider -->
+	
+	
+			
+		
+		
+		<!-- HOME PAGE SLIDER canada150 slider -->
+		
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='/infogrid.js'></script> 
+
+			<!-- HOME PAGE SLIDER canada150 slider -->
+		
+		
+		
+		
+		
+		<!-- SOCIAL MEDIA ICON SHARE -->
+			
+			<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "98fefb99-929f-41a8-9eb3-66408edfaebf", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+		
+	
+		
+		<!-- SOCIAL MEDIA ICON SHARE -->
+		
+		
+		
+		
+		
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+ <link id="ctl00_screen2" rel="Stylesheet" href="/Styles/letterslider/featuredcontentglider.css" type="text/css" media="screen" /><link id="ctl00_screen3" rel="Stylesheet" href="/Styles/letterslider/cssbuttonstoggler.css" type="text/css" media="screen" />
+    <script type='text/javascript' src='/featuredcontentglider.js'></script> 
+
+
+
+
+<!-- new slide show -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/Scripts/newslideshow/jquery.touchSwipe.min.js"></script>
+
+<script src="/Scripts/newslideshow/jkresponsivegallery.js"></script>	
+ 
+<link id="ctl00_screen4" rel="Stylesheet" href="/Styles/newslideshow/jkresponsivegallery.css" type="text/css" media="screen" />
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- END canada150 slider -->
+	
+	
+	<!-- HOME PAGE  TAB -->
+	
+	
+	
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script src="/jquery.accTabs.js"></script> 
+	
+	
+	
+	
+	<!-- END HOME PAGE  TAB -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 <style type='text/css'>
         .DateRange, .DateDiv { display: none; }
      </style>
  
@@ -156,6 +248,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 	
 	
+	
+	
+	
+	
+	
+	
 
 	
 <!-- Wrapper Start Here -->
@@ -291,9 +389,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
 				
 				<div class="feature" style="width:237px;">
-					<a href="http://www.youtube.com/ArchivesOfOntario"><img src="/images/icon_youtube_50.gif" width="50" height="50" alt="Youtube" /></a>&nbsp;
-					<a href="http://twitter.com/ArchivesOntario"><img src="/images/icon_twitter_50.gif" width="50" height="50" alt="Twitter" /></a>
+					<a href="http://www.youtube.com/ArchivesOfOntario"><img src="/images/icon_youtube_50.gif" width="50" height="50" alt="Archives of Ontario Youtube" /></a>&nbsp;
+					<a href="http://twitter.com/ArchivesOntario"><img src="/images/icon_twitter_50.gif" width="50" height="50" alt="rchives of Ontario Twitter English Page" /></a>
                     <a href="https://www.flickr.com/photos/archivesofontario/"><img src="/images/flicker_icon.gif" width="50" height="50" alt="Archives of Ontario Flicker Page " /></a>
+					<a href="https://www.facebook.com/ArchivesOntario"><img src="/images/icon_facebook_50.jpg" width="50" height="50" alt="Archives of Ontario Facebook English Page " /></a>
 				</div>
 			</div>
             
@@ -813,10 +912,6 @@ material.  Many of these materials are also available in major research librarie
       ga('send', 'pageview');
 
     </script>
-
-
-
-
 
 
 

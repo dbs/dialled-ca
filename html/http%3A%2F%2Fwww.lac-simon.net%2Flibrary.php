@@ -201,7 +201,8 @@
 				</ul>
 			</li>
 			<li><a href="/en/affairs.htm" style="background-image: url(/images/menu2_4.png);"><span class="l1">&nbsp;</span><span class="l2">Business</span></a></li>
-			<li style="margin-right: 0;"><a href="/en/protect-our-lake.htm" style="background-image: url(/images/menu2_5.png);"><span class="l1">Protect</span><span class="l2">Our lakes</span></a></li>
+			<li><a href="/en/protect-our-lake.htm" style="background-image: url(/images/menu2_5.png);"><span class="l1">Protect</span><span class="l2">Our lakes</span></a></li>
+			<li style="margin-right: 0;"><a class="menucorpo" href="/corpo-en" style="background-image: url(/images/menu2_6.png);"><span class="l1">Corporation Loisirs, </span><span class="l2">culture et arts</span></a></li>
 		</ul>
 	</div>
 </div>

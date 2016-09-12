@@ -1,22 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" class="">
-  <head id="Head1"> 
+  <head id="Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9c545daf2e","applicationID":"29970346","transactionName":"ZFBbMEdYDUoHU0MLVl0adDJ2FjNYAVV0DVdHR1YIWVwRFjVYWBVpUlJc","queueTime":0,"applicationTime":540,"ttGuid":"E88332F4606D2A3A","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script> 
 <meta name="viewport" content="width=device-width" />
-<link href="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/styles/basic.css" rel="stylesheet" type="text/css" /><link href="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/styles/newgadgets.css" rel="stylesheet" type="text/css" /><link href="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/styles/print.css" rel="stylesheet" type="text/css" /><link href="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/styles/print.theme.css" rel="stylesheet" type="text/css" /><link href="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/styles/shared.css" rel="stylesheet" type="text/css" /><link href="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/styles/Theme.css" rel="stylesheet" type="text/css" /><link href="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/styles/widget.css" rel="stylesheet" type="text/css" /><link href="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/styles/theme.less" rel="stylesheet" type="text/css" /><link href="https://cbbag.wildapricot.org/resources/theme/user_transparent_vertical.v1.0.css?t=635389534940000000" rel="stylesheet" type="text/css" /><link href="https://cbbag.wildapricot.org/resources/theme/user.css?t=635389534940000000" rel="stylesheet" type="text/css" /><link href="//f.wildapricot.org/WebUI/built5.7.4.1/css/shared/ui/shared-ui-compiled.css" rel="stylesheet" type="text/css" /><script type="text/javascript" language="javascript" id="idJavaScriptEnvironment">
-var bonaPage_BuildVer='5.7.4.1';
+<link href="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/styles/basic.css" rel="stylesheet" type="text/css" /><link href="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/styles/newgadgets.css" rel="stylesheet" type="text/css" /><link href="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/styles/print.css" rel="stylesheet" type="text/css" /><link href="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/styles/print.theme.css" rel="stylesheet" type="text/css" /><link href="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/styles/shared.css" rel="stylesheet" type="text/css" /><link href="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/styles/Theme.css" rel="stylesheet" type="text/css" /><link href="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/styles/widget.css" rel="stylesheet" type="text/css" /><link href="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/styles/theme.less" rel="stylesheet" type="text/css" /><link href="https://cbbag.wildapricot.org/resources/theme/user_transparent_vertical.v1.0.css?t=635389534940000000" rel="stylesheet" type="text/css" /><link href="https://cbbag.wildapricot.org/resources/theme/user.css?t=635389534940000000" rel="stylesheet" type="text/css" /><link href="//sf.wildapricot.org/WebUI/built5.8.0.1/css/shared/ui/shared-ui-compiled.css" rel="stylesheet" type="text/css" /><script type="text/javascript" language="javascript" id="idJavaScriptEnvironment">var bonaPage_BuildVer='5.8.0.1';
 var bonaPage_AdminBackendUrl = '/admin/';
-var bonaPage_StatRes='https://f.wildapricot.org/WebUI/';
+var bonaPage_StatRes='https://sf.wildapricot.org/WebUI/';
 var bonaPage_InternalPageType = { isUndefinedPage : false,isWebPage : true,isAdminPage : false,isDialogPage : false,isSystemPage : false,isErrorPage : false,isError404Page : false };
 var bonaPage_PageView = { isAnonymousView : true,isMemberView : false,isAdminView : false };
-var javaScriptErrorsHandling = {logErrors:true, hideErrorMessages:true, errorHandlerUrl:'/JSLogger/LogJavaScriptException.ashx' };
 var WidgetMode = 0;
 var bonaPage_IsUserAnonymous = true;
-var bonaPage_ThemeVer='9b7bc3056353895349400000000'; var bonaPage_ThemeId = 'transparent_vertical.v1.0'; var bonaPage_ThemeVersion = '1.0';
+var bonaPage_ThemeVer='020500ba6353895349400000000'; var bonaPage_ThemeId = 'transparent_vertical.v1.0'; var bonaPage_ThemeVersion = '1.0';
 var bonaPage_id='516725'; version_id='';
  try { if (parent && parent.BonaPage) parent.BonaPage.implementBonaPage(window); } catch (err) { }
  if (window.bonaPage_PageView && bonaPage_PageView.isAdminView && (!top.WA || !top.WA.AdminPanel)) { top.window.location = bonaPage_AdminBackendUrl; } 
-document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { display: none; } </style>');</script>
-<script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/scripts/shared/bonapagetop/bonapagetop-compiled.js" id="idBonaPageTop"></script><script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/scripts/shared/ui/shared-ui-compiled.js" id="idSharedJs"></script><script type="text/javascript" language="javascript" src="//f.wildapricot.org/WebUI/built5.7.4.1/General.js" id=""></script><script type="text/javascript" language="javascript" src="https://f.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/9b7bc305/scripts/combined.js" id=""></script><title>Canadian Bookbinders and Book Artists Guild - Home</title>
+document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { display: none; } </style>');</script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/scripts/shared/bonapagetop/bonapagetop-compiled.js" id="idBonaPageTop"></script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/scripts/shared/ui/shared-ui-compiled.js" id="idSharedJs"></script><script type="text/javascript" language="javascript" src="//sf.wildapricot.org/WebUI/built5.8.0.1/General.js" id=""></script><script type="text/javascript" language="javascript" src="https://sf.wildapricot.org/BuiltTheme/transparent_vertical.v1.0/020500ba/scripts/combined.js" id=""></script><title>Canadian Bookbinders and Book Artists Guild - Home</title>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -256,7 +253,7 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 	<div class="d8">
 	<div class="d9">
 	<div  class="inner">
-<a href="https://cbbag.wildapricot.org/page-1837672">Governance</a></div></div></div></div></div></div></div></div></div></div>	
+<a href="https://cbbag.wildapricot.org/page-1837672">Policies</a></div></div></div></div></div></div></div></div></div></div>	
 	<div class='cornersContainer bottomCornersContainer menuLevel2InnerCorners'><div class="bottomCorners"><div class="c5"></div><div class="c4"></div><div class="c3"></div><div class="c2"></div><div class="c1"></div></div>
 </div>
 	
@@ -925,6 +922,25 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 	
 </li>
 
+<li id="id_MenuGadget_idMainMenuItem55930a179733822370d081f1" class="itemNormalLeaf mainMenuItem55930a179733822370d081f1">
+	<div class="cornersContainer topCornersContainer menuLevel2InnerCorners"><div class="topCorners"><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div><div class="c5"></div></div>
+</div>
+<div class="d1">
+	<div class="d2">
+	<div class="d3">
+	<div class="d4">
+	<div class="d5">
+	<div class="d6">
+	<div class="d7">
+	<div class="d8">
+	<div class="d9">
+	<div  class="inner">
+<a href="https://cbbag.wildapricot.org/page-1837765">The Art of the Book &#39;93</a></div></div></div></div></div></div></div></div></div></div>	
+	<div class='cornersContainer bottomCornersContainer menuLevel2InnerCorners'><div class="bottomCorners"><div class="c5"></div><div class="c4"></div><div class="c3"></div><div class="c2"></div><div class="c1"></div></div>
+</div>
+	
+</li>
+
 <li id="id_MenuGadget_idMainMenuItem558af6cfe4330b3aa014cdd8" class="itemNormalLeaf mainMenuItem558af6cfe4330b3aa014cdd8">
 	<div class="cornersContainer topCornersContainer menuLevel2InnerCorners"><div class="topCorners"><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div><div class="c5"></div></div>
 </div>
@@ -1497,23 +1513,7 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 
 <p class="p1" style="color: rgb(76, 61, 38); line-height: 21px; background-color: transparent;"><br></p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px; background-color: transparent;"><strong>CBBAG is pleased to announce it has updated its lists of book arts teachers and of schools and organizations offering book arts workshops, courses, and degree programmes.</strong><br></p>
-
-<p>Thanks go to Hannah McKendry, who complied the list of teachers, and to Jan Van Fleet for updating the list of schools and organizations.</p>
-
-<p>These lists can be found in the Resources section of the CBBAG website.</p>
-
-<p>Teachers:&nbsp;<a href="/teachers">https://cbbag.wildapricot.org/teachers</a></p>
-
-<p>Schools and Organizations:&nbsp;<a href="/schools">https://cbbag.wildapricot.org/schools</a></p>
-
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px; background-color: transparent;"><br></p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px; background-color: transparent;"><strong>CBBAG AGM 2016</strong></p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px; background-color: transparent;">The 2016 CBBAG Annual General Meeting will take place &nbsp;on</p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px; background-color: transparent;"><strong>Wednesday, June 15, 2016, 6.30 p.m.</strong><br></p>
-<p>Faculty of Information, University of Toronto</p>
-<p>140 St. George Street, Room 728, Toronto, Ontario</p>
-
-
-<p><strong>The AGM will be followed at 7.00 p.m. with a lecture by Don Taylor:</strong></p>
-<p><strong>Moving a Bindery: The Good, the Bad, and the Incredibly Heavy</strong></p>
+<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px; background-color: transparent;"><strong></strong></p><p><font color="#3A2D19"><strong><em>In-Studio Workshops</em></strong></font></p><p>Register now for Summer + Fall 2016 GTA&nbsp;<a href="/in-studio-workshops">In-Studio Workshops</a>. Evening, weekend, and week-long courses are on offer, ranging from crafting your own hand-bound books from discarded journals to core curriculum Bookbinding 1 Intensive, caterpillar stitch bindings to pop-up accordion books, and display supports for books to endband variations.</p><p><br></p><p>For other chapter workshops and courses across Canada, visit the individual&nbsp;<a href="/cbbag-regional-chapters">regional chapter pages</a>.</p><p><strong><em><br></em></strong></p><p><strong><em>CBBAG Annual Report</em></strong></p><p>The CBBAG 2015 Annual Report is now available online - <a href="/resources/Documents/CBBAG_annual_report_2015.pdf" target="_blank">click here for a PDF version of the report</a>.</p><p><strong></strong></p>
 <p><br></p>
 
 <p class="p1" style="color: rgb(76, 61, 38); line-height: 21px; background-color: transparent;"><font color="#3A2D19"><strong>CBBAG DVD Loan Programme</strong></font></p>
@@ -1544,39 +1544,18 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 
 <p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><a href="/page-1837752">Catalogues for this and several other CBBAG exhibitions (<em>Bookbinding Materials and Techniques 1700-1920</em>; <em>A Book Arts Mosaic</em>; and <em>The Art of the Book '08</em>) are available for sale</a>.</p>
+<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><a href="/page-1837752">Catalogues for this and several other CBBAG exhibitions (<em>Bookbinding Materials and Techniques 1700-1920</em>; <em>A Book Arts Mosaic</em>; and <em>The Art of the Book '08</em>) are available for sale</a>.</p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p>
+<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><em><font><strong><img src="/resources/Pictures/AGM2016_1.jpg" alt="" title="" border="0" width="150" height="183" align="right" style="font-style: normal; font-weight: normal;"></strong></font></em></p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><font color="#3A2D19"><strong><em>In-Studio Workshops</em></strong></font></p>
+<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><em><font face="ARIAL" style="font-size: 13px;"><strong>CBBAG AGM &amp; Volunteer Recognition</strong></font></em></p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><em><font face="ARIAL" style="font-size: 13px;"><strong><br></strong></font></em></p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;">Register now for Winter + Spring 2016 GTA&nbsp;<a href="/in-studio-workshops">In-Studio Workshops</a>.</p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;">For other chapter workshops and courses across Canada, visit the individual <a href="/cbbag-regional-chapters">regional chapter pages</a>.</p>
+<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><font style="color: rgb(76, 61, 38); line-height: 21px;"><font face="ARIAL"><span style="line-height: 21px;">At CBBAG’s Annual General Meeting on June 15, 2016, CBBAG president Mary McIntyre presented</span></font></font>&nbsp;<strong style="font-family: ARIAL;">Scott Duncan</strong>&nbsp;<font><span>&nbsp;with a CBBAG&nbsp;</span></font><font><strong style="font-family: ARIAL;">member of the year </strong><span style="">certificate (right)&nbsp;</span></font>in recognition of his volunteer service to CBBAG. Scott joined CBBAG in 2002 when he took Bookbinding I with Don Taylor. He began volunteering with events such as The Word on the Street and the OCAD University Book Fair, as well as assisting with marketing. Scott joined the CBBAG board of directors in 2004, and became vice president in 2007. Scott served as president of the organization from 2007 to 2010, during which time CBBAG partnered with the Guild of BookWorkers to bring its annual Standards Seminar to Toronto (the first time outside of the United States) for a combined conference. Scott served on the CBBAG board of directors as past president until the fall of 2015.</p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p>
 
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><em><font face="ARIAL" style="font-size: 13px;"><strong>CBBAG Volunteer Recognition</strong></font></em></p>
-
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><img src="/Resources/Pictures/AGM2015.jpg" title="" alt="" width="200" height="200" border="0" align="right" style="margin: 7px;"></p>
-
-<div style="color: rgb(76, 61, 38); line-height: 21px;">
-  <br>
-</div>
-
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><font style="color: rgb(76, 61, 38); line-height: 21px;"><font face="ARIAL"><span style="line-height: 21px;">At CBBAG’s Annual General Meeting on June 16, 2015, CBBAG president Mary McIntyre announced&nbsp;</span></font></font><span style="line-height: 21px;">that</span> <strong style="font-family: ARIAL;">Michael Wilcox</strong> <span style="line-height: 21px;">has been&nbsp;appointed a</span> <strong style="font-family: ARIAL;">life member of CBBAG</strong><span style="line-height: 21px;">. A long-time CBBAG member,&nbsp;</span><span style="line-height: 21px;">Michael is recognized this year for his lifetime of work and dedication to the craft of fine binding, and for his long and continued support of CBBAG. He was a juror for two <em>Art of the Book</em> exhibitions (1998 and 2003). As well, he was was nominated by CBBAG and received the Saidye Bronfman Award for Excellence in the Crafts in 1985.&nbsp;The Guild of Book Workers awarded him a lifetime achievement award in 2008, and now CBBAG is pleased to do the same for Michael's long commitment to craft, to sharing his knowledge, and for his support of CBBAG.</span></p>
-
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><font style="color: rgb(76, 61, 38); line-height: 21px;"><em>(photo right: Mary McIntyre with Michael Wilcox at the AGM)</em><br>
-<br>
-<strong style="font-family: ARIAL; color: rgb(76, 61, 38); font-size: 13px; line-height: 21px;">Rose Newlove</strong> <span>was honoured as CBBAG's</span> <strong style="font-family: ARIAL; color: rgb(76, 61, 38); font-size: 13px; line-height: 21px;">member of the year.</strong> <span>A CBBAG volunteer since 2000,&nbsp;</span></font><span style="line-height: 21px;">Rose has been providing instruction and inspiration at the CBBAG bindery since 2005. She was instrumental in finding a new location for the CBBAG office and bindery; and was part of the crew that planned the move, packed the bindery, and moved and set up the new space.&nbsp;</span><span style="line-height: 21px;">Rose assumed the bindery workshop co-ordinator tasks from Ann Douglas in 2011. She has recently stepped down from the co-ordinator position but continues on the GTA chapter planning committee.</span></p>
-
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><span style="line-height: 21px;"><br></span></p>
-
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><font style="font-size: 13px;">Click to view the <a href="/Resources/Documents/CBBAG_annual_report_2014.pdf" title="2014 Annual Report" target="_blank">CBBAG 2014 Annual Report</a>.</font></p>
-
-<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><font style="font-size: 13px;"><br></font></p>
+<p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><img src="/resources/Pictures/AGM2016_2.jpg" alt="" title="" border="0" width="250" height="187" align="left" style="margin: 0px 6px 46px 0px;">At the AGM CBBAG&nbsp;<strong>Certificates of Completion</strong> were awarded to four core curriculum students: <strong>Leonidas Maniatis</strong> and, left to right with Mary, <strong>Wendy Izatt</strong>, <strong>Kari Bronaugh</strong>, and <strong>Emily Loker</strong>. CBBAG congratulates all four for their hard work and accomplishment in completing the six core curriculum courses.</p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><img src="/resources/Pictures/AGM2016_3.jpg" alt="" title="" border="0" width="200" height="208" align="right"><br></p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;">The AGM also saw <strong>Mary McIntyre</strong>'s term as president come to an end. CBBAG thanks her for all her hard work as president for the past four years, As a token of thanks Mary was presented with a framved marbled paper by CBBAG member <strong>Robert Wu</strong>.</p><p class="p1"><br></p><div><br></div><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p><p class="p1" style="color: rgb(76, 61, 38); line-height: 21px;"><br></p>
 
 <form style="color: rgb(76, 61, 38); line-height: 21px;"></form>
 </div>
@@ -1618,52 +1597,52 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
     <div class="eventSummaryModuleContainer">
         <div class="moduleViewType-0">
             <div class="moduleItem eventModuleItem">      
-				<div class="eventModuleItem-2100290 itemOdd">
+				<div class="eventModuleItem-2267572 itemOdd">
 					<div class="itemTitleContainer">
 						<div>
-							<a class="itemTitle" href="https://cbbag.wildapricot.org/event-2100290">2016WKSP-10 Bookbinding 2 Intensive</a>
+							<a class="itemTitle" href="https://cbbag.wildapricot.org/event-2267572">2016WKSP-18 The Artful Pop-Up:   A 5-Page Accordion Book</a>
 						</div>
 					</div>
 				<div class="itemInfoContainer">
 				<div>
-09 May 2016 (EDT)						&#8226; CBBAG Bindery, Toronto ON</div>
+10 Sep 2016 10:00 AM (EDT)						&#8226; Toronto ON</div>
 				</div>
 				</div>
 				</div>
 				<div class="moduleSeparator">
-				<div class="eventModuleSeparator-2100290 sepOdd"></div>
+				<div class="eventModuleSeparator-2267572 sepOdd"></div>
 </div>
 <div class="moduleItem eventModuleItem">      
-				<div class="eventModuleItem-2100292 itemEven">
+				<div class="eventModuleItem-2272863 itemEven">
 					<div class="itemTitleContainer">
 						<div>
-							<a class="itemTitle" href="https://cbbag.wildapricot.org/event-2100292">2016WKSP-11 &quot;A Weekend in Japan&quot;</a>
+							<a class="itemTitle" href="https://cbbag.wildapricot.org/event-2272863">2016WKSP-21 Three Endband Variations</a>
 						</div>
 					</div>
 				<div class="itemInfoContainer">
 				<div>
-28 May 2016 10:00 AM (EDT)						&#8226; CBBAG Bindery, Toronto ON</div>
+25 Sep 2016 10:00 AM (EDT)						&#8226; Toronto ON</div>
 				</div>
 				</div>
 				</div>
 				<div class="moduleSeparator">
-				<div class="eventModuleSeparator-2100292 sepEven"></div>
+				<div class="eventModuleSeparator-2272863 sepEven"></div>
 </div>
 <div class="moduleItem eventModuleItem">      
-				<div class="eventModuleItem-2100307 itemOdd">
+				<div class="eventModuleItem-2273371 itemOdd">
 					<div class="itemTitleContainer">
 						<div>
-							<a class="itemTitle" href="https://cbbag.wildapricot.org/event-2100307">2016WKSP-12 Bookbinding 1 Intensive</a>
+							<a class="itemTitle" href="https://cbbag.wildapricot.org/event-2273371">2016WKSP-22 Bookbinding 1 Intensive</a>
 						</div>
 					</div>
 				<div class="itemInfoContainer">
 				<div>
-06 Jun 2016 10:00 AM (EDT)						&#8226; CBBAG Bindery, Toronto ON</div>
+26 Sep 2016 10:00 AM (EDT)						&#8226; Toronto ON</div>
 				</div>
 				</div>
 				</div>
 				<div class="moduleSeparator lastSeparator">
-				<div class="eventModuleSeparator-2100307 sepOdd"></div>
+				<div class="eventModuleSeparator-2273371 sepOdd"></div>
 </div>
 </div>
     </div>
@@ -1806,7 +1785,7 @@ document.write('<style type="text/css"> .WaHideIfJSEnabled, .HideIfJSEnabled { d
 	<div class="d9">
 	<div  class="inner">
 <span id="idFooterPoweredByWA" class="cnFooterPoweredByWA">
-Powered by <a href="http://www.wildapricot.com">Wild Apricot</a> Membership Software</span>
+Powered by <a href="http://www.wildapricot.com" target="_blank">Wild Apricot</a> Membership Software</span>
 </div></div></div></div></div></div></div></div></div></div></div>
 </div></div></div></div></div></div></div></div></div></div></div>
     <div id="idMainContainerBottomCorners" class="cornersContainer cnMainContainerBottomCorners"><div class="bottomCorners"><!--[if gt IE 6]><!--><div class="r1"><div class="r2"><div class="r3"><div class="r4"><div class="r5"></div></div></div></div></div><!--<![endif]--><div class="c5"></div><div class="c4"></div><div class="c3"></div><div class="c2"></div><div class="c1"></div></div>

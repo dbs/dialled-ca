@@ -1,166 +1,68 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html id="ctl00_Html1" xmlns:o="urn:schemas-microsoft-com:office:office" __expr-val-dir="ltr" lang="en-us" dir="ltr">
-<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=9, chrome=1" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta name="progid" content="SharePoint.WebPartPage.Document" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name='description' content='HRPA is Canada’s HR thought leader with more than 20,000 members in 28 chapters across Ontario'>
-<meta name='keywords' content='HRPA'>
-<meta name='author' content='Stuart'>
-<meta http-equiv='refresh' content=''>
-<meta name='robots' content='index, follow'>
-<meta name='copyright' content='© 2013 HRPA. All rights reserved.'>
-<meta name='expires' content=''>
-<title>
-	
-	HRPA - Human Resources Professionals Association
-
-</title>
-	<script type="text/javascript">
-	    var _fV4UI = true;
-	</script>
-        <script type="text/javascript">
-// <![CDATA[
-document.write('<script type="text/javascript" src="/_layouts/1033/init.js?rev=lEi61hsCxcBAfvfQNZA%2FsQ%3D%3D"></' + 'script>');
-document.write('<script type="text/javascript" src="/_layouts/1033/msstring.js?rev=QtiIcPH3HV7LgVSO7vONFg%3D%3D"></' + 'script>');
-document.write('<script type="text/javascript" src="/_layouts/1033/ie55up.js?rev=UgTcwUTI6YcRzTMBxD93Xg%3D%3D"></' + 'script>');
-document.write('<script type="text/javascript" src="/ScriptResource.axd?d=IyxV5CcICblmx3If8CPdL9fYhgrkzzku795kH64u0SleHdHK9WoNLxMAmi9IsggzgN8GgRVgFvDZ6YRYB2CUZno9FwLdpFHnSdibh54K8ZbK20jvOeC8GqzWzWzkxCyK495yUt2PPStM1GM5HzmifJ_ymLE1&amp;t=2e2045e2"></' + 'script>');
-document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D"></' + 'script>');
-document.write('<script type="text/javascript" src="/ScriptResource.axd?d=s4qDN-SqVsM8Ql9j3HhTT5MeZFMwydfGRpGsI6WWQBtgeQQWfSmvItNBpF9t9QSo8dY1ajUx3Uy-MsLXUe5rnPkCIi6XbtF7lp7t2mlNJMFI_NBGW-1Pst2ZIHDmW2jhVOsZRN7a0ihNztR3mC7IXS2p8XU6oAVMw60MSgtJbTPMdxyu0&amp;t=2e2045e2"></' + 'script>');
-document.write('<script type="text/javascript" src="/ScriptResource.axd?d=cfSfj42_kybFDHWxquaTuHSmN7dshJQgvNgzakoHLBL0hYWkgiqXFn5x0KZ3i8U3tRHM7agWgg_M3YGL5xXGpDiS-9k39Um2sCQAugoYF5DKdGczV9pF8hMavLvfeivP1kbRBQ2&amp;t=50476fbe"></' + 'script>');
-document.write('<script type="text/javascript" src="/ScriptResource.axd?d=QDCzwp3kFBUwgTWRw-3aicxrWb0zUhCWkrthn6K9ORcsgmMDOphaopJKAF5-qnuTb8u57gTuUxpc2-C7-Fcn1_A2-QueZGON0oKDzJy4w4-MgYdD8XYfn9McRnBR70CNoAhQYw04_RNZxPdEIeUUPhz2LY81&amp;t=50476fbe"></' + 'script>');
-// ]]>
-</script>
+<!DOCTYPE html >
+<html dir="ltr" lang="en-US">
+    <head><meta http-equiv="X-UA-Compatible" content="IE=10" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+	Human Resources Professionals Association (HRPA)
+</title><link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=OqAycmyMLoQIDkAlzHdMhQ%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/searchv15.css?rev=qarmmE3eURu3ZS2Wsbpf2w%3D%3D"/>
+<link id="CustomCSS" rel="stylesheet" type="text/css" href="/ClientWebPartResources/Common/Styles/site-style.css"/>
+<link rel="stylesheet" type="text/css" href="/ClientWebPartResources/Navantis.ClientWebPart.TopNav/Styles/topNav-styles.css"/>
+<link rel="stylesheet" type="text/css" href="/ClientWebPartResources/Navantis.ClientWebPart.Footer/Styles/footer.css"/>
+<script type="text/javascript" src="/_layouts/15/init.js?rev=0%2BjgcYFw8Xoj0N42kzP%2BcQ%3D%3D"></script>
+<script type="text/javascript" src="/clientwebpartresources/common/scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/clientwebpartresources/common/scripts/jquery-ui.min-1.11.2.js"></script>
+<script type="text/javascript" src="/clientwebpartresources/common/scripts/modernizr.js"></script>
+<script type="text/javascript" src="/clientwebpartresources/common/scripts/master.js"></script>
+<script type="text/javascript" src="/clientwebpartresources/common/scripts/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="/clientwebpartresources/common/scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/clientwebpartresources/common/scripts/wow.js"></script>
+<script type="text/javascript" src="/clientwebpartresources/common/scripts/responsive-table.js"></script>
+<script type="text/javascript" src="/ScriptResource.axd?d=34qE-rbor0QjABAtC4rN7dZ1gHrH-HyvPjky5zGrQejLKTmIEmb7jlUR9xIIO9vBywQE_6gnUH54TjcAfm1Lc7Ql6isDCi711YuxKiI2Xg94qQa-Q2WMYD5jW_PyVvvEvS7SBZ1f6IXqjJZJ62HKd44cKT9FEYWYZlNq86A6UdUNoXy79n4okPqNHelm8mEs0&amp;t=ffffffff805766b3"></script>
+<script type="text/javascript" src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D"></script>
+<script type="text/javascript" src="/ScriptResource.axd?d=1h2ieTW99MZK-jUyFHbwgER-w6ywCfUVH7mb8yXNPdchwZSXoCbUkAwLehw1lncjinKz8RsH0Qj9n_9O17lcb4MPnxwOnPmwzicFYpmnujYzgWRbLq_soWBx0A_3VcS-9rfgTS0nHde70pph12OczUkyoU7PKz59vJsRKFkmjTp1vZ_IshliuwwLOgl-hbeN0&amp;t=ffffffff805766b3"></script>
+<script type="text/javascript" src="/_layouts/15/sp.init.js?rev=jvJC3Kl5gbORaLtf7kxULQ%3D%3D"></script>
+<script type="text/javascript" src="/_layouts/15/clientrenderer.js?rev=PWwV4FATEiOxN90BeB5Hzw%3D%3D"></script>
+<script type="text/javascript" src="/_layouts/15/ScriptResx.ashx?culture=en%2Dus&amp;name=Srch%2EResources&amp;rev=XDE4tiLBtKKfBTRJIu5neg%3D%3D"></script>
+<script type="text/javascript" src="/_layouts/15/search.clientcontrols.js?rev=9lPkeDUaM99crqz9aQrKvQ%3D%3D"></script>
+<script type="text/javascript">RegisterSod("initstrings.js", "\u002f_layouts\u002f15\u002f1033\u002finitstrings.js?rev=2N3pk\u00252FwjnG3Tj9o5NrqHcg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("strings.js", "\u002f_layouts\u002f15\u002f1033\u002fstrings.js?rev=y6khbhv1Os2YPb5X0keqRg\u00253D\u00253D");RegisterSodDep("strings.js", "initstrings.js");</script>
+<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=yNk\u00252FhRzgBn40LJVP\u00252BqfgdQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002f15\u002fsp.ui.dialog.js?rev=3Oh2QbaaiXSb7ldu2zd6QQ\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f15\u002fcore.js?rev=MHF5QO0KlAC5NQVG7m1Ttg\u00253D\u00253D");RegisterSodDep("core.js", "strings.js");</script>
+<script type="text/javascript">RegisterSod("menu.js", "\u002f_layouts\u002f15\u002fmenu.js?rev=cXv35JACAh0ZCqUwKU592w\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("mQuery.js", "\u002f_layouts\u002f15\u002fmquery.js?rev=VYAJYBo5H8I3gVSL3MzD6A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("callout.js", "\u002f_layouts\u002f15\u002fcallout.js?rev=ryx2n4ePkYj1\u00252FALmcsXZfA\u00253D\u00253D");RegisterSodDep("callout.js", "strings.js");RegisterSodDep("callout.js", "mQuery.js");RegisterSodDep("callout.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("clienttemplates.js", "\u002f_layouts\u002f15\u002fclienttemplates.js?rev=tn9XfGb1fnXOYRYP\u00252BT3NJg\u00253D\u00253D");RegisterSodDep("clienttemplates.js", "initstrings.js");</script>
+<script type="text/javascript">RegisterSod("sharing.js", "\u002f_layouts\u002f15\u002fsharing.js?rev=XxxHIxIIc8BsW9ikVc6dgA\u00253D\u00253D");RegisterSodDep("sharing.js", "strings.js");RegisterSodDep("sharing.js", "mQuery.js");RegisterSodDep("sharing.js", "clienttemplates.js");RegisterSodDep("sharing.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("suitelinks.js", "\u002f_layouts\u002f15\u002fsuitelinks.js?rev=REwVU5jSsadDdOZlCx4wpA\u00253D\u00253D");RegisterSodDep("suitelinks.js", "strings.js");RegisterSodDep("suitelinks.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002f15\u002fsp.runtime.js?rev=5f2WkYJoaxlIRdwUeg4WEg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002f15\u002fsp.js?rev=AAVN2ASApkrUQA7cHBtN8A\u00253D\u00253D");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("userprofile", "\u002f_layouts\u002f15\u002fsp.userprofiles.js?rev=Pbfi3FBmvy2ewPqDZp16\u00252BQ\u00253D\u00253D");RegisterSodDep("userprofile", "sp.runtime.js");</script>
+<script type="text/javascript">RegisterSod("followingcommon.js", "\u002f_layouts\u002f15\u002ffollowingcommon.js?rev=sObFmln\u00252BGVrczIpXNeFRrg\u00253D\u00253D");RegisterSodDep("followingcommon.js", "strings.js");RegisterSodDep("followingcommon.js", "sp.js");RegisterSodDep("followingcommon.js", "userprofile");RegisterSodDep("followingcommon.js", "core.js");RegisterSodDep("followingcommon.js", "mQuery.js");</script>
+<script type="text/javascript">RegisterSod("profilebrowserscriptres.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=ProfileBrowserScriptRes\u0026rev=J5HzNnB\u00252FO1Id\u00252FGI18rpRcw\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.mysitecommon.js", "\u002f_layouts\u002f15\u002fsp.ui.mysitecommon.js?rev=Ua8qmZSU9nyf53S7PEyJwQ\u00253D\u00253D");RegisterSodDep("sp.ui.mysitecommon.js", "sp.runtime.js");RegisterSodDep("sp.ui.mysitecommon.js", "userprofile");RegisterSodDep("sp.ui.mysitecommon.js", "profilebrowserscriptres.resx");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f15\u002fie55up.js?rev=0R4dbpInVlmjoVSw2Gglmw\u00253D\u00253D");RegisterSodDep("browserScript", "strings.js");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002f15\u002finplview.js?rev=Uv\u00252BQls0Zz16uHFi33RrTcA\u00253D\u00253D");RegisterSodDep("inplview", "strings.js");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("imglib.js", "\u002f_layouts\u002f15\u002fimglib.js?rev=pJT\u00252B05bFsTB1okMm4c0ojA\u00253D\u00253D");RegisterSodDep("imglib.js", "strings.js");</script>
 <link type="text/xml" rel="alternate" href="/_vti_bin/spsdisco.aspx" />
-        <!--[if lt IE 7]>
-	<script defer type="text/javascript" src="/Style Library/Scripts/pngfix.js"></script>
-	<![endif]-->
-	<link rel="shortcut icon" href="/_layouts/images/favicon.ico" type="image/vnd.microsoft.icon" />
-	
-	
-	<!-- ======================================= CSS LINKS ======================================= -->
-
-	 <!------------------Hiding the OOB text styles------------------>
-    <link id="ctl00_Link_0" media="screen" type="text/css" rel="stylesheet" href="/Style Library/en-US/Core Styles/CoreV4.css" />
-	<!------------------EOF Hiding the OOB text styles------------------>
-
-    <link id="ctl00_Link_1" media="screen" type="text/css" rel="stylesheet" href="/Style Library/en-US/Core Styles/HRPA_Common.css" /><link id="ctl00_Link_2" media="screen" type="text/css" rel="stylesheet" href="/Style Library/en-US/Core Styles/HRPA_Master.css" />
-	<!-- ======================================= CSS LINKS ======================================= -->
-	
-	
-    <script src="/Style Library/Scripts/jquery-1.2.6.min.js" type="text/javascript" language="javascript"></script>
-
-    <script src="/Style Library/Scripts/accordion.js" type="text/javascript" language="javascript"></script>
-
-    <!-- EDIT PAGE GOES TO BOTTOM prevent-->
-        <script type='text/javascript'>
-
-            $(window).load(function () {
-                setTimeout(doPosition, 100);
-            });
-
             
-
-            function doPosition() {
-                $("#s4-workspace").scrollTop(0);             
-                var element = document.getElementById("s4-workspace");
-                var ribbonelement = document.getElementById("s4-ribbonrow");
-                if (ribbonelement.hasAttribute("style")) {
-                    var attr = ribbonelement.getAttributeNode("style");
-                    if (element.scrollWidth - element.scrollLeft == element.clientWidth && document.getElementById("s4-ribbonrow").style.display=="block") {
-                        attr.value = "display:block;overflow-x:hidden;";
-                    }
-                }
-                if (document.getElementById("s4-ribbonrow") != null) {
-                    var attr = ribbonelement.getAttributeNode("style");
-                    if (element.scrollWidth - element.scrollLeft == element.clientWidth && document.getElementById("s4-ribbonrow").style.display=="block") {
-                        attr.value = "display:block;overflow-x:hidden;";
-                    }                    
-                }
-            }
-
-
-       </script>
-
-     <!-- EOF  EDIT PAGE GOES TO BOTTOM prevent-->
-
-    
-
-     <!-- Lester add code script-->
-    <script type='text/javascript' src='//www.lesterpublications.com/adserver/www/delivery/spcjs.php?id=10&block=1&target=_blank'></script>
-   
-     <!-- EOF  Lester add code script-->
-
-     <!-- EOF  EDIT PAGE GOES TO BOTTOM prevent-->
-
-     <!-- Google Analytics Tracking code-->
- 
-   	<script type='text/javascript' >
-	 
-  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
- 	ga('create', 'UA-7520719-10', 'hrpa.ca');
-  	ga('require', 'displayfeatures');
-  	ga('send', 'pageview'); 
-  	</script> 
-
-    <!-- End of Google Analytics -->
-
-    <!-- Tracking Code-->	
-
-	<script type="text/javascript">
-  		var path = (("https:" == document.location.protocol) ? "https://databroker.coremotives.com/databroker.js?version=2" : "http://cdn.coremotivesmarketing.com/databroker.js");
-  		document.write(unescape("%3Cscript src='" + path + "' type='text/javascript'%3E%3C/script%3E"));
-  	</script>
-  	<script type="text/javascript">
-  		try {
-                	var coreMotives = new DataBroker();
-                	coreMotives.customerId = "3c1a9e5d-b6e5-e311-93f4-00155d3234f0";
-                	coreMotives.instanceId = 2135;
-                	coreMotives.trackPageView();
-  		} catch (e) { }
-	</script>
-
-    <!-- End of Tracking Code -->
-	
-<link id="ctl00_StyleSheet_MXSkin_MXDefault" href="/_layouts/MX/Skins/MXDefault/MXDefault.css" type="text/css" rel="stylesheet" /><script id="ctl00_JavaScript_MXControls" type="text/javascript" src="/_controltemplates/MX/controls.js"></script><style type="text/css">
-	.zz1_CurrentNav_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
-	.zz1_CurrentNav_1 { text-decoration:none; }
-	.zz1_CurrentNav_2 {  }
-	.zz1_CurrentNav_3 { border-style:none; }
-	.zz1_CurrentNav_4 {  }
-	.zz1_CurrentNav_5 {  }
-	.zz1_CurrentNav_6 { border-style:none; }
-	.zz1_CurrentNav_7 {  }
-	.zz1_CurrentNav_8 { border-style:none; }
-	.zz1_CurrentNav_9 {  }
-	.zz1_CurrentNav_10 {  }
-	.zz1_CurrentNav_11 {  }
-	.zz1_CurrentNav_12 {  }
-	.zz1_CurrentNav_13 { border-style:none; }
-	.zz1_CurrentNav_14 {  }
-	.zz1_CurrentNav_15 { border-style:none; }
-	.zz1_CurrentNav_16 {  }
-	.zz1_CurrentNav_17 { border-style:none; }
-	.zz1_CurrentNav_18 {  }
-	.zz1_CurrentNav_19 { border-style:none; }
-	.zz1_CurrentNav_20 {  }
-	.zz1_CurrentNav_21 { border-style:none; }
-	.zz1_CurrentNav_22 {  }
-	.zz1_CurrentNav_23 { border-style:none; }
-	.zz1_CurrentNav_24 {  }
-	.ctl00_PlaceHolderMain_LeftZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
-	.ctl00_PlaceHolderMain_TopRightZone1_0 { border-color:Black;border-width:1px;border-style:Solid; }
-	.ctl00_PlaceHolderMain_TopRightZone2_0 { border-color:Black;border-width:1px;border-style:Solid; }
-	.ctl00_PlaceHolderMain_MiddleRightZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
-	.ctl00_PlaceHolderMain_BottomRightZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
-	.ctl00_wpz_0 { border-color:Black;border-width:1px;border-style:Solid; }
-
-</style></head>
-<body scroll="no">
-<script type="text/javascript">  $(document).ready(function () { if (typeof (_spBodyOnLoadWrapper) != 'undefined') { _spBodyOnLoadWrapper(); } });</script>
-<form name="aspnetForm" method="post" action="Default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
-<div>
+            
+            
+            
+            
+            
+        
+            <link rel="canonical" href="https://www.hrpa.ca:443/" /><meta name="description" content="​​​​​The Human Resources Professionals Association protects the public interest by governing and regulating the professional practice of its more than 22,000 member registrants." /><meta name="keywords" content="Human Resources Professionals Association, HRPA, Ontario HR, Human Resources, HR designations, CHRP, CHRL, CHRE" />
+            
+            
+        </head>
+    <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();"><div id="imgPrefetch" style="display:none">
+<img src="/_layouts/15/images/spcommon.png?rev=23" />
+</div>
+<form method="post" action="Default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="_wpcmWpid" id="_wpcmWpid" value="" />
+<input type="hidden" name="wpcmVal" id="wpcmVal" value="" />
 <input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
 <input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
 <input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
@@ -170,7 +72,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=QDCzwp
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xF59765B8128859B1869845C5A94E40A8249DD7AACFCF411BFFD3221887DA7046C9BBD230C5814145243B8B11ECC322B5AC710C6015D3A1C39E5A77299F3624C6,09 May 2016 14:09:55 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x8A30D1B82D6B001AF4AAE956C31ACBB9AF275D8D6D425A477247905F1542898592851EAAC1E279E33950C53043CA5001FD98A61215746CD67E702CA0A1F9557A,11 Sep 2016 16:25:04 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -181,8 +83,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=QDCzwp
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBAIBD2QWAgIGD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgMPZBYKAgQPZBYMBSZnXzQxZTUzNTJjXzRjMGJfNGUyZV9hOGY2X2JjOGZkMDFmZGE2MA9kFgRmDxYCHgdWaXNpYmxlaGQCAQ8WAh8BaGQFJmdfMTdlMWZmMWVfZjMwMl80NTEzXzhkN2VfNWM1M2NiNzViNTMyD2QWBGYPFgIfAWhkAgEPFgIfAWhkBSZnXzAxMWQ1NDQ2XzczMmNfNDE0M185YWY1XzBjN2Q1NjdmOWMwNA8PZGRkBSZnX2Y0ZTQyNjQ1X2Y4ZjJfNGM5ZF9iYmRmXzI2YjMzM2Y3MDNjMg9kFgRmDxYCHwFoZAIBDxYCHwFoZAUmZ19lZGYwNGI0ZV8wNDcwXzQyYjJfYmEzNl8yMjQyOWRkYzg5MDEPZBYEZg8WAh8BaGQCAQ8WAh8BaGQFJmdfZTYwZGYwNjZfZTFmZF80ZWJmX2FkYWVfNWZjN2M0NWYxNjhmDw8WBB4LUGFyYW1WYWx1ZXMy1QYAAQAAAP////8BAAAAAAAAAAwCAAAAWE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTE0LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMFAQAAAD1NaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuUGFyYW1ldGVyTmFtZVZhbHVlSGFzaHRhYmxlAQAAAAVfY29sbAMcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQIAAAAJAwAAAAQDAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUHAAAACkxvYWRGYWN0b3IHVmVyc2lvbghDb21wYXJlchBIYXNoQ29kZVByb3ZpZGVyCEhhc2hTaXplBEtleXMGVmFsdWVzAAADAwAFBQsIHFN5c3RlbS5Db2xsZWN0aW9ucy5JQ29tcGFyZXIkU3lzdGVtLkNvbGxlY3Rpb25zLklIYXNoQ29kZVByb3ZpZGVyCOxROD8LAAAACgoLAAAACQQAAAAJBQAAABAEAAAABwAAAAYGAAAABlVzZXJJRAYHAAAABldlYlVSTAYIAAAACkZpbHRlckxpbmsGCQAAAAVUb2RheQYKAAAACExpc3ROYW1lBgsAAAARZHZ0X3N0YXJ0cG9zaXRpb24GDAAAABBkdnRfbmV4dHBhZ2VkYXRhEAUAAAAHAAAABg0AAAAPQ3VycmVudFVzZXJOYW1lBg4AAAAUe3NpdGVjb2xsZWN0aW9ucm9vdH0GDwAAAAE/BhAAAAAUMjAxNi0wNS0wOVQxMDowOTo1NloGEQAAABRIUlBBIEV2ZW50cyBDYWxlbmRhcgYSAAAAAAYTAAAArgFQYWdlZD1UUlVFJnBfRXZlbnREYXRlPTIwMTYwNTExJTIwMDQlM2EwMCUzYTAwJnBfVGl0bGU9V2luZHNvciUyMGFuZCUyMERpc3RyaWN0JTIwMDUlMmUxMSUyZTE2JTIwVmlvbGVuY2UlMjBpbiUyMHRoZSUyMFdvcmtwbGFjZSUyMCUyZCUyMEFuJTIwRW1wbG95ZXIlMjdzJTIwR3VpZGUmcF9JRD00ODg2NDQLHhBGaWx0ZXJPcGVyYXRpb25zMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAtkZAIUD2QWAgIBD2QWBGYPZBYCAgEPFgIfAWgWAmYPZBYEAgIPZBYGAgEPFgIfAWhkAgMPFggeE0NsaWVudE9uQ2xpY2tTY3JpcHQFaWphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDUwMDExLCAnaHR0cDpcdTAwMmZcdTAwMmZ3d3cuaHJwYS5jYScsIC0xLCAtMSwgJycsICcnKR4YQ2xpZW50T25DbGlja05hdmlnYXRlVXJsZB4oQ2xpZW50T25DbGlja1NjcmlwdENvbnRhaW5pbmdQcmVmaXhlZFVybGQeDEhpZGRlblNjcmlwdAUlVGFrZU9mZmxpbmVEaXNhYmxlZCgxLCA1MDAxMSwgLTEsIC0xKWQCBQ8WAh8BaGQCAw8PFgoeCUFjY2Vzc0tleQUBLx4PQXJyb3dJbWFnZVdpZHRoAgUeEEFycm93SW1hZ2VIZWlnaHQCAx4RQXJyb3dJbWFnZU9mZnNldFhmHhFBcnJvd0ltYWdlT2Zmc2V0WQLrA2RkAgEPZBYCAgMPZBYCZg9kFgJmDxQrAANkZGRkAhwPZBYCAgEPZBYCZg8PZBYGHgVjbGFzcwUibXMtc2J0YWJsZSBtcy1zYnRhYmxlLWV4IHM0LXNlYXJjaB4LY2VsbHBhZGRpbmcFATAeC2NlbGxzcGFjaW5nBQEwZAIiD2QWAmYPZBYCZg8PFgweHEFubm9ueW1vdXNVc2VyQmVmb3JlUG9zdGJhY2tnHghNZXNzYWdlcxcbBTZTZWN1cml0eS5TaWduSW5IZWxwLkxvY2F0ZUFjY291bnRFbWFpbEFkZHJlc3MxTm90VmFsaWQFJlRoZSBmaXJzdCBlbWFpbCBhZGRyZXNzIG11c3QgYmUgdmFsaWQuBS5TZWN1cml0eS5TaWduSW5IZWxwLlNlY3JldFF1ZXN0aW9uV3JvbmdDYXB0Y2hhBSJUaGUgY29kZSB5b3UgZW50ZXJlZCBpcyBub3QgdmFsaWQuBRpTZWN1cml0eS5GaXJzdE5hbWVSZXF1aXJlZAUjVGhlIEZpcnN0IE5hbWUgaXMgYSByZXF1aXJlZCBmaWVsZC4FNlNlY3VyaXR5LlNpZ25JbkhlbHAuTG9jYXRlQWNjb3VudEVtYWlsQWRkcmVzczNOb3RWYWxpZAUmVGhlIHRoaXJkIGVtYWlsIGFkZHJlc3MgbXVzdCBiZSB2YWxpZC4FHFNlY3VyaXR5Lk5ld1Bhc3N3b3JkUmVxdWlyZWQFIVRoZSBuZXcgcGFzc3dvcmQgY2Fubm90IGJlIGVtcHR5LgUcU2VjdXJpdHkuUGFzc3dvcmRzRG9Ob3RNYXRjaAUrVGhlIHR3byBwYXNzd29yZHMgeW91IGVudGVyZWQgZG8gbm90IG1hdGNoLgUhU2VjdXJpdHkuRW1haWxBZGRyZXNzZXNEb05vdE1hdGNoBTNUaGUgdHdvIGUtbWFpbCBhZGRyZXNzZXMgeW91IGVudGVyZWQgZGlkIG5vdCBtYXRjaC4FGVNlY3VyaXR5LlBhc3N3b3JkUmVxdWlyZWQFHVRoZSBwYXNzd29yZCBjYW5ub3QgYmUgZW1wdHkuBSJTZWN1cml0eS5Mb2NhdGVBY2NvdW50Tm9NYXRjaEZvdW5kBfcBV2Ugd2VyZSB1bmFibGUgdG8gbG9jYXRlIGFueSB1c2VyIGFjY291bnQgd2l0aCB0aGUgZW1haWwgYWRkcmVzcyB0aGF0IHlvdSBoYXZlIGVudGVyZWQuIFByZXNzICJDcmVhdGUgYSBOZXcgdXNlciBhY2NvdW50IiBiZWxvdyB0byBjcmVhdGUgYSBuZXcgdXNlciBhY2NvdW50IHdpdGggdGhlIGVtYWlsIG9mIHlvdXIgY2hvaWNlLg0KPGJyIC8+PGJyIC8+DQpPciB0cnkgYWdhaW4gd2l0aCBhIGRpZmZlcmVudCBlbWFpbCBhZGRyZXNzLgUdU2VjdXJpdHkuRW1haWxBZGRyZXNzUmVxdWlyZWQFJVlvdSBkaWRuJ3QgcHJvdmlkZSBhbiBlLW1haWwgYWRkcmVzcy4FNlNlY3VyaXR5LlNpZ25JbkhlbHAuRm9yZ290UGFzc3dvcmRFbWFpbEFkZHJlc3NOb3RWYWxpZAUgVGhlIGVtYWlsIGFkZHJlc3MgbXVzdCBiZSB2YWxpZC4FGVNlY3VyaXR5LlVzZXJOYW1lUmVxdWlyZWQFsgFZb3UgZGlkbid0IHByb3ZpZGUgYW4gZS1tYWlsIGFkZHJlc3MuIFdlJ2xsIG5lZWQgaXQgdG8gY29tbXVuaWNhdGUgd2l0aCB5b3UgYWJvdXQgdGhlIHN0YXR1cyBvZiB5b3VyIG9yZGVycy4gQWxzbywgd2hlbiB5b3UgdmlzaXQgdXMgYWdhaW4sIHlvdSdsbCBuZWVkIGl0IHRvIGFjY2VzcyB5b3VyIGFjY291bnQuBRlTZWN1cml0eS5FeHBpcmVkU2VjdXJlVXJsBRRUaGUgVVJMIGhhcyBleHBpcmVkLgUlU2VjdXJpdHkuU2VjcmV0UXVlc3Rpb25BbnN3ZXJSZXF1aXJlZAUmVGhlIHNlY3JldCBhbnN3ZXIgaXMgYSByZXF1aXJlZCBmaWVsZC4FNlNlY3VyaXR5LlNpZ25JbkhlbHAuTG9jYXRlQWNjb3VudEVtYWlsQWRkcmVzczJOb3RWYWxpZAUnVGhlIHNlY29uZCBlbWFpbCBhZGRyZXNzIG11c3QgYmUgdmFsaWQuBSZTZWN1cml0eS5DcmVhdGVOZXdVc2VyVXNlck5hbWVSZXF1aXJlZAUeVXNlciBuYW1lIGlzIGEgcmVxdWlyZWQgZmllbGQuBSJTZWN1cml0eS5Qb3NzaWJsZVVzZXJOYW1lRHVwbGljYXRlBbQBVGhlIHVzZXJuYW1lIHlvdSBlbnRlcmVkIGlzIGFscmVhZHkgaW4gdXNlIGJ5IGFub3RoZXIgc2l0ZSB1c2VyLiBCZWNhdXNlIHlvdXIgdXNlcm5hbWUgbXVzdCBiZSB1bmlxdWUsIHdlIGFzayB5b3UgdG8gcGxlYXNlIGNob29zZSBhIGRpZmZlcmVudCB1c2VybmFtZSB0byB1c2UgZm9yIHlvdXIgbmV3IGFjY291bnQuBRlTZWN1cml0eS5Vc2VyRG9lc05vdEV4aXN0BVBUaGUgZS1tYWlsIGFkZHJlc3MgYW5kIHBhc3N3b3JkIHlvdSBlbnRlcmVkIGRvIG5vdCBtYXRjaCBhbnkgYWNjb3VudHMgb24gcmVjb3JkLgUZU2VjdXJpdHkuTGFzdE5hbWVSZXF1aXJlZAUiVGhlIExhc3QgTmFtZSBpcyBhIHJlcXVpcmVkIGZpZWxkLgUqU2VjdXJpdHkuU2VjcmV0UXVlc3Rpb25BbmRBbnN3ZXJOb3RDaGFuZ2VkBTlXZSB3ZXJlIHVuYWJsZSB0byB1cGRhdGUgeW91ciBzZWNyZXQgcXVlc3Rpb24gYW5kIGFuc3dlci4FFVNlY3VyaXR5Lldyb25nQ2FwdGNoYQUiVGhlIGNvZGUgeW91IGVudGVyZWQgaXMgbm90IHZhbGlkLgUZU2VjdXJpdHkuSW52YWxpZFNlY3VyZVVybAUVVGhlIFVSTCBpcyBub3QgdmFsaWQuBTZTZWN1cml0eS5TaWduSW5IZWxwLkxvY2F0ZUFjY291bnRFbWFpbEFkZHJlc3MxUmVxdWlyZWQFJVlvdSBkaWRuJ3QgcHJvdmlkZSBhbiBlLW1haWwgYWRkcmVzcy4FHVNlY3VyaXR5LkVtYWlsQWRkcmVzc05vdFZhbGlkBSBUaGUgZW1haWwgYWRkcmVzcyBtdXN0IGJlIHZhbGlkLgUbU2VjdXJpdHkuUGFzc3dvcmROb3RDaGFuZ2VkBSdXZSB3ZXJlIHVuYWJsZSB0byB1cGRhdGUgeW91ciBwYXNzd29yZC4FGVNlY3VyaXR5LkNhbnRSZXRyaWV2ZVVzZXIFKldlIHdlcmUgdW5hYmxlIHRvIGxvY2F0ZSB5b3VyIHVzZXIgYWNjb3VudAVAU2VjdXJpdHkuU2lnbkluSGVscC5Gb3Jnb3RQYXNzd29yZEVtYWlsQWRkcmVzc09yVXNlcm5hbWVSZXF1aXJlZAU8WW91IGRpZG4ndCBwcm92aWRlIGVpdGhlciBhbiBlLW1haWwgYWRkcmVzcyBvciBhbiB1c2VyIG5hbWUuHgRTa2luBQlNWERlZmF1bHQeCHNldHRpbmdzFzcFHFZpZXcuQWR2YW5jZWQuU2lnbk91dExpbmtVcmwFH34vX2xheW91dHMvY3JtNG0vbG9nb3V0c3NvLmFzcHgFMk1lc3NhZ2UuU2VjdXJpdHkuU2VjcmV0UXVlc3Rpb25BbmRBbnN3ZXJOb3RDaGFuZ2VkBTlXZSB3ZXJlIHVuYWJsZSB0byB1cGRhdGUgeW91ciBzZWNyZXQgcXVlc3Rpb24gYW5kIGFuc3dlci4FHlZpZXcuQmFzaWNJbmZvcm1hdGlvbi5NZXRhZGF0YTL4BgABAAAA/////wEAAAAAAAAADAIAAABWUHJvdGVjaC5NWC5Db250cm9scywgVmVyc2lvbj0yLjUuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPThiOGVhZTk0Y2EwMTM3MjQEAQAAAKQBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tQcm90ZWNoLk1YLkNvbnRyb2xzLkNvbmZpZ3VyYXRpb24uRmllbGQsIFByb3RlY2guTVguQ29udHJvbHMsIFZlcnNpb249Mi41LjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj04YjhlYWU5NGNhMDEzNzI0XV0DAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgQAAClQcm90ZWNoLk1YLkNvbnRyb2xzLkNvbmZpZ3VyYXRpb24uRmllbGRbXQIAAAAICAkDAAAAAgAAAAIAAAAHAwAAAAABAAAABAAAAAQnUHJvdGVjaC5NWC5Db250cm9scy5Db25maWd1cmF0aW9uLkZpZWxkAgAAAAkEAAAACQUAAAANAgUEAAAAJ1Byb3RlY2guTVguQ29udHJvbHMuQ29uZmlndXJhdGlvbi5GaWVsZAcAAAATY29udHJvbEZyaWVuZGx5TmFtZRhjaGlsZENvbnRyb2xCYXNlVHlwZU5hbWUKZW50aXR5TmFtZQ1hdHRyaWJ1dGVOYW1lBnByb21wdBF1c2VDUk1EaXNwbGF5TmFtZQp2aXNpYmlsaXR5AQEBAQEABAE3UHJvdGVjaC5NWC5Db250cm9scy5Db25maWd1cmF0aW9uLkZpZWxkK1Zpc2liaWxpdHlNb2RlcwIAAAACAAAACgoGBgAAAAdjb250YWN0BgcAAAAPcGFfd2VibG9naW5uYW1lBggAAAAKTG9naW4gTmFtZQAF9////zdQcm90ZWNoLk1YLkNvbnRyb2xzLkNvbmZpZ3VyYXRpb24uRmllbGQrVmlzaWJpbGl0eU1vZGVzAQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAEFAAAABAAAAAoKBgoAAAAHY29udGFjdAYLAAAAE3BhX3dlYmxvZ2lucGFzc3dvcmQGDAAAAA5Mb2dpbiBQYXNzd29yZAAB8/////f///8AAAAACwU+TWVzc2FnZS5TZWN1cml0eS5TaWduSW5IZWxwLkZvcmdvdFBhc3N3b3JkRW1haWxBZGRyZXNzTm90VmFsaWQFIFRoZSBlbWFpbCBhZGRyZXNzIG11c3QgYmUgdmFsaWQuBR9WaWV3LkFkdmFuY2VkLlNpZ25JbkhlbHBMaW5rVXJsBRZ+L3BhZ2VzL0xvZ0luSGVscC5hc3B4BUhNZXNzYWdlLlNlY3VyaXR5LlNpZ25JbkhlbHAuRm9yZ290UGFzc3dvcmRFbWFpbEFkZHJlc3NPclVzZXJuYW1lUmVxdWlyZWQFPFlvdSBkaWRuJ3QgcHJvdmlkZSBlaXRoZXIgYW4gZS1tYWlsIGFkZHJlc3Mgb3IgYW4gdXNlciBuYW1lLgUiTWVzc2FnZS5TZWN1cml0eS5GaXJzdE5hbWVSZXF1aXJlZAUjVGhlIEZpcnN0IE5hbWUgaXMgYSByZXF1aXJlZCBmaWVsZC4FHU1lc3NhZ2UuU2VjdXJpdHkuV3JvbmdDYXB0Y2hhBSJUaGUgY29kZSB5b3UgZW50ZXJlZCBpcyBub3QgdmFsaWQuBSFNZXNzYWdlLlNlY3VyaXR5LkludmFsaWRTZWN1cmVVcmwFFVRoZSBVUkwgaXMgbm90IHZhbGlkLgUeRWRpdC5CYXNpY0luZm9ybWF0aW9uLk1lZGF0YWRhZAUqTWVzc2FnZS5TZWN1cml0eS5Qb3NzaWJsZVVzZXJOYW1lRHVwbGljYXRlBbQBVGhlIHVzZXJuYW1lIHlvdSBlbnRlcmVkIGlzIGFscmVhZHkgaW4gdXNlIGJ5IGFub3RoZXIgc2l0ZSB1c2VyLiBCZWNhdXNlIHlvdXIgdXNlcm5hbWUgbXVzdCBiZSB1bmlxdWUsIHdlIGFzayB5b3UgdG8gcGxlYXNlIGNob29zZSBhIGRpZmZlcmVudCB1c2VybmFtZSB0byB1c2UgZm9yIHlvdXIgbmV3IGFjY291bnQuBR5WaWV3LkFkdmFuY2VkLk15UHJvZmlsZUxpbmtVcmwFFn4vUGFnZXMvRGFzaGJvYXJkLmFzcHgFH1ZpZXcuQWR2YW5jZWQuRGlzcGxheVJlbWVtYmVyTWVnBSFNZXNzYWdlLlNlY3VyaXR5LlBhc3N3b3JkUmVxdWlyZWQFHVRoZSBwYXNzd29yZCBjYW5ub3QgYmUgZW1wdHkuBT5NZXNzYWdlLlNlY3VyaXR5LlNpZ25JbkhlbHAuTG9jYXRlQWNjb3VudEVtYWlsQWRkcmVzczJOb3RWYWxpZAUnVGhlIHNlY29uZCBlbWFpbCBhZGRyZXNzIG11c3QgYmUgdmFsaWQuBSBWaWV3LkFkdmFuY2VkLlNpZ25JbkhlbHBMaW5rVGV4dAULTG9nIEluIEhlbHAFG0dsb2JhbC5HZW5lcmFsLkZyaWVuZGx5TmFtZQUHV2VsY29tZQUbVmlldy5BZHZhbmNlZC5TaWduSW5MaW5rVXJsBR5+L19sYXlvdXRzL0NSTTRNL0xvZ2luc3NvLmFzcHgFE0dsb2JhbC5HZW5lcmFsLlNraW5lBSFNZXNzYWdlLlNlY3VyaXR5LlVzZXJOYW1lUmVxdWlyZWQFsgFZb3UgZGlkbid0IHByb3ZpZGUgYW4gZS1tYWlsIGFkZHJlc3MuIFdlJ2xsIG5lZWQgaXQgdG8gY29tbXVuaWNhdGUgd2l0aCB5b3UgYWJvdXQgdGhlIHN0YXR1cyBvZiB5b3VyIG9yZGVycy4gQWxzbywgd2hlbiB5b3UgdmlzaXQgdXMgYWdhaW4sIHlvdSdsbCBuZWVkIGl0IHRvIGFjY2VzcyB5b3VyIGFjY291bnQuBSFNZXNzYWdlLlNlY3VyaXR5Lkxhc3ROYW1lUmVxdWlyZWQFIlRoZSBMYXN0IE5hbWUgaXMgYSByZXF1aXJlZCBmaWVsZC4FPk1lc3NhZ2UuU2VjdXJpdHkuU2lnbkluSGVscC5Mb2NhdGVBY2NvdW50RW1haWxBZGRyZXNzMU5vdFZhbGlkBSZUaGUgZmlyc3QgZW1haWwgYWRkcmVzcyBtdXN0IGJlIHZhbGlkLgUgVmlldy5BZHZhbmNlZC5EaXNwbGF5U2lnbk91dExpbmtnBShHbG9iYWwuR2VuZXJhbC5Db25maWd1cmF0aW9uQWNjZXNzLlJvbGVzMvgBAAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAACRlYmIxZDYxMi03MTA0LWUxMTEtYWUwOS0wMDIzN2Q2MjA4MmMNAwsFIU1lc3NhZ2UuU2VjdXJpdHkuVXNlckRvZXNOb3RFeGlzdAVQVGhlIGUtbWFpbCBhZGRyZXNzIGFuZCBwYXNzd29yZCB5b3UgZW50ZXJlZCBkbyBub3QgbWF0Y2ggYW55IGFjY291bnRzIG9uIHJlY29yZC4FJU1lc3NhZ2UuU2VjdXJpdHkuRW1haWxBZGRyZXNzTm90VmFsaWQFIFRoZSBlbWFpbCBhZGRyZXNzIG11c3QgYmUgdmFsaWQuBS5NZXNzYWdlLlNlY3VyaXR5LkNyZWF0ZU5ld1VzZXJVc2VyTmFtZVJlcXVpcmVkBR5Vc2VyIG5hbWUgaXMgYSByZXF1aXJlZCBmaWVsZC4FLU1lc3NhZ2UuU2VjdXJpdHkuU2VjcmV0UXVlc3Rpb25BbnN3ZXJSZXF1aXJlZAUmVGhlIHNlY3JldCBhbnN3ZXIgaXMgYSByZXF1aXJlZCBmaWVsZC4FH1ZpZXcuQWR2YW5jZWQuTXlQcm9maWxlTGlua1RleHQFCk15IFByb2ZpbGUFHVZpZXcuQWR2YW5jZWQuV2VsY29tZUJhY2tUZXh0BTk8Zm9udCBzaXplPSIzIj48Yj4gICBXZWxjb21lIGJhY2sgW2ZpcnN0bmFtZV0sPC9iPjwvZm9udD4FG0dsb2JhbC5HZW5lcmFsLkRpc3BsYXlUaXRsZWUFKVZpZXcuQWR2YW5jZWQuU2lnbkluQ3JlYXRlTmV3VXNlckxpbmtUZXh0ZQUYVmlldy5BZHZhbmNlZC5TaWduSW5Nb2RlBQRGb3JtBShWaWV3LkFkdmFuY2VkLlNpZ25JbkNyZWF0ZU5ld1VzZXJMaW5rVXJsZQUnVmlldy5BZHZhbmNlZC5EaXNwbGF5Q2hhbmdlUGFzc3dvcmRMaW5raAUcVmlldy5BZHZhbmNlZC5SZW1lbWJlck1lVGV4dAUMUmVtZW1iZXIgbWUgBS5HbG9iYWwuR2VuZXJhbC5Db25maWd1cmF0aW9uQWNjZXNzLkxldmVsQ3V0b2ZmZQUhTWVzc2FnZS5TZWN1cml0eS5FeHBpcmVkU2VjdXJlVXJsBRRUaGUgVVJMIGhhcyBleHBpcmVkLgUkVmlldy5BZHZhbmNlZC5DaGFuZ2VQYXNzd29yZExpbmtUZXh0BRJDaGFuZ2UgTXkgUGFzc3dvcmQFHVZpZXcuQWR2YW5jZWQuU2lnbk91dExpbmtUZXh0BQhMb2cgIE91dAUeVmlldy5BZHZhbmNlZC5TaWduSW5CdXR0b25UZXh0BQZMb2cgSW4FPk1lc3NhZ2UuU2VjdXJpdHkuU2lnbkluSGVscC5Mb2NhdGVBY2NvdW50RW1haWxBZGRyZXNzMVJlcXVpcmVkBSVZb3UgZGlkbid0IHByb3ZpZGUgYW4gZS1tYWlsIGFkZHJlc3MuBSRNZXNzYWdlLlNlY3VyaXR5LlBhc3N3b3Jkc0RvTm90TWF0Y2gFK1RoZSB0d28gcGFzc3dvcmRzIHlvdSBlbnRlcmVkIGRvIG5vdCBtYXRjaC4FKU1lc3NhZ2UuU2VjdXJpdHkuRW1haWxBZGRyZXNzZXNEb05vdE1hdGNoBTNUaGUgdHdvIGUtbWFpbCBhZGRyZXNzZXMgeW91IGVudGVyZWQgZGlkIG5vdCBtYXRjaC4FKk1lc3NhZ2UuU2VjdXJpdHkuTG9jYXRlQWNjb3VudE5vTWF0Y2hGb3VuZAX3AVdlIHdlcmUgdW5hYmxlIHRvIGxvY2F0ZSBhbnkgdXNlciBhY2NvdW50IHdpdGggdGhlIGVtYWlsIGFkZHJlc3MgdGhhdCB5b3UgaGF2ZSBlbnRlcmVkLiBQcmVzcyAiQ3JlYXRlIGEgTmV3IHVzZXIgYWNjb3VudCIgYmVsb3cgdG8gY3JlYXRlIGEgbmV3IHVzZXIgYWNjb3VudCB3aXRoIHRoZSBlbWFpbCBvZiB5b3VyIGNob2ljZS4NCjxiciAvPjxiciAvPg0KT3IgdHJ5IGFnYWluIHdpdGggYSBkaWZmZXJlbnQgZW1haWwgYWRkcmVzcy4FNk1lc3NhZ2UuU2VjdXJpdHkuU2lnbkluSGVscC5TZWNyZXRRdWVzdGlvbldyb25nQ2FwdGNoYQUiVGhlIGNvZGUgeW91IGVudGVyZWQgaXMgbm90IHZhbGlkLgUhTWVzc2FnZS5TZWN1cml0eS5DYW50UmV0cmlldmVVc2VyBSpXZSB3ZXJlIHVuYWJsZSB0byBsb2NhdGUgeW91ciB1c2VyIGFjY291bnQFI1ZpZXcuQWR2YW5jZWQuQ2hhbmdlUGFzc3dvcmRMaW5rVXJsBR1+L1BhZ2VzL0NoYW5nZU15UGFzc3dvcmQuYXNweAU+TWVzc2FnZS5TZWN1cml0eS5TaWduSW5IZWxwLkxvY2F0ZUFjY291bnRFbWFpbEFkZHJlc3MzTm90VmFsaWQFJlRoZSB0aGlyZCBlbWFpbCBhZGRyZXNzIG11c3QgYmUgdmFsaWQuBSNNZXNzYWdlLlNlY3VyaXR5LlBhc3N3b3JkTm90Q2hhbmdlZAUnV2Ugd2VyZSB1bmFibGUgdG8gdXBkYXRlIHlvdXIgcGFzc3dvcmQuBSVNZXNzYWdlLlNlY3VyaXR5LkVtYWlsQWRkcmVzc1JlcXVpcmVkBSVZb3UgZGlkbid0IHByb3ZpZGUgYW4gZS1tYWlsIGFkZHJlc3MuBSJWaWV3LkFkdmFuY2VkLkRpc3BsYXlNeVByb2ZpbGVMaW5rZwUcVmlldy5BZHZhbmNlZC5TaWduSW5MaW5rVGV4dAUGTG9nIEluBR9HbG9iYWwuR2VuZXJhbC5TaG93RGlzcGxheVRpdGxlBQVmYWxzZQUkTWVzc2FnZS5TZWN1cml0eS5OZXdQYXNzd29yZFJlcXVpcmVkBSFUaGUgbmV3IHBhc3N3b3JkIGNhbm5vdCBiZSBlbXB0eS4eCXNpZ25JblVybAVAfi9fbGF5b3V0cy9DUk00TS9Mb2dpbnNzby5hc3B4P1JldHVyblVybD0lMmZQYWdlcyUyZkRlZmF1bHQuYXNweB4SUmVnaXN0ZXJTdHlsZVNoZWV0aGQWAmYPDxYEHghDc3NDbGFzcwUwTVhEZWZhdWx0IFNlY3VyaXR5V2VsY29tZUFub255bW91c0Zvcm1fTVhEZWZhdWx0HgRfIVNCAgJkFgYCAQ8PFgIfAWhkFgQCAQ8PFgIeDU9uQ2xpZW50Q2xpY2sFrwJPcGVuQ29uZmlndXJhdGlvbldpbmRvdygnY3RsMDBfY3RsMTFfY3RsMDBfQ29uZmlndXJhdGlvblRvb2xiYXJfcndtQ29uZmlndXJhdGlvbicsICcvX2xheW91dHMvTVgvUGFnZXMnLCAnRmFsc2UnLCAnRmFsc2UnLCAnTWFzdGVyUGFnZScsICd+L19DT05UUk9MVEVNUExBVEVTL01YL1NlY3VyaXR5L1dlbGNvbWUuYXNjeCcsICdjdGwwMCRjdGwxMSRjdGwwMCcsICdGYWxzZScsICdGYWxzZScsICdGYWxzZScgLCAnJywgJ1NlY3VyaXR5L1dlbGNvbWVDb25maWdWaWV3LmFzY3gnLCAnJywgJycsICcnLCAnJyk7IHJldHVybiBmYWxzZTtkZAIDDxQrAAIUKwADZGRkZGQCBQ9kFggCAQ9kFgoCAQ8UKwAIDxYOHgxFbXB0eU1lc3NhZ2UFCkxvZ2luIE5hbWUeCU1heExlbmd0aAJkHhxFbmFibGVFbWJlZGRlZEJhc2VTdHlsZXNoZWV0aB4TRW5hYmxlRW1iZWRkZWRTa2luc2gfEgUJTVhEZWZhdWx0HhdFbmFibGVBamF4U2tpblJlbmRlcmluZ2geDUxhYmVsQ3NzQ2xhc3MFB3JpTGFiZWxkFgYeBVdpZHRoGwAAAAAAwGJAAQAAAB8WBRFyaVRleHRCb3ggcmlIb3Zlch8XAoICFgYfHxsAAAAAAMBiQAEAAAAfFgURcmlUZXh0Qm94IHJpRXJyb3IfFwKCAhYGHx8bAAAAAADAYkABAAAAHxYFE3JpVGV4dEJveCByaUZvY3VzZWQfFwKCAhYGHx8bAAAAAADAYkABAAAAHxYFE3JpVGV4dEJveCByaUVuYWJsZWQfFwKCAhYGHx8bAAAAAADAYkABAAAAHxYFFHJpVGV4dEJveCByaURpc2FibGVkHxcCggIWBh8fGwAAAAAAwGJAAQAAAB8WBRFyaVRleHRCb3ggcmlFbXB0eR8XAoICFgYfHxsAAAAAAMBiQAEAAAAfFgUQcmlUZXh0Qm94IHJpUmVhZB8XAoICZAIDDxQrAAgPFg4fGQUOTG9naW4gUGFzc3dvcmQfGgIeHxtoHxxoHxIFCU1YRGVmYXVsdB8daB8eBQdyaUxhYmVsZBYGHx8bAAAAAADAYkABAAAAHxYFEXJpVGV4dEJveCByaUhvdmVyHxcCggIWBh8fGwAAAAAAwGJAAQAAAB8WBRFyaVRleHRCb3ggcmlFcnJvch8XAoICFgYfHxsAAAAAAMBiQAEAAAAfFgUTcmlUZXh0Qm94IHJpRm9jdXNlZB8XAoICFgYfHxsAAAAAAMBiQAEAAAAfFgUTcmlUZXh0Qm94IHJpRW5hYmxlZB8XAoICFgYfHxsAAAAAAMBiQAEAAAAfFgUUcmlUZXh0Qm94IHJpRGlzYWJsZWQfFwKCAhYGHx8bAAAAAADAYkABAAAAHxYFEXJpVGV4dEJveCByaUVtcHR5HxcCggIWBh8fGwAAAAAAwGJAAQAAAB8WBRByaVRleHRCb3ggcmlSZWFkHxcCggJkAgUPFCsACA8WCh8baB8caB8SBQlNWERlZmF1bHQfHWgfHgUHcmlMYWJlbGQWBh8fGwAAAAAAwGJAAQAAAB8WBRFyaVRleHRCb3ggcmlIb3Zlch8XAoICFgYfHxsAAAAAAMBiQAEAAAAfFgURcmlUZXh0Qm94IHJpRXJyb3IfFwKCAhYGHx8bAAAAAADAYkABAAAAHxYFE3JpVGV4dEJveCByaUZvY3VzZWQfFwKCAhYGHx8bAAAAAADAYkABAAAAHxYFE3JpVGV4dEJveCByaUVuYWJsZWQfFwKCAhYGHx8bAAAAAADAYkABAAAAHxYFFHJpVGV4dEJveCByaURpc2FibGVkHxcCggIWBh8fGwAAAAAAwGJAAQAAAB8WBRFyaVRleHRCb3ggcmlFbXB0eR8XAoICFgYfHxsAAAAAAMBiQAEAAAAfFgUQcmlUZXh0Qm94IHJpUmVhZB8XAoICZAIHDxYCHgNmb3IFH2N0bDAwX2N0bDExX2N0bDAwX2Noa1JlbWVtYmVyTWUWAgICDxYCHgRUZXh0BQxSZW1lbWJlciBtZSBkAggPDxYCHyEFBkxvZyBJbmRkAgMPFgIfAWhkAgUPDxYEHgtOYXZpZ2F0ZVVybGUfIWVkZAIHDw8WBB8iBRZ+L3BhZ2VzL0xvZ0luSGVscC5hc3B4HyEFC0xvZyBJbiBIZWxwZGQCBw8PFgIfAWhkZAIoD2QWAgIBDzwrAA0CAA8WBh4LXyFEYXRhQm91bmRnHhRTdGF0aWNQb3BPdXRJbWFnZVVybAUkL19sYXlvdXRzL2ltYWdlcy9sYXJnZWFycm93cmlnaHQuZ2lmHhVEeW5hbWljUG9wT3V0SW1hZ2VVcmwFJC9fbGF5b3V0cy9pbWFnZXMvbGFyZ2VhcnJvd3JpZ2h0LmdpZmQMFCsAGQVtMDowLDA6MSwwOjIsMDozLDA6NCwwOjUsMDo2LDA6NywwOjgsMDo5LDA6MTAsMDoxMSwwOjEyLDA6MTMsMDoxNCwwOjE1LDA6MTYsMDoxNywwOjE4LDA6MTksMDoyMCwwOjIxLDA6MjIsMDoyMxQrAAIWEB8hBQRIb21lHgVWYWx1ZQUESG9tZR8iBRMvUGFnZXMvRGVmYXVsdC5hc3B4HgdFbmFibGVkZx4KU2VsZWN0YWJsZWceCERhdGFQYXRoBRMvUGFnZXMvRGVmYXVsdC5hc3B4HglEYXRhQm91bmRnHghTZWxlY3RlZGdkFCsAAhYQHyEFCkFib3V0IEhSUEEfJgUKQWJvdXQgSFJQQR8iBR0vQWJvdXRIUlBBL1BhZ2VzL0RlZmF1bHQuYXNweB4HVG9vbFRpcAUKQWJvdXQgSFJQQR8nZx8oZx8pBQovQUJPVVRIUlBBHypnFCsACwUnMDowLDA6MSwwOjIsMDozLDA6NCwwOjUsMDo2LDA6NywwOjgsMDo5FCsAAhYOHyEFEFJlZ3VsYXRpb24gb2YgSFIfJgUQUmVndWxhdGlvbiBvZiBIUh8iBTgvUmVndWxhdGlvbmFuZEhSRGVzaWduYXRpb25zL1BhZ2VzL1JlZ3VsYXRpb24tb2YtSFIuYXNweB8nZx8oZx8pBTgvUmVndWxhdGlvbmFuZEhSRGVzaWduYXRpb25zL1BhZ2VzL1JlZ3VsYXRpb24tb2YtSFIuYXNweB8qZ2QUKwACFhAfIQU4UmVnaXN0ZXJlZCBIdW1hbiBSZXNvdXJjZXMgUHJvZmVzc2lvbmFscyBBY3QsIDIwMTMgKFBERikfJgU4UmVnaXN0ZXJlZCBIdW1hbiBSZXNvdXJjZXMgUHJvZmVzc2lvbmFscyBBY3QsIDIwMTMgKFBERikfIgUnL0RvY3VtZW50cy9CaWxsMzIvQmlsbDMyUm95YWxBc3NlbnQucGRmHydnHyhnHykFJy9Eb2N1bWVudHMvQmlsbDMyL0JpbGwzMlJveWFsQXNzZW50LnBkZh8qZx4GVGFyZ2V0BQZfYmxhbmtkFCsAAhYQHyEFF1ZpZXcgSFJQQSBCeS1sYXdzIChQREYpHyYFF1ZpZXcgSFJQQSBCeS1sYXdzIChQREYpHyIFJC9BYm91dEhSUEEvRG9jdW1lbnRzL0hSUEEtQnlsYXdzLnBkZh8nZx8oZx8pBSQvQWJvdXRIUlBBL0RvY3VtZW50cy9IUlBBLUJ5bGF3cy5wZGYfKmcfLQUGX2JsYW5rZBQrAAIWDh8hBQ5NZWRpYSBSZWxlYXNlcx8mBQ5NZWRpYSBSZWxlYXNlcx8iBSMvUHVibGljQWZmYWlycy9QYWdlcy9NZWRpYVJvb20uYXNweB8nZx8oZx8pBSMvUHVibGljQWZmYWlycy9QYWdlcy9NZWRpYVJvb20uYXNweB8qZ2QUKwACFhAfIQUHSGlzdG9yeR8mBQdIaXN0b3J5HyIFHS9BYm91dEhSUEEvUGFnZXMvSGlzdG9yeS5hc3B4HywFDkhSUEEncyBIaXN0b3J5HydnHyhnHykFHS9BYm91dEhSUEEvUGFnZXMvSGlzdG9yeS5hc3B4HypnZBQrAAIWEB8hBQpDb21taXR0ZWVzHyYFCkNvbW1pdHRlZXMfIgUgL0Fib3V0SFJQQS9QYWdlcy9jb21taXR0ZWVzLmFzcHgfLAUKQ29tbWl0dGVlcx8nZx8oZx8pBSAvQWJvdXRIUlBBL1BhZ2VzL2NvbW1pdHRlZXMuYXNweB8qZ2QUKwACFhAfIQUNQW5udWFsIFJlcG9ydB8mBQ1Bbm51YWwgUmVwb3J0HyIFIi9BYm91dEhSUEEvUGFnZXMvQW5udWFsUmVwb3J0LmFzcHgfLAUaVmlldyBIUlBBJ3MgQW5udWFsIFJlcG9ydCAfJ2cfKGcfKQUiL0Fib3V0SFJQQS9QYWdlcy9Bbm51YWxSZXBvcnQuYXNweB8qZ2QUKwACFhAfIQUOU3RyYXRlZ2ljIFBsYW4fJgUOU3RyYXRlZ2ljIFBsYW4fIgUjL0Fib3V0SFJQQS9QYWdlcy9TdHJhdGVnaWNQbGFuLmFzcHgfLAUOU3RyYXRlZ2ljIFBsYW4fJ2cfKGcfKQUjL0Fib3V0SFJQQS9QYWdlcy9TdHJhdGVnaWNQbGFuLmFzcHgfKmdkFCsAAhYOHyEFG0ZhaXIgUmVnaXN0cmF0aW9uIFByYWN0aWNlcx8mBRtGYWlyIFJlZ2lzdHJhdGlvbiBQcmFjdGljZXMfIgUvL0Fib3V0SFJQQS9QYWdlcy9GYWlyUmVnaXN0cmF0aW9uUHJhY3RpY2VzLmFzcHgfJ2cfKGcfKQUvL0Fib3V0SFJQQS9QYWdlcy9GYWlyUmVnaXN0cmF0aW9uUHJhY3RpY2VzLmFzcHgfKmdkFCsAAhYOHyEFIDIwMTYgSFJQQSBBbm51YWwgR2VuZXJhbCBNZWV0aW5nHyYFIDIwMTYgSFJQQSBBbm51YWwgR2VuZXJhbCBNZWV0aW5nHyIFSGh0dHA6Ly93d3cuaHJwYS5jYS9BYm91dEhSUEEvUGFnZXMvMjAxNi1IUlBBLUFubnVhbC1HZW5lcmFsLU1lZXRpbmcuYXNweB8nZx8oZx8pBUhodHRwOi8vd3d3LmhycGEuY2EvQWJvdXRIUlBBL1BhZ2VzLzIwMTYtSFJQQS1Bbm51YWwtR2VuZXJhbC1NZWV0aW5nLmFzcHgfKmdkFCsAAhYOHyEFFjIwMTcgQW5udWFsIENvbmZlcmVuY2UfJgUWMjAxNyBBbm51YWwgQ29uZmVyZW5jZR8iBSIvUGFnZXMvMjAxNy1Bbm51YWwtQ29uZmVyZW5jZS5hc3B4HydnHyhnHykFIi9QYWdlcy8yMDE3LUFubnVhbC1Db25mZXJlbmNlLmFzcHgfKmdkFCsAAhYQHyEFFjIwMTYgQW5udWFsIENvbmZlcmVuY2UfJgUWMjAxNiBBbm51YWwgQ29uZmVyZW5jZR8iBRwvQ29uZjIwMTYvUGFnZXMvZGVmYXVsdC5hc3B4HydnHyhnHykFHC9Db25mMjAxNi9QYWdlcy9kZWZhdWx0LmFzcHgfKmcfLQUGX2JsYW5rZBQrAAIWDh8hBR5SZWd1bGF0aW9uIGFuZCBIUiBEZXNpZ25hdGlvbnMfJgUeUmVndWxhdGlvbiBhbmQgSFIgRGVzaWduYXRpb25zHyIFLy9SZWd1bGF0aW9uYW5kSFJEZXNpZ25hdGlvbnMvUGFnZXMvZGVmYXVsdC5hc3B4HydnHyhnHykFHC9SRUdVTEFUSU9OQU5ESFJERVNJR05BVElPTlMfKmcUKwACBQMwOjAUKwACFhAfIQUmSW50ZXJuYXRpb25hbGx5IEVkdWNhdGVkIFByb2Zlc3Npb25hbHMfJgUmSW50ZXJuYXRpb25hbGx5IEVkdWNhdGVkIFByb2Zlc3Npb25hbHMfIgVML1JlZ3VsYXRpb25hbmRIUkRlc2lnbmF0aW9ucy9QYWdlcy9JbnRlcm5hdGlvbmFsbHlFZHVjYXRlZFByb2Zlc3Npb25hbHMuYXNweB8sBSZJbnRlcm5hdGlvbmFsbHkgRWR1Y2F0ZWQgUHJvZmVzc2lvbmFscx8nZx8oZx8pBUwvUmVndWxhdGlvbmFuZEhSRGVzaWduYXRpb25zL1BhZ2VzL0ludGVybmF0aW9uYWxseUVkdWNhdGVkUHJvZmVzc2lvbmFscy5hc3B4HypnZBQrAAIWDh8hBRhDb21wbGFpbnRzIGFib3V0IE1lbWJlcnMfJgUYQ29tcGxhaW50cyBhYm91dCBNZW1iZXJzHyIFTC9SZWd1bGF0aW9uYW5kSFJEZXNpZ25hdGlvbnMvUGFnZXMvY29tcGxhaW50c2ludmVzdGlnYXRpb25hbmRkaXNjaXBsaW5lLmFzcHgfJ2cfKGcfKQVML1JlZ3VsYXRpb25hbmRIUkRlc2lnbmF0aW9ucy9QYWdlcy9jb21wbGFpbnRzaW52ZXN0aWdhdGlvbmFuZGRpc2NpcGxpbmUuYXNweB8qZ2QUKwACFhAfIQUYUHJvZmVzc2lvbmFsIERldmVsb3BtZW50HyYFGFByb2Zlc3Npb25hbCBEZXZlbG9wbWVudB8iBTIvUHJvZmVzc2lvbmFsRGV2ZWxvcG1lbnQvUGFnZXMvSFJQQVBEQ2FsZW5kYXIuYXNweB8sBRhQcm9mZXNzaW9uYWwgRGV2ZWxvcG1lbnQfJ2cfKGcfKQUYL1BST0ZFU1NJT05BTERFVkVMT1BNRU5UHypnFCsACgUjMDowLDA6MSwwOjIsMDozLDA6NCwwOjUsMDo2LDA6NywwOjgUKwACFhAfIQUaQ1BEIFNraWxscyBTZWxmLUFzc2Vzc21lbnQfJgUaQ1BEIFNraWxscyBTZWxmLUFzc2Vzc21lbnQfIgUZaHR0cDovL3d3dy5ocnBhLmNhL3NraWxscx8nZx8oZx8pBRlodHRwOi8vd3d3LmhycGEuY2Evc2tpbGxzHypnHy0FBl9ibGFua2QUKwACFg4fIQULQ29uZmVyZW5jZXMfJgULQ29uZmVyZW5jZXMfIgU1L1Byb2Zlc3Npb25hbERldmVsb3BtZW50L1BhZ2VzL0hSUEFQRENvbmZlcmVuY2VzLmFzcHgfJ2cfKGcfKQU1L1Byb2Zlc3Npb25hbERldmVsb3BtZW50L1BhZ2VzL0hSUEFQRENvbmZlcmVuY2VzLmFzcHgfKmdkFCsAAhYOHyEFCVdvcmtzaG9wcx8mBQlXb3Jrc2hvcHMfIgUxL1Byb2Zlc3Npb25hbERldmVsb3BtZW50L1BhZ2VzL0hSUEFXb3Jrc2hvcHMuYXNweB8nZx8oZx8pBTEvUHJvZmVzc2lvbmFsRGV2ZWxvcG1lbnQvUGFnZXMvSFJQQVdvcmtzaG9wcy5hc3B4HypnZBQrAAIWDh8hBSRDdWx0dXJhbCBDb21wZXRlbmN5IFRyYWluaW5nIFByb2dyYW0fJgUkQ3VsdHVyYWwgQ29tcGV0ZW5jeSBUcmFpbmluZyBQcm9ncmFtHyIFRS9Qcm9mZXNzaW9uYWxEZXZlbG9wbWVudC9QYWdlcy9DdWx0dXJhbENvbXBldGVuY3lUcmFpbmluZ1Byb2dyYW0uYXNweB8nZx8oZx8pBUUvUHJvZmVzc2lvbmFsRGV2ZWxvcG1lbnQvUGFnZXMvQ3VsdHVyYWxDb21wZXRlbmN5VHJhaW5pbmdQcm9ncmFtLmFzcHgfKmdkFCsAAhYOHyEFE0NhcmVnaXZlciBSZXNvdXJjZXMfJgUTQ2FyZWdpdmVyIFJlc291cmNlcx8iBTcvUHJvZmVzc2lvbmFsRGV2ZWxvcG1lbnQvUGFnZXMvQ2FyZWdpdmVyLVJlc291cmNlcy5hc3B4HydnHyhnHykFNy9Qcm9mZXNzaW9uYWxEZXZlbG9wbWVudC9QYWdlcy9DYXJlZ2l2ZXItUmVzb3VyY2VzLmFzcHgfKmdkFCsAAhYOHyEFC1BEIFBhc3Nwb3J0HyYFC1BEIFBhc3Nwb3J0HyIFLy9Qcm9mZXNzaW9uYWxEZXZlbG9wbWVudC9QYWdlcy9QRC1QYXNzcG9ydC5hc3B4HydnHyhnHykFLy9Qcm9mZXNzaW9uYWxEZXZlbG9wbWVudC9QYWdlcy9QRC1QYXNzcG9ydC5hc3B4HypnZBQrAAIWDh8hBQtQRCBQYXJ0bmVycx8mBQtQRCBQYXJ0bmVycx8iBS8vUHJvZmVzc2lvbmFsRGV2ZWxvcG1lbnQvUGFnZXMvUEQtUGFydG5lcnMuYXNweB8nZx8oZx8pBS8vUHJvZmVzc2lvbmFsRGV2ZWxvcG1lbnQvUGFnZXMvUEQtUGFydG5lcnMuYXNweB8qZ2QUKwACFg4fIQUtU2hvcCAmYW1wOyBMZWFybiAoQmxvb3ItWW9ya3ZpbGxlIEV4cGVyaWVuY2UpHyYFLVNob3AgJmFtcDsgTGVhcm4gKEJsb29yLVlvcmt2aWxsZSBFeHBlcmllbmNlKR8iBTwvUHJvZmVzc2lvbmFsRGV2ZWxvcG1lbnQvUGFnZXMvQmxvb3JZb3JrdmlsbGVFeHBlcmllbmNlLmFzcHgfJ2cfKGcfKQU8L1Byb2Zlc3Npb25hbERldmVsb3BtZW50L1BhZ2VzL0Jsb29yWW9ya3ZpbGxlRXhwZXJpZW5jZS5hc3B4HypnZBQrAAIWEB8hBRNDYW5jZWxsYXRpb24gUG9saWN5HyYFE0NhbmNlbGxhdGlvbiBQb2xpY3kfIgU5L1Byb2Zlc3Npb25hbERldmVsb3BtZW50L0RvY3VtZW50cy9DYW5jZWxsYXRpb25Qb2xpY3kucGRmHydnHyhnHykFOS9Qcm9mZXNzaW9uYWxEZXZlbG9wbWVudC9Eb2N1bWVudHMvQ2FuY2VsbGF0aW9uUG9saWN5LnBkZh8qZx8tBQZfYmxhbmtkFCsAAhYQHyEFDU1lbWJlciBDZW50cmUfJgUNTWVtYmVyIENlbnRyZR8iBSAvTWVtYmVyQ2VudHJlL1BhZ2VzL0RlZmF1bHQuYXNweB8sBQ1NZW1iZXIgQ2VudHJlHydnHyhnHykFDS9NRU1CRVJDRU5UUkUfKmcUKwASBUowOjAsMDoxLDA6MiwwOjMsMDo0LDA6NSwwOjYsMDo3LDA6OCwwOjksMDoxMCwwOjExLDA6MTIsMDoxMywwOjE0LDA6MTUsMDoxNhQrAAIWDh8hBRVSRU5FVyBZT1VSIE1FTUJFUlNISVAfJgUVUkVORVcgWU9VUiBNRU1CRVJTSElQHyIFMC9NZW1iZXJDZW50cmUvUGFnZXMvSFJQQS1NZW1iZXJzaGlwLVJlbmV3YWwuYXNweB8nZx8oZx8pBTAvTWVtYmVyQ2VudHJlL1BhZ2VzL0hSUEEtTWVtYmVyc2hpcC1SZW5ld2FsLmFzcHgfKmdkFCsAAhYQHyEFHEJlbmVmaXRzIG9mIE1lbWJlcnNoaXAgKFBERikfJgUcQmVuZWZpdHMgb2YgTWVtYmVyc2hpcCAoUERGKR8iBTMvTWVtYmVyQ2VudHJlL0RvY3VtZW50cy9NZW1iZXItSGFuZGJvb2stMjAxNi12Mi5wZGYfJ2cfKGcfKQUzL01lbWJlckNlbnRyZS9Eb2N1bWVudHMvTWVtYmVyLUhhbmRib29rLTIwMTYtdjIucGRmHypnHy0FBl9ibGFua2QUKwACFg4fIQUOTWVtYmVyIFNhdmluZ3MfJgUOTWVtYmVyIFNhdmluZ3MfIgUwL01lbWJlckNlbnRyZS9QYWdlcy9NZW1iZXItU2F2aW5ncy1QYXJ0bmVycy5hc3B4HydnHyhnHykFMC9NZW1iZXJDZW50cmUvUGFnZXMvTWVtYmVyLVNhdmluZ3MtUGFydG5lcnMuYXNweB8qZ2QUKwACFg4fIQUNTWVtYmVyUGVya3PCrh8mBQ1NZW1iZXJQZXJrc8KuHyIFJC9NZW1iZXJDZW50cmUvUGFnZXMvTWVtYmVyUGVya3MuYXNweB8nZx8oZx8pBSQvTWVtYmVyQ2VudHJlL1BhZ2VzL01lbWJlclBlcmtzLmFzcHgfKmdkFCsAAhYOHyEFDUNhcmVlciBDZW50cmUfJgUNQ2FyZWVyIENlbnRyZR8iBSYvTWVtYmVyQ2VudHJlL1BhZ2VzL0NhcmVlci1DZW50cmUuYXNweB8nZx8oZx8pBSYvTWVtYmVyQ2VudHJlL1BhZ2VzL0NhcmVlci1DZW50cmUuYXNweB8qZ2QUKwACFg4fIQUTU3R1ZGVudCBJbmZvcm1hdGlvbh8mBRNTdHVkZW50IEluZm9ybWF0aW9uHyIFIS9NZW1iZXJDZW50cmUvUGFnZXMvU3R1ZGVudHMuYXNweB8nZx8oZx8pBSEvTWVtYmVyQ2VudHJlL1BhZ2VzL1N0dWRlbnRzLmFzcHgfKmdkFCsAAhYQHyEFEFZvbHVudGVlciBDZW50cmUfJgUQVm9sdW50ZWVyIENlbnRyZR8iBSgvTWVtYmVyQ2VudHJlL1BhZ2VzL1ZvbHVudGVlckNlbnRyZS5hc3B4HywFFEJlIGFuIEhSUEEgdm9sdW50ZWVyHydnHyhnHykFKC9NZW1iZXJDZW50cmUvUGFnZXMvVm9sdW50ZWVyQ2VudHJlLmFzcHgfKmdkFCsAAhYQHyEFEE1lbWJlciBEaXJlY3RvcnkfJgUQTWVtYmVyIERpcmVjdG9yeR8iBSgvTWVtYmVyQ2VudHJlL1BhZ2VzL01lbWJlckRpcmVjdG9yeS5hc3B4HywFFUhSUEEgbWVtYmVyIGRpcmVjdG9yeR8nZx8oZx8pBSgvTWVtYmVyQ2VudHJlL1BhZ2VzL01lbWJlckRpcmVjdG9yeS5hc3B4HypnZBQrAAIWDh8hBSdIUlBBIExlYWRlcnNoaXAgJmFtcDsgRXhjZWxsZW5jZSBBd2FyZHMfJgUnSFJQQSBMZWFkZXJzaGlwICZhbXA7IEV4Y2VsbGVuY2UgQXdhcmRzHyIFMy9NZW1iZXJDZW50cmUvUGFnZXMvTGVhZGVyc2hpcEV4Y2VsbGVuY2VBd2FyZHMuYXNweB8nZx8oZx8pBTMvTWVtYmVyQ2VudHJlL1BhZ2VzL0xlYWRlcnNoaXBFeGNlbGxlbmNlQXdhcmRzLmFzcHgfKmdkFCsAAhYOHyEFCUhSUEEgRWRnZR8mBQlIUlBBIEVkZ2UfIgUiL01lbWJlckNlbnRyZS9QYWdlcy9IUlBBLUVkZ2UuYXNweB8nZx8oZx8pBSIvTWVtYmVyQ2VudHJlL1BhZ2VzL0hSUEEtRWRnZS5hc3B4HypnZBQrAAIWDh8hBQ9Cb29rQ2FtcHVzVmlzaXQfJgUPQm9va0NhbXB1c1Zpc2l0HyIFKC9NZW1iZXJDZW50cmUvUGFnZXMvQm9va0NhbXB1c1Zpc2l0LmFzcHgfJ2cfKGcfKQUoL01lbWJlckNlbnRyZS9QYWdlcy9Cb29rQ2FtcHVzVmlzaXQuYXNweB8qZ2QUKwACFg4fIQUWVm9sdW50ZWVyIFRlc3RpbW9uaWFscx8mBRZWb2x1bnRlZXIgVGVzdGltb25pYWxzHyIFLy9NZW1iZXJDZW50cmUvUGFnZXMvVm9sdW50ZWVyLVRlc3RpbW9uaWFscy5hc3B4HydnHyhnHykFLy9NZW1iZXJDZW50cmUvUGFnZXMvVm9sdW50ZWVyLVRlc3RpbW9uaWFscy5hc3B4HypnZBQrAAIWDh8hBQtIaXJlIGEgQ0hSUB8mBQtIaXJlIGEgQ0hSUB8iBSQvTWVtYmVyQ2VudHJlL1BhZ2VzL0hpcmUtYS1DSFJQLmFzcHgfJ2cfKGcfKQUkL01lbWJlckNlbnRyZS9QYWdlcy9IaXJlLWEtQ0hSUC5hc3B4HypnZBQrAAIWDh8hBQxIUiBNZW50b3JpbmcfJgUMSFIgTWVudG9yaW5nHyIFJS9NZW1iZXJDZW50cmUvUGFnZXMvSFItTWVudG9yaW5nLmFzcHgfJ2cfKGcfKQUlL01lbWJlckNlbnRyZS9QYWdlcy9IUi1NZW50b3JpbmcuYXNweB8qZ2QUKwACFg4fIQUqT3V0IG9mIFByb3ZpbmNlIENIUlAgLSBTdHVkZW50IEluZm9ybWF0aW9uHyYFKk91dCBvZiBQcm92aW5jZSBDSFJQIC0gU3R1ZGVudCBJbmZvcm1hdGlvbh8iBT9odHRwOi8vd3d3LmhycGEuY2EvTWVtYmVyQ2VudHJlL1BhZ2VzL291dG9mcHJvdmluY2VzdHVkZW50LmFzcHgfJ2cfKGcfKQU/aHR0cDovL3d3dy5ocnBhLmNhL01lbWJlckNlbnRyZS9QYWdlcy9vdXRvZnByb3ZpbmNlc3R1ZGVudC5hc3B4HypnZBQrAAIWDh8hBQ1DYXJlZXIgQ2VudHJlHyYFDUNhcmVlciBDZW50cmUfIgUmL01lbWJlckNlbnRyZS9QYWdlcy9DYXJlZXItQ2VudHJlLmFzcHgfJ2cfKGcfKQUmL01lbWJlckNlbnRyZS9QYWdlcy9DYXJlZXItQ2VudHJlLmFzcHgfKmdkFCsAAhYOHyEFHkNhcmVlciBDZW50cmUgVG9vbHMgYW5kIEFkdmljZR8mBR5DYXJlZXIgQ2VudHJlIFRvb2xzIGFuZCBBZHZpY2UfIgU3L01lbWJlckNlbnRyZS9QYWdlcy9DYXJlZXItQ2VudHJlLVRvb2xzLWFuZC1BZHZpY2UuYXNweB8nZx8oZx8pBTcvTWVtYmVyQ2VudHJlL1BhZ2VzL0NhcmVlci1DZW50cmUtVG9vbHMtYW5kLUFkdmljZS5hc3B4HypnZBQrAAIWEB8hBQ5QdWJsaWMgQWZmYWlycx8mBQ5QdWJsaWMgQWZmYWlycx8iBSEvUHVibGljQWZmYWlycy9QYWdlcy9EZWZhdWx0LmFzcHgfLAUOUHVibGljIEFmZmFpcnMfJ2cfKGcfKQUOL1BVQkxJQ0FGRkFJUlMfKmcUKwAGBRMwOjAsMDoxLDA6MiwwOjMsMDo0FCsAAhYQHyEFE0dyYXNzcm9vdHMgQWR2b2NhY3kfJgUTR3Jhc3Nyb290cyBBZHZvY2FjeR8iBSwvUHVibGljQWZmYWlycy9QYWdlcy9HcmFzc3Jvb3RzQWR2b2NhY3kuYXNweB8sBRNHcmFzc3Jvb3RzIEFkdm9jYWN5HydnHyhnHykFLC9QdWJsaWNBZmZhaXJzL1BhZ2VzL0dyYXNzcm9vdHNBZHZvY2FjeS5hc3B4HypnZBQrAAIWEB8hBRJMZWdpc2xhdGl2ZSBVcGRhdGUfJgUSTGVnaXNsYXRpdmUgVXBkYXRlHyIFKy9QdWJsaWNBZmZhaXJzL1BhZ2VzL0xlZ2lzbGF0aXZlVXBkYXRlLmFzcHgfLAUSTGVnaXNsYXRpdmUgVXBkYXRlHydnHyhnHykFKy9QdWJsaWNBZmZhaXJzL1BhZ2VzL0xlZ2lzbGF0aXZlVXBkYXRlLmFzcHgfKmdkFCsAAhYOHyEFD1F1ZWVucyBQYXJrIDEwMR8mBQ9RdWVlbnMgUGFyayAxMDEfIgUnL1B1YmxpY0FmZmFpcnMvUGFnZXMvUXVlZW5zUGFyazEwMS5hc3B4HydnHyhnHykFJy9QdWJsaWNBZmZhaXJzL1BhZ2VzL1F1ZWVuc1BhcmsxMDEuYXNweB8qZ2QUKwACFg4fIQUPSFJQQSBNZWRpYSBSb29tHyYFD0hSUEEgTWVkaWEgUm9vbR8iBSMvUHVibGljQWZmYWlycy9QYWdlcy9NZWRpYVJvb20uYXNweB8nZx8oZx8pBSMvUHVibGljQWZmYWlycy9QYWdlcy9NZWRpYVJvb20uYXNweB8qZ2QUKwACFhAfIQUWQnJpZWZzIGFuZCBTdWJtaXNzaW9ucx8mBRZCcmllZnMgYW5kIFN1Ym1pc3Npb25zHyIFLi9QdWJsaWNBZmZhaXJzL1BhZ2VzL0JyaWVmc2FuZFN1Ym1pc3Npb25zLmFzcHgfLAUWQnJpZWZzIGFuZCBTdWJtaXNzaW9ucx8nZx8oZx8pBS4vUHVibGljQWZmYWlycy9QYWdlcy9CcmllZnNhbmRTdWJtaXNzaW9ucy5hc3B4HypnZBQrAAIWEB8hBRVIUiBUaG91Z2h0IExlYWRlcnNoaXAfJgUVSFIgVGhvdWdodCBMZWFkZXJzaGlwHyIFJy9IUlRob3VnaHRMZWFkZXJzaGlwL1BhZ2VzL0RlZmF1bHQuYXNweB8sBRVIUiBUaG91Z2h0IExlYWRlcnNoaXAfJ2cfKGcfKQUUL0hSVEhPVUdIVExFQURFUlNISVAfKmcUKwADBQcwOjAsMDoxFCsAAhYQHyEFD1Jlc291cmNlIENlbnRyZR8mBQ9SZXNvdXJjZSBDZW50cmUfIgUmaHR0cHM6Ly9ibHVlLmhycGEuY2EvTG9nSW4vTG9nb3V0LmFzcHgfJ2cfKGcfKQUmaHR0cHM6Ly9ibHVlLmhycGEuY2EvTG9nSW4vTG9nb3V0LmFzcHgfKmcfLQUGX2JsYW5rZBQrAAIWDh8hBSZIUiBQcm9mZXNzaW9uYWwgTWFnYXppbmUgU3Vic2NyaXB0aW9ucx8mBSZIUiBQcm9mZXNzaW9uYWwgTWFnYXppbmUgU3Vic2NyaXB0aW9ucx8iBUMvSFJUaG91Z2h0TGVhZGVyc2hpcC9QYWdlcy9IUlByb2Zlc3Npb25hbE1hZ2F6aW5lU3Vic2NyaXB0aW9ucy5hc3B4HydnHyhnHykFQy9IUlRob3VnaHRMZWFkZXJzaGlwL1BhZ2VzL0hSUHJvZmVzc2lvbmFsTWFnYXppbmVTdWJzY3JpcHRpb25zLmFzcHgfKmdkFCsAAhYQHyEFDUhSUEEgQ2hhcHRlcnMfJgUNSFJQQSBDaGFwdGVycx8iBSAvSFJQQUNoYXB0ZXJzL1BhZ2VzL0RlZmF1bHQuYXNweB8sBQ1IUlBBIENoYXB0ZXJzHydnHyhnHykFDS9IUlBBQ0hBUFRFUlMfKmcUKwACBQMwOjAUKwACFg4fIQUTSFJQQSBDaGFwdGVyIEF3YXJkcx8mBRNIUlBBIENoYXB0ZXIgQXdhcmRzHyIFLC9IUlBBQ2hhcHRlcnMvUGFnZXMvSFJQQS1DaGFwdGVyLUF3YXJkcy5hc3B4HydnHyhnHykFLC9IUlBBQ2hhcHRlcnMvUGFnZXMvSFJQQS1DaGFwdGVyLUF3YXJkcy5hc3B4HypnZBQrAAIWEB8hBRRIUlBBIFN1cHBsaWVycyBHdWlkZR8mBRRIUlBBIFN1cHBsaWVycyBHdWlkZR8iBSBodHRwOi8vd3d3LmhycGF0b2RheS5jYS9saXN0aW5nLx8nZx8oZx8pBSBodHRwOi8vd3d3LmhycGF0b2RheS5jYS9saXN0aW5nLx8qZx8tBQZfYmxhbmtkFCsAAhYQHyEFB0hSIEpvYnMfJgUHSFIgSm9icx8iBRIvUGFnZXMvSFJKb2JzLmFzcHgfJ2cfKGcfKQUSL1BhZ2VzL0hSSm9icy5hc3B4HypnHy0FBl9ibGFua2QUKwACFhAfIQUbWW9ya3ZpbGxlIENvbmZlcmVuY2UgQ2VudHJlHyYFG1lvcmt2aWxsZSBDb25mZXJlbmNlIENlbnRyZR8iBShodHRwOi8vd3d3Lnlvcmt2aWxsZWNvbmZlcmVuY2VjZW50cmUuY2EvHydnHyhnHykFKGh0dHA6Ly93d3cueW9ya3ZpbGxlY29uZmVyZW5jZWNlbnRyZS5jYS8fKmcfLQUGX2JsYW5rZBQrAAIWDh8hBQpSSFJQQSBBY3QgHyYFClJIUlBBIEFjdCAfIgURL1BhZ2VzL1JIUlBBLmFzcHgfJ2cfKGcfKQURL1BhZ2VzL1JIUlBBLmFzcHgfKmdkFCsAAhYOHyEFD1B1YmxpYyBSZWdpc3Rlch8mBQ9QdWJsaWMgUmVnaXN0ZXIfIgUraHR0cDovL3d3dy5ocnBhLmNhL1BhZ2VzL0hSUEEtUmVnaXN0ZXIuYXNweB8nZx8oZx8pBStodHRwOi8vd3d3LmhycGEuY2EvUGFnZXMvSFJQQS1SZWdpc3Rlci5hc3B4HypnZBQrAAIWDh8hBQVFWiBIUh8mBQVFWiBIUh8iBR0vTWVtYmVyQ2VudHJlL1BhZ2VzL0VaSFIuYXNweB8nZx8oZx8pBR0vTWVtYmVyQ2VudHJlL1BhZ2VzL0VaSFIuYXNweB8qZ2QUKwACFhAfIQUVSFIgUmVzZWFyY2ggSW5zdGl0dXRlHyYFFUhSIFJlc2VhcmNoIEluc3RpdHV0ZR8iBRJodHRwOi8vd3d3LmhycmkuY2EfJ2cfKGcfKQUSaHR0cDovL3d3dy5ocnJpLmNhHypnHy0FBl9ibGFua2QUKwACFhAfIQUYSFIgUHJvZmVzc2lvbmFsIE1hZ2F6aW5lHyYFGEhSIFByb2Zlc3Npb25hbCBNYWdhemluZR8iBRRodHRwOi8vaHJwYXRvZGF5LmNhLx8nZx8oZx8pBRRodHRwOi8vaHJwYXRvZGF5LmNhLx8qZx8tBQZfYmxhbmtkFCsAAhYOHyEFD1Jlc291cmNlIENlbnRyZR8mBQ9SZXNvdXJjZSBDZW50cmUfIgUoL01lbWJlckNlbnRyZS9QYWdlcy9SZXNvdXJjZS1DZW50cmUuYXNweB8nZx8oZx8pBSgvTWVtYmVyQ2VudHJlL1BhZ2VzL1Jlc291cmNlLUNlbnRyZS5hc3B4HypnZBQrAAIWDh8hBQlIUlBBIEVkZ2UfJgUJSFJQQSBFZGdlHyIFFS9QYWdlcy9IUlBBLUVkZ2UuYXNweB8nZx8oZx8pBRUvUGFnZXMvSFJQQS1FZGdlLmFzcHgfKmdkFCsAAhYOHyEFDkFPREEgUmVzb3VyY2VzHyYFDkFPREEgUmVzb3VyY2VzHyIFEC9QYWdlcy9BT0RBLmFzcHgfJ2cfKGcfKQUQL1BhZ2VzL0FPREEuYXNweB8qZ2QUKwACFg4fIQUXTWVudGFsIEhlYWx0aCBSZXNvdXJjZXMfJgUXTWVudGFsIEhlYWx0aCBSZXNvdXJjZXMfIgUZL1BhZ2VzL01lbnRhbC1IZWFsdGguYXNweB8nZx8oZx8pBRkvUGFnZXMvTWVudGFsLUhlYWx0aC5hc3B4HypnZBQrAAIWEB8hBR1BZHZlcnRpc2luZyAmYW1wOyBTcG9uc29yc2hpcB8mBR1BZHZlcnRpc2luZyAmYW1wOyBTcG9uc29yc2hpcB8iBSovQWR2ZXJ0aXNpbmdTcG9uc29yc2hpcC9QYWdlcy9EZWZhdWx0LmFzcHgfLAUZQWR2ZXJ0aXNpbmcgJiBTcG9uc29yc2hpcB8nZx8oZx8pBRcvQURWRVJUSVNJTkdTUE9OU09SU0hJUB8qZxQrAAUFDzA6MCwwOjEsMDoyLDA6MxQrAAIWEB8hBRlTcG9uc29yc2hpcCBPcHBvcnR1bml0aWVzHyYFGVNwb25zb3JzaGlwIE9wcG9ydHVuaXRpZXMfIgU7L0FkdmVydGlzaW5nU3BvbnNvcnNoaXAvUGFnZXMvU3BvbnNvcnNoaXBPcHBvcnR1bml0aWVzLmFzcHgfLAUZU3BvbnNvcnNoaXAgT3Bwb3J0dW5pdGllcx8nZx8oZx8pBTsvQWR2ZXJ0aXNpbmdTcG9uc29yc2hpcC9QYWdlcy9TcG9uc29yc2hpcE9wcG9ydHVuaXRpZXMuYXNweB8qZ2QUKwACFhAfIQUXRXhoaWJpdG9yIE9wcG9ydHVuaXRpZXMfJgUXRXhoaWJpdG9yIE9wcG9ydHVuaXRpZXMfIgU5L0FkdmVydGlzaW5nU3BvbnNvcnNoaXAvUGFnZXMvRXhoaWJpdG9yT3Bwb3J0dW5pdGllcy5hc3B4HywFF0V4aGliaXRvciBPcHBvcnR1bml0aWVzHydnHyhnHykFOS9BZHZlcnRpc2luZ1Nwb25zb3JzaGlwL1BhZ2VzL0V4aGliaXRvck9wcG9ydHVuaXRpZXMuYXNweB8qZ2QUKwACFhAfIQUZQWR2ZXJ0aXNpbmcgT3Bwb3J0dW5pdGllcx8mBRlBZHZlcnRpc2luZyBPcHBvcnR1bml0aWVzHyIFOy9BZHZlcnRpc2luZ1Nwb25zb3JzaGlwL1BhZ2VzL0FkdmVydGlzaW5nT3Bwb3J0dW5pdGllcy5hc3B4HywFGUFkdmVydGlzaW5nIE9wcG9ydHVuaXRpZXMfJ2cfKGcfKQU7L0FkdmVydGlzaW5nU3BvbnNvcnNoaXAvUGFnZXMvQWR2ZXJ0aXNpbmdPcHBvcnR1bml0aWVzLmFzcHgfKmdkFCsAAhYQHyEFFUF1ZGllbmNlIERlbW9ncmFwaGljcx8mBRVBdWRpZW5jZSBEZW1vZ3JhcGhpY3MfIgU3L0FkdmVydGlzaW5nU3BvbnNvcnNoaXAvUGFnZXMvQXVkaWVuY2VEZW1vZ3JhcGhpY3MuYXNweB8sBRVBdWRpZW5jZSBEZW1vZ3JhcGhpY3MfJ2cfKGcfKQU3L0FkdmVydGlzaW5nU3BvbnNvcnNoaXAvUGFnZXMvQXVkaWVuY2VEZW1vZ3JhcGhpY3MuYXNweB8qZ2RkGAIFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBR9jdGwwMCRjdGwxMSRjdGwwMCRjaGtSZW1lbWJlck1lBSZjdGwwMCRQbGFjZUhvbGRlckxlZnROYXZCYXIkQ3VycmVudE5hdg8PZAUESG9tZWSgLZhj8y8lk5EwU5qmcP5o2RWynQ==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBAIBD2QWBAIGD2QWAmYPZBYCAgMPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAhIPZBYCAgMPZBYCZg9kFgJmDzwrAAYAZAIFD2QWBgICD2QWAgIBD2QWCAUmZ183NTUxZjc4NF9hZTRhXzQ2M2RfOThmNV9lNjljMGYyNzcyNzIPZBYEZg8WAh4HVmlzaWJsZWhkAgEPFgIfAWhkBSZnXzM0YzZkMjlhX2RlNzlfNDExMV9hOWMxXzFhOWM3ZmIxZDg1NQ9kFgRmDxYCHwFoZAIBDxYCHwFoZAUmZ180YTAwYzcwN19kOGJkXzQyZGRfODBjNl8zMGUzMzIwYWIyYjgPZBYEZg8WAh8BaGQCAQ8WAh8BaGQFJmdfZTQ1NWQ3MGFfODBhZV80ODhiXzg4NzJfOTJkZWE4YjY2ZmFiD2QWAmYPFgQeBWNsYXNzBR9tcy1ydGUtZW1iZWRjb2RlIG1zLXJ0ZS1lbWJlZHdwHglpbm5lcmh0bWwFow88IS0tIEJFR0lOIExpdmVQZXJzb24gTW9uaXRvci4gLS0+DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+IHdpbmRvdy5scFRhZz13aW5kb3cubHBUYWd8fHt9O2lmKHR5cGVvZiB3aW5kb3cubHBUYWcuX3RhZ0NvdW50PT09J3VuZGVmaW5lZCcpe3dpbmRvdy5scFRhZz17c2l0ZTonNzM5MjQ1NSd8fCcnLHNlY3Rpb246bHBUYWcuc2VjdGlvbnx8JycsYXV0b1N0YXJ0OmxwVGFnLmF1dG9TdGFydD09PWZhbHNlP2ZhbHNlOnRydWUsb3ZyOmxwVGFnLm92cnx8e30sX3Y6JzEuNi4wJyxfdGFnQ291bnQ6MSxwcm90b2NvbDonaHR0cHM6JyxldmVudHM6e2JpbmQ6ZnVuY3Rpb24oYXBwLGV2LGZuKXtscFRhZy5kZWZlcihmdW5jdGlvbigpe2xwVGFnLmV2ZW50cy5iaW5kKGFwcCxldixmbik7fSwwKTt9LHRyaWdnZXI6ZnVuY3Rpb24oYXBwLGV2LGpzb24pe2xwVGFnLmRlZmVyKGZ1bmN0aW9uKCl7bHBUYWcuZXZlbnRzLnRyaWdnZXIoYXBwLGV2LGpzb24pO30sMSk7fX0sZGVmZXI6ZnVuY3Rpb24oZm4sZm5UeXBlKXtpZihmblR5cGU9PTApe3RoaXMuX2RlZkI9dGhpcy5fZGVmQnx8W107dGhpcy5fZGVmQi5wdXNoKGZuKTt9ZWxzZSBpZihmblR5cGU9PTEpe3RoaXMuX2RlZlQ9dGhpcy5fZGVmVHx8W107dGhpcy5fZGVmVC5wdXNoKGZuKTt9ZWxzZXt0aGlzLl9kZWZMPXRoaXMuX2RlZkx8fFtdO3RoaXMuX2RlZkwucHVzaChmbik7fX0sbG9hZDpmdW5jdGlvbihzcmMsY2hyLGlkKXt2YXIgdD10aGlzO3NldFRpbWVvdXQoZnVuY3Rpb24oKXt0Ll9sb2FkKHNyYyxjaHIsaWQpO30sMCk7fSxfbG9hZDpmdW5jdGlvbihzcmMsY2hyLGlkKXt2YXIgdXJsPXNyYztpZighc3JjKXt1cmw9dGhpcy5wcm90b2NvbCsnLy8nKygodGhpcy5vdnImJnRoaXMub3ZyLmRvbWFpbik/dGhpcy5vdnIuZG9tYWluOidscHRhZy5saXZlcGVyc29uLm5ldCcpKycvdGFnL3RhZy5qcz9zaXRlPScrdGhpcy5zaXRlO312YXIgcz1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTtzLnNldEF0dHJpYnV0ZSgnY2hhcnNldCcsY2hyP2NocjonVVRGLTgnKTtpZihpZCl7cy5zZXRBdHRyaWJ1dGUoJ2lkJyxpZCk7fXMuc2V0QXR0cmlidXRlKCdzcmMnLHVybCk7ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ2hlYWQnKS5pdGVtKDApLmFwcGVuZENoaWxkKHMpO30saW5pdDpmdW5jdGlvbigpe3RoaXMuX3RpbWluZz10aGlzLl90aW1pbmd8fHt9O3RoaXMuX3RpbWluZy5zdGFydD0obmV3IERhdGUoKSkuZ2V0VGltZSgpO3ZhciB0aGF0PXRoaXM7aWYod2luZG93LmF0dGFjaEV2ZW50KXt3aW5kb3cuYXR0YWNoRXZlbnQoJ29ubG9hZCcsZnVuY3Rpb24oKXt0aGF0Ll9kb21SZWFkeSgnZG9tUmVhZHknKTt9KTt9ZWxzZXt3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsZnVuY3Rpb24oKXt0aGF0Ll9kb21SZWFkeSgnY29udFJlYWR5Jyk7fSxmYWxzZSk7d2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2xvYWQnLGZ1bmN0aW9uKCl7dGhhdC5fZG9tUmVhZHkoJ2RvbVJlYWR5Jyk7fSxmYWxzZSk7fWlmKHR5cGVvZih3aW5kb3cuX2xwdFN0b3ApPT0ndW5kZWZpbmVkJyl7dGhpcy5sb2FkKCk7fX0sc3RhcnQ6ZnVuY3Rpb24oKXt0aGlzLmF1dG9TdGFydD10cnVlO30sX2RvbVJlYWR5OmZ1bmN0aW9uKG4pe2lmKCF0aGlzLmlzRG9tKXt0aGlzLmlzRG9tPXRydWU7dGhpcy5ldmVudHMudHJpZ2dlcignTFBUJywnRE9NX1JFQURZJyx7dDpufSk7fXRoaXMuX3RpbWluZ1tuXT0obmV3IERhdGUoKSkuZ2V0VGltZSgpO30sdmFyczpscFRhZy52YXJzfHxbXSxkYnM6bHBUYWcuZGJzfHxbXSxjdG46bHBUYWcuY3RufHxbXSxzZGVzOmxwVGFnLnNkZXN8fFtdLGV2OmxwVGFnLmV2fHxbXX07bHBUYWcuaW5pdCgpO31lbHNle3dpbmRvdy5scFRhZy5fdGFnQ291bnQrPTE7fSA8L3NjcmlwdD4NCjwhLS0gRU5EIExpdmVQZXJzb24gTW9uaXRvci4gLS0+DQoNCmQCCA9kFgICAg9kFgICBQ9kFgICAw8WAh8BaBYCZg9kFgQCAg9kFgYCAQ8WAh8BaGQCAw8WAh8BaGQCBQ8WAh8BaGQCAw8PFgIeCUFjY2Vzc0tleQUBL2RkAhIPZBYCAgIPZBYsAgcPFgIfAAsrBAFkAg0PZBYEAgEPFgIfAAsrBAFkAgMPFgIfAAsrBAFkAhEPFgIfAAsrBAFkAhMPFgIfAAsrBAFkAhUPFgIfAAsrBAFkAhcPFgIfAAsrBAFkAhkPFgIfAAsrBAFkAhsPFgIfAAsrBAFkAh0PFgIfAAsrBAFkAh8PFgIfAAsrBAFkAiMPFgIfAAsrBAFkAiUPFgIfAAsrBAFkAicPFgIfAAsrBAFkAikPFgIfAAsrBAFkAisPFgIfAAsrBAFkAi0PFgIfAAsrBAFkAi8PFgIfAAsrBAFkAjEPFgIfAAsrBAFkAjUPZBYEAgEPFgIfAAsrBAFkAgMPFgIfAAsrBAFkAjkPFgIfAAsrBAFkAj0PZBYEAgEPFgIfAAsrBAFkAgMPFgIfAAsrBAFkAkEPFgIfAAsrBAFkZOcqCgtQLIYY+iQgFaeoOIKkFaBTedcDaboAHttl0227" />
 </div>
 
 <script type="text/javascript">
@@ -202,7 +103,7 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="/WebResource.axd?d=tGMnSDNKqRR01a83m8s4Aasld4lYneAXWjUvl4vHlE-J0aYlMQZSKbunVPKtZMlcBuY3dPnsh9t0vT7p7jn7o_E5e_81&amp;t=635294915132453548" type="text/javascript"></script>
+<script src="/WebResource.axd?d=M5fmU-c2kGCn1LyuyMlrAfyJI-7d-w2oFE5AeWkc0Pg_aE-1S1AvlKboRy2qTtk5TZI7lTprEOCR9NFvDAvIW4uPXRUDHTDBsJTOiKK2MPk1&amp;t=635589255571259667" type="text/javascript"></script>
 
 
 <script type="text/javascript">
@@ -210,1142 +111,867 @@ function __doPostBack(eventTarget, eventArgument) {
 var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
+var g_wsaQoSEnabled = false;
+var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
-var g_wsaSiteTemplateId = 'HRPAWCM#0';
 var g_wsaListTemplateId = 850;
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{3b3dc929-9b5c-4561-b113-f768bd94e8dd}",pageItemId:55, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};
-                            function DoCallBack(filterText)
-                            {WebForm_DoCallback('ctl00$m$g_011d5446_732c_4143_9af5_0c7d567f9c04',filterText,UpdateFilterCallback,0,CallBackError,true)
-                            }
-                            function CallBackError(result, clientsideString)
-                            {                
-                            }
-                        //]]>
-</script>
-<script type="text/javascript">
-<!--
-var L_Menu_BaseUrl="";
+var g_wsaSiteTemplateId = 'BLANKINTERNET#0';
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "https:\u002f\u002fwww.hrpa.ca", siteAbsoluteUrl: "https:\u002f\u002fwww.hrpa.ca", serverRequestPath: "\u002fPages\u002fDefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Portal", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-09-11T16:25:04.7030284Z") - new Date(), siteClientTag: "1001$$15.0.4737.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{3c97da47-5eba-49dc-95a0-18e495f1fb0d}",pageItemId:1, pagePersonalizationScope:1, alertsEnabled:false, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
-var L_Menu_SiteTheme="";
-//-->
-</script>
-<script type="text/javascript">
-//<![CDATA[
+var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var _spWebPartComponents = new Object();//]]>
 </script>
-<script type="text/javascript" >
-<!--
-//-->
-</script>
-<script src="/ScriptResource.axd?d=bo7vLrdujo72KjIe1gBUaJZlL3DKPxLjqRwjd4mVFI398v42ZPS6K6Fn_-o7xAtYn_X20nv_VwaRJdoU2gEq9rYWOassho2kE9G2G1PN2aOgxpvJu77LBqraS64j_DrrBGhqvQ2&amp;t=34747d22" type="text/javascript"></script>
-<script src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D" type="text/javascript"></script>
+
+<script src="/ClientWebPartResources/Common/Scripts/widget_util.js" type="text/javascript"></script>
+<script src="/ClientWebPartResources/Common/Scripts/handlebars.js" type="text/javascript"></script>
+<script src="/ClientWebPartResources/Common/Scripts/handlebars-helpers.js" type="text/javascript"></script>
+<script src="/ClientWebPartResources/HRPA/Scripts/jquery_promotionsTransform.js" type="text/javascript"></script>
+<script src="/ClientWebPartResources/Common/Scripts/jquery-ui-1.9.2.min.js" type="text/javascript"></script>
+<script src="/ClientWebPartResources/Navantis.ClientWebPart.TopNav/Scripts/jquery_navantisTopNav.js" type="text/javascript"></script>
+<script src="/ClientWebPartResources/Navantis.ClientWebPart.Footer/Scripts/jquery_navantisFooter.js" type="text/javascript"></script>
+<script src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D" type="text/javascript"></script>
 <script type="text/javascript">
 //<![CDATA[
-if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
-UpdateFormDigest('\u002f', 1440000);return _spFormOnSubmitWrapper();
+(function(){
+
+        if (typeof(_spBodyOnLoadFunctions) === 'undefined' || _spBodyOnLoadFunctions === null) {
+            return;
+        }
+        _spBodyOnLoadFunctions.push(function() {
+
+            if (typeof(SPClientTemplates) === 'undefined' || SPClientTemplates === null || (typeof(APD_InAssetPicker) === 'function' && APD_InAssetPicker())) {
+                return;
+            }
+
+            var renderFollowFooter = function(renderCtx,  calloutActionMenu)
+            {
+                if (renderCtx.ListTemplateType == 700) 
+                    myDocsActionsMenuPopulator(renderCtx, calloutActionMenu);
+                else
+                    CalloutOnPostRenderTemplate(renderCtx, calloutActionMenu);
+
+                var listItem = renderCtx.CurrentItem;
+                if (typeof(listItem) === 'undefined' || listItem === null) {
+                    return;
+                }
+                if (listItem.FSObjType == 0) {
+                    calloutActionMenu.addAction(new CalloutAction({
+                        text: Strings.STS.L_CalloutFollowAction,
+                        tooltip: Strings.STS.L_CalloutFollowAction_Tooltip,
+                        onClickCallback: function (calloutActionClickEvent, calloutAction) {
+                            var callout = GetCalloutFromRenderCtx(renderCtx);
+                            if (!(typeof(callout) === 'undefined' || callout === null))
+                                callout.close();
+                            SP.SOD.executeFunc('followingcommon.js', 'FollowSelectedDocument', function() { FollowSelectedDocument(renderCtx); });
+                        }
+                    }));
+                }
+            };
+
+            var registerOverride = function(id) {
+                var followingOverridePostRenderCtx = {};
+                followingOverridePostRenderCtx.BaseViewID = 'Callout';
+                followingOverridePostRenderCtx.ListTemplateType = id;
+                followingOverridePostRenderCtx.Templates = {};
+                followingOverridePostRenderCtx.Templates.Footer = function(renderCtx) {
+                    var  renderECB;
+                    if (typeof(isSharedWithMeView) === 'undefined' || isSharedWithMeView === null) {
+                        renderECB = true;
+                    } else {
+                        var viewCtx = getViewCtxFromCalloutCtx(renderCtx);
+                        renderECB = !isSharedWithMeView(viewCtx);
+                    }
+                    return CalloutRenderFooterTemplate(renderCtx, renderFollowFooter, renderECB);
+                };
+                SPClientTemplates.TemplateManager.RegisterTemplateOverrides(followingOverridePostRenderCtx);
+            }
+            registerOverride(101);
+            registerOverride(700);
+        });
+    })();(function(){
+
+        if (typeof(_spBodyOnLoadFunctions) === 'undefined' || _spBodyOnLoadFunctions === null) {
+            return;
+        }
+        _spBodyOnLoadFunctions.push(function() 
+        {
+          ExecuteOrDelayUntilScriptLoaded(
+            function()
+            {
+              var pairs = SP.ScriptHelpers.getDocumentQueryPairs();
+              var followDoc, itemId, listId, docName;
+              for (var key in pairs)
+              {
+                if(key.toLowerCase() == 'followdocument') 
+                  followDoc = pairs[key];
+                else if(key.toLowerCase() == 'itemid') 
+                  itemId = pairs[key];
+                else if(key.toLowerCase() == 'listid') 
+                  listId = pairs[key];
+                else if(key.toLowerCase() == 'docname') 
+                  docName = decodeURI(pairs[key]);
+              } 
+
+              if(followDoc != null && followDoc == '1' && listId!=null && itemId != null && docName != null)
+              {
+                SP.SOD.executeFunc('followingcommon.js', 'FollowDocumentFromEmail', function() 
+                { 
+                  FollowDocumentFromEmail(itemId, listId, docName);
+                });
+              }
+
+            }, 'SP.init.js');
+
+        });
+    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 8, 11),showWeeks:0,timeZone:'-04:00:00.0002777',timeZoneInHours:-4,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
+UpdateFormDigest('\u002f', 1440000);if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;};
 return true;
 }
 //]]>
 </script>
 
-<div>
+<div class="aspNetHidden">
 
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCALAwLTtBALw9Z3WCwLkpae8DQKD3oPyBQK9+9VNAtXj+YgMAv+ct/gDAqa35IAER1cYEZ1U9uJWKfcHy21OVUqikTA=" />
-</div>
-  <script type="text/javascript">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
+</div><script type="text/javascript">
 //<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', document.getElementById('aspnetForm'));
-Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone'], [], [], 90);
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm', [], [], [], 90, 'ctl00');
 //]]>
 </script>
 
+        <noscript>
+            <iframe src="/ns.html?id=GTM-P2HX92" height="0" width="0" style="display:none;visibility:hidden">
+            </iframe>
+        </noscript>
+        <script>//<![CDATA[
+            ( function(w,d,s,l,i) {
+            w[l]=w[l]||[];
+            w[l].push( {'gtm.start': new Date().getTime(),event:'gtm.js'} );
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+            j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P2HX92');
+        
+        //]]></script>
+        <span id="DeltaSPWebPartManager">
+        
+        </span>
+        <div id="ms-designer-ribbon" style="display:none;">
+            
+            <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
+                <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
+                    Turn on more accessible mode
+                </a>
+            </div>
+            <div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex">
+                <a id="linkTurnOffAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+                    Turn off more accessible mode
+                </a>
+            </div>
+            <div>
 	
-<noscript><div class='noindex'>You may be trying to access this site from a secured browser on the server. Please enable scripts and reload this page.</div></noscript>
-<div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
-	<a id="linkTurnOnAcc" href="#" class="ms-TurnOnAcc" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
-	Turn on more accessible mode</a>
-</div>
-<div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex">
-	<a id="linkTurnOffAcc" href="#" class="ms-TurnOffAcc" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
-	Turn off more accessible mode</a>
-</div>
-<div class="s4-notdlg s4-skipribbonshortcut noindex">
-	<a href="javascript:;" id="ctl00_A1" onclick="javascript:this.href='#startNavigation';" class="ms-SkiptoNavigation" accesskey="Y">
-	Skip Ribbon Commands</a>
-</div>
-<div class="s4-notdlg noindex">
-	<a href="javascript:;" id="ctl00_A2" onclick="javascript:this.href='#mainContent';" class="ms-SkiptoMainContent" accesskey="X">
-	Skip to main content</a>
-</div>
-<a id="HiddenAnchor" href="javascript:;" style="display:none;"></a>
-
-
-
-	<!-- ====================================| BEGIN REBON |==================================== -->
-
-<div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle">
-
-
-
+	<div id="s4-ribbonrow" style="visibility:hidden;display:none"></div>
 
 </div>
 
-<!-- ====================================|  END RIBBON and other Top Content |==================================== -->
 
-
-
-
-<!------------------WorkSpace------------------>
-<div id="s4-workspace" >
-		<!------------------BodyContainer------------------>
-		<div id="s4-bodyContainer">
-		
-		<!-- welcome/login -->
-        <div class="top_nodes">
             
-                    <!-- Do not display anything when anonymous -->
-                
         </div>
-        <!-- end of welcome/login -->
-		
-		
-		<!-- HRPA markup starts here -->	
-		<div id="pageWrapper">
-		
-		
-            <!-- TOP HEADER SECTION -->
-            <div id="topHeader">
-			
-                <div id="topHeaderContent">
-                    <div class="th_LeftPanel">
-<a href='http://www.hrpa.ca/'>Human Resources Professionals Association</a>
-</div>
-                    <div class='th_RightPanel'><a href="/MemberCentre/Pages/2016-HRPA-Membership-Renewal.aspx?ReturnUrl=http://www.hrpa.ca/Pages/Default.aspx">Join/Renew</a><span class='th_vDividerPadding'> | </span> <a href="/MemberCentre/Pages/EZHR.aspx">EZ HR</a><span class='th_vDividerPadding'> | </span> <a href="/Pages/AODA.aspx"> AODA Information</a><span class='th_vDividerPadding'> | </span> <a href="/HRPACHAPTERS/Pages/default.aspx">Chapter Sites</a><span class='th_vDividerPadding'> | </span> <a href="/Pages/HRPAContacts.aspx">Contact Us</a></div>
-                   
-                   
-					
-					<!-- Search area -->		
-				<div class="bh_RightPanel">
-                    <div id="bhrpContent">
-                        <table border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td valign="top">
-                                    <!-- search starts here -->
-									
-									
-									
-									
-                                    <div class="search">
-                                        
-											<div id="SRSB"> <div id="ctl00_PlaceHolderSearchArea_SearchBox">
-	<table class="ms-sbtable ms-sbtable-ex s4-search" cellpadding="0" cellspacing="0" border="0">
-		<tr class="ms-sbrow">
-			<td class="ms-sbcell"><input name="ctl00$PlaceHolderSearchArea$SearchBox$S622C1022_InputKeywords" type="text" value="Search this Site..." maxlength="200" id="ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords" accesskey="S" title="Search..." class="ms-sbplain" alt="Search..." onkeypress="javascript: return S622C1022_OSBEK(event);" onfocus="if (document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_ctl03').value =='0') {this.value=''; if (this.className == 's4-searchbox-QueryPrompt') this.className = ''; else this.className = this.className.replace(' s4-searchbox-QueryPrompt',''); document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_ctl03').value=1;}" onblur="if (this.value =='') {this.value='Search this Site...'; if (this.className.indexOf('s4-searchbox-QueryPrompt') == -1) this.className += this.className?' s4-searchbox-QueryPrompt':'s4-searchbox-QueryPrompt'; document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_ctl03').value = '0'} else {document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_ctl03').value='1';}" style="width:200px;" /></td><td class="ms-sbgo ms-sbcell"><a id="ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_go" title="Search" href="javascript:S622C1022_Submit()"><img title="Search" onmouseover="this.src='\u002fStyle Library\u002fImages\u002fico_search.gif'" onmouseout="this.src='\u002fStyle Library\u002fImages\u002fico_search.gif'" class="srch-gosearchimg" alt="Search" src="/Style%20Library/Images/ico_search.gif" style="border-width:0px;" /></a></td><td class="ms-sbLastcell"></td>
-		</tr>
-	</table><input name="ctl00$PlaceHolderSearchArea$SearchBox$ctl03" type="hidden" id="ctl00_PlaceHolderSearchArea_SearchBox_ctl03" value="0" />
-</div></div>
-					
-                                        
-                                    </div>
-                                    <!-- search ends here -->
-                                </td>
-                             </tr>
-                        </table>
-                    </div>
-                </div>	
-			<!-- Search area ends -->
-			
-					
-					<br class="clearfloat" />
-                </div>
-				
-				
-				
-            </div>
-            <a id="anchorLogin" href="#" name="anchorLogin" style="display:none;" ></a>
-			
-			
-			
-			
-			
-            <!-- // TOP HEADER -->
-			
-
-			
-			
-            <!-- BANNER HEADER SECTION -->
-            <div id="bannerHeader">
-                <div class="bh_LeftPanel">
-                    <div id="bhlpContent">
-<a href='http://www.hrpa.ca/'>
-	<img src='http://www.hrpa.ca/Style%20Library/Images/HRPA-icon75X75.png' border="0" />
-</a>
-</div>
-                </div>
-                <div class="bh_MiddlePanel">
-                    <div id="bhmpContent">
-<script type='text/javascript'><!--// <![CDATA[
-    OA_show(55);
-// ]]> --></script><noscript><a target='_blank' href='http://www.lesterpublications.com/adserver/www/delivery/ck.php?n=f1ecbef'><img border='0' alt='' src='http://www.lesterpublications.com/adserver/www/delivery/avw.php?zoneid=55&n=f1ecbef' /></a></noscript>
-</div>
-                </div>
-				
-				<!-- protech login -->
-               	 <div class="bh_BannerRightPanel">		
-					<div>
-	<div class="MXDefault SecurityWelcomeAnonymousForm_MXDefault">
-		
-    
-    
-
-    <div id="ctl00_ctl11_ctl00_pnlLoginViewModeAnonymous" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_ctl11_ctl00_btnSignIn')">
-			
-        <fieldset>
-            
-                    <script type="text/javascript">
-                        function OnFocus(sender, eventArgs) {
-                            $get('PasswordMask').style.display = 'none';
-                            $get('Password').style.display = 'block';
-                            $find('ctl00_ctl11_ctl00_txtPassword').focus();
-                        }
-
-                        function OnBlur(sender, eventArgs) {
-                            if (sender.isEmpty()) {
-                                $get('PasswordMask').style.display = 'block';
-                                $get('Password').style.display = 'none';
-                            }
-                        }   
-                    </script>
-                <!-- 2012.2.912.35 --><span id="ctl00_ctl11_ctl00_txtUserName_wrapper" class="riSingle RadInput RadInput_MXDefault" style="width:150px;"><input id="ctl00_ctl11_ctl00_txtUserName" name="ctl00$ctl11$ctl00$txtUserName" size="20" maxlength="100" class="riTextBox riEmpty" CrmId="contact+pa_webloginname" value="Login Name" type="text" /><input id="ctl00_ctl11_ctl00_txtUserName_ClientState" name="ctl00_ctl11_ctl00_txtUserName_ClientState" type="hidden" /></span>
-                <div id="PasswordMask" style="display: block;">
-                    <span id="ctl00_ctl11_ctl00_txtPasswordMask_wrapper" class="riSingle RadInput RadInput_MXDefault" style="width:150px;"><input id="ctl00_ctl11_ctl00_txtPasswordMask" name="ctl00$ctl11$ctl00$txtPasswordMask" size="20" maxlength="30" class="riTextBox riEmpty" CrmId="contact+pa_webloginpassword" value="Login Password" type="text" /><input id="ctl00_ctl11_ctl00_txtPasswordMask_ClientState" name="ctl00_ctl11_ctl00_txtPasswordMask_ClientState" type="hidden" /></span>
-                </div>
-                <div id="Password" style="display: none;">
-                    <span id="ctl00_ctl11_ctl00_txtPassword_wrapper" class="riSingle RadInput RadInput_MXDefault" style="width:150px;"><input id="ctl00_ctl11_ctl00_txtPassword" name="ctl00$ctl11$ctl00$txtPassword" size="20" class="riTextBox riEnabled" type="password" /><input id="ctl00_ctl11_ctl00_txtPassword_ClientState" name="ctl00_ctl11_ctl00_txtPassword_ClientState" type="hidden" /></span>
-                </div>
-                <label id="ctl00_ctl11_ctl00_labRememberMe" for="ctl00_ctl11_ctl00_chkRememberMe">
-                    <input id="ctl00_ctl11_ctl00_chkRememberMe" type="checkbox" name="ctl00$ctl11$ctl00$chkRememberMe" />Remember me <input type="hidden" id="hidRememberMe" /></label><input type="submit" name="ctl00$ctl11$ctl00$btnSignIn" value="Log In" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl11$ctl00$btnSignIn&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl11_ctl00_btnSignIn" />
-            <ul>
+        <div class="anonymousUsersSigninDisplay" style="display:none;">
+            <span>
                 
-                <li>
-                    <a id="ctl00_ctl11_ctl00_hypCreateNewUserAccount"></a></li>
-                <li>
-                    <a id="ctl00_ctl11_ctl00_hypSignInHelp" href="LogInHelp.aspx">Log In Help</a></li>
-            </ul>
-        </fieldset>
-    
-		</div>
-    
+<a id="ctl00_ctl43_ExplicitLogin" class="ms-signInLink" href="https://www.hrpa.ca/_layouts/15/Authenticate.aspx?Source=%2FPages%2FDefault%2Easpx" style="display:inline-block;">Sign In</a>
 
-	</div>
-
-</div> 
-              	 </div>
-				<!-- protech login ends -->				
-				<div class="clearAll"></div>
-            </div>
-           
-            <div id="bodyWrapper">
-                <div class="bodyLeftPanel">
-                    <div id="mainNavigation">
-                        
-                        <div>
-                           
-                            
-                          
-                            
-                           
-                            
-							
-                                <a href="#zz1_CurrentNav_SkipLink"><img alt="Skip navigation links" src="/WebResource.axd?d=i770U8Snc0l2CqUxKEuV3-2Hr5jph402wL8zBOfN2_zesJuy-z9XTyyW_GzTPa7p3UFdQBlb758hkGLCYeJLJWBiEhA1&amp;t=635294915132453548" width="0" height="0" style="border-width:0px;" /></a><table id="zz1_CurrentNav" class="leftNav zz1_CurrentNav_10 zz1_CurrentNav_2" cellpadding="0" cellspacing="0" border="0">
-	<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn0">
-		<td><table class="ms-navheader zz1_CurrentNav_7 leftNavSelected zz1_CurrentNav_14 hydro-selectednavheader zz1_CurrentNav_16" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6 leftNavSelected zz1_CurrentNav_13 hydro-selectednavheader zz1_CurrentNav_15" href="/Pages/Default.aspx" accesskey="3" style="border-style:none;font-size:1em;">Home</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="About HRPA" id="zz1_CurrentNavn1">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/AboutHRPA/Pages/Default.aspx" style="border-style:none;font-size:1em;">About HRPA</a></td>
-			</tr>
-		</table></td>
-	</tr><tr>
-		<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ms-navSubMenu2 zz1_CurrentNav_11">
-			<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn2">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/RegulationandHRDesignations/Pages/Regulation-of-HR.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Regulation of HR</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn3">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/Documents/Bill32/Bill32RoyalAssent.pdf" target="_blank" style="border-style:none;font-size:1em;margin-left:1px;">Registered Human Resources Professionals Act, 2013 (PDF)</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn4">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AboutHRPA/Documents/HRPA-Bylaws.pdf" target="_blank" style="border-style:none;font-size:1em;margin-left:1px;">View HRPA By-laws (PDF)</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn5">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/PublicAffairs/Pages/MediaRoom.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Media Releases</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="HRPA's History" id="zz1_CurrentNavn6">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AboutHRPA/Pages/History.aspx" style="border-style:none;font-size:1em;margin-left:1px;">History</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Committees" id="zz1_CurrentNavn7">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AboutHRPA/Pages/committees.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Committees</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="View HRPA's Annual Report " id="zz1_CurrentNavn8">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AboutHRPA/Pages/AnnualReport.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Annual Report</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Strategic Plan" id="zz1_CurrentNavn9">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AboutHRPA/Pages/StrategicPlan.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Strategic Plan</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn10">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AboutHRPA/Pages/FairRegistrationPractices.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Fair Registration Practices</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn11">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="http://www.hrpa.ca/AboutHRPA/Pages/2016-HRPA-Annual-General-Meeting.aspx" style="border-style:none;font-size:1em;margin-left:1px;">2016 HRPA Annual General Meeting</a></td>
-					</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn12">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/Pages/2017-Annual-Conference.aspx" style="border-style:none;font-size:1em;">2017 Annual Conference</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn13">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/Conf2016/Pages/default.aspx" target="_blank" style="border-style:none;font-size:1em;">2016 Annual Conference</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn14">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/RegulationandHRDesignations/Pages/default.aspx" style="border-style:none;font-size:1em;">Regulation and HR Designations</a></td>
-			</tr>
-		</table></td>
-	</tr><tr>
-		<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ms-navSubMenu2 zz1_CurrentNav_11">
-			<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Internationally Educated Professionals" id="zz1_CurrentNavn15">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/RegulationandHRDesignations/Pages/InternationallyEducatedProfessionals.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Internationally Educated Professionals</a></td>
-					</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn16">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/RegulationandHRDesignations/Pages/complaintsinvestigationanddiscipline.aspx" style="border-style:none;font-size:1em;">Complaints about Members</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Professional Development" id="zz1_CurrentNavn17">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/ProfessionalDevelopment/Pages/HRPAPDCalendar.aspx" style="border-style:none;font-size:1em;">Professional Development</a></td>
-			</tr>
-		</table></td>
-	</tr><tr>
-		<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ms-navSubMenu2 zz1_CurrentNav_11">
-			<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn18">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="http://www.hrpa.ca/skills" target="_blank" style="border-style:none;font-size:1em;margin-left:1px;">CPD Skills Self-Assessment</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn19">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/ProfessionalDevelopment/Pages/HRPAPDConferences.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Conferences</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn20">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/ProfessionalDevelopment/Pages/HRPAWorkshops.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Workshops</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn21">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/ProfessionalDevelopment/Pages/CulturalCompetencyTrainingProgram.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Cultural Competency Training Program</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn22">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/ProfessionalDevelopment/Pages/Caregiver-Resources.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Caregiver Resources</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn23">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/ProfessionalDevelopment/Pages/PD-Passport.aspx" style="border-style:none;font-size:1em;margin-left:1px;">PD Passport</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn24">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/ProfessionalDevelopment/Pages/PD-Partners.aspx" style="border-style:none;font-size:1em;margin-left:1px;">PD Partners</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn25">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/ProfessionalDevelopment/Pages/BloorYorkvilleExperience.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Shop &amp; Learn (Bloor-Yorkville Experience)</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn26">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/ProfessionalDevelopment/Documents/CancellationPolicy.pdf" target="_blank" style="border-style:none;font-size:1em;margin-left:1px;">Cancellation Policy</a></td>
-					</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Member Centre" id="zz1_CurrentNavn27">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/MemberCentre/Pages/Default.aspx" style="border-style:none;font-size:1em;">Member Centre</a></td>
-			</tr>
-		</table></td>
-	</tr><tr>
-		<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ms-navSubMenu2 zz1_CurrentNav_11">
-			<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn28">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/HRPA-Membership-Renewal.aspx" style="border-style:none;font-size:1em;margin-left:1px;">RENEW YOUR MEMBERSHIP</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn29">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Documents/Member-Handbook-2016-v2.pdf" target="_blank" style="border-style:none;font-size:1em;margin-left:1px;">Benefits of Membership (PDF)</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn30">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/Member-Savings-Partners.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Member Savings</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn31">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/MemberPerks.aspx" style="border-style:none;font-size:1em;margin-left:1px;">MemberPerks®</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn32">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/Career-Centre.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Career Centre</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn33">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/Students.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Student Information</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Be an HRPA volunteer" id="zz1_CurrentNavn34">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/VolunteerCentre.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Volunteer Centre</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="HRPA member directory" id="zz1_CurrentNavn35">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/MemberDirectory.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Member Directory</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn36">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/LeadershipExcellenceAwards.aspx" style="border-style:none;font-size:1em;margin-left:1px;">HRPA Leadership &amp; Excellence Awards</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn37">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/HRPA-Edge.aspx" style="border-style:none;font-size:1em;margin-left:1px;">HRPA Edge</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn38">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/BookCampusVisit.aspx" style="border-style:none;font-size:1em;margin-left:1px;">BookCampusVisit</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn39">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/Volunteer-Testimonials.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Volunteer Testimonials</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn40">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/Hire-a-CHRP.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Hire a CHRP</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn41">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/HR-Mentoring.aspx" style="border-style:none;font-size:1em;margin-left:1px;">HR Mentoring</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn42">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="http://www.hrpa.ca/MemberCentre/Pages/outofprovincestudent.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Out of Province CHRP - Student Information</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn43">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/Career-Centre.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Career Centre</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn44">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/MemberCentre/Pages/Career-Centre-Tools-and-Advice.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Career Centre Tools and Advice</a></td>
-					</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Public Affairs" id="zz1_CurrentNavn45">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/PublicAffairs/Pages/Default.aspx" style="border-style:none;font-size:1em;">Public Affairs</a></td>
-			</tr>
-		</table></td>
-	</tr><tr>
-		<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ms-navSubMenu2 zz1_CurrentNav_11">
-			<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Grassroots Advocacy" id="zz1_CurrentNavn46">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/PublicAffairs/Pages/GrassrootsAdvocacy.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Grassroots Advocacy</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Legislative Update" id="zz1_CurrentNavn47">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/PublicAffairs/Pages/LegislativeUpdate.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Legislative Update</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn48">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/PublicAffairs/Pages/QueensPark101.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Queens Park 101</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn49">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/PublicAffairs/Pages/MediaRoom.aspx" style="border-style:none;font-size:1em;margin-left:1px;">HRPA Media Room</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Briefs and Submissions" id="zz1_CurrentNavn50">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/PublicAffairs/Pages/BriefsandSubmissions.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Briefs and Submissions</a></td>
-					</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="HR Thought Leadership" id="zz1_CurrentNavn51">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/HRThoughtLeadership/Pages/Default.aspx" style="border-style:none;font-size:1em;">HR Thought Leadership</a></td>
-			</tr>
-		</table></td>
-	</tr><tr>
-		<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ms-navSubMenu2 zz1_CurrentNav_11">
-			<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn52">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="https://blue.hrpa.ca/LogIn/Logout.aspx" target="_blank" style="border-style:none;font-size:1em;margin-left:1px;">Resource Centre</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn53">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/HRThoughtLeadership/Pages/HRProfessionalMagazineSubscriptions.aspx" style="border-style:none;font-size:1em;margin-left:1px;">HR Professional Magazine Subscriptions</a></td>
-					</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="HRPA Chapters" id="zz1_CurrentNavn54">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/HRPAChapters/Pages/Default.aspx" style="border-style:none;font-size:1em;">HRPA Chapters</a></td>
-			</tr>
-		</table></td>
-	</tr><tr>
-		<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ms-navSubMenu2 zz1_CurrentNav_11">
-			<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn55">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/HRPAChapters/Pages/HRPA-Chapter-Awards.aspx" style="border-style:none;font-size:1em;margin-left:1px;">HRPA Chapter Awards</a></td>
-					</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn56">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="http://www.hrpatoday.ca/listing/" target="_blank" style="border-style:none;font-size:1em;">HRPA Suppliers Guide</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn57">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/Pages/HRJobs.aspx" target="_blank" style="border-style:none;font-size:1em;">HR Jobs</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn58">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="http://www.yorkvilleconferencecentre.ca/" target="_blank" style="border-style:none;font-size:1em;">Yorkville Conference Centre</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn59">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/Pages/RHRPA.aspx" style="border-style:none;font-size:1em;">RHRPA Act </a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn60">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="http://www.hrpa.ca/Pages/HRPA-Register.aspx" style="border-style:none;font-size:1em;">Public Register</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn61">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/MemberCentre/Pages/EZHR.aspx" style="border-style:none;font-size:1em;">EZ HR</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn62">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="http://www.hrri.ca" target="_blank" style="border-style:none;font-size:1em;">HR Research Institute</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn63">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="http://hrpatoday.ca/" target="_blank" style="border-style:none;font-size:1em;">HR Professional Magazine</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn64">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/MemberCentre/Pages/Resource-Centre.aspx" style="border-style:none;font-size:1em;">Resource Centre</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn65">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/Pages/HRPA-Edge.aspx" style="border-style:none;font-size:1em;">HRPA Edge</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn66">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/Pages/AODA.aspx" style="border-style:none;font-size:1em;">AODA Resources</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_CurrentNavn67">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/Pages/Mental-Health.aspx" style="border-style:none;font-size:1em;">Mental Health Resources</a></td>
-			</tr>
-		</table></td>
-	</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Advertising &amp; Sponsorship" id="zz1_CurrentNavn68">
-		<td><table class="ms-navheader zz1_CurrentNav_7" cellpadding="0" cellspacing="0" border="0" width="100%">
-			<tr>
-				<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-navheader zz1_CurrentNav_6" href="/AdvertisingSponsorship/Pages/Default.aspx" style="border-style:none;font-size:1em;">Advertising &amp; Sponsorship</a></td>
-			</tr>
-		</table></td>
-	</tr><tr>
-		<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ms-navSubMenu2 zz1_CurrentNav_11">
-			<tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Sponsorship Opportunities" id="zz1_CurrentNavn69">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AdvertisingSponsorship/Pages/SponsorshipOpportunities.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Sponsorship Opportunities</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Exhibitor Opportunities" id="zz1_CurrentNavn70">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AdvertisingSponsorship/Pages/ExhibitorOpportunities.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Exhibitor Opportunities</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Advertising Opportunities" id="zz1_CurrentNavn71">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AdvertisingSponsorship/Pages/AdvertisingOpportunities.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Advertising Opportunities</a></td>
-					</tr>
-				</table></td>
-			</tr><tr onmouseover="Menu_HoverRoot(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Audience Demographics" id="zz1_CurrentNavn72">
-				<td><table class="ms-item zz1_CurrentNav_9" cellpadding="0" cellspacing="0" border="0" width="100%">
-					<tr>
-						<td style="width:100%;"><a class="zz1_CurrentNav_1 ms-item zz1_CurrentNav_8" href="/AdvertisingSponsorship/Pages/AudienceDemographics.aspx" style="border-style:none;font-size:1em;margin-left:1px;">Audience Demographics</a></td>
-					</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr>
-</table><a id="zz1_CurrentNav_SkipLink"></a>
-                                
-                            
-                      
-                            
-                         
-                            
+            </span>
+        </div>
+        <div id="s4-workspace">
+            <div id="s4-bodyContainer">
+                <div id="global-navigation" class="global-navigation s4-notdlg">
+                    <!-- Promotions render placeholder -->
+                    <div class="hide-Mobile">
+                        <div class="promotions-Full" style="display:block;">
                         </div>
-                      
                     </div>
-                    <div id="rightAds">
-                        <script type='text/javascript'><!--// <![CDATA[
-    OA_show(56);
-// ]]> --></script><noscript><a target='_blank' href='http://www.lesterpublications.com/adserver/www/delivery/ck.php?n=ed2eb26'><img border='0' alt='' src='http://www.lesterpublications.com/adserver/www/delivery/avw.php?zoneid=56&n=ed2eb26' /></a></noscript>
+                    <!-- Scroll to this div -->
+                    <div id="sticky-anchor">
                     </div>
-                </div>
-                <div class="bodyMiddlelPanel">
-                    <div id="mainContent">
-                        <!--- --- ---  Breadcrumbs --- --- --->
-                        <div class="wr_breadcrumb">
-                            <div class="breadcrumbWrapper">
-                                
-									<span id="ctl00_ContentPlaceHolder1_siteMapPath1"><a href="#ctl00_ContentPlaceHolder1_siteMapPath1_SkipLink"><img alt="Skip Navigation Links" height="0" width="0" src="/WebResource.axd?d=i770U8Snc0l2CqUxKEuV3-2Hr5jph402wL8zBOfN2_zesJuy-z9XTyyW_GzTPa7p3UFdQBlb758hkGLCYeJLJWBiEhA1&amp;t=635294915132453548" style="border-width:0px;" /></a><span class="HO_breadcrumbCurrent">HRPA</span><a id="ctl00_ContentPlaceHolder1_siteMapPath1_SkipLink"></a></span>
+                    <div id="sticky-filler" style="display:none;height:0;">
+                    </div>
+                    <div id="sticky-element">
+                        <!-- /Promotions render placeholder -->
+                        <div class="hide-Mobile searchpurple-bg">
+                            <span id="DeltaPlaceHolderSearchArea">
+                            
+                            
+                            <div id="fullSearchInput" style="display:none;">
+                                <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
+	<div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ1" width="100%" class="ms-WPBody noindex " OnlyForMePart="true" allowDelete="false" style="" ><div componentid="ctl00_PlaceHolderSearchArea_ctl01_csr" id="ctl00_PlaceHolderSearchArea_ctl01_csr"></div><noscript><div id="ctl00_PlaceHolderSearchArea_ctl01_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderSearchArea_ctl01">
+
+	</div><div class="ms-clear"></div></div>
+</div>
                                 
                             </div>
-                        </div>
-                        <!--- --- ---  End of Breadcrumbs --- --- --->
-                        <!--- --- --- Breadcrumbs --- --- --->
-                        <div class="breadcrumbWrapper" style="display: none">
                             
-								<span id="ctl00_PlaceHolderTitleBreadcrumb_siteMapPath"><a href="#ctl00_PlaceHolderTitleBreadcrumb_siteMapPath_SkipLink"><img alt="Skip Navigation Links" height="0" width="0" src="/WebResource.axd?d=i770U8Snc0l2CqUxKEuV3-2Hr5jph402wL8zBOfN2_zesJuy-z9XTyyW_GzTPa7p3UFdQBlb758hkGLCYeJLJWBiEhA1&amp;t=635294915132453548" style="border-width:0px;" /></a><span class="HO_breadcrumbCurrent">HRPA</span><a id="ctl00_PlaceHolderTitleBreadcrumb_siteMapPath_SkipLink"></a></span>
                             
+                            </span>
                         </div>
-                        <!--- --- ---  End of Breadcrumbs --- --- --->
-                        <table border="0" cellpadding="0" cellspacing="0" width="710">
-                            <tr>
-                                <td>
-                                    <!-- content:pageLayout -->
-                                    <!--- --- --- Mini Console - supplementary buttons for Site Map --- --- --->
-                                    
-                                    <!--- --- --- Page Title --- --- --->
-                                    
-                                    
-
-<div id="wr_interiorPageLayout">
-
-<!-- left column -->
-<div class="wr_left">
-
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-	<tr>
-		<td id="MSOZoneCell_WebPartWPQ11" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top"><div WebPartID="70617e24-0f07-4fd3-9706-4e26b70ee8c4" HasPers="false" id="WebPartWPQ11" width="100%" class="ms-WPBody" allowDelete="false" style="" ></div></td>
-			</tr>
-		</table><div class="ms-PartSpacingVertical"></div></td>
-	</tr><tr>
-		<td id="MSOZoneCell_WebPartWPQ10" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%" style="width:540px">
-			<tr>
-				<td valign="top"><div WebPartID="d1c01ca3-57ce-464f-9f5b-b65ca8c8ce61" HasPers="false" id="WebPartWPQ10" class="ms-WPBody" allowDelete="false" style="width:540px;height:260px;" ><iframe title="Page Viewer ‭[2]‬" frameBorder="0" id="MSOPageViewerWebPart_WebPartWPQ10" name="MSOPageViewerWebPart_WebPartWPQ10" width="100%" height="100%" src="http://www.hrpacloud.org/14HomeHero/index.html" ddf_src="http://www.hrpacloud.org/14HomeHero/index.html">
-					<div class="UserGeneric">The current browser does not support Web pages that contain the IFRAME element. To use this Web Part, you must use a browser that supports this element, such as Internet Explorer 7.0 or later.</div>
-				</iframe></div></td>
-			</tr>
-		</table><div class="ms-PartSpacingVertical"></div></td>
-	</tr><tr>
-		<td id="MSOZoneCell_WebPartWPQ3" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%" style="width:540px">
-			<tr>
-				<td valign="top"><div WebPartID="41e5352c-4c0b-4e2e-a8f6-bc8fd01fda60" HasPers="false" id="WebPartWPQ3" class="ms-WPBody" allowDelete="false" style="width:540px;overflow:auto;" ><div><span style="font-size: 1em;">&#160;</span></div>
-<p class="ms-rteCustom-HRPA_PageTitle_H1">The Human Resources Professionals Association (HRPA)</p>
-<div>
-
-&#160;</div>
-<p>The Human Resources Professionals Association (HRPA) is the professional regulatory body and the professional association for Human Resources professionals in Ontario. It oversees more than 20,000 members in 28 chapters across the province.​</p>
-<p style="text-align: center;"><span style="color: rgb(99, 160, 212); font-size: 19.2px; font-weight: bold;">&#160;<a href="http://www.hrpa.ca/Pages/National-Institute-for-Disability-Management-and-Rehabilitation-%28NIDMARS%29-.aspx" target="_blank"><img src="/PublishingImages/DMSA%20button.jpg" alt="" style="margin: 5px;"/>​</a><br/></span></p>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td valign="top"><table width="100%" border="0" cellspacing="4" cellpadding="6">
-      <tbody><tr>
-        <td width="32%" class="ms-rteFontSize-3 " valign="bottom" bgcolor="#449adf"><strong><font color="#ffffff"><span class="ms-rteFontSize-3">HRPA Member&#160;</span><span class="ms-rteFontSize-3">Centre</span></font></strong></td>
-        <td width="35%" class="ms-rteFontSize-3 " valign="top" bgcolor="#449adf"><strong><font color="#ffffff"><span class="ms-rteFontSize-3">Regulation and<br/>
-          HR Designations</span></font></strong></td>
-        <td width="33%" valign="top" bgcolor="#449adf"><strong><font color="#ffffff"><span class="ms-rteFontSize-3">Professional</span><br class="ms-rteFontSize-3"/><span class="ms-rteFontSize-3">
-          Development</span> </font></strong></td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/MemberCentre/Pages/JoinNow.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks"><strong>JOIN HRPA</strong></a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/RegulationandHRDesignations/Pages/HR-Designations.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks"><strong>HR Designations</strong></a>&#160;<span class="ms-rteStyle-HRPA_RedText"><strong>- NEW</strong></span></td>
-        <td valign="top" bgcolor="#fdb813">&gt; <a href="http://www.hrpa.ca/conf2016/Pages/default.aspx"><strong><font color="#ffffff">2016 Annual Conference</font></strong></a></td>
-        </tr>
-      <tr>
-        <td valign="top" bgcolor="#fdb813">&gt; <a href="/MemberCentre/Pages/2016-HRPA-Membership-Renewal.aspx"><strong><font color="#ffffff">Renew Online</font></strong></a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt;&#160;<a href="/RegulationandHRDesignations/Pages/Continuing-Professional-Development.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">CPD (Recertification)</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/ProfessionalDevelopment/Pages/HRPAPDConferences.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Conferences</a></td>
-        </tr>
-      <tr>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/MemberCentre/Pages/Member-Savings-Partners.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Member Savings Partners</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/RegulationandHRDesignations/Pages/Complaints-and-Discipline.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Complaints and Discipline</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/ProfessionalDevelopment/Pages/HRPAWorkshops.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Workshops</a><a href="/ProfessionalDevelopment/Pages/HRPA-Seminars.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks"></a></td>
-        </tr>
-      <tr>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/MemberCentre/Pages/Students.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Student Centre </a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/RegulationandHRDesignations/Pages/Regulation-of-HR.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Regulation of HR</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/ProfessionalDevelopment/Pages/Webinars.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks"></a><a href="/ProfessionalDevelopment/Pages/HRPA-Seminars.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Seminars</a><a href="/ProfessionalDevelopment/Pages/CertificatePrograms.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks"></a></td>
-        </tr>
-      <tr>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/MemberCentre/Pages/Career-Centre.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Career Centre </a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/RegulationandHRDesignations/Pages/Policies.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Policies</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/ProfessionalDevelopment/Pages/Webinars.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Webinars</a><a href="/ProfessionalDevelopment/Pages/ExecutiveProgramshrpa.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks"></a></td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/MemberCentre/Pages/VolunteerCentre.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Volunteer Centre </a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/RegulationandHRDesignations/Pages/FormsApplicationsandGuides.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Forms, Applications, Guides</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt;&#160;<a href="/ProfessionalDevelopment/Pages/CertificatePrograms.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Certificate Programs</a></td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#ffffff"><br/></td>
-        <td valign="top" bgcolor="#ffffff"><br/></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/ProfessionalDevelopment/Pages/ExecutiveProgramshrpa.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Executive Programs</a></td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#ffffff"><br/></td>
-        <td valign="top" bgcolor="#ffffff"><br/></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/ProfessionalDevelopment/Pages/PD-Passport.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks"><strong>PD Passport</strong></a></td>
-      </tr>
-      <tr>
-        <td class="ms-rteFontSize-3 " valign="top" bgcolor="#449adf"><strong><font color="#ffffff"><span class="ms-rteFontSize-3"><br/>
-          Services</span></font></strong></td>
-        <td class="ms-rteFontSize-3 " valign="top" bgcolor="#449adf"><strong><font color="#ffffff"><span class="ms-rteFontSize-3"><br/>
-          HR Resources</span></font></strong></td>
-        <td class="ms-rteFontSize-3 " valign="top" bgcolor="#449adf"><strong><font color="#ffffff"><span class="ms-rteFontSize-3"><br/>
-          Connect @HRPA</span></font></strong></td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/Pages/HRJobs.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Hire Authority HR Jobs</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/MemberCentre/Pages/Resource-Centre.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Resource Centre</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="https://twitter.com/HRPA" target="_blank">HRPA on Twitter</a></td>
-        </tr>
-      <tr>
-
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/HRThoughtLeadership/Pages/HRProfessionalMagazine.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">HR Professional Magazine</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/ProfessionalDevelopment/Pages/CulturalCompetencyTrainingProgram.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Cultural Competency </a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="https://www.linkedin.com/company/hrpa?trk=top_nav_home" target="_blank">HRPA on LinkedIn</a></td>
-        </tr>
-      <tr>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/Pages/HRPA-Edge.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">HRPA Edge</a>&#160;</td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/Pages/AODA.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">AODA</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="http://www.linkedin.com/groups?home=&amp;gid=108805&amp;trk=anet_ug_hm" target="_blank">Member LinkedIn Group</a></td>
-        </tr>
-      <tr>
-        <td valign="top" bgcolor="#ffffff">&#160;</td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="/Pages/Mental-Health.aspx?utm_source=HRPAWebsite&amp;utm_medium=HRPAWebsite&amp;utm_campaign=HomePageLinks">Mental Health</a></td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="https://www.facebook.com/TheHRPA" target="_blank">HRPA on Facebook</a></td>
-        </tr>
-      <tr>
-        <td valign="top" bgcolor="#ffffff">&#160;</td>
-        <td valign="top" bgcolor="#ffffff">&#160;</td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="http://www.youtube.com/user/HRPATV" target="_blank">YouTube Channel</a></td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#ffffff">&#160;</td>
-        <td valign="top" bgcolor="#ffffff">&#160;</td>
-        <td valign="top" bgcolor="#eeeeee">&gt; <a href="http://hrpaconversations.wordpress.com/">HRPA Conversations Blog</a></td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#ffffff">&#160;</td>
-        <td valign="top" bgcolor="#ffffff">&#160;</td>
-        <td valign="top" bgcolor="#ffffff">&#160;</td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#449adf" colspan="3"><strong><font color="#ffffff"><span class="ms-rteFontSize-3"><br/>
-          HRPA News
-  </span></font></strong></td>
-      </tr>
-      <tr>
-        <td valign="top" bgcolor="#ffffff" colspan="3"><span class="ms-rteFontSize-3"><font color="#0088bf" face="arial, sans-serif"></font><a href="http://www.newswire.ca/news-releases/new-hrpa-human-resources-awards-celebrate-achievements-of-designated-hr-professionals-552995221.html"><font color="#0088bf" face="arial, sans-serif"><span style="line-height: 17px; font-size: 13.33px;">New HRPA Human Resources Awards celebrate achievements of designated HR professionals</span></font><br/>​</a><br/><a href="http://www.news.ontario.ca/mol/en/2015/09/ontario-continuing-to-increase-minimum-wage.html" target="_blank" style="color: rgb(0, 136, 191); line-height: 17px; font-family: arial, sans-serif; font-size: 13.33px;">Ontario Continuing to Increase Minimum Wage​</a><br/><br/>​</span><a href="http://www.newswire.ca/en/releases/archive/May2015/15/c7438.html" style="line-height: 107%; font-family: arial, sans-serif; font-size: 10pt;">HRPA, National
-Institute of Disability Management and Research and Pacific Coast University
-for Workplace Health Sciences partner to help employers build accessible
-workplaces</a><br/><br/><p class="MsoNormal" style="line-height: 12.75pt; margin-bottom: 7.5pt;"><span style="font-family: arial, sans-serif; font-size: 10pt;"><a href="http://www.newswire.ca/en/releases/archive/February2015/13/c6312.html">HR Professionals
-Say &quot;No&quot; to Ontario Pension Plan</a><o:p></o:p></span><u1:p></u1:p></p>
-
-<p class="MsoNormal" style="line-height: 12.75pt; margin-bottom: 7.5pt;"><span style="font-family: arial, sans-serif; font-size: 10pt;"><a href="http://www.newswire.ca/en/releases/archive/December2014/01/c2281.html">HRPA signs
-Memorandum of Understanding with Australian and New Zealand HR associations​<br/></a></span></p></td></tr></tbody></table></td></tr></tbody></table>
-<span class="ms-rteFontSize-6"></span>​​​​​​​​</div></td>
-			</tr>
-		</table><div class="ms-PartSpacingVertical"></div></td>
-	</tr><tr>
-		<td id="MSOZoneCell_WebPartWPQ9" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top"><div WebPartID="e60df066-e1fd-4ebf-adae-5fc7c45f168f" HasPers="false" id="WebPartWPQ9" width="100%" allowDelete="false" style="" ><table border="0" width="100%" cellpadding="2" cellspacing="1" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><tr valign="top"><th class="ms-vh-evtCal" nowrap><table CtxNum="1" cellspacing="0" class="ms-unselectedtitle" onmouseover="OnMouseOverAdHocFilter(this, 'Start Time @EventDate x:dateTime;1033 ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f')"><tr><td width="100%" class="ms-vb-evtCal" nowrap><a href="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={EventDate};dvt_sortdir={' + 'ascending' + '}');" onclick="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={EventDate};dvt_sortdir={' + 'ascending' + '}');">Date</a></td><td><img src="/_layouts/images/blank.gif" width="13" style="visibility: hidden" alt=""></td></tr></table></th><th class="ms-vh-evtCal" nowrap><table CtxNum="1" cellspacing="0" class="ms-unselectedtitle" onmouseover="OnMouseOverAdHocFilter(this, 'Host @HRPAHost x:string;1033 ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f')"><tr><td width="100%" class="ms-vb-evtCal" nowrap><a href="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={HRPAHost};dvt_sortdir={' + 'ascending' + '}');" onclick="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={HRPAHost};dvt_sortdir={' + 'ascending' + '}');">Host</a></td><td><img src="/_layouts/images/blank.gif" width="13" style="visibility: hidden" alt=""></td></tr></table></th><th class="ms-vh-evtCal-title" nowrap><table CtxNum="1" cellspacing="0" class="ms-unselectedtitle" onmouseover="OnMouseOverAdHocFilter(this, 'Name @Title x:string;1033 ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f')"><tr><td width="100%" class="ms-vb-evtCal" nowrap><a href="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={Title};dvt_sortdir={' + 'ascending' + '}');" onclick="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={Title};dvt_sortdir={' + 'ascending' + '}');">Name</a></td><td><img src="/_layouts/images/blank.gif" width="13" style="visibility: hidden" alt=""></td></tr></table></th><th class="ms-vh-evtCal" nowrap><table CtxNum="1" cellspacing="0" class="ms-unselectedtitle" onmouseover="OnMouseOverAdHocFilter(this, 'Type @HRPAEventType x:string;1033 ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f')"><tr><td width="100%" class="ms-vb-evtCal" nowrap><a href="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={HRPAEventType};dvt_sortdir={' + 'ascending' + '}');" onclick="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={HRPAEventType};dvt_sortdir={' + 'ascending' + '}');">Type</a></td><td><img src="/_layouts/images/blank.gif" width="13" style="visibility: hidden" alt=""></td></tr></table></th><th class="ms-vh-evtCal" nowrap><table CtxNum="1" cellspacing="0" class="ms-unselectedtitle" onmouseover="OnMouseOverAdHocFilter(this, 'Domain @HRPATopic x:string;1033 ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f')"><tr><td width="100%" class="ms-vb-evtCal" nowrap><a href="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={HRPATopic};dvt_sortdir={' + 'ascending' + '}');" onclick="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_sortfield={HRPATopic};dvt_sortdir={' + 'ascending' + '}');">Domain</a></td><td><img src="/_layouts/images/blank.gif" width="13" style="visibility: hidden" alt=""></td></tr></table></th></tr><tr class="ms-alternating"><td class="ms-vb-evtCal">5/10/2016</td><td class="ms-vb-evtCal">Grand Valley</td><td class="ms-vb-evtCal"><a href="https://blue.hrpa.ca/Conference/RegistrationProcessOverview.aspx?id=4490">Grand Valley 05.10.16 Engaged 2 Perform</a></td><td class="ms-vb-evtCal">Breakfast meeting</td><td class="ms-vb-evtCal"></td></tr><tr><td class="ms-vb-evtCal">5/10/2016</td><td class="ms-vb-evtCal">Grand Valley</td><td class="ms-vb-evtCal"><a href="http://blue.hrpa.ca/Conference/RegistrationProcessOverview.aspx?id=4786">Grand Valley 05.10.16 How to Work a Room</a></td><td class="ms-vb-evtCal">Breakfast meeting</td><td class="ms-vb-evtCal"></td></tr><tr class="ms-alternating"><td class="ms-vb-evtCal">5/10/2016</td><td class="ms-vb-evtCal">Halton</td><td class="ms-vb-evtCal"><a href="http://blue.hrpa.ca/Conference/RegistrationProcessOverview.aspx?id=4801">Halton: 05.10.16 Annual Business Meeting</a></td><td class="ms-vb-evtCal"></td><td class="ms-vb-evtCal"></td></tr><tr><td class="ms-vb-evtCal">5/10/2016</td><td class="ms-vb-evtCal">Sarnia</td><td class="ms-vb-evtCal"><a href="https://blue.hrpa.ca/Conference/RegistrationProcessOverview.aspx?id=4510">Sarnia and District 05.10.16 Building a WOW! Recognition Culture</a></td><td class="ms-vb-evtCal">Dinner meeting</td><td class="ms-vb-evtCal"></td></tr><tr class="ms-alternating"><td class="ms-vb-evtCal">5/10/2016</td><td class="ms-vb-evtCal">HRPA</td><td class="ms-vb-evtCal"><a href="http://www.hrpa.ca/ProfessionalDevelopment/Pages/Workplace-Investigations-Certificate.aspx">Workplace Investigations Certificate Program - Toronto</a></td><td class="ms-vb-evtCal">Certificate</td><td class="ms-vb-evtCal">EMPLOYEE RELATIONS</td></tr><tr><td class="ms-vb-evtCal">5/11/2016</td><td class="ms-vb-evtCal">Durham</td><td class="ms-vb-evtCal"><a href="http://blue.hrpa.ca/Conference/RegistrationProcessOverview.aspx?id=4613">Durham: 05.11.16 Annual Business Meeting and Recognition Event</a></td><td class="ms-vb-evtCal"></td><td class="ms-vb-evtCal"></td></tr><tr class="ms-alternating"><td class="ms-vb-evtCal">5/11/2016</td><td class="ms-vb-evtCal">HRPA</td><td class="ms-vb-evtCal"><a href="http://www.hrpa.ca/ProfessionalDevelopment/Pages/WebcastEmploymentStandardsWhatYouNeedToKnow.aspx">Employment Standards - What you need to know!</a></td><td class="ms-vb-evtCal">Webinar: live</td><td class="ms-vb-evtCal">EMPLOYEE RELATIONS</td></tr><tr><td class="ms-vb-evtCal">5/11/2016</td><td class="ms-vb-evtCal">Quinte</td><td class="ms-vb-evtCal"><a href="http://blue.hrpa.ca/Conference/RegistrationProcessOverview.aspx?id=4789">Quinte: 05.11.16 ABM and HRPA Strategy Update</a></td><td class="ms-vb-evtCal">Dinner meeting</td><td class="ms-vb-evtCal"></td></tr><tr class="ms-alternating"><td class="ms-vb-evtCal">5/11/2016</td><td class="ms-vb-evtCal">West Toronto</td><td class="ms-vb-evtCal"><a href="http://blue.hrpa.ca/Conference/RegistrationProcessOverview.aspx?id=4788">West Toronto: 05.11.16 Why Can't You Be More Like Me?</a></td><td class="ms-vb-evtCal">Dinner meeting</td><td class="ms-vb-evtCal"></td></tr><tr><td class="ms-vb-evtCal">5/11/2016</td><td class="ms-vb-evtCal">Windsor</td><td class="ms-vb-evtCal"><a href="https://blue.hrpa.ca/Conference/RegistrationProcessOverview.aspx?id=4831">Windsor and District 05.11.16 Violence in the Workplace - An Employer's Guide</a></td><td class="ms-vb-evtCal">Workshop</td><td class="ms-vb-evtCal"></td></tr></table><table cellspacing="0" cellpadding="4" border="0" width="100%" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><tr><td nowrap class="ms-paging-evtCal" align="center">1
-          - 10&nbsp;<a href="javascript: __doPostBack('ctl00$m$g_e60df066_e1fd_4ebf_adae_5fc7c45f168f','dvt_firstrow={11};dvt_startposition={Paged%3dTRUE%26p_EventDate%3d20160511%252004%253a00%253a00%26p_Title%3dWindsor%2520and%2520District%252005%252e11%252e16%2520Violence%2520in%2520the%2520Workplace%2520%252d%2520An%2520Employer%2527s%2520Guide%26p_ID%3d488644}');"><img src="/_layouts/images/next.gif" border="0" alt="Next"></a></td></tr></table></div></td>
-			</tr>
-		</table></td>
-	</tr>
-</table>
-
+                        <!-- ===================== -->
+                        <!-- SharePoint Navigation -->
+                        <!-- ===================== -->
+                        <div id="DeltaTopNavigation" class="ms-displayInline">
+	
+                        <div id='WidgetHost_ctl00_ctl44' class='widgetHost wrGlobalNavigation'><div class='widget_title'><div class='widget_title_left'></div><div class='widget_title_body'>HRPA Header</div><div class='widget_title_right'></div></div></div>
+                        
 </div>
-<!-- end of left column -->
+                        <!-- ====================== -->
+                        <!-- /SharePoint Navigation -->
+                        <!-- ====================== -->
+                        <!-- Promotions render placeholder -->
+                    </div>
+                    <div class="hide-Full">
+                        <div id="mobilepromotionfiller">
+                        </div>
+                        <div class="promotions-Mobile" style="display:block;">
+                        </div>
+                    </div>
+                    <!-- /Promotions render placeholder -->
+                    <div class="hide-Full searchpurple-bg">
+                        <span id="DeltaPlaceHolderLowerSearchArea">
+                        
+                        
+                        <div id="mobileSearchInput" style="display:none;">
+                            <div id="mobilesearchfiller">
+                            </div>
+                            <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
+	<div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ2" width="100%" class="ms-WPBody noindex " OnlyForMePart="true" allowDelete="false" style="" ><div componentid="ctl00_PlaceHolderLowerSearchArea_ctl01_csr" id="ctl00_PlaceHolderLowerSearchArea_ctl01_csr"></div><noscript><div id="ctl00_PlaceHolderLowerSearchArea_ctl01_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderLowerSearchArea_ctl01">
 
-<!-- right column -->
-<div class="wr_right">
-
-<div class="wr_rss">
-<div>
-	<div class="push_right">
-		<div class="rss_text align_right"><A HREF='http://www.hrpa.ca/News/_layouts/listfeed.aspx?List=0e23dbba-10e6-47d3-a97c-9e317ad99258&View=67821d7a-074b-467f-ab1f-9c2bd187b3d5'>Subscribe</A></div>
-		<div class="rss_img align_right"><A HREF='http://www.hrpa.ca/News/_layouts/listfeed.aspx?List=0e23dbba-10e6-47d3-a97c-9e317ad99258&View=67821d7a-074b-467f-ab1f-9c2bd187b3d5'><IMG SRC='/_layouts/images/rss.gif' BORDER=0 alt='Subscribe' valign="bottom" /></A></div>
-		<div class="clear_all"></div>
+	</div><div class="ms-clear"></div></div>
+</div>
+                            
+                        </div>
+                        
+                        
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    
+                    
+                    <span id="DeltaPlaceHolderMain">
+                        
+            <div class="news-bg">
+                <div class="container">
+                    <div class="row">
+                        <!-- ============== Top Zone ============== -->
+                        <div class="col-lg-12 fill-g" data-name="WebPartZone">
+                            
+                            
+                            <div>
+                                <div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl38_g_4ecd5010_14b5_4f2f_9c83_86d8ce03ab57" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="4ecd5010-14b5-4f2f-9c83-86d8ce03ab57" HasPers="false" id="WebPartctl00_ctl38_g_4ecd5010_14b5_4f2f_9c83_86d8ce03ab57" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id='WidgetHost_ctl00_ctl38_g_4ecd5010_14b5_4f2f_9c83_86d8ce03ab57' class='widgetHost hrpaPromotions'><div class='widget_title'><div class='widget_title_left'></div><div class='widget_title_body'>Promotions</div><div class='widget_title_right'></div></div></div><div class="ms-clear"></div></div>
+		</div>
 	</div>
 </div>
-
-
-    	
-</div>
-
-<menu class="ms-SrvMenuUI">
-	<ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
+                            </div>
+                            
+                        </div>
+                        <!-- ============== /Top Zone ============== -->
+                        <!-- ============== Title Edit Mode Panel ============== -->
+                        
+                        
+                        
+                        
+                        <!-- ============== /Title Display Mode Panel ============== -->
+                        <!-- Zone 5 -->
+                        <!-- ============== Top Zone ============== -->
+                        <div class="col-lg-12 fill-g" data-name="WebPartZone">
+                            
+                            
+                            <div>
+                                <menu class="ms-hide">
+	<ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/15/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
 
 	</ie:menuitem>
 </menu>
-<table ID="wr_RightAdv"  >
-        <tr >
-            <td ><script type='text/javascript'><!--                                                                                // <![CDATA[
-                OA_show(117);
-                // ]]> --></script>
-            </td>
-        </tr>
-        <tr >
-            <td ><script type='text/javascript'><!--                                                                                // <![CDATA[
-                OA_show(118);
-                // ]]> --></script>
-            </td>
-        </tr >
-        <tr>
-            <td ><script type='text/javascript'><!--                                                                                // <![CDATA[
-                OA_show(119);
-                // ]]> --></script>
-            </td>
-        </tr>
- </table>
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-	<tr>
-		<td id="MSOZoneCell_WebPartWPQ8" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%" style="width:240px">
-			<tr>
-				<td valign="top"><div WebPartID="edf04b4e-0470-42b2-ba36-22429ddc8901" HasPers="false" id="WebPartWPQ8" class="ms-WPBody" allowDelete="false" style="width:240px;overflow:auto;" ><table width="240" border="0" cellspacing="0" cellpadding="0">
-<tr>
-  <td ><table width="240" border="0" cellspacing="0" cellpadding="0">
-   
-      <tr>
-        <td width="15">&nbsp;</td>
-        <td width="225">
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      
-        <a class="twitter-timeline" href="https://twitter.com/HRPA" data-widget-id="411329116630036480">Tweets by @HRPA</a></td>
-    </tr>
-  </table></td>
-</tr>
-</table></div></td>
-			</tr>
-		</table><div class="ms-PartSpacingVertical"></div></td>
-	</tr><tr>
-		<td id="MSOZoneCell_WebPartWPQ6" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%" style="width:260px">
-			<tr>
-				<td valign="top"><div WebPartID="418c766d-04f7-4d34-a108-74b64a59ae0b" HasPers="false" id="WebPartWPQ6" class="ms-WPBody" allowDelete="false" style="width:260px;height:360px;" ><iframe title="Page Viewer ‭[1]‬" frameBorder="0" id="MSOPageViewerWebPart_WebPartWPQ6" name="MSOPageViewerWebPart_WebPartWPQ6" width="100%" height="100%" src="/Documents/hireauthoritywidget/searchbox_240x200.htm" ddf_src="/Documents/hireauthoritywidget/searchbox_240x200.htm">
-					<div class="UserGeneric">The current browser does not support Web pages that contain the IFRAME element. To use this Web Part, you must use a browser that supports this element, such as Internet Explorer 7.0 or later.</div>
-				</iframe></div></td>
-			</tr>
-		</table><div class="ms-PartSpacingVertical"></div></td>
-	</tr><tr>
-		<td id="MSOZoneCell_WebPartWPQ7" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top"><div WebPartID="f4e42645-f8f2-4c9d-bbdf-26b333f703c2" HasPers="false" id="WebPartWPQ7" width="100%" class="ms-WPBody" allowDelete="false" style="" ><p align="center"><a title="Member Perks" href="/MemberCentre/Pages/MemberPerks.aspx" target="_blank"><img alt="Member Perks" src="/MemberCentre/PublishingImages/memberperks_btn.jpg" border="0"/></a>&#160; </p>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td align="center"><div style="width: 185px; text-align: center;"><a href="http://www.melochemonnex.com/en/group/hrpa?campaignid=PONMEBAN154891"><img id="_x0000_i1031" src="http://www.td-insurance.com/banner/185x360_en_P.gif" border="0" alt=""/></a><br/><span style="color: rgb(0, 66, 47); font-family: arial; font-size: 10px; font-weight: bold;">Home and <a href="http://www.melochemonnex.com/en/car-insurance" style="color: rgb(0, 66, 47); text-decoration: none;">Car Insurance</a></span></div></td>
-  </tr>
-<tr> </tr>
-
-
-</tbody></table>
-</div></td>
-			</tr>
-		</table></td>
-	</tr>
-</table>
-
-
-<div class="iWantToBox">
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-	<tr>
-		<td id="MSOZoneCell_WebPartWPQ4" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top"><div WebPartID="17e1ff1e-f302-4513-8d7e-5c53cb75b532" HasPers="false" id="WebPartWPQ4" width="100%" class="ms-WPBody" allowDelete="false" style="" ><div class="iWantToHeader clearfix"><div class="iWantToHeaderImg"><img src="/Style%20Library/images/ico_iwantto.png" alt=""/>&#160;</div>
-<div class="iWantToHeaderTitle">I want to</div></div></div></td>
-			</tr>
-		</table><div class="ms-PartSpacingVertical"></div></td>
-	</tr><tr>
-		<td id="MSOZoneCell_WebPartWPQ5" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-				<td valign="top"><div WebPartID="011d5446-732c-4143-9af5-0c7d567f9c04" HasPers="false" id="WebPartWPQ5" width="100%" class="ms-WPBody" allowDelete="false" style="" ><div id="slwp_ctl00_m_g_011d5446_732c_4143_9af5_0c7d567f9c04" class="slm-layout-main slwpmarker"><div class="dfwp-column" style="width:100%" ><div class="slm-layout-main groupmarker"><ul class="dfwp-list"><li><div class="iWantToBoxItem"><a href="/Documents/Bill32/Bill32RoyalAssent.pdf" target="_blank" title="">View the Registered Human Resources Professionals Act, 2013 (PDF)</a></div></li ><li><div class="iWantToBoxItem"><a href="/OfficeOfTheRegistrar/Pages/Statutory Objects.aspx" target="" title="">Learn more about the role HRPA plays in protecting the public</a></div></li ><li><div class="iWantToBoxItem"><a href="/OfficeOfTheRegistrar/CHRP/Pages/certification.aspx" target="_blank" title="Learn more about the CHRP and SHRP designations">Learn more about the CHRP and SHRP designations</a></div></li ><li><div class="iWantToBoxItem"><a href="/Documents/aoda/HRPAAODAPolicyandprocedure.pdf" target="_blank" title="">View HRPA's AODA Policies and Procedures</a></div></li ><li><div class="iWantToBoxItem"><a href="/MemberCentre/Pages/VolunteerCentre.aspx" target="_blank" title="Learn more about volunteering opportunities with HRPA">Learn more about volunteering opportunities with HRPA</a></div></li ><li><div class="iWantToBoxItem"><a href="http://vdev.hrpao.org/resourcerequest/InRequest.aspx" target="" title="Request information from the Resource Centre (members only)">Request information from the Resource Centre (members only)</a></div></li ><li><div class="iWantToBoxItem"><a href="https://blue.hrpa.ca/Events/CalendarEventsListView.aspx" target="_blank" title="Register for an HRPA Chapter Event">View all Chapter Events</a></div></li ></ul><div class="footermarker"><!--empty--></div></div></div></div></div></td>
-			</tr>
-		</table></td>
-	</tr>
-</table>
-</div>
-
-
-</div>
-<!-- end of right column -->
-
-</div>
-
-
-
-                                    <!--- --- ---  Hidden Placeholders --- --- --->
-                                    
-                                    <!--- --- ---  End of Hidden Placeholders --- --- --->
-                                </td>
-                            </tr>
-                        </table>
+                            </div>
+                            
+                        </div>
+                        <!-- ============== /Top Zone ============== -->
                     </div>
                 </div>
-            
-                <div class="clearAll">
+                <div class="container">
+                    <div class="row">
+                        <!-- Zone 6 -->
+                        <!-- ============== Top Page Content ============== -->
+                        <div class="col-md-8 fill-b" data-name="Page Field: Top Page Content">
+                            
+                            
+                            <div id="ctl00_PlaceHolderMain_ctl01_label" style='display:none'>Top Page Content</div><div id="ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl01_label"><span>​​​​​​​​​​​​​​​​​​​​​​​​​​​​ ​ ​​​​​​​​​​​</span><span style="color&#58;#532d6d;font-family&#58;hrpa-title;font-size&#58;2.667em;font-weight&#58;bold;line-height&#58;1.231;">About HRPA​</span><p class="hrpa-styleElement-Para"><br>​​​​​The Human Resources Professionals Association protects the public interest by governing and regulating the professional practice of its more than 22,000 member registrants.&#160;</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">In enhancing its status as a regulatory association, HRPA advances the&#160;professionalization of HR and acknowledgment of the profession as a key driver of organizational success by&#58;</p><ul><li><p class="hrpa-styleElement-Para">ensuring competent and ethical HR practice, </p></li><li><p class="hrpa-styleElement-Para">creating compelling value propositions for all in HR to become members, </p></li><li><p class="hrpa-styleElement-Para">providing strong and respected designations based on a globally recognized body of knowledge, and </p></li><li><p class="hrpa-styleElement-Para">validation of&#160;that capability through rigorous examination and supervision of experience.&#160;​<br><br></p></li></ul><h3 class="hrpa-styleElement-h3">Navigating HRPA.ca</h3><div align="center"><table class="hrpa-styleTable-default" cellspacing="0" style="width&#58;70%;"><tbody><tr><td class="hrpa-styleTable-default" style="width&#58;103.33px;">​<img align="top" class="hrpa-stylePosition-2" alt="menu button" src="/abouthrpa_/PublishingImages/menu_icon.png" style="margin&#58;5px;width&#58;65px;line-height&#58;28.8px;" /><span style="line-height&#58;28.8px;"></span>                                  <div><br> &#160;</div><div>&#160;</div></td><td class="hrpa-styleTable-default" style="width&#58;85%;"><p class="hrpa-styleElement-Para">                  ​The website is designed to&#160;be navigated using the menu icon. When you select a topic it displays all pages related to that topic. You're never more than a couple clicks away from anything you are interested in learning about.​​ <a title="Accessibility Features" href="/forthepublic_/Pages/Accessibility.aspx"><span class="hrpa-styleStyle-hover-right">Learn more about our website accessibility&#160;features.</span></a></p></td></tr></tbody></table></div><div align="center">&#160;</div><p class="hrpa-styleElement-Para">&#160;</p><h3 class="hrpa-styleElement-h3"><a href="/abouthrpa_/Pages/Calendar-of-Events.aspx"><span class="hrpa-styleStyle-hover-right">Calendar of Events</span></a>&#160;</h3></div>
+                            
+                        </div>
+                        <!-- ============== /Top Page Content ============== -->
+                        <!-- Zone 7 -->
+                        <!-- ============== Top Right  ============== -->
+                        <div class="col-md-4 fill-g col-md-offset-1 hide-Mobile" data-name="WebPartZone">
+                            
+                            
+                            <div>
+                                <div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartWPQ3" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="7551f784-ae4a-463d-98f5-e69c0f277272" HasPers="false" id="WebPartWPQ3" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><h2 class="hrpa-styleElement-h2">​<a href="/about-hrpa/calendar-of-events"><span class="hrpa-styleStyle-hover-right">Calendar of Events</span></a></h2><p style="text-align: left;"><a href="/about-hrpa/calendar-of-events"><img alt="Calendar of Events" src="/abouthrpa_/PublishingImages/Pages/default/calendar-p-300.jpg" style="margin: 5px 20px;"/></a>&#160;</p></div><div class="ms-clear"></div></div>
+		</div><div class="ms-PartSpacingVertical"></div>
+	</div><div id="MSOZoneCell_WebPartWPQ5" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="4a00c707-d8bd-42dd-80c6-30e3320ab2b8" HasPers="false" id="WebPartWPQ5" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><h3 class="hrpa-styleElement-h3">​Other Areas of Interest</h3><p><a href="/forthepublic_/Pages/default.aspx"><span class="hrpa-styleStyle-hover-right">For the Public</span></a></p><p><a href="/forthepublic_/Pages/For-Employers.aspx"><span class="hrpa-styleStyle-hover-right">For Employers</span></a></p><p><a href="/hrdesignations_/Pages/default.aspx"><span class="hrpa-styleStyle-hover-right">About HR Designations</span></a></p><p><a href="/professionalregulation_/Pages/default.aspx"><span class="hrpa-styleStyle-hover-right">About Professional Regulation</span></a></p><p><a href="/membership_/Pages/default.aspx"><span class="hrpa-styleStyle-hover-right">About Membership</span></a></p><p><a href="/professionaldevelopment_/Pages/default.aspx"><span class="hrpa-styleStyle-hover-right">About Professional Development</span></a></p></div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+                            </div>
+                            
+                        </div>
+                        <!-- ============== /Top Right  ============== -->
+                    </div>
+                </div>
+                <!-- ============== Top Purple Ribbon ============== -->
+                <!-- ============== Top Edit Mode Panel ============== -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 fill-b">
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- ============== /Edit Mode Panel ============== -->
+                <!-- ============== Display Mode Panel ============== -->
+                
+                
+                <div>
+	
+                    
+                    <div class="purple-bg" id="purplesection">
+                        <div class="container">
+                            <div class="row">
+                                <div class="p-top">
+                                </div>
+                                <div class="col-xs-12 col-md-12 col-sm-12">
+                                    <!-- Zone 8A Display -->
+                                    <!-- ============== Purple Title Display ============== -->
+                                    <div id="purpletitle" class="purp-title hrpa-title" data-name="Page Field: Purple Title">
+                                        
+                                        
+                                        Our Goal
+                                        
+                                    </div>
+                                    <!-- ============== /Purple Title Display ============== -->
+                                    <!-- Zone 8b Display -->
+                                    <!-- ============== Purple Content Display ============== -->
+                                    <div id="purplecontent" class="purp-parg hide-Mobile" data-name="Page Field: Purple Content">
+                                        
+                                        
+                                        <div id="ctl00_PlaceHolderMain_ctl03_ctl01_label" style='display:none'>Purple Content</div><div id="ctl00_PlaceHolderMain_ctl03_ctl01__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl03_ctl01_label"><p>​<strong>​​​That certified human resources professionals are viewed as the architects of people-driven business strategies that add quantifiable value to organizations</strong></p></div>
+                                        
+                                    </div>
+                                    <!-- ============== /Purple Content Display ============== -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+</div>
+                
+                <!-- ============== /Display Mode Panel ============== -->
+                <!-- ============== /Top Purple Ribbon ============== -->
+                <div class="news-bg middle-Web-Zone-Area">
+                    <div class="container first-level-container">
+                        <div class="row first-level-row">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <!-- Zone 9 -->
+                                            <!-- ============== Middle Left Top Zone ============== -->
+                                            <div class="col-md-12" data-name="WebPartZone">
+                                                
+                                                
+                                                <div>
+                                                    <div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartWPQ4" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="34c6d29a-de79-4111-a9c1-1a9c7fb1d855" HasPers="false" id="WebPartWPQ4" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div class="ms-rtestate-field"><h3 class="hrpa-styleElement-h3">​​Protection of the Public</h3><p class="hrpa-styleElement-Para" style="font-size: 18px;">Valued professions all share certain attributes, including robust regulatory frameworks.&#160;HRPA intends to be a leader in regulatory effectiveness. Read more about our framework and processes in the<a href="/professionalregulation_/Pages/default.aspx"></a><a href="/professionalregulation_/Pages/default.aspx"></a><a href="/professionalregulation_/Pages/default.aspx"><span class="hrpa-styleStyle-hover-right">Professional Regulation</span></a>&#160;section of our website. ​Read more about how this benefits employers and protects the Public interest in the&#160;<span class="hrpa-styleStyle-hover-right"><a href="/forthepublic_/Pages/default.aspx">For the Public&#160;</a></span>section of the website.</p><p class="hrpa-styleElement-Para" style="font-size: 18px;">&#160;</p><h3 class="hrpa-styleElement-h3">Thought Leadership</h3><p class="hrpa-styleElement-Para">Thought leadership is a key enabler of our effectiveness as an association, whether it&#39;s leading the effort toward the acceptance of a globally recognized HR <a href="/Documents/Designations/HRPA_Professional_Competency_Framework_Final-2016.pdf"><span class="hrpa-styleStyle-hover-right">body of knowledge</span></a>​, providing policy makers with trusted advice based on member consultation, partnering with world-class think tanks on new knowledge creation, or investing in primary research to advance evidence-based HR practice. We publish <a href="/forthepublic_/Pages/HR-Professional.aspx"><span class="hrpa-styleStyle-hover-right">HR Professional</span>​</a>, the largest circulation HR magazine in Canada eight time a year and produce major thought provoking events like our <a href="/professionaldevelopment_/Pages/Annual-Conference.aspx">Annual Conference</a>.&#160; We are also committed to <a href="/forthepublic_/Pages/For-Educators.aspx"><span class="hrpa-styleStyle-hover-right">HR scholarship</span></a>and fund annual scholarships for every college and university in Ontario with an HR program, as well as awards for the best Masters thesis and PhD dissertation.</p></div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Left Top Zone ============== -->
+                                        </div>
+                                        <!-- ============== Mobile Content Only ============== -->
+                                        <div class="row hide-Full">
+                                            <!-- Zone 10 Mobile -->
+                                            <!-- ============== Middle Page Content 1 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Middle Page Content 1">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl04_label" style='display:none'>Middle Page Content 1</div><div id="ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl04_label"><h3 class="hrpa-styleElement-h3">Valued Designations</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">In October 2014, HRPA introduced the &#160;<span class="hrpa-styleStyle-hover-right"><a title="HRPA Competency Framework" href="/Documents/Designations/HRPA_Professional_Competency_Framework_Final-2016.pdf" target="_blank">HRPA Competency Framework</a></span>&#160;designed to meet the demands of organizations in the 21st century. It lays the foundation for a global body of knowledge and defines competency across 213 core HR competencies and 15 enabling competencies at three levels of capability--entry, fully professional and executive--corresponding to our three levels of certification&#58; <a title="Certified HR Professional (CHRP)" href="/hrdesignations_/Pages/CHRP.aspx"><span class="hrpa-styleStyle-hover-right">Certified HR Professional (CHRP)</span></a>, <a title="Leader (CHRL)" href="/hrdesignations_/Pages/CHRL.aspx"><span class="hrpa-styleStyle-hover-right">Leader (CHRL)</span></a>, and <a title="Executive (CHRE)" href="/hrdesignations_/Pages/CHRE.aspx"><span class="hrpa-styleStyle-hover-right">Executive (CHRE)​</span></a>. You can read more about our designations and&#160;their various requirements, including&#160;<span class="hrpa-styleStyle-hover-right"><a title="Exams" href="/hrdesignations_/Pages/Exams.aspx">exams</a></span>,&#160;and when they come into effect&#160;in the&#160;<span class="hrpa-styleStyle-hover-right"><a title="HR Designations" href="/hrdesignations_">HR Designations</a></span>&#160;section of the website.</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">&#160;</p><h3 class="hrpa-styleElement-h3">Annual Conference</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">Each year HRPA holds the largest HR<span class="hrpa-styleStyle-hover-right"><a title="Annual Conference" href="/professionaldevelopment_/Pages/Annual-Conference.aspx">Annual Conference</a></span>&#160;and trade show for the profession outside of the U.S. Learn more about this unique learning and networking opportunity.</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">&#160;</p><h3 class="hrpa-styleElement-h3">Professional Development</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">A key requirement of every HRPA designation is a commitment to continuing professional development to enhance professional capability and currency of knowledge. Learn more about, and register for, HRPA's &#160;<a title="Professional Development" href="/professionaldevelopment_/Pages/default.aspx"><span class="hrpa-styleStyle-hover-right">Professional Development&#160;</span></a>programs.</p></div>
+                                                
+                                            </div>
+                                            <!-- Zone 11 Mobile -->
+                                            <!-- ============== /Middle Page Content 1 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Right Page Content 1">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl05_label" style='display:none'>Right Page Content 1</div><div id="ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl05_label"><h3 class="hrpa-styleElement-h3">History, Governance, Plans</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">You can learn more about the history of our association, our governance and the Strategic Plan that sets the course for our evolution through 2020 in the&#160;<span class="hrpa-styleStyle-hover-right"><a title="About HRPA" href="/abouthrpa_/Pages/default.aspx">About H​RPA</a></span>&#160;section of the website.</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">&#160;</p><h3 class="hrpa-styleElement-h3">Membership Value</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">HRPA depends upon committed staff and the contributions of hundreds of engaged volunteers. Through its network of&#160;<span class="hrpa-styleStyle-hover-right"><a title="28 Chapters" href="/membership_/Pages/HRPA-Chapters.aspx">28 Chapters</a>&#160;</span>across Ontario, volunteer Chapter leaders provide members with local&#160;learning, professional networking,&#160;<span class="hrpa-styleStyle-hover-right"><a title="HR Mentoring" href="/membership_/Pages/HR-Mentoring.aspx">mentoring​</a></span>&#160;and&#160;<span class="hrpa-styleStyle-hover-right"><a title="volunteering" href="/membership_/Pages/Volunteering.aspx">volunteering</a></span>&#160;experiences. Increasingly our volunteers are helping us create virtual communities for members whatever their interests or location. Combined with a broad array of&#160;<span class="hrpa-styleStyle-hover-right"><a title="Member benefits" href="/membership_/Pages/Member-Benefits.aspx">services</a></span>&#160;to advance members' careers&#160;and professional standing, we are making every effort for&#160;&#160;<span class="hrpa-styleStyle-hover-right"><a title="HRPA Membership" href="/membership_">HRPA membership</a></span>&#160;to appeal to all who practice HR.</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">&#160;</p><h3 class="hrpa-styleElement-h3">For Students</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">There is no profession that can impact&#160;the success of an organization like human resources. For those who enjoy business, care for people, and thrive on challenge, there is no profession like HR. Read more about HR as a career in the&#160;<span class="hrpa-styleStyle-hover-right"><a title="For Students" href="/forstudents_/Pages/default.aspx">For Students&#160;</a></span>section of the website.</p></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Right Page Content 1 ============== -->
+                                            <!-- Zone 13 Mobile -->
+                                            <!-- ============== Middle Page Content 2 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Middle Page Content 2">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl06_label" style='display:none'>Middle Page Content 2</div><div id="ctl00_PlaceHolderMain_ctl06__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl06_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Page Content 2 ============== -->
+                                            <!-- Zone 14 Mobile -->
+                                            <!-- ============== Right Page Content 2 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Right Page Content 2">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl07_label" style='display:none'>Right Page Content 2</div><div id="ctl00_PlaceHolderMain_ctl07__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl07_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Right Page Content 2 ============== -->
+                                            <!-- Zone 15 Mobile -->
+                                            <!-- ============== Middle Page Content 3 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Middle Page Content 3">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl08_label" style='display:none'>Middle Page Content 3</div><div id="ctl00_PlaceHolderMain_ctl08__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl08_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Page Content 3 ============== -->
+                                            <!-- Zone 16 Mobile -->
+                                            <!-- ============== Right Page Content 3 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Right Page Content 3">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl09_label" style='display:none'>Right Page Content 3</div><div id="ctl00_PlaceHolderMain_ctl09__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl09_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Right Page Content 3 ============== -->
+                                            <!-- Zone 17 Mobile -->
+                                            <!-- ============== Middle Page Content 4 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Middle Page Content 4">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl10_label" style='display:none'>Middle Page Content 4</div><div id="ctl00_PlaceHolderMain_ctl10__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl10_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Page Content 4 ============== -->
+                                            <!-- Zone 18 Mobile -->
+                                            <!-- ============== Right Page Content 4 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Right Page Content 4">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl11_label" style='display:none'>Right Page Content 4</div><div id="ctl00_PlaceHolderMain_ctl11__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl11_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Right Page Content 3 ============== -->
+                                        </div>
+                                        <!-- ============== /Mobile Content Only ============== -->
+                                        <div class="row">
+                                            <!-- Zone 12 -->
+                                            <!-- ============== Middle Left Bottom Zone ============== -->
+                                            <div class="col-md-12" data-name="WebPartZone">
+                                                
+                                                
+                                                <div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Left Bottom Zone ============== -->
+                                        </div>
+                                    </div>
+                                    <!-- ============== Full Content Only ============== -->
+                                    <div class="col-md-8 hide-Mobile">
+                                        <div class="row">
+                                            <!-- Zone 10 Full -->
+                                            <!-- ============== Middle Page Content 1 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Middle Page Content 1">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl12_label" style='display:none'>Middle Page Content 1</div><div id="ctl00_PlaceHolderMain_ctl12__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl12_label"><h3 class="hrpa-styleElement-h3">Valued Designations</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">In October 2014, HRPA introduced the &#160;<span class="hrpa-styleStyle-hover-right"><a title="HRPA Competency Framework" href="/Documents/Designations/HRPA_Professional_Competency_Framework_Final-2016.pdf" target="_blank">HRPA Competency Framework</a></span>&#160;designed to meet the demands of organizations in the 21st century. It lays the foundation for a global body of knowledge and defines competency across 213 core HR competencies and 15 enabling competencies at three levels of capability--entry, fully professional and executive--corresponding to our three levels of certification&#58; <a title="Certified HR Professional (CHRP)" href="/hrdesignations_/Pages/CHRP.aspx"><span class="hrpa-styleStyle-hover-right">Certified HR Professional (CHRP)</span></a>, <a title="Leader (CHRL)" href="/hrdesignations_/Pages/CHRL.aspx"><span class="hrpa-styleStyle-hover-right">Leader (CHRL)</span></a>, and <a title="Executive (CHRE)" href="/hrdesignations_/Pages/CHRE.aspx"><span class="hrpa-styleStyle-hover-right">Executive (CHRE)​</span></a>. You can read more about our designations and&#160;their various requirements, including&#160;<span class="hrpa-styleStyle-hover-right"><a title="Exams" href="/hrdesignations_/Pages/Exams.aspx">exams</a></span>,&#160;and when they come into effect&#160;in the&#160;<span class="hrpa-styleStyle-hover-right"><a title="HR Designations" href="/hrdesignations_">HR Designations</a></span>&#160;section of the website.</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">&#160;</p><h3 class="hrpa-styleElement-h3">Annual Conference</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">Each year HRPA holds the largest HR<span class="hrpa-styleStyle-hover-right"><a title="Annual Conference" href="/professionaldevelopment_/Pages/Annual-Conference.aspx">Annual Conference</a></span>&#160;and trade show for the profession outside of the U.S. Learn more about this unique learning and networking opportunity.</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">&#160;</p><h3 class="hrpa-styleElement-h3">Professional Development</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">A key requirement of every HRPA designation is a commitment to continuing professional development to enhance professional capability and currency of knowledge. Learn more about, and register for, HRPA's &#160;<a title="Professional Development" href="/professionaldevelopment_/Pages/default.aspx"><span class="hrpa-styleStyle-hover-right">Professional Development&#160;</span></a>programs.</p></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Page Content 1 ============== -->
+                                            <!-- Zone 11 Full -->
+                                            <!-- ============== Right Page Content 1 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Right Page Content 1">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl13_label" style='display:none'>Right Page Content 1</div><div id="ctl00_PlaceHolderMain_ctl13__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl13_label"><h3 class="hrpa-styleElement-h3">History, Governance, Plans</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">You can learn more about the history of our association, our governance and the Strategic Plan that sets the course for our evolution through 2020 in the&#160;<span class="hrpa-styleStyle-hover-right"><a title="About HRPA" href="/abouthrpa_/Pages/default.aspx">About H​RPA</a></span>&#160;section of the website.</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">&#160;</p><h3 class="hrpa-styleElement-h3">Membership Value</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">HRPA depends upon committed staff and the contributions of hundreds of engaged volunteers. Through its network of&#160;<span class="hrpa-styleStyle-hover-right"><a title="28 Chapters" href="/membership_/Pages/HRPA-Chapters.aspx">28 Chapters</a>&#160;</span>across Ontario, volunteer Chapter leaders provide members with local&#160;learning, professional networking,&#160;<span class="hrpa-styleStyle-hover-right"><a title="HR Mentoring" href="/membership_/Pages/HR-Mentoring.aspx">mentoring​</a></span>&#160;and&#160;<span class="hrpa-styleStyle-hover-right"><a title="volunteering" href="/membership_/Pages/Volunteering.aspx">volunteering</a></span>&#160;experiences. Increasingly our volunteers are helping us create virtual communities for members whatever their interests or location. Combined with a broad array of&#160;<span class="hrpa-styleStyle-hover-right"><a title="Member benefits" href="/membership_/Pages/Member-Benefits.aspx">services</a></span>&#160;to advance members' careers&#160;and professional standing, we are making every effort for&#160;&#160;<span class="hrpa-styleStyle-hover-right"><a title="HRPA Membership" href="/membership_">HRPA membership</a></span>&#160;to appeal to all who practice HR.</p><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">&#160;</p><h3 class="hrpa-styleElement-h3">For Students</h3><p class="hrpa-styleElement-Para" style="font-size&#58;18px;">There is no profession that can impact&#160;the success of an organization like human resources. For those who enjoy business, care for people, and thrive on challenge, there is no profession like HR. Read more about HR as a career in the&#160;<span class="hrpa-styleStyle-hover-right"><a title="For Students" href="/forstudents_/Pages/default.aspx">For Students&#160;</a></span>section of the website.</p></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Right Page Content 1 ============== -->
+                                        </div>
+                                        <div class="row">
+                                            <!-- Zone 13 Full -->
+                                            <!-- ============== Middle Page Content 2 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Middle Page Content 2">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl14_label" style='display:none'>Middle Page Content 2</div><div id="ctl00_PlaceHolderMain_ctl14__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl14_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Page Content 2 ============== -->
+                                            <!-- Zone 14 Full -->
+                                            <!-- ============== Right Page Content 2 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Right Page Content 2">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl15_label" style='display:none'>Right Page Content 2</div><div id="ctl00_PlaceHolderMain_ctl15__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl15_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Right Page Content 2 ============== -->
+                                        </div>
+                                        <div class="row">
+                                            <!-- Zone 15 Full -->
+                                            <!-- ============== Middle Page Content 3 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Middle Page Content 3">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl16_label" style='display:none'>Middle Page Content 3</div><div id="ctl00_PlaceHolderMain_ctl16__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl16_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Page Content 3 ============== -->
+                                            <!-- Zone 16 Full -->
+                                            <!-- ============== Right Page Content 3 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Right Page Content 3">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl17_label" style='display:none'>Right Page Content 3</div><div id="ctl00_PlaceHolderMain_ctl17__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl17_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Right Page Content 3 ============== -->
+                                        </div>
+                                        <div class="row">
+                                            <!-- Zone 17 Full -->
+                                            <!-- ============== Middle Page Content 4 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Middle Page Content 4">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl18_label" style='display:none'>Middle Page Content 4</div><div id="ctl00_PlaceHolderMain_ctl18__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl18_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Middle Page Content 4 ============== -->
+                                            <!-- Zone 18 Full -->
+                                            <!-- ============== Right Page Content 4 ============== -->
+                                            <div class="col-md-6" data-name="Page Field: Right Page Content 4">
+                                                
+                                                
+                                                <div id="ctl00_PlaceHolderMain_ctl19_label" style='display:none'>Right Page Content 4</div><div id="ctl00_PlaceHolderMain_ctl19__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl19_label"></div>
+                                                
+                                            </div>
+                                            <!-- ============== /Right Page Content 3 ============== -->
+                                        </div>
+                                    </div>
+                                    <!-- ============== /Full Content Only ============== -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 fill-b">
+                            <!-- ============== Top Edit Mode Panel ============== -->
+                            
+                            
+                            
+                            
+                            <!-- ============== /Top Edit Mode Panel ============== -->
+                        </div>
+                    </div>
+                </div>
+                <!-- ============== Top Display Mode Panel ============== -->
+                
+                
+                <div>
+	
+                    
+                    <div class="grey-bg3" id="topgreysection">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12 col-sm-12">
+                                    <!-- Zone 19A Display -->
+                                    <!-- ============== Top Gray Title Display ============== -->
+                                    <div id="topgraytitle" class="grey-title hrpa-title" data-name="Page Field: Top Gray Title">
+                                        
+                                        
+                                        Where we have come from; where we are going
+                                        
+                                    </div>
+                                    <!-- ============== /Top Gray Title Display ============== -->
+                                    <!-- Zone 19B Display -->
+                                    <!-- ============== Top Gray Content Display ============== -->
+                                    <div id="topgraycontent" class="grey-parg hide-Mobile" data-name="Page Field: Top Gray Content">
+                                        
+                                        
+                                        <div id="ctl00_PlaceHolderMain_ctl21_ctl01_label" style='display:none'>Top Gray Content</div><div id="ctl00_PlaceHolderMain_ctl21_ctl01__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl21_ctl01_label"><p>​​​<em>From 2005 to 2010 our focus was on doing things right (efficiency); from 2010 to 2015, our focus was on doing the right things (effectiveness); the next phase is all about impact&#58; substantiating the value the HR profession brings to the organization.​</em></p></div>
+                                        
+                                    </div>
+                                    <!-- ============== /Top Gray Content Display ============== -->
+                                    <div class="g-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+</div>
+                
+                <!-- ============== /Top Display Mode Panel ============== -->
+                <!-- ============== /Top Gray Content Ribbon ============== -->
+                <div class="container">
+                    <div class="row">
+                        <!-- Zone 20 -->
+                        <!-- ============== Middle Bottom Zone ============== -->
+                        <div class="col-lg-12 fill-g" data-name="WebPartZone">
+                            
+                            
+                            <div>
+                                
+                            </div>
+                            
+                        </div>
+                        <!-- ============== /Middle Bottom Zone ============== -->
+                        <!-- Zone 21 -->
+                        <!-- ============== Top Middle Content Area ============== -->
+                        <div class="col-lg-12 fill-b" data-name="Page Field: Top Middle Page Content">
+                            
+                            
+                            <div id="ctl00_PlaceHolderMain_ctl22_label" style='display:none'>Top Middle Page Content</div><div id="ctl00_PlaceHolderMain_ctl22__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl22_label"><h2 class="hrpa-styleElement-h2">Recent News​</h2><h4 class="hrpa-styleElement-h4">HRPA Applauds Direction of Ontario Premier's Highly Skilled Workforce Expert Panel Report </h4><p class="hrpa-styleElement-Para">June 23, 2016 - The Human Resources Professionals Association (&quot;HRPA&quot;) applauds the direction outlined today by Ontario Premier Kathleen Wynne's Highly Skilled Workforce Expert Panel.&#160;</p><p class="hrpa-styleElement-Para">&#160;<a href="http&#58;//www.newswire.ca/en/releases/archive/June2016/23/c3762.html"><span class="hrpa-styleStyle-hover-right">HRPA applauds Highly Skilled Workforce Panel</span></a></p><p class="hrpa-styleElement-Para">&#160;</p><h4 class="hrpa-styleElement-h4">HRPA members who conduct workplace investigations to be exempt from the PSISA</h4><p>June 20, 2016 - Ministry of Economic Development, Employment and Infrastructure introduced a package of legislative amendments that are intended to reduce regulatory burdens and practices that cost businesses time and money. As a result of our advocacy work, one of the legislative amendments will be to our act which will now allow HRPA members who conduct workplace investigations to be exempt from the PSISA. </p><p><a href="https&#58;//news.ontario.ca/medt/en/2016/06/burden-reduction-act-2016.html"><span class="hrpa-styleStyle-hover-right">Burden Reduction Act</span></a></p><p>&#160;</p><h4 class="hrpa-styleElement-h4">Hire Authority gets a new home, more features, enhanced value</h4><p>June 2, 2016 - HRPA's HR job board, Hire Authority Canada, has moved onto a new feature-rich platform that offers more value to employers and HRPA member job seekers. </p><p><a href="https&#58;//www.hireauthority.ca/"><span class="hrpa-styleStyle-hover-right">Hire Authority</span></a></p><p>&#160;</p><h4 class="hrpa-styleElement-h4">CPD Skills Self-Assessments pass 1,000</h4><p>June 2, 2016 - More than 1,000 members have completed the CPD skills self-assessment since its release on January 23rd, 2016. Individuals have found the tool helpful in identifying and prioritizing their CPD requirements. Organizations say it has helped a lot in terms of career development plans and department skills gap analysis. </p><p><a href="http&#58;//hrpa.skillsgapanalysis.com/"><span class="hrpa-styleStyle-hover-right">Skills Gap Analysis</span></a></p><p>&#160;</p><h4 class="hrpa-styleElement-h4">&quot;Mind the Gap&quot; - Government and industry must fix the gender wage gap, says HRPA </h4><p>April 12, 2016 - HRPA white paper calls on government and businesses to address the gender wage gap in Ontario. </p><p><a href="http&#58;//bit.ly/1XunYmk"><span class="hrpa-styleStyle-hover-right">Mind the Gap whitepaper</span></a>​</p></div>
+                            
+                        </div>
+                        <!-- ============== /Top Middle Content Area ============== -->
+                    </div>
+                </div>
+                <!-- ============== Bottom Gray Content Ribbon ============== -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 fill-b">
+                            <!-- ============== Bottom Edit Mode Panel ============== -->
+                            
+                            
+                            
+                            
+                            <!-- ============== /Bottom Edit Mode Panel ============== -->
+                        </div>
+                    </div>
+                </div>
+                <!-- ============== Bottom Display Mode Panel ============== -->
+                
+                
+                <div>
+	
+                    
+                    <div class="grey-bg3" id="bottomgreysection">
+                        <div class="container">
+                            <div class="row">
+                                <div class="g-top">
+                                </div>
+                                <div class="col-xs-12 col-md-12 col-sm-12">
+                                    <!-- Zone 22A Display -->
+                                    <!-- ============== Bottom Gray Title Display ============== -->
+                                    <div id="bottomgraytitle" class="grey-title hrpa-title" data-name="Page Field: Bottom Gray Title">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                    <!-- ============== /Bottom Gray Title Display ============== -->
+                                    <!-- Zone 22B Display -->
+                                    <!-- ============== Bottom Gray Content Display ============== -->
+                                    <div id="bottomgraycontent" class="grey-parg hide-Mobile" data-name="Page Field: Bottom Gray Content">
+                                        
+                                        
+                                        <div id="ctl00_PlaceHolderMain_ctl24_ctl01_label" style='display:none'>Bottom Gray Content</div><div id="ctl00_PlaceHolderMain_ctl24_ctl01__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl24_ctl01_label"></div>
+                                        
+                                        <!-- ============== /Bottom Gray Content Display ============== -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+</div>
+                
+                <!-- ============== /Bottom Display Mode Panel ============== -->
+                <div class="container">
+                    <div class="row">
+                        <!-- Zone 23 -->
+                        <!-- ============== Bottom Zome ============== -->
+                        <div class="col-lg-12 fill-g" data-name="WebPartZone">
+                            
+                            
+                            <div>
+                                <div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl38_g_1bdb88b7_fa74_4ef1_9286_5d48ee0875eb" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="1bdb88b7-fa74-4ef1-9286-5d48ee0875eb" HasPers="false" id="WebPartctl00_ctl38_g_1bdb88b7_fa74_4ef1_9286_5d48ee0875eb" width="100%" class="ms-WPBody noindex " allowDelete="false" allowExport="false" style="" ><p>Start by editing this webpart to select a Picture Library to display.</p><div class="ms-clear"></div></div>
+		</div><div class="ms-PartSpacingVertical"></div>
+	</div><div id="MSOZoneCell_WebPartctl00_ctl38_g_e455d70a_80ae_488b_8872_92dea8b66fab" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="e455d70a-80ae-488b-8872-92dea8b66fab" HasPers="false" id="WebPartctl00_ctl38_g_e455d70a_80ae_488b_8872_92dea8b66fab" width="100%" class="ms-WPBody noindex " allowDelete="false" allowExport="false" style="" ><div id="ctl00_ctl38_g_e455d70a_80ae_488b_8872_92dea8b66fab">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><!-- BEGIN LivePerson Monitor. -->
+<script type="text/javascript"> window.lpTag=window.lpTag||{};if(typeof window.lpTag._tagCount==='undefined'){window.lpTag={site:'7392455'||'',section:lpTag.section||'',autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:'1.6.0',_tagCount:1,protocol:'https:',events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn);},0);},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json);},1);}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn);}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn);}else{this._defL=this._defL||[];this._defL.push(fn);}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id);},0);},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site;}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id);}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s);},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady');});}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady');},false);window.addEventListener('load',function(){that._domReady('domReady');},false);}if(typeof(window._lptStop)=='undefined'){this.load();}},start:function(){this.autoStart=true;},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n});}this._timing[n]=(new Date()).getTime();},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init();}else{window.lpTag._tagCount+=1;} </script>
+<!-- END LivePerson Monitor. -->
+
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+                            </div>
+                            
+                        </div>
+                        <!-- ============== /Bottom Zome ============== -->
+                        <!-- Zone 24 -->
+                        <!-- ============== Bottom Page Content ============== -->
+                        <div class="col-lg-12 fill-b" data-name="Page Field: Bottom Page Content">
+                            
+                            
+                            <div id="ctl00_PlaceHolderMain_ctl25_label" style='display:none'>Bottom Page Content</div><div id="ctl00_PlaceHolderMain_ctl25__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl25_label"></div>
+                            
+                        </div>
+                        <!-- ============== /Bottom Page Content ============== -->
+                    </div>
                 </div>
             </div>
-           <!-- // MAIN -->
-            <div id="wr_footer">   
             
-            	<!-- HRPA Adds starts here -->	
-                    <table  width="975" >
-                        <tr>
-                            <td style="padding-left: 0px;"><script type='text/javascript'><!--                                     // <![CDATA[
-                                   OA_show(106);
-                                // ]]> --></script>
-                            </td>
-                            <td style="padding-left: 5px;"><script type='text/javascript'><!--                                                               // <![CDATA[
-                                   OA_show(107);
-                                // ]]> --></script>
-                            </td>
-                            <td style="padding-left: 5px;"><script type='text/javascript'><!--                                                               // <![CDATA[
-                                   OA_show(108);
-                                // ]]> --></script>
-                            </td>
-                        </tr>
-                    </table>
-                <!-- HRPA Adds ends here -->
+            
+            <div>
+	
+                
+                <script type="text/javascript">//<![CDATA[
+                $(document).ready(function () {
+                    if ($("#purpletitle").text().trim() === "") {
+                        $("#purplesection").hide();
+                    }
+                                    
+                    if ($("#topgraytitle").text().trim() === "") {
+                        $("#topgreysection").hide();
+                    } 
+                
+                    if ($("#bottomgraytitle").text().trim() === "") {
+                        $("#bottomgreysection").hide();
+                    }
+                     
+                    $('#s4-workspace').scroll(function () {
+                        var topOfWindow = $('#s4-workspace').offset().top;
+                        var workspaceheight = $('#s4-workspace').height();
+                        var bottomOfWindow = topOfWindow + workspaceheight;
+                        var offset = workspaceheight / 8;  // 12.5% offset
+                        
+                        var bottomoffset = bottomOfWindow - offset;
+                        var topoffset = topOfWindow + offset;
+                
+                        $(".p-top, .g-bottom, .g-top, #purpletitle, #purplecontent, #topgraytitle, #topgraycontent, #bottomgraytitle, #bottomgraycontent").each(function () {
+                            var imagePos = $(this).offset().top;
+                            var hasanimate = $(this).hasClass('animate');                            
+                            
+                            if (!hasanimate) {
+                                if(imagePos <= bottomoffset && imagePos >= topoffset) {
+                                    $(this).addClass('animate');
+                                }           
+                            }
+                        });
+                    });
+                });
+                
+                
+                //]]></script>
+                
+            
+</div>
+            
+            
+            
+            
+            
+        <div style='display:none' id='hidZone'><div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+	<div WebPartID="7ac373b6-f70a-4584-8405-17b2419cccfd" WebPartID2="760911e0-4304-49b1-a5fd-f9cefefd5b22" HasPers="false" id="WebPartctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22" width="100%" class="ms-WPBody ms-WPBorderBorderOnly noindex " allowRemove="false" allowDelete="false" allowExport="false" style="" ><table border="0" style="table-layout:fixed">
+		<tr>
+		<td style='width:552px;height:367px'>
+		<div id='MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_cell' style='display:table-cell;vertical-align:middle;text-align:center;width:552px;height:367px'>
+		<span style='vertical-align:middle;height:100%;display:inline-block'></span>
+		<a id='MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_link' href='' target='_blank'>
+		<img id='MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_curr' style='filter:alpha(opacity=0);opacity:0;border:0px;vertical-align:middle'/>
+		</a></div>
+		</td>
+		<tr>
+		<td style='text-align:center'>
+		<a onclick='NextPrevious(MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_slideshowObject, false);'><img border='0' style='position:relative;cursor:hand' onmouseover='HiliteButton()' onmouseout='DemoteButton()' src='/_layouts/15/images/plprev1.gif' alt='Previous Image' /></a> <a onclick='PlayPause(MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_slideshowObject);'><img border='0' style='position:relative;cursor:hand' onmouseover='HiliteButton()' onmouseout='DemoteButton()' src='/_layouts/15/images/plpause1.gif' id='MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_playpause' alt='Pause' /></a> <a onclick='NextPrevious(MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_slideshowObject, true);'><img border='0' style='position:relative;cursor:hand' onmouseover='HiliteButton()' onmouseout='DemoteButton()' src='/_layouts/15/images/plnext1.gif' alt='Next Image' /></a>
+		</td>
+		</tr>
 
-                  <div id="wr_footerLinks" >
-                    <div id='wr_footerContent'><a href="/MemberCentre/Pages/JoinNow.aspx">Join HRPA</a><span class='wr_footerDividerPadding'> | </span> <a href="/MemberCentre/Pages/2016-HRPA-Membership-Renewal.aspx"> Renew Membership</a><span class='wr_footerDividerPadding'> | </span> <a href="http://www.hrpa.ca/hrparegister/">Public Register</a><span class='wr_footerDividerPadding'> | </span> <a href="/OfficeOfTheRegistrar/Documents/RulesofProfessionalConduct.pdf">Rules of Professional Conduct</a><span class='wr_footerDividerPadding'> | </span> <a href="/HRThoughtLeadership/Pages/HRProfessionalMagazine.aspx">HR Professional Magazine</a><span class='wr_footerDividerPadding'> | </span> <a href="/Pages/SustainabilityStatement.aspx">Sustainability Statement</a><span class='wr_footerDividerPadding'> | </span> <a href="/Documents/privacypolicy/HRPAPrivacyPolicyMarch2015.pdf">Privacy Policy</a><span class='wr_footerDividerPadding'> | </span> <a href="/Pages/HRPAContacts.aspx">Contact Us</a><br /><br /> © 2012 HRPA. All rights reserved.</div>
-                 </div>
-              
+	</table><img id='MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_next' width='0' height='0' style='visibility:hidden' />
+	<img id='MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_prev' width='0' height='0' style='visibility:hidden' />
+	<img id='MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_pp'   width='0' height='0' style='visibility:hidden' />
+	<div class="ms-clear"></div></div>
+</div>
+	</div>
+</div></div>
+                    </span>
+                    
+                </div>
+                <!-- =============== -->
+                <!-- Delegate Footer -->
+                <!-- =============== -->
+                <div id="footerRow" class="s4-notdlg">
+                    <div id="DeltaPlaceHolderFooter">
+	
+                    <div id='WidgetHost_ctl00_ctl46' class='widgetHost wrFooter'><div class='widget_title'><div class='widget_title_left'></div><div class='widget_title_body'>HRPA Footer</div><div class='widget_title_right'></div></div></div>
+                    
+</div>
+                </div>
+                <!-- ================ -->
+                <!-- /Delegate Footer -->
             </div>
         </div>
-        <!-- HRPA markup ends here -->	
-			
-		</div>
-		<!------------------/BodyContainer------------------>
+    <div id="DeltaFormDigest">
+<script type="text/javascript">//<![CDATA[
+        var formDigestElement = document.getElementsByName('__REQUESTDIGEST')[0];
+        if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
+            (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
+        {
+            formDigestElement.value = '0x8A30D1B82D6B001AF4AAE956C31ACBB9AF275D8D6D425A477247905F1542898592851EAAC1E279E33950C53043CA5001FD98A61215746CD67E702CA0A1F9557A,11 Sep 2016 16:25:04 -0000';
+            g_updateFormDigestPageLoaded = new Date();
+        }
+        //]]>
+        </script>
 </div>
-<!------------------/WorkSpace------------------>
-
-
-
-
-  
-		
-  
-   <input type="text" name="__spText1" title="text" style="display:none;" />
-   <input type="text" name="__spText2" title="text" style="display:none;" />
-  <div id="ctl00_panelZone">
-	<div style='display:none' id='hidZone'></div>
-</div><input type='hidden' id='_wpcmWpid' name='_wpcmWpid' value='' /><input type='hidden' id='wpcmVal' name='wpcmVal' value=''/>
 
 <script type="text/javascript">
 //<![CDATA[
-var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);
-WebForm_InitCallback();
-function EnsureScripts(scriptInfoList, finalFunction)
-{
-if (scriptInfoList.length == 0)
-{
-finalFunction();
-}
-else
-{
-var scriptInfo = scriptInfoList.shift();
-var rest = function () { EnsureScripts(scriptInfoList, finalFunction); };
-var defd;
-try
-{
-eval('defd = typeof(' + scriptInfo[1] + ');');
-}
-catch (e)
-{
-defd = 'undefined';
-}
-if (scriptInfo[2])
-{
-EnsureScript(scriptInfo[0], defd, null);
-ExecuteOrDelayUntilScriptLoaded(rest, scriptInfo[0]);
-}
-else
-{
-EnsureScript(scriptInfo[0], defd, rest);
-}
-}
-}
-function PublishingRibbonUpdateRibbon()
-{
-var pageManager = SP.Ribbon.PageManager.get_instance();
-if (pageManager)
-{
-pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
-}
-}var _fV4UI = true;
+var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);var _fV4UI = true;
 function _RegisterWebPartPageCUI()
 {
-    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{3b3dc929-9b5c-4561-b113-f768bd94e8dd}",itemId: 55,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: true,forceCheckout: true,rootFolderUrl: "\u002fPages",itemPermissions:{High:16,Low:196673}};
+    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{3c97da47-5eba-49dc-95a0-18e495f1fb0d}",itemId: 1,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: false,forceCheckout: true,rootFolderUrl: "\u002fPages",itemPermissions:{High:16,Low:196673}};
     SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
     var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
     var hid;
@@ -1369,118 +995,48 @@ function _RegisterWebPartPageCUI()
             wpcomp.selectWebPartZone(null, wzid);
         }
     }
-}
-ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js"); var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
-</script>
-<script type="text/javascript" language="JavaScript" defer="defer">
-<!--
-function SearchEnsureSOD() { EnsureScript('search.js',typeof(GoSearch)); } _spBodyOnLoadFunctionNames.push('SearchEnsureSOD');function S622C1022_Submit() {if (document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_ctl03').value == '0') { document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords').value=''; }SearchEnsureSOD();GoSearch('ctl00_PlaceHolderSearchArea_SearchBox_ctl03','ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords',null,true,false,null,null,null,null,null,'\u002fSearch\u002fPages\u002fResults.aspx', 'This Site','This List', 'This Folder', 'Related Sites', '\u002f_layouts\u002fOSSSearchResults.aspx', '', 'Please enter one or more search words.');if (document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_ctl03').value == '0') { document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords').value='Search this Site...'; }}
-// -->
-</script><script type="text/javascript" language="JavaScript" >
-// append an onload event handler
-$addHandler(window, 'load', function() {
-  document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords').name = 'InputKeywords';
+};
+function __RegisterWebPartPageCUI() {
+ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js");}
+_spBodyOnLoadFunctionNames.push("__RegisterWebPartPageCUI");var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';
+_spBodyOnLoadFunctions.push(function() {
+	$('#WidgetHost_ctl00_ctl38_g_4ecd5010_14b5_4f2f_9c83_86d8ce03ab57').promotionsTransform({ displayGroup: 'Landing Page' },'<div id="fullpromotions">  <div class="container-fluid">    <div class="row">      {{#if results}}        {{#each results}}          {{#if isFull}}            <div class="col-md-12">              <div class="tiles PromoBox_full" style="width: 1920px; height: 600px; background-image: url(&quot;{{BackgroundImage.Url}}?RenditionID=5&quot;);">                <a href="{{HRPAURL.Url}}" {{#if HRPAOpenNewBrowser}}target="_blank"{{/if}}>                  <div class="hrpa-overlay">                    <div class="overlay-title hrpa-title">{{Title}}</div>                    <div class="overlay-parg">{{HRPADescription}}</div>                  </div>                  <div class="large-date">{{formatISO8601Date PromotionDate "MM d, yy"}}</div>                </a>              </div>            </div>          {{/if}}          {{#if isOneThird}}            <div class="col-md-4">              <div class="tiles PromoBox_OneThird" style="width: 640px; height: 600px; background-image: url(&quot;{{BackgroundImage.Url}}?RenditionID=6&quot;);">                <a href="{{HRPAURL.Url}}" {{#if HRPAOpenNewBrowser}}target="_blank"{{/if}}>                  <div class="hrpa-overlay">                    <div class="overlay-title hrpa-title">{{Title}}</div>                    <div class="overlay-parg">{{HRPADescription}}</div>                  </div>                  <div class="large-date">{{formatISO8601Date PromotionDate "MM d, yy"}}</div>                </a>              </div>            </div>          {{/if}}          {{#if isHalfOneThird}}            <div class="col-md-4">              <div class="tiles PromoBox_Half" style="width: 640px; height: 300px; background-image: url(&quot;{{BackgroundImage.Url}}?RenditionID=7&quot;);">                <a href="{{HRPAURL.Url}}" {{#if HRPAOpenNewBrowser}}target="_blank"{{/if}}>                  <div class="hrpa-overlay">                    <div class="overlay-title hrpa-title">{{Title}}</div>                    <div class="overlay-parg"></div>                  </div>                  <div class="small-date">{{formatISO8601Date PromotionDate "MM d, yy"}}</div>                </a>              </div>            </div>          {{/if}}        {{/each}}      {{/if}}    </div>  </div></div><div id="mobilepromotions">  <div class="container-fluid">    <div class="row">      {{#if results}}        {{#each results}}          {{#if isFull}}            <div class="col-md-12">              <div class="tiles PromoBox_full" style="width: 320px; height: 249px; background-image: url(&quot;{{BackgroundImage.Url}}?RenditionID=9&quot;);">                <a href="{{HRPAURL.Url}}" {{#if HRPAOpenNewBrowser}}target="_blank"{{/if}}>                  <div class="hrpa-overlay">                    <div class="overlay-title hrpa-title">{{Title}}</div>                  </div>                </a>              </div>            </div>          {{/if}}          {{#if isOneThird}}            <div class="col-md-4">              <div class="tiles PromoBox_OneThird" style="width: 320px; height: 249px; background-image: url(&quot;{{BackgroundImage.Url}}?RenditionID=9&quot;);">                <a href="{{HRPAURL.Url}}" {{#if HRPAOpenNewBrowser}}target="_blank"{{/if}}>                  <div class="hrpa-overlay">                    <div class="overlay-title hrpa-title">{{Title}}</div>                  </div>                </a>              </div>            </div>          {{/if}}          {{#if isHalfOneThird}}            <div class="col-md-4">              <div class="tiles PromoBox_Half" style="width: 320px; height: 150px; background-image: url(&quot;{{BackgroundImage.Url}}?RenditionID=10&quot;);">                <a href="{{HRPAURL.Url}}" {{#if HRPAOpenNewBrowser}}target="_blank"{{/if}}>                  <div class="hrpa-overlay">                    <div class="overlay-title hrpa-title">{{Title}}</div>                  </div>                </a>              </div>            </div>          {{/if}}        {{/each}}      {{/if}}    </div>  </div></div>');
 });
-function S622C1022_OSBEK(event1) { 
-var kCode = String.fromCharCode(event1.keyCode);
-if(kCode == "\n" || kCode == "\r")
-{   
-S622C1022_Submit();return false;
-}
-}
-{ var searchTextBox = document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords');if (searchTextBox.className.indexOf('s4-searchbox-QueryPrompt') == -1) searchTextBox.className += searchTextBox.className?' s4-searchbox-QueryPrompt':'s4-searchbox-QueryPrompt'; }// -->
-</script>
-<script type="text/javascript">
-//<![CDATA[
-var zz1_CurrentNav_Data = new Object();
-zz1_CurrentNav_Data.disappearAfter = 500;
-zz1_CurrentNav_Data.horizontalOffset = 0;
-zz1_CurrentNav_Data.verticalOffset = 0;
-zz1_CurrentNav_Data.hoverClass = 'zz1_CurrentNav_24 leftNavFlyOutsHover';
-zz1_CurrentNav_Data.hoverHyperLinkClass = 'zz1_CurrentNav_23 leftNavFlyOutsHover';
-zz1_CurrentNav_Data.staticHoverClass = 'zz1_CurrentNav_22 leftNavHover';
-zz1_CurrentNav_Data.staticHoverHyperLinkClass = 'zz1_CurrentNav_21 leftNavHover';
-if (typeof(overrideMenu_HoverStatic) == 'function' && typeof(Menu_HoverStatic) == 'function')
-{
-_spBodyOnLoadFunctionNames.push('enableFlyoutsAfterDelay');
-Menu_HoverStatic = overrideMenu_HoverStatic;
-}
+
+_spBodyOnLoadFunctions.push(function() {
+	$('#WidgetHost_ctl00_ctl44').navantisTopNav(              { siteUrl: '', baseUrl:'' }          ,'');
+});
+
+_spBodyOnLoadFunctions.push(function() {
+	$('#WidgetHost_ctl00_ctl46').navantisFooter({},'');
+});
+
+            ExecuteOrDelayUntilScriptLoaded(
+                function() 
+                {                    
+                    Srch.ScriptApplicationManager.get_current().states = {"webUILanguageName":"en-US","webDefaultLanguageName":"en-US","contextUrl":"https://www.hrpa.ca","contextTitle":"Portal","supportedLanguages":[{"id":1025,"label":"Arabic"},{"id":1093,"label":"Bengali"},{"id":1026,"label":"Bulgarian"},{"id":1027,"label":"Catalan"},{"id":2052,"label":"Chinese (Simplified)"},{"id":1028,"label":"Chinese (Traditional)"},{"id":1050,"label":"Croatian"},{"id":1029,"label":"Czech"},{"id":1030,"label":"Danish"},{"id":1043,"label":"Dutch"},{"id":1033,"label":"English"},{"id":1035,"label":"Finnish"},{"id":1036,"label":"French"},{"id":1031,"label":"German"},{"id":1032,"label":"Greek"},{"id":1095,"label":"Gujarati"},{"id":1037,"label":"Hebrew"},{"id":1081,"label":"Hindi"},{"id":1038,"label":"Hungarian"},{"id":1039,"label":"Icelandic"},{"id":1057,"label":"Indonesian"},{"id":1040,"label":"Italian"},{"id":1041,"label":"Japanese"},{"id":1099,"label":"Kannada"},{"id":1042,"label":"Korean"},{"id":1062,"label":"Latvian"},{"id":1063,"label":"Lithuanian"},{"id":1086,"label":"Malay"},{"id":1100,"label":"Malayalam"},{"id":1102,"label":"Marathi"},{"id":1044,"label":"Norwegian"},{"id":1045,"label":"Polish"},{"id":1046,"label":"Portuguese (Brazil)"},{"id":2070,"label":"Portuguese (Portugal)"},{"id":1094,"label":"Punjabi"},{"id":1048,"label":"Romanian"},{"id":1049,"label":"Russian"},{"id":3098,"label":"Serbian (Cyrillic)"},{"id":2074,"label":"Serbian (Latin)"},{"id":1051,"label":"Slovak"},{"id":1060,"label":"Slovenian"},{"id":3082,"label":"Spanish (Spain)"},{"id":2058,"label":"Spanish (Mexico)"},{"id":1053,"label":"Swedish"},{"id":1097,"label":"Tamil"},{"id":1098,"label":"Telugu"},{"id":1054,"label":"Thai"},{"id":1055,"label":"Turkish"},{"id":1058,"label":"Ukrainian"},{"id":1056,"label":"Urdu"},{"id":1066,"label":"Vietnamese"}],"navigationNodes":[{"id":0,"name":"This Site","url":"~site/_layouts/15/osssearchresults.aspx?u={contexturl}","promptString":"Search this site"}],"showAdminDetails":false,"defaultPagesListName":"Pages","isSPFSKU":false,"userAdvancedLanguageSettingsUrl":"/_layouts/15/regionalsetng.aspx?type=user\u0026Source=https%3A%2F%2Fwww%2Ehrpa%2Eca%2FPages%2FDefault%2Easpx\u0026ShowAdvLang=1","defaultQueryProperties":{"culture":1033,"uiLanguage":1033,"summaryLength":180,"desiredSnippetLength":90,"enableStemming":true,"enablePhonetic":false,"enableNicknames":false,"trimDuplicates":true,"bypassResultTypes":false,"enableInterleaving":true,"enableQueryRules":true,"processBestBets":true,"enableOrderingHitHighlightedProperty":false,"hitHighlightedMultivaluePropertyLimit":-1,"processPersonalFavorites":true},"showSuggestions":true,"showPersonalResults":true,"openDocumentsInClient":false};
+                    Srch.U.trace(null, 'SerializeToClient', 'ScriptApplicationManager state initialized.');
+                }, 'Search.ClientControls.js');var g_clientIdDeltaPlaceHolderMain = "DeltaPlaceHolderMain";
+var g_clientIdDeltaPlaceHolderUtilityContent = "DeltaPlaceHolderUtilityContent";
+Sys.Application.add_init(function() {
+    $create(Srch.SearchBox, {"delayLoadTemplateScripts":true,"initialPrompt":"Input Search Item Here","messages":[],"queryGroupNames":["Default"],"renderTemplateId":"~sitecollection/_catalogs/masterpage/Display Templates/Search/Control_SearchBox_small.js","resultsPageAddress":"/Pages/SearchResults.aspx","showDataErrors":true,"showQuerySuggestions":false,"states":{},"tryInplaceQuery":false,"updatePageTitle":false}, null, null, $get("ctl00_PlaceHolderSearchArea_ctl01_csr"));
+});
+Sys.Application.add_init(function() {
+    $create(Srch.SearchBox, {"delayLoadTemplateScripts":true,"initialPrompt":"Input Search Item Here","messages":[],"queryGroupNames":["Default"],"renderTemplateId":"~sitecollection/_catalogs/masterpage/Display Templates/Search/Control_SearchBox_mobile.js","resultsPageAddress":"/Pages/SearchResults.aspx","showQuerySuggestions":false,"states":{},"tryInplaceQuery":false,"updatePageTitle":false}, null, null, $get("ctl00_PlaceHolderLowerSearchArea_ctl01_csr"));
+});
+var MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_slideshowObject = null;
+(function(){
+var pictureArray = ['https://www.hrpa.ca/testpicturelibrary/_w/joinclickhere_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/octannerlogo1_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/regonline_blue_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/Renewal-button1_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/TDlogo1_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/ThinkstockPhotos-490279260_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/updateprofile_blue_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/Venngo_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/workopolislogo1_jpg.jpg','https://www.hrpa.ca/testpicturelibrary/_w/xlcnet-logo_JPG.jpg','https://www.hrpa.ca/testpicturelibrary/_w/York-Region-email-banner4_jpg.jpg'];
+var linkArray = ['https://www.hrpa.ca/testpicturelibrary/joinclickhere.jpg','https://www.hrpa.ca/testpicturelibrary/octannerlogo1.jpg','https://www.hrpa.ca/testpicturelibrary/regonline_blue.jpg','https://www.hrpa.ca/testpicturelibrary/Renewal-button1.jpg','https://www.hrpa.ca/testpicturelibrary/TDlogo1.jpg','https://www.hrpa.ca/testpicturelibrary/ThinkstockPhotos-490279260.jpg','https://www.hrpa.ca/testpicturelibrary/updateprofile_blue.jpg','https://www.hrpa.ca/testpicturelibrary/Venngo.jpg','https://www.hrpa.ca/testpicturelibrary/workopolislogo1.jpg','https://www.hrpa.ca/testpicturelibrary/xlcnet-logo.JPG','https://www.hrpa.ca/testpicturelibrary/York-Region-email-banner4.jpg'];
+var titleArray = ['','','','','','490279260','','','','',''];
+var descriptionArray = ['','','','','','','','','','',''];
+var heightArray = [70,76,70,71,76,347,70,76,76,191,122];
+var widthArray = [165,180,165,201,180,347,165,180,180,472,523];
+EnsureScriptFunc("imglib.js", "SlideshowObject", function() {MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_slideshowObject = new SlideshowObject('MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_', pictureArray, linkArray, titleArray, descriptionArray, heightArray, widthArray, 3, 1.0);
+ChangePic(MSOPictureLibrarySlideshowWebPart_ctl00_ctl38_g_760911e0_4304_49b1_a5fd_f9cefefd5b22_slideshowObject);
+});
+})();
 //]]>
 </script>
-<script type="text/javascript" >
-<!--
-WPSC.Init(document);
-var varPartWPQ3 = WPSC.WebPartPage.Parts.Register('WPQ3','41e5352c-4c0b-4e2e-a8f6-bc8fd01fda60',document.getElementById('WebPartWPQ3'));
-var varPartWPQ4 = WPSC.WebPartPage.Parts.Register('WPQ4','17e1ff1e-f302-4513-8d7e-5c53cb75b532',document.getElementById('WebPartWPQ4'));
-var varPartWPQ6 = WPSC.WebPartPage.Parts.Register('WPQ6','418c766d-04f7-4d34-a108-74b64a59ae0b',document.getElementById('WebPartWPQ6'));
-var varPartWPQ7 = WPSC.WebPartPage.Parts.Register('WPQ7','f4e42645-f8f2-4c9d-bbdf-26b333f703c2',document.getElementById('WebPartWPQ7'));
-var varPartWPQ8 = WPSC.WebPartPage.Parts.Register('WPQ8','edf04b4e-0470-42b2-ba36-22429ddc8901',document.getElementById('WebPartWPQ8'));
-var varPartWPQ10 = WPSC.WebPartPage.Parts.Register('WPQ10','d1c01ca3-57ce-464f-9f5b-b65ca8c8ce61',document.getElementById('WebPartWPQ10'));
-var varPartWPQ2 = WPSC.WebPartPage.Parts.Register('WPQ2','00000000-0000-0000-0000-000000000000',document.getElementById('WebPartWPQ2'));
-WPSC.WebPartPage.WebURL = 'http:\u002f\u002fwww.hrpa.ca';
-WPSC.WebPartPage.WebServerRelativeURL = '\u002f';
-
-//-->
-</script><script type="text/javascript">
-// <![CDATA[
-// ]]>
-</script>
-<script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002fsp.core.js?rev=7ByNlH\u00252BvcgRJg\u00252BRCctdC0w\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=b6\u00252FcRx1a6orhAQ\u00252FcF\u00252B0ytQ\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002fsp.ui.dialog.js?rev=IuXtJ2CrScK6oX4zOTTy\u00252BA\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.core.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f1033\u002fcore.js?rev=bewW9rgjZqv0mAB2FcLYLw\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002fsp.runtime.js?rev=IGffcZfunndj0247nOxKVg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.core.js");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002fsp.js?rev=\u00252B4ZEyA892P3T0504qi0paw\u00253D\u00253D");RegisterSodDep("sp.js", "sp.core.js");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
-<script type="text/javascript">RegisterSod("cui.js", "\u002f_layouts\u002fcui.js?rev=k\u00252B4HtUzT9\u00252B3mSycgD7gPaQ\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002finplview.js?rev=WB6Gy8a027aeNCq7koVCUg\u00253D\u00253D");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
-<script type="text/javascript">RegisterSod("ribbon", "\u002f_layouts\u002fsp.ribbon.js?rev=F\u00252BUEJ66rbXzSvpf7nN69wQ\u00253D\u00253D");RegisterSodDep("ribbon", "core.js");RegisterSodDep("ribbon", "sp.core.js");RegisterSodDep("ribbon", "sp.js");RegisterSodDep("ribbon", "cui.js");RegisterSodDep("ribbon", "sp.res.resx");RegisterSodDep("ribbon", "sp.runtime.js");RegisterSodDep("ribbon", "inplview");</script>
-<script type="text/javascript">RegisterSod("sp.publishing.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EPublishing\u00252EResources\u0026rev=q6nxzZIVVXE5X1SPZIMD3A\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("sp.ui.pub.ribbon.js", "\u002f_layouts\u002fsp.ui.pub.ribbon.js?rev=RGQSBI9Dm0E345iq\u00252FxUpHg\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSod("search.js", "\u002f_layouts\u002fsearch.js?rev=BjP0\u00252BmPXUFhF7kDZmHIaVg\u00253D\u00253D");</script>
-<script type="text/javascript">RegisterSodDep("browserScript", "msstring.js");</script>
-<script type="text/javascript">
-//<![CDATA[
-Sys.Application.initialize();
-Sys.Application.add_init(function() {
-    $create(Telerik.Web.UI.RadTextBox, {"_displayText":"Login Name","_focused":false,"_initialValueAsText":"","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$ctl11$ctl00$txtUserName\\\u0027,\\\u0027\\\u0027)\", 0)","_skin":"MXDefault","_validationText":"","clientStateFieldID":"ctl00_ctl11_ctl00_txtUserName_ClientState","emptyMessage":"Login Name","enabled":true,"styles":{HoveredStyle: ["width:150px;", "riTextBox riHover"],InvalidStyle: ["width:150px;", "riTextBox riError"],DisabledStyle: ["width:150px;", "riTextBox riDisabled"],FocusedStyle: ["width:150px;", "riTextBox riFocused"],EmptyMessageStyle: ["width:150px;", "riTextBox riEmpty"],ReadOnlyStyle: ["width:150px;", "riTextBox riRead"],EnabledStyle: ["width:150px;", "riTextBox riEnabled"]}}, null, null, $get("ctl00_ctl11_ctl00_txtUserName"));
-});
-Sys.Application.add_init(function() {
-    $create(Telerik.Web.UI.RadTextBox, {"_displayText":"Login Password","_focused":false,"_initialValueAsText":"","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$ctl11$ctl00$txtPasswordMask\\\u0027,\\\u0027\\\u0027)\", 0)","_skin":"MXDefault","_validationText":"","clientStateFieldID":"ctl00_ctl11_ctl00_txtPasswordMask_ClientState","emptyMessage":"Login Password","enabled":true,"styles":{HoveredStyle: ["width:150px;", "riTextBox riHover"],InvalidStyle: ["width:150px;", "riTextBox riError"],DisabledStyle: ["width:150px;", "riTextBox riDisabled"],FocusedStyle: ["width:150px;", "riTextBox riFocused"],EmptyMessageStyle: ["width:150px;", "riTextBox riEmpty"],ReadOnlyStyle: ["width:150px;", "riTextBox riRead"],EnabledStyle: ["width:150px;", "riTextBox riEnabled"]}}, {"focus":OnFocus}, null, $get("ctl00_ctl11_ctl00_txtPasswordMask"));
-});
-Sys.Application.add_init(function() {
-    $create(Telerik.Web.UI.RadTextBox, {"_focused":false,"_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$ctl11$ctl00$txtPassword\\\u0027,\\\u0027\\\u0027)\", 0)","_skin":"MXDefault","clientStateFieldID":"ctl00_ctl11_ctl00_txtPassword_ClientState","enabled":true,"styles":{HoveredStyle: ["width:150px;", "riTextBox riHover"],InvalidStyle: ["width:150px;", "riTextBox riError"],DisabledStyle: ["width:150px;", "riTextBox riDisabled"],FocusedStyle: ["width:150px;", "riTextBox riFocused"],EmptyMessageStyle: ["width:150px;", "riTextBox riEmpty"],ReadOnlyStyle: ["width:150px;", "riTextBox riRead"],EnabledStyle: ["width:150px;", "riTextBox riEnabled"]}}, {"blur":OnBlur}, null, $get("ctl00_ctl11_ctl00_txtPassword"));
-});
-//]]>
-</script>
-</form>
-  
-  <!-- BEGIN LivePerson Monitor. -->
-
-  <script language='javascript'>
-      var lpMTagConfig = { 'lpServer': "server.iad.liveperson.net", 'lpNumber': "20008096", 'lpProtocol': "https" }; function lpAddMonitorTag(src) { if (typeof (src) == 'undefined' || typeof (src) == 'object') { src = lpMTagConfig.lpMTagSrc ? lpMTagConfig.lpMTagSrc : '/hcp/html/mTag.js'; } if (src.indexOf('http') != 0) { src = lpMTagConfig.lpProtocol + "://" + lpMTagConfig.lpServer + src + '?site=' + lpMTagConfig.lpNumber; } else { if (src.indexOf('site=') < 0) { if (src.indexOf('?') < 0) src = src + '?'; else src = src + '&'; src = src + 'site=' + lpMTagConfig.lpNumber; } }; var s = document.createElement('script'); s.setAttribute('type', 'text/javascript'); s.setAttribute('charset', 'iso-8859-1'); s.setAttribute('src', src); document.getElementsByTagName('head').item(0).appendChild(s); } if (window.attachEvent) window.attachEvent('onload', lpAddMonitorTag); else window.addEventListener("load", lpAddMonitorTag, false);
-  </script>
-
-  <!-- END LivePerson Monitor. -->
-  
-    <script type="text/javascript">       
-        var element = document.getElementById("s4-workspace");
-        var ribbonelement = document.getElementById("s4-ribbonrow");
-        if (ribbonelement.hasAttribute("style")) {           
-            var attr = ribbonelement.getAttributeNode("style");
-            if (element.scrollWidth - element.scrollLeft == element.clientWidth && document.getElementById("s4-ribbonrow").style.display=="block") {
-                attr.value = "display:block;overflow-x:hidden;";
-            }
-        }
-        if (document.getElementById("s4-ribbonrow") != null) {
-            var attr = ribbonelement.getAttributeNode("style");
-            if (element.scrollWidth - element.scrollLeft == element.clientWidth && document.getElementById("s4-ribbonrow").style.display == "block") {
-                attr.value = "display:block;overflow-x:hidden;";
-            }            
-        }
-    </script>
-  
-	
-</body>
+</form><span id="DeltaPlaceHolderUtilityContent"></span></body>
 </html>
-
-<!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-05-09T10:09:57 -->

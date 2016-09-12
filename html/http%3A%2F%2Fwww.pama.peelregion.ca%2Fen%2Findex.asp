@@ -208,7 +208,7 @@ setTimeout(function() {
 </script>
 
 
-<meta property="dcterms.issued" content="2016-05-05T16:49:23-0400" />
+<meta property="dcterms.issued" content="2016-08-30T11:59:15-0400" />
 <meta property="og:title" content="index" />
 <meta property="og:url" content="http://pama.peelregion.ca/en/index.asp" />
 <meta property="og:description" content="Peel Art Gallery Museum + Archives (PAMA), where the future is shaped by our past and defined by our enduring spirit, serves Caledon, Mississauga and Brampton." />
@@ -330,7 +330,7 @@ setTimeout(function() {
 
 									}
 
-								</script></ul></div></li><li id="navTab02"><a title="Exhibitions" href="/en/exhibitions.asp" class="mainNavItem"><span class="navItemTitle">Exhibitions</span><br /></a><div class="dropDownContainer treenode"><ul class="dropdown"><li><a title="View our Art Gallery page" href="/en/exhibitions/artgallery.asp?_mid_=28383" class="dropdownItemHasFlyout"><span class="navItemTitle">Art Gallery</span><br />Sikh art, Fabulous Fictions, pop art.</a></li><li><a title="View our Museum page" href="/en/exhibitions/museum.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Museum</span><br />The Peel Story, Oriental rugs, the Peel County Jail.</a></li><li><a title="View our Archives page" href="/en/exhibitions/archives.asp?_mid_=28385" class="dropdownItemHasFlyout"><span class="navItemTitle">Archives</span><br />Unbuilt Peel</a></li><li><a title="Exhibitions::Upcoming Exhibitions" href="/en/exhibitions/upcomingexhibitions.asp" class=""><span class="navItemTitle">Upcoming Exhibitions</span><br />Diverse writers, toys, school art.</a></li><li><a title="In Our Community" href="/en/exhibitions/communityshows.asp" class=""><span class="navItemTitle">In Our Community</span><br />At locations around Peel.</a></li></ul><ul class="dropdown"><li><a title="Exhibitions::Past Exhibitions and Projects" href="/en/exhibitions/pastexhibitionsandprojects.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Past Exhibitions &amp; Projects</span><br />For over 25 years, the Region of Peel Museum at PAMA has hosted...
+								</script></ul></div></li><li id="navTab02"><a title="Exhibitions" href="/en/exhibitions.asp" class="mainNavItem"><span class="navItemTitle">Exhibitions</span><br /></a><div class="dropDownContainer treenode"><ul class="dropdown"><li><a title="View our Art Gallery page" href="/en/exhibitions/artgallery.asp?_mid_=28383" class="dropdownItemHasFlyout"><span class="navItemTitle">Art Gallery</span><br />sculptures by Patrick Thibert</a></li><li><a title="View our Museum page" href="/en/exhibitions/museum.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Museum</span><br />The Peel Story, toys, the Peel County Jail.</a></li><li><a title="View our Archives page" href="/en/exhibitions/archives.asp?_mid_=28385" class="dropdownItemHasFlyout"><span class="navItemTitle">Archives</span><br />Unbuilt Peel</a></li><li><a title="Exhibitions::Upcoming Exhibitions" href="/en/exhibitions/upcomingexhibitions.asp" class=""><span class="navItemTitle">Upcoming Exhibitions</span><br />Lorne Scots, watercolours.</a></li><li><a title="In Our Community" href="/en/exhibitions/communityshows.asp" class=""><span class="navItemTitle">In Our Community</span><br />At locations around Peel.</a></li></ul><ul class="dropdown"><li><a title="Exhibitions::Past Exhibitions and Projects" href="/en/exhibitions/pastexhibitionsandprojects.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Past Exhibitions &amp; Projects</span><br />For over 25 years, the Region of Peel Museum at PAMA has hosted...
 						</a></li><li><a title="Exhibitions::Publications" href="/en/exhibitions/publications.asp" class=""><span class="navItemTitle">Publications</span><br />Essays and books from PAMA.</a></li><li><a title="Exhibitions::Photo Gallery" href="/en/aboutpama/photogallery.asp?_mid_=19858" class=""><span class="navItemTitle">Photo Gallery</span><br />See all that PAMA has to offer through our different photo ...
 						</a></li></ul><ul class="dropdownImages"><li><a class="navimagelink1" alt="navimage1" href="#"><img class="navimage1" src="" alt="Nav Image 01" /></a></li><li><a class="navimagelink2" alt="navimage2" href="#"><img class="navimage2" src="" alt="Nav Image 02" /></a></li><li><a class="navimagelink3" alt="navimage3" href="#"><img class="navimage3" src="" alt="Nav Image 03" /></a></li><script language="javascript" type="text/javascript">
 
@@ -524,11 +524,10 @@ setTimeout(function() {
 
 									}
 
-								</script></ul></div></li><li id="navTab04"><a title="Programs, Events and School Resources" href="/en/programseventsandschoolresources.asp" class="mainNavItem"><span class="navItemTitle">Programs, Events and School...</span><br /></a><div class="dropDownContainer treenode"><ul class="dropdown"><li><a title="Programs Events and School Resources::What's On" href="/en/Calendar/default.aspx?_mid_=19909" class=""><span class="navItemTitle">What's On</span><br /><p></p></a></li><li><a title="Programs Events and School Resources::Adult Programs" href="/en/programseventsandschoolresources/adultprograms.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Adult Programs</span><br />PAMA's adult programs are a wonderful opportunity to explore:...
+								</script></ul></div></li><li id="navTab04"><a title="Programs, Events and School Resources" href="/en/programseventsandschoolresources.asp" class="mainNavItem"><span class="navItemTitle">Programs, Events and School...</span><br /></a><div class="dropDownContainer treenode"><ul class="dropdown"><li><a title="Programs Events and School Resources::What's On" href="http://calendar.pama.peelregion.ca/default/" class=""><span class="navItemTitle">What's On</span><br /><p></p></a></li><li><a title="Programs Events and School Resources::Adult Programs" href="/en/programseventsandschoolresources/adultprograms.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Adult Programs</span><br />PAMA's adult programs are a wonderful opportunity to explore:...
 						</a></li><li><a title="View our PAMA Kids and Family page" href="/en/programseventsandschoolresources/pamakids.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">PAMA Kids and Family</span><br />Drop ins, workshops, performances.</a></li><li><a title="Programs Events and School Resources::School Programs" href="/en/programseventsandschoolresources/schoolprograms.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">School Programs</span><br />PAMA offers a wide spectrum of school programs for Kindergarten...
 						</a></li><li><a title="Programs Events and School Resources::Special Programs" href="/en/programseventsandschoolresources/specialprograms.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Special Programs</span><br />PAMA Educators can offer special art exploration workshops on-site...
 						</a></li></ul><ul class="dropdown"><li><a title="Programs, Events and School Resources::Terms and Conditions" href="/en/termsandconditions.asp" class=""><span class="navItemTitle">Terms and Conditions</span><br />View PAMA's Terms and Conditions, Cancellation and Refund Policy...
-						</a></li><li><a title="Sikh Heritage Month" href="/en/programseventsandschoolresources/Sikh-Heritage-Month.asp" class=""><span class="navItemTitle">Sikh Heritage Month</span><br />April is Sikh Heritage Month in Ontario. PAMA celebrates with...
 						</a></li></ul><ul class="dropdownImages"><li><a class="navimagelink1" alt="navimage1" href="#"><img class="navimage1" src="" alt="Nav Image 01" /></a></li><li><a class="navimagelink2" alt="navimage2" href="#"><img class="navimage2" src="" alt="Nav Image 02" /></a></li><li><a class="navimagelink3" alt="navimage3" href="#"><img class="navimage3" src="" alt="Nav Image 03" /></a></li><script language="javascript" type="text/javascript">
 
 									var currentMainNavId = [repSingleQuote("navTab04")];
@@ -538,7 +537,7 @@ setTimeout(function() {
 										repSingleQuote("/en/rotatingimages/programseventsandschoolresmainavimages/programs_2.jpg"),
 										repSingleQuote("/en/rotatingimages/programseventsandschoolresmainavimages/programs_3.jpg")];
 									var links = [
-										repSingleQuote("http://pama.peelregion.ca/en/Calendar/default.aspx"),
+										repSingleQuote("http://calendar.pama.peelregion.ca/default/Month"),
 										repSingleQuote("http://pama.peelregion.ca/en/programseventsandschoolresources/pamakids.asp"),
 										repSingleQuote("http://pama.peelregion.ca/en/programseventsandschoolresources/schoolprograms.asp")];
 									var titles = [
@@ -730,7 +729,7 @@ setTimeout(function() {
 						</a></li><li><a title="About PAMA::Advisory Board" href="/en/aboutpama/advisoryboard.asp" class=""><span class="navItemTitle">Advisory Board</span><br />PAMA is a non-profit organization governed with input from an...
 						</a></li><li><a title="About PAMA::FAQs" href="/en/aboutpama/faqs.asp" class=""><span class="navItemTitle">FAQs</span><br /><p></p></a></li><li><a title="About PAMA::Media" href="/en/aboutpama/media.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Media</span><br />PAMA connects with the community in multiple ways. You can Read...
 						</a></li><li><a title="About PAMA::Photo Gallery" href="/en/aboutpama/photogallery.asp" class="dropdownItemHasFlyout"><span class="navItemTitle">Photo Gallery</span><br />See all that PAMA has to offer through our different photo ...
-						</a></li></ul><ul class="dropdown"><li><a title="" href="/en/aboutpama/Vote-Eeyevadluk.asp" class=""><span class="navItemTitle">Vote Eeyevadluk</span><br />March 15 and 16, PAMA needs your vote!</a></li><li><a title="About PAMA::Privacy" href="/en/aboutpama/privacy.asp" class=""><span class="navItemTitle">Privacy</span><br />Your privacy is important to us.</a></li><li><a title="View our Social Media page" href="/en/aboutpama/socialmedia.asp" class=""><span class="navItemTitle">Social Media</span><br />Facebook, Twitter, Instagram, YouTube, Flickr</a></li><li><a title="Signup for our eNewsletter" href="http://enews.pama.peelregion.ca/mailinglist/?_mid_=28481" class=""><span class="navItemTitle">Signup for our eNewsletter</span><br /><p></p></a></li></ul><ul class="dropdownImages"><li><a class="navimagelink1" alt="navimage1" href="#"><img class="navimage1" src="" alt="Nav Image 01" /></a></li><li><a class="navimagelink2" alt="navimage2" href="#"><img class="navimage2" src="" alt="Nav Image 02" /></a></li><li><a class="navimagelink3" alt="navimage3" href="#"><img class="navimage3" src="" alt="Nav Image 03" /></a></li><script language="javascript" type="text/javascript">
+						</a></li></ul><ul class="dropdown"><li><a title="About PAMA::Privacy" href="/en/aboutpama/privacy.asp" class=""><span class="navItemTitle">Privacy</span><br />Your privacy is important to us.</a></li><li><a title="View our Social Media page" href="/en/aboutpama/socialmedia.asp" class=""><span class="navItemTitle">Social Media</span><br />Facebook, Twitter, Instagram, YouTube, Flickr</a></li><li><a title="Signup for our eNewsletter" href="http://enews.pama.peelregion.ca/mailinglist/?_mid_=28481" class=""><span class="navItemTitle">Signup for our eNewsletter</span><br /><p></p></a></li></ul><ul class="dropdownImages"><li><a class="navimagelink1" alt="navimage1" href="#"><img class="navimage1" src="" alt="Nav Image 01" /></a></li><li><a class="navimagelink2" alt="navimage2" href="#"><img class="navimage2" src="" alt="Nav Image 02" /></a></li><li><a class="navimagelink3" alt="navimage3" href="#"><img class="navimage3" src="" alt="Nav Image 03" /></a></li><script language="javascript" type="text/javascript">
 
 									var currentMainNavId = [repSingleQuote("navTab06")];
 
@@ -860,21 +859,17 @@ setTimeout(function() {
       		</div>
             <div id="rotatingBanners" class="bannerContainer">
                 <div class="banner">
-                    <div class="bannerImage"><img src="/en/resourcesGeneral/banner-2016-SinghTwins-wed.jpg" alt="Women in a living room" align=""></div>
-                    <div class="bannerText"><h1><a href="/en/exhibitions/artgallery.asp?_mid_=28383" title="Singh Twins">THE SINGH TWINS</a></h1><div>EXHIBIT APRIL 1 TO JUNE 12</div><div>SPECIALLY TICKETED EXHIBITION, $5 RATE PER PERSON WILL APPLY</div></div>
-                </div><div class="banner">
-                    <div class="bannerImage"><img src="/en/resourcesGeneral/banner-2016-rug-a.jpg" alt="Oriental rugs" title="Oriental rugs" align=""></div>
-                    <div class="bannerText"><p><a href="/en/exhibitions/changingmuseumexhibitions.asp#rugs" title="Oriental Rugs">Oriental rugs</a></p><div>on display until june 5</div></div>
-                </div><div class="banner">
-                    <div class="bannerImage"><img src="/en/resourcesGeneral/banner-2016-springsummer-new.jpg" alt="Kids making crafts, people laughing, a watercolour landscape" title="Spring Summer Guide" align=""></div>
-                    <div class="bannerText"><p><a href="/en/programseventsandschoolresources/resources/PAMASpring-Summer2016guide.pdf" title="Spring Summer Guide">PAMA SPRING SUMMER GUIDE NOW AVAILABLE</a></p></div>
-                </div><div class="banner">
-                    <div class="bannerImage"><img src="/en/resourcesGeneral/2016-banner-FOLD.png" alt="THE FOLD letters with a book icon" title="THE FOLD" align=""></div>
-                    <div class="bannerText"><p><a href="http://thefoldcanada.org/" title="THE FOLD">The FESTIVAL OF<br>LITERARY DIVERSITY<br></a></p><p>PAMA is proud to be<br>one of the host<br>locations from May
-6 - 8<br></p></div>
-                </div><div class="banner default">
-                    <div class="bannerImage"><img src="/en/resourcesGeneral/2016-may-archivesclosure.jpg" alt="Archives banner" title="Archives banner" align=""></div>
-                    <div class="bannerText"><a href="https://pama.peelregion.ca/en/pamascollection/archivesresearch.asp?_mid_=28366#hours" title="Scheduled Archives Closure">Scheduled archives closure</a><div><a href="javascript:nicTemp();">tuesday, may 3 to<br>friday, may 6<br>for processing and inventory</a></div></div>
+<div class="bannerImage"><img title="Spring Summer Guide" alt="Kids making crafts, people laughing, a watercolour landscape" src="/en/resourcesGeneral/banner-2016-springsummer-new.jpg"></div>
+<div class="bannerText">
+<a title="Spring Summer Guide" href="/en/programseventsandschoolresources/resources/PAMA-Summer-Guide.pdf">Pay What You Can<br></a><a title="PAMA Summer Guide" href="/en/programseventsandschoolresources/resources/PAMA-Summer-Guide.pdf">this Summer!</a>&gt;<a title="PAMA Summer Guide">
+</a><div class="banner"><a title="Spring Summer Guide">&lt;="" div=""&gt;
+</a><div class="bannerImage"><a title="Spring Summer Guide"><img title="Summer Camp" alt="People cavorting about, dancing, looking shocked" src="/en/resourcesGeneral/banner-2016-summer-notext.jpg"></a></div>
+<div class="bannerText"><a title="Spring Summer Guide">&lt;="" div=""&gt;
+</a><p><a title="Spring Summer Guide">&lt;="" div=""&gt;</a><a title="PAMA Kids" href="https://pama.peelregion.ca/en/programseventsandschoolresources/pamakids.asp">Summer Camp at PAMA</a></p>
+<div><a href="javascript:nicTemp();">Kids 6 to 12 years of age</a><br></div>
+<div><a href="javascript:nicTemp();">three weeks in July</a></div></div></div></div></div><div class="banner default">
+                    <div class="bannerImage"><img src="/en/resourcesGeneral/2016-banner-thibert.jpg" alt="Abstract sculpture made of metal rods" title="Patrick Thibert" align=""></div>
+                    <div class="bannerText"><p><a href="https://pama.peelregion.ca/en/exhibitions/artgallery.asp" title="Patrick Thibert">Patrick Thibert sculptures<br>at PAMA until December</a></p></div>
                 </div>
             </div>
                                             
@@ -935,80 +930,15 @@ setTimeout(function() {
 
                     </div>
                     <div id="eventsContainer">
-                    	<script type="text/javascript" language="javascript">
-    // parse events and populate divElement
-
-    function parseData(data, divElement) {
-
-        var charLimit = 20;
-        var detailslimit = 75;
-        divElement.empty();
-
-        jQuery.each(data, function (index, item) {
-            var id = item.Id;
-            var title = item.Title,
-                    startDate = item.StartDate;
-            var details = item.Details;
-
-            if (title.length > charLimit) {
-                if (title.indexOf(' ', charLimit) >= 0) {
-                    title = title.substring(0, title.indexOf(' ', charLimit)) + "...";
-                }
-            }
-            if (details.length > detailslimit) {
-                if (details.indexOf(' ', detailslimit) >= 0) {
-                    details = details.substring(0, details.indexOf(' ', detailslimit)) + "...";
-                }
-            }
-
-            // var 'html' to store the markup we're using to output the feed to the browser window
-            var html = "<li><a href='/en/Calendar/Details.aspx?id=" + id + "' title='" + title + " meeting' >" + "<span class='listTitle'>" + title + "</span>" +"<br />" + details + "<\/a><\/li>";
-            // put that feed content on the screen!
-            divElement.append(html);
-
-        })
-
-
-    }
-              
-</script>
-<div id="eventsList">
-    <h2>Upcoming Events</h2>
-      <noscript><br/><p>JavaScript disabled. <br/>
-	    Please enable JavaScript to view this content.</p></noscript>
-    <ul>
-         <script type="text/javascript" language="javascript">
-             jQuery(function () {
-                 var divElement = jQuery("#eventsList ul");
-                 divElement.html("Loading...");
-                 var params = jQuery.param(
-                        {
-                            Calendar: "dc93b9d7-9ad3-4ff2-b32b-d4605fa6d874",
-                            //     Category: "Community",
-                            //    StartDate: Format(new Date(), '/'),
-                            //    EndDate: Format(new Date(), '/'),
-                            limit: 2
-                        });
-
-                 jQuery.ajax({
-                     url: '/en/Calendar/services/GetCalendarEvent.ashx?' + params,
-                     cache: false,
-                     async: false,
-                     error: function (xhr, textStatus, thrownError) {
-                         divElement.html("An error occured");
-                     },
-                     success: function (data) {
-                         if (data != "")
-                             parseData(data, divElement);
-                         else
-                             divElement.html("No Events");
-                     }
-                 });
-
-             }); 
-         </script>
-       
-    </ul>
+                    	<div id="calendarContainer"  class="jsinclude">
+    <div id="calendar"><p>JavaScript disabled <br/>Please enable JavaScript to view this content</p></div>
+    <script type="text/javascript" language="javascript">
+        jQuery("#calendar").html("Loading...").mini_calendar({
+            source: "/en/Calendar/services/GetCalendarsDateWithEvent.ashx?calendar=a7116d3d-5489-438e-8e6f-a5d800af1286 ",
+            url: "http://calendar.pama.peelregion.ca/", //iCreateObject.calendarUrl,
+            currentDate: jQuery.getParam("StartDate") ? new Date(jQuery.getParam("StartDate")) : new Date()
+        });
+    </script>
 </div>
                     </div>
                     <div class="clear"></div>

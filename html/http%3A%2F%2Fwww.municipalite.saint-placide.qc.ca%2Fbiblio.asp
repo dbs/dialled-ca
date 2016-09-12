@@ -242,7 +242,7 @@ document.onclick=hidemenu
   <tr>
     <td valign="top"><img src="images/nav_top_left.jpg"></td>
     			
-    <td valign="middle" width="354"><span class="style1">Derni&egrave;re mise &agrave; jour:   6 mai 2016</span></td>
+    <td valign="middle" width="354"><span class="style1">Derni&egrave;re mise &agrave; jour:   1 septembre 2016</span></td>
     <td valign="top"><a href="index.asp" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu1, '150px')" onMouseout="delayhidemenu()"><img src="images/nav_top_decouvrir.jpg" width="116" height="40" border="0"></a></td>
     <td valign="top"><a href="index.asp" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu2, '225px')" onMouseout="delayhidemenu()"><img src="images/nav_top_orgnisme.jpg" width="126" height="40" border="0"></a></td>
     <td valign="top"><a href="index.asp" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu3, '175px')" onMouseout="delayhidemenu()"><img src="images/nav_top_culture.jpg" width="96" height="40" border="0"></a></td>

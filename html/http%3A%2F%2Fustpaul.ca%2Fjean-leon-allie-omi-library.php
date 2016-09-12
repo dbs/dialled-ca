@@ -86,6 +86,19 @@ Remarketing tags may not be associated with personally identifiable information 
 	var google_remarketing_only = true;
 	/* ]]> */
 </script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N33VHZ"
+				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+	
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N33VHZ');
+	
+</script>
+<!-- End Google Tag Manager -->
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
@@ -164,6 +177,8 @@ Remarketing tags may not be associated with personally identifiable information 
      
                         <li><a href="http://ustpaul.ca/en/food-and-conference-services-home_1695_137.htm">Conference</a></li>
      
+                        <li><a href="/en/campus-services-emergency-preparedness_1757_959.htm">Emergency</a></li>
+     
         </ul>
 		<br style="clear: left" />
 		</div>
@@ -226,6 +241,8 @@ Remarketing tags may not be associated with personally identifiable information 
 									            <li><a href="/en/faculty-of-canon-law-centre-for-canonical-services-ccs_2016_871.htm">Centre for Canonical Services (CCS)</a></li>
      
 									            <li><a href="/en/faculty-of-canon-law-broken-bay-institute-bbi-_2163_895.htm">Partnership with The Broken Bay Institute (BBI), Australia</a></li>
+     
+									            <li><a href="/en/faculty-of-canon-law-other-links_2394_931.htm">Other links</a></li>
      
 									            <li><a href="/en/faculty-of-canon-law-programs-of-study-contact-us_610_410.htm">Contact Us</a></li>
      
@@ -333,6 +350,8 @@ Remarketing tags may not be associated with personally identifiable information 
 												</ul>
 	                </li>
      
+									            <li><a href="/en/faculty-of-theology-certificate-in-theology_2395_932.htm">Certificate in Theology</a></li>
+     
 									            <li><a href="/en/faculty-of-theology-graduate-diploma-in-contemplative-theology-and-spiritual-mentorship_1750_847.htm">New Graduate Diploma in Contemplative Theology and Spiritual Mentorship</a></li>
      
 									            <li><a href="/en/sipl-summer-institutes-in-pastoral-liturgy-2015_1839_42.htm">Summer Institutes in Pastoral Liturgy</a></li>
@@ -349,6 +368,8 @@ Remarketing tags may not be associated with personally identifiable information 
      
                         <li><a href="/en/centres-and-services_25_12.htm">Services</a>
 	        				<ul>
+									            <li><a href="/en/alumni-and-development-annual-campaign_1717_846.htm">Alumni and Development Office</a></li>
+     
 									            <li><a href="/en/campus-services-home_517_336.htm">Campus Services</a>
 	        				<ul>
 									            <li><a href="/en/campus-services-services_516_337.htm">Services</a></li>
@@ -358,8 +379,6 @@ Remarketing tags may not be associated with personally identifiable information 
 									            <li><a href="/en/campus-services-contact-us_518_338.htm">Contact Us </a></li>
      
 									            <li><a href="/en/campus-services-emergency-preparedness_1757_848.htm">Emergency Preparedness</a></li>
-     
-									            <li><a href="/en/campus-services-emergency-preparedness-assembly-area_1766_850.htm">     Assembly Area</a></li>
      
 												</ul>
 	                </li>
@@ -434,7 +453,7 @@ Remarketing tags may not be associated with personally identifiable information 
 												</ul>
 	                </li>
      
-									            <li><a href="/en/centre-for-counselling-home_360_120.htm">Counselling and Psychotherapy Services </a>
+									            <li><a href="/en/centre-for-counselling-home_360_120.htm">Counselling and Psychotherapy Centre</a>
 	        				<ul>
 									            <li><a href="/en/centre-for-counselling-home_360_697.htm">Home</a></li>
      
@@ -536,9 +555,11 @@ Remarketing tags may not be associated with personally identifiable information 
 												</ul>
 	                </li>
      
+									            <li><a href="/job_openings.php">Human Resources Services</a></li>
+     
 									            <li><a href="/en/international-services-home_368_163.htm">International Office</a></li>
      
-									            <li><a href="http://ustpaul.ca/jean-leon-allie-omi-library.php" >Jean-Léon Allie, O.M.I. Library</a>
+									            <li><a href="http://ustpaul.ca/jean-leon-allie-omi-library.php" >Jean-Léon Allie Library and Archives</a>
 	        				<ul>
 									            <li><a href="/jean-leon-allie-omi-library.php">Search</a></li>
      
@@ -554,12 +575,18 @@ Remarketing tags may not be associated with personally identifiable information 
      
 									            <li><a href="/en/jean-leon-allie-library-our-team_2153_894.htm">Our Team</a></li>
      
+									            <li><a href="/jean-leon-allie-omi-library-videos.php">Videos</a></li>
+     
 									            <li><a href="/en/jean-leon-allie-omi-library-contact-us_478_278.htm">Contact Us</a></li>
      
 												</ul>
 	                </li>
      
 									            <li><a href="/en/multiservices-centre_603_407.htm">Multiservices Centre</a></li>
+     
+									            <li><a href="/en/registrars-services-transcript_43_705.htm">Office of Admission, Registrar and Student Services</a></li>
+     
+									            <li><a href="/en/research-office-of-research-and-ethics_650_958.htm">Office of Research and Ethics</a></li>
      
 									            <li><a href="/en/pastoral-services-home_374_135.htm">Pastoral Services</a>
 	        				<ul>
@@ -589,108 +616,90 @@ Remarketing tags may not be associated with personally identifiable information 
 												</ul>
 	                </li>
      
-									            <li><a href="/en/recruitment-and-communications-services-home_698_132.htm">Recruitment and Communications </a>
+									            <li><a href="/en/recruitment-and-communications-services-home_698_132.htm">Recruitment and Communications Services</a>
 	        				<ul>
 									            <li><a href="/en/recruitment-and-communications-services-communications_372_532.htm">Communications </a></li>
      
 									            <li><a href="/en/recruitment-office_464_661.htm">Recruitment Office</a></li>
      
-									            <li><a href="/en/the-society-of-st-vincent-de-paul-award_2242_17.htm">The Society of St. Vincent de Paul Award</a></li>
+									            <li><a href="/en/recruitment-office-upcoming-activities_6036_965.htm">Upcoming activities</a></li>
      
 									            <li><a href="/en/student-for-a-day_545_533.htm">Student for a day</a></li>
      
 									            <li><a href="/en/campus-tour_544_534.htm">Campus Tour</a></li>
      
-									            <li><a href="/en/recruitment-office-calendar-of-events_549_535.htm">School Visits</a></li>
+									            <li><a href="/en/recruitment-and-communications-services-parents-of-future-students_1319_963.htm">Parents</a></li>
+     
+									            <li><a href="/en/guidance-counsellors_954_964.htm">Guidance Counsellors</a></li>
      
 									            <li><a href="/en/prospective-students-housing_393_536.htm">Housing</a></li>
      
+									            <li><a href="/en/the-society-of-st-vincent-de-paul-award_2242_17.htm">The Society of St. Vincent de Paul Award</a></li>
+     
 												</ul>
 	                </li>
-     
-									            <li><a href="http://ustpaul.ca/en/registrars-services-contact-us_565_707.htm">Registrar's Services</a></li>
      
 												</ul>
 	                </li>
      
                         <li><a href="/en/research-office-of-research-and-ethics_650_13.htm">Research</a>
 	        				<ul>
-									            <li><a href="/en/research-office-of-the-vice-rector-academic-and-research_641_515.htm">Office of The Vice-Rector Academic and Reseach</a>
+									            <li><a href="/en/research-research-centres-and-institutes_642_934.htm">Research Centres and Institutes</a></li>
+     
+									            <li><a href="/en/research-research-chairs_643_935.htm">Research Chairs</a></li>
+     
+									            <li><a href="/en/researchresearchgroupsobservatoriesandlaboratories_1011_936.htm">Research groups, observatories and laboratories</a></li>
+     
+									            <li><a href="/en/research-learned-journals_647_937.htm">Learned journals </a></li>
+     
+									            <li><a href="/en/research-research-programmes_651_938.htm">Research Support</a>
 	        				<ul>
-									            <li><a href="/en/research-research-centres-and-institutes_642_600.htm">Research Centres and Institutes</a></li>
+									            <li><a href="/en/research-research-programmes-spu-programmes_657_943.htm">SPU Programs</a></li>
      
-									            <li><a href="/en/research-research-chairs_643_601.htm">Research Chairs</a></li>
+									            <li><a href="/en/research-research-programmes-sshrc-and-cihr-annual-funding-opportunities_658_944.htm">SSHRC and CIHR Annual Funding Opportunities</a></li>
      
-									            <li><a href="/en/researchresearchgroupsobservatoriesandlaboratories_1011_669.htm">Research groups, observatories and laboratories</a></li>
+									            <li><a href="/en/research-research-programmes-funding-agencies-other_659_945.htm">Funding Agencies : other</a></li>
      
-									            <li><a href="/en/research-henry-herbert-glasmacher-fund_644_602.htm">Henry Herbert Glasmacher Fund</a></li>
-     
-									            <li><a href="/en/research-learned-journals_647_605.htm">Learned journals </a></li>
-     
-									            <li><a href="/en/research-committees_648_606.htm">Committees</a></li>
-     
-									            <li><a href="/en/research-research-policies_649_607.htm">Research Policies </a></li>
+									            <li><a href="/en/research-research-programs-community-of-science_660_946.htm">Community of Science</a></li>
      
 												</ul>
 	                </li>
      
-									            <li><a href="/en/research-office-of-research-and-ethics_650_522.htm">Office of Research And Ethics</a>
+									            <li><a href="/en/research-bursaries-and-scholarships_653_939.htm">Bursaries and Scholarships</a>
 	        				<ul>
-									            <li><a href="/en/research-research-programmes_651_608.htm">Research Programs</a>
-	        				<ul>
-									            <li><a href="/en/research-research-programmes-spu-programmes_657_609.htm">SPU Programs</a></li>
+									            <li><a href="/en/research-bursaries-and-scholarships-external-funding-agencies_667_952.htm">External Funding Agencies</a></li>
      
-									            <li><a href="/en/research-research-programmes-sshrc-and-cihr-annual-funding-opportunities_658_610.htm">SSHRC and CIHR Annual Funding Opportunities </a></li>
+									            <li><a href="/en/research-guide-board_440_953.htm">Helpful tips for external scholarships</a></li>
      
-									            <li><a href="/en/research-research-programmes-funding-agencies-other_659_611.htm">Funding Agencies : other</a></li>
+									            <li><a href="/en/research-bursaries-and-scholarships-search-engines_670_954.htm">Search Engines</a></li>
      
-									            <li><a href="/en/research-research-programs-community-of-science_660_612.htm">Community of Science</a></li>
+									            <li><a href="/en/research-online-scholarships_36_955.htm">External Scholarships</a></li>
+     
+									            <li><a href="/en/research-bursaries-and-scholarships-link-to-other-external-agencies_672_956.htm">Links to other External agencies</a></li>
      
 												</ul>
 	                </li>
      
-									            <li><a href="/en/research-post-award-and-use-of-funding_652_613.htm">Post-award and Use of Funding</a>
+									            <li><a href="/en/research-research-ethics-at-spu_674_599.htm">Research Ethics at SPU</a></li>
+     
+									            <li><a href="/en/research-policy-on-postdoctoral-appointments_2132_940.htm">Policy on Postdoctoral Appointments</a></li>
+     
+									            <li><a href="/en/research-post-award-and-use-of-funding_652_941.htm">Post-award and Use of Funding</a>
 	        				<ul>
-									            <li><a href="/en/research-post-award-and-use-of-funding-research-assistantship_942_614.htm">Research Assistant </a></li>
+									            <li><a href="/en/research-post-award-and-use-of-funding-research-assistantship_942_947.htm">Research Assistant</a></li>
      
-									            <li><a href="/en/research-post-award-and-use-of-funding-administrative-assistant-for-centres-and-chairs_663_615.htm">Administrative Assistant for Centres and Chairs</a></li>
+									            <li><a href="/en/research-post-award-and-use-of-funding-administrative-assistant-for-centres-and-chairs_663_948.htm">Administrative Assistant for Centres and Chairs</a></li>
      
-									            <li><a href="/en/research-post-award-and-use-of-funding-spu-hourly-rates_664_616.htm">SPU Hourly Rates</a></li>
+									            <li><a href="/en/research-post-award-and-use-of-funding-spu-hourly-rates_664_949.htm">SPU Hourly Rates</a></li>
      
-									            <li><a href="/en/research-post-award-and-use-of-funding-use-of-funding_665_617.htm">Use of Funding</a></li>
+									            <li><a href="/en/research-post-award-and-use-of-funding-use-of-funding_665_950.htm">Use of Funding</a></li>
      
 									            <li><a href="/upload-files/researchservices/documents/forms/debourses%20Recherche-Outflows%20Research.pdf">Research Reimbursement Request</a></li>
      
 												</ul>
 	                </li>
      
-									            <li><a href="/en/research-policy-on-postdoctoral-appointments_2132_893.htm">Policy on Postdoctoral Appointments</a></li>
-     
-									            <li><a href="/en/research-bursaries-and-scholarships_653_618.htm">Bursaries and Scholarships</a>
-	        				<ul>
-									            <li><a href="/en/research-bursaries-and-scholarships-external-funding-agencies_667_619.htm">External Funding Agencies </a></li>
-     
-									            <li><a href="/en/research-guide-board_440_620.htm">Helpful tips for external scholarships</a></li>
-     
-									            <li><a href="/en/research-bursaries-and-scholarships-search-engines_670_622.htm">Search Engines </a></li>
-     
-									            <li><a href="/en/research-online-scholarships_36_623.htm">External Scholarships</a></li>
-     
-									            <li><a href="/en/research-bursaries-and-scholarships-link-to-other-external-agencies_672_624.htm">Links to other External agencies</a></li>
-     
-												</ul>
-	                </li>
-     
-									            <li><a href="/en/research-glasmacher-lectures_383_648.htm">Glasmacher Guest Speaker</a></li>
-     
-									            <li><a href="/en/research-saint-paul-lectures_922_649.htm">Saint Paul Lectures</a></li>
-     
-									            <li><a href="/en/research-faculty-prizes-and-distinctions_673_625.htm">Prizes and distinctions </a></li>
-     
-												</ul>
-	                </li>
-     
-									            <li><a href="/en/research-research-ethics-at-spu_674_599.htm">Research Ethics at SPU</a></li>
+									            <li><a href="/en/research-research-policies_649_942.htm">Research Policies</a></li>
      
 												</ul>
 	                </li>
@@ -734,6 +743,8 @@ Remarketing tags may not be associated with personally identifiable information 
      
 									            <li><a href="/en/about-spu-governance-vice-rectors_2329_927.htm">Vice-Rectors and Secretary General</a></li>
      
+									            <li><a href="/en/about-spu-governance-university-regulations_2415_961.htm">University Regulations</a></li>
+     
 									            <li><a href="/about-spu-coordinates-organizational-chart.php">Organizational Chart</a></li>
      
 												</ul>
@@ -758,7 +769,7 @@ Remarketing tags may not be associated with personally identifiable information 
 		</div>
 </div>
 <div class="clear noprint"></div><div id="mid-int">
-<div id="bannerWrap" class="noprint">
+<div id="bannerWrap" class="noprint ">
 						<div id="banner-int"><img src="/upload/banners/banner_library_e.jpg" style="border: none;" width="717" height="149" alt="banner" /></div>
 			</div>
 	<div id="features-int">
@@ -837,6 +848,8 @@ Ext. 2357
      
                         <li><a href="/en/jean-leon-allie-library-our-team_2153_894.htm">Our Team</a></li>
      
+                        <li><a href="/jean-leon-allie-omi-library-videos.php">Videos</a></li>
+     
                         <li><a href="/en/jean-leon-allie-omi-library-contact-us_478_278.htm">Contact Us</a></li>
      
         </ul>
@@ -909,18 +922,85 @@ Ext. 2357
     <h1 class="txttitle"><a href="https://orbis.uottawa.ca/search"><strong>Classic Catalogue</strong></a></h1>
 <h1 class="txttitle">News and Events</h1>
 <p><strong>Follow us on <a href="https://www.facebook.com/Biblioth%C3%A8que-Jean-L%C3%A9on-Allie-Library-Universit%C3%A9-Saint-Paul-University-44038755882/info?tab=overview">Facebook</a> and <a href="https://twitter.com/bibliospu">Twitter</a>.</strong></p>
-<p class="txttitle">Good luck with your exams and final assignments!</p>
-<p><a href="http://ustpaul.us12.list-manage.com/track/click?u=d3db24439d550286303e4d7ed&amp;id=708775230f&amp;e=4949306546" target="_blank">Consult the Library hours.</a><br /> <br /> <strong>The Library offers the following services:&nbsp;</strong><br /> <br /> &bull;&nbsp;&nbsp; &nbsp;Group study rooms<br /> &bull;&nbsp;&nbsp; &nbsp;Silent study spaces<br /> &bull;&nbsp;&nbsp; &nbsp;Research help<br /> <br /> <a href="http://ustpaul.us12.list-manage.com/track/click?u=d3db24439d550286303e4d7ed&amp;id=66719838c5&amp;e=4949306546" target="_blank"><strong>Discover our online videos</strong></a>.<br /> <br /> If you have forgotten how to use a tool or resource,<a href="http://ustpaul.us12.list-manage.com/track/click?u=d3db24439d550286303e4d7ed&amp;id=9fe6b77b64&amp;e=4949306546" target="_blank"> our training videos</a> can help you.&nbsp;</p>
-<p><strong>Professors' Showcase</strong></p>
-<p>Curious about your professors? Come see our book display of publications by Professor John Anthony Renken.</p>
-<p><strong>Exhibit: <em>The Roman Rota and Canon Law Books</em>&nbsp;</strong></p>
-<p>The Jean-L&eacute;on Allie Library and Archives presents the exhibit&nbsp;&ldquo;The Roman Rota and Canon Law Books&rdquo;. Showcasing volumes of the complete Roman Rota, the exhibit aims to bring attention to these historical documents published by the Vatican.</p>
-<p>April 28 to June 10, 2016</p>
-<p><strong>Exhibit:&nbsp;<em>The Saint-Joseph Scholasticate: An Institution with a Rich History</em></strong>&nbsp;</p>
-<p>The Jean-L&eacute;on Allie Library and Archives presents <em>The Saint-Joseph Scholasticate: An Institution with a Rich History. </em>Showcasing documents, items and photos related to the history and mission of the Congregation of the Oblates of Mary Immaculate at the scholasticate since 1885.</p>
-<p>May 2 to August 31, 2016</p>
-<p><strong>The Library Offers Students the Opportunity to Borrow Books</strong></p>
-<p>As of September 7, 2015, students are able to borrow books from the Library. For more information,&nbsp;<a href="http://ustpaul.ca/en/the-library-offers-students-the-opportunity-to-borrow-books_2117_17.htm">click here</a>.</p>
+<h2 style="text-align: center;"><strong>Orientation Week - Welcome to all new and returning students!</strong></h2>
+<p><strong><img style="display: block; margin-left: auto; margin-right: auto;" title="Mini-golf poster" src="http://ustpaul.ca/upload-files/Library/minigolfEN.PNG" alt="Mini-golf poster" width="503" height="792" /></strong></p>
+<p>&nbsp;</p>
+<h2 align="center">Upcoming Workshops</h2>
+<h2 style="text-align: center;"><img src="http://ustpaul.ca/upload-files/Library/workshops_fall2016EN.PNG" alt="Workshop banner" width="449" height="253" /></h2>
+<table style="width: 444px; height: 194px; margin-left: auto; margin-right: auto;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="228">
+<p style="text-align: left;">Search+ and Zotero Basics</p>
+</td>
+<td width="126">
+<p>SEPT&nbsp; 19 or 21</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Zotero Advanced</p>
+</td>
+<td width="126">
+<p>SEPT 26</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Plagiarism</p>
+</td>
+<td width="126">
+<p>SEPT 27 or 28</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Windows Tools</p>
+</td>
+<td width="126">
+<p>SEPT 29</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Theology Databases</p>
+</td>
+<td width="126">
+<p>OCT 3 &nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Conflict Studies Databases</p>
+</td>
+<td width="126">
+<p>OCT 4</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Philosophy &amp; Public Ethics Databases</p>
+</td>
+<td width="126">
+<p>OCT 5</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Counselling Databases</p>
+</td>
+<td width="126">
+<p>OCT 6</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 style="text-align: center;">&nbsp;</h2>
+<h2 style="text-align: center;">Student Employment at the Library</h2>
+<p style="text-align: left;">Three student jobs are available at the library:</p>
+<p style="text-align: left;"><br />&bull; Student library clerk<br />&bull; Library technology clerk<br />&bull; Communications assistant</p>
+<p style="text-align: left;"><br />The job descriptions will be posted on the intranet and in the Library.<br />Interested candidates should send their curriculum vitae to biblio@ustpaul.ca, to the attention of Sandy Hervieux.</p>
+<h2 style="text-align: center;" align="center">&nbsp;</h2>
 	<br class="cb"/>
 			</div>	
 					</div>
@@ -930,9 +1010,9 @@ Ext. 2357
 	<div id="footer_link" class="noprint">
 	<div class="col_footer"><p class="txtTitle">ABOUT SPU</p><ul>
 					<li><a href="/en/alumni-and-development-home_28_3.htm">Alumni</a></li>
-					<li><a href="/upload-files/AdminGov/AnnualReport2011/Annual Report/HTML/index.html">Annual Report</a></li>
 					<li><a href="/en/alumni-and-development-home_28_3.htm"></a><a href="/en/about-spu-coordinates_2_364.htm">Coordinates</a></li>
 					<li><a href="/en/alumni-and-development-online-giving_513_571.htm" target="_blank">Donate Online</a></li>
+                    					<li><a href="/en/search-for-an-employee-or-professor_349_117.htm">Employee directory</a></li>
 					<li><a href="/en/about-spu-history_493_360.htm">History</a></li>
 					<li><a href="/en/media-room-contact-media_29_4.htm">Media</a></li>
 					<li><a href="/en/about-spu-mission_494_362.htm">Mission</a></li>
@@ -955,9 +1035,10 @@ Ext. 2357
 					<li><a href="/theology.php">Anglican Studies</a></li>
 					<li><a href="/conflict-studies.php">Conflict Studies</a></li>
 					<li><a href="/theology.php">Eastern Christian Studies</a></li>
+					<li><a href="/ethics-philosophy.php">Public Ethics</a></li>
 					<li><a href="/counselling-psychotherapy-spirituality.php">Human Relations and Spirituality</a></li>
-					                    <li><a href="/ethics-philosophy.php">Philosophy</a></li>
-					<li><a href="/ethics-philosophy.php">Philosophy of Religion</a></li>
+					                  <!--  <li><a href="/ethics-philosophy.php">Philosophy</a></li>
+					<li><a href="/ethics-philosophy.php">Philosophy of Religion</a></li> -->
                     <li><a href="/ethics-philosophy.php"> Public Ethics</a></li>
 					<li><a href="/social-communication.php">Social Communication</a></li>
 					<li><a href="/theology.php">Theology</a></li>
@@ -970,8 +1051,9 @@ Ext. 2357
 					<li><a href="/conflict-studies.php">Conflict Studies</a></li>
 					<li><a href="/counselling-psychotherapy-spirituality.php">Counselling and Spirituality</a></li>
 					<li><a href="/ethics-philosophy.php">Public Ethics</a></li>
+					<li><a href="/theology.php">Religious Education</a></li>
 					<li><a href="/theology.php">Theology</a></li>
-                    <li><a href="/study-programs_new.php?active=8#transAncre">Religious Education</a></li>
+                    <li><a href="/study-programs_new.php?active=8#transAncre">Transformative Leadership <br />and Spirituality</a></li>
 					<li><a href="/study-programs_new.php">All programs</a></li>
 				</ul>
 	</div>

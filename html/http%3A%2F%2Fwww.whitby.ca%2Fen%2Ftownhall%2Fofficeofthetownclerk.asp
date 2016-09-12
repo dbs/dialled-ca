@@ -1,7 +1,65 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en"  xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-	    
+	    <script>
+
+function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+var localMobify = false;
+
+if (document.location.href.indexOf('localmobile=true') != -1) {
+    setCookie('mobifylocal', 'true');
+    localMobify = true;
+}
+
+var mobify_bundle = "//www.whitby.ca/en/Mobify/bld/mobify.js";  
+
+if (localMobify || (getCookie('mobifylocal') != null && getCookie('mobifylocal') != '')) {
+    mobify_bundle = "http://127.0.0.1:8080/mobify.js";
+} 
+
+(function(window, document, mjs) {
+
+window.Mobify = {points: [+new Date], tagVersion: [1, 0]};
+
+var isMobile = /ip(hone|od)|android|blackberry.*applewebkit|bb1\d.*mobile/i.test(navigator.userAgent);
+var optedOut = /mobify-path=($|;)/.test(document.cookie);
+
+
+if (!isMobile || optedOut) {
+    return;
+}
+
+document.write('<plaintext style="display:none">');
+
+setTimeout(function() {
+    var mobifyjs = document.createElement('script');
+    var script = document.getElementsByTagName('script')[0];
+
+    mobifyjs.src = mjs;
+    script.parentNode.insertBefore(mobifyjs, script);
+});
+
+
+})(this, document, mobify_bundle);
+</script>
 <title>Office of the Town Clerk - Town of Whitby</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -26,17 +84,7 @@
 <script type="text/javascript" language="javascript" src="/scripts/general.js"></script>
 <script type="text/javascript" language="javascript" src="/en/email/scripts/email.js"></script>
 <script type="text/javascript" language="javascript" src="/__utm.js"></script>
-<script type="text/javascript" src="http://m.whitby.ca/mobify/redirect.js"></script>
-<script type="text/javascript">
-    try {
-        if (document.location.href.indexOf('bidsandtenders.ca') == -1 ) {
-            if (document.location.href.toLowerCase().indexOf('http://www.whitby.ca') == 0 || document.location.href.toLowerCase().indexOf('http://whitby.ca') == 0) {
-                _mobify("http://m.whitby.ca/");
-            }
-        }
-    } catch (err) { };
 
-</script>
 
 
 <script language="javascript" type="text/javascript">
@@ -84,7 +132,7 @@
 <script src="/en/ContactModule/scripts/contactsV2.js" type="text/javascript"></script>
 
 	
-<meta property="dcterms.issued" content="2015-10-23T11:11:58-0400" />
+<meta property="dcterms.issued" content="2016-08-17T16:02:54-0400" />
 <meta property="og:title" content="Office of the Town Clerk" />
 <meta property="og:url" content="http://whitby.ca/en/townhall/officeofthetownclerk.asp" />
 <meta property="og:description" content="Acts as the secretariat to Council and its standing committees" />
@@ -443,7 +491,7 @@
 			<div id="mainWrapperInt">
 				<div id="main" class="mainInterior">
 					<div id="subNavContainer">
-						<ul class="subNav"><li class="withChildren"><a title="Town Hall :: Office of the Town Clerk" href="/en/townhall/officeofthetownclerk.asp" class="current">Office of the Town Clerk</a><ul><li><a title="Mayor &amp; Council::Appear Before Council" href="/en/townhall/appearbeforecouncil.asp" class="">Appear Before Council</a></li><li><a title="Mayor &amp; Council::Calendar of Meetings" href="/en/Calendar/Default.aspx?Calendar=082d29e0-608b-48e7-b723-71e6aeed4219&amp;_mid_=12485" class="">Calendar of Meetings</a></li><li><a title="" href="/en/townhall/Civil-Marriage-Ceremonies.asp" class="">Civil Marriage Ceremonies</a></li><li><a title="Mayor &amp; Council::Closed Meeting Investigations" href="/en/townhall/closedmeetinginvestigationprocedure.asp" class="">Closed Meeting Investigation Procedure</a></li><li><a title="Agendas, Minutes and Reports" href="https://whitby.civicweb.net/Documents/DocumentList.aspx" class="" target="_blank">Agendas, Minutes and Reports</a></li></ul></li></ul><ul class="subNav secondul"><li class="withChildren"><a title="Town Hall::Mayor and Council" href="/en/townhall/mayorandcouncil.asp" class="">Mayor and Council</a></li><li class="withChildren"><a title="Town Hall::Municipal Elections" href="/en/townhall/municipalelections.asp" class="">Municipal Elections</a></li><li><a title="Committee and Council Meetings" href="/en/townhall/councilandcommitteemeetings.asp" class="">Committee and Council Meetings</a></li><li class="withChildren"><a title="Town Hall::Committees" href="/en/townhall/committees.asp" class="">Committees</a></li><li class="withChildren"><a title="Town Hall::Chief Administrative Officer" href="/en/townhall/chiefadministrativeofficer.asp" class="">Chief Administrative Officer</a></li><li class="withChildren"><a title="Town Hall::Community and Marketing Services" href="/en/townhall/communityandmarketingservices.asp" class="">Community and Marketing Services</a></li><li class="withChildren"><a title="Town Hall::Corporate Services" href="/en/townhall/corporateservices.asp?_mid_=11856" class="">Corporate Services</a></li><li class="withChildren"><a title="Town Hall::Fire and Emergency Services" href="/en/townhall/fireandemergencyservices.asp" class="">Fire and Emergency Services</a></li><li><a title="Town Hall::Applications, Forms, Permits" href="/en/townhall/applicationsformspermits.asp?_mid_=11826" class="">Applications, Forms and Permits</a></li><li><a title="Bids and Tenders" href="/en/townhall/purchasing.asp" class="">Bids and Tenders</a></li><li><a title="Budget" href="/en/townhall/budget.asp" class="">Budget</a></li><li class="withChildren"><a title="Town Hall::Bylaws" href="/en/townhall/bylaws.asp" class="">By-laws</a></li><li><a title="View our By-law Services page" href="/en/townhall/bylawenforcement.asp?_mid_=11828" class="">By-law Services</a></li><li><a title="Town Hall::Commissioner of Oaths" href="/en/townhall/commissionerofoaths.asp" class="">Commissioner of Oaths</a></li><li><a title="Town Hall::Freedom of Information" href="/en/townhall/freedomofinformation.asp" class="">Freedom of Information</a></li><li><a title="Town Hall::Licences" href="/en/townhall/licences.asp?_mid_=11877" class="">Licences</a></li><li><a title="" href="/en/townhall/buildingclosures.asp" class="">Municipal Offices Closures</a></li><li class="withChildren"><a title="Town Hall::News" href="/en/newsroom.asp" class="">Newsroom</a></li><li class="withChildren"><a title="Town Hall::Planning and Development" href="/en/townhall/planning.asp" class="">Planning and Development</a></li><li class="withChildren"><a title="Town Hall::Public Works" href="/en/townhall/publicworks.asp" class="">Public Works</a></li><li><a title="Town Hall::Rates, Fees and Permits" href="/en/townhall/feesandpermits.asp" class="">Rates, Fees and Permits</a></li><li><a title="Town Hall::Reports and Publications" href="/en/townhall/reportsandplans.asp" class="">Reports and Plans</a></li><li class="withChildren"><a title="Town Hall::Studies and Plans" href="/en/townhall/studiesandplans.asp?_mid_=11930" class="">Studies and Plans</a></li></ul>
+						<ul class="subNav"><li class="withChildren"><a title="Town Hall :: Office of the Town Clerk" href="/en/townhall/officeofthetownclerk.asp" class="current">Office of the Town Clerk</a><ul><li><a title="Agendas, Minutes and Reports" href="https://whitby.civicweb.net/Documents/DocumentList.aspx" class="" target="_blank">Agendas, Minutes and Reports</a></li><li><a title="Mayor &amp; Council::Appear Before Council" href="/en/townhall/appearbeforecouncil.asp" class="">Appear Before Council</a></li><li><a title="Mayor &amp; Council::Calendar of Meetings" href="/en/Calendar/Default.aspx?Calendar=082d29e0-608b-48e7-b723-71e6aeed4219&amp;_mid_=12485" class="">Calendar of Meetings</a></li><li><a title="" href="/en/townhall/Civil-Marriage-Ceremonies.asp" class="">Civil Marriage Ceremonies</a></li><li><a title="Mayor &amp; Council::Closed Meeting Investigations" href="/en/townhall/closedmeetinginvestigationprocedure.asp" class="">Closed Meeting Investigation Procedure</a></li><li><a title="Commissioner of Oaths" href="/en/townhall/commissionerofoaths.asp?_mid_=30059" class="">Commissioner of Oaths</a></li><li><a title="Flag Raisings" href="/en/townhall/flag-raisings.asp" class="">Flag Raisings</a></li><li><a title="Licences" href="/en/townhall/licences.asp?_mid_=30058" class="">Licences</a></li><li><a title="Proclamations" href="/en/townhall/proclamations.asp" class="">Proclamations</a></li></ul></li></ul><ul class="subNav secondul"><li class="withChildren"><a title="Town Hall::Mayor and Council" href="/en/townhall/mayorandcouncil.asp" class="">Mayor and Council</a></li><li class="withChildren"><a title="Town Hall::Municipal Elections" href="/en/townhall/municipalelections.asp" class="">Municipal Elections</a></li><li class="withChildren"><a title="Committee and Council Meetings" href="/en/townhall/councilandcommitteemeetings.asp" class="">Committee and Council Meetings</a></li><li class="withChildren"><a title="Town Hall::Committees" href="/en/townhall/committees.asp" class="">Committees</a></li><li class="withChildren"><a title="Town Hall::Chief Administrative Officer" href="/en/townhall/chiefadministrativeofficer.asp" class="">Chief Administrative Officer</a></li><li class="withChildren"><a title="Town Hall::Community and Marketing Services" href="/en/townhall/communityandmarketingservices.asp" class="">Community and Marketing Services</a></li><li class="withChildren"><a title="Town Hall::Corporate Services" href="/en/townhall/corporateservices.asp?_mid_=11856" class="">Corporate Services</a></li><li class="withChildren"><a title="Town Hall::Fire and Emergency Services" href="/en/townhall/fireandemergencyservices.asp" class="">Fire and Emergency Services</a></li><li><a title="Town Hall::Applications, Forms, Permits" href="/en/townhall/applicationsformspermits.asp?_mid_=11826" class="">Applications, Forms and Permits</a></li><li><a title="Bids and Tenders" href="/en/townhall/purchasing.asp" class="">Bids and Tenders</a></li><li><a title="Budget" href="/en/townhall/budget.asp" class="">Budget</a></li><li class="withChildren"><a title="Town Hall::Bylaws" href="/en/townhall/bylaws.asp" class="">By-laws</a></li><li><a title="View our By-law Services page" href="/en/townhall/bylawenforcement.asp?_mid_=11828" class="">By-law Services</a></li><li><a title="Town Hall::Commissioner of Oaths" href="/en/townhall/commissionerofoaths.asp" class="">Commissioner of Oaths</a></li><li><a title="Town Hall::Freedom of Information" href="/en/townhall/freedomofinformation.asp" class="">Freedom of Information</a></li><li><a title="Town Hall::Licences" href="/en/townhall/licences.asp?_mid_=11877" class="">Licences</a></li><li><a title="" href="/en/townhall/buildingclosures.asp" class="">Municipal Offices Closures</a></li><li class="withChildren"><a title="Town Hall::News" href="/en/newsroom.asp" class="">Newsroom</a></li><li class="withChildren"><a title="Town Hall::Planning and Development" href="/en/townhall/planning.asp" class="">Planning and Development</a></li><li class="withChildren"><a title="Town Hall::Public Works" href="/en/townhall/publicworks.asp" class="">Public Works</a></li><li><a title="Town Hall::Rates, Fees and Permits" href="/en/townhall/feesandpermits.asp" class="">Rates, Fees and Permits</a></li><li><a title="Town Hall::Reports and Publications" href="/en/townhall/reportsandplans.asp" class="">Reports and Plans</a></li><li class="withChildren"><a title="Town Hall::Studies and Plans" href="/en/townhall/studiesandplans.asp?_mid_=11930" class="">Studies and Plans</a></li></ul>
 					</div>
 					<div id="contentInt">
 						<div id="printArea">
@@ -486,8 +534,8 @@
 										</div>
 										<div id="contactTop"></div>
 										<div class="contactBody">
-											<div id="contactEntry_678" class="contactBodyContactInfoContactModuleV2"><br /></div>
-<div id="contactEntry_857" class="contactBodyContactInfoContactModuleV2"></div>
+											<div class="contactBodyContactInfoContactModuleV2" id="contactEntry_678"><br></div>
+<div class="contactBodyContactInfoContactModuleV2" id="contactEntry_857"></div>
 										</div>
 										<div class="contactFooter">&nbsp;</div>
 									</div>
@@ -495,7 +543,7 @@
 							</div>
 							<div id="printAreaContent">
 								<div style="display:none;" class="icreateTokenWrapper">
-									<form id="frmToggleContent" action=""><input id="hdnHideLeftContent" type="hidden" /><input id="hdnHideRightContent" type="hidden" /><input id="btnToggleContent" class="hideButton" value="Submit Query" type="submit" name="btnToggleContent" /></form>
+									<form id="frmToggleContent" action=""><input id="hdnHideLeftContent" type="hidden"><input id="hdnHideRightContent" type="hidden"><input name="btnToggleContent" class="hideButton" id="btnToggleContent" type="submit" value="Submit Query"></form>
 								</div>
 								<!-- iCreate side only 
 <input id="chkHideLeftContent" type="checkbox" name="chkHideLeftContent" />
@@ -557,12 +605,12 @@
     }
     
 </script>
-								<p>The Office of the Town Clerk acts as the secretariat to the Council and its standing committees. The Town Clerk is responsible for the statutory notices of the municipal clerk, which includes collecting and maintaining records under the <em>Vital Statistics Act</em> , the <em>Marriage Act</em> , and the <em>Municipal Freedom of Information and Protection of Privacy Act</em> . Specific responsibilities of the Town Clerk include managing the Town's corporate records, conducting <a title="view our Elections page" href="/en/townhall/municipalelections.asp">municipal elections</a> , coordinating Town Hall <a title="view our Council Calendar page" href="http://whitby.icreate4.esolutionsgroup.ca/en/Calendar/Default.aspx?Calendar=082d29e0-608b-48e7-b723-71e6aeed4219">Committee and Council meetings</a> , administering business and lottery <a title="view our Licenses page" href="/en/townhall/licences.asp">licensing</a> , maintaining corporate policies, coordinating certain special events and performing <a href="http://www.whitby.ca/en/townhall/Civil-Marriage-Ceremonies.asp" title="civil marriage ceremonies" target="_blank">civil marriage ceremonies</a>. </p>
-<p>The Office of the Town Clerk also provides <a title="view our Commissioner of Oaths page" href="/en/townhall/commissionerofoaths.asp">Commissioner of Oaths</a> services and maintains all of the Town's administrative and regulatory <a title="view our By-laws page" href="/en/townhall/bylaws.asp">by-laws</a>.<span style="height: 20px;"></span></p>
+								<p>The Office of the Town Clerk acts as the secretariat to the Council and its standing committees. The Town Clerk is responsible for the statutory notices of the municipal clerk, which includes collecting and maintaining records under the <em>Vital Statistics Act</em> , the <em>Marriage Act</em> , and the <em>Municipal Freedom of Information and Protection of Privacy Act</em> . Specific responsibilities of the Town Clerk include managing the Town's corporate records, conducting <a title="view our Elections page" href="/en/townhall/municipalelections.asp">municipal elections</a> , coordinating Town Hall <a title="view our Council Calendar page" href="http://whitby.icreate4.esolutionsgroup.ca/en/Calendar/Default.aspx?Calendar=082d29e0-608b-48e7-b723-71e6aeed4219">Committee and Council meetings</a> , administering business and lottery <a title="view our Licenses page" href="/en/townhall/licences.asp">licensing</a> , maintaining corporate policies, coordinating certain special events and performing <a title="civil marriage ceremonies" href="http://www.whitby.ca/en/townhall/Civil-Marriage-Ceremonies.asp" target="_blank">civil marriage ceremonies</a>. </p>
+<p>The Office of the Town Clerk also provides <a title="view our Commissioner of Oaths page" href="/en/townhall/commissionerofoaths.asp">Commissioner of Oaths</a> services and maintains all of the Town's administrative and regulatory <a title="view our By-laws page" href="/en/townhall/bylaws.asp">by-laws</a>&nbsp;and is responsible for&nbsp;receiving, coordinating and reviewing applications for <a title="go to the Proclamation page" href="http://www.whitby.ca/en/townhall/proclamations.asp">Proclamations&nbsp;</a>and <a title="go to the Flag Raising page" href="http://www.whitby.ca/en/townhall/flag-raisings.asp">Flag Raising</a> requests.</p>
 <h2>Records Management </h2>
 <p>The Office of the Town Clerk is responsible for corporate records management. This includes following records through their life cycle of creation, maintenance, use, and disposal. Records of enduring value are preserved. </p>
 <h3>Archive </h3>
-<p>A repository of records of development of the Town from 1800 to present day is maintained in the Whitby Archives. The Whitby Archives room is open to the public each week, Tuesday through Thursday. For more information on the Whitby Archives, please contact 905.668.6531 x2022. </p>
+<p>The Whitby Archives maintains a comprehensive archival collection containing unpublished records of historical or cultural significance essential to the understanding of the heritage of Whitby and its people. The Whitby Archives is located at the Whitby Central Library. For hours of operation please check the website: <a title="http://www.whitbylibrary.on.ca/archives-hours" href="http://www.whitbylibrary.on.ca/archives-hours#open http://www.whitbylibrary.on.ca/archives-hours" target="_blank">http://www.whitbylibrary.on.ca/archives-hours</a> &nbsp;</p><p>The Archivist can be reached by email at <a title="Open new window to send an email to Whitby Archives" href="javascript:emailDialog(2909,'en')&amp;&amp;false">archives@whitbylibrary.on.ca</a> or phone at 905-668-6531 ext. 2022 </p>
 <h3>Vital Statistics </h3>
 <p>In conjunction with the <a title="follow link to www.mgs.gov.on.ca" href="http://www.mgs.gov.on.ca/en/Home/index.htm" target="_blank">Ministry of Government Services</a>, under the direction of the Registrar General's Office, the Town Clerk of the Town of Whitby is appointed Division Registrar for the Municipality. As such, the Town Clerk plays a fundamental role in the collection and maintenance of provincial vital statistics. The Division Registrar is responsible for issuing burial permits and the registration of births and deaths under the <em>Vital Statistics Act</em>. The Division Registrar's function does not include providing data access to the vital statistics records. Persons wishing to obtain birth, death, or marriage certificates can request these services by contacting the Ministry of Government Services. </p>
 <h2>Special Events </h2>

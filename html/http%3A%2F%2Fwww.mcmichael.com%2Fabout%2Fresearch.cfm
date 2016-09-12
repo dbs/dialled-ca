@@ -112,7 +112,7 @@
   
   <li class="selected"><a href="/about/research.cfm">Research</a></li><li ><a href="/about/staff.cfm">Board & Staff</a>
     <ul>
-      <li><a href="http://mcmichael.com/about/upkar-arora-chair-board-of-trustees.cfm">Board Chair</a></li>
+      <li><a href="http://mcmichael.com/about/andrew-dunne-acting-chair.cfm">Board Chair</a></li>
     </ul>
 </li>
   <li ><a href="/about/facilities.cfm">Facilities &amp; Rentals</a></li><li ><a href="/about/media.cfm">Media Releases</a></li><li ><a href="/about/careers.cfm">Careers</a></li>
@@ -127,7 +127,7 @@
 	  <div id="ctaContainer"> 		
 	    <div class="cta">
 	<p><strong>Connect With Us!<br />
-</strong><a href="http://www.facebook.com/pages/McMichael-Canadian-Art-Collection/206491259365240" target="_blank"><img src="/images/en/facebookicon.gif" alt="Facebook" title="Facebook" width="32" height="32" hspace="4" vspace="10" border="0" /></a><a href="http://twitter.com/mcacgallery" target="_blank"><img src="/images/en/twitter.gif" alt="Twitter" title="twitter" width="32" height="32" hspace="4" vspace="10" border="0"/></a></a><a href="https://www.instagram.com/mcacgallery/" target="_blank"><img src="http://www.mcmichael.com/images/instagram-icon.png" width="34" height="34" hspace="4" vspace="10" border="0" alt="Instagram"/></a></p> 
+</strong><a href="http://www.facebook.com/mcmichaelgallery" target="_blank"><img src="/images/en/facebookicon.gif" alt="Facebook" title="Facebook" width="32" height="32" hspace="4" vspace="10" border="0" /></a><a href="http://twitter.com/mcacgallery" target="_blank"><img src="/images/en/twitter.gif" alt="Twitter" title="twitter" width="32" height="32" hspace="4" vspace="10" border="0"/></a></a><a href="https://www.instagram.com/mcmichaelgallery/" target="_blank"><img src="http://www.mcmichael.com/images/instagram-icon.png" width="34" height="34" hspace="4" vspace="10" border="0" alt="Instagram"/></a></p> 
     </div>
 
 	   <div class="cta">

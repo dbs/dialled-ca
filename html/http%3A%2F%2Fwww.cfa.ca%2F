@@ -17,7 +17,7 @@
 
 <!-- Title Tag -- if not custom then normal title with filter (plugin fix for SEO ultimate in title.php)
 ================================================== -->
-<input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" />	<title>Canadian Franchise Association</title>
+<input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" />	<title>Canadian Franchise Association</title>
     
 <link rel="shortcut icon" href="http://www.cfa.ca/wp-content/themes/cfa-theme/favicon.ico" />
 
@@ -36,15 +36,6 @@
     <script src="http://www.cfa.ca/wp-content/themes/cfa-theme/js/ie-bootstrap-carousel.min.js"></script>
 <![endif]-->
 <!--social scripts START-->
-<div id="fb-root"></div>
-<!--script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script-->
-<!--social scripts END-->
 
 <!-- Google Plus Button START -->
 <!--script type="text/javascript">
@@ -100,13 +91,22 @@
 <body class="home page page-id-17 page-template page-template-page-templateslanding-page-php">
 	<script type="text/javascript">var ssaUrl = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'wl-pixel.index.digital/iap/4072999ae16213b3';new Image().src = ssaUrl;</script>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '1078493472217031',
+	      xfbml      : true,
+	      version    : 'v2.6'
+	    });
+	  };
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
 
     <!-- Start Header-->
     <header id="masterhead-container">
@@ -124,7 +124,7 @@
 			    	</div>
 			    	
 			    	<div class="tfs-main-title col-xs-12 col-sm-6 col-md-6">
-			    		<input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" /><ul class="ads-top cfa-banner">
+			    		<input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" /><ul class="ads-top cfa-banner">
     
                     <li>
                             <a onclick="_gaq.push(['_trackEvent', 'rotating-banners', 'click', 'banner-574-CFA']);" href="http://www.cfa.ca/member-services/become-a-cfa-member/" target="_blank">
@@ -236,8 +236,12 @@
 </li>
 <li id="menu-item-1578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1578"><a href="http://www.cfa.ca/advocacy/" class="dropdown-toggle" >Advocacy <b class="caret" data-toggle="dropdown"></b></a>
 <ul class="dropdown-menu depth_0">
-	<li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-528"><a href="http://www.cfa.ca/advocacy/franchise-legislation/">Franchise Legislation</a></li>
-	<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-527"><a href="http://www.cfa.ca/advocacy/legislation/">Other Legislation</a></li>
+	<li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-528 dropdown-submenu"><a href="http://www.cfa.ca/advocacy/franchise-legislation/" class="dropdown-toggle" >Franchise Legislation</a>
+	<ul class="dropdown-menu sub-menu depth_1">
+		<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-527"><a href="http://www.cfa.ca/advocacy/legislation/">Other Legislation</a></li>
+	</ul>
+</li>
+	<li id="menu-item-15723" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-15723"><a href="http://www.cfa.ca/advocacy/changing-workplaces-review/">Ontario Changing Workplaces Review</a></li>
 	<li id="menu-item-525" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-525"><a href="http://www.cfa.ca/advocacy/advocacy-backgrounders/">CFA Advocacy Backgrounders</a></li>
 	<li id="menu-item-4078" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4078"><a href="http://www.cfa.ca/members-only-area/cfa-advocacy-headquarters/">CFA Advocacy Headquarters (Members Only)</a></li>
 </ul>
@@ -248,13 +252,13 @@
 	<ul class="dropdown-menu sub-menu depth_1">
 		<li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-635 dropdown-submenu"><a href="http://www.cfa.ca/member-services/become-a-cfa-member/franchise-systems/" class="dropdown-toggle" >About CFA Membership for Franchise Systems</a>
 		<ul class="dropdown-menu sub-menu depth_2">
-			<li id="menu-item-12733" class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-12733"><a href="http://www.cfa.ca/wp-content/uploads/2016/04/NEW_2016Franchise-SystemApplicationForm_REVISEDApr19_Fillable.pdf">Franchise System Application Form</a></li>
+			<li id="menu-item-12733" class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-12733"><a target="_blank" href="http://www.cfa.ca/wp-content/uploads/2016/07/2016_17_FranchiseSystemApplicationForm_07212016JJ_Fillable.pdf">Franchise System Application Form</a></li>
 			<li id="menu-item-12734" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-12734"><a href="http://www.cfa.ca/member-services/become-a-cfa-member/franchise-systems/franchise-system-member-fees/">Franchise System Member Fees</a></li>
 		</ul>
 </li>
 		<li id="menu-item-636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-636 dropdown-submenu"><a href="http://www.cfa.ca/member-services/become-a-cfa-member/support-services-suppliers/" class="dropdown-toggle" >About CFA Membership for Support Services / Suppliers</a>
 		<ul class="dropdown-menu sub-menu depth_2">
-			<li id="menu-item-640" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-640"><a href="http://www.cfa.ca/member-services/become-a-cfa-member/support-services-suppliers/application-form/">FSS/Supplier Application Form</a></li>
+			<li id="menu-item-14842" class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-14842"><a target="_blank" href="http://www.cfa.ca/wp-content/uploads/2016/07/2016_17_FSS_ApplicationForm_07212016JJ_Fillable.pdf">FSS/Supplier Application Form</a></li>
 			<li id="menu-item-639" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-639"><a href="http://www.cfa.ca/member-services/become-a-cfa-member/support-services-suppliers/membership-fees/">FSS/Supplier Membership Fees</a></li>
 		</ul>
 </li>
@@ -311,15 +315,12 @@
 	</ul>
 </li>
 	<li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-691"><a href="http://www.cfa.ca/tools_resources/disclosure-document-guide/">CFA Disclosure Document Guide</a></li>
-	<li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-523 dropdown-submenu"><a href="http://www.cfa.ca/tools_resources/franchise-research-facts/" class="dropdown-toggle" >Franchise Facts &#038; Research</a>
-	<ul class="dropdown-menu sub-menu depth_1">
-		<li id="menu-item-522" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-522"><a href="http://www.cfa.ca/tools_resources/franchise-research-facts/reports-franchising/">Reports on Franchising</a></li>
-	</ul>
-</li>
+	<li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-523"><a href="http://www.cfa.ca/tools_resources/franchise-research-facts/">Franchise Facts &#038; Research</a></li>
 	<li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-695"><a href="http://www.cfa.ca/tools_resources/white-papers/">White Papers</a></li>
 	<li id="menu-item-1572" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1572"><a href="http://www.cfa.ca/tools_resources/cfa-publications/">CFA Publications</a></li>
 	<li id="menu-item-2351" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2351"><a href="http://www.cfa.ca/tools_resources/franchise-resource-tools/careers-in-franchising/">Careers in Franchising</a></li>
 	<li id="menu-item-688" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-688"><a href="http://www.cfa.ca/tools_resources/advanced-search/">Advanced Search Tool</a></li>
+	<li id="menu-item-15229" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-15229"><a href="http://www.cfa.ca/about-cfa/cfa-blog/">CFA Blog</a></li>
 </ul>
 </li>
 <li id="menu-item-1701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1701"><a href="http://www.cfa.ca/events-webinars/" class="dropdown-toggle" >Tradeshows &#038; Events <b class="caret" data-toggle="dropdown"></b></a>
@@ -328,14 +329,15 @@
 	<li id="menu-item-1988" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1988"><a href="http://www.cfa.ca/events-webinars/how-to-franchise-your-business-seminar/">How to Franchise Your Business</a></li>
 	<li id="menu-item-14256" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-14256"><a href="http://www.cfa.ca/events-webinars/cfa-national-convention/convention-2017/">CFA National Convention</a></li>
 	<li id="menu-item-1029" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1029"><a href="http://www.cfa.ca/events-webinars/cfa-franchise-law-day/">CFA Franchise Law Day</a></li>
-	<li id="menu-item-14257" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-14257"><a href="http://www.cfa.ca/events-webinars/cfa-golf-tournament-2016/">CFA Golf Tournament 2016</a></li>
+	<li id="menu-item-15177" class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-15177"><a href="http://www.cfa.ca/events-webinars/cfa-golf-tournament-2016-thank-you/">CFA Golf Tournament 2016</a></li>
 	<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-723 dropdown-submenu"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/" class="dropdown-toggle" >WoW: Webinars on Wednesdays</a>
 	<ul class="dropdown-menu sub-menu depth_1">
 		<li id="menu-item-1704" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1704"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/upcoming-webinars/">Register for a Webinar</a></li>
 		<li id="menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-721"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/upcoming-webinars/">Upcoming Webinars on Wednesdays</a></li>
-		<li id="menu-item-5310" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5310"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/franchise-information-webinars/">Live-Chat Franchise Webinars</a></li>
+		<li id="menu-item-15284" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-15284"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/live-chat-franchise-webinars/">Live-Chat Franchise Webinars</a></li>
+		<li id="menu-item-15285" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-15285"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/live-chat-franchise-webinars-fr/">Webinaires avec des clavardages en direct pour les franchises</a></li>
 		<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-720"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/webinars-on-demand/">Webinars On Demand</a></li>
-		<li id="menu-item-719" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-719"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/sponsor-a-webinar/">Buy a Webinar Sponsorship</a></li>
+		<li id="menu-item-719" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-719"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/present-a-wow-webinar/">Buy a Webinar Sponsorship</a></li>
 		<li id="menu-item-718" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-718"><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/webinar-package-pricing/">Webinar Package Pricing</a></li>
 	</ul>
 </li>
@@ -391,7 +393,7 @@
 <!--modal popup banner-->
 <!--modal login form END-->
 
-<input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" />
+<input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" />
 
 <article id="content">
 	<div class="container tfs-content">
@@ -406,11 +408,11 @@
         	<div class="col-xs-12 col-sm-8 well-carousel">
 				<div id="carousel-example-generic" class="carousel slide">
 				  <!-- Wrapper for slides -->
-					<div class="carousel-inner"><div class="item active"><a href="http://www.cfa.ca/member-services/cfa-awards-of-excellence/2016-cfa-awards-of-excellence-winners/"><img class="aligncenter wp-image-14075 size-full" src="http://www.cfa.ca/wp-content/uploads/2015/09/AofE2016_CongratsCarousel_800x240px.png" alt="Congratulations Award Winners Carousel Banner" width="800" height="240" /></a>
+					<div class="carousel-inner"><div class="item active"><a href="http://www.cfa.ca/advocacy/changing-workplaces-review/"><img class="aligncenter size-full wp-image-15724" src="http://www.cfa.ca/wp-content/uploads/2015/09/Ontario-Changing-Workpalce-Review-Carousel-800x240.png" alt="Ontario Changing Workplaces Review - Impact on Franchising" width="800" height="240" /></a>
 
 </div><div class="item">
 
-<a href="http://www.franchiseawareness.ca"><img class="aligncenter size-full wp-image-12809" src="http://www.cfa.ca/wp-content/uploads/2016/03/FA_Banner_800x240.png" alt="Franchise Awareness Day" width="800" height="240" /></a>
+<a href="http://www.cfa.ca/events-webinars/cfa-franchise-law-day/"><img class="aligncenter size-full wp-image-15879" src="http://www.cfa.ca/wp-content/uploads/2016/08/LawDay_Fall2016_carousel2_800x240px.png" alt="LawDay_Fall2016_carousel2_800x240px" width="800" height="240" /></a>
 
 </div><div class="item">
 
@@ -418,8 +420,16 @@
 
 </div><div class="item">
 
+<a href="/member-services/become-a-cfa-member/"><img class="alignleft size-full wp-image-1847" src="http://www.cfa.ca/wp-content/uploads/2016/03/CFA_Banner_800x240_JoinCFA_RH.jpg" alt="CFA_Banner_800x240_JoinCFA_RH" /></a>
+
+</div><div class="item">
+
+<a href="http://www.franchiseawareness.ca"><img class="aligncenter size-full wp-image-12809" src="http://www.cfa.ca/wp-content/uploads/2016/03/FA_Banner_800x240.png" alt="Franchise Awareness Day" width="800" height="240" /></a>
+
+</div><div class="item">
+
 <a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/upcoming-webinars/">
-<img class="aligncenter size-full wp-image-10749" src="http://www.cfa.ca/wp-content/uploads/2015/08/Wow_BannerB_800x240pxNEW.png" alt="Wow_Banner_800x240px" width="800" height="240" /></a>
+</a><a href="http://www.cfa.ca/events-webinars/wow-webinars-on-wednesdays/upcoming-webinars/"><img class="aligncenter size-full wp-image-15582" src="http://www.cfa.ca/wp-content/uploads/2015/09/Wow_Banner_800x240px.png" alt="Wow_Banner_800x240px" width="800" height="240" /></a>
 
 </div><div class="item">
 
@@ -427,13 +437,9 @@
 
 </div><div class="item">
 
-<a href="/member-services/become-a-cfa-member/"><img class="alignleft size-full wp-image-1847" src="http://www.cfa.ca/wp-content/uploads/2016/03/CFA_Banner_800x240_JoinCFA_RH.jpg" alt="CFA_Banner_800x240_JoinCFA_RH" /></a>
+<a href="http://www.cfa.ca/member-services/cfa-awards-of-excellence/2016-cfa-awards-of-excellence-winners/"><img class="aligncenter wp-image-14075 size-full" src="http://www.cfa.ca/wp-content/uploads/2015/09/AofE2016_CongratsCarousel_800x240px.png" alt="Congratulations Award Winners Carousel Banner" width="800" height="240" /></a>
 
-</div><div class="item">
-
-<a href="http://www.cfa.ca/events-webinars/cfa-golf-tournament-2016/"><img class="aligncenter size-full wp-image-14145" src="http://www.cfa.ca/wp-content/uploads/2016/05/GolfBanner2016_Carousel_800x240px.png" alt="GolfBanner2016_Carousel_800x240px" width="800" height="240" /></a>
-
-</div></div><div class="clearfix"></div><!-- Indicators --><div class="row row-indicators"><ol class="carousel-indicators"><li data-target="#carousel-example-generic" data-slide-to="0"class="active"></li><li data-target="#carousel-example-generic" data-slide-to="1"></li><li data-target="#carousel-example-generic" data-slide-to="2"></li><li data-target="#carousel-example-generic" data-slide-to="3"></li><li data-target="#carousel-example-generic" data-slide-to="4"></li><li data-target="#carousel-example-generic" data-slide-to="5"></li><li data-target="#carousel-example-generic" data-slide-to="6"></li></ol>
+</div></div><div class="clearfix"></div><!-- Indicators --><div class="row row-indicators"><ol class="carousel-indicators"><li data-target="#carousel-example-generic" data-slide-to="0"class="active"></li><li data-target="#carousel-example-generic" data-slide-to="1"></li><li data-target="#carousel-example-generic" data-slide-to="2"></li><li data-target="#carousel-example-generic" data-slide-to="3"></li><li data-target="#carousel-example-generic" data-slide-to="4"></li><li data-target="#carousel-example-generic" data-slide-to="5"></li><li data-target="#carousel-example-generic" data-slide-to="6"></li><li data-target="#carousel-example-generic" data-slide-to="7"></li></ol>
 					  
 					  <!-- Controls -->
 					  <a class="pull-left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -474,9 +480,9 @@
 				<div id="wn2">
 				    <div id="lyr2" style="padding-top:5px;line-height:20px;display:block;">
 				        <div id="inner2"><span> <!-- fill content from LMP start random-->
-				        	<a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/opa-souvlaki-franchise-group-inc/">OPA! Souvlaki Franchise Group Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/orange-julius-canada-limited/">Orange Julius Canada Limited</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/orange-leaf-frozen-yogurt/">Orange Leaf Frozen Yogurt</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/orangetheory-fitness/">Orangetheory Fitness</a><a href="http://lookforafranchise.ca/browse-franchises/lawn-garden-supplies-services/outdoor-lighting-perspectives/">Outdoor Lighting Perspectives</a><a href="http://lookforafranchise.ca/browse-franchises/home-maid-cleaning-services/ovenclean-canada/">Ovenclean Canada</a><a href="http://lookforafranchise.ca/browse-franchises/educational-products-services/oxford-learning-centres-inc/">Oxford Learning Centres Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/oxygen-yoga-and-fitness/">Oxygen Yoga and Fitness</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/pacini/">Pacini</a><a href="http://lookforafranchise.ca/browse-franchises/accounting-tax-services/padgett-business-services/">PADGETT BUSINESS SERVICES</a><a href="http://lookforafranchise.ca/browse-franchises/printing-copying-shipping/pak-mail/">Pak Mail</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/panago-pizza-inc/">Panago Pizza Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/panini-pasta-pizza-mty-group/">PANINI PASTA PIZZA - MTY GROUP</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pannizza-restaurants-inc/">Pannizza Restaurants Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/papa-johns/">Papa John's</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/papa-murphys-take-n-bake-pizza/">Papa Murphy's Take 'N' Bake Pizza</a><a href="http://lookforafranchise.ca/browse-franchises/home-based-businesses/par-t-perfect-party-planners-inc-1/">Par-T-Perfect Party Planners Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/childrens-products-services/par-t-perfect-party-planners-inc/">Par-T-Perfect Party Planners Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/paramount-fine-foods/">Paramount Fine Foods</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/paul-davis/">Paul Davis</a><a href="http://lookforafranchise.ca/browse-franchises/pets-sales-supplies-services/pet-valu/">PET VALU</a><a href="http://lookforafranchise.ca/browse-franchises/building-design-services/picture-this-today-3d-inc/">Picture This Today 3D Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/home-inspection-services/pillar-to-post-home-inspectors/">Pillar To Post Home Inspectors</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pita-land-inc/">Pita Land Inc</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pita-pit/">Pita Pit</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pizza-73/">Pizza 73</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pizza-allantica/">Pizza All'Antica</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/pizza-delight/">Pizza Delight</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pizza-depot/">Pizza Depot</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pizza-hotline/">Pizza Hotline</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/pizza-nova/">Pizza Nova</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pizza-pizza/">Pizza Pizza</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pizzaiolo-gourmet-pizza/">Pizzaiolo Gourmet Pizza</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pizzaville-inc/">Pizzaville Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/event-planning/plan-ahead-events/">Plan Ahead Events</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/planet-fitness/">Planet Fitness</a><a href="http://lookforafranchise.ca/browse-franchises/retail/platos-closet/">Plato's Closet</a><a href="http://lookforafranchise.ca/browse-franchises/sports-recreation-entertainment/play-it-again-sports/">Play It Again Sports</a><a href="http://lookforafranchise.ca/browse-franchises/commercial-residential-services/pop-a-lock/">Pop-a-Lock</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/popeyes-louisiana-kitchen/">Popeyes Louisiana Kitchen</a><a href="http://lookforafranchise.ca/browse-franchises/sign-products-services/postcard-portables-canada-ltd/">Postcard Portables Canada Ltd.</a><a href="http://lookforafranchise.ca/browse-franchises/printing-copying-shipping/postnet/">PostNet</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/practicar-car-truck-rentals/">Practicar Car & Truck Rentals</a><a href="http://lookforafranchise.ca/browse-franchises/seniors-services-home-care-transition/premier-homecare-services/">Premier Homecare Services</a><a href="http://lookforafranchise.ca/browse-franchises/educational-products-services/prepskills/">PREPSKILLS®</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/prepn-sell-1/">PREP’n SELL</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/pressd-the-sandwich-company/">Press'd The Sandwich Company</a><a href="http://lookforafranchise.ca/browse-franchises/food-baked-goods-coffee-donuts/presse-caf/">Presse Café</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/prime-restaurants-inc/">Prime Restaurants Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/printing-copying-shipping/print-three-franchising-corporation/">Print Three Franchising Corporation</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/pro-fleet-care-franchising/">Pro Fleet Care Franchising</a><a href="http://lookforafranchise.ca/browse-franchises/real-estate/property-management-inc/">Property Management Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/real-estate/propertyguyscom-inc/">PropertyGuys.com Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/pumpernickels-franchise-corp/">Pumpernickel's Franchise Corp.</a><a href="http://lookforafranchise.ca/browse-franchises/beauty-cosmetics-supplies/pure-simple/">Pure + Simple</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/pure-barre/">Pure Barre</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/puroclean/">PuroClean</a><a href="http://lookforafranchise.ca/browse-franchises/seniors-services-home-care-transition/qualicare/">Qualicare</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/quesada-burritos-tacos/">Quesada Burritos - Tacos</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/quiznos-canada-restaurant-corporation/">Quiznos Canada Restaurant Corporation</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/rainbow-international/">Rainbow International</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/rawlicious/">Rawlicious</a><a href="http://lookforafranchise.ca/browse-franchises/real-estate/real-property-management/">Real Property Management</a><a href="http://lookforafranchise.ca/browse-franchises/employment-personnel-services/recruiting-in-motion/">Recruiting In Motion</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/reflex-supplements/">Reflex Supplements</a><a href="http://lookforafranchise.ca/browse-franchises/hair-nail-salons-spas/regis-corporation/">Regis Corporation</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/relish-gourmet-burgers/">reLiSH Gourmet Burgers</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/rent-a-wreck-car-truck-rentals/">Rent-A-Wreck Car & Truck Rentals</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/restoration-1/">Restoration 1</a><a href="http://lookforafranchise.ca/browse-franchises/seniors-services-home-care-transition/retire-at-home-services/">Retire-At-Home Services</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/rickys-all-day-grill/">Ricky's All Day Grill</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/rickys-caf/">Ricky's Café</a><a href="http://lookforafranchise.ca/browse-franchises/seniors-services-home-care-transition/right-at-home-canada/">Right at Home Canada</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/rileys/">Riley's</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/ripe-tomato-pizza/">Ripe Tomato Pizza</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/ritas-italian-ice-canada/">Rita's Italian Ice Canada</a><a href="http://lookforafranchise.ca/browse-franchises/food-baked-goods-coffee-donuts/robins-donuts/">Robin's Donuts</a><a href="http://lookforafranchise.ca/browse-franchises/real-estate/royal-lepage-real-estate-services/">Royal LePage Real Estate Services</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/russos-new-york-pizzeria/">Russo's New York Pizzeria</a><a href="http://lookforafranchise.ca/browse-franchises/retail/s3-fgl-sports-ltd/">S3 / FGL Sports Ltd.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/saladworks-1/">Saladworks</a><a href="http://lookforafranchise.ca/browse-franchises/educational-products-services/sandler-training/">Sandler Training</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/sangsters-health-centres-sangsters-organic-market/">Sangster’s Health Centres / Sangster’s Organic Market</a><a href="http://lookforafranchise.ca/browse-franchises/advertising-marketing-promotional-products-services/saver-media-group/">Saver Media Group</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/sawmill-prime-rib-steak-house/">Sawmill Prime Rib & Steak House</a><a href="http://lookforafranchise.ca/browse-franchises/educational-products-services/scholars-education-centre/">Scholars Education Centre</a><a href="http://lookforafranchise.ca/browse-franchises/educational-products-services/school-is-easy-tutoring/">School Is Easy Tutoring</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/scores-rotisserie-ribs/">Scores Rotisserie & Ribs</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/sculpt-health-wellness/">Sculpt Health & Wellness</a><a href="http://lookforafranchise.ca/browse-franchises/hospitality-products-services/sculpture-hospitality/">Sculpture Hospitality</a><a href="http://lookforafranchise.ca/browse-franchises/food-baked-goods-coffee-donuts/second-cup-coffee-co/">SECOND CUP COFFEE CO.™</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/select-sandwich-co/">Select Sandwich Co.</a><a href="http://lookforafranchise.ca/browse-franchises/seniors-services-home-care-transition/senior-helpers/">Senior Helpers</a><a href="http://lookforafranchise.ca/browse-franchises/food-baked-goods-coffee-donuts/serious-coffee/">Serious Coffee</a><a href="http://lookforafranchise.ca/browse-franchises/commercial-janitorial-services/servicemaster-clean/">ServiceMaster Clean</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/servicemaster-restore/">ServiceMaster Restore</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/servpro/">Servpro</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/shamrock-burgers/">Shamrock Burgers</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/shoeless-joes-sports-grill/">Shoeless Joe's Sports Grill</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/shoneys/">Shoney's</a>							</span>
+				        	<a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/johnny-ks-authentic-donairs/">Johnny K's Authentic Donairs</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/jugo-juice/">Jugo Juice</a><a href="http://lookforafranchise.ca/browse-franchises/food-baked-goods-coffee-donuts/jumping-bean-coffee/">Jumping Bean Coffee</a><a href="http://lookforafranchise.ca/browse-franchises/retail/jupiter/">Jupiter</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/kekuli-caf/">Kekuli Café</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/kelseys/">Kelsey's</a><a href="http://lookforafranchise.ca/browse-franchises/designated-driving-transportation-services/keys-please/">Keys Please</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/kfc/">KFC</a><a href="http://lookforafranchise.ca/browse-franchises/childrens-products-services/kid-to-kid/">KID TO KID</a><a href="http://lookforafranchise.ca/browse-franchises/childrens-products-services/kiddie-proofers/">Kiddie Proofers</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/kim-chi-mty-group/">KIM CHI - MTY GROUP</a><a href="http://lookforafranchise.ca/browse-franchises/retail/kms-tools-equipment/">KMS Tools & Equipment</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/kojax-souflaki/">Kojax Souflaki</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/koryo-korean-barbeque/">Koryo Korean Barbeque</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/koya-japan-mty-group/">KOYA JAPAN - MTY GROUP</a><a href="http://lookforafranchise.ca/browse-franchises/educational-products-services/kumon-math-and-reading-centres/">Kumon Math and Reading Centres</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/kwik-kloset/">Kwik Kloset</a><a href="http://lookforafranchise.ca/browse-franchises/printing-copying-shipping/kwik-kopy-printing-canada-corporation/">Kwik Kopy Printing Canada Corporation</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/la-carnita/">La Carnita</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/la-cremire-mty-group/">LA CREMIÈRE - MTY GROUP</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/la-prep/">LA PREP</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/le-muffin-plus/">LE MUFFIN PLUS</a><a href="http://lookforafranchise.ca/browse-franchises/photo-imaging-photography/learn-photography-canada-ltd/">Learn Photography (Canada) Ltd.</a><a href="http://lookforafranchise.ca/browse-franchises/childrens-products-services/learning-jungle-school/">Learning Jungle School</a><a href="http://lookforafranchise.ca/browse-franchises/accounting-tax-services/ledgers-canada/">Ledgers Canada</a><a href="http://lookforafranchise.ca/browse-franchises/accounting-tax-services/liberty-tax-service/">Liberty Tax Service</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/lice-squadcom/">Lice Squad.com</a><a href="http://lookforafranchise.ca/browse-franchises/home-inspection-services/lighthouse-inspections-canada/">Lighthouse Inspections Canada</a><a href="http://lookforafranchise.ca/browse-franchises/financial-cash-services/liquid-capital-canada-corp/">Liquid Capital Canada Corp.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/little-caesar-of-canada-ulc/">Little Caesar of Canada ULC</a><a href="http://lookforafranchise.ca/browse-franchises/childrens-products-services/little-kickers-canada-franchising-limited/">Little Kickers Canada Franchising Limited</a><a href="http://lookforafranchise.ca/browse-franchises/seniors-services-home-care-transition/living-assistance-services/">Living Assistance Services</a><a href="http://lookforafranchise.ca/browse-franchises/retail/living-lighting/">Living Lighting</a><a href="http://lookforafranchise.ca/browse-franchises/childrens-products-services/lunch-lady-group-inc-the/">Lunch Lady Group Inc, The</a><a href="http://lookforafranchise.ca/browse-franchises/food-grocery-specialty-shops/mm-food-market/">M&M Food Market</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/maaco-systems-canada-inc/">Maaco Systems Canada, Inc</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/madisons-nyc-grill-bar/">Madisons NYC Grill & Bar</a><a href="http://lookforafranchise.ca/browse-franchises/home-maid-cleaning-services/maid-right-franchising-llc/">Maid Right Franchising LLC</a><a href="http://lookforafranchise.ca/browse-franchises/childrens-products-services/makerkids-inc/">MakerKids Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/mama-delucas/">Mama Deluca's</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/manchu-wok-canada-inc/">Manchu Wok (Canada) Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/mandarin-restaurant-franchise-corporation/">Mandarin Restaurant Franchise Corporation</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/marble-slab-creamery/">Marble Slab Creamery</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/marcellos-market-deli-inc/">Marcello's Market & Deli Inc</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/mary-browns-inc/">Mary Brown's Inc</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/massage-addict/">Massage Addict</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/massage-experts-franchising-ltd/">Massage Experts Franchising Ltd.</a><a href="http://lookforafranchise.ca/browse-franchises/commercial-janitorial-services/master-care/">Master Care</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/master-mechanic-the/">Master Mechanic, The</a><a href="http://lookforafranchise.ca/browse-franchises/mobile-businesses/matco-tools-canada/">Matco Tools Canada</a><a href="http://lookforafranchise.ca/browse-franchises/educational-products-services/mathnasium/">Mathnasium</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/max-canadian-healthy-vending/">Max! Canadian Healthy Vending</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/mcdonalds-restaurants-of-canada-limited/">McDonald's Restaurants of Canada Limited</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/medicine-shoppe-canada/">Medicine Shoppe Canada</a><a href="http://lookforafranchise.ca/browse-franchises/educational-products-services/megamind-abacus-academy/">Megamind Abacus Academy</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/meineke-canada-partnership-lp/">Meineke Canada Partnership LP</a><a href="http://lookforafranchise.ca/browse-franchises/seniors-services-home-care-transition/melodys-house-calls/">Melody's House Calls</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/melting-pot-restaurants-inc-the/">Melting Pot Restaurants Inc., The</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/meltwich-food-co/">MELTwich Food Co.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/menchies-frozen-yogurt/">Menchie's Frozen Yogurt</a><a href="http://lookforafranchise.ca/browse-franchises/home-maid-cleaning-services/merry-maids-of-canada/">Merry Maids of Canada</a><a href="http://lookforafranchise.ca/browse-franchises/business-supplies-equipment-services/metal-supermarkets/">Metal Supermarkets</a><a href="http://lookforafranchise.ca/browse-franchises/commercial-residential-services/metropolitan-movers/">Metropolitan Movers</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/mevame-kitchen-express/">MeVaMe Kitchen Express</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/mezza-lebanese-kitchen/">Mezza Lebanese Kitchen</a><a href="http://lookforafranchise.ca/browse-franchises/food-baked-goods-coffee-donuts/michels-bakery-cafe-threecaf-brands-canada-inc/">Michel's Bakery Cafe (Threecaf Brands Canada Inc.)</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/midas-international-corporation/">Midas International Corporation</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/mikes-restaurants-inctrattoria-di-mikes/">MIKES RESTAURANTS INC./TRATTORIA DI MIKES</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/milestones-grill-bar/">Milestones Grill + Bar</a><a href="http://lookforafranchise.ca/browse-franchises/printing-copying-shipping/minuteman-press-international/">Minuteman Press International</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/mister-transmission-international/">Mister Transmission (International)</a><a href="http://lookforafranchise.ca/browse-franchises/food-baked-goods-coffee-donuts/mmmuffins-threecaf-brands-canada-inc/">mmmuffins (Threecaf Brands Canada Inc.)</a><a href="http://lookforafranchise.ca/browse-franchises/home-maid-cleaning-services/molly-maid-canada-inc/">MOLLY MAID Canada Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/commercial-janitorial-services/mom-cleaning/">MOM Cleaning</a><a href="http://lookforafranchise.ca/browse-franchises/financial-cash-services/money-direct/">Money Direct</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/monkeynastix-canada/">Monkeynastix Canada</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/montanas-cookhouse/">Montana's Cookhouse</a><a href="http://lookforafranchise.ca/browse-franchises/food-restaurants-dining-rooms/mr-mikes-steakhousecasual/">MR MIKES SteakhouseCasual</a><a href="http://lookforafranchise.ca/browse-franchises/commercial-residential-services/mr-appliance/">Mr. Appliance</a><a href="http://lookforafranchise.ca/browse-franchises/commercial-residential-services/mr-electric/">Mr. Electric</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/mr-greek-restaurants/">MR. GREEK Restaurants</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/mr-lube-canada/">Mr. Lube Canada</a><a href="http://lookforafranchise.ca/browse-franchises/commercial-residential-services/mr-rooter/">Mr. Rooter</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/mr-souvlaki/">Mr. Souvlaki</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/mrsub/">MR.SUB</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/mucho-burrito/">Mucho Burrito</a><a href="http://lookforafranchise.ca/browse-franchises/business-consultants-services-training/murphy-business-canada/">Murphy Business Canada</a><a href="http://lookforafranchise.ca/browse-franchises/home-improvement-renovation-restoration/n-hance/">N-Hance</a><a href="http://lookforafranchise.ca/browse-franchises/advertising-marketing-promotional-products-services/nation-imagination-imagination-cards-inc/">NATION Imagination - Imagination Cards Inc.</a><a href="http://lookforafranchise.ca/browse-franchises/printing-copying-shipping/navis-pack-and-ship/">NAVIS PACK AND SHIP</a><a href="http://lookforafranchise.ca/browse-franchises/food-baked-goods-coffee-donuts/nestle-toll-house-caf-by-chip/">NESTLE® TOLL HOUSE® CAFÉ BY CHIP®</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/new-orleans-pizza-canada-inc/">NEW ORLEANS PIZZA CANADA, INC.</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/new-york-fries/">New York Fries</a><a href="http://lookforafranchise.ca/browse-franchises/automotive-truck-services-products-rentals/novus-glass/">Novus Glass</a><a href="http://lookforafranchise.ca/browse-franchises/seniors-services-home-care-transition/nurse-next-door-home-care-services/">Nurse Next Door Home Care Services</a><a href="http://lookforafranchise.ca/browse-franchises/health-fitness-nutrition/nutrition-house-canada-inc/">Nutrition House Canada Inc</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/oburger-mty-group/">O'Burger - MTY GROUP</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/on-a-bun-italian-sandwiches/">On A Bun Italian Sandwiches</a><a href="http://lookforafranchise.ca/browse-franchises/childrens-products-services/once-upon-a-child/">Once Upon A Child</a><a href="http://lookforafranchise.ca/browse-franchises/food-quick-service-restaurants/opa-of-greece/">OPA! of Greece</a>							</span>
 				        	<span id="rpt2">
-							<a>OPA! Souvlaki Franchise Group Inc.</a><a>Orange Julius Canada Limited</a><a>Orange Leaf Frozen Yogurt</a><a>Orangetheory Fitness</a><a>Outdoor Lighting Perspectives</a><a>Ovenclean Canada</a><a>Oxford Learning Centres Inc.</a><a>Oxygen Yoga and Fitness</a><a>Pacini</a><a>PADGETT BUSINESS SERVICES</a><a>Pak Mail</a><a>Panago Pizza Inc.</a><a>PANINI PASTA PIZZA - MTY GROUP</a><a>Pannizza Restaurants Inc.</a><a>Papa John's</a><a>Papa Murphy's Take 'N' Bake Pizza</a><a>Par-T-Perfect Party Planners Inc.</a><a>Par-T-Perfect Party Planners Inc.</a><a>Paramount Fine Foods</a><a>Paul Davis</a><a>PET VALU</a><a>Picture This Today 3D Inc.</a><a>Pillar To Post Home Inspectors</a><a>Pita Land Inc</a><a>Pita Pit</a><a>Pizza 73</a><a>Pizza All'Antica</a><a>Pizza Delight</a><a>Pizza Depot</a><a>Pizza Hotline</a><a>Pizza Nova</a><a>Pizza Pizza</a><a>Pizzaiolo Gourmet Pizza</a><a>Pizzaville Inc.</a><a>Plan Ahead Events</a><a>Planet Fitness</a><a>Plato's Closet</a><a>Play It Again Sports</a><a>Pop-a-Lock</a><a>Popeyes Louisiana Kitchen</a><a>Postcard Portables Canada Ltd.</a><a>PostNet</a><a>Practicar Car & Truck Rentals</a><a>Premier Homecare Services</a><a>PREPSKILLS®</a><a>PREP’n SELL</a><a>Press'd The Sandwich Company</a><a>Presse Café</a><a>Prime Restaurants Inc.</a><a>Print Three Franchising Corporation</a><a>Pro Fleet Care Franchising</a><a>Property Management Inc.</a><a>PropertyGuys.com Inc.</a><a>Pumpernickel's Franchise Corp.</a><a>Pure + Simple</a><a>Pure Barre</a><a>PuroClean</a><a>Qualicare</a><a>Quesada Burritos - Tacos</a><a>Quiznos Canada Restaurant Corporation</a><a>Rainbow International</a><a>Rawlicious</a><a>Real Property Management</a><a>Recruiting In Motion</a><a>Reflex Supplements</a><a>Regis Corporation</a><a>reLiSH Gourmet Burgers</a><a>Rent-A-Wreck Car & Truck Rentals</a><a>Restoration 1</a><a>Retire-At-Home Services</a><a>Ricky's All Day Grill</a><a>Ricky's Café</a><a>Right at Home Canada</a><a>Riley's</a><a>Ripe Tomato Pizza</a><a>Rita's Italian Ice Canada</a><a>Robin's Donuts</a><a>Royal LePage Real Estate Services</a><a>Russo's New York Pizzeria</a><a>S3 / FGL Sports Ltd.</a><a>Saladworks</a><a>Sandler Training</a><a>Sangster’s Health Centres / Sangster’s Organic Market</a><a>Saver Media Group</a><a>Sawmill Prime Rib & Steak House</a><a>Scholars Education Centre</a><a>School Is Easy Tutoring</a><a>Scores Rotisserie & Ribs</a><a>Sculpt Health & Wellness</a><a>Sculpture Hospitality</a><a>SECOND CUP COFFEE CO.™</a><a>Select Sandwich Co.</a><a>Senior Helpers</a><a>Serious Coffee</a><a>ServiceMaster Clean</a><a>ServiceMaster Restore</a><a>Servpro</a><a>Shamrock Burgers</a><a>Shoeless Joe's Sports Grill</a><a>Shoney's</a>			        		</span>
+							<a>Johnny K's Authentic Donairs</a><a>Jugo Juice</a><a>Jumping Bean Coffee</a><a>Jupiter</a><a>Kekuli Café</a><a>Kelsey's</a><a>Keys Please</a><a>KFC</a><a>KID TO KID</a><a>Kiddie Proofers</a><a>KIM CHI - MTY GROUP</a><a>KMS Tools & Equipment</a><a>Kojax Souflaki</a><a>Koryo Korean Barbeque</a><a>KOYA JAPAN - MTY GROUP</a><a>Kumon Math and Reading Centres</a><a>Kwik Kloset</a><a>Kwik Kopy Printing Canada Corporation</a><a>La Carnita</a><a>LA CREMIÈRE - MTY GROUP</a><a>LA PREP</a><a>LE MUFFIN PLUS</a><a>Learn Photography (Canada) Ltd.</a><a>Learning Jungle School</a><a>Ledgers Canada</a><a>Liberty Tax Service</a><a>Lice Squad.com</a><a>Lighthouse Inspections Canada</a><a>Liquid Capital Canada Corp.</a><a>Little Caesar of Canada ULC</a><a>Little Kickers Canada Franchising Limited</a><a>Living Assistance Services</a><a>Living Lighting</a><a>Lunch Lady Group Inc, The</a><a>M&M Food Market</a><a>Maaco Systems Canada, Inc</a><a>Madisons NYC Grill & Bar</a><a>Maid Right Franchising LLC</a><a>MakerKids Inc.</a><a>Mama Deluca's</a><a>Manchu Wok (Canada) Inc.</a><a>Mandarin Restaurant Franchise Corporation</a><a>Marble Slab Creamery</a><a>Marcello's Market & Deli Inc</a><a>Mary Brown's Inc</a><a>Massage Addict</a><a>Massage Experts Franchising Ltd.</a><a>Master Care</a><a>Master Mechanic, The</a><a>Matco Tools Canada</a><a>Mathnasium</a><a>Max! Canadian Healthy Vending</a><a>McDonald's Restaurants of Canada Limited</a><a>Medicine Shoppe Canada</a><a>Megamind Abacus Academy</a><a>Meineke Canada Partnership LP</a><a>Melody's House Calls</a><a>Melting Pot Restaurants Inc., The</a><a>MELTwich Food Co.</a><a>Menchie's Frozen Yogurt</a><a>Merry Maids of Canada</a><a>Metal Supermarkets</a><a>Metropolitan Movers</a><a>MeVaMe Kitchen Express</a><a>Mezza Lebanese Kitchen</a><a>Michel's Bakery Cafe (Threecaf Brands Canada Inc.)</a><a>Midas International Corporation</a><a>MIKES RESTAURANTS INC./TRATTORIA DI MIKES</a><a>Milestones Grill + Bar</a><a>Minuteman Press International</a><a>Mister Transmission (International)</a><a>mmmuffins (Threecaf Brands Canada Inc.)</a><a>MOLLY MAID Canada Inc.</a><a>MOM Cleaning</a><a>Money Direct</a><a>Monkeynastix Canada</a><a>Montana's Cookhouse</a><a>MR MIKES SteakhouseCasual</a><a>Mr. Appliance</a><a>Mr. Electric</a><a>MR. GREEK Restaurants</a><a>Mr. Lube Canada</a><a>Mr. Rooter</a><a>Mr. Souvlaki</a><a>MR.SUB</a><a>Mucho Burrito</a><a>Murphy Business Canada</a><a>N-Hance</a><a>NATION Imagination - Imagination Cards Inc.</a><a>NAVIS PACK AND SHIP</a><a>NESTLE® TOLL HOUSE® CAFÉ BY CHIP®</a><a>NEW ORLEANS PIZZA CANADA, INC.</a><a>New York Fries</a><a>Novus Glass</a><a>Nurse Next Door Home Care Services</a><a>Nutrition House Canada Inc</a><a>O'Burger - MTY GROUP</a><a>On A Bun Italian Sandwiches</a><a>Once Upon A Child</a><a>OPA! of Greece</a>			        		</span>
 		        		</div>
 				    </div>
 				</div>
@@ -509,9 +515,8 @@
 						<a href="http://fc.lookforafranchise.ca/home/current-issue/" title="FranchiseCanada Magazine">
 						<div class="well-red" onclick="window.open('http://fc.lookforafranchise.ca/home/current-issue/','_self');return false;">
 							<h3>Get the latest issue of <br>
-<strong>FranchiseCanada Magazine</strong></h3>
-							<div class="redrightimgwrapper">
-																									<img class="redrightimg" src="http://www.cfa.ca/wp-content/uploads/2016/05/FC_MayJun2016.png" title="FranchiseCanada Magazine" alt="FranchiseCanada Magazine" >
+<strong>FranchiseCanada Magazine</strong></h3>							<div class="redrightimgwrapper">
+																									<img class="redrightimg" src="http://www.cfa.ca/wp-content/uploads/2016/08/FC_SepOct2016.jpg" title="FranchiseCanada Magazine" alt="FranchiseCanada Magazine" >
 															</div>	
 						</div>
 						</a>
@@ -525,27 +530,27 @@
 			<div class="col-xs-12 col-sm-6 boxes-blue">
 				<div class="row" onclick="window.open('http://www.cfa.ca/tools_resources/franchise-learning-centre/','_self');return false;">
 					<div class="well-blue"  style="height:auto;margin:0 5px !important;">
-			  			<h3><strong>    Looking for Franchise Resources?</strong> <u>Click here</u></h3>
+			  			<h3><strong>  Looking for Franchise Resources?</strong> <u>Click here</u></h3>
 					</div>
 				</div>
 				<br>
 				<!--2box blue-->
 				<div class="row">
 					<div class="col-xs-12 col-sm-6">
-						<div class="well-blue" onclick="window.open('http://www.cfa.ca/publications-resources/advanced-search/','_self');return false;">
-							<h3>Have questions?<br>Need advice? Looking for guidance?</h3>
-<h4>Try our <strong>Advanced Search Tool</strong> to find the right resources.</h4>
-<BR><BR>							<div class="redrightimgwrapper">
+						<div class="well-blue" onclick="window.open('http://www.cfa.ca/support-services/','_self');return false;">
+							<h3>Find Franchise<br>Support Services<br>& Suppliers</h3>
+<h4>Get the help you need from Canada's leading businesses serving the franchise industry.</h4>							<div class="redrightimgwrapper">
 			  					<input type="button" class="btn btn-default redrightimg" value="More">
 			  				</div>		
 				  			<br>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-6">
-						<div class="well-blue" onclick="window.open('http://www.cfa.ca/support-services/','_self');return false;">
+						<div class="well-blue" onclick="window.open('http://www.cfa.ca/advocacy/changing-workplaces-review/','_self');return false;">
 							<!--img src="/wp-content/themes/cfa-theme/css/images/fss-banner.png" class="well-fss-img"-->
-							<h3>Find Franchise<br>Support Services<br>& Suppliers</h3>
-<h4>Get the help you need from Canada's leading businesses serving the franchise industry.</h4>
+							<h3>Advocacy Update:</h3>
+<h2><strong>LATEST NEWS:</strong></h2>
+<h4>Ontario Government Releases <em>"Changing Workplaces Review"</em> Interim Report. </h4>
 							<div class="redrightimgwrapper">
 			  					<input type="button" class="btn btn-default redrightimg" value="More">
 			  				</div>		
@@ -567,37 +572,53 @@
 	<div class="events-box"><h4><span>Upcoming Events</span></h4><ol class="hfeed vcalendar">
 <li class="tribe-events-list-widget-events">
 	<p class="entry-title summary event-post">
-					<a href="http://www.cfa.ca/events/webinar-negotiating-an-international-franchise-agreement/" rel="bookmark">
-			Negotiating an International Franchise Agreement   (Webinar) - May 11, 2016			</a>
-			</p>
-	
-	<!-- Event Time -->
-	<!--div class="duration">
-		
-	</div-->
-	<!-- Event Title -->
-</li>
-
-<li class="tribe-events-list-widget-events">
-	<p class="entry-title summary event-post">
-					<a href="http://www.cfa.ca/events/webinar-mobile-technology-impact-on-the-franchise-industry/" rel="bookmark">
-			Mobile Technology: Impact on the Franchise Industry   (Webinar) - June 1, 2016			</a>
-			</p>
-	
-	<!-- Event Time -->
-	<!--div class="duration">
-		
-	</div-->
-	<!-- Event Title -->
-</li>
-
-<li class="tribe-events-list-widget-events">
-	<p class="entry-title summary event-post">
 					<a href="http://www.cfa.ca/events/cfa-franchise-law-day-2/" rel="bookmark">CFA Franchise Law Day </a>
 							(<span class="adr">
 
 <span class="street-address">21 Old Mill Road</span> <span class="locality">Toronto</span><span class="delimiter">,</span>  <abbr class="region tribe-events-abbr" title="ON">ON</abbr> <span class="country-name">Canada</span></span>)
 						 - <span class="date-start dtstart">September 22 @ 8:30 am<span class="value-title" title="2016-09-22UTC08:30"></span></span> - <span class="end-time dtend">4:00 pm<span class="value-title" title="2016-09-22UTC04:00"></span></span>			<br>
+			</p>
+	
+	<!-- Event Time -->
+	<!--div class="duration">
+		
+	</div-->
+	<!-- Event Title -->
+</li>
+
+<li class="tribe-events-list-widget-events">
+	<p class="entry-title summary event-post">
+					<a href="http://www.cfa.ca/events/franchise-finance-programs-webinar/" rel="bookmark">
+			Franchise Finance Programs (Webinar) - September 28, 2016			</a>
+			</p>
+	
+	<!-- Event Time -->
+	<!--div class="duration">
+		
+	</div-->
+	<!-- Event Title -->
+</li>
+
+<li class="tribe-events-list-widget-events">
+	<p class="entry-title summary event-post">
+					<a href="http://www.cfa.ca/events/is-the-traditional-pos-a-thing-of-the-past-webinar-2/" rel="bookmark">
+			Is the Traditional POS a Thing of the Past? (Webinar) - October 5, 2016			</a>
+			</p>
+	
+	<!-- Event Time -->
+	<!--div class="duration">
+		
+	</div-->
+	<!-- Event Title -->
+</li>
+
+<li class="tribe-events-list-widget-events">
+	<p class="entry-title summary event-post">
+					<a href="http://www.cfa.ca/events/exploring-careers-in-franchise-ownership/" rel="bookmark">Exploring Careers In Franchise Ownership [Webinar] </a>
+							(<span class="adr">
+
+</span>)
+						 - <span class="date-start dtstart">October 18 @ 12:00 pm<span class="value-title" title="2016-10-18UTC12:00"></span></span> - <span class="end-time dtend">1:00 pm<span class="value-title" title="2016-10-18UTC01:00"></span></span>			<br>
 			</p>
 	
 	<!-- Event Time -->
@@ -615,72 +636,56 @@
             		            		<h4><span>Latest Blog Post</span></h4>
 								<p><ol class="hfeed vcalendar noliststyle">            <li class="tribe-events-list-widget-events">
                 <p class="entry-title summary event-post">
-                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=14230" title="FranchiseCanada Nominated for Two Canadian Business Media Awards">FranchiseCanada Nominated for Two Canadian Business Media Awards</a>
+                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=16059" title="Doug Warren’s Bright Idea: How to keep your energy up while on the go">Doug Warren’s Bright Idea: How to keep your energy up while on the go</a>
                     <br/>
-                    The Canadian Franchise Association (CFA) is pleased to announce that its bi-monthly newsstand magazine, FranchiseCanada, has been selected as a finalist for the 62nd Canadian Business Media (CBM) Awards in Memory of Kenneth R. Wilson.
+                    
 
-Held every year in June, the CBM Awards recognize the outstanding editorial efforts of business-to-business media content. FranchiseCanada is a nominee in two categories:
+This post is an article that appeared in the Spring issue of The FranchiseVoice, written by Doug Warren. 
 
-	Best In-House Cover: Smoke’s Poutinerie “World Domination” cover, Septe...
-                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=14230" title="FranchiseCanada Nominated for Two Canadian Business Media Awards">Read more</a>
+Business travel can be exhausting! Packing up, getting to the airport, having your meetings, and then making it to the hotel at the end of a long day can sometimes feel like a marathon. Luckily, I’ve found some ways to prepare over the years. With a bit of planning, it can be easy to keep your energy up when travelling.
+
+When you’re on the plane, it may be tempting ...
+                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=16059" title="Doug Warren’s Bright Idea: How to keep your energy up while on the go">Read more</a>
                 </p>
             </li>
                     <li class="tribe-events-list-widget-events">
                 <p class="entry-title summary event-post">
-                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=13974" title="CFA National Convention 2016: The Highlights ">CFA National Convention 2016: The Highlights </a>
+                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=15886" title="Lessons from 50 Years in Franchising ">Lessons from 50 Years in Franchising </a>
                     <br/>
-                    
+                    &nbsp;
 
 
 
+This post is a condensed version of an article that appeared in the Spring issue of The FranchiseVoice, written by Ted Loyst. Click here for the full article (note: additional blog content is available only to CFA members. Not a member? Click here to join now.)
 
-
-
-
-
-
-
-
-Frank O'Dea tells his powerful story
-
-
-
-
-
-Last week, franchisors from Canada and the United States and even a few delegates from India and Australia gathered in Ottawa from April 17 to 19 for the 25th annual CFA National Convention. The event kicked off on Sunday with four Power Sessions, followed by a Meet and Greet for new members and first-time attendees.
 &nbsp;
-Delegates then gathered for a keynote presentation from Frank O’Dea, who shared his insp...
-                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=13974" title="CFA National Convention 2016: The Highlights ">Read more</a>
+
+	Show leadership. To lead, you must first listen and learn from employees and suppliers. Gain knowledge and consensus and lead by example. A good leader is willing to roll up his or her sleeves and h...
+                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=15886" title="Lessons from 50 Years in Franchising ">Read more</a>
                 </p>
             </li>
                     <li class="tribe-events-list-widget-events">
                 <p class="entry-title summary event-post">
-                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=13927" title="Franchise Awareness Day Recap">Franchise Awareness Day Recap</a>
+                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=15619" title="3 Tips for Tackling Social Media  ">3 Tips for Tackling Social Media  </a>
                     <br/>
                     
 
-The Canadian Franchise Association held its first-ever Franchise Awareness Day on Parliament Hill on April 19, 2016. Throughout the morning and afternoon, over 60 Presidents and CEOs of CFA member franchise systems met with politicians from ridings across Canada to educate them about franchising and its positive contribution to Canada’s economy.
+This post is a condensed version of an article that appeared in the Spring issue of The FranchiseVoice, written by Lauren Marinigh of Futurpreneur Canada. Click here for the full article (note: additional blog content is available only to CFA members. Not a member? Click here to join now.)
 
-Some of the key messages we shared were:
-- Franchising directly and indirectly employs 1 in every 14 working Canadians
-- Franchisin...
-                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=13927" title="Franchise Awareness Day Recap">Read more</a>
+Managing a brand’s image and voice with one location is hard enough, but maintaining a consistent image across several locations, with multiple employees and managers can be tough. In thi...
+                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=15619" title="3 Tips for Tackling Social Media  ">Read more</a>
                 </p>
             </li>
                     <li class="tribe-events-list-widget-events">
                 <p class="entry-title summary event-post">
-                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=13515" title="CFA National Convention Keynote Speaker Spotlight: Ken Otto">CFA National Convention Keynote Speaker Spotlight: Ken Otto</a>
+                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=15455" title="3 Ways to Prepare for Upcoming Changes to Canada&#039;s Trademarks Act">3 Ways to Prepare for Upcoming Changes to Canada's Trademarks Act</a>
                     <br/>
-                    Keynote Speaker Spotlight: Ken Otto
+                    
 
+This post is a condensed version of an article that appeared in the Spring issue of The FranchiseVoice, written by Stephanie Chong of Hoffer, Adler LLP. Click here for the full article (note: additional blog content is available only to CFA members. Not a member? Click here to join now.)
 
-
-
-"The best brands consistently deliver their brand promise to every guest, every day, everywhere."
-
-
-With a Bachelor of Commerce in Hotel and Food Administration from the University of Guelph, CFA National Convention Keynote Speaker Ken Otto has forged a successful 25-year career in the food and hospitality industry. His first foray into the world of franchising was with Moxie’s Grill &amp; Bar in 1996, helping to grow the brand in Albe...
-                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=13515" title="CFA National Convention Keynote Speaker Spotlight: Ken Otto">Read more</a>
+A trademark is an important asset for most businesses, and especially for franchisors. A franchisor wishing to protect their brand in Canada should take note of key changes to Canada’s tradem...
+                    <a class="head-widget" href="http://www.cfa.ca/?post_type=post&p=15455" title="3 Ways to Prepare for Upcoming Changes to Canada&#039;s Trademarks Act">Read more</a>
                 </p>
             </li>
         </ol>            		<!--a href="/all-news/page/0"><input type="button" class="btn btn-default tribe-news-widget-link" value="View all posts"></a-->
@@ -699,7 +704,7 @@ Author URI: http://www.amplifiii.com
 <br>
     <div id="footer" class="footer">
     		<div class="container">
-    				<input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="059250a048" /><input type="hidden" name="_wp_http_referer" value="/" />						    					<div class="row">
+    				<input type="hidden" id="cfa_page_visibility_nonce" name="cfa_page_visibility_nonce" value="2553aa28dd" /><input type="hidden" name="_wp_http_referer" value="/" />						    					<div class="row">
     						<div class="col-xs-12 col-sm-12">
     							<!--img class="footer_cfa" src="http://www.cfa.ca/wp-content/themes/cfa-theme/css/images/CFA_NationalSponsor.png"-->
     							<a href="/sponsorshipadvertising/cfa-national-sponsorship/" title="CFA National Sponsors"><img class="footer_cfa" src="http://www.cfa.ca/wp-content/themes/cfa-theme/css/images/CFA-National-Sponsors-Logo.png"></a>
@@ -710,7 +715,7 @@ Author URI: http://www.amplifiii.com
     					<div class="row">
     						<!--hr-->
 							<aside id="footer_banners" class="">
-	<div class="imglistdiv"><ul class="imglistul"><li><a href="http://www.bdo.ca/en/pages/default.aspx"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_BDO.png" alt="BDO logo" title="BDO logo" class="footer-banners"></a></li><li><a href="https://www.cibc.com/ca/small-business/article-tools/national-franchising.html"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_CIBC.png" alt="CIBC logo" title="CIBC logo" class="footer-banners"></a></li><li><a href="http://frannet.ca/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_FranNet.png" alt="FranNet logo" title="FranNet logo" class="footer-banners"></a></li><li><a href="http://www.moneris.com/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_Moneris.png" alt="Moneris logo" title="Moneris logo" class="footer-banners"></a></li><li><a href="http://ppvf.ca/12bEV"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_PremierValley.png" alt="Premier Printing and Valley Fashion logo" title="Premier Printing and Valley Fashion logo" class="footer-banners"></a></li><li><a href="http://www.punchcanada.com/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_Punch.png" alt="Punch Canada logo" title="Punch Canada logo" class="footer-banners"></a></li><li><a href="http://www.reshiftmedia.com/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_Reshift.png" alt="Reshift logo" title="Reshift logo" class="footer-banners"></a></li><li><a href="http://srsre.com/toronto"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_SRSCanada.png" alt="SRS Canada logo" title="SRS Canada logo" class="footer-banners"></a></li><li><a href="http://www.trushieldinsurance.ca/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_TruShield.png" alt="TruShield logo" title="TruShield logo" class="footer-banners"></a></li></ul></div></aside>
+	<div class="imglistdiv"><ul class="imglistul"><li><a href="http://www.bdo.ca/en/pages/default.aspx"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_BDO.png" alt="BDO logo" title="BDO logo" class="footer-banners"></a></li><li><a href="https://www.cibc.com/ca/small-business/article-tools/national-franchising.html"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_CIBC.png" alt="CIBC logo" title="CIBC logo" class="footer-banners"></a></li><li><a href="http://frannet.ca/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_FranNet.png" alt="FranNet logo" title="FranNet logo" class="footer-banners"></a></li><li><a href="http://www.moneris.com/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_Moneris.png" alt="Moneris logo" title="Moneris logo" class="footer-banners"></a></li><li><a href="http://ppvf.ca/12bEV"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_PremierValley.png" alt="Premier Printing and Valley Fashion logo" title="Premier Printing and Valley Fashion logo" class="footer-banners"></a></li><li><a href="http://www.punchcanada.com/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_Punch.png" alt="Punch Canada logo" title="Punch Canada logo" class="footer-banners"></a></li><li><a href="http://www.reshiftmedia.com/"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_Reshift.png" alt="Reshift logo" title="Reshift logo" class="footer-banners"></a></li><li><a href="http://srsre.com/toronto"><img src="http://www.cfa.ca/wp-content/uploads/2016/04/NS_SRSCanada.png" alt="SRS Canada logo" title="SRS Canada logo" class="footer-banners"></a></li><li><a href="http://www.trushield.ca/cfa"><img src="http://www.cfa.ca/wp-content/uploads/2016/06/NS_TruShield.png" alt="TruShield" title="" class="footer-banners"></a></li></ul></div></aside>
 <!-- /sidebar -->		    			</div>
     			    		    <div class="row">
     		    	<hr>

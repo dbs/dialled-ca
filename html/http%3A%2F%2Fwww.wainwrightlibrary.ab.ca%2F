@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Wainwright Public Library of Wainwright, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Wainwright, Alberta, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Wainwright Public Library of Wainwright, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Wainwright, Alberta, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.wainwrightlibrary.ab.ca/" />
@@ -34,10 +38,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=""/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -45,7 +47,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Wainwright Public Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Wainwright Public Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -258,7 +260,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -266,6 +267,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -280,6 +293,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -300,9 +319,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -334,45 +352,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/157" class="blog_link active_page" title="Library News">Library News</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=157" class="blog_link active_page" title="Library News"><span>Library News</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/157" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/157" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=157" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/93" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -399,10 +397,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -417,9 +415,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.wainwrightlibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li class="drop"><a href="http://www.wainwrightlibrary.ab.ca/About-Us" class="about_us_link parent_link" title="About Us"><span>About Us</span></a><ul><li><a href="http://www.wainwrightlibrary.ab.ca/Library-History" title="Library history"><span>Library History</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Library-Membership" title="Library membership"><span>Library Membership</span></a></li></ul></li><li class="drop"><a href="http://www.wainwrightlibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.wainwrightlibrary.ab.ca/Afterschool-Programming" title="Afterschool programming"><span>Afterschool Programming</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Book-Review" title="Book review"><span>Book Review</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Family-Literacy-Day" title="Family literacy day"><span>Family Literacy Day</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Rhyme-Time" title="Rhyme time"><span>Rhyme Time</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Scarecrow-Festival" title="Scarecrow festival"><span>Scarecrow Festival</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Storytime" title="Storytime"><span>Storytime</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Summer-Reading-Program" title="Summer reading program"><span>Summer Reading Program</span></a></li></ul></li><li><a href="http://www.wainwrightlibrary.ab.ca/Newspaper-Archives" title="Newspaper archives"><span>Newspaper Archives</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Artist-Displays" title="Artist displays"><span>Artist Displays</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/eResources" title="Eresources"><span>eResources</span></a></li>
-  
 </ul>
 
 	</nav>
@@ -495,7 +491,7 @@ if (typeof jQuery != 'undefined') {
 				
 				
 				<div class="slideContent">
-					<img class="bigImg" alt="Rhyme Time Spring 2016" src="http://files.townlife.com/public/uploads/photos/471484/Rhyme_Time_Spring_2016_xlarge.jpg" />
+					<img class="bigImg" alt="Storytime - Fall" src="http://files.townlife.com/public/uploads/photos/502271/Storytime_-_Fall_xlarge.jpg" />
 					
 					
 					
@@ -505,7 +501,7 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="Home School Connection 2015" src="http://files.townlife.com/public/uploads/photos/433140/Home_School_Connection_2015_xlarge.jpg" />
+					<img class="bigImg" alt="Attn Vendor Scarecrow Festival" src="http://files.townlife.com/public/uploads/photos/502293/Attn_Vendor_Scarecrow_Festival_xlarge.jpg" />
 					
 					
 					
@@ -515,7 +511,17 @@ if (typeof jQuery != 'undefined') {
 				</div> <!-- slideContent -->
 			   
 				<div class="slideContent">
-					<img class="bigImg" alt="TELUS Fibre for Good Thank you" src="http://files.townlife.com/public/uploads/photos/471451/TELUS_Fibre_for_Good_Thank_you_xlarge.jpg" />
+					<img class="bigImg" alt="Rhyme Time Fall 2016" src="http://files.townlife.com/public/uploads/photos/502260/Rhyme_Time_Fall_2016_xlarge.jpg" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Home School Connection 2015" src="http://files.townlife.com/public/uploads/photos/502304/Home_School_Connection_2015_xlarge.jpg" />
 					
 					
 					
@@ -570,31 +576,46 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5619"><img alt="Seasonforcookies-vi" src="http://files.townlife.com/public/asset_files/6738/thumb_400/seasonforcookies-vi.gif?1449015484" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7663/xlarge/WPL_Logo_with_Vision_Statement.JPG?1469741164" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Wpl_logo_with_vision_statement" src="http://files.townlife.com/public/asset_files/7663/thumb_400/WPL_Logo_with_Vision_Statement.JPG?1469741164" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5619">				
-	  Christmas Cookie Swap			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/6809">
+	    Emplyment Opportunity
+          </a>
+        <p>Library Programmer
+
+This position involves planning and executing programming for different age groups. This would include current programs such ...
+        <!-- <a href="/blogs/show_entry/6809">More...</a> --></p>
+	</div>      
+	</li>
+      <li class="new_post">
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6738/xlarge/seasonforcookies-vi.gif?1449015484" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Seasonforcookies-vi" src="http://files.townlife.com/public/asset_files/6738/thumb_400/seasonforcookies-vi.gif?1449015484" />
+            </a>
+          </div>
+	<div class="rightNew_post">
+          <a class="post_title" href="/blogs/show_entry/5619">
+	    Christmas Cookie Swap
+          </a>
         <p>We are hosted our first ever Christmas Cookie Swap on December 10, 2015 at 6:30pm.&nbsp; Be sure to join us for some tasty treats and great company...
         <!-- <a href="/blogs/show_entry/5619">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5419"><img alt="No-school-today" src="http://files.townlife.com/public/asset_files/6603/thumb_400/no-school-today.jpg?1444779749" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6603/xlarge/no-school-today.jpg?1444779749" class="image-popup-vertical-fit" target="_blank">
+              <img alt="No-school-today" src="http://files.townlife.com/public/asset_files/6603/thumb_400/no-school-today.jpg?1444779749" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5419">				
-	  PD Day Programs			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5419">
+	    PD Day Programs
+          </a>
         <p>
 
 Children in grades 1-6 can join us at the Library for the Professional Development Fridays.
@@ -603,64 +624,36 @@ Each month is a diff...
         <!-- <a href="/blogs/show_entry/5419">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5387"><img alt="Logo" src="http://files.townlife.com/public/asset_files/6576/thumb_400/LOGO.JPG?1444086455" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6576/xlarge/LOGO.JPG?1444086455" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Logo" src="http://files.townlife.com/public/asset_files/6576/thumb_400/LOGO.JPG?1444086455" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5387">				
-	  Board Member Vacancy			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5387">
+	    Board Member Vacancy
+          </a>
         <p>MEMBER&nbsp;AT&nbsp;LARGE&nbsp;BOARD&nbsp;VACANCY
 
 Town of Wainwright&nbsp;Library Board is accepting applications for a person to serve as a Boa...
         <!-- <a href="/blogs/show_entry/5387">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/5037"><img alt="I_love_storytime_t_shirts_gifts_post_card-r4b89717f59c84a5fb7f08c9f16ab94a3_vgbaq_8byvr_512" src="http://files.townlife.com/public/asset_files/6418/thumb_400/i_love_storytime_t_shirts_gifts_post_card-r4b89717f59c84a5fb7f08c9f16ab94a3_vgbaq_8byvr_512.jpg?1440113751" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6418/xlarge/i_love_storytime_t_shirts_gifts_post_card-r4b89717f59c84a5fb7f08c9f16ab94a3_vgbaq_8byvr_512.jpg?1440113751" class="image-popup-vertical-fit" target="_blank">
+              <img alt="I_love_storytime_t_shirts_gifts_post_card-r4b89717f59c84a5fb7f08c9f16ab94a3_vgbaq_8byvr_512" src="http://files.townlife.com/public/asset_files/6418/thumb_400/i_love_storytime_t_shirts_gifts_post_card-r4b89717f59c84a5fb7f08c9f16ab94a3_vgbaq_8byvr_512.jpg?1440113751" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5037">				
-	  Storytime			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5037">
+	    Storytime
+          </a>
         <p>Storytime is an hour filled with stories, rhymes, songs, crafts and fun for 3-5 year olds. The program helps build early literacy, listening and gr...
         <!-- <a href="/blogs/show_entry/5037">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
-      <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/4872"><img alt="Bingo5" src="http://files.townlife.com/public/asset_files/6314/thumb_400/Bingo5.jpg?1436221504" /></a></div>
-        
-	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/4872">				
-	  Reading Bingo!			 			
-        </a>
-        <p>
-
-
-Participate in this summer's Reading Bingo game and have your name entered to win a dinner out!
-
-Two age categories
-13-17
-18 &amp; up
-
-...
-        <!-- <a href="/blogs/show_entry/4872">More...</a> --></p>
-	</div>      
-	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/157">+ MORE</a></h6>
 </div>
@@ -671,162 +664,57 @@ Two age categories
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/157">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/157">Upcoming Events</a> 
-        <span class="latest_events_count">(8)</span>
+        <span class="latest_events_count">(4)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>09</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>24</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35068">Storytime Session Two (Mondays)</a>
-            <span class="upcoming_time_frame">
-              (in 3 hours)
-              
-                &nbsp;from 10:00 AM
-                
-                  &nbsp;to 11:00 AM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>10</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35054">Storytime Session Two (Tuesdays)</a>
-            <span class="upcoming_time_frame">
-              (Tomorrow)
-              
-                &nbsp;from 10:00 AM
-                
-                  &nbsp;to 11:00 AM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>13</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/33118">PD Day Programs</a>
-            <span class="upcoming_time_frame">
-              (in 4 days)
-              
-                &nbsp;from  2:00 PM
-                
-                  &nbsp;to  4:00 PM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>15</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35071">Summer Reading Program Registration Opens</a>
-            <span class="upcoming_time_frame">
-              (in 6 days)
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>16</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35069">Storytime Session Two (Mondays)</a>
+            <a href="/calendars/show_event/35768">Wainwright Scarecrow Festival</a>
             <span class="upcoming_time_frame">
               (in 1 week)
-              
-                &nbsp;from 10:00 AM
-                
-                  &nbsp;to 11:00 AM
-                
-              
+                &nbsp;from 11:00 AM
+                  &nbsp;to  3:00 PM
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>17</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>October</span> <span class='theDate'>10</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/32028">Craftmania</a>
+            <a href="/calendars/show_event/33110">Library Closed</a>
             <span class="upcoming_time_frame">
-              (in 1 week)
-              
-                &nbsp;from  4:00 PM
-                
-                  &nbsp;to  5:00 PM
-                
-              
+              (in 0 months)
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>17</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>November</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35055">Storytime Session Two (Tuesdays)</a>
+            <a href="/calendars/show_event/33111">Library Closed</a>
             <span class="upcoming_time_frame">
-              (in 1 week)
-              
-                &nbsp;from 10:00 AM
-                
-                  &nbsp;to 11:00 AM
-                
-              
+              (in 2 months)
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>23</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>December</span> <span class='theDate'>24</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/33106">Library Closed</a>
+            <a href="/calendars/show_event/33112">Library Closed</a>
             <span class="upcoming_time_frame">
-              (in 2 weeks)
-              
+              (in 3 months)
             </span>
           </li>
-        
       </ul>
       <h6 class="more"><a href="/calendars/table/157">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -834,154 +722,89 @@ Two age categories
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_1229">
-	      
-              
-	      
+	    <dd id="action_1229">
 	        <img alt="Address 921-3rd Ave Wainwright, AB T9W 1C5" class="action_steps_image" src="/images/icons/fff_action_steps/email.png?1445483283" title="Address 921-3rd Ave Wainwright, AB T9W 1C5" />
 		
 		Address 921-3rd Ave Wainwright, AB T9W 1C5
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1231">
-	      
-              
-	      
+		    <dd id="action_1231">
 	        <img alt="Call (780)842-2673" class="action_steps_image" src="/images/icons/fff_action_steps/phone.png?1445483283" title="Call (780)842-2673" />
 		
 		Call (780)842-2673
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1232">
-	      
-              
-	      
+		    <dd id="action_1232">
 	        <img alt="Fax (780)842-2340" class="action_steps_image" src="/images/icons/fff_action_steps/printer.png?1445483283" title="Fax (780)842-2340" />
 		
 		Fax (780)842-2340
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1251">
-	      
-              
-	      
+		    <dd id="action_1251">
 	        <img alt="Like us on Facebook" class="action_steps_image" src="/images/icons/fff/group_link.png?1445483283" title="Like us on Facebook" />
 		<a class='action_steps_link' href='https://www.facebook.com/WainwrightPublicLibrary?ref=stream' target='_blank'>
 		Like us on Facebook
 		</a>
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1277">
-	      
-              
-	      
-	        <img alt="The Bookworm - WPL's Newsletter" class="action_steps_image" src="/images/icons/fff/page_green.png?1445483283" title="The Bookworm - WPL's Newsletter" />
+		    <dd id="action_1277">
+	        <img alt="The Bookworm - WPL&#x27;s Newsletter" class="action_steps_image" src="/images/icons/fff/page_green.png?1445483283" title="The Bookworm - WPL&#x27;s Newsletter" />
 		<a class='action_steps_link' href='http://www.townlife.com/document/library/447/category/1043' target='_blank'>
-		The Bookworm - WPL's Newsletter
+		The Bookworm - WPL&#x27;s Newsletter
 		</a>
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1280">
-	      
-              
-	      
+		    <dd id="action_1280">
 	        <img alt="New Books" class="action_steps_image" src="/images/icons/fff/book_open.png?1445483283" title="New Books" />
 		<a class='action_steps_link' href='http://catalogue.tracpac.ab.ca/polaris/Search/newreleases.aspx?ListingTypeID=26&ctx=78.1033.0.0.3' target='_blank'>
 		New Books
 		</a>
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1281">
-	      
-              
-	      
+		    <dd id="action_1281">
 	        <img alt="New DVD/BluRays/TV Series" class="action_steps_image" src="/images/icons/fff/dvd.png?1445483283" title="New DVD/BluRays/TV Series" />
 		<a class='action_steps_link' href='http://catalogue.tracpac.ab.ca/polaris/Search/newreleases.aspx?ListingTypeID=27&ctx=78.1033.0.0.3' target='_blank'>
 		New DVD/BluRays/TV Series
 		</a>
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1282">
-	      
-              
-	      
+		    <dd id="action_1282">
 	        <img alt="New Audiobooks" class="action_steps_image" src="/images/icons/fff/cd.png?1445483283" title="New Audiobooks" />
 		<a class='action_steps_link' href='http://catalogue.tracpac.ab.ca/polaris/Search/newreleases.aspx?ListingTypeID=28&ctx=78.1033.0.0.3' target='_blank'>
 		New Audiobooks
 		</a>
-	      
 	    </dd>
 	   
-		  	    <dd id="action_1283">
-	      
-              
-	      
+		    <dd id="action_1283">
 	        <img alt="New Large Print Books" class="action_steps_image" src="/images/icons/fff/book_open.png?1445483283" title="New Large Print Books" />
 		<a class='action_steps_link' href='http://catalogue.tracpac.ab.ca/polaris/Search/newreleases.aspx?ListingTypeID=29&ctx=78.1033.0.0.3' target='_blank'>
 		New Large Print Books
 		</a>
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/157" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1513&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1513&amp;return_url=http%3A%2F%2Fwww.wainwrightlibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=157" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.wainwrightlibrary.ab.ca%2F&amp;site_id=157" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -997,27 +820,17 @@ Two age categories
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.wainwright.ca/" class="action_steps_link" target="_blank">Town of Wainwright</a>
         </dd>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.mdwainwright.ca" class="action_steps_link" target="_blank">M.D. of Wainwright </a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -1034,16 +847,10 @@ Two age categories
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -1055,12 +862,8 @@ Two age categories
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
-    
           <!-- LIQUID LAYOUT -->    
     <ul class="social">
-        
           <li id="facebook">
             <div id="fb-root"></div>
             <script>
@@ -1093,26 +896,16 @@ Two age categories
             </script>
             <div class="fb-like" data-href="http://www.wainwrightlibrary.ab.ca/" data-width="180" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
           </li>
-        
-        
 
-        
 
-        
 
-        
           <li id="facebookshare">
             <div class="fb-share-button" data-layout="button_count" data-href="http://www.wainwrightlibrary.ab.ca/"></div>
           </li>
-        
     </ul>
 
-    
-    
       <img alt="Share" src="/images/social_bookmarks/share.png?1445483283" />
-    
 
-  
 </div>
 
  </span>
@@ -1144,54 +937,7 @@ Two age categories
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
 			
 				
 			
@@ -1213,8 +959,22 @@ Two age categories
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
 			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
 				
 			
 			
@@ -1225,6 +985,39 @@ Two age categories
 				 
 			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
 			
 				
 			
@@ -1249,40 +1042,29 @@ Two age categories
 				 
 				 
 			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442387065&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781442387065.gif" />Death Wears a Beauty Mask and Other Stories<BR/>By Clark, Mary Higgins.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
 			
 				
 			
@@ -1296,6 +1078,17 @@ Two age categories
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
 			
 				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			
+				
 					</div> <!-- end book group of 5 -->
 					<div>
 				
@@ -1307,7 +1100,7 @@ Two age categories
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
 			
 				
 			
@@ -1318,7 +1111,7 @@ Two age categories
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399165153&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399165153.gif" />Garden of lies / Amanda Quick.<BR/>By Quick, Amanda, author</a>
 			
 				
 					</div><!-- end book group -->
@@ -1341,7 +1134,7 @@ Two age categories
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1383,61 +1176,39 @@ Two age categories
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.wainwrightlibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li class="drop"><a href="http://www.wainwrightlibrary.ab.ca/About-Us" class="about_us_link parent_link" title="About Us"><span>About Us</span></a><ul><li><a href="http://www.wainwrightlibrary.ab.ca/Library-History" title="Library history"><span>Library History</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Library-Membership" title="Library membership"><span>Library Membership</span></a></li></ul></li><li class="drop"><a href="http://www.wainwrightlibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.wainwrightlibrary.ab.ca/Afterschool-Programming" title="Afterschool programming"><span>Afterschool Programming</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Book-Review" title="Book review"><span>Book Review</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Family-Literacy-Day" title="Family literacy day"><span>Family Literacy Day</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Rhyme-Time" title="Rhyme time"><span>Rhyme Time</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Scarecrow-Festival" title="Scarecrow festival"><span>Scarecrow Festival</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Storytime" title="Storytime"><span>Storytime</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Summer-Reading-Program" title="Summer reading program"><span>Summer Reading Program</span></a></li></ul></li><li><a href="http://www.wainwrightlibrary.ab.ca/Newspaper-Archives" title="Newspaper archives"><span>Newspaper Archives</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/Artist-Displays" title="Artist displays"><span>Artist Displays</span></a></li><li><a href="http://www.wainwrightlibrary.ab.ca/eResources" title="Eresources"><span>eResources</span></a></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/157" class="blog_link active_page" title="Library News">Library News</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=157" class="blog_link active_page" title="Library News"><span>Library News</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/157" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/157" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=157" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/93" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1446,7 +1217,7 @@ Two age categories
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1456,41 +1227,23 @@ Two age categories
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/157" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1627,6 +1380,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1653,3 +1431,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

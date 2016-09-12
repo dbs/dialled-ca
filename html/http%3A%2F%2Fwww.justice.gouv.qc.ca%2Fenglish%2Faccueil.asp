@@ -273,7 +273,7 @@ function recordOutboundLink(link, category, action) {
 
 	<body onLoad="preloadImages();" bgcolor="#ffffff" marginHeight="0" leftMargin="0" marginWidth="0" topMargin="0">
 	<script language="JavaScript1.2">fwLoadMenus();</script>
-	<div id="layer1"><a href='http://www.justice.gouv.qc.ca/english/propos/rss-a.htm'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/904_655_rss.gif' border='0' ></a><br><img src='../english/images/shim.gif' height='10'><a href='http://www.cavac.qc.ca/english/index.html' Target='_Blank'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/882_831_CAVAC.jpg' border='0' ></a><br><img src='../english/images/shim.gif' height='10'><a href='http://www.justice.gouv.qc.ca/english/commun/centres-a.htm' Target='_Blank'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/909_justice_proxim.jpg' border='0' ></a><br><img src='../english/images/shim.gif' height='10'><a href='http://www.justice.gouv.qc.ca/english/programmes/mediation/seance-parentalite-a.htm'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/926_bouton_mf_2014_EN.gif' border='0' ></a><br><img src='../english/images/shim.gif' height='10'><a href='http://www.ivac.qc.ca/EN_acts.asp' Target='_Blank'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/958_Logo_IVAC.jpg' border='0' ></a><br><img src='../english/images/shim.gif' height='10'></div>		
+	<div id="layer1"><a href='http://www.justice.gouv.qc.ca/english/propos/rss-a.htm'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/904_655_rss.gif' border='0' ></a><br><img src='../english/images/shim.gif' height='10'><a href='http://www.justice.gouv.qc.ca/english/programmes/mediation/seance-parentalite-a.htm'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/926_bouton_mf_2014_EN.gif' border='0' ></a><br><img src='../english/images/shim.gif' height='10'><a href='http://www.cavac.qc.ca/english/index.html' Target='_Blank'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/882_831_CAVAC.jpg' border='0' ></a><br><img src='../english/images/shim.gif' height='10'><a href='http://www.justice.gouv.qc.ca/english/commun/centres-a.htm' Target='_Blank'><img name='pub' src='http://www.justice.gouv.qc.ca/upload/publicites/909_justice_proxim.jpg' border='0' ></a><br><img src='../english/images/shim.gif' height='10'></div>		
 				
                 	<table border="0" cellpadding="0" cellspacing="0" width="760">
 <tr height="57">
@@ -322,40 +322,41 @@ function recordOutboundLink(link, category, action) {
     <td colspan="2" valign="top" class="cell-titre-slider"><!------------------------------------- CONTENU DU DIAPORAMA ------------------------------------------------->
 <div id="featured" >
 	<ul class="ui-tabs-nav">
-    	<li class="ui-tabs-nav-item" id="nav-fragment-1"><a href="#fragment-1"><img src="../images/diaporama/courant/temps_legal-sm.jpg" alt="Legal Time Act." width="70" height="44" /><span>Legal Time Act</span></a></li>
+    	<li class="ui-tabs-nav-item" id="nav-fragment-1"><a href="#fragment-1"><img src="../images/diaporama/bavac201607_sm.jpg" alt="Crime Victims Assistance Fund." width="70" height="44" /><span>Crime Victims<br />Assistance Fund</span></a></li>
         
-    	<li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2"><img src="../images/diaporama/courant/depot_volontaire-sm.jpg" alt="Voluntary deposit." width="70" height="44" /><span>Voluntary deposit</span></a></li>
+    	<li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2"><img src="../images/diaporama/FAJ_2016_sm.jpg" alt="Access to Justice Fund -Call for projects." width="70" height="44" /><span>Access to Justice Fund -Call for projects</span></a></li>
         
-        <li class="ui-tabs-nav-item" id="nav-fragment-3"><a href="#fragment-3"><img src="../images/diaporama/pjq-small.jpg" alt="Québec's Prix de la Justice Award." width="70" height="44" /><span>Québec's Prix de la Justice Award</span></a></li>
+        <li class="ui-tabs-nav-item" id="nav-fragment-3"><a href="#fragment-3"><img src="../images/diaporama/consult-homopho2016-a-sm.jpg" alt="Fight against homophobia and transphobia." width="70" height="44" /><span>Fight against homophobia and transphobia</span></a></li>
        
-        <li class="ui-tabs-nav-item" id="nav-fragment-4"><a href="#fragment-4"><img src="../images/diaporama/ncpc_sm.jpg" alt="New Code of Civil Procedure." width="70" height="44" /><span>New Code of Civil Procedure</span></a></li>
+        <li class="ui-tabs-nav-item" id="nav-fragment-4"><a href="#fragment-4"><img src="../images/diaporama/courant/aide-small.jpg" alt="Legal aid eligibility thresholds." width="70" height="44" /><span>Legal aid eligibility thresholds</span></a></li>
 	</ul>
     <!-- Diapo 1 -->
-	<div id="fragment-1" class="ui-tabs-panel" style=""><a href="publications/generale/temps-intro-a.htm"><img src="../images/diaporama/courant/temps_legal2016-a.jpg" alt="Legal Time Act." border="0" /></a>
+	<div id="fragment-1" class="ui-tabs-panel" style=""><a href="http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&amp;type=1&amp;idArticle=2406168182&amp;lang=en" target="_blank"><img src="../images/diaporama/bavac201607.jpg" alt="Crime Victims Assistance Fund." border="0" /></a>
 		<div class="info" >
-		<h2><a href="publications/generale/temps-intro-a.htm">Legal Time Act</a></h2>
-		<p>Daylight saving time begins this weekend. <br />See <a href="publications/generale/temps-intro-a.htm"><em>our section</em></a></p>
+		<h2><a href="http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&amp;listeDiff=49&amp;idArticle=2407203923&amp;lang=en" target="_blank">Crime Victims Assistance Fund<br />$1.5 million to assist victims of crime</a></h2>
+		<p><em><a href="programmes/bavac-a.htm">See our section</a> - <a href="http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&amp;listeDiff=49&amp;idArticle=2407203923&amp;lang=en" target="_blank">See the press release</a> (in French)</em></p>
 		</div>
 	  </div>
     <!-- Diapo 2 -->
-    <div id="fragment-2" class="ui-tabs-panel  ui-tabs-hide" style=""><a href="publications/generale/depot_vo-a.htm"><img src="../images/diaporama/courant/depot_volontaire-a.jpg" alt="Voluntary deposit." border="0" /></a>
+    <div id="fragment-2" class="ui-tabs-panel  ui-tabs-hide" style=""><a href="http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&amp;type=1&amp;idArticle=2406168182&amp;lang=en" target="_blank"><img src="../images/diaporama/FAJ_2016.jpg" alt="Access to Justice Fund - Call for projects." border="0" /></a>
 		<div class="info" >
-		<h2><a href="publications/generale/depot_vo-a.htm">Financial difficulties?</a></h2>
-		<p>Voluntary deposit can help you solve your problem. <br />See <a href="publications/generale/depot_vo-a.htm"><em>our section</em></a></p>
+		<h2><a href="http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&listeDiff=49&idArticle=2407138954&lang=en" target="_blank">Access to Justice Fund - Call for projects</a></h2>
+		<p><em><a href="programmes/fonds_acces_justice/programme-a.htm">See our section</a> - <a href="http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&listeDiff=49&idArticle=2407138954&lang=en" target="_blank">See the press release</a> (in French)</em></p>
 		</div>
 	  </div>
     <!-- Diapo 3 -->
-    <div id="fragment-3" class="ui-tabs-panel  ui-tabs-hide" style=""><a href="http://www.prixdelajustice.gouv.qc.ca/en/index.html" target="_blank"><img src="../images/diaporama/pjq2012-a.jpg" alt="Québec's Prix de la Justice Award." border="0" /></a>
-      <div class="info" >
-        <h2><a href="http://www.prixdelajustice.gouv.qc.ca/en/index.html" target="_blank">Call for nominations for Qu&eacute;bec's 2015 Prix de la justice award</a></h2>
-		<p>...<a href="http://www.prixdelajustice.gouv.qc.ca/en/candidature-a.html" target="_blank"><em>continued</em></a></p>
+    <div id="fragment-3" class="ui-tabs-panel  ui-tabs-hide" style=""><a href="ministere/dossiers/homophobie/homophobie-a.htm#consultations"><img src="../images/diaporama/consult-homopho2016-a.jpg" alt="Fight against homophobia and transphobia." border="0" /></a>
+		<div class="info" >
+		  <h2><a href="ministere/dossiers/homophobie/homophobie-a.htm#consultations">Submit your thoughts by September 1, 2016</a></h2>
+<p><em><a href="http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&amp;type=1&amp;idArticle=2406141869&amp;lang=en" target="_blank">See the press release</a></em> <em>- <a href="../../francais/ministere/dossiers/homophobie/Consultation-plan_action_homo_2017-2022-FR.pdf" target="_blank">Consultation Document</a></em> <em>(In French)</em></p>        
 		</div>
 	</div>
 	<!-- Diapo 4 -->
-    <div id="fragment-4" class="ui-tabs-panel  ui-tabs-hide" style=""><a href="themes/ncpc/index-a.htm"><img src="../images/diaporama/ncpc-a.jpg" alt="New Code of Civil Procedure." border="0" /></a>
+    <div id="fragment-4" class="ui-tabs-panel  ui-tabs-hide" style=""><a href="ministere/dossiers/aide/seuils_aide-a.htm"><img src="../images/diaporama/courant/aide-a.jpg" alt="Legal aid eligibility thresholds." border="0" /></a>
 		<div class="info" >
-		<h2><a href="themes/ncpc/index-a.htm">Find out more about the new measures and requirements</a></h2>
-		<p>See <a href="themes/ncpc/index-a.htm"><em>our section</em></a></p>
+		<h2><a href="ministere/dossiers/aide/seuils_aide-a.htm">Increase in the financial eligibility thresholds
+for legal aid from May 31, 2016</a></h2>
+		<p>See <a href="ministere/dossiers/aide/seuils_aide-a.htm"><em>our section</em></a><em> &ndash; ... <a href="http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&listeDiff=49&idArticle=2405312543&lang=en" target="_blank">See the Press Release</a></em></p>
       	</div>
       </div>
 	</div>
@@ -385,16 +386,16 @@ function recordOutboundLink(link, category, action) {
 		<tr>          	
 				<td class="cell-liste-communiques">
 				<p>
-				<font class="lien-noir"><a class="lien-noir"href='http://www.justice.gouv.qc.ca/english/ministere/organisation/emploi/juge160301-a.htm'>Notice of Judicial Selection - Candidates for the office of judge of the Court of Québec </a></font>
-				<br><font class="txt-vert">Tuesday, March 1, 2016 - MJQ</font><br></p>
+				<font class="lien-noir"><a class="lien-noir"href='http://www.justice.gouv.qc.ca/english/ministere/organisation/emploi/juge160901-a.htm'>Notice of Judicial Selection - Candidates for the office of judge of the Court of Québec </a></font>
+				<br><font class="txt-vert">Thursday, September 1, 2016 - MJQ</font><br></p>
 			</td>	
 		</tr>	
 
 		<tr>          	
 				<td class="cell-liste-communiques">
 				<p>
-				<font class="lien-noir"><a class="lien-noir"href='http://www.justice.gouv.qc.ca/english/ministere/organisation/emploi/juge160301_cm-a.htm'>Notice of judicial selection - Candidates for the office of municipal court judge </a></font>
-				<br><font class="txt-vert">Tuesday, March 1, 2016 - MJQ</font><br></p>
+				<font class="lien-noir"><a class="lien-noir"href='http://www.justice.gouv.qc.ca/english/ministere/organisation/emploi/juge160901-tdp-a.htm'>Notice of recruitment and selection - Persons apt for designation to the function of arbitrator with the Commission des droits de la personne et des droits de la jeunesse or appointment to the function of assessor with the Human Rights Tribunal </a></font>
+				<br><font class="txt-vert">Thursday, September 1, 2016 - MJQ</font><br></p>
 			</td>	
 		</tr>	
 
@@ -421,8 +422,8 @@ function recordOutboundLink(link, category, action) {
 						   
 				<tr>				
 					<td valign="top" class="cell-liste-communiques">
-						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&listeDiff=49&idArticle=2403117353&lang=en' target='_blank'>Minister Stéphanie Vallée and Minister Jean D'Amour announce the launching of work to extend and re-equip the Rimouski courthouse </a></font>
-						<br><font class="txt-vert">Friday, March 11, 2016 - MJQ</font></p>							
+						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&type=1&idArticle=2409093540&lang=en' target='_blank'>Property seized as part of the SharQc operation - Statement by the Ministère de la Justice correcting information published in the media </a></font>
+						<br><font class="txt-vert">Friday, September 9, 2016 - MJQ</font></p>							
 					</td>
 				</tr>   
 						
@@ -430,8 +431,8 @@ function recordOutboundLink(link, category, action) {
 						   
 				<tr>				
 					<td valign="top" class="cell-liste-communiques">
-						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&type=1&idArticle=2403102285&lang=en'target='_blank'>Legal Time Act  Daylight saving time begins this weekend </a></font>
-						<br><font class="txt-vert">Thursday, March 10, 2016 - MJQ</font></p>							
+						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&type=1&lang=en&idArticle=2408234399' target='_blank'>Reform of the Professional Code: the special consultation begins </a></font>
+						<br><font class="txt-vert">Tuesday, August 23, 2016 - MJQ</font></p>							
 					</td>
 				</tr>   
 						
@@ -439,8 +440,8 @@ function recordOutboundLink(link, category, action) {
 						   
 				<tr>				
 					<td valign="top" class="cell-liste-communiques">
-						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&listeDiff=58&type=1&idArticle=2403078215&lang=en' target='_blank'>Detention conditions, the administration of justice and crime prevention in Nunavik: the government responds to the report from the Public Protector </a></font>
-						<br><font class="txt-vert">Tuesday, March 8, 2016 - MJQ</font></p>							
+						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&type=1&idArticle=2408184651&lang=en' target='_blank'>The Minister of Justice announces the appointment of seven judges at the Court of Québec and a presiding justice of the peace to the Court of Québec </a></font>
+						<br><font class="txt-vert">Thursday, August 18, 2016 - MJQ</font></p>							
 					</td>
 				</tr>   
 						
@@ -448,8 +449,8 @@ function recordOutboundLink(link, category, action) {
 						   
 				<tr>				
 					<td valign="top" class="cell-liste-communiques">
-						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&listeDiff=324&type=1&idArticle=2403026523&lang=en' target='_blank'>Extension of the deadline for submitting nominations for the 2015 Prix de la justice du Québec award </a></font>
-						<br><font class="txt-vert">Wednesday, March 2, 2016 - MJQ</font></p>							
+						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&type=1&idArticle=2408173078&lang=en' target='_blank'>National Inquiry into Missing and Murdered Indigenous Women and Girls  The Québec government confirms its participation and full collaboration </a></font>
+						<br><font class="txt-vert">Wednesday, August 17, 2016 - MJQ</font></p>							
 					</td>
 				</tr>   
 						
@@ -457,8 +458,8 @@ function recordOutboundLink(link, category, action) {
 						   
 				<tr>				
 					<td valign="top" class="cell-liste-communiques">
-						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=ajd&type=1&lang=en&idArticle=2403014306' target='_blank'>Clarification by the Minister of Justice and Attorney General of Québec concerning comments on marriage made in the public sphere </a></font>
-						<br><font class="txt-vert">Tuesday, March 1, 2016 - MJQ</font></p>							
+						<p><font class="lien-noir"><a class="lien-noir"href='http://www.fil-information.gouv.qc.ca/Pages/Article.aspx?aiguillage=diffuseurs&listeDiff=49&idArticle=2407282714&lang=en' target='_blank'>Access to justice - the local justice centre in the Outaouais region receives $313,305 in financial assistance </a></font>
+						<br><font class="txt-vert">Thursday, July 28, 2016 - MJQ</font></p>							
 					</td>
 				</tr>   
 						
@@ -574,6 +575,14 @@ function recordOutboundLink(link, category, action) {
                 <tr>
                   <td width="13" align="center" valign="top">&#149;</td>
                   <td width="154" class="cell-liste-dossier"><a class="lien-noir" href="../english/themes/recours-a.htm" onmouseover="MM_startTimeout();">Exercising a remedy</a></td>
+                </tr>
+                <tr>
+                  <td width="13" align="center" valign="top">&#149;</td>
+                  <td width="154" class="cell-liste-dossier"><a class="lien-noir" href="../english/themes/ncpc/index-a.htm" onmouseover="MM_startTimeout();">New Code of Civil Procedure</a></td>
+                </tr>
+                <tr>
+                  <td width="13" align="center" valign="top">&#149;</td>
+                  <td width="154" class="cell-liste-dossier"><a class="lien-noir" href="../english/ministere/dossiers/prv/index-a.htm" onmouseover="MM_startTimeout();">Voluntary reimbursement program</a></td>
                 </tr>
                 <tr>
                   <td width="13" align="center" valign="top">&#149;</td>
@@ -747,6 +756,15 @@ function recordOutboundLink(link, category, action) {
 			<tr>
 				<td align="center" valign="top" width="15">&#149;</td>
 				<td class="cell-liste-document" width="162" align=left>
+			<a class="lien-noir" onmouseover="MM_startTimeout();" href=/english/recherche/rpsa_caq-a.htm>Public registry of litigants subject to authorization by the Court of Appeal of Québec</a>
+				</td>
+			</tr>
+
+			
+		
+			<tr>
+				<td align="center" valign="top" width="15">&#149;</td>
+				<td class="cell-liste-document" width="162" align=left>
 			<a class="lien-noir" onmouseover="MM_startTimeout();" href=/english/recherche/rpsa-a.htm>Public registry of litigants subject to authorization by the Superior Court of Québec</a>
 				</td>
 			</tr>
@@ -803,7 +821,7 @@ function recordOutboundLink(link, category, action) {
 
 	<tr height="6">
 		<td valign="top" align="center" height="6" colspan="5">
-<p class="datemaj">Latest update : March 11, 2016</p>
+<p class="datemaj">Latest update : September 9, 2016</p>
 						
 						<p class="piedpage">
 

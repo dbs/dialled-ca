@@ -200,15 +200,30 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
 	<ul>
   <li class="&#xA;        home&#xA;         is-active"><a id="ow_mainNav_536" href="http://www.aecl.ca/en/home/default.aspx" class="current"><span>Home</span></a></li>
   <li class="first has-mega">
-    <div class="relative"><a id="ow_mainNav_600" class="" href="http://www.aecl.ca/en/home/what-we-do/default.aspx"><span>What we do</span></a><div class="mega clearfix" id="ow_mainNav_600_menu">
+    <div class="relative"><a id="ow_mainNav_600" class="" href="http://www.aecl.ca/en/home/who-we-are/default.aspx"><span>Who we are</span></a><div class="mega clearfix" id="ow_mainNav_600_menu">
         <div class="left">
           <ul>
-            <li><a href="http://www.aecl.ca/en/home/what-we-do/executive-team.aspx"><span>Executive Team</span></a></li>
+            <li><a href="http://www.aecl.ca/en/home/who-we-are/executive-team.aspx"><span>Executive Team</span></a></li>
           </ul>
         </div>
         <div class="right">
           <ul>
-            <li><a href="http://www.aecl.ca/en/home/what-we-do/board-of-directors.aspx"><span>Board of Directors</span></a></li>
+            <li><a href="http://www.aecl.ca/en/home/who-we-are/board-of-directors.aspx"><span>Board of Directors</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class=" has-mega">
+    <div class="relative"><a id="ow_mainNav_712" class="" href="http://www.aecl.ca/en/home/what-we-do/default.aspx"><span>What we do</span></a><div class="mega clearfix" id="ow_mainNav_712_menu">
+        <div class="left">
+          <ul>
+            <li><a href="http://www.aecl.ca/en/home/what-we-do/nuclear-science-and-technology.aspx"><span>Nuclear Science and Technology</span></a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="http://www.aecl.ca/en/home/what-we-do/decommissioning-and-waste-management.aspx"><span>Decommissioning and Waste Management</span></a></li>
           </ul>
         </div>
       </div>
@@ -250,7 +265,11 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
                 <li><a href="http://www.aecl.ca/en/home/Publications-and-Reports/access-to-information-and-privacy-acts/annual-reports.aspx"><span>Annual Reports</span></a></li>
               </ul>
             </li>
-            <li><a href="http://www.aecl.ca/en/home/Publications-and-Reports/transparency.aspx"><span>Transparency</span></a></li>
+            <li><a href="http://www.aecl.ca/en/home/Publications-and-Reports/transparency/default.aspx"><span>Transparency</span></a><ul>
+                <li><a href="http://www.aecl.ca/en/home/Publications-and-Reports/transparency/2015-16-travel-and-hospitality-expenses/default.aspx"><span>2015-16 Travel and Hospitality Expenses</span></a></li>
+                <li><a href="http://www.aecl.ca/en/home/Publications-and-Reports/transparency/2016-16-travel-and-hospitality-expenses/default.aspx"><span>2016-17 Travel and Hospitality Expenses</span></a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -260,10 +279,7 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
     <div class="relative"><a id="ow_mainNav_548" class="" href="http://www.aecl.ca/en/home/contact-us/default.aspx"><span>Contact Us</span></a><div class="mega clearfix" id="ow_mainNav_548_menu">
         <div class="left">
           <ul>
-            <li><a href="http://www.aecl.ca/en/home/contact-us/Job-opportunities/default.aspx"><span>Job opportunities</span></a><ul>
-                <li><a href="http://www.aecl.ca/en/home/contact-us/Job-opportunities/ceo/default.aspx"><span>Notice of Vacancy - President and CEO</span></a></li>
-              </ul>
-            </li>
+            <li><a href="http://www.aecl.ca/en/home/contact-us/Job-opportunities/default.aspx"><span>Job opportunities</span></a></li>
           </ul>
         </div>
         <div class="right">
@@ -308,12 +324,13 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
 		    <div class="grid_12">
 			    <div class="intro">
 				    <div class="clearfix"><div id="tmpl_cbintro" class="ow_block">
-	<p style="display: none;">&nbsp;</p> <div style="width: 245px; height: 105px; float: right; display: none;"><a href="http://www.aecl.ca/en/home/contact-us/Job-opportunities/default.aspx" title="Job opportunities"><img src="/site/media/aecl/EmploymentOpportunities.png" alt="EmploymentOpportunities" /></a></div> <p>Atomic Energy of Canada Limited (AECL) is a federal Crown corporation responsible for the long-term, contractual arrangement with <a class="trackExternal" href="http://www.cnea.co/" target="_blank">Canadian National Energy Alliance (CNEA)</a> for the management and operation of <a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank">Canadian Nuclear Laboratories (CNL)</a> under a Government-owned, Contractor-operated (GoCo) model. This follows the announcement by the Government of Canada in June 2015 of the selection of CNEA through a competitive procurement process. AECL works to monitor performance under the GoCo arrangement to meet Government objectives. </p> <p> Under the GoCo model, AECL leverages its facilities, assets and intellectual property by bringing to bear private-sector rigour in the operation of the nuclear laboratories through the contract with CNEA, and fulfils its core mandate to: deliver on Canada’s radioactive waste and decommissioning responsibilities, provide nuclear expertise to support federal responsibilities, and offer services to users of the nuclear laboratories on commercial terms.  Details related to the work of CNL and the services it provides to AECL, industry and academia can be found on the <a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank">CNL website</a>. </p> <table style="width: 100%;"><tbody><tr><td style="text-align: center;"><a class="trackExternal" href="http://www.cnea.co/" target="_blank"><img style="vertical-align: middle;" alt="CNEA" src="/site/media/aecl/CNEA%20Large.png" /></a></td> <td style="text-align: center;"><a class="trackExternal" href="http://www.cnl.ca/en/" target="_blank"><img style="vertical-align: middle;" alt="CNL Large" src="/site/media/aecl/CNL%20Large.png" /></a></td></tr></tbody></table></div></div>
+	<div style="width: 245px; height: 105px; float: right; display: none;"><a href="http://www.aecl.ca/en/home/contact-us/Job-opportunities/default.aspx" title="Job opportunities"><img src="/site/media/aecl/EmploymentOpportunities.png" alt="EmploymentOpportunities" /></a></div> <p>As a federal Crown corporation, AECL’s mandate is to enable nuclear science and technology and fulfill Canada’s radioactive waste and decommissioning responsibilities.</p> <p>AECL receives federal funding to deliver on its mandate and reports to Parliament through the Minister of Natural Resources. It also leverages the unique capabilities at its sites to support industry and other third parties on commercial terms.</p> <p>AECL delivers its mandate through long-term contracts with the private-sector for the management and operation of its sites.</p></div></div>
                 </div>
 			    <div class="landing-nav">
 				    <div class="robots-nocontent">
 	<ul>
-  <li><a href="http://www.aecl.ca/en/home/what-we-do/default.aspx"><span class="title">What we do</span><span class="description">AECL has assumed a new role, focused largely on management and oversight of the contract to manage the nuclear laboratories.</span></a></li>
+  <li><a href="http://www.aecl.ca/en/home/who-we-are/default.aspx"><span class="title">Who we are</span><span class="description">AECL has assumed a new role, focused largely on management and oversight of the contract to manage the nuclear laboratories.</span></a></li>
+  <li><a href="http://www.aecl.ca/en/home/what-we-do/default.aspx"><span class="title">What we do</span><span class="description"></span></a></li>
   <li><a href="http://www.aecl.ca/en/home/news/default.aspx"><span class="title">News</span><span class="description"></span></a></li>
   <li><a href="http://www.aecl.ca/en/home/Publications-and-Reports/default.aspx"><span class="title">Publications and Reports</span><span class="description"></span></a></li>
   <li><a href="http://www.aecl.ca/en/home/contact-us/default.aspx"><span class="title">Contact Us</span><span class="description"></span></a></li>
@@ -353,7 +370,7 @@ OneWeb.Util.appendInitEvent(function () { OneWeb.Util.addClass(document.body,"ie
 			    </div>
 			    <div id="footer-nav">
 				    <div id="tmpl_cbfooter_nav" class="ow_block robots-nocontent">
-	<p><a href="http://www.aecl.ca/en/home/contact-us/default.aspx" title="Contact Us">Contact Us</a> | <a href="http://www.aecl.ca/en/privacy-statement.aspx" title="Privacy Statement">Privacy Statement</a> | <a href="http://www.aecl.ca/en/sitemap.aspx">Sitemap</a> | <a href="http://www.aecl.ca/en/home/Publications-and-Reports/access-to-information-and-privacy-acts/default.aspx" title="Access to Information and Privacy Acts">Access to Information</a> | <a href="http://www.aecl.ca/en/home/Publications-and-Reports/transparency.aspx" title="Transparency">Transparency</a></p></div>
+	<p><a href="http://www.aecl.ca/en/home/contact-us/default.aspx" title="Contact Us">Contact Us</a> | <a href="http://www.aecl.ca/en/privacy-statement.aspx" title="Privacy Statement">Privacy Statement</a> | <a href="http://www.aecl.ca/en/sitemap.aspx">Sitemap</a> | <a href="http://www.aecl.ca/en/home/Publications-and-Reports/access-to-information-and-privacy-acts/default.aspx" title="Access to Information and Privacy Acts">Access to Information</a> | <a href="http://www.aecl.ca/en/home/Publications-and-Reports/transparency/default.aspx" title="Transparency">Transparency</a></p></div>
 			    </div>
 			    <div id="accessibility">
 				    <div id="tmpl_cbfooter_accessibility" class="ow_block robots-nocontent">

@@ -180,21 +180,7 @@
 <script language="javascript" src="/quickga.js"></script>
 
 <!--Google Analytics Script Ends-->  
-<script type="text/javascript" src="/scripts/webtrends.js"></script>
-<script type="text/javascript">
-	//<![CDATA[
-		var _tag=new WebTrends();
-		_tag.dcsGetId();
-	//]]>>
-</script>
-<script type="text/javascript">
-	//<![CDATA[
-		// Add custom parameters here.
-		//_tag.DCSext.param_name=param_value;
-		_tag.dcsCollect();
-	//]]>>
-</script>
-<noscript><div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="http://rhpl-wt-sdc.rhpl.ca/dcs9qpqko10000c54gfargfo3_2y5u/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=8.6.0"/></div></noscript>
+
 <style type="css/text">
 a {
 color:RGB(135,0,87);
@@ -216,103 +202,49 @@ color:RGB(135,0,87);
 		<div style="height:22px; line-height:20px; color:RGB(255,255,255); margin-right:10px;">
 			<div style="float:right;">
 				<div style="float:right;">
-					<a href="http://help.bibliocommons.com" target="_blank" style="color:RGB(51,51,51);">Help</a>
+					<a href="https://rhpl.ent.sirsidynix.net/client/help/user-help_en_US/" target="_blank" style="color:RGB(51,51,51);">Catalogue Help</a>
 					&nbsp;|&nbsp;
-					<a href="https://richmondhill.bibliocommons.com/user/login" style="color:RGB(51,51,51);">Log In</a>
+					<a href="https://rhpl.ent.sirsidynix.net/client/default/search/patronlogin/https:$002f$002frhpl.ent.sirsidynix.net$002fclient$002fdefault$002fsearch$002faccount$003f" style="color:RGB(51,51,51);">Log In</a>
 				</div>
 			</div>
 		</div>
-		<form style="position: relative; z-index: 10000; margin-top:25px; margin-right:10px;" onsubmit="javascript: $(this).getElements('input.defaultText').set('value','');" action="http://richmondhill.bibliocommons.com/search" method="get">
-			<h4 style="font-size:14px; color:RGB(255,255,255;">Find books, music, movies, and more.</h4>
-			<select class="hideMe" id="t" name="t">
-				<option title="Keyword" value="smart" selected>Keyword</option>
-				<option title="Title" value="title">Title</option>
-				<option title="Author" value="author">Author</option>
-				<option title="Subject" value="subject">Subject</option>
-				<option title="Tag" value="tag">Tag</option>
-				<option title="List" value="userlist">List</option>
-				<option title="User" value="user">User</option>
-			</select>
-			<input class="text" style="width:350px;" title="Search the RHPL Catalogue" name="q" value="">
-			<input style="padding:2px 7px; border-radius:5px; border-width:2px; border-style:inset; border-color:rgba(255,255,255,0.5); cursor:pointer; background-color:RGB(135, 0, 87); color:#fff; font-weight:600" title="Search" type="submit" alt="Search" value=" Search " name="commit">		</form>
-		<div style="font-size:14px; margin-top:0.5em;"><a href="http://richmondhill.bibliocommons.com/search">Advanced Search</a></div>
+<form style="position: relative; z-index: 10000; margin-top:25px; margin-right:40px;" method="get" id="searchForm" action=" https://rhpl.ent.sirsidynix.net/client/
+embedded.search/default">
+<h4 style="font-size:14px; color:RGB(255,255,255;">Find books, music, movies, and more.</h4>
+<input type="hidden" name="ln" value="en_US" />
+<input id="q" title="Search For:" maxlength="256" name="q" value=""
+type="text" accesskey="s" />
+<input value="Search" id="searchButton" class="button" title="Search"
+type="submit" />
+</form>
+		<div style="font-size:14px; margin-top:0.5em;"><a href="https://rhpl.ent.sirsidynix.net/client/en_US/default/search/advanced?">Advanced Search</a></div>
 	</div>
 	<br class="clear">
 	<div id="topNav">
 		<ul id="mainNav" style="background:RGB(81, 132, 46);">
 			<li class=" " id="top_nav_item_id_4qzf9oycsx1phzr347vfjz0u3"><a class="navLabel" href="http://www.rhpl.richmondhill.on.ca" style="font-weight:600;">Home</a></li>
-			<li class="dropDown extendedNav" id="top_nav_item_id_9wanmk5kfl5w869c6bk1m14sc">
-				<a class="navLabel" href="http://richmondhill.bibliocommons.com/checkedout"style="font-weight:600;">My RHPL</a>
-				<div class="dropDownContent">
-					<ul class="clearfix">
-						<li>
-							<h5>My Borrowing</h5>
-							<ul>
-								<li><a href="http://richmondhill.bibliocommons.com/checkedout">Checked Out</a></li>
-								<li><a href="http://richmondhill.bibliocommons.com/holds/index/active">Holds</a></li>
-								<li><a href="http://richmondhill.bibliocommons.com/fines">Fines</a></li>
-							</ul>
-						</li>
-						<li>
-							<h5>My Shelves</h5>
-							<ul>
-								<li><a href="http://richmondhill.bibliocommons.com/collection/show/my/library/completed">Completed</a></li>
-								<li><a href="http://richmondhill.bibliocommons.com/collection/show/my/library/in_progress">In progress</a></li>
-								<li><a href="http://richmondhill.bibliocommons.com/collection/show/my/library/for_later">For later</a> </li>
-							</ul>
-						</li>
-						<li>
-							<h5>My Lists</h5>
-							<ul>
-								<li><a href="http://richmondhill.bibliocommons.com/lists/show/mine">My Lists</a></li>
-							</ul>
-						</li>
-						<li>
-							<h5>My Networks</h5>
-							<ul>
-								<li><a href="http://richmondhill.bibliocommons.com/trustedsources">Following</a></li>
-								<li><a href="http://richmondhill.bibliocommons.com/ignoredusers">Ignored Users</a></li>
-								<li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/recommendations" >Recently Shared</a></li>
-							</ul>
-						</li>
-						<li>
-							<h5>My Account</h5>
-							<ul>
-								<li><a href="http://richmondhill.bibliocommons.com/user/edit/account">Account Settings</a></li>
-								<li><a href="http://richmondhill.bibliocommons.com/user/edit/privacy">Privacy</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<script type="text/javascript" charset="utf-8">registrar.add_hook("dropdown", {element: "top_nav_item_id_9wanmk5kfl5w869c6bk1m14sc", hover: true, zindex: 9999});</script>
+            <li class=" " id="top_nav_item_id_4qzf9oycsx1phzr347vfjz0u3"><a class="navLabel" href="https://rhpl.ent.sirsidynix.net/client/en_US/default/" style="font-weight:600;">Catalogue</a></li>
+            
+			<li class=" " id="top_nav_item_id_9wanmk5kfl5w869c6bk1m14sc">
+				<a class="navLabel" href="https://rhpl.ent.sirsidynix.net/client/default/search/patronlogin/https:$002f$002frhpl.ent.sirsidynix.net$002fclient$002fdefault$002fsearch$002faccount$003f"style="font-weight:600;">My Account</a>
+
 			</li>
-			<li class=" dropDown  " id="top_nav_item_id_5z9pl2taebq6x9ukoqsmq37mf">
-				<a href="http://richmondhill.bibliocommons.com/dashboard" class="navLabel" style="font-weight:600;">Explore</a>
-				<div class="dropDownContent">
-					<ul class="clearfix">
-				      <!--li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/recommendations" >Recommendations</a></li-->
-					  <li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/dashboard" >Recent Activity</a></li>
-					  <li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
-					  <li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/explore/index/awards" >Awards</a></li>
-					  <li class="dropDownItem"><a href="http://richmondhill.bibliocommons.com/explore/index/best_sellers" >Bestsellers</a></li>
-				    </ul>
-				</div>
-				<script type="text/javascript" charset="utf-8">registrar.add_hook("dropdown", {element: "top_nav_item_id_5z9pl2taebq6x9ukoqsmq37mf", hover: true, zindex: 9999});</script>
-			</li>
+
 			<li class="dropDown" id="top_nav_item_id_789081">
 				<a class="navLabel" href="../VirtualLibrary/index.cfm" style="font-weight:600;">Virtual Library</a>
+                
 				<div class="dropDownContent">
 					<ul class="clearfix">
 						<li class="dropDownItem"><a href="../VirtualLibrary/Read.cfm">Read</a></li>
 						<li class="dropDownItem"><a href="../VirtualLibrary/Listen.cfm">Listen</a></li>
-						<li class="dropDownItem"><a href="../VirtualLibrary/Watch.cfm">Watch</a></li>
 						<li class="dropDownItem"><a href="../VirtualLibrary/Learn.cfm">Learn</a></li>
 						<li class="dropDownItem"><a href="../VirtualLibrary/SubjectListIndex.cfm">Research</a></li>
 						<li class="dropDownItem"><a href="../EResources/TitleList.cfm?fr=a&to=a">E-Resources A to Z</a></li>
-						<li class="dropDownItem"><a href="http://rhpl-agent.auto-graphics.com">One Search</a></li>
+						<!--li class="dropDownItem"><a href="http://rhpl-agent.auto-graphics.com">One Search</a></li-->
 						<li class="dropDownItem"><a href="../VirtualLibrary/ForKids.cfm">Just for Kids</a></li>
 						<li class="dropDownItem"><a href="../GraphicNovels">Graphic Novels Lair</a></li>
 						<li class="dropDownItem"><a href="../InputForms/AskForm.cfm">Ask A Librarian</a></li>
+						<!--li class="dropDownItem"><a href="">A to Z Listing</a></li-->
 					</ul>
 				</div>
 				<script type="text/javascript" charset="utf-8">
@@ -379,6 +311,7 @@ color:RGB(135,0,87);
 						<li class="dropDownItem"><a href="../InputForms/LHForm.cfm">Local History &amp; Genealogy Questions</a></li>
 						<li class="dropDownItem"><a href="../Services/InterlibraryLoans.cfm">Interlibrary Loan Requests</a></li>
 						<li class="dropDownItem"><a href="../Services/RoomRentals.cfm">Meeting Room Rentals</a></li>
+						<li class="dropDownItem"><a href="../Services/ProctoringExams.cfm">Proctoring Exams</a></li>
 						<!--li class="dropDownItem"><a href="../">Recommend a Title</a></li-->
 					</ul>
 				</div>
@@ -493,14 +426,12 @@ color:RGB(135,0,87);
 
 <!--div><img src="../../Communications/images/RG_celebration.png"/></div-->
 
-<!--div class="headlineText" style="text-align:center; margin-top:20px;" ><img src="../Communications/images/LibraryatNight1.jpg" width="300" style="float:left; margin-right:10px; margin-top:5px; margin-bottom:10px; margin-left:10px;" >Extended Study Hours at Central <br />
-  April 2, 2016 to April 28, 2016</div>
-<div class="frontText" style="margin-left:10px; margin-top:10px;">Monday to Thursday, 9:00 <span class="timeSize">pm</span> to midnight </p>
-<p>No extended hours on Friday.</p>
-<p> Saturday & Sunday, 5:00 <span class="timeSize">pm</span> to 9:00 <span class="timeSize">pm</span> </p> 
- <p> See the <a href="../WhatsNew/pdf/StudyHall2016.pdf">Extended Study Hours FAQ</a></p></div>
- <!--div class="bodyText">Extended Study Hours will not run during holiday hours.</div-->
-<!--hr /-->
+<!--div class="headlineText" style="text-align:center; margin-top:20px; color:#d40f8c; font-size:24px;" >Oak Ridges Library Open House</div>
+<div class="frontText" style="margin-left:15px; margin-top:10px;"><img src="../Communications/images/New_OR_open_house.png" width="300" style="float:left; margin-right:10px; margin-top:5px; margin-bottom:10px; margin-left:10px;" >You are invited to an Open House at the Oak Ridges Library, 13,085 Yonge Street to review the design for the new Oak Ridges Library <b>Thursday, June 23, 2016, from 7-9 pm</b>.
+	<p>Perkins + Will Architects will be on-hand for informal discussions.</p>
+    <p>The design includes welcoming vibrant spaces and places that will renew the library experience for the community.</p>
+    </div>
+<hr /-->
 
 <!--Full page span notice ends-->             
 
@@ -515,12 +446,18 @@ color:RGB(135,0,87);
    <a href="https://richmondhill.bibliocommons.com/item/show/550771029_minister_without_portfolio"><img src="../../Communications/images/Minister.png" alt="Minister Without Portfolio by Michael Winter" style="padding:10px;"/></a> 
 </div>
 <hr /-->
-
-<div style="text-align:center; clear:left;"> 
-    <iframe src="//richmondhill.bibliocommons.com/list/list_browse/user/581918118" height="315" width="680" frameBorder="0" scrolling="no" style="margin-bottom:10px"></iframe>
-</div> 
-
+<div class="headlineText" style="text-align:center; margin-top:20px; color:#d40f8c; font-size:24px;" >New Catalogue Launches Friday, July 29</div>
+<div class="frontText" style="margin-left:15px; margin-top:10px;"><img src="../Communications/images/NewCatalogue.png" style="float:left; margin-right:10px; margin-top:5px; margin-bottom:10px; margin-left:10px;" >Our new catalogue is a one-stop-shop to access all library resources! It's the Library's version of Google - all our collection items can be explored using a single search box. 
+	<p>Our entire collection is now searchable with a click of a button, including our databases, special collections, eBooks, eAudiobooks, eMusic, eMagazines, and eVideo, in addition to all our physical items and items on order. Come celebrate your curiosity and check out the new catalogue.</p>
+    <p>New Catalogue <a href="../AboutUs/pdf/NewCatalogueFAQs2.pdf" style="color:#d40f8c; font-size:18px;">FAQs</a></p>
+    </div>
 <hr />
+
+<!--div style="text-align:center; clear:left;"> 
+    <iframe src="//richmondhill.bibliocommons.com/list/list_browse/user/435054128" height="315" width="680" frameBorder="0" scrolling="no" style="margin-bottom:10px"></iframe>
+</div--> 
+
+
   <!--div style="text-align:center; clear:left;"> 
     <iframe src="//richmondhill.bibliocommons.com/list/list_browse/user/514401328" height="315" width="680" frameBorder="0" scrolling="no" style="margin-top:10px;"></iframe>
   </div--> 
@@ -538,10 +475,11 @@ color:RGB(135,0,87);
 
 
  <!-- Small Service Notificaiton --->
- 
+
+
 <!--div id=service style="width:325px; padding:10px; margin-top:0.5em; margin-bottom:5px; margin-right:2em; border:solid 1px RGB(153,153,153); ">
 <div class="headlineText">Systems Maintenance</div>
-<div class="frontText">On Sunday, May 1 between 5 pm - 12 am, customers may experience intermittent connection issues to the Library Website and to all services accessed through the Website. Access to the catalogue is still available directly at https://richmondhill.bibliocommons.com     
+<div class="frontText">On Sunday, June 19 between 5 pm - 12 am, access to the Library Website and to all services accessed through the Website will be unavailable. Access to the catalogue is still available directly at <a href="https://richmondhill.bibliocommons.com"> https://richmondhill.bibliocommons.com</a>     
          <p>We apologize for any inconvenience this may cause.</p>
 </div>     
 </div> 
@@ -575,65 +513,66 @@ color:RGB(135,0,87);
 <!--div class="frontText" style="margin-top:10px;">All 4 branches have many amazing programs to keep your kids busy and entertained this March Break. <a href="../../Programs/ProgramList.cfm?categoryID=1">Read more.</a> For programs listed by date and branch, <a href="../../Programs/pdf/March_Break_2016.pdf">download</a> the flyer.
 </div--> 
 
-<div class="headlineText">Arts Contest Celebration</div>
-<div class="frontText" style="text-align:center;"><a href="https://www.facebook.com/media/set/?set=a.1085695888155469.1073741879.167307019994365&type=3"><img src="../../Communications/images/ArtsContestWinners2016.png"/></a></div>
-<div class="frontText">We celebrated the winners of our Arts Contest 2016 on May 3 at the Richmond Hill Centre for Performing Arts. Congratulations to all! <p><a href="../../Communications/ArtsContestWinners2016.pdf">Complete list of winners</a></p></div>
+<div class="headlineText">Read an eBook Day</div>
+<div class="frontText" style="text-align:center;"><a href="http://rhpl.lib.overdrive.com/17016FC2-72FE-424A-8766-D7CD00BBFD1F/10/50/en/Default.htm"><img src="../../Communications/images/RAEBD2016.jpg"></a></div>
+<div class="frontText">Read an eBook Day is September 16, 2016. Mention OverDrive in a social media post using the hashtag #eBookLove and RHPL could win a $1,000 eBook credit. That means more book choices for you!<a href="http://rhpl.lib.overdrive.com/17016FC2-72FE-424A-8766-D7CD00BBFD1F/10/50/en/Default.htm"> Read!</a></div>
 <hr />
 
-<div class="headlineText">Hoopla Now Available</div>
-<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=194"><img src="../../Communications/images/Hoopla.png" /></a></div>
-<div class="bodyText">Watch a movie or TV series, listen to music or an audiobook, or read an eBook. Streamed content is available for online or mobile access. <a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=194"> Explore Now</a></div>
+<div class="headlineText">RHPL Live!</div>
+<div class="frontText"><img src="../../Communications/images/RHPLLive.png"></div>
+<div class="frontText">Calling all teen playwrights! In 2017, we will be launching <em>RHPL Live!</em>, a teen performance troupe that will produce and perform our favourite fairy tales for children and their families at the library. We're currently scouting teen playwrights, so contact <a href=mailto:"mgilpin@rhpl.ca">Meagan</a> with a sample of your writing if you want to get involved!</div>
 <hr />
 
-<div class="headlineText">3D Printer</div>
-<div class="bodyText" style="text-align:center;"><img src="../../Communications/images/Makerbot.png" /></a></div>
-<div class="bodyText">Drop by the Central Library any Thursday evening in May from 7-8:30 pm and find out what our 3D Printer can do.
-<a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1526"> More details</a></div>
+<div class="headlineText">Calling All Local Writers!</div>
+<div class="frontText"><img src="../../Communications/images/black_and_white_pencils.png"></div>
+<div class="frontText">RHPL has 2 great opportunities for local writers.  We'll be hosting <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1678">Indie Author Day</a> on Saturday, October 8 and you can participate in the book fair. On Tuesday, October 18, you can also participate in a local author panel &amp; book fair. Please <a href="http://www.rhpl.richmondhill.on.ca/Programs/pdf/BookFairApplication2016rev.pdf">apply</a> for any of these opportunities by September 19. <a href="http://www.rhpl.richmondhill.on.ca/Programs/pdf/LocalAuthorsrev.pdf">More Details</a></div>
 <hr />
 
-<div class="headlineText">Reading &amp; Signing with<br/>Her Excellency Sharon Johnston</div>
-<div class="frontText"><img src="../../Communications/images/MatronsMadams.jpg" /></div>
-<div class="frontText">Join us for this special event at Central on Wednesday, May 18 at 6 pm. Her Excellency Sharon Johnston will be reading from her book <em>Matrons and Madams.</em><a href="https://www.eventbrite.ca/e/reading-signing-with-her-excellency-sharon-johnston-spring-2016-central-library-tickets-24494599005"> Register here</a></div>
+<div class="headlineText">Children's Fall program registration begins online Monday, August 29</div>
+<div class="frontText" style="text-align:center;"><img src="../../Communications/images/Paint-brushes.png" width="280" height="187" /></div>
+<div class="frontText">Check out the full list of our exciting line up of children's programs at the library.  Spaces are limited! <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramList.cfm?categoryID=1">More Details</a></div>
 <hr />
 
-<div class="frontText"><img src="../../Communications/images/book-sale.jpg" /></div>
+<div class="headlineText">Adult Book Clubs</div>
+<div class="frontText"><img src="../../Communications/images/BooksGlasses.jpg"></div>
+<div class="frontText">Registration for Adult Book Clubs is now available online! Registration begins on August 9. <a href="http://www.rhpl.richmondhill.on.ca/ReadersCorner/ReadingGroup.cfm">More Details</a></div>
 <hr />
 
-<div class="headlineText">Teen Volunteers</div>
-<div class="frontText"><img src="../../Communications/images/Teen_Volunteers.png"></div>
-<div class="frontText">RHPL is looking for reliable and enthusiastic high school volunteers to assist in a variety of programs. More information is available on our <a href="http://www.rhpl.richmondhill.on.ca/Teens/#Volunteer">Teen Page.</a></div>
+<div class="headlineText">Don't Miss Out, Suspend Your Holds</div>
+<div class="frontText" style="text-align:center;"><img src="../../Communications/images/Holds.png"/></div>
+<div class="frontText">Did you know that you can suspend your holds so they don't become available when you're on vacation? Log in to your library account, click the holds tab, select the titles you want to suspend, click suspend and enter start and stop dates. You'll keep your position in the holds queue.</div>
 <hr />
 
-<div class="headlineText">E-Resource for Children</div>
-<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=78"><img src="../../Communications/images/clickhere_logoBanner1.png" /></a></div>
-<div class="bodyText">Picture books, fiction, graphic novels, non-fiction, videos, and much more. For preschoolers and kids up to grade 6. 
-<a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=78"> Explore Now</a></div>
-<hr /> 
+
+
+
+<div class="headlineText" style="color:#6EB43F; text-align:center; font-size:48px; padding-top:20px;">BOOK SALE</div>
+<div class="frontText" style="float:left; padding-right:25px; padding-top:15px;"><img src="../../Communications/images/stack_of_books_twist.jpg"/></div>
+<div class="frontText" style="padding-top:15px;">Did you know that the Library has book sales at all four locations? New items are added daily!<p>Buy used items for prices ranging from 25 cents to two dollars. You never need to worry about returning them.</p></div>
+<hr />
+
+<div class="headlineText">For Preschoolers</div>
+<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=184"><img src="../../Communications/images/MissHum.png" /></a></div>
+<div class="bodyText">Designed for preschoolers and children in kindergarten, Miss Humblebee's Academy teaches children all those essential skills needed for school. Can be used on smartphones and tablets too. 
+<a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=184">Explore Now</a></div>
+<hr />  
+
+<div class="headlineText">Recommended Reads Lists</div>
+<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=5"><img src="../../Communications/images/Novelist_button.gif" /></a></div>
+<div class="bodyText">Have some favourite authors and need to find your next great read for the summer? Try NoveList for suggestions.
+<a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=5"> Explore Now</a></div>
+<hr />
 
 <div class="headlineText">Language Learning</div>
 <div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=102"><img src="../../Communications/images/Mango_color.png" /></a></div>
 <div class="bodyText">Do you have foreign travel plans over the next few months? Before you go, open doors by learning some basic vocabulary.  <a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=102"> Explore Now</a></div>
 <hr />
 
-<div class="headlineText">Homework Help</div>
-<div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=3"><img src="../../Communications/images/elibrary_canada.jpg" /></a></div>
-<div class="bodyText">Find full-text articles from magazines, newspapers and other resources.
-<a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=3"> Explore Now</a></div>
-<hr />
-
-<div class="headlineText">Richmond Hill Newspapers</div>
-<div class="bodyText"><a href="http://history.rhpl.richmondhill.on.ca/3096112/data?grd=4397"><img src="../../LocalHistory/images/NewspaperCollage.jpg" /></a></div>
-<div class="bodyText">What happened the day your grandmother was born. What was going on the year your great-grandparents were married. Just what was Richmond Hill like in 1902? 1958? Find the answers in our collection of digitized newspapers. All of our content up to the end of 1979 is now available through the Digital Archive. <a href="http://history.rhpl.richmondhill.on.ca/3096112/data?grd=4397">Browse the collection</a></div>
-<hr /> 
-
 <div class="headlineText">New Oak Ridges Library</div>
 <div class="bodyText" style="text-align:center;"><a href="http://www.rhpl.richmondhill.on.ca/OakRidges/"><img src="../../Communications/images/New_OR.png" /></a></div>
 <div class="bodyText">
 Planning for the new Oak Ridges Library is well underway. Check the Oak Ridges Building Project page for updates. <a href="http://www.rhpl.richmondhill.on.ca/OakRidges/">Read more</a></div>  
-<hr />
 
-<div class="bodyText" align="center"><img src="../../Communications/images/RH_Rotary_logo.png" /></div>
-<div class="bodyText">Richmond Hill Public Library would like to acknowledge the generous donation of the Richmond Hill Rotary Club to support the Library's Forest of Reading Series. Thank you so much for making this program possible!</div>
 
 <!--div class="headlineText">Local History eBook</div>
 <div class="frontText"><img src="../../Communications/images/ECRH.jpg"></div>
@@ -686,47 +625,68 @@ Library cardholders can stream all of the music on Freegal 24 hours per day, 7 d
 
 <!-- Current articles -->
 
-<div class="headlineText">Residential Tenant Screening</div>
-<div class="frontText"><img src="../../Communications/images/Credit_Report.jpg"></div>
-<div class="frontText">Join us at Richmond Green Library on Monday, May 9 from 6:30-7:30 pm for a presentation on screening potential tenants. Yan Ma, a licensed paralegal, will discuss how to find tenants who will pay the rent in full and on time. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1520"> Learn more</a></div>
+<div class="headlineText">French for Beginners</div>
+<div class="frontText"><img src="../../Communications/images/Francais.png"></div>
+<div class="frontText">This program gives children 6-8 the opportunity to learn both spoken French and grammar skills through activities, games and role playing with an Ontario Certified teacher. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1343">More Details</a></div>
 <hr />
 
-<div class="headlineText">Mystery Book Chat</div>
-<div class="frontText"><img src="../../Communications/images/Mystery.png"></div>
-<div class="frontText">Meet, mingle and chat at Oak Ridges Library on Tuesday, May 10 from 7-7:45 pm about your favorite mystery authors, and find out what to read next. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1503"> Learn more</a></div>
+<div class="headlineText">Roald Dahl's 100th Birthday</div>
+<div style="text-align:center; margin-bottom:10px;"><img src="http://syndetics.com/index.aspx?isbn=0670914169/MC.GIF&client=sirsi&type=rw12" /></div>
+<div class="frontText">Help us celebrate Roald Dahl's 100th birthday! Join us at Central on Saturday, September 10 from 2-3:30 pm for crafts, games, trivia, and fun activities based on his beloved books. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1663">More Details</a></div>
 <hr />
 
-<div class="headlineText">Parenting Workshop:<br /> Math is Fun</div>
-<div class="frontText"><img src="../../Communications/images/Colourful-plastic-numbers.jpg"></div>
-<div class="frontText">Join Early Literacy Specialist, Jill Javelosa Alvarez on May 12 from 7-8:30 pm at Central Library for an evening of information, discussion and hands on activities.<a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1493"> Learn more</a></div>
+<div class="headlineText">Film Club <br />with Barry Dempster</div>
+<div style="text-align:center; margin-bottom:10px;"><img src="../../Communications/images/EatDrink.jpg" /></div>
+<div class="frontText">Food for thought? Join us at 2 pm Saturday, September 10 at Central Library to watch and discuss the film <em>Eat Drink Man Woman</em> with Barry Dempster. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1631">More Details</a></div>
 <hr />
 
-<div class="frontText"><img src="../../Communications/images/doors_open.png"></div>
-<div class="frontText"><p>Come to Central Library on Saturday, May 14 for Doors Open Richmond Hill events. From 10:30-11:00 am, there will be a Family Storytime. Between 12-4 pm, local author booths will be set up in the lobby.</p></div>
-<div class="headlineText">Scavenger Hunt</div>
-<div class="frontText"><img src="../../Communications/images/search.png"></div>
-<div class="frontText">Come to the Children's Department between 10:30 am and 4 pm to discover the library as you hunt for clues and earn points toward a prize. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1516"> Learn more</a></div>
-<div class="headlineText">Art of Seeing</div>
-<div class="frontText"><img src="../../Communications/images/ArtSeeing.jpg"></div>
-<div class="frontText">Tour Central Library on Saturday, May 14 from 1-2 pm with photographer Karen Merk for her 3rd photography tour. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1506"> Learn more</a></div>
-<div class="headlineText">Murder Mystery</div>
-<div class="frontText"><img src="../../Communications/images/SHolmes.jpg"></div>
-<div class="frontText">From 2-4 pm, observe the evidence, interrogate live suspects, and try to crack the case as Central Library turns into a live stage at this unique local history murder mystery. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1480"> Learn more</a></div>
+<div class="headlineText">Computer Game Design</div>
+<div class="frontText"><img src="../../Communications/images/KidsComputer.png"></div>
+<div class="frontText">Kids 8-13 can learn to create computer games using <em>Scratch</em> at Central Library over an 8-week period. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1100">More Details</a></div>
 <hr />
 
-<div class="headlineText">DIY Projects with Arduino</div>
-<div class="frontText"><img src="../../Communications/images/Arduino.png"></div>
-<div class="frontText">Learn how to make inexpensive do-it-yourself electrical projects at Central Library on Sunday, May 15 from 2-3:30 pm <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1527"> Learn more</a></div>
+<div class="headlineText">WORD</div>
+<div class="frontText"><img src="../../Communications/images/Heart_book_pink.png"></div>
+<div class="frontText">Love to write? Then drop-in to 360&deg; kids Home Base Youth Drop-in Centre to share and workshop your latest spoken word, rap, poetry, or prose each Monday.  <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1607">More Details</a></div>
 <hr />
 
-<div class="headlineText">Residential Tenant Eviction</div>
-<div class="frontText"><img src="../../Communications/images/House_Padlock.jpg"></div>
-<div class="frontText">Join us at Richmond Green Library on Monday, May 16 from 6:30-7:30 pm for a presentation on how to evict problem tenants. Yan Ma, a licensed paralegal, will discuss how to legally remove tenants. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1522"> Learn more</a></div>
+<div class="headlineText">Science Literacy Week</div>
+<div class="frontText"><img src="../../Communications/images/KidScientists.jpg"></div>
+<div class="frontText">Drop by to see fun science demonstrations with students from York University's Science Outreach "Let's Talk Science." Demos will take place starting at 10:30 am on Saturday, September 17 at Central Library. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1642">More Details</a></div>
 <hr />
 
-<div class="headlineText">ESL Skill Building</div>
+<div class="headlineText">Weird Science Challenge</div>
+<div class="frontText"><img src="../../Communications/images/Science.jpg"></div>
+<div class="frontText">Science can be weird in the best way. High school students can find our Weird Science Challenges on RHPL's Facebook and Twitter pages each weekday of Science Literacy Week (Sept. 19-23) and compete for a chance to win the grand Teen Science Champion prize! <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1613">More Details</a></div>
+<hr />
+
+<div class="headlineText">Savvy Searchers</div>
+<div class="frontText"><img src="../../Communications/images/Students-on-Computers.jpg"></div>
+<div class="frontText">Want to make doing homework more fun? If you're in Grade 5 or 6, come to Central Library Monday, September 19 from 7-8 pm and learn how. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1640">More Details</a></div>
+<hr />
+
+<div class="headlineText">Coding is Cool</div>
+<div class="frontText"><img src="../../Communications/images/coding.jpg"></div>
+<div class="frontText">Code your first program at the Central Library on Wednesday, September 21 from 7-8:30 pm. This Science Literacy Week event is hosted by Let's Talk Science Outreach from York University. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1671">More Details</a></div>
+<hr />
+
+<div class="headlineText"><em>This Poem Is a House</em> Book Launch</div>
+<div class="frontText"><img src="../../Communications/images/ThisPoem.jpg"></div>
+<div class="frontText">If love is a house, how do we arrange the furniture? Join us at Central Library on Saturday, September 24 from 3-4:30 pm for the launch of Ken Sparling's newest book. <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1636">More Details</a></div>
+<hr />
+
+<div class="headlineText">Entrepreneurs in Residence:<br/> Inspirational Storytelling</div>
+<div class="frontText"><img src="../../Communications/images/Boardroom-meeting.jpg"></div>
+<div class="frontText">Are you a new entrepreneur? Come listen to four dynamic and passionate entrepreneurs at Central Library on Thursday, September 29. <a href="../../Programs/pdf/Entrepreneurs_Sept_2016.pdf">More Details</a></div>
+
+
+
+
+<!--hr /-->
+
+<!--div class="headlineText">ESL Skill Building</div>
 <div class="frontText"><img src="../../Communications/images/Reading_circle.jpg"></div>
-<div class="frontText">Come join either  <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1525">ESL for Seniors</a> at Central Library, the <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1366">ESL Reading Circle</a> at Oak Ridges Library, or the <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1325">ESL Conversation Group</a> at Richmond Green Library and improve your English skills.</div>
+<div class="frontText">Come join either  <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1525">ESL for Seniors</a> at Central Library, the <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1366">ESL Reading Circle</a> at Oak Ridges Library, or the <a href="http://www.rhpl.richmondhill.on.ca/Programs/ProgramDetail.cfm?programID=1325">ESL Conversation Group</a> at Richmond Green Library and improve your English skills.</div-->
 
 
 
@@ -840,7 +800,7 @@ a:hover {
 <div class="marginHeading" style="text-align:center; color:#870057">Program Guide</div>
             <div class="marginList" style="text-align:center; margin-left:10px; margin-right:10px;">The <a href="../../Programs/ProgramGuides/ProgramGuide.pdf" target="_parent" style="text-decoration:none;">Current Program Guide</a> is available for downloading</div>
             
-			<div class="marginList" style="margin-top:1em; margin-bottom:0.5em; margin-left:30px;"><a href="../../Programs/ProgramGuides/ProgramGuide.pdf" target="_parent" style="text-decoration:none;"><img src="../../Programs/ProgramGuides/images/programGuide.jpg" width="150" height="193" alt="Program Guide In the Know" /></a></div>
+			<div class="marginList" style="margin-top:1em; margin-bottom:0.5em; margin-left:30px;"><a href="../../Programs/ProgramGuides/ProgramGuide.pdf" target="_parent" style="text-decoration:none;"><img src="../../Programs/ProgramGuides/images/programGuide.png" width="150" height="193" alt="Program Guide In the Know" /></a></div>
             
 <hr />
 
@@ -856,7 +816,7 @@ a:hover {
 <div style="width:146px; margin-left:10px;"><a href="http://rhpl.lib.overdrive.com"><img src="../../Communications/images/OverdriveSide.jpg" alt="OverDrive logo" style="border:none;"></a></div>
 <div class="marginHeading" style="text-align:center; margin-bottom:2px; color:#870057"><a href="http://frontline.overdrive.com/?Lib=Richmond%20Hill%20Public%20Library">OverDrive Help</a></div>
 
-<div style="width:146px; margin-left:10px;"><a href="https://ebook.3m.com/library/richmondhillpl/"><img src="../../Communications/images/3MSidecolour.jpg" alt="3M button"></a></div>
+<div style="width:146px; margin-left:10px;"><a href="https://ebook.yourcloudlibrary.com/library/richmondhillpl"><img src="../../Communications/images/3MSidecolour.jpg" alt="3M button"></a></div>
 
 <div style="width:146px; margin-left:10px;"><a href="http://www.rhpl.richmondhill.on.ca/resourceRefer.cfm?databaseID=170"><img src="../../Communications/images/ArchembaultSide.jpg" width="200" height="103" alt="MaBiblio numerique logo" /></a></div>
 
@@ -922,9 +882,12 @@ a:hover {
 </div>
             
    <div id="column-right" style="float:right; margin-bottom:10px;">
-    <p style="margin-bottom:10px; margin-top:10px;"><span>RHPL Strategic Plan</span><span style="margin-left:25px;">Report to the Community 2014</span></p>
- <p> <span style="margin-bottom:10px; margin-left:25px;"><a href="../../AboutUs/StrategicPlan.cfm"><img src="../../AboutUs/images/strategicPlan.jpg" width="112" height="87" alt="Strategic Plan" /></a></span>
-       <span style="margin-bottom:10px; margin-left:65px;"> <a href="../../AboutUs/pdf/CommunityReport2014.pdf"><img src="../../AboutUs/images/communityReport2014.jpg" width="104" height="87" alt="Report to the Community" /></a></span></p>
+    <p style="margin-bottom:10px; margin-top:10px;"><span>RHPL Strategic Plan</span>
+	<span style="margin-left:25px;">Richmond Green Annual Report</span>
+	<span style="margin-left:25px;">Report to the Community 2015</span></p>
+ <p> <span style="margin-bottom:20px; margin-left:25px;"><a href="../../AboutUs/StrategicPlan.cfm"><img src="../../AboutUs/images/strategicPlan.jpg" width="135" height="104" alt="Strategic Plan" /></a></span>
+	<span style="margin-bottom:10px; margin-left:75px;"><a href="../../AboutUs/pdf/RGAnnualReport2015.pdf"><img src="../../AboutUs/images/RGAnnualReport2015.png" width="104" height="135" alt="Richmond Green Annual Report 2015" /></a></span> 
+    <span style="margin-bottom:10px; margin-left:140px;"> <a href="../../AboutUs/pdf/CommunityReport2015.pdf"><img src="../../AboutUs/images/communityReport2015.jpg" width="104" height="135" alt="Report to the Community" /></a></span></p>
 </div>
 
 

@@ -148,7 +148,7 @@ if (typeof jQuery == 'undefined'){
         <div>
             <div class="marquee-masks" id="marquee-mask_left"></div>
             <div class="marquee-masks" id="marquee-mask_right"></div>
-            <marquee scrolldelay="1" scrollamount="3">   -  &Eacute;ch&eacute;ances des taxes pour 2016 :  26 f&eacute;vrier, 26 mai, 26 ao&ucirc;t.   -    Location du centre communautaire: 418-957-9634.  </marquee>
+            <marquee scrolldelay="1" scrollamount="3">Nouveau, Les dimanches du Marchand! Au centre communautaire tous les 2e dimanches des mois de juin &agrave; d&eacute;cembre de 11 h &agrave; 16 h   -  &Eacute;ch&eacute;ances des taxes pour 2016 :  26 f&eacute;vrier, 26 mai, 26 ao&ucirc;t.   -    Location du centre communautaire: 418-957-9634.  </marquee>
         </div>
     </div>
 </div>
@@ -294,7 +294,7 @@ Dimanche : 9h45 à 11h45</p>
             submitHandler:function () {
                 $("#invalid-courriel").hide();
                 $('.vide').val('');
-                $('.token').val('31d77b56df0eda46a1e628f1fecc7522');
+                $('.token').val('dd7614306563cca024d1bf40ed60bb6e');
                 $.ajax({
                     url: 'ajax/infolettre.ajax.php',
                     type: 'post',

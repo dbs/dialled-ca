@@ -12,11 +12,12 @@
 <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
 
  <!-- Entering commonInitilization.jsp -->
+<!-- categoryPath=/ca -->
 	
 <!--  Site : ca -->
 <!--  Subsite : ca -->
 <!--  subSiteCategory : /ca -->
-<!-- Exiting commonInitilization.jsp time :50ms -->
+<!-- Exiting commonInitilization.jsp time :63ms.. -->
 
 
 
@@ -49,7 +50,7 @@
 
 <meta name="twitter:url" content="https://www.sunlife.ca/ca?vgnLocale=en_CA"/>
 <link rel="canonical" href="https://www.sunlife.ca/ca?vgnLocale=en_CA" />
-<!-- Exiting ogtags.jsp :: time :304ms -->
+<!-- Exiting ogtags.jsp :: time :17ms.. -->
 
 
 
@@ -60,6 +61,10 @@
 
 <!-- Entering siteChannelExtension.jsp -->
 <!--HTML Head Tag ca site extn -->
+<!-- jQuery -->
+<script src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/scripts/jquery.js"></script>
+<!-- easyXDM for Sunlife CA ph2 -->
+<script src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/scripts/easyXDM.js"></script>
 <script>
 if (document.cookie.length>0){	
 	var c_start = document.cookie.indexOf("desktopview" + "=");
@@ -76,6 +81,26 @@ if (document.cookie.length>0){
 <link href="//www.sunlife.ca/static/slfglobal/globalweb/responsive/styles/bootstrap.css" rel="stylesheet" >
 <link href="//www.sunlife.ca/static/slfglobal/globalweb/responsive/styles/main.css" rel="stylesheet" >
 
+<style>
+
+#signin-widget input.btn.btn-blue.mar-left-10.no-break,#signin-widget-pinbar input.btn.btn-blue.mar-left-10.no-break,#signin-widget-mobile input.btn.btn-blue.mar-left-10.no-break{
+width:36%;
+margin:0 !important;
+float:right;
+}
+
+
+#signin-widget-pinbar input#accessPasswordPinbar,#signin-widget-mobile input#accessPasswordMobile{
+width:62%;
+}
+
+div#contigency-widget-mobile button#blockpagebutton{
+float:none;
+}
+
+
+</style>
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -86,7 +111,7 @@ if (document.cookie.length>0){
 <!--[if IE 9]>
    <link href="//www.sunlife.ca/static/slfglobal/globalweb/responsive/styles/ie9-custom.css" rel="stylesheet">
 <![endif]-->
-<!-- Exiting siteChannelExtension.jsp  time :10ms -->
+<!-- Exiting siteChannelExtension.jsp  time :11ms -->
 
 
 
@@ -119,12 +144,15 @@ if (document.cookie.length>0){
 <!-- Test and Target Banner -->
 <link href="//cdn.sunlife.com/static/ca/hero_banner.css" rel="stylesheet" rel="stylesheet" type="text/css">
 
+<!-- Boomerang Banner -->
+<link href="//cdn.sunlife.com/static/ca/boomerang_homepage.css" rel="stylesheet" rel="stylesheet" type="text/css">
+
 <title>Sun Life Financial | Life Insurance, Investments & Group Benefits</title>
 
 <meta NAME="description" CONTENT="Sun Life Financial Canada offers financial planning, investment options, retirement savings, life insurance, health insurance, group benefits and more." />
 <meta NAME="keywords" CONTENT="" />
 
-<!-- Exiting pageExtensionMetaTags.jsp  time :42ms -->
+<!-- Exiting pageExtensionMetaTags.jsp  time :8ms.. -->
 
 
 
@@ -154,7 +182,7 @@ page_health_interest  :  "None"
 </script>
 <script src="//tags.tiqcdn.com/utag/sunlife/ca/prod/utag.sync.js" type="text/javascript"></script>
 
-<!-- Exiting udo.jsp  time :24ms -->
+<!-- Exiting udo.jsp  time :11ms.. -->
 
 
 </head>
@@ -167,6 +195,7 @@ page_health_interest  :  "None"
 
 <!-- Entering teliumUniversalTag.jsp -->
 
+<!-- Start Tealium -->
 <script type="text/javascript">
 	(function(a, b, c, d) {
 		a = '//tags.tiqcdn.com/utag/sunlife/ca/prod/utag.js';
@@ -180,7 +209,8 @@ page_health_interest  :  "None"
 		a.parentNode.insertBefore(d, a);
 	})();
 </script>
-<!-- Exiting teliumUniversalTag.jsp  time :5ms -->
+<!-- End Tealium -->
+<!-- Exiting teliumUniversalTag.jsp  time :9ms -->
 
 
 <div class="container">
@@ -350,18 +380,55 @@ page_health_interest  :  "None"
 <div class="mobile-login-form">
 <div class="row no-gutter">
 <div class="col-xs-12">
-<div class="form-container">
+<div class="form-container mar-bottom-25">
 <div class="customer-sign-label text-center mar-bottom-30" data-dismiss="modal">CUSTOMER SIGN IN <span class="fa fa-angle-up">&#160;</span></div>
 
-<span class="sr-only">close the customer sign in panel by clicking on the x button</span>
-<div class="embed-responsive" style=" height: 370px;"><iframe data-homeurl="https://www.sunnet.sunlife.com/signin/ca/e/home.wca" data-srcurl="https://www.sunnet.sunlife.com/signin/ca/e/home.wca?signinPage=if" src="" name="loginFrameTop" id="loginFrameTop" class="embed-responsive-item" frameborder="0"></iframe></div>
+<span class="sr-only">close the customer sign in panel by clicking on the x button</span> <img src="//cdn.sunlife.com/static/canada/signin/ca/loadingimg.gif" alt="" alt="" class="loading-mobile" alt="" alt="" class="loading-mobile" width="350" alt="" alt="" class="loading-mobile" alt="" alt="" class="loading-mobile" width="350" height="251" alt="" alt="" class="loading-mobile" alt="" alt="" class="loading-mobile" width="350" alt="" alt="" class="loading-mobile" alt="" alt="" class="loading-mobile" width="350" height="251" style=" z-index: 1000; position: absolute; margin-left: -60px;">
+<div id="signin-widget-mobile" class="login-container">
+<div class="hidden h4 text-center" id="customerSignInHeader">CUSTOMER SIGN IN</div>
+
+<div class="download-app hidden-sm hidden-md hidden-lg"><a target="_blank" href="/ca/Customer+support/Sign+in+help/my+Sun+Life+Mobile?vgnLocale=en_CA"> <img src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/images/en/sunlife-app-logo.png" alt="Sun Life App"> </a>
+<p><a target="_blank" href="/ca/Customer+support/Sign+in+help/my+Sun+Life+Mobile?vgnLocale=en_CA">For the best mobile experience <strong>download the my Sun Life app</strong></a></p>
+</div>
+
+<form role="form" id="form_signon_mobile" name="form_signon_mobile" method="post" action="https://www.sunnet.sunlife.com/siteminder/FormsAuthLogin.fcc"><input name="SMENC" type="hidden" value="ISO-8859-1" /><input name="SMLOCALE" type="hidden" value="US-EN" /><input name="SMAGENTNAME" type="hidden" value="" /><input name="REALMOID" type="hidden" value="" /><input name="DOMAIN" type="hidden" value="CONSUMER" /><input name="CONTEXT" type="hidden" value="INTERNET" /><input name="LANGUAGE" type="hidden" value="E" /><input name="PLATFORM" type="hidden" value="WEB" /><input name="SIGNINSITE" type="hidden" value="SLF" /><input name="SCREENRES" type="hidden" value="" /><input name="LOGLANG" type="hidden" value="en-ca" /><input name="BROWSERID" type="hidden" value="" /><input name="BROWSERVER" type="hidden" value="" /><input name="BROWSERDESC" type="hidden" value="" /><input id="ClientIP" name="ClientIP" type="hidden" value="" /><input name="ESTABLISHSESSION" type="hidden" value="TRUE" /><input name="SAVEIDSUBMISSION" type="hidden" value="FALSE" /><input name="LOGONUSINGSAVEID" type="hidden" value="FALSE" /><input name="ESAVEID" type="hidden" /><input name="REQUESTTYPE" type="hidden" value="SUBMIT" /><input name="SAVEIDIDENTIFIER" type="hidden" value="SLFMEMBER" /><input name="REDIRECTPATH" type="hidden" /><input name="ERRORREDIRPATH" type="hidden" value="https://www.sunnet.sunlife.com/signin/mysunlife/home.wca" /><input name="TARGET" type="hidden" value="https://www.sunnet.sunlife.com/mbrportal/req/secure/login/sunlife" />
+<div class="form-group">
+<div id="generalError" class="help-block"><span id="ERROR_HTML" name="ERROR_HTML">&#160; </span><span id="APOL_HTML" name="APOL_HTML">&#160;</span></div>
+</div>
+
+<div id="userIdDiv" class="form-group"><label for="accessIDMobile" class="sr-only">Access ID</label> <input autocomplete="off" type="text" name="USER" id="accessIDMobile" placeholder="Email/Access ID" disabled="disabled" /></div>
+
+<div class="form-group text-left"><input type="checkbox" name="SAVEIDCHECK" id="rememberIDMobile" onclick="remember(this)" disabled="disabled" /><label for="rememberIDMobile">&#160;Remember me</label></div>
+
+<div id="passwordDiv" class="form-group"><label for="accessPasswordMobile" class="sr-only">Password</label> <input autocomplete="off" type="password" id="accessPasswordMobile" class="password-input" placeholder="Password" name="PASSWORD" disabled="disabled" /><input onclick="return CheckClicks('e');" type="submit" class="btn btn-blue mar-left-10 no-break" alt="Sign in" value="Sign in" disabled="disabled" /></div>
+</form>
+
+<p class="signin-links"><span class="signin-help"><a target="_blank" href="/ca/Customer+support/Sign+in+help?vgnLocale=en_CA">Sign-in help</a></span> <span class="signin-register"><a target="_blank" href="https://www.sunnet.sunlife.com/mysunlife/signin/register/bregister.asp">Register</a></span></p>
+
+<p class="signin-links"><a target="_blank" class="signin-sponsor" href="/ca/Customer+support/Sign+in+help/Plan+sponsor+and+advisors?vgnLocale=en_CA">&#160;Plan sponsors and advisors</a></p>
+
+<p class="signin-terms">By signing in, you agree to these <a target="_blank" href="/ca/Customer+support/Sign+in+help/Terms+and+conditions?vgnLocale=en_CA">terms and conditions.</a></p>
+</div>
+
+<div class="login-container" id="contigency-widget-mobile" style=" display: none;">
+<div class="hidden h4 text-center">CUSTOMER SIGN IN</div>
+
+<p class="">Please sign in through mySunlife.ca</p>
+
+<button id="blockpagebutton" onclick="window.location.href='https://www.sunnet.sunlife.com/signin/mysunlife/home.wca'; return false;" data-href="https://www.sunnet.sunlife.com/signin/mysunlife/home.wca" class="btn btn-blue mar-left-10" type="submit" style="width: auto;">Sign in</button>
+<p class="mar-top-10">Not registered? <a style=" display: inline-block;" target="_blank" href="https://www.sunnet.sunlife.com/Registration/register.wca">Register</a></p>
+
+<p class="pad-top-30"><a target="_blank" class="signin-sponsor" href="/ca/Customer+support/Sign+in+help/Plan+sponsor+and+advisors?vgnLocale=en_CA">&#160;Plan sponsors and advisors</a></p>
+
+<p class="signin-terms">By signing in, you agree to these <a target="_blank" href="/ca/Customer+support/Sign+in+help/Terms+and+conditions?vgnLocale=en_CA">terms and conditions.</a></p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<!-- Exiting headerElements.jsp  time :176ms -->
+</div>
+<!-- Exiting headerElements.jsp  time :494ms -->
 
 
 	<div id="global-header" class="row">
@@ -408,7 +475,7 @@ page_health_interest  :  "None"
 
 </div>
 </div>
-<!-- Exiting header.jsp  time :165ms -->
+<!-- Exiting header.jsp  time :227ms -->
 
 
 
@@ -447,13 +514,13 @@ page_health_interest  :  "None"
 
 <div class="mega-menu-col3"><!-- promo -->
 <div class="mega-promo hidden-sm hidden-xs">
-<div class="h4">Flying soon?</div>
+<div class="h4">Car and home insurance</div>
 
-<p class="module-body">You can still get travel insurance for you and your family.</p>
+<p class="module-body">You could save through this referral.</p>
 
-<p><a href="/ca/Insurance/Travel+insurance?vgnLocale=en_CA&amp;promosource=slfc&amp;segment=DTC&amp;WT.ac=en-ca:Web:SLF_evergreen:SLFCAHP:CS_Travel:megamenu:slfc:DTC&amp;promosource=slfc&amp;segment=DTC">Get a quote</a></p>
+<p><a target="_blank" href="http://www.belairdirect.com/slf/?language=EN&amp;segment=dtc&amp;promosource=slfca&amp;subseg=&amp;advisorId=&amp;campid=&amp;actvtid=&amp;partyid=&amp;grpnum=&amp;fsc=&amp;option=&amp;WT.mc_id=EN-ca:::SLFCA:CarHome:megamenu:slfca:dtc">Get a quote</a></p>
 
-<a href="/ca/Insurance/Travel+insurance?vgnLocale=en_CA&amp;promosource=slfc&amp;segment=DTC&amp;WT.ac=en-ca:Web:SLF_evergreen:SLFCAHP:CS_Travel:megamenu:slfc:DTC&amp;promosource=slfc&amp;segment=DTC"><img src="//cdn.sunlife.com/static/ca/Site%20Administration/Top%20Navigation%20Content/TravelInsuranceAd.jpg" alt="Get competitive rates on travel insurance with preferred pricing for Sun Life Financial customers" alt="Get competitive rates on travel insurance with preferred pricing for Sun Life Financial customers" class="mar-bottom-30"></a></div>
+<a target="_blank" href="http://www.belairdirect.com/slf/?language=EN&amp;segment=dtc&amp;promosource=slfca&amp;subseg=&amp;advisorId=&amp;campid=&amp;actvtid=&amp;partyid=&amp;grpnum=&amp;fsc=&amp;option=&amp;WT.mc_id=EN-ca:::SLFCA:CarHome:megamenu:slfca:dtc"><img src="//cdn.sunlife.com/static/ca/Site Administration/Top Navigation Content/2016-MegaMenu_234x172.jpg" class="mar-bottom-30" class="mar-bottom-30" name="www.belairdirect.com" class="mar-bottom-30" class="mar-bottom-30" name="www.belairdirect.com" alt="Get competitive rates on car and home insurance" class="mar-bottom-30" class="mar-bottom-30" name="www.belairdirect.com" class="mar-bottom-30" class="mar-bottom-30" name="www.belairdirect.com" alt="Get competitive rates on car and home insurance" params="type=image/jpeg"></a></div>
 </div></div></li><li class="dropdown nav-item"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/Investments?vgnLocale=en_CA" >Investments</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/Investments?vgnLocale=en_CA" class="h4">Investments</a></li><li><a href="/ca/Investments?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Investments/Savings?vgnLocale=en_CA">Savings</a></li><li><a href="/ca/Investments/Retirement+income?vgnLocale=en_CA">Retirement income</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Investments/Guaranteed+interest+products?vgnLocale=en_CA">Guaranteed interest products</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Investments/Guaranteed+interest+products?vgnLocale=en_CA">Overview</a></li><li><a href="http://www.sunlifefinancialtrust.ca/slftrust/GICs?vgnLocale=en_CA">Guaranteed interest certificates GICs</a></li><li><a href="/ca/Investments/Guaranteed+interest+products/Insurance+GICs?vgnLocale=en_CA">Insurance GICs</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Investments/Annuity+products?vgnLocale=en_CA">Annuity products</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Investments/Annuity+products?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Investments/Annuity+products/Life+annuity?vgnLocale=en_CA">Life annuity</a></li><li><a href="/ca/Investments/Annuity+products/SunFlex+Retirement+income?vgnLocale=en_CA">SunFlex Retirement income</a></li><li><a href="/ca/Investments/Annuity+products/Term+certain+annuity?vgnLocale=en_CA">Term certain annuity</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Investments/Mutual+funds?vgnLocale=en_CA">Mutual funds</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Investments/Mutual+funds?vgnLocale=en_CA">Overview</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Investment+products/Sun+Life+Granite+Managed+Solutions?vgnLocale=en_CA" target="_blank">Sun Life Granite Managed Solutions</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Investment+products/Sun+Life+Milestone+Funds?vgnLocale=en_CA" target="_blank">Sun Life Milestone Funds</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Investment+products/Diversified+income+funds?vgnLocale=en_CA" target="_blank">Diversified income funds</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Investment+products/Equity+funds?vgnLocale=en_CA" target="_blank">Equity funds</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Investment+products/Asset+allocation+and+balanced+funds?vgnLocale=en_CA" target="_blank">Asset allocation and balanced funds</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Investment+products/Fixed+income+funds?vgnLocale=en_CA" target="_blank">Fixed income funds</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Investment+products/Corporate+class?vgnLocale=en_CA" target="_blank">Corporate class funds</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Investment+products/Private+Client?vgnLocale=en_CA" target="_blank">Private Client</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Investments/Segregated+funds?vgnLocale=en_CA">Segregated funds</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Investments/Segregated+funds?vgnLocale=en_CA">Overview</a></li><li><a href="http://www.sunlife.ca/Canada/gifs/Sun+GIF+Solutions?vgnLocale=en_CA" target="_blank">Sun GIF Solutions</a></li><li><a href="http://www.sunlife.ca/Canada/gifs/Sun+Lifetime+Advantage+GIF?vgnLocale=en_CA" target="_blank">Sun Lifetime Advantage GIF</a></li><li><a href="http://www.sunlife.ca/Canada/gifs/Sun+Protect+GIF?vgnLocale=en_CA" target="_blank">Sun Protect GIF</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Investments/RRSP+TFSA+and+RESP?vgnLocale=en_CA">RRSP, TFSA and RESP</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Investments/RRSP+TFSA+and+RESP?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Investments/RRSP+TFSA+and+RESP/Registered+retirement+savings+plan+RRSP?vgnLocale=en_CA">Registered retirement savings plan (RRSP)</a></li><li><a href="/ca/Investments/RRSP+TFSA+and+RESP/Tax-free+savings+account+TFSA?vgnLocale=en_CA">Tax-free savings account (TFSA)</a></li><li><a href="/ca/Investments/RRSP+TFSA+and+RESP/Registered+education+savings+plan+RESP?vgnLocale=en_CA">Registered education savings plan (RESP)</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Investments/RRIF+and+LIF?vgnLocale=en_CA">RRIF and LIF</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Investments/RRIF+and+LIF?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Investments/RRIF+and+LIF/Registered+retirement+income+fund+RRIF?vgnLocale=en_CA">Registered retirement income fund (RRIF)</a></li><li><a href="/ca/Investments/RRIF+and+LIF/Life+income+fund+LIF+and+locked-in+retirement+income+fund+LRIF?vgnLocale=en_CA">Life income fund (LIF) and locked-in retirement income fund (LRIF)</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Investments/Workplace+pensions+and+savings?vgnLocale=en_CA">Workplace pensions and savings</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Investments/Workplace+pensions+and+savings?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Investments/Workplace+pensions+and+savings/Leaving+your+workplace+plan?vgnLocale=en_CA">Leaving your workplace plan</a></li><li><a href="/ca/Investments/Workplace+pensions+and+savings/Small+business+benefits+and+savings?vgnLocale=en_CA">Small business benefits and savings</a></li></ul></li></ul></div><div class="mega-menu-col2">
 <div class="h4">Quick links</div>
 
@@ -479,7 +546,7 @@ page_health_interest  :  "None"
 <p><a target="_blank" href="http://www.sunlife.ca/Canada/gifs?target=investor&amp;vgnLocale=en_CA&amp;WT.ac=en-ca:Web:SLF_evergreen:slfca:GIF-startjourney:desktop">Learn more</a></p>
 
 <a target="_blank" href="http://www.sunlife.ca/Canada/gifs?target=investor&amp;vgnLocale=en_CA&amp;WT.ac=en-ca:Web:SLF_evergreen:slfca:GIF-startjourney:desktop"><img src="//cdn.sunlife.com/static/ca/Site%20Administration/Top%20Navigation%20Content/GIFAd.jpg" alt="Talk with an advisor about Sun Life Guaranteed Investment Funds." alt="Talk with an advisor about Sun Life Guaranteed Investment Funds." class="mar-bottom-30"></a></div>
-</div></div></li><li class="dropdown nav-item"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/Learn+and+Plan?vgnLocale=en_CA" >Learn & Plan</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/Learn+and+Plan?vgnLocale=en_CA" class="h4">Learn & Plan</a></li><li><a href="/ca/Learn+and+Plan?vgnLocale=en_CA">Overview</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Money?vgnLocale=en_CA">Money</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Money?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Money/Financial+planning+tips?vgnLocale=en_CA">Financial planning tips</a></li><li><a href="/ca/Learn+and+Plan/Money/Retirement+savings?vgnLocale=en_CA">Retirement savings</a></li><li><a href="/ca/Learn+and+Plan/Money/Investing?vgnLocale=en_CA">Investing</a></li><li><a href="/ca/Learn+and+Plan/Money/Insuring+your+life?vgnLocale=en_CA">Insuring your life</a></li><li><a href="/ca/Learn+and+Plan/Money/Insuring+your+health?vgnLocale=en_CA">Insuring your health</a></li><li><a href="/ca/Learn+and+Plan/Money/Drivers+and+homeowners?vgnLocale=en_CA">Drivers and homeowners</a></li><li><a href="/ca/Learn+and+Plan/Money/Travel?vgnLocale=en_CA">Travel</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Health?vgnLocale=en_CA">Health</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Health?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Health/Diabetes?vgnLocale=en_CA">Diabetes</a></li><li><a href="/ca/Learn+and+Plan/Health/Fitness+and+family+health?vgnLocale=en_CA">Fitness and family health</a></li><li><a href="/ca/Learn+and+Plan/Health/Mental+wellness?vgnLocale=en_CA">Mental wellness</a></li><li><a href="/ca/Learn+and+Plan/Health/Eating+well?vgnLocale=en_CA">Eating well</a></li><li><a href="/ca/Learn+and+Plan/Health/Illness+prevention+and+treatment?vgnLocale=en_CA">Illness prevention and treatment</a></li><li><a href="/ca/Learn+and+Plan/Health/Community?vgnLocale=en_CA">Community</a></li><li><a href="/ca/Learn+and+Plan/Health/Retirement+lifestyle?vgnLocale=en_CA">Retirement lifestyle</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Lifestages?vgnLocale=en_CA">Life stages</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Lifestages?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Lifestages/Starting+out?vgnLocale=en_CA">Starting out</a></li><li><a href="/ca/Learn+and+Plan/Lifestages/Building?vgnLocale=en_CA">Building</a></li><li><a href="/ca/Learn+and+Plan/Lifestages/Pre-retirement?vgnLocale=en_CA">Pre-retirement</a></li><li><a href="/ca/Learn+and+Plan/Lifestages/Retirement?vgnLocale=en_CA">Retirement</a></li></ul></li><li><a href="/ca/Learn+and+Plan/Money+for+Life?vgnLocale=en_CA">Money for Life</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Financial+planning+and+advice?vgnLocale=en_CA">Financial planning and advice</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/Build+your+financial+plan?vgnLocale=en_CA">Build your financial plan</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/What+does+a+Sun+Life+Financial+advisor+do?vgnLocale=en_CA">What does a Sun Life Financial advisor do</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/Tips+on+finding+the+right+advisor?vgnLocale=en_CA">Tips on finding the right advisor</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/Estate+and+Financial+Planning+services?vgnLocale=en_CA">Estate and Financial Planning Services (EFPS)</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/Work+with+one+of+our+licensed+professionals?vgnLocale=en_CA">Work with one of our licensed professionals</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Tools+and+Calculators?vgnLocale=en_CA">Tools & Calculators</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Retirement+savings+calculator?vgnLocale=en_CA">Retirement savings calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Life+expectancy+calculator?vgnLocale=en_CA">Life expectancy calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/RRSP+calculator?vgnLocale=en_CA">RRSP calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Life+insurance+calculator?vgnLocale=en_CA">Life insurance calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Annuity+Calculator?vgnLocale=en_CA">Annuity calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Financial+habits+quiz?vgnLocale=en_CA">Financial habits quiz</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/RESP+calculator?vgnLocale=en_CA">RESP calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Net+worth+calculator?vgnLocale=en_CA">Net worth calculator</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Market+insights?vgnLocale=en_CA">Market insights</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Market+insights?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Market+insights/Retirement+Now+Report?vgnLocale=en_CA">Retirement Now Report</a></li><li><a href="/ca/Learn+and+Plan/Market+insights/Canadian+Health+index?vgnLocale=en_CA">Canadian Health Index</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Helpful+information/Investor+Sentiment+Insights?vgnLocale=en_CA" target="_blank">Investor Sentiment Report</a></li></ul></li></ul></div><div class="mega-menu-col2">
+</div></div></li><li class="dropdown nav-item"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/Learn+and+Plan?vgnLocale=en_CA" >Learn & Plan</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/Learn+and+Plan?vgnLocale=en_CA" class="h4">Learn & Plan</a></li><li><a href="/ca/Learn+and+Plan?vgnLocale=en_CA">Overview</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Money?vgnLocale=en_CA">Money</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Money?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Money/Financial+planning+tips?vgnLocale=en_CA">Financial planning tips</a></li><li><a href="/ca/Learn+and+Plan/Money/Retirement+savings?vgnLocale=en_CA">Retirement savings</a></li><li><a href="/ca/Learn+and+Plan/Money/Investing?vgnLocale=en_CA">Investing</a></li><li><a href="/ca/Learn+and+Plan/Money/Insuring+your+life?vgnLocale=en_CA">Insuring your life</a></li><li><a href="/ca/Learn+and+Plan/Money/Insuring+your+health?vgnLocale=en_CA">Insuring your health</a></li><li><a href="/ca/Learn+and+Plan/Money/Drivers+and+homeowners?vgnLocale=en_CA">Drivers and homeowners</a></li><li><a href="/ca/Learn+and+Plan/Money/Travel?vgnLocale=en_CA">Travel</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Health?vgnLocale=en_CA">Health</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Health?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Health/Diabetes?vgnLocale=en_CA">Diabetes</a></li><li><a href="/ca/Learn+and+Plan/Health/Fitness+and+family+health?vgnLocale=en_CA">Fitness and family health</a></li><li><a href="/ca/Learn+and+Plan/Health/Mental+wellness?vgnLocale=en_CA">Mental wellness</a></li><li><a href="/ca/Learn+and+Plan/Health/Eating+well?vgnLocale=en_CA">Eating well</a></li><li><a href="/ca/Learn+and+Plan/Health/Illness+prevention+and+treatment?vgnLocale=en_CA">Illness prevention and treatment</a></li><li><a href="/ca/Learn+and+Plan/Health/Community?vgnLocale=en_CA">Community</a></li><li><a href="/ca/Learn+and+Plan/Health/Retirement+lifestyle?vgnLocale=en_CA">Retirement lifestyle</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Lifestages?vgnLocale=en_CA">Life stages</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Lifestages?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Lifestages/Starting+out?vgnLocale=en_CA">Starting out</a></li><li><a href="/ca/Learn+and+Plan/Lifestages/Building?vgnLocale=en_CA">Building</a></li><li><a href="/ca/Learn+and+Plan/Lifestages/Pre-retirement?vgnLocale=en_CA">Pre-retirement</a></li><li><a href="/ca/Learn+and+Plan/Lifestages/Retirement?vgnLocale=en_CA">Retirement</a></li></ul></li><li><a href="/ca/Learn+and+Plan/Money+for+Life?vgnLocale=en_CA">Money for Life</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Financial+planning+and+advice?vgnLocale=en_CA">Financial planning and advice</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/Build+your+financial+plan?vgnLocale=en_CA">Build your financial plan</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/What+does+a+Sun+Life+Financial+advisor+do?vgnLocale=en_CA">What does a Sun Life Financial advisor do</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/Tips+on+finding+the+right+advisor?vgnLocale=en_CA">Tips on finding the right advisor</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/Estate+and+Financial+Planning+services?vgnLocale=en_CA">Estate and Financial Planning Services (EFPS)</a></li><li><a href="/ca/Learn+and+Plan/Financial+planning+and+advice/Work+with+one+of+our+licensed+professionals?vgnLocale=en_CA">Work with one of our licensed professionals</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Tools+and+Calculators?vgnLocale=en_CA">Tools & Calculators</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Retirement+savings+calculator?vgnLocale=en_CA">Retirement savings calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Critical+illness+insurance+calculator?vgnLocale=en_CA">Critical illness insurance calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/RRSP+calculator?vgnLocale=en_CA">RRSP calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Life+insurance+calculator?vgnLocale=en_CA">Life insurance calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Annuity+Calculator?vgnLocale=en_CA">Annuity calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Financial+check+up?vgnLocale=en_CA">Financial check-up</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/RESP+calculator?vgnLocale=en_CA">RESP calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Net+worth+calculator?vgnLocale=en_CA">Net worth calculator</a></li><li><a href="/ca/Learn+and+Plan/Tools+and+Calculators/Life+expectancy+calculator?vgnLocale=en_CA">Life expectancy calculator</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Learn+and+Plan/Market+insights?vgnLocale=en_CA">Market insights</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Learn+and+Plan/Market+insights?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Learn+and+Plan/Market+insights/Retirement+Now+Report?vgnLocale=en_CA">Retirement Now Report</a></li><li><a href="/ca/Learn+and+Plan/Market+insights/Canadian+Health+index?vgnLocale=en_CA">Canadian Health Index</a></li><li><a href="http://www.sunlifeglobalinvestments.com/Slgi/Helpful+information/Investor+Sentiment+Insights?vgnLocale=en_CA" target="_blank">Investor Sentiment Report</a></li></ul></li></ul></div><div class="mega-menu-col2">
 <div class="h4">Quick links</div>
 
 <ul class="list-unstyled">
@@ -502,7 +569,7 @@ page_health_interest  :  "None"
 <p><a href="/ca/Learn+and+Plan/Subscribe+to+our+newsletter?vgnLocale=en_CA">Subscribe now</a></p>
 
 <a href="/ca/Learn+and+Plan/Subscribe+to+our+newsletter?vgnLocale=en_CA"><img src="//cdn.sunlife.com/static/ca/Site%20Administration/Top%20Navigation%20Content/M4L.jpg" alt="Get the free MONEY FOR LIFE newsletter" alt="Get the free MONEY FOR LIFE newsletter" class="mar-bottom-30"></a></div>
-</div></div></li><li class="dropdown nav-item hidden-lg hidden-md"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/Customer+support?vgnLocale=en_CA" >Customer support</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/Customer+support?vgnLocale=en_CA" class="h4">Customer support</a></li><li><a href="/ca/Customer+support?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Customer+support/Sign+in+help?vgnLocale=en_CA">Sign-in help</a></li><li><a href="/ca/Customer+support/Submit+or+track+a+claim?vgnLocale=en_CA">Submit or track a claim</a></li><li><a href="/ca/Customer+support/Find+a+form?vgnLocale=en_CA">Find a form</a></li><li><a href="/ca/Customer+support/Coverage+and+eligibility?vgnLocale=en_CA">Coverage and eligibility</a></li><li><a href="/ca/Customer+support/Print+coverage+card?vgnLocale=en_CA">Print your coverage card</a></li><li><a href="/ca/Customer+support/Check+a+balance?vgnLocale=en_CA">Check a balance</a></li><li><a href="/ca/Customer+support/Contributions+withdrawals+and+fund+changes?vgnLocale=en_CA">Contributions, withdrawals and fund changes </a></li><li><a href="/ca/Customer+support/RRSP+receipts+and+tax+slips?vgnLocale=en_CA">RRSP receipts and tax slips</a></li><li><a href="/ca/Customer+support/Change+beneficiaries?vgnLocale=en_CA">Change beneficiaries</a></li><li><a href="/ca/Customer+support/Address+updates?vgnLocale=en_CA">Address updates</a></li><li><a href="/ca/Customer+support/Banking+information+updates?vgnLocale=en_CA">Banking information updates</a></li><li><a href="/ca/Customer+support/Unclaimed+property?vgnLocale=en_CA">Unclaimed property</a></li><li><a href="/ca/Customer+support/Complaints+or+concerns?vgnLocale=en_CA">Complaints or concerns</a></li></ul></div><div class="mega-menu-col2"> </div> <div class="mega-menu-col3"> </div></div></li><li class="dropdown nav-item hidden-lg hidden-md"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/About+us?vgnLocale=en_CA" >About us</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/About+us?vgnLocale=en_CA" class="h4">About us</a></li><li><a href="/ca/About+us?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/About+us/Company+overview?vgnLocale=en_CA">Company overview</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/About+us/Leadership?vgnLocale=en_CA">Leadership</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/About+us/Leadership?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/About+us/Leadership/Kevin+Dougherty?vgnLocale=en_CA">Kevin Dougherty</a></li><li><a href="/ca/About+us/Leadership/Isabelle+Hudon?vgnLocale=en_CA">Isabelle Hudon</a></li><li><a href="/ca/About+us/Leadership/Robert+Dumas?vgnLocale=en_CA">Robert Dumas</a></li><li><a href="/ca/About+us/Leadership/Rick+Headrick?vgnLocale=en_CA">Rick Headrick</a></li><li><a href="/ca/About+us/Leadership/Chris+Denys?vgnLocale=en_CA">Chris Denys</a></li><li><a href="/ca/About+us/Leadership/Stuart+Monteith?vgnLocale=en_CA">Stuart Monteith</a></li><li><a href="/ca/About+us/Leadership/Brigitte+Parent?vgnLocale=en_CA">Brigitte Parent</a></li><li><a href="/ca/About+us/Leadership/Thomas+Reid?vgnLocale=en_CA">Thomas Reid</a></li><li><a href="/ca/About+us/Leadership/Patricia+Callon?vgnLocale=en_CA">Patricia Callon</a></li><li><a href="/ca/About+us/Leadership/Jim+Giesinger?vgnLocale=en_CA">Jim Giesinger</a></li><li><a href="/ca/About+us/Leadership/Vicken+Kazazian?vgnLocale=en_CA">Vicken Kazazian</a></li><li><a href="/ca/About+us/Leadership/Candace+Shaw?vgnLocale=en_CA">Candace Shaw</a></li><li><a href="/ca/About+us/Leadership/Rocco+Taglioni?vgnLocale=en_CA">Rocco Taglioni</a></li><li><a href="/ca/About+us/Leadership/Sandy+Delamere?vgnLocale=en_CA">Sandy Delamere</a></li><li><a href="/ca/About+us/Leadership/Johanne+Papillon?vgnLocale=en_CA">Johanne Papillon</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/About+us/Newsroom?vgnLocale=en_CA">Newsroom</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/About+us/Newsroom?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/About+us/Newsroom/News+releases?vgnLocale=en_CA">News releases</a></li></ul></li><li><a href="/ca/About+us/Achievements?vgnLocale=en_CA">Achievements</a></li><li><a href="/ca/About+us/Sustainability?vgnLocale=en_CA">Sustainability</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/About+us/Donations+and+sponsorships?vgnLocale=en_CA">Donations and sponsorships</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/About+us/Donations+and+sponsorships?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Supporting+health?vgnLocale=en_CA">Supporting health</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Supporting+arts+and+culture?vgnLocale=en_CA">Supporting arts and culture</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Sponsorships?vgnLocale=en_CA">Sponsorships</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Employee+giving?vgnLocale=en_CA">Employee giving</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Philanthropy+program+guidelines?vgnLocale=en_CA">Philanthropy program guidelines</a></li></ul></li><li><a href="/ca/About+us/Accessibility+commitment?vgnLocale=en_CA">Accessibility commitment</a></li></ul></div><div class="mega-menu-col2"> </div> <div class="mega-menu-col3"> </div></div></li><li class="dropdown nav-item hidden-lg hidden-md"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/Careers?vgnLocale=en_CA" >Careers</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/Careers?vgnLocale=en_CA" class="h4">Careers</a></li><li><a href="/ca/Careers?vgnLocale=en_CA">Overview</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Careers/Why+join+us?vgnLocale=en_CA">Why join us</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Careers/Why+join+us?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Careers/Why+join+us/Subscribe+to+career+opportunities?vgnLocale=en_CA">Subscribe to career opportunities</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Careers/Student+and+new+graduate+programs?vgnLocale=en_CA">Student and new graduate programs</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Careers/Student+and+new+graduate+programs?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Careers/Student+and+new+graduate+programs/Student+and+new+grad+profiles?vgnLocale=en_CA">Student and new grad profiles</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Careers/Join+our+career+sales+force?vgnLocale=en_CA">Join our career sales force</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Careers/Join+our+career+sales+force?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Careers/Join+our+career+sales+force/Why+me?vgnLocale=en_CA">You're ready</a></li></ul></li></ul></div><div class="mega-menu-col2"> </div> <div class="mega-menu-col3"> </div></div></li><li class="dropdown nav-item hidden-lg hidden-md"><a href="/ca/Find+an+advisor?vgnLocale=en_CA">Find an advisor</a></li><li class="dropdown nav-item hidden-lg hidden-md"><a href="/ca/Get+a+quote?vgnLocale=en_CA">Get a quote</a></li><li class="dropdown nav-item hidden-md hidden-lg mar-top-20"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" aria-expanded="true" href="#">Canada | EN</a>
+</div></div></li><li class="dropdown nav-item hidden-lg hidden-md"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/Customer+support?vgnLocale=en_CA" >Customer support</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/Customer+support?vgnLocale=en_CA" class="h4">Customer support</a></li><li><a href="/ca/Customer+support?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Customer+support/Sign+in+help?vgnLocale=en_CA">Sign-in help</a></li><li><a href="/ca/Customer+support/Submit+or+track+a+claim?vgnLocale=en_CA">Submit or track a claim</a></li><li><a href="/ca/Customer+support/Find+a+form?vgnLocale=en_CA">Find a form</a></li><li><a href="/ca/Customer+support/Coverage+and+eligibility?vgnLocale=en_CA">Coverage and eligibility</a></li><li><a href="/ca/Customer+support/Print+coverage+card?vgnLocale=en_CA">Print your coverage card</a></li><li><a href="/ca/Customer+support/Check+a+balance?vgnLocale=en_CA">Check a balance</a></li><li><a href="/ca/Customer+support/Contributions+withdrawals+and+fund+changes?vgnLocale=en_CA">Contributions, withdrawals and fund changes </a></li><li><a href="/ca/Customer+support/RRSP+receipts+and+tax+slips?vgnLocale=en_CA">RRSP receipts and tax slips</a></li><li><a href="/ca/Customer+support/Change+beneficiaries?vgnLocale=en_CA">Change beneficiaries</a></li><li><a href="/ca/Customer+support/Address+updates?vgnLocale=en_CA">Address updates</a></li><li><a href="/ca/Customer+support/Banking+information+updates?vgnLocale=en_CA">Banking information updates</a></li><li><a href="/ca/Customer+support/Unclaimed+property?vgnLocale=en_CA">Unclaimed property</a></li><li><a href="/ca/Customer+support/Complaints+or+concerns?vgnLocale=en_CA">Complaints or concerns</a></li></ul></div><div class="mega-menu-col2"> </div> <div class="mega-menu-col3"> </div></div></li><li class="dropdown nav-item hidden-lg hidden-md"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/About+us?vgnLocale=en_CA" >About us</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/About+us?vgnLocale=en_CA" class="h4">About us</a></li><li><a href="/ca/About+us?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/About+us/Company+overview?vgnLocale=en_CA">Company overview</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/About+us/Leadership?vgnLocale=en_CA">Leadership</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/About+us/Leadership?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/About+us/Leadership/Kevin+Dougherty?vgnLocale=en_CA">Kevin Dougherty</a></li><li><a href="/ca/About+us/Leadership/Isabelle+Hudon?vgnLocale=en_CA">Isabelle Hudon</a></li><li><a href="/ca/About+us/Leadership/Robert+Dumas?vgnLocale=en_CA">Robert Dumas</a></li><li><a href="/ca/About+us/Leadership/Rick+Headrick?vgnLocale=en_CA">Rick Headrick</a></li><li><a href="/ca/About+us/Leadership/Chris+Denys?vgnLocale=en_CA">Chris Denys</a></li><li><a href="/ca/About+us/Leadership/Brigitte+Parent?vgnLocale=en_CA">Brigitte Parent</a></li><li><a href="/ca/About+us/Leadership/Leo+Grepin?vgnLocale=en_CA">Léo Grépin</a></li><li><a href="/ca/About+us/Leadership/Thomas+Reid?vgnLocale=en_CA">Thomas Reid</a></li><li><a href="/ca/About+us/Leadership/Patricia+Callon?vgnLocale=en_CA">Patricia Callon</a></li><li><a href="/ca/About+us/Leadership/Jim+Giesinger?vgnLocale=en_CA">Jim Giesinger</a></li><li><a href="/ca/About+us/Leadership/Vicken+Kazazian?vgnLocale=en_CA">Vicken Kazazian</a></li><li><a href="/ca/About+us/Leadership/Rocco+Taglioni?vgnLocale=en_CA">Rocco Taglioni</a></li><li><a href="/ca/About+us/Leadership/Sandy+Delamere?vgnLocale=en_CA">Sandy Delamere</a></li><li><a href="/ca/About+us/Leadership/Johanne+Papillon?vgnLocale=en_CA">Johanne Papillon</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/About+us/Newsroom?vgnLocale=en_CA">Newsroom</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/About+us/Newsroom?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/About+us/Newsroom/News+releases?vgnLocale=en_CA">News releases</a></li></ul></li><li><a href="/ca/About+us/Achievements?vgnLocale=en_CA">Achievements</a></li><li><a href="/ca/About+us/Sustainability?vgnLocale=en_CA">Sustainability</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/About+us/Donations+and+sponsorships?vgnLocale=en_CA">Donations and sponsorships</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/About+us/Donations+and+sponsorships?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Supporting+health?vgnLocale=en_CA">Supporting health</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Supporting+arts+and+culture?vgnLocale=en_CA">Supporting arts and culture</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Sponsorships?vgnLocale=en_CA">Sponsorships</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Employee+giving?vgnLocale=en_CA">Employee giving</a></li><li><a href="/ca/About+us/Donations+and+sponsorships/Philanthropy+program+guidelines?vgnLocale=en_CA">Philanthropy program guidelines</a></li></ul></li><li><a href="/ca/About+us/Accessibility+commitment?vgnLocale=en_CA">Accessibility commitment</a></li></ul></div><div class="mega-menu-col2"> </div> <div class="mega-menu-col3"> </div></div></li><li class="dropdown nav-item hidden-lg hidden-md"><a data-toggle="dropdown" class="dropdown-toggle subnav-trigger" href="/ca/Careers?vgnLocale=en_CA" >Careers</a><div role="menu" class="dropdown-menu menu-content"><div class="mega-menu-col1"><ul class="list-unstyled"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li class="nav-item-title hidden-lg hidden-md"><a href="/ca/Careers?vgnLocale=en_CA" class="h4">Careers</a></li><li><a href="/ca/Careers?vgnLocale=en_CA">Overview</a></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Careers/Why+join+us?vgnLocale=en_CA">Why join us</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Careers/Why+join+us?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Careers/Why+join+us/Subscribe+to+career+opportunities?vgnLocale=en_CA">Subscribe to career opportunities</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Careers/Student+and+new+graduate+programs?vgnLocale=en_CA">Student and new graduate programs</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Careers/Student+and+new+graduate+programs?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Careers/Student+and+new+graduate+programs/Student+and+new+grad+profiles?vgnLocale=en_CA">Student and new grad profiles</a></li></ul></li><li class="dropdown-submenu" aria-haspopup="true"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" href="/ca/Careers/Join+our+career+sales+force?vgnLocale=en_CA">Join our career sales force</a><ul class="dropdown-menu" role="menu"><li class="go-back hidden-lg hidden-md"><a>Back</a></li><li><a href="/ca/Careers/Join+our+career+sales+force?vgnLocale=en_CA">Overview</a></li><li><a href="/ca/Careers/Join+our+career+sales+force/Why+me?vgnLocale=en_CA">You're ready</a></li></ul></li></ul></div><div class="mega-menu-col2"> </div> <div class="mega-menu-col3"> </div></div></li><li class="dropdown nav-item hidden-lg hidden-md"><a href="/ca/Find+an+advisor?vgnLocale=en_CA">Find an advisor</a></li><li class="dropdown nav-item hidden-lg hidden-md"><a href="/ca/Get+a+quote?vgnLocale=en_CA">Get a quote</a></li><li class="dropdown nav-item hidden-md hidden-lg mar-top-20"><a class="dropdown-toggle subnav-trigger" data-toggle="dropdown" aria-expanded="true" href="#">Canada | EN</a>
 <div role="menu" class="dropdown-menu menu-content">
 <div class="language-tab-mobile">
 <div class="go-back hidden-lg hidden-md"><a href="#">Back</a></div>
@@ -622,7 +689,7 @@ page_health_interest  :  "None"
  <!--slfLogo END--></div>
 </div>
 <!--mobile logo end-->
-<!-- Exiting topNav.jsp  time :408ms -->
+<!-- Exiting topNav.jsp  time :617ms -->
 
 
 		</div>
@@ -650,23 +717,23 @@ page_health_interest  :  "None"
 				
 							
 							<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-<div class="row home-hero no-gutter" alt="" style=" background: url(/static/global/files/digital_media/test%20and%20target/seg-funds-1064x350.jpg) no-repeat;">
-<div class="col-sm-6 col-md-5 vertical-center"></div>
+<div class="row home-hero no-gutter" alt="" style=" background: url(/static/ca/life-insurance-1-fr-1064x350.jpg) no-repeat;">
+<div class="col-sm-6 col-md-6 vertical-center"></div>
 
-<div class="col-sm-6 col-md-7 home-hero-cta vertical-center">
+<div class="col-sm-6 col-md-6 home-hero-cta vertical-center transparent-bg">
 <div class="hero-cta-container">
-<h1 class="header-text">Your retirement journey starts now</h1>
+<h2 class="header-text">Would your loved ones be financially impacted if something happened to you?</h2>
 
-<h3>Potential growth and guarantees. Get both with Sun Life Guaranteed Investment Funds (GIFs).</h3>
+<h3>Consider how life insurance can give them the protection they need.</h3>
 
-<p><a class="btn btn-yellow" role="button" href="/ca/Investments/Segregated+funds?vgnLocale=en_CA">Find out how</a></p>
+<p><a class="btn btn-yellow" role="button" href="https://www.sunlife.ca/ca/Insurance/Life+insurance?vgnLocale=en_CA&amp;WT.ac=en-ca%3Aweb%3Aslf_test%3Aslfca%3Abuttoncolour%3AID14%3Aexpa">Learn about life insurance</a></p>
 </div>
 </div>
 </div>								
 								</div>
 				
 				<!-- Exit explicit Dependencies code -->
-</div><!--Exiting 1-4colsequallysplit.jsp . Execution Time : 47 ms. -->
+</div><!--Exiting 1-4colsequallysplit.jsp . Execution Time : 63 ms. -->
 
 
 
@@ -686,9 +753,9 @@ page_health_interest  :  "None"
 <div class="col-sm-6 col-md-6 col-lg-6 section-padding v-gradient-separator">
 <div class="fa-circle-white mar-bottom-20"><span class="fa-stack fa-lg"><span class="fa fa-circle fa-stack-2x">&#160;</span><span class="fa fa-film fa-stack-1x fa-feature-blue">&#160;</span></span></div>
 
-<h4>What are RRIFs?</h4>
+<h4>What are RESPs?</h4>
 
-<p><a href="/ca/Learn+and+Plan/Money/Retirement+savings/Simply+put+What+are+RRIFs+Video?vgnLocale=en_CA">A registered retirement income fund can turn your savings into smart income (Video)</a></p>
+<p><a href="https://www.sunlife.ca/ca/Learn+and+Plan/Money/Financial+planning+tips/Simply+put+What+are+RESPs+Video?vgnLocale=en_CA">RESPs are a great way to save for your child’s future education (video)</a></p>
 </div>
 
 <div class=" col-sm-6 col-md-6 col-lg-6 section-padding">
@@ -696,9 +763,9 @@ page_health_interest  :  "None"
 
 <div class="fa-circle-white mar-bottom-20"><span class="fa-stack fa-lg"><span class="fa fa-circle fa-stack-2x">&#160;</span><span class="fa fa-calculator fa-stack-1x fa-feature-blue">&#160;</span></span></div>
 
-<h4>RESP calculator</h4>
+<h4>RRSP calculator</h4>
 
-<p><a href="/ca/Learn+and+Plan/Tools+and+Calculators/RESP+calculator?vgnLocale=en_CA">Calculate what you may need to save for your child’s post-secondary education</a></p>
+<p><a href="https://www.sunlife.ca/ca/Learn+and+Plan/Tools+and+Calculators/RRSP+calculator?vgnLocale=en_CA">Find out what will happen to your RRSP savings if you change your contribution rate or take money out</a></p>
 </div>
 </div>
 </div>								
@@ -717,11 +784,51 @@ page_health_interest  :  "None"
 								</div>
 								
 								<div class = "col-xs-12 col-sm-12 col-md-3 col-lg-3 col-height slf-l-gradient">
-<div class="embed-responsive mar-top-30" style=" height: 360px;"><iframe data-homeurl="https://www.sunnet.sunlife.com/signin/ca/e/home.wca" data-srcurl="https://www.sunnet.sunlife.com/signin/ca/e/home.wca?signinPage=if" src="" name="loginFrame" id="loginFrame" title="Customer sign in" class="embed-responsive-item"></iframe></div>								
+<img src="//cdn.sunlife.com/static/canada/signin/ca/loadingimg.gif" alt="" alt="" class="loading" alt="" alt="" class="loading" width="350" alt="" alt="" class="loading" alt="" alt="" class="loading" width="350" height="251" alt="" alt="" class="loading" alt="" alt="" class="loading" width="350" alt="" alt="" class="loading" alt="" alt="" class="loading" width="350" height="251" style=" z-index: 1000; position: absolute; margin-left: -60px;">
+<div class="mar-top-30">
+<div id="signin-widget" class="login-container">
+<div class="h4 text-center" id="customerSignInHeader">CUSTOMER SIGN IN</div>
+
+<div class="download-app hidden-md hidden-lg"><a target="_blank" href="/ca/Customer+support/Sign+in+help/my+Sun+Life+Mobile?vgnLocale=en_CA"> <img src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/images/en/sunlife-app-logo.png" alt="Sun Life App"> </a>
+<p>For the best mobile experience <strong>download the my Sun Life app</strong></p>
+</div>
+
+<form role="form" id="form_signon" name="form_signon" method="post" action="https://www.sunnet.sunlife.com/siteminder/FormsAuthLogin.fcc"><input name="SMENC" type="hidden" value="ISO-8859-1" /><input name="SMLOCALE" type="hidden" value="US-EN" /><input name="DOMAIN" type="hidden" value="CONSUMER" /><input name="CONTEXT" type="hidden" value="INTERNET" /><input name="LANGUAGE" type="hidden" value="E" /><input name="PLATFORM" type="hidden" value="WEB" /><input name="SIGNINSITE" type="hidden" value="SLF" /><input name="LOGLANG" type="hidden" value="en-ca" /><input name="ESTABLISHSESSION" type="hidden" value="TRUE" /><input name="REQUESTTYPE" type="hidden" value="SUBMIT" /><input name="REDIRECTPATH" type="hidden" /><input name="ERRORREDIRPATH" type="hidden" value="https://www.sunnet.sunlife.com/signin/mysunlife/home.wca" /><input name="TARGET" type="hidden" value="https://www.sunnet.sunlife.com/mbrportal/req/secure/login/sunlife" /><input name="SMAGENTNAME" type="hidden" value="" /><input name="REALMOID" type="hidden" value="" /><input id="ClientIP" name="ClientIP" type="hidden" value="" /><input name="SAVEIDIDENTIFIER" type="hidden" value="SLFMEMBER" /><input name="SCREENRES" type="hidden" value="" /><input name="BROWSERID" type="hidden" value="" /><input name="BROWSERVER" type="hidden" value="" /><input name="BROWSERDESC" type="hidden" value="" /><input name="SAVEIDSUBMISSION" type="hidden" value="FALSE" /><input name="LOGONUSINGSAVEID" type="hidden" value="FALSE" /><input name="ESAVEID" type="hidden" />
+<div class="form-group">
+<div id="generalError" class="help-block"><span id="ERROR_HTML" name="ERROR_HTML">&#160; </span><span id="APOL_HTML" name="APOL_HTML">&#160;</span></div>
+</div>
+
+<div id="userIdDiv" class="form-group"><label for="accessIDHome" class="sr-only">Access ID</label> <input autocomplete="off" type="text" name="USER" id="accessIDHome" placeholder="Email/Access ID" disabled="disabled" /></div>
+
+<div class="form-group text-left"><input type="checkbox" name="SAVEIDCHECK" id="rememberIDHome" disabled="disabled" onclick="remember(this)" /><label for="rememberIDHome">&#160;Remember me</label></div>
+
+<div id="passwordDiv" class="form-group"><label for="accessPasswordHome" class="sr-only">Password</label> <input autocomplete="off" type="password" id="accessPasswordHome" class="password-input" placeholder="Password" name="PASSWORD" disabled="disabled" /><input onclick="return CheckClicks('e');" type="submit" class="btn btn-blue mar-left-10 no-break" alt="Sign in" value="Sign in" disabled="disabled" /></div>
+</form>
+
+<p class="signin-links"><span class="signin-help"><a target="_blank" href="/ca/Customer+support/Sign+in+help?vgnLocale=en_CA">Sign-in help</a></span><span class="signin-register"><a target="_blank" href="https://www.sunnet.sunlife.com/mysunlife/signin/register/bregister.asp">Register</a></span></p>
+
+<p class="signin-links"><a target="_blank" class="signin-sponsor" href="/ca/Customer+support/Sign+in+help/Plan+sponsor+and+advisors?vgnLocale=en_CA">&#160;Plan sponsors and advisors</a></p>
+
+<p class="signin-terms">By signing in, you agree to these <a target="_blank" href="/ca/Customer+support/Sign+in+help/Terms+and+conditions?vgnLocale=en_CA">terms and conditions.</a></p>
+</div>
+
+<div id="contigency-widget" class="login-container" style=" display: none;">
+<div class="h4 text-center">CUSTOMER SIGN IN</div>
+
+<p class="">Please sign in through mySunlife.ca</p>
+
+<button id="blockpagebutton" onclick="window.location.href='https://www.sunnet.sunlife.com/signin/mysunlife/home.wca'; return false;" data-href="https://www.sunnet.sunlife.com/signin/mysunlife/home.wca" class="btn btn-blue mar-left-10" type="submit" style="width: auto;">Sign in</button>
+<p class="mar-top-10">Not registered? <a style=" display: inline-block;" target="_blank" href="https://www.sunnet.sunlife.com/Registration/register.wca">Register</a></p>
+
+<p class="pad-top-30"><a target="_blank" class="signin-sponsor" href="/ca/Customer+support/Sign+in+help/Plan+sponsor+and+advisors?vgnLocale=en_CA">&#160;Plan sponsors and advisors</a></p>
+
+<p class="signin-terms">By signing in, you agree to these <a target="_blank" href="/ca/Customer+support/Sign+in+help/Terms+and+conditions?vgnLocale=en_CA">terms and conditions.</a></p>
+</div>
+</div>								
 								</div>
 				
 				<!-- Exit explicit Dependencies code -->
-</div><!--Exiting rowWithSignIn.jsp Time : 8 ms. -->
+</div><!--Exiting rowWithSignIn.jsp Time : 689 ms. -->
 
 
 
@@ -963,7 +1070,7 @@ page_health_interest  :  "None"
 
 <li><a href="/ca/Learn+and+Plan/Money/Insuring+your+health/How+will+I+cover+my+health+costs+when+I+retire?vgnLocale=en_CA">How will I cover my health costs when I retire?</a></li>
 
-<li><a href="/ca/Learn+and+Plan/Money/Financial+planning+tips/Building+charitable+giving+into+your+estate+plan?vgnLocale=en_CA">Building charitable giving into your estate plan</a></li>
+<li><a href="/ca/Learn+and+Plan/Money/Financial+planning+tips/Estate+planning+and+charitable+giving?vgnLocale=en_CA">Building charitable giving into your estate plan</a></li>
 </ul>
 
 <p class="mar-left-10"><a role="button" class="btn btn-sec-transparent" href="/ca/Learn+and+Plan/Lifestages/Retirement?vgnLocale=en_CA">Explore 'Retirement'</a></p>
@@ -993,7 +1100,7 @@ page_health_interest  :  "None"
 								</div>
 				
 				<!-- Exit explicit Dependencies code -->
-</div><!--Exiting 1-4colsequallysplit.jsp . Execution Time : 712 ms. -->
+</div><!--Exiting 1-4colsequallysplit.jsp . Execution Time : 921 ms. -->
 
 
 
@@ -1010,8 +1117,8 @@ page_health_interest  :  "None"
 <div class="text-center pad-top-25">
 <h4>MONEY</h4>
 
-<a href="/ca/Learn+and+Plan/Money/Retirement+savings/Turning+retirement+savings+into+retirement+income?vgnLocale=en_CA"><img src="//cdn.sunlife.com/static/ca/Learn%20and%20Plan/images/RJ45_Turn-retirement-savings-into-income_v2_220x220.jpg" class="product-circle-img"></a>
-<p><a href="/ca/Learn+and+Plan/Money/Retirement+savings/Turning+retirement+savings+into+retirement+income?vgnLocale=en_CA">Turning retirement savings into retirement income</a></p>
+<a href="https://www.sunlife.ca/ca/Learn+and+Plan/Money/Investing/3+guaranteed+investment+products+you+should+know+about?vgnLocale=en_CA"><img src="//cdn.sunlife.com/static/ca/Learn%20and%20Plan/images/3-guaranteed-investment-products-220x220.jpg" class="product-circle-img"></a>
+<p><a href="https://www.sunlife.ca/ca/Learn+and+Plan/Money/Investing/3+guaranteed+investment+products+you+should+know+about?vgnLocale=en_CA">3 guaranteed investment products you should know about</a></p>
 
 <p class="moreon"><a href="/ca/Learn+and+Plan/Money?vgnLocale=en_CA">More on money</a></p>
 
@@ -1024,8 +1131,8 @@ page_health_interest  :  "None"
 <div class="text-center pad-top-25">
 <h4>HEALTH</h4>
 
-<a href="/ca/Learn+and+Plan/Health/Eating+well/How+to+decode+the+nutrition+label?vgnLocale=en_CA"><img src="//cdn.sunlife.com/static/ca/Learn%20and%20Plan/images/INT159_Nutrition%20label_220x220.jpg" class="product-circle-img"></a>
-<p><a href="/ca/Learn+and+Plan/Health/Eating+well/How+to+decode+the+nutrition+label?vgnLocale=en_CA">How to decode the nutrition label</a></p>
+<a href="https://www.sunlife.ca/ca/Learn+and+Plan/Health/Illness+prevention+and+treatment/Five+more+reasons+to+see+your+dentist?vgnLocale=en_CA"><img src="//cdn.sunlife.com/static/ca/Learn%20and%20Plan/images/5-more-reasons-to-see-your-dentist.jpg" class="product-circle-img"></a>
+<p><a href="https://www.sunlife.ca/ca/Learn+and+Plan/Health/Illness+prevention+and+treatment/Five+more+reasons+to+see+your+dentist?vgnLocale=en_CA">5 more reasons to see your dentist</a></p>
 
 <p class="moreon"><a href="/ca/Learn+and+Plan/Health?vgnLocale=en_CA">More on health</a></p>
 
@@ -1061,7 +1168,7 @@ page_health_interest  :  "None"
 </div>								
 								</div>
 				
-				</div><!--Exiting 2cols_75_25.jsp. Time : 365 ms. -->
+				</div><!--Exiting 2cols_75_25.jsp. Time : 590 ms. -->
 
 
 
@@ -1076,17 +1183,15 @@ page_health_interest  :  "None"
 							<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<div class="row align-left-footer" style=" background-image: url(/static/ca/M16-007-HopeAir-Billboard-020516.jpg);">
+<div class="row align-left-footer" style=" background-image: url(/static/ca/JDRF-image.jpg);">
 <div class="col-xs-12 col-sm-8 col-md-12 col-lg-12 ">
 <div class="row section-module">
 <div class="col-md-6 col-lg-6">
-<h2>Sun Life teams up with Hope Air</h2>
+<h2>Walk or Ride to Cure Diabetes</h2>
 
-<p>Find out how we're taking our diabetes commitment to soaring new heights with Hope Air's Diabetic Flight program.</p>
+<p>Sun Life is proud to team up with the JDRF in the fight against diabetes. Join us this summer at the TELUS Walk to Cure Diabetes and the JDRF Revolution Ride to defeat diabetes.</p>
 
-<p class="pad-top-15"><a target="_top" role="button" class="btn btn-blue" href="/ca/About+us/Donations+and+sponsorships/Supporting+health/Team+up+against+diabetes?vgnLocale=en_CA&amp;playvideo=1#videos">Watch this video</a></p>
-
-<p class="slf-footnote-body">&#160;</p>
+<p class="pad-top-15"><a target="_blank" role="button" class="btn btn-blue" href="http://www.jdrf.ca/">Visit jdrf.ca for more information</a></p>
 </div>
 
 <div class="col-md-6 col-lg-6"></div>
@@ -1098,7 +1203,7 @@ page_health_interest  :  "None"
 								</div>
 				
 				<!-- Exit explicit Dependencies code -->
-</div><!--Exiting 1-4colsequallysplit.jsp . Execution Time : 93 ms. -->
+</div><!--Exiting 1-4colsequallysplit.jsp . Execution Time : 79 ms. -->
 
 
 			</div>
@@ -1353,7 +1458,7 @@ page_health_interest  :  "None"
 </div>
 </div>
 </footer>
-<!-- Exiting footer.jsp  time :1195ms -->
+<!-- Exiting footer.jsp  time :1391ms -->
 
 
 
@@ -1371,18 +1476,33 @@ page_health_interest  :  "None"
 
 
 <!-- Entering siteChannelExtension.jsp -->
-<!--HTML Bottom Tag  ca site extn -->
-<!-- jQuery -->
-<script src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/scripts/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
 <script src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/scripts/bootstrap.min.js"></script>
-
-<!-- custom scripts -->
+<script src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/scripts/signinwidget.js?v=3"></script>
 <script src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/scripts/slfglobalweb.js"></script>
+
+
+<script>
+$(document).ready(function(){
+	
+$("a.customer-sign-sm").click(function() {
+	  updateSignInForm('form_signon_mobile');
+      
+	
+    });
+
+$("#pinbar-signin").click(function() {
+	 updateSignInForm('form_signon_pinbar');
+	    
+	
+    });
+
+	
+});
+</script>
 <!-- Opinion Lab JavaScript -->
 <script src="//cdn.sunlife.com/static/shared/widgets/opinionlab/ol_tab-1.0.js"></script>
 <script src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/scripts/slfcatracking.js"></script>
-<!-- Exiting siteChannelExtension.jsp  time :38ms -->
+<!-- Exiting siteChannelExtension.jsp  time :77ms -->
 
 
 
@@ -1394,6 +1514,16 @@ page_health_interest  :  "None"
 
 <script>
 $('#hideonhome').removeClass("col-sm-12 visible-xs slf-accordion-arrow panel").addClass("hidden-sm").css('display','none');
+
+$(document).ready(function() {
+ 
+      updateSignInForm('form_signon');
+   
+});
+
+$('#signin-widget').closest('[class^=col-]').addClass('hidden-sm hidden-xs');
+
+
 </script>
 
 <!-- Vidyard mobile responsive javascript //-->
@@ -1409,7 +1539,7 @@ $('#hideonhome').removeClass("col-sm-12 visible-xs slf-accordion-arrow panel").a
 <!-- Vidyard tracking code --> 
 <script src="//cdn.sunlife.com/static/slfglobal/globalweb/responsive/scripts/vidyard_event_listener.js" type="text/javascript"></script>
 
-<!-- Exiting pageExtensionMetaTags.jsp  time :38ms -->
+<!-- Exiting pageExtensionMetaTags.jsp  time :87ms.. -->
 
 
 
@@ -1418,4 +1548,4 @@ $('#hideonhome').removeClass("col-sm-12 visible-xs slf-accordion-arrow panel").a
 </body>
 </html>
 
-<!-- VIGN HPD cache address: 0679c23a4df6b6a83ea9b5715d198eef; generated: Mon May 09 10:02:40 EDT 2016 -->
+<!-- VIGN HPD cache address: 0679c23a4df6b6a83ea9b5715d198eef; generated: Sun Sep 11 12:08:27 EDT 2016 -->

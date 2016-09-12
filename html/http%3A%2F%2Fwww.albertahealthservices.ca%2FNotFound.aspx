@@ -55,7 +55,7 @@
     <meta name="keywords" content="" />
 
     <meta name="modified" content="Mon, 16 Nov 2015 07:47:27 -0700" />
-    <meta name="published" content="Mon, 04 Apr 2016 11:02:52 -0700" />
+    <meta name="published" content="Wed, 15 Jun 2016 16:10:10 -0700" />
     <meta name="pageid" content="12401" />
 
     <meta property="og:site_name" content="Alberta Health Services" />
@@ -144,26 +144,6 @@
         </div>
     
         
-        <div class="site_emergency_message">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-3 col-md-1">
-                        
-        <i class="fa fa-exclamation-triangle fa-5x"></i>
-    
-                    </div>
-                    <div class="col-xs-9 col-md-11">
-                        <h3>Alberta Wildfires Emergency Alert</h3>
-                        
-        <p>Fort McMurray remains under a mandatory evacuation order. A provincial state of emergency has been declared (<a href="http://www.rmwb.ca/News-Room/McMurray-West-Wildfire.htm" style="line-height: 20px;" target="_blank">more information</a>). </p>
-        <p>Updates from Alberta Health Services will be posted on our <a href="http://www.albertahealthservices.ca/wildfire">Wildfire Resources page</a>. Updates from the Alberta government will be posted on their <a href="http://www.alberta.ca/emergency.cfm" target="_blank">emergency page</a>. </p>
-        <p>Visit <a href="http://www.emergencyalert.alberta.ca/content/about/signup.html" target="_blank">Alberta Emergency Alerts</a> to sign up for alerts and download the app.</p>
-    
-                    </div>
-                </div>
-            </div>
-        </div>
-        
     
         <!-- MAIN NAVIGATION START -->
         <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
@@ -209,15 +189,15 @@
                 </li>
             
                 <li>
-                    <a id="navitem-aded16e6-7467-4713-907a-ee7d376c9983" href="/Page12360.aspx">Mission & Strategic Direction</a>
-                </li>
-            
-                <li>
                     <a id="navitem-128219d6-d37b-4244-b20f-6bae9ae9bc31" href="/Page12359.aspx">Publications</a>
                 </li>
             
                 <li>
                     <a id="navitem-5e28f7f9-d532-47ce-ab65-4fd25f27cb8f" href="/Page12356.aspx">Strategic Clinical Networks</a>
+                </li>
+            
+                <li>
+                    <a id="navitem-aded16e6-7467-4713-907a-ee7d376c9983" href="/Page12360.aspx">Vision, Mission, Values & Strategies</a>
                 </li>
             
                 <li>
@@ -237,6 +217,10 @@
                 </li>
             
                 <li>
+                    <a id="navitem-b9ee03bd-98c5-4493-a293-9c9e25f67cd0" href="/Page12695.aspx">CancerControl</a>
+                </li>
+            
+                <li>
                     <a id="navitem-63cb0c8a-4f6a-4ba6-bb4f-06ff4747f690" href="/Page12670.aspx">Health Topics</a>
                 </li>
             
@@ -249,15 +233,15 @@
                 </li>
             </ul></li><li><a id="navitem-a7b32501-1160-44f2-9679-e42b1fc1d834" class="item" role="menubar" href="/Page12015.aspx">INFORMATION FOR</a><ul class="sm list-unstyled" role="menu">
                 <li>
-                    <a id="navitem-f621fa31-69e8-4b19-a161-94a31127241f" href="/Page12376.aspx">Aboriginal Health</a>
-                </li>
-            
-                <li>
                     <a id="navitem-8b7f6d36-e6d4-4687-b701-eee49b5e8278" href="/Page12655.aspx">Continuing Care</a>
                 </li>
             
                 <li>
                     <a id="navitem-4f325271-2ada-4eac-8cd3-47951183cd73" href="/Page12375.aspx">Health Professionals</a>
+                </li>
+            
+                <li>
+                    <a id="navitem-f621fa31-69e8-4b19-a161-94a31127241f" href="/Page12376.aspx">Indigenous Health</a>
                 </li>
             
                 <li>
@@ -417,6 +401,8 @@
         <!-- CONTENT START -->
         
         <div class="row">
+            <div class="hidden col-xs-12"></div>
+
             <div class="hidden col-xs-12"><h1 class="mrgn-tp-0">Not Found</h1>
             
             </div>
@@ -476,7 +462,9 @@
         <div class="row">
             <div id="footericons">
                 <div id="footerpromos" class="hidden-xs hidden-sm col-md-8">
-                  <a href="/give/Page255.aspx"><span class="fa-stack fa-lg"><i style="color: rgb(201,79,102);" class="fa fa-circle-thin fa-stack-2x"></i><i style="color: rgb(201,79,102);" class="fa fa-heartbeat fa-stack-1x"></i></span><strong> GIVE</strong></a>
+                  
+        <a href="/give"><span class="fa-stack fa-lg"><i style="color: rgb(201,79,102);" class="fa fa-circle-thin fa-stack-2x"></i><i style="color: rgb(201,79,102);" class="fa fa-heartbeat fa-stack-1x"></i></span><strong> GIVE</strong></a>
+    
                   <a href="/pay/Page11918.aspx"><span class="fa-stack fa-lg"><i style="color: rgb(248,159,55);" class="fa fa-circle-thin fa-stack-2x"></i><i style="color: rgb(248,159,55);" class="fa fa-credit-card fa-stack-1x"></i></span><strong> PAY</strong></a>
                   <a href="/about/patientfeedback.aspx"><span class="fa-stack fa-lg"><i style="color: rgb(80,185,118);" class="fa fa-circle-thin fa-stack-2x"></i><i style="color: rgb(80,185,118);" class="fa fa-comments fa-stack-1x"></i></span><strong> PATIENT FEEDBACK</strong></a>  
                 </div>
@@ -523,7 +511,7 @@
                     <h3>GET INVOLVED</h3>
                     
                     <ul class="list-unstyled">
-                        <li><a href="/about/communityrelations.aspx">Advisory Councils</a></li><li><a href="/give/Page255.aspx">Give: Foundations &amp; Health Trusts</a></li><li><a href="/info/Page6620.aspx">Patient &amp; Family Advisors</a></li><li><a href="/info/Page12616.aspx">Volunteer at AHS</a></li>
+                        <li><a href="/about/communityrelations.aspx">Advisory Councils</a></li><li><a href="http://www.albertahealthservices.ca/give/give.aspx">Give: Foundations &amp; Health Trusts</a></li><li><a href="/info/Page6620.aspx">Patient &amp; Family Advisors</a></li><li><a href="/info/Page12616.aspx">Volunteer at AHS</a></li>
                     </ul>
                     
                 </section>
@@ -544,7 +532,7 @@
     <section id="site_logo_footer" class="hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
-                <a href="http://myhealth.alberta.ca" target="_blank"><img src="/images/Logos/myhealthalberta_logo.png" border="0" width="126" height="61"></a><a href="/info/Page12630.aspx"><img src="/images/Logos/healthlink_reverse.png" border="0" width="128" height="61"></a><a href="/topics/Page11975.aspx"><img src="/images/Logos/padis_logo.png" border="0" width="128" height="61"></a><a href="/pfh/Page10254.aspx"><img src="/images/Logos/passion-for-health_logo.png" border="0" width="166" height="55"></a><a href="/news/apple.aspx"><img src="/images/Logos/apple_logo.png" border="0" width="76" height="61"></a>
+                <a href="http://myhealth.alberta.ca" target="_blank"><img src="/images/Logos/myhealthalberta_logo.png" border="0" width="126" height="61"></a><a href="/info/Page12630.aspx"><img src="/images/Logos/healthlink_reverse.png" border="0" width="128" height="61"></a><a href="/topics/Page11975.aspx"><img src="/images/Logos/padis_logo.png" border="0" width="128" height="61"></a><a href="http://www.albertahealthservices.ca/blogs/pfh/"><img src="/images/Logos/passion-for-health_logo.png" border="0" width="166" height="55"></a><a href="/news/apple.aspx"><img src="/images/Logos/apple_logo.png" border="0" width="76" height="61"></a>
             </div>
                         
             <div class="row" id="footerlegal">
@@ -566,23 +554,11 @@
 <script type="text/javascript" src="/js/global.min.js"></script>
 <script type="text/javascript" src="/js/site.min.js"></script>
 
-    
-<!-- Version: 9.4.0 -->
-<!-- Tag Builder Version: 4.1  -->
-<script type="text/javascript" src="/js/webtrends.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-var _tag=new WebTrends();
-_tag.dcsGetId();
-//]]>
-</script>
-<script type="text/javascript">
-//<![CDATA[
-_tag.dcsCustom=function(){}
-_tag.dcsCollect();
-//]]>
-</script>
-<noscript><div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="//sdc.albertahealthservices.ca/dcs7fivmf000000sdp2j80s73_8f6y/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;DCS.dcscfg=1&amp;WT.tv=9.4.0&amp;dcssip=www.albertahealthservices.ca" /></div></noscript>
+
+<!-- START OF SmartSource Data Collector TAG v10.4.23 -->
+<!-- Copyright (c) 2016 Webtrends Inc.  All rights reserved. -->
+<script src="/js/webtrends.load.js" type="text/javascript"></script>
+
 <!-- FOOTER END -->
 
     <!-- show-in-navigation="false" -->

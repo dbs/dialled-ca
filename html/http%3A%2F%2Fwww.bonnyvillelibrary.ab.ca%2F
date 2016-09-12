@@ -8,9 +8,17 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="Bonnyville Municipal Library of Bonnyville , Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,Bonnyville, Alberta, Canada" />
+<meta name="google-site-verification" content="PU-aPOQSIUa0nByJJyVA0jDD-6uphppLzTWWpIYBgGI" />
+<meta name="google-site-verification" content="Ft6gSaK_3FyVl01riNiTc1-CgIUF9Zc1vCZowggnLVM" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,10 +29,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="Bonnyville Municipal Library of Bonnyville , Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,Bonnyville, Alberta, Canada" />
-<meta name="google-site-verification" content="PU-aPOQSIUa0nByJJyVA0jDD-6uphppLzTWWpIYBgGI" />
-<meta name="google-site-verification" content="Ft6gSaK_3FyVl01riNiTc1-CgIUF9Zc1vCZowggnLVM" />
 
 
 	<meta property="og:url" CONTENT="http://www.bonnyvillelibrary.ab.ca/" />
@@ -34,12 +38,10 @@
 	<meta property="og:locale" CONTENT="en_US" />
 	<meta property="fb:app_id" CONTENT="142916509104743" />
 	<meta property="og:type" CONTENT="website" />
-	<meta property="og:description" CONTENT=""/>
 
 	
-		
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -47,7 +49,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -55,10 +57,10 @@
 	<meta name="twitter:site" CONTENT="Bonnyville Municipal Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Bonnyville Municipal Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -260,7 +262,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -268,6 +269,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -282,6 +295,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -302,9 +321,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -336,45 +354,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/126" class="blog_link active_page" title="What's New">What's New</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=126" class="blog_link active_page" title="What&#x27;s New"><span>What's New</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/126" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/126" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=126" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/64" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -401,10 +399,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -419,9 +417,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
-    <li id="active"><a href="http://www.bonnyvillelibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/About-Us" class="about_us_link parent_link" title="About Us"><span>About Us</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Hours" title="Hours"><span>Hours</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-Board" title="Library board"><span>Library Board</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-History" title="Library history"><span>Library History</span></a></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Services" class="services_link parent_link" title="Services"><span>Services</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-Value-Calculator" title="Library value calculator"><span>Library Value Calculator</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/What-to-Read-Next" class="what_to_read_next_link parent_link" title="What to Read Next"><span>What to Read Next</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Best-Seller-Lists" title="Best seller lists"><span>Best Seller Lists</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Novelist" title="Novelist"><span>Novelist</span></a></li></ul></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Adult-Book-Club" title="Adult book club"><span>Adult Book Club</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Craft-and-Chat" title="Craft and chat"><span>Craft and Chat</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Preschool-Programs" title="Preschool programs"><span>Preschool Programs</span></a></li></ul></li><li><a href="http://www.bonnyvillelibrary.ab.ca/On-Order" title="On order"><span>On Order</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/New-Items" title="New items"><span>New Items</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/InfoGuides" class="infoguides_link parent_link" title="InfoGuides"><span>InfoGuides</span></a><ul><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Language-Learners" class="language_learners_link parent_link" title="Language Learners"><span>Language Learners</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Language-Learners-E-Resou" title="Language learners e-resou"><span>Language Learners E-Resou</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Multicultural-Links" title="Multicultural links"><span>Multicultural Links</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/New-Canadian-Resources" title="New canadian resources"><span>New Canadian Resources</span></a></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Local-Histories" class="local_histories_link parent_link" title="Local Histories"><span>Local Histories</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Local-History-E-Resources" title="Local history e-resources"><span>Local History E-Resources</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Local-History-Links" title="Local history links"><span>Local History Links</span></a></li></ul></li></ul></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Links" title="Links"><span>Links</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
-  
+    <li id="active"><a href="http://www.bonnyvillelibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/About-Us" class="about_us_link parent_link" title="About Us"><span>About Us</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Hours" title="Hours"><span>Hours</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-Board" title="Library board"><span>Library Board</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-History" title="Library history"><span>Library History</span></a></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Services" class="services_link parent_link" title="Services"><span>Services</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-Value-Calculator" title="Library value calculator"><span>Library Value Calculator</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/What-to-Read-Next" class="what_to_read_next_link parent_link" title="What to Read Next"><span>What to Read Next</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Best-Seller-Lists" title="Best seller lists"><span>Best Seller Lists</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Novelist" title="Novelist"><span>Novelist</span></a></li></ul></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Book-Club" title="Book club"><span>Book Club</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Childrens" title="Childrens"><span>Childrens</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Craft-and-Chat" title="Craft and chat"><span>Craft and Chat</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Preschool-Programs" title="Preschool programs"><span>Preschool Programs</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Teen-and-Pre-Teen" title="Teen and pre-teen"><span>Teen and Pre-Teen</span></a></li></ul></li><li><a href="http://www.bonnyvillelibrary.ab.ca/On-Order" title="On order"><span>On Order</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/New-Items" title="New items"><span>New Items</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/InfoGuides" class="infoguides_link parent_link" title="InfoGuides"><span>InfoGuides</span></a><ul><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Language-Learners" class="language_learners_link parent_link" title="Language Learners"><span>Language Learners</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Language-Learners-E-Resou" title="Language learners e-resou"><span>Language Learners E-Resou</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Multicultural-Links" title="Multicultural links"><span>Multicultural Links</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/New-Canadian-Resources" title="New canadian resources"><span>New Canadian Resources</span></a></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Local-Histories" class="local_histories_link parent_link" title="Local Histories"><span>Local Histories</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Local-History-E-Resources" title="Local history e-resources"><span>Local History E-Resources</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Local-History-Links" title="Local history links"><span>Local History Links</span></a></li></ul></li></ul></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Links" title="Links"><span>Links</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
 </ul>
 
 	</nav>
@@ -547,96 +543,84 @@ if (typeof jQuery != 'undefined') {
 		
 			<div class="ResourceBox insite latest_posts page_box" id="latest_posts_box">
   <h4 class="latest_posts_title">
-    <a href="/blogs/show/126">Latest What's New</a> 
+    <a href="/blogs/show/126">Latest What&#x27;s New</a> 
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6336"><img alt="Untitled" src="http://files.townlife.com/public/asset_files/7361/thumb_400/untitled.png?1461698453" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7671/xlarge/code.png?1470234980" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Code" src="http://files.townlife.com/public/asset_files/7671/thumb_400/code.png?1470234980" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6336">				
-	  Online Coding Workshop			 			
-        </a>
-        <p>Come learn the online programming language, Scratch.&nbsp; Created at MIT, Scratch can be used to create fun&nbsp;and&nbsp;unique&nbsp;games and an...
-        <!-- <a href="/blogs/show_entry/6336">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6826">
+	    Hour of Code
+          </a>
+        <p>Open to grade 5+ this event will work through an online coding tutorial to introduce the basics of online coding. Don't just play online, create on...
+        <!-- <a href="/blogs/show_entry/6826">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6285"><img alt="Farmwives book - bonnyville" src="http://files.townlife.com/public/asset_files/7322/thumb_400/Farmwives Book - Bonnyville.jpg?1460664696" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7643/xlarge/paper_airplane.png?1469112713" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Paper_airplane" src="http://files.townlife.com/public/asset_files/7643/thumb_400/paper_airplane.png?1469112713" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6285">				
-	  Author Visit			 			
-        </a>
-        <p>Author Visit : Billi J. Miller
-
-Wednesday, May 4; 7:30 pm
-
-We are excited to have local author, Billi J Miller join us to discuss her book Farm...
-        <!-- <a href="/blogs/show_entry/6285">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6776">
+	    Paper Airplane Fly Off!
+          </a>
+        <p>Join us Thursday, August 4th from 2-3 pm for a paper-airplane content! We'll break up into groups and practice our best design, decorate and name y...
+        <!-- <a href="/blogs/show_entry/6776">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6246"><img alt="Writers workshop" src="http://files.townlife.com/public/asset_files/7289/thumb_400/Writers Workshop.jpg?1460061229" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7601/xlarge/drop_in_poster.png?1467829770" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Drop_in_poster" src="http://files.townlife.com/public/asset_files/7601/thumb_400/drop_in_poster.png?1467829770" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6246">				
-	  Adult Writers Workshop			 			
-        </a>
-        <p>Adult Writers Workshop 
-Monday, April 25th 
-6:30-8pm
+          <a class="post_title" href="/blogs/show_entry/6704">
+	    LEGO Storytime
+          </a>
+        <p>LEGO Storytime @ the library is back this summer!!! 
 
-With award-winning Alberta authors Gail de Vos and Karen Spafford-Fitz!!
-
-Please regist...
-        <!-- <a href="/blogs/show_entry/6246">More...</a> --></p>
+Join us Tuesdays July 12th, August 2nd, and August 16th 
+2-3 pm&nbsp;open to Grades 1-6
+...
+        <!-- <a href="/blogs/show_entry/6704">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6183"><img alt="0001-169218575" src="http://files.townlife.com/public/asset_files/7246/thumb_400/0001-169218575.png?1458678759" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7595/xlarge/Tutorial_Tab.jpg?1467747741" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Tutorial_tab" src="http://files.townlife.com/public/asset_files/7595/thumb_400/Tutorial_Tab.jpg?1467747741" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6183">				
-	  Choose Your Own Adventure			 			
-        </a>
-        <p>Come join us during Easter Break for a FREE Choose Your Own Adventure Extravaganza on Tuesday, March 29th! Participate in a Choose Your Own Adventu...
-        <!-- <a href="/blogs/show_entry/6183">More...</a> --></p>
+          <a class="post_title" href="/blogs/show_entry/6697">
+	    Tutorials Tab
+          </a>
+        <p>Want to learn more about Overdrive, Zinio, Hoopla, Tumblebooks and other library resources? Check out the green tutorials tab on the right hand sid...
+        <!-- <a href="/blogs/show_entry/6697">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6146"><img alt="Closed2" src="http://files.townlife.com/public/asset_files/7214/thumb_400/closed2.jpg?1457985792" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7594/xlarge/Sprinkles_Ad.png?1467747157" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Sprinkles_ad" src="http://files.townlife.com/public/asset_files/7594/thumb_400/Sprinkles_Ad.png?1467747157" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6146">				
-	  Library Closed for Plan of Service Meeting			 			
-        </a>
-        <p>The Library will be closed on Tuesday, March 22 from 9:00 a.m. to 1:00 p.m. Sorry for any inconvenience.
+          <a class="post_title" href="/blogs/show_entry/6696">
+	    Sprinkles the Clown
+          </a>
+        <p>Sprinkles the Clown is coming to the Bonnyville Library. Join us for this free event on Tuesday, July 19th at 10:30am!
         <!--  --></p>
 	</div>      
 	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/126">+ MORE</a></h6>
 </div>
@@ -647,152 +631,110 @@ Please regist...
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/126">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/126">Upcoming Events</a> 
         <span class="latest_events_count">(8)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>14</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35280">Craft and Chat</a>
-            <span class="upcoming_time_frame">
-              (in 2 days)
-              
-                &nbsp;from  1:00 PM
-                
-                  &nbsp;to  2:00 PM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35295">Cancelled Story Time</a>
-            <span class="upcoming_time_frame">
-              (in 2 days)
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>12</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35282">Rhyme Time</a>
+            <a href="/calendars/show_event/37171">Story Time</a>
             <span class="upcoming_time_frame">
               (in 3 days)
-              
+                &nbsp;from  9:15 AM
+                  &nbsp;to 11:15 AM
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>12</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>14</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35438">Online Coding Workshop</a>
+            <a href="/calendars/show_event/37195">Craft and Chat</a>
             <span class="upcoming_time_frame">
               (in 3 days)
-              
-                &nbsp;from  5:00 PM
-                
-                  &nbsp;to  6:00 PM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>18</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35283">Craft and Chat</a>
-            <span class="upcoming_time_frame">
-              (in 1 week)
-              
                 &nbsp;from  1:00 PM
-                
                   &nbsp;to  2:00 PM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>18</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>15</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35296">Story Time</a>
+            <a href="/calendars/show_event/37177">Rhyme Time</a>
+            <span class="upcoming_time_frame">
+              (in 4 days)
+                &nbsp;from  9:30 AM
+                  &nbsp;to 11:00 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>20</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37431">Kookum&#x27;s Storytime</a>
             <span class="upcoming_time_frame">
               (in 1 week)
-              
+                &nbsp;from  2:00 PM
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>19</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>21</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35284">Rhyme Time</a>
+            <a href="/calendars/show_event/37172">Story Time</a>
             <span class="upcoming_time_frame">
               (in 1 week)
-              
+                &nbsp;from  9:15 AM
+                  &nbsp;to 11:15 AM
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>25</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>21</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35285">Craft and Chat</a>
+            <a href="/calendars/show_event/37196">Craft and Chat</a>
+            <span class="upcoming_time_frame">
+              (in 1 week)
+                &nbsp;from  1:00 PM
+                  &nbsp;to  2:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>22</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37178">Rhyme Time</a>
+            <span class="upcoming_time_frame">
+              (in 1 week)
+                &nbsp;from  9:30 AM
+                  &nbsp;to 11:00 AM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>27</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37183">LEGO Storytime</a>
             <span class="upcoming_time_frame">
               (in 2 weeks)
-              
-                &nbsp;from  1:00 PM
-                
-                  &nbsp;to  2:00 PM
-                
-              
+                &nbsp;from  3:30 PM
+                  &nbsp;to  4:30 PM
             </span>
           </li>
-        
       </ul>
       <h6 class="more"><a href="/calendars/table/126">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -800,77 +742,40 @@ Please regist...
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_681">
-	      
-              
-	      
+	    <dd id="action_681">
 	        <img alt="Call (780) 826-3071" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 826-3071" />
 		
 		Call (780) 826-3071
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_682">
-	      
-              
-	      
+		    <dd id="action_682">
 	        <img alt="Fax (780) 826-2058" class="action_steps_image" src="/images/icons/fff/printer.png?1445483283" title="Fax (780) 826-2058" />
 		
 		Fax (780) 826-2058
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/126" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1398&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1398&amp;return_url=http%3A%2F%2Fwww.bonnyvillelibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=126" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.bonnyvillelibrary.ab.ca%2F&amp;site_id=126" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -895,16 +800,10 @@ Please regist...
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -916,8 +815,6 @@ Please regist...
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
 </div>
 
  </span>
@@ -938,7 +835,7 @@ Please regist...
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
 			
 				
 			
@@ -949,7 +846,7 @@ Please regist...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
 			
 				
 			
@@ -971,7 +868,7 @@ Please regist...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
 			
 				
 			
@@ -996,65 +893,18 @@ Please regist...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
 			
 				
 			
@@ -1076,7 +926,7 @@ Please regist...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
 			
 				
 			
@@ -1087,18 +937,7 @@ Please regist...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -1123,7 +962,65 @@ Please regist...
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062060587&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062060587.gif" />Second Life : A Novel.<BR/>By Watson, S.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
 			
 				
 					</div><!-- end book group -->
@@ -1146,7 +1043,7 @@ Please regist...
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1188,61 +1085,39 @@ Please regist...
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
-    <li id="active"><a href="http://www.bonnyvillelibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/About-Us" class="about_us_link parent_link" title="About Us"><span>About Us</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Hours" title="Hours"><span>Hours</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-Board" title="Library board"><span>Library Board</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-History" title="Library history"><span>Library History</span></a></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Services" class="services_link parent_link" title="Services"><span>Services</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-Value-Calculator" title="Library value calculator"><span>Library Value Calculator</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/What-to-Read-Next" class="what_to_read_next_link parent_link" title="What to Read Next"><span>What to Read Next</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Best-Seller-Lists" title="Best seller lists"><span>Best Seller Lists</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Novelist" title="Novelist"><span>Novelist</span></a></li></ul></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Adult-Book-Club" title="Adult book club"><span>Adult Book Club</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Craft-and-Chat" title="Craft and chat"><span>Craft and Chat</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Preschool-Programs" title="Preschool programs"><span>Preschool Programs</span></a></li></ul></li><li><a href="http://www.bonnyvillelibrary.ab.ca/On-Order" title="On order"><span>On Order</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/New-Items" title="New items"><span>New Items</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/InfoGuides" class="infoguides_link parent_link" title="InfoGuides"><span>InfoGuides</span></a><ul><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Language-Learners" class="language_learners_link parent_link" title="Language Learners"><span>Language Learners</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Language-Learners-E-Resou" title="Language learners e-resou"><span>Language Learners E-Resou</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Multicultural-Links" title="Multicultural links"><span>Multicultural Links</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/New-Canadian-Resources" title="New canadian resources"><span>New Canadian Resources</span></a></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Local-Histories" class="local_histories_link parent_link" title="Local Histories"><span>Local Histories</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Local-History-E-Resources" title="Local history e-resources"><span>Local History E-Resources</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Local-History-Links" title="Local history links"><span>Local History Links</span></a></li></ul></li></ul></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Links" title="Links"><span>Links</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
-  
+    <li id="active"><a href="http://www.bonnyvillelibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/About-Us" class="about_us_link parent_link" title="About Us"><span>About Us</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Fees" title="Fees"><span>Fees</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Hours" title="Hours"><span>Hours</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-Board" title="Library board"><span>Library Board</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-History" title="Library history"><span>Library History</span></a></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Services" class="services_link parent_link" title="Services"><span>Services</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Library-Value-Calculator" title="Library value calculator"><span>Library Value Calculator</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/What-to-Read-Next" class="what_to_read_next_link parent_link" title="What to Read Next"><span>What to Read Next</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Best-Seller-Lists" title="Best seller lists"><span>Best Seller Lists</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Novelist" title="Novelist"><span>Novelist</span></a></li></ul></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Book-Club" title="Book club"><span>Book Club</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Childrens" title="Childrens"><span>Childrens</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Craft-and-Chat" title="Craft and chat"><span>Craft and Chat</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Preschool-Programs" title="Preschool programs"><span>Preschool Programs</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Teen-and-Pre-Teen" title="Teen and pre-teen"><span>Teen and Pre-Teen</span></a></li></ul></li><li><a href="http://www.bonnyvillelibrary.ab.ca/On-Order" title="On order"><span>On Order</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/New-Items" title="New items"><span>New Items</span></a></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/InfoGuides" class="infoguides_link parent_link" title="InfoGuides"><span>InfoGuides</span></a><ul><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Language-Learners" class="language_learners_link parent_link" title="Language Learners"><span>Language Learners</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Language-Learners-E-Resou" title="Language learners e-resou"><span>Language Learners E-Resou</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Multicultural-Links" title="Multicultural links"><span>Multicultural Links</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/New-Canadian-Resources" title="New canadian resources"><span>New Canadian Resources</span></a></li></ul></li><li class="drop"><a href="http://www.bonnyvillelibrary.ab.ca/Local-Histories" class="local_histories_link parent_link" title="Local Histories"><span>Local Histories</span></a><ul><li><a href="http://www.bonnyvillelibrary.ab.ca/Local-History-E-Resources" title="Local history e-resources"><span>Local History E-Resources</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Local-History-Links" title="Local history links"><span>Local History Links</span></a></li></ul></li></ul></li><li><a href="http://www.bonnyvillelibrary.ab.ca/Links" title="Links"><span>Links</span></a></li><li><a href="http://www.bonnyvillelibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/126" class="blog_link active_page" title="What's New">What's New</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=126" class="blog_link active_page" title="What&#x27;s New"><span>What's New</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/126" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/126" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=126" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/64" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1251,7 +1126,7 @@ Please regist...
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1261,41 +1136,23 @@ Please regist...
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/126" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1432,6 +1289,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1458,3 +1340,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

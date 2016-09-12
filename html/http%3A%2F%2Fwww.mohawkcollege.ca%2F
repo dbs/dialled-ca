@@ -1,1060 +1,814 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-82048921-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<link rel="canonical" href="http://www.mohawkcollege.ca/" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/de_theme/img/favicons/favicon.ico" type="image/vnd.microsoft.icon" />
 
-<script type="text/javascript">
-<!--
-var ipVirDir="/";
-var ipSysImageDir="/system/images";
-var ipSiteTemplateDir="/Sites/3/templates";
-var ipDynamicFQDN="http://www.mohawkcollege.ca";
-var ipCurrentPageClass="ContentPage";
-var ipCurrentPageDefID="4";
-var ipCurrentTemplateID="10";
-//-->
-</script>
-<script src="/scripts/ip-utilities.js?ver=12.3.87.0" type="text/javascript"></script>
-<script type="text/javascript">
-<!--
-ipjPageSiteID=3;
-ipjPageSiteGroupID=0;
-//-->
-</script>
-<script type="text/javascript">
-<!--
-//-->
-</script>
-<meta name="description" content=""/>
-<meta name="Generator" content="IronPoint v7"/>
-<meta name="UpdateDateTime" content="4/1/2016 10:33:37 AM"/>
+      <title>Home | Mohawk College</title>
+      <link rel="stylesheet" href="/sites/default/files/css/css_vyYfnDNe186m6Tz0iQA66Fl8SbkWKpTTOAnJCejXdXE.css?od8num" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_VIjIRxrOAsKqz0ZYSFT1QgjXBjR3Ve-OcgSp2jOOq4M.css?od8num" media="all" />
 
-
-<meta name="google-site-verification" content="T0SHfCPeZIN5Kd4VopfB3PtX9TArP7GRA2fjO3F-XIc" />
-
-<title>Mohawk College | Full Time Programs | Continuing Education | Distance Education</title>
-
-<!-- start of google analytics code --><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-7033263-1', 'auto');
-  ga('send', 'pageview');
-
-</script><!-- end of google analytics -->
-
-<script type="text/javascript" src="/Sites/3/templates/js/jquery.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){	
-			$("#slider").easySlider({
-				auto: true, 
-				continuous: true,
-				numeric: true
-			});
-		});	
-	</script>
-
-<!-- This is the jquery library - do not remove this-->
-<script type="text/javascript" src="/Sites/3/templates/js/jquery.min.js"></script>
-<script type="text/javascript" src="/Sites/3/templates/js/jquery.cookie.min.js"></script>
-<script type="text/javascript" src="/Sites/3/templates/js/jquery.fontscale.min.js"></script>	
-<script type="text/javascript" src="/Sites/3/templates/js/formEnter.min.js"></script>
-<script type="text/javascript" src="/Sites/3/templates/js/jquery.zrssfeed.min.js"></script>
-<script type="text/javascript" src="/Sites/3/templates/js/formSearch.min.js"></script>
-<script type="text/javascript" src="/Sites/3/templates/js/Init.fontScale.min.js"></script>
-<script type="text/javascript" src="/Sites/3/templates/js/Init.searchColourChanger.min.js"></script>
-<!-- These 2 files are for Ancillary Services slide show-->
-<script type="text/javascript" src="/Sites/3/templates/js/jquery.cyclelite.js"></script>
-<script type="text/javascript" src="/Sites/3/templates/js/jquery.slides.js"></script>
-
-<script type="text/javascript" src="/Assets/js.js"></script>
-
-<script language="javascript" type="text/javascript" src="/Sites/3/templates/js/mouseovers.js"></script>
-<script language="javascript" type="text/javascript" src="/Sites/3/templates/js/searchform.js"></script>
-<script language="javascript" type="text/javascript" src="/Sites/3/templates/js/PSiR.js"></script>
-<script language="javascript" type="text/javascript" src="/Sites/3/templates/js/jumpMenu.js"></script>
-<script language="javascript" type="text/javascript" src="/Sites/3/templates/js/openWindow.js"></script>
-<script language="javascript" type="text/javascript" src="/Sites/3/templates/js/sortableTable.js"></script>
-<script language="javascript" type="text/javascript" src="/Sites/3/templates/js/alternate_rows.js"></script>
-<script language="javascript" type="text/javascript" src="/Sites/3/templates/js/askTheHawkAndGoogle.js"></script>
-
-<script language="javascript" type="text/javascript" src="http://www.mohawkcollege.ca/assets/Javascripts/erms.min.js"></script>
-
-<!--[if IE 5]>
-<style type="text/css"> 
-/* place css box model fixes for IE 5* in this conditional comment */
-.thrColFixHdr #sidebar1 { width: 180px; }
-.thrColFixHdr #sidebar2 { width: 190px; }
-</style>
-<![endif]--><!--[if IE]>
-<style type="text/css"> 
-/* place css fixes for all versions of IE in this conditional comment */
-.thrColFixHdr #sidebar2, .thrColFixHdr #sidebar1 { padding-top: 30px; }
-.thrColFixHdr #mainContent { zoom: 1; }
-/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
-</style>
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="/sites/default/files/css/css_AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs.css?od8num" media="all" />
 <![endif]-->
 
-<link href="/Sites/3/templates/css/MohawkTemplateThrColFixHdr-futuready.css" rel="stylesheet" type="text/css" />
-<!--link href="/Sites/3/templates/css/searchMenu.css" rel="stylesheet" type="text/css" /-->
-<link href="/Sites/3/templates/css/topLevelNav.css" rel="stylesheet" type="text/css" />
-<link href="/Sites/3/templates/css/homepage-slider.css" rel="stylesheet" type="text/css" />
+      <!-- Simple State Manager 3.x polyfills -->
+      <!--[if IE 8]>
+        <script src="/themes/de_theme/dist/js/vendor/addEventListener.polyfill.min.js"></script>
+        <script src="/themes/de_theme/dist/js/vendor/bind.polyfill.min.js"></script>
+        <script src="/themes/de_theme/dist/js/vendor/media.match.min.js"></script>
+      <![endif]-->
+      
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+<script src="/themes/de_theme/dist/js/vendor/modernizr.min.js?v=3.3.1"></script>
 
+    <!--[if IE 9]>
+      <script src="/themes/de_theme/bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
 
-
-
-
-<style>
-
-.thrColFixHdr #container a:link {text-decoration: none !important;
-}
-.thrColFixHdr #container a:visited {text-decoration: none !important;
-}
-.thrColFixHdr #container a:hover {text-decoration: underline !important;
-}
-.thrColFixHdr #mainContentNoColumns h1 {
-font-weight: normal !important;
-line-height: 150% !important;
-}
-.breadcrumbs {
-display: none !important;
-}
-#colour12794 {
-background-color: #990033;
-}
-
-  .ipf-skb{} 	
-  .ipf-skb h2{margin:15px 0;background:#efefef;padding:.20em .20em;font-size:1.4em;color:#000000} 	
-  .ipf-skb-textfield {width:180px; margin: 20px 0 5px;}
-  .ipf-skb-select {width:180px}
-  .ipf-skb-resultsgrid {}
-  .ipf-skb-bulletingrid {}
-  .ipf-skb-button {}
-  .ipf-skb-link {display:block}
-  .ipf-skb-buttoncontainer {margin-top:10px; margin-bottom:5px}	
-  .ipb-gridview-recordcount{margin:5px 0;display:block;}
-  .ipf-skb-main {padding: 10px 20px 5px 20px; font-weight: bold;color: #990033; font-size: 14px; line-height: 24px;
-margin: 0px !important;}
-.ipf-skb-main a:link {font-size: 10px; text-transform: uppercase;}
-.ipf-skb-main a:visited {font-size: 10px; text-transform: uppercase;}
-.ipf-skb-main a:hover {font-size: 10px; text-transform: uppercase;}
-  .ipf-skb-searchresults {}
-#ctl07_lblKeywordSearchLabel {margin: 0px; padding: 0px;}
-#ctl07_lnkPageletAdvancedLink {text-transform: uppercase;font-size: 10px;
-    font-weight: bold;
-    text-transform: uppercase;}
-.ip-calendarpagelet-content {padding: 0 0 10px 0; font-size: 11px;font-weight: bold; width: 260px; line-height: 16px;}
-
-.ip-calendarpagelet-mainlist {list-style-type:none; margin:0; padding:0;}
-.ip-calendarpagelet-mainlist ul {list-style-type:none; padding:0;margin:0;}
-.ip-calendarpagelet-mainlist li {padding:0;margin:0px;}
-.ip-calendarpagelet-mainlist img {}
-.ip-calendarpagelet-eventimagepanel { width:30px;vertical-align:bottom;padding:15px;}
-.ip-calendarpagelet-featuredevents  {border: 1px solid #000;}
-.ip-calendar-featuredevents {border: 0px solid #000;visibility: hidden; display: none;}
-.ip-calendar-eventtime {font-size: 11px;}
-.ip-calendarpagelet-eventtime {font-size: 10px;font-weight: bold;text-transform: uppercase;}
-.ip-calendar-eventtitlelink {font-size: 11px;display:block;}
-.ip-calendarpagelet-eventtitlelink {font-size: 11px;font-weight: normal !important; text-decoration: none !important;}
-.ip-calendarpagelet-eventtitlelink a:link {font-weight: normal !important;text-decoration: none !important;}
-.ip-calendarpagelet-eventtitlelink a:visited {font-weight: normal !important;text-decoration: none !important;}
-.ip-calendarpagelet-eventtitlelink a:hover {font-weight: normal !important; text-decoration: none !important;}
-.rssFeed {font-size: 11px; list-style:none;text-decoration: none !important;}
-.rssFeed a:link {font-weight: normal !important;text-decoration: none !important;}
-.rssFeed a:visited {font-weight: normal !important; text-decoration: none;}
-.rssFeed a:hover {font-weight: normal !important; text-decoration: underline;}
-.rssFeed li {list-style:none; margin: 0px; padding: 0px;}
-.rssFeed ul {list-style:none; margin: 0px; padding: 0px;}
-.rssfeed-title {font-weight: bold; padding-bottom: 5px; margin: 0px; color: #990033; font-size: 13px;}
-.rssfeed-title a:link {font-weight: bold; padding-bottom: 0px; margin: 0px; color: #990033 !important; text-decoration: none !important;}
-.rssfeed-title a:visited {font-weight: bold; padding-bottom: 0px; margin: 0px; color: #990033 !important; text-decoration: none !important;}
-.rssfeed-title a:hover {font-weight: bold; padding-bottom: 0px; margin: 0px; color: #660033 !important;  text-decoration: underline !important;}
-
-ip-calendarpagelet-content h3 {
-	margin: 0px;
-	padding: px;
-color: #660033; font-size: 18px; line-height: 24px;
-}
-.ip-calendar-content h3 {
-	margin: 0px;
-	padding: 10px 0px 5px 0px;
-}
-.rssRow odd h4 {font-weight: normal !important; font-size: 11px; margin: 0 0 3px 0;}
-.rssRow h4 {font-weight: normal !important; font-size: 11px; margin: 0 0 5px 0; line-height: 14px;}
-.ip-calendarpagelet-calendarlink {font-size: 10px;}
-.ip-calendarpagelet-calendarlink a:link {font-size: 10px;  font-weight: bold;}
-.ip-calendarpagelet-calendarlink a:visited {font-size: 10px;font-weight: bold;}
-.ip-calendarpagelet-calendarlink a:hover {font-size: 10px; font-weight: bold;}
-.home-view-news-link {}
-.home-view-news-link a:link {font-size: 10px;  font-weight: bold;}
-.home-view-news-link a:visited {font-size: 10px;  font-weight: bold;}
-.home-view-news-link a:hover {font-size: 10px; font-weight: bold;}
-#colour12794 {
-BACKGROUND-COLOR: #990033;
-}
-
-OL#controls {
-BORDER-BOTTOM: #000 0px solid; POSITION: absolute; BORDER-LEFT: #000 0px solid; PADDING-BOTTOM: 0px; MARGIN: 0px -20px; PADDING-LEFT: 40px; WIDTH: 400px; PADDING-RIGHT: 0px; HEIGHT: 0px; BORDER-TOP: #000 0px solid; TOP: 565px; BORDER-RIGHT: #000 0px solid; PADDING-TOP: 0px
-}
-OL#controls LI {
-PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
-}
-OL#controls LI A {
-BORDER-BOTTOM: #ccc 2px solid; BORDER-LEFT: #ccc 2px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BACKGROUND: #fff; FLOAT: left; COLOR: #555; FONT-SIZE: 80%; BORDER-TOP: #ccc 2px solid; BORDER-RIGHT: #ccc 2px solid; TEXT-DECORATION: none; PADDING-TOP: 0px
-}
-OL#controls LI.current A {
-BORDER-BOTTOM: #990033 2px solid; BORDER-LEFT: #990033 2px solid; BACKGROUND: #ccdceb; COLOR: #fff; BORDER-TOP: #990033 2px solid; BORDER-RIGHT: #990033 2px solid
-}
-OL#controls LI A:focus {
-OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
-}
-#prevBtn A:focus {
-OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
-}
-#nextBtn A:focus {
-OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
-}
-.ipb-jc-headertitle {
-PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #990033; FONT-SIZE: 18px; FONT-WEIGHT: bold; PADDING-TOP: 15px
-}
-.ipb-jc-searchpanecaption {
-MARGIN: 15px 0px 10px; COLOR: #990033; FONT-SIZE: 14px; FONT-WEIGHT: bold
-}
-.ipb-jc-simplesearchheader {
-FONT-WEIGHT: bold
-}
-    a.healthTheme{
-    background-color: #585179;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    display: block;
-    float:;
-    font-size: 18px;
-    margin: 0 5px 5px 0;
-    padding: 20px;
-    text-align: center;
-    width: 265px;
-    text-shadow:#333333 1px 1px;
-    font-weight: normal;
-    }
-    .techTheme{
-    background-color: #316db9;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    display: block;
-    float:;
-    font-size: 18px;
-    margin: 0 0 5px 0;
-    padding: 20px;
-    text-align: center;
-    width: 265px;
-    text-shadow:#333333 1px 1px;
-    font-weight: normal;
-    }
-    .communityTheme{
-    background-color: #9fad0e;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    display: block;
-    float:;
-    font-size: 18px;
-    margin: 0 5px 5px 0;
-    padding: 20px;
-    text-align: center;
-    width: 265px;
-    text-shadow:#333333 1px 1px;
-    font-weight: normal;
-    }
-    .skilledTheme{
-    background-color: #a24e20;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    display: block;
-    float:;
-    font-size: 18px;
-    margin: 0 0 5px 0;
-    padding: 20px;
-    text-align: center;
-    width: 265px;
-    text-shadow:#333333 1px 1px;
-    font-weight: normal;
-    }
-    .businessTheme{
-    background-color: #547637;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    display: block;
-    float:;
-    font-size: 18px;
-    margin: 0 5px 5px 0;
-    padding: 20px;
-    text-align: center;
-    width: 265px;
-    text-shadow:#333333 1px 1px;
-    font-weight: normal;
-    }
-    .commTheme{
-    background-color: #cf7516;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    display: block;
-    float:;
-    font-size: 18px;
-    margin: 0 0 5px 0;
-    padding: 20px;
-    text-align: center;
-    width: 265px;
-    text-shadow:#333333 1px 1px;
-    font-weight: normal;
-    }
-    .prepTheme{
-    background-color: #990033;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    display: block;
-    float:;
-    font-size: 18px;
-    margin: 0 5px 0 0;
-    padding: 20px;
-    text-align: center;
-    width: 265px;
-    text-shadow:#333333 1px 1px;
-    font-weight: normal;
-    }
-    .ceTheme{
-    background-color: #660033;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    display: block;
-    float:;
-    font-size: 18px;
-    margin: 0 0 0 0;
-    padding: 20px;
-    text-align: center;
-    width: 265px;
-    text-shadow:#333333 1px 1px;
-    font-weight: normal;
-    }
-    .noMargin h2 {margin: 0 !important;
-    }
-    a:hover.healthTheme {
-    background-color: #333333;
-text-decoration: none !important;
-    }
-    a:hover.techTheme {
-    background-color: #333333;
-text-decoration: none !important;
-    }
-    a:hover.skilledTheme {
-    background-color: #333333;
-text-decoration: none !important;
-    }
-    a:hover.communityTheme {
-    background-color: #333333;
-text-decoration: none !important;
-    }
-    a:hover.businessTheme {
-    background-color: #333333;
-text-decoration: none !important;
-    }
-    a:hover.commTheme {
-    background-color: #333333;
-text-decoration: none !important;
-    }
-    a:hover.prepTheme {
-    background-color: #333333;
-text-decoration: none !important;
-    }
-    a:hover.ceTheme {
-    background-color: #333333;
-text-decoration: none !important;
-    }
-</style>
-
-</head>
-<body id="thebody" class="thrColFixHdr"><form name="IronPointForm" method="Post" action="/" id="IronPointForm" runat="server">
-<div>
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['IronPointForm'];
-if (!theForm) {
-    theForm = document.IronPointForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
-</form><!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NPWH9X"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NPWH9X');</script>
-<!-- End Google Tag Manager -->
-
-<a name="Top" id="Top"></a>
-<div class="jumpMenuLinks">
-<a tabindex="1" href="#jumpToMenu" class="jumpMenuLinks">Jump to Main Menu</a>
-<a tabindex="1" href="#jumpToSubMenu" class="jumpMenuLinks">Jump to Sub Menu</a>
-<a tabindex="2" href="#jumpToContent" class="jumpMenuLinks">Jump to Content</a></div>
-
-<div id="container">
-<div id="colour12794">
-<div id="searchBarNav"><div style="float: left; margin-right: 20px;">
-<a href="http://www.facebook.com/mohawkcollege" title="http://www.facebook.com/mohawkcollege" target="_blank"><img alt="Mohawk College Facebook Account" src="/Assets/images/facebook-icon-link.png" /></a><a target="_blank" href="https://twitter.com/mohawkcollege" title="Mohawk College Twitter Account"><img alt="Mohawk College Twitter Account" src="/Assets/images/twitter-icon-link.png" /></a><a href="http://www.youtube.com/mohawkcollege" title="http://www.youtube.com/mohawkcollege" target="_blank"><img alt="Mohawk College YouTube Account" src="/Assets/images/youtube-icon-link.png" /></a>
-<a href="https://plus.google.com/109413405217552083262/about?gl=CA&amp;hl=en-CA" title="https://plus.google.com/109413405217552083262/about?gl=CA&amp;hl=en-CA" target="_blank"><img alt="Mohawk College Google Plus Account" src="/Assets/images/Google+Plus+icon.png" /></a><a target="_blank" title="http://www.linkedin.com/company/20545" href="http://www.linkedin.com/company/20545"><img src="/Assets/images/linked-icon-link.png" alt="Mohawk College LinkedIn Account" /></a><a target="_blank" title="Pinterest" href="http://pinterest.com/mohawkcollege/"><img src="/Assets/Library/Pinterest2.png" alt="Mohawk College Pinterest Account" /></a><a target="_blank" title="Instagram" href="http://instagram.com/mohawk.college"><img src="/Assets/Library/Instagram+logo+-+28x31.png" alt="Mohawk College Instagram Account" /></a><a href="/blogs.html" title="Mohawk College Blogs"><img alt="Blogs" src="/Assets/images/blog-dropshadow.png" /></a><a href="http://www.mohawkcollege.ca/one-card.html"><img alt="One Card" src="/Assets/images/Mohawk+One+Card+icon.png" /></a></div>
-<div style="float: left; margin-right: 20px;">
-<a href="http://mocomo.mohawkcollege.ca" title="Login to MoCoMotion"><img src="/Assets/2010TempateAssets/mocomotion-login-link.png" alt="Login to MoCoMotion" /></a>
-<a href="http://elearn.mohawkcollege.ca" title="Login to eLearn"><img alt="Login to eLearn" src="/Assets/2010TempateAssets/elearn-login-link.png" /></a>
-<a title="Accessibility at Mohawk" href="/accessibility.html"><img src="/Assets/2010TempateAssets/accessibility-link.png" alt="Link to the Accessibility Site" /></a>
-</div>
-<div style="width: 300px; float: right;">
-<script>
-  (function() {
-    var cx = '015281560824699501555:g7wmzavqeoq';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox-only></gcse:searchbox-only>
-</div>
-<style>
-    #searchBarNav {
-    overflow: hidden;
-    }
-    #searchBarNav input {
-    height: auto !important;
-    margin: auto !important;
-    width: inherit !important;
-    padding: 0 !important;
-    }
-    #searchBarNav .gsc-search-button input
-    {padding: 5px 10px !important;
-    }
-    .cse .gsc-control-cse, .gsc-control-cse {
-    padding: 5px;
-    }
-    .gsc-control-cse {
-    background-color: transparent !important;
-    border-color: transparent !important;
-    }
-</style></div>
-        <div id="logoFutureadyArea"><a href="http://www.mohawkcollege.ca/"><img src="/Sites/3/templates/images/futuready-template-logo.gif" alt="Mohawk College" width="300" height="105" border="0" style="float:left;"/></a><a href="/admissions/applying.html" title="Applying to Mohawk"><img style="margin: 30px 0px 0px 40px;" src="/Assets/open-house/apply-button.gif" alt="Apply to Mohawk College" /></a>
-<!--a href="/future-students/visit-tour-contact.html" title="Book a Campus Tour"><img style="margin: 30px 20px 0px;" src="/Assets/open-house/visit-button.gif" alt="Visit Mohawk College" /></a-->
-<!-- script below is for the expandable menus -->
-<script type="text/javascript" src="/Assets/JavaScripts/simple-expand.js"></script>
-<script type="text/javascript">
-        $(function () {
-            $('.expander').simpleexpand();
-            prettyPrint();
-        });
+    <script type="text/javascript">
+    var MTIProjectId='271bbd79-582c-427f-81b1-a3b123d36e4d';
+     (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type='text/javascript';
+        mtiTracking.async='true';
+        mtiTracking.src='/themes/de_theme/fonts/avenir/mtiFontTrackingCode.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+       })();
     </script>
-<style>
-    .mainContent-rightcolumnonly-ce-padding {padding-left: 30px !important;}
-    .mainContent-rightcolumnonly-ce-padding p {
-    padding: 0 0 15px !important;
-    }
-    .content {
-    display:none;
-    background-color: #EEEEEE;
-    margin:0;
-    padding: 0 20px 20px 20px;
-    }
-    #certificates .expander.expanded {
-    background-image: none !important;
-    background-color: #eeeeee;
-    display: block;
-    margin: 0;
-    padding: 0;
-    }
-    #certificates .expander.collapsed {
-    background-image: none !important;
-    display:block;
-    margin: 0;
-    padding: 0;
-    }
-    .expanderbutton {
-    background-image: none !important;
-    background-color: #eeeeee;
-    border-top:2px solid #cccccc;
-    display: block;
-    font-size:14px;
-    font-weight:bold;
-    padding: 20px !important;
-    text-decoration:none !important;
-    }
-    .expanderbutton:hover {
-    background-color:#ababab;
-    }
-    .expanderbutton:active {
-    position:relative;
-    }
-    .expander expanderbutton collapsed h2 {margin-top: 0}
-    .landingPageLists {
-    background-color:#EEEEEE;
-    float: none !important;
-    margin: 20px 0;
-    padding:0;
-    width: auto !important;
-    }
-    .landingPageLists ul {
-    margin: 0 0 15px;
-    padding: 0 30px;
-    }
-    .landingPageLists ul li {
-    list-style-type: disc !important;
-    font-size: 100% !important;
-    line-height:140%;
-    margin:0;
-    padding: 5px 0 !important;
-    }
-    .landingPageLists ol li {
-    list-style-type: inherit !important;
-    font-size: 100% !important;
-    line-height:140%;
-    margin:0;
-    padding: 5px 0 !important;
-    }
-    .landingPageLists h2 {
-    color: #990033;
-    font-weight: bold !important;
-    font-size: 100% !important;
-    margin:0;
-    padding:0;
-    }
-    .landingPageLists h3 {
-    color: #990033;
-    font-weight: bold !important;
-    font-size: 100% !important;
-    margin:0;
-    padding:0;
-    }
-    .landingPageLists li a:link {
-    text-decoration: underline;
-    color: #990033;
-    }
-    .landingPageLists li a:visited {
-    text-decoration: underline;
-    color: #990033;
-    }
-    .landingPageLists li a:hover {
-    text-decoration: none;
-    }
-    h4 a:hover {color: #660033 !important; text-decoration: hover !important;}
-    .thrColFixHdr #sidebar2-ce ul {
-    margin: 10px 0 0 0 !important;
-    }
-    .thrColFixHdr #mainContent-rightcolumnonly-ce h1 {
-    margin: 20px 0 0px 40px !important; padding: 0; font-size: 200%
-    }
-    #colour6939, #colour20994, #colour20399, #colour12794, #colour22732 {
-    BACKGROUND-COLOR: #333333
-    }
-    #logoFutureadyArea-ce {
-    background-image: url('/Sites/3/templates/images/future-ready-top-banner-website.png') !important;
-    width: 940px;
-    margin: 0px;
-    background-position: right;
-    background-repeat: no-repeat;
-    height: 105px;
-    clear: both;
-    }
-    .breadcrumbs {
-    display: none !important;
-    }
-    .h2KeylineMaroon {
-    overflow: hidden !important;
-    }
-    .grey-background {overflow: hidden !important;
-    }
-    .thrColFixHdrBlock {
-    border-bottom: 0 !important;
-    }
-    #tabNavFutureStudents {width: 900px; padding: 0px; border: 0px solid #000; margin: 40px 20px 20px 20px; height: 62px; border-bottom: 1px solid #cccccc;}
-    #tabNavFutureStudents ul {margin: 0px; padding: 0px; clear: both;}
-    #tabNavFutureStudents ul li {float: left; list-style-type: none; margin: 0px; padding: 0px; }
-    #tabNavFutureStudents ul li a {text-indent: -9000px; cursor: pointer; height: 62px; margin: 0px; padding: 0px;}
-    #tabNavFutureStudents ul li a#learn {width:271px; background: url(/AssetFactory.aspx?did=34575) no-repeat 0 0; display: block; margin: 0; padding: 0px;}
-    #tabNavFutureStudents ul li a#learn:hover {background: url(/AssetFactory.aspx?did=34575) no-repeat 0 -124px; margin: 0; padding: 0px; display: block; }
-    #tabNavFutureStudents ul li a#why {width: 180px; background: url(/AssetFactory.aspx?did=34575) no-repeat -271px 0; display: block; margin: 0; padding: 0px;}
-    #tabNavFutureStudents ul li a#why:hover {background: url(/AssetFactory.aspx?did=34575) no-repeat -271px -124px; margin: 0; padding: 0px; display: block; }
-    #tabNavFutureStudents ul li a#contactVisit {width: 200px; background: url(/AssetFactory.aspx?did=34575) no-repeat -451px 0; display: block; margin: 0px; padding: 0px;}
-    #tabNavFutureStudents ul li a#contactVisit:hover {background: url(/AssetFactory.aspx?did=34575) no-repeat -451px -124px; margin: 0px; padding: 0px; display: block; }
-    #tabNavFutureStudents ul li a#educator {width: 249px; background: url(/AssetFactory.aspx?did=34575) no-repeat -651px 0; display: block; margin: 0px; padding: 0px;}
-    #tabNavFutureStudents ul li a#educator:hover {background: url(/AssetFactory.aspx?did=34575) no-repeat -651px -124px; margin: 0px; padding: 0px; display: block; }
-    .learnSelected {width: 271px; height: 62px; text-indent: -9000px; background: url(/AssetFactory.aspx?did=34575) no-repeat 0 -62px; margin: 0; padding: 0px; display: block; }
-    .whySelected {width: 180px; height: 62px; text-indent: -9000px; background: url(/AssetFactory.aspx?did=34575) no-repeat -271px -62px; margin: 0; padding: 0px; display: block; }
-    .contactVisitSelected {width: 200px; height: 62px; text-indent: -9000px; background: url(/AssetFactory.aspx?did=34575) no-repeat -451px -62px; margin: 0; padding: 0px; display: block; }
-    .educatorSelected {width: 249px; height: 62px; text-indent: -9000px; background: url(/AssetFactory.aspx?did=34575) no-repeat -651px -62px; margin: 0px; padding: 0px; display: block; }
-</style></div>
+    <link rel="apple-touch-icon" sizes="57x57" href="/themes/de_theme/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/themes/de_theme/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/themes/de_theme/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/themes/de_theme/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/themes/de_theme/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/themes/de_theme/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/themes/de_theme/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/themes/de_theme/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/de_theme/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/themes/de_theme/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/themes/de_theme/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/themes/de_theme/img/favicons/safari-pinned-tab.svg" color="#780032">
+    <meta name="apple-mobile-web-app-title" content="Mohawk College">
+    <meta name="application-name" content="Mohawk College">
+    <meta name="msapplication-TileColor" content="#780032">
+    <meta name="msapplication-TileImage" content="/themes/de_theme/img/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+          <meta name="google-site-verification" content="uVeYfdzZ-XDgli2vNpJmuTFSpBssQAefs4KfjL52Cs4" />
+      </head>
+  <body class="layout-no-sidebars path-frontpage">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      
+  <header id="header" role="banner">
+  <div class="section-header">
+
+    <div id="masthead" class="masthead">
+      <div class="container clearfix">
+          <div class="region region--masthead-second clearfix">
+    <div class="region-inner">
+      <div id="block-googleblock" class="block block-google-custom-search block-google-block">
+  <div class="block--inner">
+    
+        
+          <div class="cse-search"><gcse:searchbox-only resultsUrl="/search-results"></gcse:searchbox-only></div>
+      </div>
+</div>
+<div id="block-mocomotionheader" class="block block-block-content block-block-content9b76320f-d2c2-45b2-8d00-cc90a8b92267">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><a class="header-link" href="https://mocomo.mohawkcollege.ca/cp/home/displaylogin"><span class="icon ion-android-lock"></span>MOCOmotion</a><a class="header-link" href="https://elearn.mohawkcollege.ca/"><span class="icon ion-android-lock"></span>eLearn</a><a href="#" class="search-toggle"><span class="icon ion-android-search"><span class="visually-hidden">Open search box</span></span></a>
+</div>
+      
+      </div>
+</div>
+<div id="block-audience-2" class="block block-system block-system-menu-blockaudience menu--audience">
+  <div class="block--inner">
+    <a href="#" class="header-link audience-toggle"><span class="icon ion-android-people"></span>Information for...<span class="icon ion-android-arrow-dropdown"></span></a>
+          
+              <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/alumni" data-drupal-link-system-path="node/182">Alumni</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/community" data-drupal-link-system-path="node/185">Community</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/current-students" data-drupal-link-system-path="node/187">Current Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/donors-and-partners" data-drupal-link-system-path="node/188">Donors and Partners</a>
+              </li>
+                <li class="menu-item">
+        <a href="/educator-resources" data-drupal-link-system-path="node/1541">Educators</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/employees" data-drupal-link-system-path="node/189">Employees</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/future-students" data-drupal-link-system-path="node/190">Future Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/indigenous-students" data-drupal-link-system-path="node/183">Indigenous Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/industry-and-employers" data-drupal-link-system-path="node/184">Industry and Employers</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/international-students" data-drupal-link-system-path="node/191">International Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/parents-and-caregivers" data-drupal-link-system-path="node/193">Parents and Caregivers</a>
+              </li>
+        </ul>
+  
+
+
+      </div>
+</div>
+
+    </div>
   </div>
-<div id="header">
-<div id="topLevelNav">	 
-		<a name="jumpMenuLinks" id="jumpMenuLinks"></a><div id="topLevelNavMod"><a id="jumpToMenu" name="jumpToMenu"></a>
-<ul>
-    <li><a id="progCour" title="Programs and Courses at Mohawk" href="/programs-courses.html">Programs &amp; Courses</a></li>
-    <li><a id="services" href="/studentservices.html">Student Services</a></li>
-    <li><a id="life" href="/student-engagement.html">Student Engagement</a></li>
-    <li><a id="athletics" href="/athletics.html">Athletics and Recreation</a></li>
-    <li><a id="international" href="/international/about.html">International Students</a></li>
-    <li><a id="library" href="http://library.mohawkcollege.ca">Mohawk College Library</a></li>
-    <li><a id="login" href="https://mocomo.mohawkcollege.ca/cp/home/displaylogin">Mocomotion Login</a></li>
-</ul>
-</div>
-<style>
-    #SAMrss {display:none; background-color: #FFFF33; padding: 10px; text-align: center; font-weight: bold; font-size: 120%;}
-</style>
-<div id="SAMrss"></div>
-<div style="clear: both;">
-<style>
-    .askBand {
-    background-color: #FF9933;
-    background-image: url("http://www.mohawkcollege.ca/Assets/images/ask-button-band.png");
-    background-position: 30px center;
-    background-repeat: no-repeat;
-    color: #000000;
-    overflow: auto;
-    padding: 15px 15px 15px 115px;
-    }
-    .AskBandQuestionBox {
-    border: 0 none;
-    font-family: verdana;
-    font-size: 14px;
-    margin: 10px 10px 10px 0;
-    padding: 7px 10px;
-    width: 70%;
-    }
-    .irQuestionForm {
-    vertical-align:middle;
-    }
-    .irQuestionForm form {
-    margin:0;
-    padding:0;
-    }
-    .irQuestionForm .buttonStyle {
-    border: 0 none;
-    border-radius: 0 0 0 0;
-    font-family: verdana;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 5px 7px;
-    color: #ffffff;
-    background-color: #660033;
-    }
-</style>
-<div class="askBand">
-<div class="irQuestionForm">
-<form method="post" id="questionForm" action="http://mohawk.intelliresponse.com/ps/index.jsp">
-    <input type="hidden" value="1" name="interfaceID" />
-    <input type="hidden" value="d598adc7-1745-11e0-9766-f9318895ea7e" name="sessionId" />
-    <input type="hidden" value="-1" name="id" /> <input type="hidden" name="requestType" />
-    <input type="text" value="Ask a question about Mohawk College" size="50" onfocus="this.value='';" name="question" maxlength="100%" class="AskBandQuestionBox" id="askBox" />
-    <label style="display: none;" for="askBox">Ask Mohawk</label>
-    <input type="submit" class="buttonStyle" value="Submit" name="NormalRequest" id="submit" />
-    <label style="display: none;" for="submit">Submit</label>
-    <input type="submit" style="margin-left: 5px;" class="buttonStyle" value="Top 10" name="TopQuestionsRequest" id="top10" />
-    <label style="display: none;" for="top10">Top 10</label>
-</form>
-</div>
-</div>
-</div></div><!-- ****************************
-Add google tracking to each link:
-?utm_source=banner-homepage&utm_medium=organic&utm_campaign=themeofscreen
-****************************
--->
-<div style="overflow: hidden; margin-bottom: 10px; height: 325px ! important;">
-<div style="padding: 0px; clear: both;" id="slider">
-<ul>
-    <li style="width: 940px; height: 325px;"><a href="/about/research/institutional-research/kpi.html?utm_source=banner-homepage&amp;utm_medium=organic&amp;utm_campaign=2015-16-KPI" title="KPIs - Key Performance Indicators"><img alt="Key Performance Indicator - Number 1 College for Student Satisfaction" src="/Assets/homeJSImages/kpi-number-one.png" /></a></li>
-    <li style="width: 940px; height: 325px;"><a href="http://www.mohawkcollege.ca/programs-courses/september.html?keywords=&amp;titlesandkeyword=False&amp;titlesonly=False&amp;bulletinsonly=False&amp;usedate=posted&amp;datefrom=2008-01-01T00:00:00&amp;dateto=2016-01-25T00:00:00&amp;sortBy=0&amp;skbacategory_197202=225472,?utm_source=banner-homepage&amp;utm_medium=organic&amp;utm_campaign=applyForSeptember" title="Apply now for September"><img src="/Assets/homeJSImages/apply-now-for-september.jpg" alt="apply-now-for-september" /></a></li>
-    <li style="width: 940px; height: 325px;"><a href="http://www.mohawkcollege.ca/continuing-education/catalogue.html?utm_source=banner-homepage&amp;utm_medium=organic&amp;utm_campaign=spring-CE-2016-catalogue" title="Continuing Education Catalogue - Spring 2016"><img src="/Assets/CE/CE+Winter+Catalogue+940x325.jpg" alt="View the Continuing Education Catalogue Spring 2016 - Register Today!" /></a></li>
-    <li style="width: 940px; height: 325px;"><a href="/career-tools.html?utm_source=banner-homepage&amp;utm_medium=organic&amp;utm_campaign=careerTools" title="Career Tools"><img src="/Assets/homeJSImages/need-help-deciding-program-career-tools.jpg" alt="Need help deciding on a program? Try our career tools" /></a></li>
-    <li style="width: 940px; height: 325px;"><a href="http://www.mohawkcollege.ca/financial-assistance/awards-scholarships-bursaries/apply-now.html?utm_source=banner-homepage&amp;utm_medium=organic&amp;utm_campaign=FNAP-summer-2016" title="FNAP - Apply now Summer 2016"><img src="/Assets/homeJSImages/Financial+Profile+Summer+2016.jpg" alt="FNAP - Apply now Summer 2016" /></a></li>
-</ul>
-</div>
-</div></div>
-<div id="mainContentNoColumns">
-    <a name="jumpToContent" id="jumpToContent"></a>
-<div style="float:left;"><div style="padding: 0px 20px 10px; overflow: auto; width: 620px; float: left;" class="noMargin">
-<h1>Discover Our Wide Selection of Certificates, Diplomas, Degrees and Apprenticeships</h1>
-<div style="float: left; margin-bottom: 20px;">
-<h2><a href="/programs-courses/view-by-theme/health.html" class="healthTheme" title="Health Programs">Health</a></h2>
-<h2><a href="/programs-courses/view-by-theme/community-services.html" class="communityTheme" title="Community Services Programs">Community Services </a></h2>
-<h2><a href="/programs-courses/view-by-theme/business.html" class="businessTheme" title="Business Programs">Business</a></h2>
-<h2><a href="/programs-courses/view-by-theme/preparatory-studies.html" class="prepTheme" title="Preparatory Studies Programs">Preparatory Studies</a></h2>
-</div>
-<div style="float: left;">
-<h2><a href="/programs-courses/view-by-theme/technology.html" class="techTheme" title="Technology Theme">Technology</a></h2>
-<h2><a href="/skilled-trades-apprenticeship-programs.html" class="skilledTheme" title="Skilled Trades and Apprenticeship">Skilled Trades</a></h2>
-<h2><a href="/programs-courses/view-by-theme/communication-arts.html" class="commTheme" title="Communication Arts Programs">Communication Arts</a></h2>
-<h2><a href="/continuing-education.html" class="ceTheme" title="Continuing Education Courses, Diplomas and Certificates">Continuing Education</a></h2>
-</div>
-</div>
-<!-- twitter tracking code - home page only -->
-<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
-<script type="text/javascript">
-twttr.conversion.trackPid('l636u', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
-<noscript>
-<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l636u&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l636u&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" /></noscript></div>
 
-<div style="float:left;">
-<form name="IronPointForm_1" method="Post" id="IronPointForm_1" onsubmit="ipjSubmitIronPointForm(); return false;">
-<script type="text/javascript">
-function setCalculatedPageletHeight(callerID){
-var tbl=document.getElementById(callerID+'_tblMainAS');
-if((tbl)&&(tbl.style.display!="none")&&(tbl.style.height=="100%")){
-setCalculatedPageletRowHeight(tbl);
-}else{
-tbl=document.getElementById(callerID+'_tblMain');
-if((tbl)&&(tbl.style.display!="none")&&(tbl.className.indexOf('ip-calendar-autosize')>-1)){
-setCalculatedPageletRowHeight(tbl);
-}
-}
-}
-function setCalculatedPageletRowHeight(tbl){
-tbl.style.height="";
-for(var i=0;i<tbl.getElementsByTagName('tr').length;i++){
-var tr=tbl.getElementsByTagName('tr')[i];
-if(tr.className.indexOf('ip-tr-week')>-1){
-tr.style.height=(tr.getElementsByTagName('td')[0].clientWidth+1)+'px';
-}
-}
-}
-function updateCalendarPagelet(callerID, containerID, args, waitPanelID, calendarViews)
-{
-var updatePanel = document.getElementById(containerID);
-var waitPanel = document.getElementById(waitPanelID);
-if (calendarViews[args])
-{
-//Update panel from memory
-updatePanel.innerHTML = calendarViews[args].substring(0, calendarViews[args].indexOf('[Error]')-1);
-setCalculatedPageletHeight(callerID);
-var strErr = calendarViews[args].substring(calendarViews[args].indexOf('[Error]')+7);
-if (strErr && strErr.length > 0)
-{
-alert(strErr);
-}
-}
-else
-{
-//Show wait panel
-if (waitPanel)
-{
-waitPanel.style.width = updatePanel.offsetWidth;
-waitPanel.style.height = updatePanel.offsetHeight;
-updatePanel.style.display = 'none';
-if (ipjIsIE)
-waitPanel.style.display = '';
-else
-waitPanel.style.display = 'table';
-}
-var onServerResponse = function(objXMLHTTP)
-{
-if (objXMLHTTP.responseText.charAt(0) == 's')
-{
-//Update panel and save result in memory
-updatePanel.style.display = '';
-waitPanel.style.display = 'none';
-var strErr = objXMLHTTP.responseText.substring(objXMLHTTP.responseText.indexOf('[Error]')+7);
-updatePanel.innerHTML = objXMLHTTP.responseText.substring(1, objXMLHTTP.responseText.indexOf('[Error]'));
-setCalculatedPageletHeight(callerID);
-calendarViews[args] = objXMLHTTP.responseText.substring(1);
-if (strErr && strErr.length > 0)
-{
-alert(strErr);
-}
-}
-}
-ipjDoXmlHttpRequest(callerID, document.forms['IronPointForm'].action, args, onServerResponse);
-}
-}
-function FeaturedEventInfo(name, callerID, tableID, currentRowIndex, slideShowInterval, showIsRunning)
-{
-this.name = name;
-this.callerID = callerID;
-this.tableID = tableID;
-this.currentRowIndex = currentRowIndex;
-this.slideShowInterval = slideShowInterval;
-this.showIsRunning = showIsRunning;
-}
-function updateFeaturedEvent(featuredEventInfo, manualClick, next)
-{
-if (!featuredEventInfo.showIsRunning && !manualClick)
-return;
-var objTable = document.getElementById(featuredEventInfo.tableID);
-if (objTable)
-{
-//Hide current row
-objTable.rows[featuredEventInfo.currentRowIndex].style.display = 'none';
-//Moving back or ahead?
-if (next)
-{
-featuredEventInfo.currentRowIndex = featuredEventInfo.currentRowIndex + 1;
-if (featuredEventInfo.currentRowIndex >= objTable.rows.length)
-featuredEventInfo.currentRowIndex = 1;
-}
-else
-{
-featuredEventInfo.currentRowIndex = featuredEventInfo.currentRowIndex - 1;
-if (featuredEventInfo.currentRowIndex < 1)
-featuredEventInfo.currentRowIndex = objTable.rows.length - 1;
-}
-//Show new row
-objTable.rows[featuredEventInfo.currentRowIndex].style.display = '';
-}
-if (featuredEventInfo.showIsRunning && !manualClick)
-setTimeout('updateFeaturedEvent(' + featuredEventInfo.name + ', false, true);', featuredEventInfo.slideShowInterval);
-}
-</script>
-<style>
-.ip-calendar-autosize .ip-tr-week td{font-size:11px;padding:2px 5px;}
-</style>
-<div id="ctl06_divCalendar" class="ip-calendarpagelet-content ip-calendar-content">
+          <div class="region region--masthead-first clearfix">
+  <div class="region-inner">
+    <div id="block-de-theme-branding" class="block block-system block-system-branding-block">
+  <div class="block--inner">
+    
+        
+          <a href="/" title="Home" rel="home" class="site-logo">
+      <img src="/themes/de_theme/logo.svg" alt="Home" />
+    </a>
+        <div class="site-name">
+      <a href="/" title="Home" rel="home">Mohawk College</a>
+    </div>
+      </div>
+</div>
 
-<h1 style="border-bottom: 10px solid #666666; padding: 0px 0px 10px; display: block;">News &amp; Events</h1>
-<div style="padding: 0px 10px 0px 0px;">
-<script type="text/javascript" src="http://output86.rssinclude.com/output?type=js&amp;id=916649&amp;hash=77d394fc5df9787e27df098456c61833"></script>
-<style>
-    .rssincl-itemtitle {
-    font-size: 100%;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    }
-    }
-</style>
-<div class="home-view-news-link"><a title="Mohawk Matters" href="http://www.mohawknewsdesk.ca">More News »</a> </div>
+    <div class="main-menu--toggle">
+      <a href="#"><span class="icon ion-navicon"></span> Menu </a>
+    </div>
+  </div>
+  </div>
+
+          <div class="region region--masthead-third clearfix">
+    <div class="region-inner">
+      <div id="block-mainnavigation-2" class="block block-expanded-menu-block block-expanded-menu-blockmain">
+  <div class="block--inner">
+    
+        
+          
+              <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/programs" data-drupal-link-system-path="node/16">Programs</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/programs/search" summary="&lt;p&gt;Explore our variety of programs and filter for just the type of program you are looking for. Search for a program by theme, program length, type of credential, location, availability, and opportunity for co-op work terms.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="programs/search">Full-Time Program Search</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/programs/skilled-trades-apprenticeship" summary="&lt;p&gt;Join a workforce in-demand.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/581">Skilled Trades and Apprenticeship</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/programs/want-to-try-college" data-drupal-link-system-path="node/3057">Want to try College?</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/programs/learning-at-mohawk" data-drupal-link-system-path="node/22">Learning at Mohawk</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/ce" data-drupal-link-system-path="node/609">Continuing Education</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/ce/programs" summary="basic_html" data-drupal-link-system-path="ce/programs">Find a Program</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/find-a-course" data-drupal-link-system-path="node/611">Find a Course</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/registration" data-drupal-link-system-path="node/2465">Registration</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/academic-information" data-drupal-link-system-path="node/2482">Academic</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/financial-information" data-drupal-link-system-path="node/2468">Financial</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/what-online-learning" data-drupal-link-system-path="node/2467">Online Learning</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/student-services" data-drupal-link-system-path="node/2494">Student Services</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/ce/continuing-education-catalogue" data-drupal-link-system-path="node/2502">Continuing Education Catalogue</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/become-a-student" summary="basic_html" data-drupal-link-system-path="node/17">Become a Student</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/how-to-apply" data-drupal-link-system-path="node/2331">How to Apply</a>
+              </li>
+                <li class="menu-item">
+        <a href="/become-a-student/apply-as-an-international-student" data-drupal-link-system-path="node/3276">Apply as an International Student</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/tuition-and-fees" summary="&lt;p&gt;Discover your program costs and available resources to help finance your education.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/41">Tuition and Fees</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/academic-dates" data-drupal-link-system-path="node/2847">Academic Dates</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/pathways-and-credit-transfer" summary="&lt;p&gt;Pathways is&amp;nbsp;here to help students understand the options available as they discover new interests and passions.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/1624">Pathways and Credit Transfer</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/become-a-student/prior-learning-assessment-recognition" summary="&lt;p&gt;Prior Learning Assessment &amp;amp; Recognition (PLAR) focuses on the evaluation of prior learning rather than formal educational courses used in the academic&amp;nbsp;transfer of credits&amp;nbsp;or&amp;nbsp;course exemptions&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/40">Prior Learning Assessment &amp; Recognition</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/student-life" data-drupal-link-system-path="node/18">Student Life</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/orientation" summary="&lt;p&gt;Start your college experience at Day One Orientation!&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/2282">Orientation</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/registration-records" data-drupal-link-system-path="node/48">Registration and Records</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/academics" data-drupal-link-system-path="node/50">Academics</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/financial-assistance" summary="&lt;p&gt;Learn about the ways Mohawk helps you learn how to finance your education.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/51">Financial Assistance</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/library" summary="&lt;p&gt;The Library is here to help take your education to the next level.&amp;nbsp;&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/77">Library</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/student-technical-support" summary="&lt;p&gt;Get answers to your tech questions or update your technical skills with free college tools and guides.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/56">Technical Support</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/employment" data-drupal-link-system-path="node/52">Employment</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/student-housing" data-drupal-link-system-path="node/53">Student Housing</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/athletics" summary="&lt;p&gt;Looking to get active? Mohawk offers recreation and&amp;nbsp;fitness programs at the DBARC. Or join a varsity team.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/57">Athletics and Recreation</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/wellness" summary="&lt;p&gt;Mohawk is here for you. Learn about counselling services and&amp;nbsp;Wellness4U.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/55">Wellness</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/activities-and-student-leadership" data-drupal-link-system-path="node/54">Activities and Student Leadership</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/events" summary="basic_html" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about-mohawk" data-drupal-link-system-path="node/20">About</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/leadership-and-administration" summary="&lt;p&gt;Read our Mission, Vision and Values and learn about the Mohawk Executive Group, Senior Leadership Team and Corporate Services. Or explore our Board of Governors section as well as review our Policies and Procedures.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/583">Leadership and Administration</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/teaching/faculty" summary="&lt;p&gt;Discover our Faculty and Instructors and how their making Mohawk a great place to learn.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="about/teaching/faculty">Faculty and Instructors</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-mohawk/50th-anniversary" summary="&lt;p&gt;Share with us your memories of Mohawk!&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/2863">50th Anniversary</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/campuses" data-drupal-link-system-path="node/605">Campuses and Facilities</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/initiatives" summary="&lt;p&gt;Learn about Mohawk&#039;s applied research and&amp;nbsp;sustainability and outreach&amp;nbsp;efforts.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/584">Initiatives</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/institutional-research" data-drupal-link-system-path="node/585">Institutional Research</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about/news" summary="&lt;p&gt;Read about our staff and students&#039;&amp;nbsp;great work and accomplishments.&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="about/news">News and Blogs</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/accessibility" data-drupal-link-system-path="node/588">Accessibility</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/security-and-emergency-management" data-drupal-link-system-path="node/617">Security and Emergency Management</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/work-at-mohawk" data-drupal-link-system-path="node/1250">Work at Mohawk</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-mohawk/contact-mohawk" summary="&lt;p&gt;Not sure where to start? Contact a department or emergency campus services.&amp;nbsp;&lt;/p&gt;
+ basic_html" data-drupal-link-system-path="node/589">Contact Mohawk</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+      </div>
 </div>
-<h3><a style="color: #990033 ! important;" href="/events-calendar.html" title="Mohawk College Events Calendar">Events at Mohawk</a></h3>
-<div id="ctl06_pnlCalendarAll">
-	
-<div id="ctl06_divWait" align="center" style="display: none; #position: relative; overflow: hidden;">
-<div style=" #position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
-<div align="center" style=" #position: relative; #top: -50%">
-Loading...<br><img src="/cm/webui/pagetypes/SyndicatedCalendar/wait.gif">
+<div id="block-visit-apply-buttons" class="block block-block-content block-block-content0299650e-a0a0-4500-8c77-d8587147b854">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="visit-apply-buttons"><a class="btn btn-secondary" href="/programs/search/september">Start this September</a><a class="btn btn-secondary" href="/future-students/visit-mohawk">Visit</a></div>
 </div>
+      
+      </div>
 </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+  </header>
+
+  <div class="region region--content-prefix clearfix">
+    <div class="views-element-container block block-views block-views-blockhomepage-banner-block-1" id="block-views-block-homepage-banner-block-1">
+  <div class="block--inner">
+    
+        
+          <div><div class="view view-homepage-banner view-id-homepage_banner view-display-id-block_1 js-view-dom-id-d20a56f3fdede1ed8cbaece268d978ee9409bd3eae808061fd9848129b195538">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-row--inner">
+      
+<div class="homepage-banner--container">
+ <div class="homepage-banner--image">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/homepage_banner/public/2016-08/health-students-in-the-lab.jpg?itok=1AaHHBDi 1x" media="all and (min-width: 992px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/homepage_banner_4/public/2016-08/health-students-in-the-lab.jpg?itok=7rEehTE7 1x" media="all and (min-width: 1580px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/homepage_banner_2/public/2016-08/health-students-in-the-lab.jpg?itok=0TBXVx4d 1x" media="all and (min-width: 608px) and (max-width: 991px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/homepage_banner_3/public/2016-08/health-students-in-the-lab.jpg?itok=UeYhVS1D 1x" media="(max-width: 607px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/sites/default/files/styles/homepage_banner_3/public/2016-08/health-students-in-the-lab.jpg?itok=UeYhVS1D" alt="Health students in the lab" typeof="foaf:Image" />
+
+  </picture>
+
 </div>
-<span id="ctl06_spnFeaturedEvents" style="display:none;">
-<table id="ctl06_tblFeaturedEvents" class="ip-calendarpagelet-featuredevents ip-calendar-featuredevents">
-		<tr class="ip-calendar-featuredeventheader">
-			<td>
-<table>
-<tr>
-<td class="ip-calendarpagelet-featuredeventheadercontrols ip-calendar-featuredeventheadercontrols"><span id="ctl06_lblFeaturedEventsControls"></span></td>
-</tr>
-</table>
-</td>
-		</tr>
-	</table>
-	
+ <div class="container">
+    <div class="homepage-banner--textbox">
+      <div class="homepage-banner--name">Apply today, start this September!</div>
+      <div class="homepage-banner--cta"><a href="/become-a-student/how-to-apply/start-september">Learn more</a></div>
+    </div>
+    <div class="homepage-banner--caption">Cardiovascular Technology students learning in the lab</div>
+  </div>
+  <div class="homepage-banner--gradient"></div>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+</div>
+<div class="views-element-container block block-views block-views-blockprogram-theme-block-1" id="block-views-block-program-theme-block-1">
+  <div class="block--inner">
+    
+        
+          <div><div class="view view-program-theme view-id-program_theme view-display-id-block_1 js-view-dom-id-73a16137e31ef575862824d4091a5cfe0f24c995810bf8e146f7e451237efe81">
+  
+    
+      <div class="view-header">
+      <h2>Discover our wide selection of Certificates, Diplomas, Degrees and Apprenticeships</h2>
+    </div>
+      
+      <div class="view-content">
+      <div class="item-list">
+        <ul>
+                  <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/programs/search?filter-field-home-theme=business">Business</a></span></div></li>
+                  <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/programs/search?filter-field-home-theme=communication-arts">Communication Arts</a></span></div></li>
+                  <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/programs/search?filter-field-home-theme=community-services">Community Services</a></span></div></li>
+                  <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/programs/search?filter-field-home-theme=graduate-studies">Graduate Studies</a></span></div></li>
+                  <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/programs/search?filter-field-home-theme=health">Health</a></span></div></li>
+                  <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/programs/search?filter-field-home-theme=preparatory-studies">Preparatory Studies</a></span></div></li>
+                  <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/programs/search?filter-field-home-theme=skilled-trades">Skilled Trades</a></span></div></li>
+                  <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/programs/search?filter-field-home-theme=technology">Technology</a></span></div></li>
+                  <li>
+            <div class="views-field views-field-nothing">
+              <span class="field-content">
+              <a href="http://www.mohawkcollege.ca/ce/programs">Continuing Education</a>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+            <div class="view-footer">
+      Need help deciding? Try our <a href="/student-life/employment/career-tools">Career Tools</a>
+    </div>
+    </div>
+</div>
+
+      </div>
+</div>
+
+  </div>
+
+<div class="layout-container">
+  <div class="section-content">
+    <div class="container clearfix">
+      
+      
+      
+      <main id="main" role="main" class="column">
+        <a id="main-content" tabindex="-1"></a>        <div class="front-page-content">
+          <h2 class="front-title">What's happening at Mohawk?</h2>
+            <div class="region region--front-page clearfix">
+    <div class="region-inner">
+      <div class="views-element-container block block-views block-views-blockevents-block-1" id="block-views-block-events-block-1">
+  <div class="block--inner">
+    
+        
+          <div><div class="event-list view view-events view-id-events view-display-id-block_1 js-view-dom-id-55e3c1b3c569bd5861733ea57453c92d236b1a320ad26c4ee1bd8d70b7a00c97">
+  
+    
+      <div class="view-header">
+      <h2>Events</h2><a href="http://www.mohawkcollege.ca/events">View all events</a>
+    </div>
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li class="event-list">
+<article data-history-node-id="2261" role="article" about="/events/community-otherexternal/city-school-open-table-0" class="node node--type-event node--view-mode-compact">
+  <div class="node__content">
+    <div class="node-event__date">
+      <span class="node-event__date-month">Sep</span>
+      <span class="node-event__date-day">12</span>
+    </div>
+    <div class="node-event__content-container">
+        <span class="field field--name-title field--type-string field--label-hidden"><h2><a href="/events/community-otherexternal/city-school-open-table-0" hreflang="en">City School Open Table</a></h2>
 </span>
-<div id="ctl06_pnlCalendarRefresh">
-		
-<div id="ctl06_pnlCalendar">
-			
 
-<ul id="ctl06_ulListMain" class="ip-calendarpagelet-mainlist ip-calendar-mainlist" style="display:;">
-<li>Wednesday, May, 11<ul><li><table>
-	<tr>
-		<td class="ip-calendar-eventdetailspanel ip-calendarpagelet-eventdetailspanel"><div><span class="ip-calendar-eventtime ip-calendarpagelet-eventtime">11:30 AM</span>&nbsp;<a class="ip-calendar-eventtitlelink ip-calendarpagelet-eventtitlelink" href="http://www.mohawkcollege.ca/events-calendar/Welcome_Social_-_Fennell_Campus_s_p24179.html?EventMode=View&EventOccurrence=0">Welcome Social - Fennell Campus</a></div></td>
-	</tr>
-</table>
-</li></ul></li></ul>
-<table id="ctl06_tblMainAS" cellspacing="0" cellpadding="0" class="ip-calendarpagelet-maintable ip-calendar-maintable ip-calendar-autosize" style="height:100%;width:100%;table-layout:fixed;display:none;">
-			</table>
-			
+        
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">  <img src="/sites/default/files/styles/thumbnail/public/2016-08/Open%20Table%20graphic_0.png?itok=Wlm2kLJG" width="160" height="160" alt="Chat with Mohawk about learning in your community" typeof="foaf:Image" class="image-style-thumbnail" />
 
-		</div>
-
-	</div>
 
 </div>
-<span id="ctl06_lblFullCalendarLink"><a href="/events-calendar.html" class="ip-calendarpagelet-calendarlink">View all Mohawk Events</a></span><br />
-<h3><a style="color: #990033 ! important;" title="Events for Alumni and the Community" href="/events-calendar/alumni-community.html">Events for Alumni &amp; the Community</a></h3>
-</div></form></div>
-	<!-- end #mainContent --></div>
-	<!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
-  <div id="footer" style="clear:both;"><div id="expanded-footer-container" style="border-top: 3px solid #c6c1b9; padding-top: 20px;">
-<div class="expanded-footer">
-<ul>
-    <li>
-    <h2><a title="Programs and Courses at Mohawk" href="/programs-courses.html">Programs &amp; Courses</a></h2>
-    </li>
-    <li><a title="Blended Learning FAQ" href="/programs-courses/blended-learning.html">Blended Learning</a> </li>
-    <li><a title="A - Z List of Programs" href="/programs-courses/a-z-list-programs.html">A - Z List of Programs</a> </li>
-    <li><a title="Continuing Education" href="/continuing-education.html">Continuing Education</a> </li>
-    <li><a title="Online Learning" href="/continuing-education/online-learning.html">Online Learning</a> </li>
-    <li><a href="/international.html" title="International">International Students</a> </li>
-    <li><a title="Apprenticeship Programs" href="/calendar/apprenticeships.html">Apprenticeships</a> </li>
-    <li><a target="_blank" title="elearn.mohawkcollege.ca/" href="https://elearn.mohawkcollege.ca/">Login to eLearn</a> </li>
-</ul>
-<ul>
-    <li>
-    <h2><a title="Student Services" href="/studentservices.html">Student Services</a></h2>
-    </li>
-    <li><a title="CSEP" href="http://dineoncampus.ca/mohawk/">Mohawk Food Services</a> </li>
-    <li><a title="CSEP" href="/financial-assistance/campus-student-employment-program.html">On-Campus Jobs</a> </li>
-    <li><a title="Transportation" href="/environmental-sustainability/transportation.html">Alternate Transportation</a> </li>
-    <li><a title="Off Campus Housing" href="/student-engagement/off-campus-housing.html">Off-Campus Housing</a> </li>
-    <li><a title="Mohawk College Library" href="http://library.mohawkcollege.ca/">Mohawk College Library</a> </li>
-    <li><a title="Athletics &amp; Recreation at Mohawk College" href="/athletics.html">Athletics &amp; Mohawk Mountaineers</a></li>
-    <li><a title="Retail Services" href="/Retail-Services.html">Retail Services</a> </li>
-</ul>
+      
+      <a href="/events/community-otherexternal/city-school-open-table-0">Read more</a>
+    </div>
+  </div>
+</article>
+</li>
+    
+  </ul>
+
 </div>
-<div class="expanded-footer">
-<ul>
-    <li>
-    <h2><a title="Contact Mohawk College" href="/contact.html">Contact Mohawk</a> </h2>
-    </li>
-    <li><a title="Ask a Question About Mohawk College" href="/ask.html">Ask Mohawk - FAQs</a> </li>
-    <li><a title="Mohawk Library Chat" href="/chat.html">Mohawk Library Chat</a> </li>
-</ul>
-<ul>
-    <li>
-    <h2><a href="/future-students/visit-tour-contact.html" title="Contact &amp; Visit Mohawk">Visit Mohawk College</a> </h2>
-    </li>
-    <li><a href="/future-students/visit-tour-contact.html" title="Contact &amp; Visit Mohawk">Book a Campus Tour</a> </li>
-    <li><a title="Upcoming Open House Events" href="/visit-tour/open-house.html">Open House Events</a> </li>
-    <li><a title="Maps &amp; Directions" href="/maps-directions.html">Maps &amp; Directions</a> </li>
-    <li><a title="Parking Services" href="/parking.html">Parking</a> </li>
-</ul>
-<ul>
-    <li>
-    <h2><a title="Mohawk College Bookstore" href="http://mohawk.bookware3000.ca/">Mohawk College Bookstore</a> </h2>
-    </li>
-    <li><a title="Order Textbooks Online" href="http://mohawk.bookware3000.ca/?page=order.html">Order Textbooks Online</a> </li>
-    <li><a title="Hours &amp; Locations" href="http://mohawk.bookware3000.ca/?page=hours.html">Hours &amp; Locations</a> </li>
-</ul>
+
+    </div>
+  
+          </div>
 </div>
-<div class="expanded-footer">
-<ul>
-    <li>
-    <h2><a title="About Mohawk" href="/about.html">About Mohawk</a> </h2>
-    </li>
-    <li><a title="Academic Plan" href="/academicplan.html">Academic Plan</a> </li>
-    <li><a title="Alumni Association" href="/alumni.html">Alumni</a> </li>
-    <li><a title="Administration, Leadership &amp; Governance" href="/about/admin.html">Administration, Leadership &amp; Governance</a> </li>
-    <li><a title="Whistle Blowing" href="/about/admin/bog/whistle-blowing.html">Whistle Blowing</a> </li>
-    <li><a title="Policies and Procedures" href="/corporate-policies-procedures.html">Corporate Policies &amp; Procedures</a> </li>
-    <li><a title="Development at Mohawk College" href="/foundation.html">Mohawk College Foundation</a> </li>
-    <li><a target="_blank" title="Mohawk College Research Ethics Board" href="http://reb.mohawkcollege.ca">Research Ethics Board</a> </li>
-    <li><a title="Research" href="/about/research.html">Research</a> </li>
-    <li><a title="CTL: Centre for Teaching and Learning" href="/about/TeachingLearningQuality/CTL.html">Teaching and Learning</a> </li>
-    <li><a title="Mohawk Campus Renewal Project" href="/campus-renewal.html">Mohawk Campus Renewal</a> </li>
-    <li><a title="GoGreen at Mohawk College" href="/environmental-sustainability.html">Sustainability Office</a> </li>
-    <li><a title="Work at Mohawk College" href="/Explore/jobs/currentjobopps.html">Work at Mohawk</a> </li>
-    <li><a title="Fennell Campus Wind Project" href="/fennell-wind-project.html">Fennell Campus Wind Project</a> </li>
-    <li><a target="_blank" title="Mohawk Residence" href="http://mohawkrez.ca/">Mohawk Residence</a> </li>
-</ul>
+
+      </div>
 </div>
-<div class="expanded-footer">
-<ul>
-    <li>
-    <h2><a title="Applied Research at Mohawk College" href="http://www.mohawkcollege.ca/ideaworks">Applied Research</a></h2>
-    </li>
-    <li><a title="iDeaWorks" href="http://www.mohawkcollege.ca/ideaworks">iDeaWorks</a> </li>
-    <li><a title="Research Ethics Board" href="http://reb.mohawkcollege.ca/">Research Ethics Board</a></li>
-    <li><a title="Research at Mohawk College" href="http://www.mohawkcollege.ca/about/research.html">Research at Mohawk College</a></li>
-</ul>
-<ul>
-    <li>
-    <h2><a title="Resources for Employers, Business &amp; Industry" href="/employers.html">For Employers</a> </h2>
-    </li>
-    <li><a title="Job Centre" href="/jobcentre.html">Hire a Student, Graduate or Co-op Student</a> </li>
-    <li><a target="_blank" title="www.mohawkcollegeenterprise.ca/en/" href="http://www.mohawkcollegeenterprise.ca/en/">Corporate Training</a> </li>
-    <li><a title="Services for Employers" href="/community-training/employers.html">Hiring, Training &amp; Apprenticeship Services</a></li>
-    <li><a href="/community-training.html" title="Human Services Placement">Community Employment Services</a></li>
-</ul>
-<ul>
-    <li>
-    <h2><a title="Safe Campuses" href="/campus-safety-security.html">Security</a></h2>
-    </li>
-    <li><a title="Safe Campuses" href="/campus-safety-security.html">Safe Campuses</a> </li>
-    <li><a title="Sexual Assault and Sexual Violence Awareness" href="/corporate-policies-procedures/sexual-assault-sexual-violence-awareness.html"><b>NEW!</b> Sexual Assault and Sexual Violence Awareness</a></li>
-    <li><a title="Security Alert Messenger (SAM)" href="/campus-safety-security/security-alert-messenger-service-sam.html">Security Alert Messenger (SAM)</a> </li>
-</ul>
+<div class="views-element-container block block-views block-views-blocknews-block-1" id="block-views-block-news-block-1">
+  <div class="block--inner">
+    
+        
+          <div><div class="view view-news view-id-news view-display-id-block_1 js-view-dom-id-024cfdac6bae1d35c5bdb30fca99f7b1c63369a3483215aaa87726937bc2a11b">
+  
+    
+      <div class="view-header">
+      <h2>News</h2><a href="http://www.mohawkcollege.ca/about/news">View all news</a>
+    </div>
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li>
+<article data-history-node-id="3307" role="article" about="/about/news/2016/2016-09/mohawk-college-launches-regions-first-digital-health-technology-access" class="node node--type-news-item node--view-mode-compact">
+  <div class="node__content">
+    <span class="field field--name-title field--type-string field--label-hidden"><h2><a href="/about/news/2016/2016-09/mohawk-college-launches-regions-first-digital-health-technology-access" hreflang="en">Mohawk College launches region&#039;s first Digital Health Technology Access Centre </a></h2>
+</span>
+
+    <a href="/about/news/2016/2016-09/mohawk-college-launches-regions-first-digital-health-technology-access" class="read-more">Read more</a>
+  </div>
+</article>
+</li>
+    
+  </ul>
+
 </div>
-<div class="expanded-footer-last">
-<ul>
-    <li>
-    <h2 style="line-height: 16px;"><a title="Programs &amp; Courses for Immigrants" href="/studentservices/ESL-EFL.html">English Language Instruction</a></h2>
-    </li>
-    <li><a title="Programs &amp; Courses for Immigrants" href="/studentservices/ESL-EFL.html">English Language Instruction Classes</a> </li>
-</ul>
-<ul>
-    <li>
-    <h2><a title="Community Resources &amp; Events" href="/community-resources-events.html">For the Community </a></h2>
-    </li>
-    <li><a title="City School by Mohawk" href="/cityschool.html">City School by Mohawk</a> </li>
-    <li><a title="IELTS Test Centre" href="/international/ielts-hamilton-english-language-testing-system-centre.html">IELTS Test Centre</a> </li>
-    <li><a title="Community Training Solutions" href="/community-training.html">Community Training</a></li>
-    <li><a href="/community-training/academic-upgrading/program-information.html" title="Academic Upgrading">Academic Upgrading</a> </li>
-    <li><a title="Loyalty Card" href="http://www.mohawkcollege.ca/future-ready-card.html">Loyalty Card</a> </li>
-    <li><a title="Conference Services Home" href="http://www.mohawkcollege.ca/conference-services.html">Conference Services</a> </li>
-    <li><a title="McIntyre Performing Arts Centre" href="http://www.mohawkcollege.ca/mcintyre-performing-arts-centre.html">McIntyre Performing Arts Centre</a> </li>
-    <li><a title="Summer Camp 2014" href="http://www.mohawkcollege.ca/summer-camps.html">Summer Camps</a></li>
-    <li><a href="/community-urban-studies-programs/human-services-placement.html" title="Human Services Placement">Human Services Placement</a></li>
-    <li><a href="/community-training.html" title="Human Services Placement">Community Employment Services</a></li>
-    <li style="margin-top: 30px;"><a href="http://www.mohawkcollege.ca/about/research/institutional-research/kpi.html">* 2015-2016 Student KPI - Read more</a></li>
-</ul>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+</div>
+<div id="block-front-page-youtube-video" class="block block-block-content block-block-content3c6e2839-7ac5-4bcc-884e-1f130ef2e264">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="youtube-video">
+<div class="youtube-container">
+   <div class="youtube-player" data-id="c6BgNxDAfr8"></div>
 </div>
 </div>
-<div style="margin-bottom: 20px; clear: both; border-top: 3px solid #c6c1b9;"></div>
-<div style="margin-left: 20px;">
-<div style="float: right;"><a title="MohawkStudents.ca" href="http://www.mohawkstudents.ca/"><img src="/Assets/2010TempateAssets/msaLogo.gif" alt="MSA - Mohawk Students' Association" style="margin-right: 15px; border: 0px solid;" /></a> <a title="MCACES" href="http://www.mcaces.ca/"><img src="/Assets/2010TempateAssets/mcacesLogoHomepge.gif" alt="MCACES - Mohawk College Association of Continuing Education Students" style="width: 125px; margin-right: 15px; border: 0px solid;" /></a> <a target="_blank" onclick="javascript: pageTracker._trackPageview('/GA/ontarioColleges.ca');" title="OntarioColleges.ca" href="http://www.ontariocolleges.ca/"><img src="/Assets/Logos/OntarioColleges.ca+Logos/OntarioColleges.ca+Logo+Orange+200+wide.jpg" alt="OntarioColleges.ca - apply now" style="height: 50px; margin-right: 20px; border: 0px solid;" /></a> </div>
-<span style="font-weight: bold; color: #990033;">Mohawk College</span> P.O. Box 2034, Hamilton, ON, Canada L8N 3T2&nbsp;&nbsp;&nbsp; <br />
-Call 905-575-1212&nbsp; |&nbsp; In Brantford call 519-759-7200<br />
-<a title="Ask a Question About Mohawk College" href="/ask.html">Have a question? Visit mohawkcollege.ca/ask</a>&nbsp; |&nbsp; <a title="Privacy Policy" href="http://www.mohawkcollege.ca/Legal.html">Privacy Policy</a>&nbsp; |&nbsp; <a href="http://www.mohawkcollege.ca/Site_Map.html">Sitemap</a><br />
-Report website problems only <a title="http://www2.mohawkcollege.ca/email.asp?name=Webmaster" href="http://www2.mohawkcollege.ca/email.asp?name=Webmaster">to the Webmaster</a> <!-- Call 905-575-1212&nbsp; |&nbsp; In Brantford call 519-759-7200<br />
-<a title="http://www2.mohawkcollege.ca/email.asp?name=Webmaster" href="http://www2.mohawkcollege.ca/email.asp?name=Webmaster">Report a problem to the Webmaster</a>&nbsp; |&nbsp; <a title="Privacy Policy" href="/Legal.html">Privacy Policy</a>&nbsp; |&nbsp; <a href="/Site_Map.html">Sitemap</a> --></div><span style="padding-left: 20px;">Copyright
-       2004-
-    <script language="JavaScript" src="/Sites/3/templates/js/copyrightYear.js" type="text/javascript"></script>
-Mohawk College  |  Last Updated:4/1/2016 10:33:37 AM</span>
-  <!-- end #footer --></div>
-<!-- end #container --></div>
 <script>
-                 <!-- begin EL tracking -->
-                 var ref=document.referrer;
-                 var cpage=document.URL;
-                 var cpageStrings=window.location.search;
-                 var urlPattern='<img src="https://etrack.mthirty.com/eltrkr/trk-moco.php?r='+ref+'&cp='+cpage+'&campaign_id='+cpageStrings+'" width="0" height="0">';
-                 document.write(urlPattern);
-                 <!-- end EL tracking -->
+(function() {
+    var v = document.getElementsByClassName("youtube-player");
+    for (var n = 0; n < v.length; n++) {
+        var p = document.createElement("div");
+        p.innerHTML = labnolThumb(v[n].dataset.id);
+        p.onclick = labnolIframe;
+        v[n].appendChild(p);
+    }
+})();
+ 
+function labnolThumb(id) {
+    return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
+}
+ 
+function labnolIframe() {
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=0&border=0&wmode=opaque&enablejsapi=1&controls=1&showinfo=0");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("id", "youtube-iframe");
+    this.parentNode.replaceChild(iframe, this);
+}
 </script>
-<div>
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="46D5EB4A" />
+<style>
+.youtube-container { display: block; margin: 0 auto; width: 100%;  }
+.youtube-player { display: block; width: 100%; /* assuming that the video has a 16:9 ratio */ padding-bottom: 56.25%; overflow: hidden; position: relative; width: 100%; height: 100%; cursor: hand; cursor: pointer; display: block; }
+img.youtube-thumb { bottom: 0; display: block; left: 0; margin: auto; max-width: 100%; width: 100%; position: absolute; right: 0; top: 0; height: auto }
+div.play-button { width: 128px; height: 90px; margin-left: -64px; margin-top:-45px; left: 50%; top: 50%; position: absolute; background: url("themes/de_theme/img/skin/YouTube-icon-dark.png") no-repeat; }
+#youtube-iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+</style></div>
+      
+      </div>
 </div>
-<script type="text/javascript">
-<!--
-//ip startup script
-ipjInitIronPointFormHandling();
-var ctl06CalendarViews = new Object();
-//-->
-</script>
+<div id="block-instagram-widget" class="block block-block-content block-block-content7a99015d-d975-4640-93e1-4d8ea45f9434">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="instagram-area"><!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe allowtransparency="true" class="lightwidget-widget" id="lightwidget_9efc3a823e" name="lightwidget_9efc3a823e" scrolling="no" src="//lightwidget.com/widgets/9efc3a823e4a500e802ef38a720f14d9.html"></iframe></div>
+</div>
+      
+      </div>
+</div>
+<div id="block-twitter-feed" class="block block-twitter-feed block-twitter-feed-block">
+  <div class="block--inner">
+    
+        
+          <div class="twitter-area"><div class="twitter-area-inner"><h3>Mohawk College Twitter</h3>
+            <div class="twitter-post"><p>RT <a href="https://twitter.com/prokipt" target="_blank">@prokipt</a>: Great sights <a href="https://twitter.com/MohawkCollege" target="_blank">@MohawkCollege</a> <a href="https://twitter.com/supercrawl" target="_blank">@supercrawl</a> <a href="https://t.co/v2ZkQu145B" target="_blank">https://t.co/v2ZkQu145B</a></p></div>
+    </div></div>
 
-<form name="IronPointForm_Footer" method="Post" id="IronPointForm_Footer" onsubmit="ipjSubmitIronPointForm(); return false;"><input type="hidden" name="__VIEWSTATEFOOTER" id="__VIEWSTATEFOOTER" value="/wEPDwUENTM4MQ8WHB4QaXBSZXZpZXdGb2xsb3dVcGceD2lwVW50aWxGb2xsb3dVcAK0AR4LX19JUF9QRENfSUQC6xQeDWlwVHJhbnNsYXRpb25oHglpcFBhZ2VsZXRnHgtfX0lQX1BWQ19JRAIEHgUzT0lSTmceDmlwQWxsb3dQcmV2aWV3Zx4SaXBJbmFjdGl2ZUZvbGxvd1VwZx4OaXBGb2xsb3d1cFRhc2toHghpcE1vYmlsZWgeDmlwTm9uZUZvbGxvd1VwZx4RaXBBcmNoaXZlRm9sbG93VXBnHgRFM1I2ZxYCAgEPZBYCAgwPZBYCZg8PFgIeEkluaXRpYWxDb250cm9sTG9hZGhkFgICAQ9kFggCAw8PFgIfDmhkZAIFDw8WAh4HVmlzaWJsZWdkFgQCAw8WAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTtkAgUPZBYCAgEPZBYGAgEPFgQfEAUbd2lkdGg6YXV0bztib3JkZXI6MHB4IG5vbmU7Hw9oZAIDDxYCHxAFCWRpc3BsYXk6O2QCBQ8WAh8QBTdoZWlnaHQ6MTAwJTt3aWR0aDoxMDAlO3RhYmxlLWxheW91dDpmaXhlZDtkaXNwbGF5Om5vbmU7ZAIHDw8WAh4EVGV4dAVbPGEgaHJlZj0iL1BhZ2U5NjcwLmFzcHgiIGNsYXNzPSJpcC1jYWxlbmRhcnBhZ2VsZXQtY2FsZW5kYXJsaW5rIj5WaWV3IGFsbCBNb2hhd2sgRXZlbnRzPC9hPmRkAgkPDxYCHw5oZGRk7iEGiVIOBVvVV+GVPFIo7LWW2HHt2uGN5tNw7v6ZR/I=" /></form><script type="text/javascript">ipjMoveViewstateFromFooter()</script></body>
+      </div>
+</div>
+<div id="block-facebookblock" class="block block-facebook-feed block-facebook-block">
+  <div class="block--inner">
+    
+        
+          <div class="facebook-area"><div class="facebook-area-inner"><h3>Mohawk College Facebook</h3><div class="facebook-post"><p>Have a great weekend</p></div></div></div>
+      </div>
+</div>
+
+    </div>
+  </div>
+
+        </div>      </main>
+                </div>
+  </div>
+</div>
+    <div class="region region--content-suffix clearfix">
+    <div id="block-audience" class="block block-system block-system-menu-blockaudience">
+  <div class="block--inner">
+    
+        
+
+    <div class="view-header">
+      <div class="audience-footer-header">
+        <span class="icon ion-android-people"></span>
+      <h2> Find information for...</h2>
+      </div>
+    </div>
+    <div class ='item-list'>
+    <ul><li>
+        <h2>
+          <a href="/alumni"><div>Alumni</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/community"><div>Community</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/current-students"><div>Current Students</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/donors-and-partners"><div>Donors and Partners</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/educator-resources"><div>Educators</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/employees"><div>Employees</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/future-students"><div>Future Students</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/indigenous-students"><div>Indigenous Students</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/industry-and-employers"><div>Industry and Employers</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/international-students"><div>International Students</div></a>
+        </h2>
+      </li><li>
+        <h2>
+          <a href="/parents-and-caregivers"><div>Parents and Caregivers</div></a>
+        </h2>
+      </li></ul>
+    </div>
+  </div>
+</div>
+<div id="block-supportourstudents" class="block block-block-content block-block-content62db06bc-8c94-4f07-b73c-03edcbcd7cb6">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="/donors-and-partners/ways-to-give">How to support our students</a></p></div>
+      
+      </div>
+</div>
+
+  </div>
+
+
+
+      <footer id="footer" role="contentinfo">
+        <div class="region region--footer clearfix">
+    <div class="region-inner">
+      <div id="block-mohawkaddressfooter" class="block block-block-content block-block-contenta4daeed9-cee8-4a55-9900-d72e937516a5">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="footer-address">
+<h2>Mohawk College</h2>
+
+<ul><li>P.O. Box 2034</li>
+	<li>Hamilton, ON, Canada L8N 3T2</li>
+</ul><p><a href="/about-mohawk/contact-mohawk">Contact Mohawk</a></p>
+
+<p><a data-entity-type="node" data-entity-uuid="e341d5c9-f6ec-4225-a3ee-271c9eb23242" href="/about-mohawk/leadership-and-administration/policies-and-procedures/corporate-policies-and" title="Corporate Policies and Procedures">Policies and Procedures</a><br /><a data-entity-type="node" data-entity-uuid="b8a3acb6-ba94-43e3-9202-c05eb1c2f2f7" href="/about-mohawk/leadership-and-administration/policies-and-procedures/sexual-assault-and-sexual" title="Sexual Assault and Sexual Violence Awareness">Sexual Assault and Sexual Violence Awareness</a><br /><a data-entity-type="node" data-entity-uuid="da2034ae-055d-4960-a3df-54ec16f4f4d2" href="/about-mohawk/accessibility" title="Accessibility">Accessibility</a></p>
+</div>
+</div>
+      
+      </div>
+</div>
+<div class="views-element-container block block-views block-views-blockcampus-block-1" id="block-views-block-campus-block-1">
+  <div class="block--inner">
+    
+          <h2>Campuses</h2>
+        
+          <div><div class="view view-campus view-id-campus view-display-id-block_1 js-view-dom-id-d854bd908526a4190f1b499b00d25d50e9c1d7df5bf6ceea71cf2ef52c3df351">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/fennell-campus" hreflang="en">Fennell Campus</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/institute-for-applied-health-sciences-at-mcmaster" hreflang="en">Institute for Applied Health Sciences at McMaster</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/ogwehoweh-skills-and-trades-training-centre" hreflang="en">Ogwehoweh Skills and Trades Training Centre</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/six-nations-polytechnic" hreflang="en">Six Nations Polytechnic</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/about/campuses/stoney-creek-campus" hreflang="en">Stoney Creek Campus</a></span></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+</div>
+<div id="block-mohawksocialmediaprivacyfooter" class="block block-block-content block-block-contenta4bad364-793d-4da6-9131-49e3b800140e">
+  <div class="block--inner">
+    
+        
+          
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="social-media-wrapper">
+<ul>
+	<li><a class="ion-social-facebook" href="https://www.facebook.com/mohawkcollege" target="_blank"><span class="icon-text">Facebook</span></a></li>
+	<li><a class="ion-social-twitter" href="https://twitter.com/mohawkcollege" target="_blank"><span class="icon-text">Twitter</span></a></li>
+	<li><a class="ion-social-instagram" href="https://www.instagram.com/mohawk.college/" target="_blank"><span class="icon-text">Instagram</span></a></li>
+	<li><a class="ion-social-youtube" href="https://www.youtube.com/user/mohawkcollege" target="_blank"><span class="icon-text">Youtube</span></a></li>
+	<li><a class="ion-android-more-vertical" href="/about/contact-mohawk/marketing-and-communications/social-media"><span class="icon-text">More</span></a></li>
+</ul>
+</div>
+
+<p>&nbsp; &nbsp;</p>
+
+<p><a href="http://www.mohawkstudents.ca/" title="mohawk students' association"><img alt="mohawk student's association" height="50" src="/sites/default/files/mohawk%20students%20association/logo-msa-140x70.png" width="100" /></a></p>
+</div>
+      
+      </div>
+</div>
+
+    </div>
+  </div>
+
+    </footer>
+  
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"user":{"uid":0,"permissionsHash":"b48845a936bf8e1208aa5465384b70516dcec0688c9b06bdc618b9ab079c2c2a"}}</script>
+<script src="/core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=2.1.4"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.1.8"></script>
+<script src="/core/misc/drupal.js?v=8.1.8"></script>
+<script src="/core/assets/vendor/picturefill/picturefill.min.js?v=3.0.1"></script>
+<script src="/modules/contrib/google_analytics/js/google_analytics.js?v=8.1.8"></script>
+<script src="/themes/de_theme/bower_components/SimpleStateManager/dist/ssm.min.js?od8num"></script>
+<script src="/themes/de_theme/bower_components/matchHeight/jquery.matchHeight-min.js?od8num"></script>
+<script src="/themes/de_theme/dist/js/script.min.js?od8num"></script>
+<script src="/themes/de_theme/libraries/google_cse/google_cse.min.js?od8num"></script>
+<script src="/themes/de_theme/libraries/slick/slick.min.js?od8num"></script>
+<script src="/themes/de_theme/bower_components/masonry/dist/masonry.pkgd.min.js?od8num"></script>
+<script src="/themes/de_theme/bower_components/featherlight/release/featherlight.min.js?od8num"></script>
+<script src="/themes/de_theme/bower_components/dropkick/lib/dropkick.js?od8num"></script>
+<script src="/core/assets/vendor/matchMedia/matchMedia.min.js?v=0.2.0"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d40aa54ef7","applicationID":"26356517","transactionName":"YARTYxYFWRZVUUEMXllOcFQQDVgLG0JUAlRoAlBUDAE=","queueTime":0,"applicationTime":16,"atts":"TENQFV4fShg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

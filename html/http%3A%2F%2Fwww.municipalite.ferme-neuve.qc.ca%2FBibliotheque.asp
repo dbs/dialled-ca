@@ -166,7 +166,9 @@ h1{margin-top:0px;margin-bottom:0px;font-size:160%;font-weight:bold;}
              </strong><span class="auto-style4">Ferme-Neuve, J0W 1C0</span><br class="auto-style4" />
              <br class="auto-style4" />
                 <span class="auto-style4">Téléphone :&nbsp;&nbsp; (819) 587-</span><span lang="fr-ca"><span class="auto-style4">3400 
-				poste 405</span><br class="auto-style4" />
+				poste 405<br />
+				<br />
+				Responsable:&nbsp; Madame Jeanne-Mance Lebel</span><br class="auto-style4" />
 				<br class="auto-style4" />
 				<span class="auto-style4">
 				<a class="auto-style3" href="mailto:bibliotheque@munfn.ca">

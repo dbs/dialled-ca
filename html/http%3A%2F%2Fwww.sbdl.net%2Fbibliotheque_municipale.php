@@ -20,7 +20,7 @@
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Bibliothèque municipale | Sainte-Brigitte-de-Laval" />
-<meta property="og:description" content="Centre communautaire Le Trivent 3, rue du Couvent Sainte-Brigitte-de-Laval (Québec) G0A 3K0 418 666-4666 poste 1200 trivent.bibli@csdps.qc.ca www.mabibliotheque.ca/sainte-brigitte Horaire régulier Lundi : 18 h à 21 h Mardi : 12 h 30 à 15 h 30 Mercredi : 18 h à 21 h Jeudi : 9 h à 12 h Vendredi : fermé Samedi : 9 &hellip; Continuer la lecture de Bibliothèque municipale" />
+<meta property="og:description" content="La bibliothèque municipale est accessible à toute la population, gratuitement, tout au long de l’année. Elle offre des services, des ressources et des documents qui favorisent la vie culturelle et communautaire du milieu. Centre communautaire Le Trivent 3, rue du Couvent Sainte-Brigitte-de-Laval (Québec) G0A 3K0 418 666-4666 poste 1200 trivent.bibli@csdps.qc.ca www.mabibliotheque.ca/sainte-brigitte Horaire de la bibliothèque" />
 <meta property="og:url" content="http://sbdl.net/bibliotheque-municipale/" />
 <meta property="og:site_name" content="Sainte-Brigitte-de-Laval" />
 <meta property="article:publisher" content="http://www.facebook.com/saintebrigittedelaval" />
@@ -28,17 +28,19 @@
 <meta property="og:image:width" content="1600" />
 <meta property="og:image:height" content="600" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:description" content="Centre communautaire Le Trivent 3, rue du Couvent Sainte-Brigitte-de-Laval (Québec) G0A 3K0 418 666-4666 poste 1200 trivent.bibli@csdps.qc.ca www.mabibliotheque.ca/sainte-brigitte Horaire régulier Lundi : 18 h à 21 h Mardi : 12 h 30 à 15 h 30 Mercredi : 18 h à 21 h Jeudi : 9 h à 12 h Vendredi : fermé Samedi : 9 &hellip; Continuer la lecture de Bibliothèque municipale" />
+<meta name="twitter:description" content="La bibliothèque municipale est accessible à toute la population, gratuitement, tout au long de l’année. Elle offre des services, des ressources et des documents qui favorisent la vie culturelle et communautaire du milieu. Centre communautaire Le Trivent 3, rue du Couvent Sainte-Brigitte-de-Laval (Québec) G0A 3K0 418 666-4666 poste 1200 trivent.bibli@csdps.qc.ca www.mabibliotheque.ca/sainte-brigitte Horaire de la bibliothèque" />
 <meta name="twitter:title" content="Bibliothèque municipale | Sainte-Brigitte-de-Laval" />
 <meta name="twitter:image" content="http://sbdl.net/wp-content/uploads/2015/09/bibli_web.jpg" />
 <!-- / Yoast SEO plugin. -->
 
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="Sainte-Brigitte-de-Laval &raquo; Flux" href="http://sbdl.net/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Sainte-Brigitte-de-Laval &raquo; Flux des commentaires" href="http://sbdl.net/comments/feed/" />
-<link rel="alternate" type="text/calendar" title="Sainte-Brigitte-de-Laval &raquo; Flux iCal" href="http://sbdl.net/events/?ical=1" />
+<link rel="alternate" type="text/calendar" title="Sainte-Brigitte-de-Laval &raquo; Flux iCal" href="http://sbdl.net/evenements/?ical=1" />
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/sbdl.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.3"}};
-			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/sbdl.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
 img.wp-smiley,
@@ -55,36 +57,35 @@ img.emoji {
 }
 </style>
 <link rel='stylesheet' id='tribe-events-calendar-style-css'  href='http://sbdl.net/wp-content/plugins/the-events-calendar/src/resources/css/tribe-events-skeleton.min.css?ver=4.1.0.1' type='text/css' media='all' />
-<link rel='stylesheet' id='megamenu-css'  href='http://sbdl.net/wp-content/uploads/maxmegamenu/style.css?ver=af28f7' type='text/css' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='http://sbdl.net/wp-includes/css/dashicons.min.css?ver=4.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-css'  href='http://sbdl.net/wp-content/uploads/maxmegamenu/style.css?ver=a5ef54' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://sbdl.net/wp-includes/css/dashicons.min.css?ver=4.6.1' type='text/css' media='all' />
 <link rel='stylesheet' id='twentyfifteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='genericons-css'  href='http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/genericons/genericons.css?ver=3.2' type='text/css' media='all' />
-<link rel='stylesheet' id='twentyfifteen-style-css'  href='http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/style.css?ver=4.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-style-css'  href='http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/style.css?ver=4.6.1' type='text/css' media='all' />
 <!--[if lt IE 9]>
 <link rel='stylesheet' id='twentyfifteen-ie-css'  href='http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/css/ie.css?ver=20141010' type='text/css' media='all' />
 <![endif]-->
 <!--[if lt IE 8]>
 <link rel='stylesheet' id='twentyfifteen-ie7-css'  href='http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/css/ie7.css?ver=20141010' type='text/css' media='all' />
 <![endif]-->
-<script type='text/javascript' src='http://sbdl.net/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
-<script type='text/javascript' src='http://sbdl.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://sbdl.net/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://sbdl.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <link rel='https://api.w.org/' href='http://sbdl.net/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sbdl.net/xmlrpc.php?rsd" />
 <link rel='shortlink' href='http://sbdl.net/?p=25' />
 <link rel="alternate" type="application/json+oembed" href="http://sbdl.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsbdl.net%2Fbibliotheque-municipale%2F" />
 <link rel="alternate" type="text/xml+oembed" href="http://sbdl.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsbdl.net%2Fbibliotheque-municipale%2F&#038;format=xml" />
-
 </head>
 
-<body class="page page-id-25 page-template page-template-template-page page-template-template-page-php tribe-bar-is-disabled">
+<body class="page page-id-25 page-template-default tribe-bar-is-disabled">
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">Aller au contenu principal</a>
 
 		<header id="masthead" class="site-header" >
 						<nav id="navigation" class="main-navigation">
-				<div id="mega-menu-wrap-primary" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-right' id='mega-toggle-block-1'></div></div><ul id="mega-menu-primary" class="mega-menu mega-menu-horizontal mega-no-js" data-event="hover" data-effect="slide" data-second-click="go" data-document-click="collapse" data-reverse-mobile-items="true" data-vertical-behaviour="standard" data-breakpoint="600"><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-current-menu-ancestor mega-current-menu-parent mega-current_page_parent mega-current_page_ancestor mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-disable-link mega-menu-item-151' id='mega-menu-item-151'><a class="mega-menu-link">Activités et loisirs</a>
+				<div id="mega-menu-wrap-primary" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-right' id='mega-toggle-block-1'></div></div><ul id="mega-menu-primary" class="mega-menu mega-menu-horizontal mega-no-js" data-event="hover" data-effect="slide" data-second-click="go" data-document-click="collapse" data-reverse-mobile-items="true" data-vertical-behaviour="standard" data-breakpoint="650"><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-current-menu-ancestor mega-current-menu-parent mega-current_page_parent mega-current_page_ancestor mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-disable-link mega-menu-item-151' id='mega-menu-item-151'><a class="mega-menu-link">Activités et loisirs</a>
 <ul class="mega-sub-menu">
-<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-273' id='mega-menu-item-273'><a class="mega-menu-link" href="http://sbdl.net/events/">Événements</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-home mega-menu-item-has-children mega-disable-link mega-menu-item-3544' id='mega-menu-item-3544'><a class="mega-menu-link">Loisirs et services communautaires</a>
+<li class='mega-menu-item mega-menu-item-type-post_type_archive mega-menu-item-object-tribe_events mega-menu-item-3636' id='mega-menu-item-3636'><a class="mega-menu-link" href="http://sbdl.net/evenements/">Événements</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-home mega-menu-item-has-children mega-disable-link mega-menu-item-3544' id='mega-menu-item-3544'><a class="mega-menu-link">Loisirs et services communautaires</a>
 	<ul class="mega-sub-menu">
 <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-157' id='mega-menu-item-157'><a class="mega-menu-link" href="http://sbdl.net/activites-et-loisirs/">Activités et loisirs</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-187' id='mega-menu-item-187'><a class="mega-menu-link" href="http://sbdl.net/inscription-aux-activites-de-loisirs/">Inscription aux activités de loisirs</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-165' id='mega-menu-item-165'><a class="mega-menu-link" href="http://sbdl.net/camps/">Camps</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-199' id='mega-menu-item-199'><a class="mega-menu-link" href="http://sbdl.net/organismes-et-comites/">Organismes et comités</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-162' id='mega-menu-item-162'><a class="mega-menu-link" href="http://sbdl.net/batiments-communautaires/">Bâtiments communautaires</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-189' id='mega-menu-item-189'><a class="mega-menu-link" href="http://sbdl.net/installations-sportives/">Installations sportives</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-204' id='mega-menu-item-204'><a class="mega-menu-link" href="http://sbdl.net/reservation-de-locaux/">Réservation de locaux</a></li>	</ul>
 </li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-current-menu-item mega-page_item mega-page-item-25 mega-current_page_item mega-menu-item-164' id='mega-menu-item-164'><a class="mega-menu-link" href="http://sbdl.net/bibliotheque-municipale/">Bibliothèque municipale</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-156' id='mega-menu-item-156'><a class="mega-menu-link" href="http://sbdl.net/activites-de-plein-air/">Activités de plein-air</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-200' id='mega-menu-item-200'><a class="mega-menu-link" href="http://sbdl.net/parcs-et-espaces-verts/">Parcs et espaces verts</a></li></ul>
@@ -110,7 +111,7 @@ img.emoji {
 <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-186' id='mega-menu-item-186'><a class="mega-menu-link" href="http://sbdl.net/securite-publique/incendie-et-preventions/">Incendie et préventions</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-215' id='mega-menu-item-215'><a class="mega-menu-link" href="http://sbdl.net/securite-publique/premier-repondants/">Premier répondants</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-216' id='mega-menu-item-216'><a class="mega-menu-link" href="http://sbdl.net/securite-publique/service-de-police/">Service de police</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1192' id='mega-menu-item-1192'><a class="mega-menu-link" href="http://sbdl.net/securite-publique/en-cas-durgence/">En cas d'urgence</a></li>	</ul>
 </li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-item-217' id='mega-menu-item-217'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/">Service de proximité</a>
 	<ul class="mega-sub-menu">
-<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-178' id='mega-menu-item-178'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/entreprenariat/">Entreprenariat</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-185' id='mega-menu-item-185'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/hebergement/">Hébergement</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-219' id='mega-menu-item-219'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/transport/">Transport</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-218' id='mega-menu-item-218'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/services-dedication/">Services d'éducation</a></li>	</ul>
+<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-178' id='mega-menu-item-178'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/entreprenariat/">Entreprenariat</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-185' id='mega-menu-item-185'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/hebergement/">Hébergement</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-3871' id='mega-menu-item-3871'><a class="mega-menu-link" href="http://sbdl.net/marche-public/">Marché public</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-219' id='mega-menu-item-219'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/transport/">Transport</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-218' id='mega-menu-item-218'><a class="mega-menu-link" href="http://sbdl.net/service-de-proximite/services-dedication/">Services d'éducation</a></li>	</ul>
 </li></ul>
 </li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-disable-link mega-menu-item-197' id='mega-menu-item-197'><a class="mega-menu-link">Notre ville</a>
 <ul class="mega-sub-menu">
@@ -124,26 +125,29 @@ img.emoji {
 	<ul class="mega-sub-menu">
 <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-223' id='mega-menu-item-223'><a class="mega-menu-link" href="http://sbdl.net/services-de-la-ville/">Services de la ville</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-163' id='mega-menu-item-163'><a class="mega-menu-link" href="http://sbdl.net/batiments-municipaux/">Bâtiments municipaux</a></li>	</ul>
 </li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-174' id='mega-menu-item-174'><a class="mega-menu-link" href="http://sbdl.net/demande-de-renseignements/">Demande de renseignements</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-202' id='mega-menu-item-202'><a class="mega-menu-link" href="http://sbdl.net/plainte-requete/">Plainte et requête</a></li></ul>
-</li></ul></div>				
+</li></ul></div>
 			</nav><!-- .main-navigation -->
 							<div class="site-branding  no-branding">
+					<span class="background-fixe"></span>
+					<span class="background-mobile"></span>
+					<h1 class="site-title">
+						<a href="http://sbdl.net/" rel="home">
+							<img alt="Sainte-Brigitte-de-Laval" src="http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/images/logo.png">
+															<span class="site-description">Une ville qui se réinvente</span>
+													</a>
+					</h1>
 
-										<p class="site-title"><a href="http://sbdl.net/" rel="home"><img alt="Sainte-Brigitte-de-Laval" src="http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/images/logo.png"></a></p>
-														<p class="site-description">Une ville qui se réinvente</p>
-							</div><!-- .site-branding -->
-			
+
+			</div><!-- .site-branding -->
+
 		</header><!-- .site-header -->
-
-		
-
-	
 	<div id="secondary" class="secondary-bar page-sidebar">
 
 					<div id="widget-area" class="widget-area" role="complementary">
 				<aside id="search-4" class="widget widget_search"><form role="search" method="get" class="search-form" action="http://sbdl.net/">
 				<label>
 					<span class="screen-reader-text">Rechercher&nbsp;:</span>
-					<input type="search" class="search-field" placeholder="Recherche&hellip;" value="" name="s" title="Rechercher&nbsp;:" />
+					<input type="search" class="search-field" placeholder="Recherche&hellip;" value="" name="s" />
 				</label>
 				<input type="submit" class="search-submit screen-reader-text" value="Rechercher" />
 			</form></aside><aside id="addthis-follow-widget-3" class="widget atfollowwidget"><div class="addthis_default_style addthis_32x32_style addthis_toolbox"><a addthis:userid="saintebrigittedelaval" class="addthis_button_facebook_follow"></a><a addthis:userid="ville-de-sainte-brigitte-de-laval" class="addthis_button_linkedin_follow" addthis:usertype="company"></a><a addthis:userid="+SbdlNetVille/posts" class="addthis_button_google_follow"></a><a addthis:userid="stebrigittedelaval" class="addthis_button_youtube_follow"></a><a addthis:userid="http://sbdl.net/feed/" class="addthis_button_rss_follow"></a></div></aside>				
@@ -155,7 +159,7 @@ img.emoji {
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<a class="print-link" href="javascript:window.print()">Imprimer</a>
-			<p id="breadcrumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="http://sbdl.net" rel="v:url" property="v:title">Accueil</a> &gt; <span class="breadcrumb_last">Bibliothèque municipale</span></span></span></p>					<script type="text/javascript">
+		<p id="breadcrumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="http://sbdl.net" rel="v:url" property="v:title">Accueil</a> &gt; <span class="breadcrumb_last">Bibliothèque municipale</span></span></span></p>					<script type="text/javascript">
 			document.body.style.backgroundImage="url('http://sbdl.net/wp-content/uploads/2015/09/bibli_web.jpg'), url('/wp-content/themes/sainte-brigitte-de-laval/images/fond_galerie.jpg?>')";
 			document.body.style.backgroundRepeat="no-repeat, repeat";
 			document.body.style.backgroundSize = "100% auto, auto";
@@ -167,15 +171,16 @@ img.emoji {
 	<header class="entry-header">
 		<h1 class="entry-title">Bibliothèque municipale</h1>	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<h3>Centre communautaire Le Trivent</h3>
+	<div class="entry-content">	
+		<p>La bibliothèque municipale est accessible à toute la population, gratuitement, tout au long de l’année. Elle offre des services, des ressources et des documents qui favorisent la vie culturelle et communautaire du milieu.</p>
+<h4>Centre communautaire Le Trivent</h4>
 <p>3, rue du Couvent<br />
 Sainte-Brigitte-de-Laval (Québec) G0A 3K0<br />
 418 666-4666 poste 1200<br />
 <a style="color: #29a1d8;" href="mailto:trivent.bibli@csdps.qc.ca">trivent.bibli@csdps.qc.ca<br />
 </a><a style="color: #29a1d8;" href="http://www.mabibliotheque.ca/sainte-brigitte" target="_blank">www.mabibliotheque.ca/sainte-brigitte</a></p>
 <table border="0" width="300" cellspacing="1" cellpadding="1">
-<caption>Horaire régulier</caption>
+<caption>Horaire de la bibliothèque</caption>
 <tbody>
 <tr>
 <td>Lundi :</td>
@@ -199,7 +204,7 @@ Sainte-Brigitte-de-Laval (Québec) G0A 3K0<br />
 </tr>
 <tr>
 <td>Samedi :</td>
-<td>9 h à 12 h</td>
+<td>8 h 30 à 12 h 30</td>
 </tr>
 <tr>
 <td>Dimanche :</td>
@@ -213,8 +218,7 @@ Sainte-Brigitte-de-Laval (Québec) G0A 3K0<br />
 <p>Services et activités • Service de référence • Catalogues d’accès publics pour consulter l’ensemble de la collection en ligne, le dossier d’abonné, renouveler et réserver des documents • Postes publics pour traitement de texte et Internet • Chute à documents • Espace de travail • Ventes annuelles de livres usagés • Prêt entre bibliothèques (PEB) • Livres numériques • Programme d’activités culturelles pour les différentes clientèles • Activités d’éveil à la lecture pour les tout-petits • Programme une naissance, un livre • Ateliers de formation • Photocopieur</p>
 <p><a href="https://oyez.lexum.com/site/fr/759/p/12121/pdf.do">Dépliant d&rsquo;information sur la bibliothèque municipale Le Trivent</a></p>
 <h3>Réseau BIBLIO</h3>
-<p>La bibliothèque est membre du réseau BIBLIO de la Capitale-Nationale et de la Chaudière-Appalaches, permettant ainsi à ses abonnés d’avoir accès à plus de 2 136 000 documents répartis dans 780 bibliothèques.</p>
-<p>La collection municipale regroupe, quant à elle, près de 16 000 documents. Trois fois l’an, le réseau échange 1 500 titres déposés chez nous. De plus, la Ville fait l’acquisition de nouveautés plusieurs fois par année.</p>
+<p>La bibliothèque est membre du réseau BIBLIO. La collection municipale regroupe près de 16 000 documents. Trois fois l’an, le réseau échange 1 500 titres déposés chez nous. De plus, la Ville fait l’acquisition de nouveautés plusieurs fois par année.</p>
 <h4>Inscription</h4>
 <p>L’inscription est gratuite pour les résidents de la ville. Les adultes ont droit à un prêt de cinq biens par visite. Les jeunes (moins de 13 ans) ont droit à trois biens par visite.</p>
 <p>Une équipe de bénévoles encadrée par deux employés s’occupe de la bibliothèque. Vous souhaitez nous offrir un peu de votre temps? Contactez la coordonnatrice à la vie communautaire au 418 825-2515, poste 265, ou à <span style="color: #29a1d8;"><a style="color: #29a1d8;" href="mailto:loisirs@sbdl.net">loisirs@sbdl.net</a></span></p>
@@ -249,7 +253,7 @@ Sainte-Brigitte-de-Laval (Québec) G0A 3K0<br />
 			<aside id="search-3" class="widget widget_search"><form role="search" method="get" class="search-form" action="http://sbdl.net/">
 				<label>
 					<span class="screen-reader-text">Rechercher&nbsp;:</span>
-					<input type="search" class="search-field" placeholder="Recherche&hellip;" value="" name="s" title="Rechercher&nbsp;:" />
+					<input type="search" class="search-field" placeholder="Recherche&hellip;" value="" name="s" />
 				</label>
 				<input type="submit" class="search-submit screen-reader-text" value="Rechercher" />
 			</form></aside>			</div>
@@ -301,11 +305,11 @@ Télécopieur : 418 825-3114<br />
             }
 
             if (window.wp_blog_version === undefined) {
-                window.wp_blog_version = "4.4.3";
+                window.wp_blog_version = "4.6.1";
             }
 
             if (window.addthis_plugin_info === undefined) {
-                window.addthis_plugin_info = {"info_status":"enabled","cms_name":"WordPress","cms_version":"4.4.3","plugin_name":"AddThis Follow Buttons","plugin_version":"1.3.1"};
+                window.addthis_plugin_info = {"info_status":"enabled","cms_name":"WordPress","cms_version":"4.6.1","plugin_name":"AddThis Follow Buttons","plugin_version":"1.3.1"};
             }
         </script><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=d929d62daae9074f59f479fbfd12caa4"></script><script type='text/javascript' src='http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/js/skip-link-focus-fix.js?ver=20141010'></script>
 <script type='text/javascript'>
@@ -321,8 +325,8 @@ var megamenu = {"effect":{"fade":{"in":{"animate":{"opacity":"show"},"css":{"dis
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://sbdl.net/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.1.3'></script>
-<script type='text/javascript' src='http://sbdl.net/wp-includes/js/wp-embed.min.js?ver=4.4.3'></script>
-<script type='text/javascript' src='http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/lib/cycle.js?ver=4.4.3'></script>
+<script type='text/javascript' src='http://sbdl.net/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://sbdl.net/wp-content/themes/sainte-brigitte-de-laval/lib/cycle.js?ver=4.6.1'></script>
 <!--wp_footer-->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

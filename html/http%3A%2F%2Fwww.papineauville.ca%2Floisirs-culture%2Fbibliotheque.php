@@ -46,6 +46,8 @@ $(document).ready(function () {
 });
 </script>
 
+
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		
@@ -59,8 +61,23 @@ $(document).ready(function () {
 					duration : 1200
 				}
 
-			});
-		$("#infoA").click(function() { 
+		});
+
+		$("#carou_galery").carouFredSel({
+			align: false,
+			auto : true,
+			items:{
+				visible: 1
+			},
+			prev : "#prev_gale",
+			next : "#next_gale",
+			scroll: {
+				duration : 1200
+			}
+
+		});
+
+		$("#infoA").click(function() {
 		 	document.forms["infoL"].submit();
 		});
 	});
@@ -120,7 +137,7 @@ $(document).ready(function () {
                 <input id="btn-search" type="submit" value=""/>
             </form>
         </div>
-				<div id="date_ajd">Lundi, 09 mai 2016</div>
+				<div id="date_ajd">Dimanche, 11 septembre 2016</div>
 
 		<a href="/index.php"><div id="logo"></div></a>
 		<a href="/index.php"><div id="t_logo"></div></a>
@@ -270,44 +287,62 @@ $(document).ready(function () {
 				</div>
 				<!-- -->
 					<div id="aff_actu">
-										<div id="carou_news">
-																																																																														
-															
-															<div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/actualites.php?info=voir&id=224"">NETTOYAGE DE TERRAINS</a></span>
-																
-																<br /><span class="date_even">03 mai 2016</span>
-																
-																<p style="padding-bottom:0px;">Les résidus provenant du nettoyage printanier ne d&nbsp;&nbsp;<a href="/actualites.php?info=voir&id=224"">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="http://www.papineauville.ca/services-municipaux/matieres-residuelles.php" target="_blank">Tricentris express</a></span>
-																
-																<br /><span class="date_even">27 avril 2016</span>
-																
-																<p style="padding-bottom:0px;">L'édition du mois d'avril est disponible dans la s&nbsp;&nbsp;<a href="http://www.papineauville.ca/services-municipaux/matieres-residuelles.php" target="_blank">[&hellip;]</a></p></div></div><div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/actualites.php?info=voir&id=222"">DU NOUVEAU: ordures et recyclage</a></span>
-																
-																<br /><span class="date_even">21 avril 2016</span>
-																
-																<p style="padding-bottom:0px;">Que  mettez- vous dans  vos bacs à ordures et recy&nbsp;&nbsp;<a href="/actualites.php?info=voir&id=222"">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="http://www.papineauville.ca/loisirs-culture/arts.php" target="_blank">Rendez-Vous des Arts 2016</a></span>
-																
-																<br /><span class="date_even">11 janvier 2016</span>
-																
-																<p style="padding-bottom:0px;">C'est le 20e anniversaire de cet évènement culture&nbsp;&nbsp;<a href="http://www.papineauville.ca/loisirs-culture/arts.php" target="_blank">[&hellip;]</a></p></div></div>																
-																						</div>
+							<div id="carou_news">
+
+																																													
+
+											<div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/actualites.php">Chien retrouvé</a></span>
+
+												<br /><span class="date_even">31 août 2016</span>
+
+												<p style="padding-bottom:0px;">Jeune femelle Rottweiler trouvée dans le Rang des &nbsp;&nbsp;<a href="/actualites.php">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="http://www.papineauville.ca/loisirs-culture/arts.php" target="_blank">Rendez-Vous des Arts 2016</a></span>
+
+												<br /><span class="date_even">28 août 2016</span>
+
+												<p style="padding-bottom:0px;">&nbsp;&nbsp;<a href="http://www.papineauville.ca/loisirs-culture/arts.php" target="_blank">[&hellip;]</a></p></div></div><div class="defile_news" style="width:200px;"><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/actualites.php?info=voir&id=222"">POURQUOI COMPOSTER????</a></span>
+
+												<br /><span class="date_even">08 août 2016</span>
+
+												<p style="padding-bottom:0px;">45% DU CONTENU DU BAC À ORDURES PEUX-ÊTRE REVITALI&nbsp;&nbsp;<a href="/actualites.php?info=voir&id=222"">[&hellip;]</a></p></div><div class="affiche_news" style="margin-top:10px !important;"><span class="t_news"><a href="/uploads/nouvelles/231.pdf"">Création d'un comité la voix des parents</a></span>
+
+												<br /><span class="date_even">01 août 2016</span>
+
+												<p style="padding-bottom:0px;">&nbsp;&nbsp;<a href="/uploads/nouvelles/231.pdf"">[&hellip;]</a></p></div></div>
+												
+						</div>
+
 				</div>
 								<!-- -->
-								
 				<div id="img_env_info" style="top:261px; left:6px;"></div>
 				<div id="infolettre_bas" style="top:270px; left:33px; width:182px;">
-							<form name="infoL" action="" method="post" id="infoL">
-								<input type="text" name="joindre_email" onBlur="if (this.value == '') {this.value = 'Votre adresse courriel';}" onFocus="if (this.value == 'Votre adresse courriel') {this.value = '';}" value="Votre adresse courriel" style="width:131px;"/>	
-								<input type="hidden" name="frmNewsletter" value="1" />
-							</form>
-						</div>
-				<div id="infoA" style="top:273px; right:15px; z-index:10;"></div>
-				
-				
-			
+					<form name="infoL" action="" method="post" id="infoL">
+						<input type="text" name="joindre_email" onBlur="if (this.value == '') {this.value = 'Votre adresse courriel';}" onFocus="if (this.value == 'Votre adresse courriel') {this.value = '';}" value="Votre adresse courriel" style="width:131px;"/>
+						<input type="hidden" name="frmNewsletter" value="1" />
+					</form>
+					<div id="infoA" style="top:3px; right:-10px; z-index:10;"></div>
+				</div>
 			</div>
+
+			
 			<div class="cb"></div>
 			<br/>
+
+			<div id="side_betterview1">
+				<img class="fliponh" src="../images/coin_slider_droite.png"/>
+				<div id="bvt1" class="side_betterview_title"><h2>Patrimoine</h2></div>
+				<div id="bvc1" class="side_betterview_ct"><a href="../loisirs-culture/patrimoine.php"><div class="bvs_images" style="background-image: url('../images/bvs_patrimoine.jpg'); background-size: 100% auto;"></div></a></div>
+			</div>
+
+			<div id="side_betterview2">
+				<img class="fliponh" src="../images/coin_slider_droite.png"/>
+				<div id="bvt2" class="side_betterview_title"><h2>G&eacute;n&eacute;alogie</h2></div>
+				<div id="bvc2" class="side_betterview_ct"><a href="../loisirs-culture/genealogie.php"><div class="bvs_images" style="background-image: url('../images/bvs_genealogie.jpg'); background-size: 100% auto;"></div></a></div>
+			</div>
+
+			<div class="cb"></div>
+			<br/>
+
+
 			<a href="/spap.php">
 				<img src="/images/salon_animaux.jpg" style="width: 100%;" />
 			</a>
@@ -319,6 +354,7 @@ $(document).ready(function () {
 				
 				<div id="cms" style="float:left; width:683px;">
 		
+
 	<h1></h1>
 	<p><img alt="" src="/administration/ckeditor/ckfinder/userfiles/images/DSCF0085.JPG.JPG" style="margin: 5px 15px; width: 250px; height: 188px; float: left;" /></p>
 
@@ -343,11 +379,11 @@ Francine Denis, responsable&nbsp;</span></span></p>
 
 <p>&nbsp;</p>
 
-<h2 style="background-color: rgb(255, 255, 255);"><strong style="font-size: 17.14285659790039px;"><span style="font-size: 14px;"><span style="font-size: 14.285714149475098px; font-family: arial, helvetica, sans-serif;">HEURES D&rsquo;OUVERTURE</span></span></strong></h2>
+<h2 style="background-color: rgb(255, 255, 255);"><strong style="font-size: 17.14285659790039px;"><span style="font-size: 14px;"><span style="font-size: 14.285714149475098px; font-family: arial, helvetica, sans-serif;">HEURES D&rsquo;OUVERTURE Horaire d&#39;&eacute;t&eacute; du 22&nbsp;juin &nbsp;au 15 septembre</span></span></strong></h2>
 
 <p style="background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-size: 14.285714149475098px; font-family: arial, helvetica, sans-serif;">Lundi</span></span> de 12h00 &agrave;&nbsp; 16h00<br />
 Mardi de 12h00 &agrave;&nbsp; 16h00 et 18h00 &agrave; 20h00<br />
-Mercredi de 12h00 &agrave;&nbsp; 16h00<br />
+Mercredi de 12h00 &agrave;&nbsp; 16h00 et 17h00 &agrave; 19h00<br />
 Jeudi de&nbsp; 12h00 &agrave; 16h00</p>
 
 <p>&nbsp;</p>
@@ -412,6 +448,7 @@ Jeudi de&nbsp; 12h00 &agrave; 16h00</p>
 <h2 style="font-size: 13.600000381469727px; background-color: rgb(255, 255, 255); font-family: verdana, helvetica, sans-serif;">&nbsp;</h2>
 	
 			</div>
+
 			<div class="cb"></div>
 					</div>
 		

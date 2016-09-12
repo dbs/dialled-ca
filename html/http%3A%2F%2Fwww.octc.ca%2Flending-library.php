@@ -191,8 +191,7 @@
 			<div id="text-content">
 
 				<a name="top"></a>
-			  <h1>Online Lending Library			  <br>
-			  </h1>
+			  <h1>Online Lending Library</h1>
 			  <div class="call-action">
 			    <p align="center"><strong>Have you used OCTC's Online Lending Library before?<br />
                 <a href="http://www.lendinglibrary.octc.ca/4dcgi/gen_2002/Lang=Def" target="_blank">Welcome to the Library!</a></strong></p>
@@ -201,7 +200,7 @@
 </div>
 
 				<h3>&nbsp;</h3>
-				<h3><strong>The library is open for you to drop-in and browse at the following times and locations: </strong></h3>
+				<h3>The library is open for you to drop-in and browse at the following times and locations: </h3>
 				<div class="call-action">
 				  <p align="left"><strong>Smyth</strong> -395 Smyth Rd., Ottawa. <strong>Mondays</strong> 9:00-12:00,  <strong>Wednesdays</strong> 9:00-12:00 and 1:00-4:00 </p>
 				  <p align="left">&nbsp;</p>
@@ -214,7 +213,7 @@
 <p>The OCTC <a href="assistive-technology.php">Technical Services</a> Team runs a Lending Library with regular drop-in hours at our central Ottawa location (395 Smyth Rd.) and our Kanata location (2 MacNeil Court at Castlefrank Rd.), and by appointment at these and other sites.</p>
 				<p><strong>To see our drop-in hours</strong>, please click on the "<a href="http://www.lendinglibrary.octc.ca/4DACTION/web_gen_2002_GetMessage/Drop-in%20Hours*/Lang=En/BookBag=T75WCNO10KSKK7098" target="_blank">messages</a>" button at the top of the <a href="http://www.lendinglibrary.octc.ca/4dcgi/gen_2002/Lang=Def" target="_blank">Lending Library's homepage</a>.</p>
 				<p><strong>To make an appointment</strong> at our 395 Smyth site, please contact Brigitte Loughlin at 613-737-0871, ext. 2943 or <a href="mailto:bloughlin@octc.ca">bloughlin@octc.ca</a>. To make an appointment at our Kanata, Thurston, Renfrew or Cornwall sites, please contact Eduardo Guerra at 613-831-5127 or <a href="mailto:eguerra@octc.ca">eguerra@octc.ca</a>.</p>
-				<p>OCTC clients under the age of 19 and their families can register with the Lending Library by calling 613-831-5127 to borrow items such as toys adapted for children with physical or visual impairments, educational software, reference books and DVDs for families, communication devices and specialized computer peripherals such as adapted keyboards and mice.</p>
+				<p>OCTC clients under the age of 19 and their families <a href="documents/Technical Services Registration Form.pdf" target="_blank">can register with the Lending Library</a> by calling 613-831-5127 to borrow items such as toys adapted for children with physical or visual impairments, educational software, reference books and DVDs for families, communication devices and specialized computer peripherals such as adapted keyboards and mice.</p>
 				<p>These Library materials can be used to practise the specific skills being worked on at school or in therapy (such as communication, literacy or motor skills), or simply to provide more opportunities for meaningful play.</p>
 				<p>OCTC clients and families may also borrow specialized equipment or software to see if it will be helpful before deciding if they would like to purchase their own.</p>
 				<p>OCTC's <a href="assistive-technology.php">Technical Services</a> Team is happy to help you find the items you need, show you how to use them, and answer any questions you may have!</p>
@@ -269,9 +268,9 @@
 					addthis_options = 'facebook, twitter, email, linkedin';
 					addthis_brand   = 'OCTC';
 				</script>
-				<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4e1e24381da14b71"></script>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f574ddc5bcdccbc"></script>
 			</li>
-			<li><a href="https://www.facebook.com/OCTCFoundation" class="socials facebook" target="_blank">Facebook</a></li>
+			<li><a href="https://www.facebook.com/OCTCentre.Foundation/" class="socials facebook" target="_blank">Facebook</a></li>
 			<li><a href="http://www.flickr.com/photos/octc/" class="socials flickr" target="_blank">Flickr</a></li>
 			<li><a href="http://vimeo.com/ottchildrentreatmentctr" class="socials vimeo" target="_blank">Vimeo</a></li>
 		</ul>

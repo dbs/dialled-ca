@@ -35,12 +35,11 @@
     <link href="/content/scripts/alert/alert.css" rel="stylesheet" type="text/css" media="screen" /> 
    
     
-
+    
     <script src="/content/scripts/ga.js" type="text/javascript"></script>
+  
     
-    
-
-    
+       
    
     <!-- end Flickr -->
     <!-- Javascript fourni par Adviso : google analytics pour les médias sociaux -->
@@ -63,7 +62,7 @@
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '252005358150434', // ENTER your FB App ID
-                channelUrl: 'http://www.mrifce.gouv.qc.ca/Content/channel.html', // Channel File
+                channelUrl: 'http://www.mrif.gouv.qc.ca/Content/channel.html', // Channel File
                 status: true, // check login status
                 cookie: true, // enable cookies to allow the server to access the session
                 xfbml: true // parse XFBML
@@ -103,7 +102,7 @@
 table.gsc-search-box td tr {
     vertical-align: top;
     background: transparent !important;
-    background-color: transparent !important;
+    background-color: #FFFFFF !important;
     
 }
 
@@ -225,11 +224,12 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
     <![endif]-->
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+
 <!-- Divulgation des dépenses -->
 <!-- Pour fils Twitter page d'accueil MRIF -->
-    <script src="http://platform.twitter.com/widgets.js"> </script>
 
-    <script type="text/javascript" src="/Content/scripts/slider-accueil/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/Content/scripts/slider-accueil/jssor.js"></script>
     <script type="text/javascript" src="/Content/scripts/slider-accueil/jssor.slider.js"></script>
     <!-- *** Créé par moi, à partir du javascript et du CSS qui était direct dans le code *** -->
@@ -238,8 +238,32 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
     <!-- ************************************************************************************ -->
 
 <!-- ************************ -->
+    <link rel="stylesheet" type="text/css" href="/Content/scripts/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/scripts/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/scripts/slick/slick-theme.less"/>    
+    <script type="text/javascript" src="/Content/scripts/slick/slick.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#dossiers ul').slick({
+                infinite: true,
+                slidesToShow: 3
+            });
+        });        
+    </script>
 </head>
 <body id="Accueil">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TLFVHV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TLFVHV');</script>
+<!-- End Google Tag Manager -->
+
 	<div id="top"></div>
 	<div id="container">
 		<header>
@@ -280,7 +304,7 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
 				</ul>
 			</nav>
 			<div class="clear"></div><div class="bouton_accueil"><a href="/fr/""><span>Accueil</span></a></div>
-			<nav id='menu1'><ul><li class='level0 '><a href='/fr/ministere'>Ministère</a><ul><li class='level1 '><a href='/fr/ministere/mission'>Mission</a></li><li class='level1 '><a href='/fr/ministere/ministre'>Ministre</a></li><li class='level1 '><a href='/fr/ministere/organigramme'>Organigramme</a></li><li class='level1 '><a href='/fr/ministere/declaration-de-services'>Déclaration de services aux citoyens</a></li><li class='level1 '><a href='/fr/ministere/acces-information'>Accès à l'information</a></li><li class='level1 '><a href='/fr/ministere/historique'>Historique</a></li><li class='level1 '><a href='/fr/ministere/representation-etranger'>Représentations à l'étranger</a></li></ul></li><li class='level0 '><a href='/fr/relations-du-quebec'>Relations internationales</a><ul><li class='level1 '><a href='/fr/relations-du-quebec/ameriques'>Amériques</a></li><li class='level1 '><a href='/fr/relations-du-quebec/asie-pacifique'>Asie - Pacifique</a></li><li class='level1 '><a href='/fr/relations-du-quebec/afrique-et-moyen-orient'>Afrique et Moyen-Orient</a></li><li class='level1 '><a href='/fr/relations-du-quebec/europe'>Europe</a></li><li class='level1 '><a href='/fr/relations-du-quebec/regions-et-etats-federes'>Régions et États fédérés</a></li><li class='level1 '><a href='/fr/relations-du-quebec/organisations-et-forums'>Organisations et conférences internationales</a></li><li class='level1 '><a href='/fr/relations-du-quebec/organisations-et-forums/delegation-oif'>Délégation auprès de l'OIF</a></li><li class='level1 '><a href='/fr/relations-du-quebec/organisations-et-forums/representation-unesco'>Représentation à l'UNESCO</a></li></ul></li><li class='level0 '><a href='/fr/francophonie'>Francophonie</a><ul><li class='level1 '><a href='/fr/francophonie/'>Accueil</a></li><li class='level1 '><a href='/fr/francophonie/quebec-et-francophonie'>Québec et la Francophonie</a></li><li class='level1 '><a href='/fr/francophonie/grands-dossiers-franco'>Grands dossiers</a></li><li class='level1 '><a href='/fr/francophonie/actions-quebec-francophonie'>Actions du Québec</a></li></ul></li><li class='level0 '><a href='/fr/solidarite-internationale'>Solidarité internationale</a><ul><li class='level1 '><a href='/fr/solidarite-internationale/quebec-et-la-solidarite'>Québec et la solidarité</a></li><li class='level1 '><a href='/fr/solidarite-internationale/quebec-dans-le-monde'>Québec dans le monde</a></li><li class='level1 '><a href='/fr/solidarite-internationale/programmes-de-solidarite'>Programmes de solidarité</a></li><li class='level1 '><a href='/fr/solidarite-internationale/comment-s-impliquer'>Comment s'impliquer</a></li><li class='level1 '><a href='/fr/solidarite-internationale/projets'>Projets</a></li></ul></li><li class='level0 '><a href='/fr/protocole'>Protocole</a><ul><li class='level1 '><a href='/fr/protocole/en-quelques-mots'>En quelques mots</a></li><li class='level1 '><a href='/fr/protocole/preseance'>Préséance</a></li><li class='level1 '><a href='/fr/protocole/funerailles'>Funérailles</a></li><li class='level1 '><a href='/fr/protocole/pavoisement'>Pavoisement</a></li><li class='level1 '><a href='/fr/protocole/repertoire'>Répertoire des représentations étrangères au Québec</a></li></ul></li></ul></nav>
+			<nav id='menu1'><ul><li class='level0 '><a href='/fr/ministere'>Ministère</a><ul><li class='level1 '><a href='/fr/ministere/mission'>Mission</a></li><li class='level1 '><a href='/fr/ministere/ministre'>Ministre</a></li><li class='level1 '><a href='/fr/ministere/organigramme'>Organigramme</a></li><li class='level1 '><a href='/fr/ministere/politique-internationale'>Politique internationale</a></li><li class='level1 '><a href='/fr/ministere/declaration-de-services'>Déclaration de services aux citoyens</a></li><li class='level1 '><a href='/fr/ministere/acces-information'>Accès à l'information</a></li><li class='level1 '><a href='/fr/ministere/historique'>Historique</a></li><li class='level1 '><a href='/fr/ministere/representation-etranger'>Représentations à l'étranger</a></li></ul></li><li class='level0 '><a href='/fr/relations-du-quebec'>Relations internationales</a><ul><li class='level1 '><a href='/fr/relations-du-quebec/ameriques'>Amériques</a></li><li class='level1 '><a href='/fr/relations-du-quebec/asie-pacifique'>Asie - Pacifique</a></li><li class='level1 '><a href='/fr/relations-du-quebec/afrique-et-moyen-orient'>Afrique et Moyen-Orient</a></li><li class='level1 '><a href='/fr/relations-du-quebec/europe'>Europe</a></li><li class='level1 '><a href='/fr/relations-du-quebec/regions-et-etats-federes'>Régions et États fédérés</a></li><li class='level1 '><a href='/fr/relations-du-quebec/organisations-et-forums/portrait'>Organisations et conférences internationales</a></li><li class='level1 '><a href='/fr/relations-du-quebec/organisations-et-forums/delegation-oif'>Délégation auprès de l'OIF</a></li><li class='level1 '><a href='/fr/relations-du-quebec/organisations-et-forums/representation-unesco'>Représentation à l'UNESCO</a></li></ul></li><li class='level0 '><a href='/fr/francophonie'>Francophonie</a><ul><li class='level1 '><a href='/fr/francophonie/'>Accueil</a></li><li class='level1 '><a href='/fr/francophonie/quebec-et-francophonie'>Québec et la Francophonie</a></li><li class='level1 '><a href='/fr/francophonie/grands-dossiers-franco'>Grands dossiers</a></li><li class='level1 '><a href='/fr/francophonie/actions-quebec-francophonie'>Actions du Québec</a></li></ul></li><li class='level0 '><a href='/fr/solidarite-internationale'>Solidarité internationale</a><ul><li class='level1 '><a href='/fr/solidarite-internationale/quebec-et-la-solidarite'>Québec et la solidarité</a></li><li class='level1 '><a href='/fr/solidarite-internationale/quebec-dans-le-monde'>Québec dans le monde</a></li><li class='level1 '><a href='/fr/solidarite-internationale/programmes-de-solidarite'>Programmes de solidarité</a></li><li class='level1 '><a href='/fr/solidarite-internationale/comment-s-impliquer'>Comment s'impliquer</a></li><li class='level1 '><a href='/fr/solidarite-internationale/projets'>Projets</a></li></ul></li><li class='level0 '><a href='/fr/protocole'>Protocole</a><ul><li class='level1 '><a href='/fr/protocole/en-quelques-mots'>En quelques mots</a></li><li class='level1 '><a href='/fr/protocole/preseance'>Préséance</a></li><li class='level1 '><a href='/fr/protocole/funerailles'>Funérailles</a></li><li class='level1 '><a href='/fr/protocole/pavoisement'>Pavoisement</a></li><li class='level1 '><a href='/fr/protocole/repertoire'>Répertoire des représentations étrangères au Québec</a></li></ul></li></ul></nav>
 			<div class="recherche">
                 <!-- RECHERCHE ================================================ --> 
                 <script type="text/javascript">
@@ -312,10 +336,8 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
 				<div class="viewContent">
 					<div id="contenuPrincipalPage" class="colonneCentrale">
                         <div class="btPartagerHead" style="margin-top:-8px">
-                        
-                         <g:plusone size="small" count="false" href="http://www.mrifce.gouv.qc.ca/"></g:plusone>
-                         <script type="text/javascript" src="http://static.addinto.com/ai/ai2_bkmk.js"></script>
-                                <img src="http://www.mrifce.gouv.qc.ca/content/images/thumbnail.jpg"  width="0"/>
+                       
+                                <img src="http://www.mrif.gouv.qc.ca/content/images/thumbnail.jpg"  width="0"/>
                          </div>
                         <section>
 	<div class="bloc">
@@ -338,29 +360,41 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
                  <!--<div id="lien-slider">
                     <a href="http://www.20mars.francophonie.org/" target="_blank"><img u="image" src="/content/images/Bandeau_MRIF_JourneeFrancophonie2016.jpg" alt='20 mars : Journée internationale de la Francophonie' /></a>
                 </div>  -->
+                <!--<div id="lien-slider" style="z-index:1">
+                    <a href="/fr/relations-du-quebec/regions-et-etats-federes/relations-multilaterales/regions-partenaires">
+                   <img u="image" src="/content/images/BandeauMRIF_MissionPM_Allemagne.jpg" alt='Conférence des chefs de gouvernement des Régions partenaires'/></a>
+                </div>-->
+
                 <div id="lien-slider" style="z-index:1">
-                    <a href="/fr/salle-de-presse/albums-photos/2016/2016_05_04">
-                    <div id="slides-description"><p>Québec, le 4 mai 2016. – Entretien entre la ministre des Relations internationales et de la Francophonie, Christine St-Pierre et le ministre des Relations extérieures de la République de Cuba, Son Excellence Bruno Rodríguez Parrilla.</p></div>
-                    <img u="image" src="/content/images/bannieres-albums-photos/Entretien-Christine-St-Pierre-ministre-Cuba-710X228.jpg" alt='Québec, le 4 mai 2016. – Entretien entre la ministre des Relations internationales et de la Francophonie, Christine St-Pierre et le ministre des Relations extérieures de la République de Cuba, Son Excellence Bruno Rodríguez Parrilla.' /></a>
+                    <a href="/qsf/index.asp?Page=resultats&combo_pays=0&cont=0&annee=2016-2017">
+                   <img u="image" src="/content/images/BandeauMRIF_QSF_16-17.jpg" alt='Québec sans frontières - Stages 2016-2017'/></a>
                 </div>
+
                 <div id="lien-slider" style="z-index:1">
-                    <a href="/fr/salle-de-presse/albums-photos/2016/2016_04_27">
-                    <div id="slides-description-3lignes"><p>Québec, le 27 avril 2016. - Entretien entre le premier ministre, Philippe Couillard, et le consul général des États-Unis du Mexique, Alejandro Estivill, accompagnés de la ministre des Relations internationales et de la Francophonie, Christine St-Pierre.</p></div>
-                    <img u="image" src="/content/images/bannieres-albums-photos/Entretien-PM-Consul-general-Mexique-27042016-710x228.jpg" alt='Québec, le 27 avril 2016. - Entretien entre le premier ministre, Philippe Couillard, et le consul général des États-Unis du Mexique, Alejandro Estivill, accompagnés de la ministre des Relations internationales et de la Francophonie, Christine St-Pierre.' /></a>
-                </div>
-                <div id="lien-slider" style="z-index:1">
-                    <a href="/fr/salle-de-presse/albums-photos/2016/2016_04_26_02">
-                    <div id="slides-description"><p>Québec, le 26 avril 2016. - Entretien entre le premier ministre, Philippe Couillard, et la Consule générale du Royaume du Maroc, Habiba Zemmouri, accompagnés de la ministre des Relations internationales et de la Francophonie, Christine St-Pierre.</p></div>
-                    <img u="image" src="/content/images/bannieres-albums-photos/Entretien-PCouillard-CstPierre-Consule-Maroc-bandeau-26042016.jpg" alt='Québec, le 26 avril 2016. - Le premier ministre, monsieur Philippe Couillard, accompagné de la Consule générale du Royaume du Maroc, Mme Habiba Zemmouri et de la ministre des Relations internationales et de la Francophonie, Mme Christine St-Pierre.' /></a>
+                    <a href="/fr/relations-du-quebec/europe/belgique/wallonie"><img u="image" src="/content/images/Bandeau_RDV-Wallonie-Bruxelles.jpg" alt='Appel à candidatures - PROJETS NUMÉRIQUES - Grands Rendez-vous Wallonie-Bruxelles Québec - Jusqu'au 15 septembre 2016' /></a>
                 </div>
                  <div id="lien-slider" style="z-index:1">
-                    <a href="/fr/salle-de-presse/albums-photos/2016/2016_04_26">
-                    <div id="slides-description-3lignes"><p>Québec, le 26 avril 2016. - Entretien entre le premier ministre, Philippe Couillard, et le vice-secrétaire chinois pour le Shandong, GONG Zheng. Ils étaient accompagnés du Consul général de la République de Chine à Montréal, PENG Jingtao, et de la ministre des Relations internationales et de la Francophonie, Christine St-Pierre.</p></div>
-                    <img u="image" src="/content/images/bannieres-albums-photos/Entretien-PCouillard-CstPierre-Gong-Zheng-bandeau-26042016.jpg" alt='Québec, le 26 avril 2016. - Le premier ministre, monsieur Philippe Couillard, accompagné du Consul général de la République de Chine à Montréal, monsieur PENG Jingtao, du vice-secrétaire chinois pour le Shandong, monsieur GONG Zheng, et de la ministre des Relations internationales et de la Francophonie, Mme Christine St-Pierre.' /></a>
-                </div>
-                <div id="lien-slider" style="z-index:1">
                     <a href="/fr/ministere/representation-etranger/"><img u="image" src="/content/images/MRIF_Bandeau_rep_FR.jpg" alt='Représentations du Québec à létranger' /></a>
                 </div>
+                <div id="lien-slider" style="z-index:1">
+                    <a href="/fr/salle-de-presse/albums-photos/2016/2016_08_24">
+                    <div id="slides-description-3lignes"><p>Québec, le 24 août 2016. – Entretien entre la ministre des Relations internationales et de la Francophonie, Christine St-Pierre et le ministre de la Fonction publique, du Travail et de la Protection sociale du Burkina Faso, Monsieur Pengwendé Clément Sawadogo (2<sup>e</sup> à partir de la gauche)</p></div>
+                    <img u="image" src="/content/images/bannieres-albums-photos/Entretien-Christine-St-Pierre-Burkina-Faso.jpg" alt='Entretien entre la ministre des Relations internationales et de la Francophonie, Christine St-Pierre et le ministre de la Fonction publique, du Travail et de la Protection sociale du Burkina Faso, Monsieur Pengwendé Clément Sawadogo' /></a>
+                </div>
+                 <!--<div id="lien-slider" style="z-index:1">
+                    <a href="/fr/prix-et-bourses/musique/prix-rapsat-lelievre"><img u="image" src="/content/images/Bandeau-PrixRapsatLelievre-Laureat2016-Carrousel.png" alt='Le groupe Dalton Telegramme de Wallonie-Bruxelles remporte le prix Rapsat-Lelièvre 2016' /></a>
+                </div>-->
+                 <!--<div id="lien-slider" style="z-index:1">
+                    <a href="/fr/salle-de-presse/albums-photos/2016/2016_05_26">
+                    <div id="slides-description"><p>Québec, le 26 mai 2016. − Le premier ministre du Québec, Philippe Couillard, reçoit le vice-gouverneur de la préfecture de Kyoto, Shuichi Yamauchi, pour la signature de la première entente de collaboration multisectorielle entre le Québec et Kyoto.</p></div>
+                    <img u="image" src="/content/images/bannieres-albums-photos/Entretien_Kyoto_bandeau.jpg" alt='Québec, le 26 mai 2016. − Le premier ministre du Québec, Philippe Couillard, reçoit le vice-gouverneur de la préfecture de Kyoto, Shuichi Yamauchi, pour la signature de la première entente de collaboration multisectorielle entre le Québec et Kyoto.' /></a>
+                </div>-->
+                <!--<div id="lien-slider" style="z-index:1">
+                    <a href="/fr/salle-de-presse/albums-photos/2016/2016_05_17">
+                    <div id="slides-description"><p>Québec, le 17 mai 2016. − Entretien entre la ministre des Relations internationales et de la Francophonie, Christine St-Pierre et l’ambassadeur de la République de Guinée, son Excellence Saramady Touré.</p></div>
+                    <img u="image" src="/content/images/bannieres-albums-photos/Entretien-Christine-StPierre-Amb-Guinee-17052016-bandeau.jpg" alt='Québec, le 17 mai 2016. − Entretien entre la ministre des Relations internationales et de la Francophonie, Christine St-Pierre et l’ambassadeur de la République de Guinée, son Excellence Saramady Touré.' /></a>
+                </div>-->
+               
                 
                  <!--<div id="lien-slider">
                     <a href="http://www.dessinelaterre.com/" target="_blank" /><img u="image" src="/content/images/Bandeau_DessineTerre_FR.jpg" alt="Dessine la Terre" /></a>
@@ -407,13 +441,13 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
 			<!--<div id="actualites">
 				<ul>
 						<li>
-							<a href="/fr/salle-de-presse/actualites/0" data-img="Communique_presse.jpg" data-alt=""></a>
+							<a href="/fr/salle-de-presse/actualites/0" data-img="Changements_climatiques.jpg" data-alt=""></a>
 						</li>
 						<li>
-							<a href="/fr/salle-de-presse/actualites/0" data-img="Communique_presse.jpg" data-alt=""></a>
+							<a href="/fr/salle-de-presse/actualites/0" data-img="PADD_actualite.jpg" data-alt=""></a>
 						</li>
 						<li>
-							<a href="/fr/salle-de-presse/actualites/0" data-img="Communique_presse.jpg" data-alt=""></a>
+							<a href="/fr/salle-de-presse/actualites/0" data-img="Rencontre.jpg" data-alt=""></a>
 						</li>
 				</ul>
 				<!--<a class="all" href="/fr/salle-de-presse/">Toutes les actualités</a>-->
@@ -463,11 +497,9 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
  <!-- BLOC ACTUALITÉS SEULEMENT FRANÇAIS DÉBUT -->
  <div class='bloc'><div id='listeActualitesRecentes'><h2 class='horsEcran'>Nos actions</h2><img src='' alt='' id='selectedNewsImg' width='368' height='240' /><div id='actualites'><ul>
 <li>                                    <a   href="
-http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_05_02" data-img="Communique_presse.jpg" data-alt="">Les ministres St-Pierre et Daoust saluent la d&#233;cision des autorit&#233;s de l’&#201;tat de la G&#233;orgie d’autoriser le permis de conduire qu&#233;b&#233;cois</a>
-</li><li>                                    <a   href="
-http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_05" data-img="Communique_presse.jpg" data-alt="">Le gouvernement du Qu&#233;bec r&#233;it&#232;re son appui financier au Secr&#233;tariat de la Convention sur la diversit&#233; biologique</a>
-</li><li>                                    <a   href="
-http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-img="Communique_presse.jpg" data-alt="">Le premier ministre rencontre le ministre cubain des Relations ext&#233;rieures : une premi&#232;re dans l&#39;histoire des relations internationales du Qu&#233;bec</a>
+http://www.mddelcc.gouv.qc.ca/infuseur/communique.asp?no=3554" data-img="Changements_climatiques.jpg" data-alt="">Le Mexique, l’Ontario et le Qu&#233;bec conviennent d’accro&#238;tre leur coop&#233;ration en mati&#232;re de lutte contre les changements climatiques</a>
+</li><li>                                    <a   href="/fr/salle-de-presse/actualites/16525" data-img="PADD_actualite.jpg" data-alt="">Plan d’action de d&#233;veloppement durable 2016-2020</a>
+</li><li>                                    <a   href="/fr/salle-de-presse/actualites/16517" data-img="Rencontre.jpg" data-alt="">Accord Canada-UE : le Qu&#233;bec et le Canada poursuivent leur collaboration pour une entr&#233;e en vigueur rapide</a>
 </li>  </ul><a class='all' href='/fr/salle-de-presse/'>Nos actions</a></div><div class='clear'></div></div></div> 
  <!-- BLOC ACTUALITÉS SEULEMENT FRANÇAIS FIN -->
  <!-- BLOC ACTUALITÉS AVEC 2 LANGUES DÉBUT 
@@ -478,13 +510,13 @@ http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-
 			<div id="actualites">
 				<ul>
                             <li>
-                                    <a class="icones-actions-communique" href="/fr/salle-de-presse/actualites/16285" data-img="Communique_presse.jpg" data-alt="">Les ministres St-Pierre et Daoust saluent la d&#233;cision des autorit&#233;s de l’&#201;tat de la G&#233;orgie d’autoriser le permis de conduire qu&#233;b&#233;cois</a>
+                                    <a class="icones-actions-communique" href="/fr/salle-de-presse/actualites/16526" data-img="Changements_climatiques.jpg" data-alt="">Le Mexique, l’Ontario et le Qu&#233;bec conviennent d’accro&#238;tre leur coop&#233;ration en mati&#232;re de lutte contre les changements climatiques</a>
 						    </li>
                             <li>
-                                    <a class="icones-actions-communique" href="/fr/salle-de-presse/actualites/16284" data-img="Communique_presse.jpg" data-alt="">Le gouvernement du Qu&#233;bec r&#233;it&#232;re son appui financier au Secr&#233;tariat de la Convention sur la diversit&#233; biologique</a>
+                                    <a class="icones-actions-actualite" href="/fr/salle-de-presse/actualites/16525" data-img="PADD_actualite.jpg" data-alt="">Plan d’action de d&#233;veloppement durable 2016-2020</a>
 						    </li>
                             <li>
-                                    <a class="icones-actions-communique" href="/fr/salle-de-presse/actualites/16283" data-img="Communique_presse.jpg" data-alt="">Le premier ministre rencontre le ministre cubain des Relations ext&#233;rieures : une premi&#232;re dans l&#39;histoire des relations internationales du Qu&#233;bec</a>
+                                    <a class="icones-actions-actualite" href="/fr/salle-de-presse/actualites/16517" data-img="Rencontre.jpg" data-alt="">Accord Canada-UE : le Qu&#233;bec et le Canada poursuivent leur collaboration pour une entr&#233;e en vigueur rapide</a>
 						    </li>
 				</ul>
 				<a class="all" href="/fr/salle-de-presse/">Nos actions</a>
@@ -520,102 +552,48 @@ http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-
 		<div class="clear"></div>
 	</div>
 </section>-->
+
 <section class="sectionBas">
-	<div class="bloc">
+
+
+
+    <div class="bloc">
 		<div id="grandsDossiers">
-			<h2><strong>Grands dossiers</strong></h2>
-			<!--<a href="/fr/grands-dossiers" class="tousLesDossiers">Tous les grands dossiers</a>-->
+			<h2><a href="/fr/priorites-internationales" style="text-decoration:none;"><strong>Priorités internationales</strong></a></h2>
 			<div id="dossiers">
                 <ul>
-                    <!--<li class="dossier">
-				        <a href="/fr/grands-dossiers/rapport-aqsi">
-					        <img src="/content/images/thumbs_sondageAQSI.png" alt="" width="217" height="142" />
-					        <span class="labelDossier troisLignes">Agence québécoise <br />de solidarité internationale<span></span></span>
-				        </a>
-                    </li>-->
                     <li class="dossier">
-				         <a href='/fr/Grands-dossiers/Diversite-culturelle/Convention-UNESCO/'><img src='/content/images/thumbs_UNESCO-10ans.png' alt='' width='217' height='142' />
-					 
-					        <span class="labelDossier deuxLignes">Diversité des<br/>expressions culturelles<span></span></span>
+				         <a href="/fr/priorites-internationales#lutte-changements-climat">
+					        <img src="/content/images/thumbs_LCC.png" alt="" width="217" height="142" />
+					        <span class="labelDossier deuxLignes">Lutte contre les <br/>changements climatiques <span></span></span>
 				        </a>
                     </li>
                     <li class="dossier">
-				         <a href='/fr/Grands-dossiers/Plan-Nord'><img src='/content/images/Thumbs_PlanNord.png' alt='' width='217' height='142' />
-					 
+				        <a href="/fr/priorites-internationales#le-plan-nord">
+					        <img src="/content/images/thumbs_plan_nord.png" alt="" width="217" height="142" />
 					        <span class="labelDossier uneLigne">Le Plan Nord<span></span></span>
 				        </a>
                     </li>
-<!-- SOMMET CLIMAT, VA ÊTRE REMIS PLUS TARD 19/05 -->
-          <!--<li class="dossier">
-                     <a href='http://www.mddelcc.gouv.qc.ca/sommetClimat2015/index.htm'><img src='/content/images/thumbs_grand_sommet_QC.png' alt='' width='217' height='142' />
-					        <span class="labelDossier uneLigne">Sommet de Québec<span></span></span>
-				        </a>
-                    </li>-->
-
-                        <li class="dossier">
-				        <a href="/fr/grands-dossiers/strategie-maritime">
+                    <li class="dossier">
+				        <a href="/fr/priorites-internationales#strategie-maritime">
 					        <img src="/content/images/thumbs_StrategieMaritime.png" alt="" width="217" height="142" />
 					        <span class="labelDossier deuxLignes">Plaque tournante du <br/>commerce transatlantique<span></span></span>
 				        </a>
                     </li>
-
-                    <!--<li class="dossier">
-				        <a href="/fr/grands-dossiers/Sommet_francophonie">
-					        <img src="/content/images/thumbs_DAKAR_2014.png" alt="" width="217" height="142" />
-					        <span class="labelDossier deuxLignes">Sommet de la<br />Francophonie<span></span></span>
+                      <li class="dossier">
+				        <a href="/fr/priorites-internationales#culture-identite">
+					        <img src="/content/images/thumbs_culture.png" alt="" width="217" height="142" />
+					        <span class="labelDossier deuxLignes">Culture et identité<span></span></span>
 				        </a>
-                    </li>-->
-
-                   <!--<li class="dossier">
-				        <a href="/fr/grands-dossiers/Sommet_francophonie/Quebec-et-Francophonie">
-					        <img src="/content/images/thumbs_Quebec_Francophonie.png" alt="Québec et la Francophonie" width="217" height="142" />
-					        <span class="labelDossier uneLigne">Québec et Francophonie<span></span></span>
-				        </a>
-                    </li>-->
-                  
-                    <!--<li class="dossier">
-				        <a href="/fr/grands-dossiers/environnement">
-					        <img src="/content/images/thumbs_changements_climatiques.png" alt="" width="217" height="142"/>
-					        <span class="labelDossier deuxLignes">Environnement et<br />développement durable<span></span></span>
-				        </a>
-                    </li>-->
-                    <!--<li class="dossier">
-				        <a href="/fr/grands-dossiers/diversite-culturelle">
-					        <img src="/content/images/thumbs_diversite.png" alt="" width="217" height="142" />
-					        <span class="labelDossier deuxLignes">Diversité des<br />expressions culturelles<span></span></span>
-				        </a>
-                    </li>-->
-            
-
-                    <!--<li class="dossier">
-				        <a href="/fr/francophonie">
-					        <img src="/content/images/thumbs_francophonie.png" alt="" width="217" height="142" />
-					        <span class="labelDossier uneLigne">Francophonie<span></span></span>
-				        </a>
-                    </li>-->
-                    <!-- <li class="dossier">
-				        <a href="/fr/grands-dossiers/plan-nord">
-					        <img src="/content/images/thumbs_plan_nord.png" alt="" width="217" height="142" />
-					        <span class="labelDossier uneLigne">Plan Nord<span></span></span>
-				        </a>
-                    </li>-->
-                    <!--<li class="dossier">
-				        <a href="/fr/grands-dossiers/politiques-et-strategies">
-					        <img src="/content/images/thumbs_politiques_strategies.png" alt="" width="217" height="142" />
-					        <span class="labelDossier uneLigne">Politiques et stratégies<span></span></span>
-				        </a>
-                    </li>-->
-                   <!--<li class="dossier">
-                    <a href='http://www.export.gouv.qc.ca/fr/agenda/AECG?page=2'><img src='/content/images/thumbs_accord_can-ue.png' alt='' width='217' height='142' />
-					        <span class="labelDossier troisLignes">Quelles occasions<br /> d’affaires pour les<br />entreprises du Québec?<span></span></span>
-				        </a>
-                    </li>-->
+                    </li>
+                   
 			    </ul>
                 <div class="clear"></div>
             </div>
 		</div>
 	</div>
     <!-- TWITTER -->
+    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"> </script><!-- Pour fil Twitter -->
     <div class="twitter">
     <table><tr>
     <td style="width:332px"><a class="twitter-timeline" href="https://twitter.com/MRIF_Quebec" data-widget-id="572397273674706944" height="434" width="332">Tweets de MRIF_Quebec</a></td>
@@ -653,7 +631,7 @@ http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-
 			<div id="zone_droite" class="colDroite">
 				<div class="bloc">
 					<div id="menu_acces_rapide">
-						<nav id='liens_droite'><ul><li class='level0 '><a href='/fr/appels-a-projets'>Appels à projets</a></li><li class='level0 '><a href='/fr/ententes-et-engagements'>Ententes et engagements</a></li><li class='level0 '><a href='/fr/grands-dossiers'>Grands dossiers</a></li><li class='level0 '><a href='/fr/prix-et-bourses'>Prix et bourses</a></li><li class='level0 '><a href='/fr/publications'>Publications</a></li><li class='level0 '><a href='/fr/stages-et-emplois'>Stages, emplois et formation</a></li><li class='level0 '><a href='/fr/salle-de-presse'>Salle de presse</a></li></ul></nav>
+						<nav id='liens_droite'><ul><li class='level0 '><a href='/fr/appels-a-projets'>Appels à projets</a></li><li class='level0 '><a href='/fr/ententes-et-engagements'>Ententes et engagements</a></li><li class='level0 '><a href='/fr/priorites-internationales'>Priorités internationales</a></li><li class='level0 '><a href='/fr/prix-et-bourses'>Prix et bourses</a></li><li class='level0 '><a href='/fr/publications'>Publications</a></li><li class='level0 '><a href='/fr/stages-et-emplois'>Stages, emplois et formation</a></li><li class='level0 '><a href='/fr/salle-de-presse'>Salle de presse</a></li></ul></nav>
                      </div>
                     <div class="ombreMenuDroit"></div>
 				</div>
@@ -672,11 +650,20 @@ http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-
      <div id="vignettes">
 		<a class="label2lignes" target="_blank" href="http://www.mrif.gouv.qc.ca/qsf/index.asp">
 			<!--<img src="/content/images/interface/Bouton_QSF.jpg" alt="Québec Sans Frontières" width="175" height="64" />-->
-            <img src="/content/images/interface/BT_QSF_20ans.jpg" alt="Québec sans frontières" width="175" height="90" />
+            <img src="/content/images/interface/BT_QSF_MRIF.jpg" alt="Québec sans frontières" width="175" height="90" />
             <span class="labelVignette deuxLignes">Québec sans <br/>frontières<span></span></span>
 		</a>
      </div> 
 	</div>
+</section><section class="sectionBas">
+	<div class="bloc quebecSansFrontieres"> 
+     <div id="vignettes">
+		<a class="label2lignes" target="_blank" href="http://fr.unesco.org/ConfQcUNESCO/home">
+            <img src="/content/images/interface/BT_MRIF_Radicalisation.png" alt="Conférence Québec-UNESCO Informations générales" width="175" height="90" />
+            
+            <span class="labelVignette deuxLignes">Conférence<br/>Québec-UNESCO<span></span></span>
+		</a>
+     </div> 
 </section><section class="sectionBas">
 	<div class="bloc" style="margin-top:-15px;">
 		<div id="bio_ministre">
@@ -698,11 +685,11 @@ http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-
 	</div>
 </section><section class="sectionBas">
 	<div class="bloc quebecSansFrontieres" style="padding:0px;"> 
-        <a href="http://www.midi.gouv.qc.ca/nouvellepolitique" target="_blank" style="height:86px;"><img src="/content/images/interface/BT_PolitiqueImmigration.jpg" alt="Politique d'immigration, de participation et d'inclusion"/></a>
+        <a href="http://www.mamot.gouv.qc.ca/375e-anniversaire-de-montreal/a-propos/" target="_blank" style="height:86px;"><img src="/content/images/interface/btn-Montreal-375.gif" alt="Fier partenaire du 375eme anniversaire de Montréal"/></a>
 	</div>
 </section><section class="sectionBas">
 	<div class="bloc quebecSansFrontieres" style="padding:0px;"> 
-        <a href="http://www.budget.finances.gouv.qc.ca/budget/2016-2017/index.asp" target="_blank" style="height:86px;"><img src="/content/images/interface/BT_Budget16-17.jpg" alt="Budget 2016-2017 du Gouvernement du Québec"/></a>
+        <a href="http://www.midi.gouv.qc.ca/nouvellepolitique" target="_blank" style="height:86px;"><img src="/content/images/interface/BT_PolitiqueImmigration.jpg" alt="Politique d'immigration, de participation et d'inclusion"/></a>
 	</div>
 </section>				</div>
 			</div>	
@@ -743,10 +730,11 @@ http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-
 					<p>Faire un stage</p>
 					<nav>
 						<ul>
-							<li><a href="/fr/stages-et-emplois">Informations générales</a></li>
-                            <li><a href='/fr/stages-et-emplois/organisations-internationales/offres-stage'>Organisations internationales</a></li>
-                            <li><a href='http://www.quebecsansfrontieres.com'>Québec sans frontières</a></li>
-                            <li><a target='_blank' href='http://www.lojiq.org/'>Offices jeunesse internationaux du Québec</a></li>
+							<li><a href="http://www.quebecsansfrontieres.com">Québec sans frontières</a></li>
+                            <li><a href="/fr/stages-et-emplois/organisations-internationales/">Organisations internationales gouvernementales</a></li>
+                            <li><a href="/fr/stages-et-emplois/washington/">Partenariat avec le Washington Center</a></li>
+                            <li><a href="http://www.lojiq.org/" target="_blank">Offices jeunesse internationaux du Québec</a></li>
+                            <li><a href="http://www.francophonie.org/" target="_blank">Organisation internationale de la Francophonie</a></li>
                         </ul>
 					</nav>
 				</div>
@@ -792,9 +780,9 @@ http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-
 					<p>
 						<img src="/content/images/contenu/logo_quebec.png" alt="" width="182" height="24" />
 					</p>
-					<p>&copy; Gouvernement du Québec, 2015</p>
+					<p>&copy; Gouvernement du Québec, 2016</p>
 					<!--
-                        <p class="version">Version: 1.0.0.22340</p>
+                        <p class="version">Version: 1.0.0.26786</p>
                     -->
 				</div>
 			</div>
@@ -803,7 +791,6 @@ http://www.mrif.gouv.qc.ca/fr/salle-de-presse/communiques/2016/2016_05_04" data-
 	<script type="text/javascript">
 	    var culture = 'fr';
 	</script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
                                                                                                                                       
     <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
 	<!--script src="/content/scripts/modernizr.min.js" type="text/javascript"></script-->

@@ -27,98 +27,94 @@
     <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" charset="utf-8" />
     <script type="text/javascript">
 //<![CDATA[
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-26437005-1']);
-    _gaq.push(['_gat._anonymizeIp']);
-    if (document.documentElement.getAttribute('lang')=='en-ca') {
-    _gaq.push(['_setDomainName', '.gallery.ca']);
-    } else {
-    _gaq.push(['_setDomainName', '.beaux-arts.ca']);
-    }
-    _gaq.push(['_setAllowLinker', true]);
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-26437005-1', 'auto', {'allowLinker': true});
+    ga('require', 'linker');  
+    ga('linker:autoLink', ['gallery.ca', 'beaux-arts.ca']);
+    ga('set', 'anonymizeIp', true);
+
+
+    <!-- Sections & Pages -->      
     var clean_title = "Library &amp; Archives";
     clean_title = clean_title.replace("'","\'")
     if (document.documentElement.getAttribute('lang')=='en-ca') {
     var curr_uri = '/en/library/index.php';
-    if ( curr_uri.indexOf("/visit/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Visit', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/see/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'See', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/learn/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Learn', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/shop/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Shop', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/give/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Give', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/join/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Join', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/library/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Library', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/resources/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Library - Resources', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/projects/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Projects', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/publications/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Pubs', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/image-reproduction/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Image Reproduction', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/about/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'About', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/secure/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Secure', clean_title, 3]);
+    if ( curr_uri.indexOf("/visit/") >= 0 ) {       
+        var dimensionValue3 = 'Visit';        
+    } else if ( curr_uri.indexOf("/see/") >= 0 ) {        
+        var dimensionValue3 = 'See';
+    } else if ( curr_uri.indexOf("/learn/") >= 0 ) {        
+        var dimensionValue3 = 'Learn';
+    } else if ( curr_uri.indexOf("/shop/") >= 0 ) {        
+        var dimensionValue3 = 'Shop';
+    } else if ( curr_uri.indexOf("/give/") >= 0 ) {        
+        var dimensionValue3 = 'Give';
+    } else if ( curr_uri.indexOf("/join/") >= 0 ) {        
+        var dimensionValue3 = 'Join';
+    } else if ( curr_uri.indexOf("/library/") >= 0 ) {        
+        var dimensionValue3 = 'Library';
+    } else if ( curr_uri.indexOf("/resources/") >= 0 ) {        
+        var dimensionValue3 = 'Library - Resources';
+    } else if ( curr_uri.indexOf("/projects/") >= 0 ) {        
+        var dimensionValue3 = 'Projects';
+    } else if ( curr_uri.indexOf("/publications/") >= 0 ) {        
+        var dimensionValue3 = 'Pubs';
+    } else if ( curr_uri.indexOf("/image-reproduction/") >= 0 ) {        
+        var dimensionValue3 = 'Image Reproduction';
+    } else if ( curr_uri.indexOf("/about/") >= 0 ) {        
+        var dimensionValue3 = 'About';
+    } else if ( curr_uri.indexOf("/secure/") >= 0 ) {        
+        var dimensionValue3 = 'Secure';
     }
     } else {
     var curr_uri = '/fr/bibliotheque/index.php';
-    if ( curr_uri.indexOf("/visiter/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Visiter', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/voir/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Voir', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/apprendre/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Apprendre', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/acheter/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Acheter', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/donner/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Donner', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/adherer/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Adherer', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/bibliotheque/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Bibliotheque', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/ressources/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Bibliotheque - Ressources', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/projets/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Projets', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/publications/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Publications', clean_title, 3]);
+    if ( curr_uri.indexOf("/visiter/") >= 0 ) {            
+        var dimensionValue3 = 'Visiter';
+    } else if ( curr_uri.indexOf("/voir/") >= 0 ) {            
+        var dimensionValue3 = 'Voir';
+    } else if ( curr_uri.indexOf("/apprendre/") >= 0 ) {            
+        var dimensionValue3 = 'Apprendre';
+    } else if ( curr_uri.indexOf("/acheter/") >= 0 ) {            
+        var dimensionValue3 = 'Acheter';
+    } else if ( curr_uri.indexOf("/donner/") >= 0 ) {            
+        var dimensionValue3 = 'Donner';
+    } else if ( curr_uri.indexOf("/adherer/") >= 0 ) {            
+        var dimensionValue3 = 'Adherer';
+    } else if ( curr_uri.indexOf("/bibliotheque/") >= 0 ) {            
+        var dimensionValue3 = 'Bibliotheque';
+    } else if ( curr_uri.indexOf("/ressources/") >= 0 ) {            
+        var dimensionValue3 = 'Bibliotheque - Ressources';
+    } else if ( curr_uri.indexOf("/projets/") >= 0 ) {            
+        var dimensionValue3 = 'Projets';
+    } else if ( curr_uri.indexOf("/publications/") >= 0 ) {            
+        var dimensionValue3 = 'Publications';
     } else if ( curr_uri.indexOf("/reproduction-dimages/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Reproduction d\'Images', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/apropos/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'A propos', clean_title, 3]);
-    } else if ( curr_uri.indexOf("/secure/") >= 0 ) {
-        _gaq.push(['_setCustomVar', 3, 'Securise', clean_title, 3]);
+        var dimensionValue3 = 'Reproduction d\'Images';
+    } else if ( curr_uri.indexOf("/apropos/") >= 0 ) {            
+        var dimensionValue3 = 'A propos';
+    } else if ( curr_uri.indexOf("/secure/") >= 0 ) {            
+        var dimensionValue3 = 'Securise';
     }
     }
-    var ga_custvar = "";
-    if(ga_custvar!=''){ 
-    _gaq.push(['_setCustomVar']);
-    }
-    _gaq.push(['_trackPageview']);
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+
+    ga('set', 'dimension3', dimensionValue3 + ' / ' + clean_title);  
+
+    ga('send', 'pageview');
+
     //]]>
     </script><!-- TEMPLATE SCRIPTS/CSS END | FIN DES SCRIPTS/CSS DU GABARIT -->
   </head>
   <body class="no-js">
     <!--
-
         
-    <div style="height:25px; background-color:#c90505; text-align:center; padding:8px 0px 4px 0px;">
-      <img alt="" src="http://www.gallery.ca/images/design/alert.png" width="20" height="19">&nbsp;&nbsp;<a href=http://www.gallery.ca/en/visit/getting-here.php?utm_campaign=sussextraffic&utm_medium=web&utm_source=galleryca&utm_content=home style="color:#FFF; text-decoration: none; font-family:Verdana, Geneva, sans-serif; font-size: 14px;">The Gallery is open during <span style="text-decoration:underline;">road work on Sussex Drive</span>.</a>
+     <div style="height:30px; background-color:#c90505; color:#FFF; text-align:center; padding:15px 0px 4px 0px;  font-family:Verdana, Geneva, sans-serif; font-size: 14px;">
+    The Gallery is closed Tuesday 28 June and Wednesday 29 June.  <a href="http://www.gallery.ca/en/visit/hours.php" style="color:#FFF; text-decoration: underline; font-family:Verdana, Geneva, sans-serif; font-size: 14px;">Learn more </a>
     </div>        
         
-
 -->
     <div id="page" class="grid-row">
       <div id="head" class="grid-12">
@@ -132,7 +128,7 @@
           </div>
         </form><!-- begin #quick-links-->
         <div id="quick-links">
-          <a href="/en/index.php">Home</a><a href="/en/about/space-rentals.php">Space Rentals</a><a href="/en/about/volunteers.php">Volunteer</a><a href="/en/secure/login.php">Login</a><a href="/en/about/contact-form.php">Contact Us</a> <a href="http://www.beaux-arts.ca/fr/bibliotheque/index.php">Français</a>
+          <a href="/en/index.php">Home</a><a href="/en/about/space-rentals.php">Space Rentals</a><a href="/en/about/volunteers.php">Volunteer</a><a href="/en/about/contact-form.php">Contact Us</a> <a href="http://www.beaux-arts.ca/fr/bibliotheque/index.php">Français</a>
           <div class="font-size">
             <a href=""><small>A-</small></a> <a href=""><big>A+</big></a>
           </div>
@@ -717,9 +713,6 @@
               </li>
               <li>
                 <a href="/en/about/museums.php">For Museums</a>
-              </li>
-              <li>
-                <a href="/en/about/for-board-members.php">For Board Members</a>
               </li>
               <li>
                 <a href="/en/about/marketing-materials.php">Marketing Materials</a>

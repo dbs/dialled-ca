@@ -117,14 +117,14 @@
     
     <form method="post" action="/en.aspx" id="form1">
 <div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDM5NzA2OTEwD2QWBgIBDxYCHgdjb250ZW50ZWQCAw8WAh4EVGV4dAUiSG9tZSB8IFdlc3QgUGFyayBIZWFsdGhjYXJlIENlbnRyZWQCBQ9kFgICARBkZBYCAgEPD2QWAh4Fc3R5bGUFTmJhY2tncm91bmQ6IHVybCgnL34vbWVkaWEvSW1hZ2VzL0JyYW5kaW5nL21haW4tYm9keS1iZy0wMS5hc2h4JykgMCAwIG5vLXJlcGVhdBYCAgEPZBYEZg9kFgJmD2QWAgIBDw9kFgIfAgVLYmFja2dyb3VuZDogdXJsKCcvfi9tZWRpYS9JbWFnZXMvQnJhbmRpbmcvc3dvb3NoLWJnLTAxLmFzaHgnKSAwIDAgbm8tcmVwZWF0FgoCAQ8WAh8BBQQ8aDE+ZAIDDw8WAh4LTmF2aWdhdGVVcmwFCC9lbi5hc3B4ZGQCBQ8WAh8BBQU8L2gxPmQCDw8WAh8BBasEPCEtLSBBZGRUaGlzIEJ1dHRvbiBCRUdJTiAtLT4KPGRpdiBjbGFzcz0iYWRkdGhpc190b29sYm94IGFkZHRoaXNfZGVmYXVsdF9zdHlsZSI+Cgo8YSBjbGFzcz0iYWRkdGhpc19idXR0b25fcHJpbnQiPlByaW50PC9hPgo8c3Bhbj5TaGFyZTwvc3Bhbj4KPCEtLTxhIGNsYXNzPSJhZGR0aGlzX2J1dHRvbl9jb21wYWN0IHRleHRfb25seSI+U2hhcmU8L2E+LS0+CjxhIGNsYXNzPSJhZGR0aGlzX2J1dHRvbl9lbWFpbCI+PC9hPgo8YSBjbGFzcz0iYWRkdGhpc19idXR0b25fZmFjZWJvb2siPjwvYT4KPGEgY2xhc3M9ImFkZHRoaXNfYnV0dG9uX3R3aXR0ZXIiPjwvYT4KPGEgY2xhc3M9ImFkZHRoaXNfYnV0dG9uX2xpbmtlZGluIj48L2E+CjxhIGNsYXNzPSJhZGR0aGlzX2J1dHRvbl9jb21wYWN0Ij48L2E+Cgo8L2Rpdj4KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cDovL3M3LmFkZHRoaXMuY29tL2pzLzI1MC9hZGR0aGlzX3dpZGdldC5qcyNwdWJpZD14YS00ZTQwMDNlMjNkZWFhYzAwIj48L3NjcmlwdD4KPCEtLSBBZGRUaGlzIEJ1dHRvbiBFTkQgLS0+ZAITDxYCHwEFgAM8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+CnZhciBnYUpzSG9zdCA9ICgoImh0dHBzOiIgPT0gZG9jdW1lbnQubG9jYXRpb24ucHJvdG9jb2wpID8gImh0dHBzOi8vc3NsLiIgOiAiaHR0cDovL3d3dy4iKTsKZG9jdW1lbnQud3JpdGUodW5lc2NhcGUoIiUzQ3NjcmlwdCBzcmM9JyIgKyBnYUpzSG9zdCArICJnb29nbGUtYW5hbHl0aWNzLmNvbS9nYS5qcycgdHlwZT0ndGV4dC9qYXZhc2NyaXB0JyUzRSUzQy9zY3JpcHQlM0UiKSk7Cjwvc2NyaXB0Pgo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+CnZhciBwYWdlVHJhY2tlciA9IF9nYXQuX2dldFRyYWNrZXIoIlVBLTYxMDk2ODYtMSIpOwpwYWdlVHJhY2tlci5fdHJhY2tQYWdldmlldygpOwo8L3NjcmlwdD5kAgEPZBYCZg9kFggCAQ9kFgJmD2QWAmYPZBYCAgEPZBYCAgMPDxYCHwEFBlN1Ym1pdGRkAgMPZBYCZg9kFgJmD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIHFhBmD2QWAgIBDxYCHgdWaXNpYmxlaBYCZg8PFgIfAwUIL2VuLmFzcHhkZAIBD2QWBGYPFQEAZAIBDw8WAh8DBRwvZW4vUGF0aWVudHNBbmRGYW1pbGllcy5hc3B4ZGQCAg9kFgRmDxUBAGQCAQ8PFgIfAwUWL2VuL1Byb2Zlc3Npb25hbHMuYXNweGRkAgMPZBYEZg8VAQBkAgEPDxYCHwMFES9lbi9TZXJ2aWNlcy5hc3B4ZGQCBA9kFgRmDxUBAGQCAQ8PFgIfAwUfL2VuL0NhcmVlcnNBbmRWb2x1bnRlZXJpbmcuYXNweGRkAgUPZBYEZg8VAQBkAgEPDxYCHwMFGi9lbi9DYW1wdXNEZXZlbG9wbWVudC5hc3B4ZGQCBg9kFgRmDxUBAGQCAQ8PFgIfAwUTL2VuL2ZvdW5kYXRpb24uYXNweGRkAgcPZBYEZg8VAQBkAgEPDxYCHwMFEC9lbi9BYm91dFVzLmFzcHhkZAIFD2QWAmYPZBYCZg9kFgICAQ8WAh8EAgYWDAIBD2QWBAIBDw8WAh8DBSovZW4vZm91bmRhdGlvbi9FdmVudHMvV2VzdFBhcmtMb3R0ZXJ5LmFzcHhkZAIDDw8WAh8DBSovZW4vZm91bmRhdGlvbi9FdmVudHMvV2VzdFBhcmtMb3R0ZXJ5LmFzcHhkZAICD2QWBAIBDw8WAh8DBS0vZW4vU2VydmljZXMvTVNLUmVoYWIvRW1lcmdpbmdmcm9tVHJhdW1hLmFzcHhkZAIDDw8WAh8DBS0vZW4vU2VydmljZXMvTVNLUmVoYWIvRW1lcmdpbmdmcm9tVHJhdW1hLmFzcHhkZAIDD2QWBAIBDw8WAh8DBT8vZW4vUGF0aWVudHNBbmRGYW1pbGllcy9WaXNpdGluZ1dlc3RQYXJrL1dlc3RQYXJrU21va2VGcmVlLmFzcHhkZAIDDw8WAh8DBT8vZW4vUGF0aWVudHNBbmRGYW1pbGllcy9WaXNpdGluZ1dlc3RQYXJrL1dlc3RQYXJrU21va2VGcmVlLmFzcHhkZAIED2QWBAIBDw8WAh8DBRovZW4vQ2FtcHVzRGV2ZWxvcG1lbnQuYXNweGRkAgMPDxYCHwMFGi9lbi9DYW1wdXNEZXZlbG9wbWVudC5hc3B4ZGQCBQ9kFgQCAQ8PFgIfAwUSL2VuL1JlaGFiUGx1cy5hc3B4ZGQCAw8PFgIfAwUSL2VuL1JlaGFiUGx1cy5hc3B4ZGQCBg9kFgQCAQ8PFgIfA2VkZAIDDw8WAh8DZWRkAgcPZBYEZg9kFgJmD2QWAgIDDw8WBB4IQ3NzQ2xhc3MFF3NlY3Rpb25CdXR0b25zIGNsZWFyZml4HgRfIVNCAgJkFgYCAQ9kFgICAg8WAh8FaGQCAw9kFgICAg8WAh8FaGQCBQ9kFgICAg8WAh8FaGQCAg9kFgJmD2QWAgIDD2QWBAIBDxYCHwVoZAIDDw8WAh8FaGRkZOJLV/gTQmDNjdw45mNMAwgAXFHf6TSwGHAHO6nCDYZy" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDM5NzA2OTEwD2QWBgIBDxYCHgdjb250ZW50ZWQCAw8WAh4EVGV4dAUiSG9tZSB8IFdlc3QgUGFyayBIZWFsdGhjYXJlIENlbnRyZWQCBQ9kFgICARBkZBYCAgEPD2QWAh4Fc3R5bGUFTmJhY2tncm91bmQ6IHVybCgnL34vbWVkaWEvSW1hZ2VzL0JyYW5kaW5nL21haW4tYm9keS1iZy0wMS5hc2h4JykgMCAwIG5vLXJlcGVhdBYCAgEPZBYEZg9kFgJmD2QWAgIBDw9kFgIfAgVLYmFja2dyb3VuZDogdXJsKCcvfi9tZWRpYS9JbWFnZXMvQnJhbmRpbmcvc3dvb3NoLWJnLTAxLmFzaHgnKSAwIDAgbm8tcmVwZWF0FgoCAQ8WAh8BBQQ8aDE+ZAIDDw8WAh4LTmF2aWdhdGVVcmwFCC9lbi5hc3B4ZGQCBQ8WAh8BBQU8L2gxPmQCDw8WAh8BBasEPCEtLSBBZGRUaGlzIEJ1dHRvbiBCRUdJTiAtLT4KPGRpdiBjbGFzcz0iYWRkdGhpc190b29sYm94IGFkZHRoaXNfZGVmYXVsdF9zdHlsZSI+Cgo8YSBjbGFzcz0iYWRkdGhpc19idXR0b25fcHJpbnQiPlByaW50PC9hPgo8c3Bhbj5TaGFyZTwvc3Bhbj4KPCEtLTxhIGNsYXNzPSJhZGR0aGlzX2J1dHRvbl9jb21wYWN0IHRleHRfb25seSI+U2hhcmU8L2E+LS0+CjxhIGNsYXNzPSJhZGR0aGlzX2J1dHRvbl9lbWFpbCI+PC9hPgo8YSBjbGFzcz0iYWRkdGhpc19idXR0b25fZmFjZWJvb2siPjwvYT4KPGEgY2xhc3M9ImFkZHRoaXNfYnV0dG9uX3R3aXR0ZXIiPjwvYT4KPGEgY2xhc3M9ImFkZHRoaXNfYnV0dG9uX2xpbmtlZGluIj48L2E+CjxhIGNsYXNzPSJhZGR0aGlzX2J1dHRvbl9jb21wYWN0Ij48L2E+Cgo8L2Rpdj4KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cDovL3M3LmFkZHRoaXMuY29tL2pzLzI1MC9hZGR0aGlzX3dpZGdldC5qcyNwdWJpZD14YS00ZTQwMDNlMjNkZWFhYzAwIj48L3NjcmlwdD4KPCEtLSBBZGRUaGlzIEJ1dHRvbiBFTkQgLS0+ZAITDxYCHwEFgAM8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+CnZhciBnYUpzSG9zdCA9ICgoImh0dHBzOiIgPT0gZG9jdW1lbnQubG9jYXRpb24ucHJvdG9jb2wpID8gImh0dHBzOi8vc3NsLiIgOiAiaHR0cDovL3d3dy4iKTsKZG9jdW1lbnQud3JpdGUodW5lc2NhcGUoIiUzQ3NjcmlwdCBzcmM9JyIgKyBnYUpzSG9zdCArICJnb29nbGUtYW5hbHl0aWNzLmNvbS9nYS5qcycgdHlwZT0ndGV4dC9qYXZhc2NyaXB0JyUzRSUzQy9zY3JpcHQlM0UiKSk7Cjwvc2NyaXB0Pgo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+CnZhciBwYWdlVHJhY2tlciA9IF9nYXQuX2dldFRyYWNrZXIoIlVBLTYxMDk2ODYtMSIpOwpwYWdlVHJhY2tlci5fdHJhY2tQYWdldmlldygpOwo8L3NjcmlwdD5kAgEPZBYCZg9kFggCAQ9kFgJmD2QWAmYPZBYCAgEPZBYCAgMPDxYCHwEFBlN1Ym1pdGRkAgMPZBYCZg9kFgJmD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIHFhBmD2QWAgIBDxYCHgdWaXNpYmxlaBYCZg8PFgIfAwUIL2VuLmFzcHhkZAIBD2QWBGYPFQEAZAIBDw8WAh8DBRwvZW4vUGF0aWVudHNBbmRGYW1pbGllcy5hc3B4ZGQCAg9kFgRmDxUBAGQCAQ8PFgIfAwUWL2VuL1Byb2Zlc3Npb25hbHMuYXNweGRkAgMPZBYEZg8VAQBkAgEPDxYCHwMFES9lbi9TZXJ2aWNlcy5hc3B4ZGQCBA9kFgRmDxUBAGQCAQ8PFgIfAwUfL2VuL0NhcmVlcnNBbmRWb2x1bnRlZXJpbmcuYXNweGRkAgUPZBYEZg8VAQBkAgEPDxYCHwMFGi9lbi9DYW1wdXNEZXZlbG9wbWVudC5hc3B4ZGQCBg9kFgRmDxUBAGQCAQ8PFgIfAwUTL2VuL2ZvdW5kYXRpb24uYXNweGRkAgcPZBYEZg8VAQBkAgEPDxYCHwMFEC9lbi9BYm91dFVzLmFzcHhkZAIFD2QWAmYPZBYCZg9kFgICAQ8WAh8EAgcWDgIBD2QWBAIBDw8WAh8DBS0vZW4vU2VydmljZXMvTVNLUmVoYWIvRW1lcmdpbmdmcm9tVHJhdW1hLmFzcHhkZAIDDw8WAh8DBS0vZW4vU2VydmljZXMvTVNLUmVoYWIvRW1lcmdpbmdmcm9tVHJhdW1hLmFzcHhkZAICD2QWBAIBDw8WAh8DBSovZW4vZm91bmRhdGlvbi9FdmVudHMvV2VzdFBhcmtMb3R0ZXJ5LmFzcHhkZAIDDw8WAh8DBSovZW4vZm91bmRhdGlvbi9FdmVudHMvV2VzdFBhcmtMb3R0ZXJ5LmFzcHhkZAIDD2QWBAIBDw8WAh8DBT8vZW4vZm91bmRhdGlvbi9FdmVudHMvQ2hhaXJzSW52aXRhdGlvbmFsR29sZlRvdXJuYW1lbnQyMDE2LmFzcHhkZAIDDw8WAh8DBT8vZW4vZm91bmRhdGlvbi9FdmVudHMvQ2hhaXJzSW52aXRhdGlvbmFsR29sZlRvdXJuYW1lbnQyMDE2LmFzcHhkZAIED2QWBAIBDw8WAh8DBT8vZW4vUGF0aWVudHNBbmRGYW1pbGllcy9WaXNpdGluZ1dlc3RQYXJrL1dlc3RQYXJrU21va2VGcmVlLmFzcHhkZAIDDw8WAh8DBT8vZW4vUGF0aWVudHNBbmRGYW1pbGllcy9WaXNpdGluZ1dlc3RQYXJrL1dlc3RQYXJrU21va2VGcmVlLmFzcHhkZAIFD2QWBAIBDw8WAh8DBRovZW4vQ2FtcHVzRGV2ZWxvcG1lbnQuYXNweGRkAgMPDxYCHwMFGi9lbi9DYW1wdXNEZXZlbG9wbWVudC5hc3B4ZGQCBg9kFgQCAQ8PFgIfAwUSL2VuL1JlaGFiUGx1cy5hc3B4ZGQCAw8PFgIfAwUSL2VuL1JlaGFiUGx1cy5hc3B4ZGQCBw9kFgQCAQ8PFgIfA2VkZAIDDw8WAh8DZWRkAgcPZBYEZg9kFgJmD2QWAgIDDw8WBB4IQ3NzQ2xhc3MFF3NlY3Rpb25CdXR0b25zIGNsZWFyZml4HgRfIVNCAgJkFgYCAQ9kFgICAg8WAh8FaGQCAw9kFgICAg8WAh8FaGQCBQ9kFgICAg8WAh8FaGQCAg9kFgJmD2QWAgIDD2QWBAIBDxYCHwVoZAIDDw8WAh8FaGRkZH/87CODePWTnzKwn0xHv80oC9ItvTIPYzNP7YW8D68t" />
 </div>
 
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLW9amWBAK6zuW7DAKVtvqtCizBbR31Lr4vjxLEHCxwdO3nWits4j4oACzfXZKkrpxp" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLMrbXIAQK6zuW7DAKVtvqtCu40VtDZMedNzosO0ZLcR0908bzxDV/WHZDf0AVYPEpl" />
 </div>
         <!-- Begin wrapper -->
         <div id="wrapper" style="background: url('/~/media/Images/Branding/main-body-bg-01.ashx') 0 0 no-repeat">
@@ -237,19 +237,9 @@ pageTracker._trackPageview();
 <!-- Begin BX Slider -->
 <ul class="mainCarousel">
         <li>			
-            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_0" href="/en/foundation/Events/WestParkLottery.aspx"><img src="~/media/Images/Slides/FDNLotterySlideMain20162.ashx" alt="Car Lottery" width="640" height="288" /></a>
+            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_0" href="/en/Services/MSKRehab/EmergingfromTrauma.aspx"><img src="~/media/Images/Slides/Slide-Casarin.ashx" alt="Tim Casarin" width="640" height="288" /></a>
             <div class="deets">
-                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_0" href="/en/foundation/Events/WestParkLottery.aspx">WEST PARK LOTTERY IS BACK!</a></h2>
-                <strong>Win a Fiat 500C!</strong>&nbsp;
-<p class="patient">Only 4,500 tickets available. Grand Prize Draw&nbsp;is May 11 so buy your tickets today at 416-243-3663. </p>
-<p class="quote"><a href="http://www.westparklottery.ca" target="_blank"><strong>Find out more!</strong></a>&nbsp;</p>
-            </div>
-        </li>    
-    
-        <li>			
-            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_1" href="/en/Services/MSKRehab/EmergingfromTrauma.aspx"><img src="~/media/Images/Slides/Slide-Casarin.ashx" alt="Tim Casarin" width="640" height="288" /></a>
-            <div class="deets">
-                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_1" href="/en/Services/MSKRehab/EmergingfromTrauma.aspx">Get Your Life Back</a></h2>
+                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_0" href="/en/Services/MSKRehab/EmergingfromTrauma.aspx">Get Your Life Back</a></h2>
                 <p class="patient"><strong>Tim Casarin<br />
 </strong><em>Trauma Rehabilitation Patient</em></p>
 <p>An&nbsp;explosion left&nbsp;Tim&nbsp;with 41 fractures and internal injuries, but today &ndash; thanks to a remarkable journey of rehabilitation, he has&nbsp;reclaimed his&nbsp;life.</p>
@@ -258,9 +248,29 @@ pageTracker._trackPageview();
         </li>    
     
         <li>			
-            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_2" href="/en/PatientsAndFamilies/VisitingWestPark/WestParkSmokeFree.aspx"><img src="~/media/Images/Slides/smoke-freeslide.ashx" alt="Rehab Plus Staff" width="640" height="288" /></a>
+            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_1" href="/en/foundation/Events/WestParkLottery.aspx"><img src="~/media/Images/Slides/SlideMain-WestParkLottery_2016_2017.ashx" alt="Foundation Lottery" width="640" height="288" /></a>
             <div class="deets">
-                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_2" href="/en/PatientsAndFamilies/VisitingWestPark/WestParkSmokeFree.aspx">Smoke-free Campus</a></h2>
+                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_1" href="/en/foundation/Events/WestParkLottery.aspx">Jeep and cash prizes to be won!</a></h2>
+                <strong>Tickets are $25 each or 5 for $100.</strong>&nbsp;
+<p class="patient">Get your tickets today by calling 416-243-3663 and support West Park Healthcare Centre.</p>
+<a href="/en/foundation/Events/WestParkLottery.aspx"><strong>Find out more!</strong></a>
+            </div>
+        </li>    
+    
+        <li>			
+            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_2" href="/en/foundation/Events/ChairsInvitationalGolfTournament2016.aspx"><img src="~/media/Images/General/Campus Development/CD_ConceptBuilding_Main.ashx" alt="Chairs' Invitational Golf Tournament" width="640" height="288" /></a>
+            <div class="deets">
+                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_2" href="/en/foundation/Events/ChairsInvitationalGolfTournament2016.aspx">New Hospital: RFQ issued</a></h2>
+                <strong>Infrastructure Ontario releases Request for Qualifications</strong>
+<p class="patient">The search for a team to design, build, finance and maintain West Park's new hospital begins.</p>
+<a href="/en/CampusDevelopment/Milestones/Sept2016_RFQRelease.aspx"><strong>Find out more!</strong></a>
+            </div>
+        </li>    
+    
+        <li>			
+            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_3" href="/en/PatientsAndFamilies/VisitingWestPark/WestParkSmokeFree.aspx"><img src="~/media/Images/Slides/smoke-freeslide.ashx" alt="Rehab Plus Staff" width="640" height="288" /></a>
+            <div class="deets">
+                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_3" href="/en/PatientsAndFamilies/VisitingWestPark/WestParkSmokeFree.aspx">Smoke-free Campus</a></h2>
                 <strong>Transition begins in 2016</strong>&nbsp;
 <p class="patient">West Park campus to be smoke-free by end of 2017. </p>
 <p class="quote"><a href="/en/PatientsAndFamilies/VisitingWestPark/WestParkSmokeFree.aspx"><strong>Find out more!</strong></a>&nbsp;</p>
@@ -268,9 +278,9 @@ pageTracker._trackPageview();
         </li>    
     
         <li>			
-            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_3" href="/en/CampusDevelopment.aspx"><img src="~/media/Images/Slides/CampusDevelopmentMainSlide.ashx" alt="Building an integrated Campus of Care" width="640" height="288" /></a>
+            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_4" href="/en/CampusDevelopment.aspx"><img src="~/media/Images/Slides/CampusDevelopmentMainSlide.ashx" alt="Building an integrated Campus of Care" width="640" height="288" /></a>
             <div class="deets">
-                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_3" href="/en/CampusDevelopment.aspx">Campus development</a></h2>
+                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_4" href="/en/CampusDevelopment.aspx">Campus development</a></h2>
                 <p class="patient"><strong>West Park Healthcare Centre</strong><br />
 <em>Building an integrated campus of care</em></p>
 <p class="quote" sizcache="5" sizset="30">This innovative redevelopment will serve as a model for the future delivery of healthcare. <a href="http://www.westpark.org//en/CampusDevelopment.aspx"><strong>Learn more</strong></a>.</p>
@@ -278,9 +288,9 @@ pageTracker._trackPageview();
         </li>    
     
         <li>			
-            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_4" href="/en/RehabPlus.aspx"><img src="~/media/Images/Slides/RehabPlusSlide2015.ashx" alt="Rehab Plus Staff" width="640" height="288" /></a>
+            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_5" href="/en/RehabPlus.aspx"><img src="~/media/Images/Slides/RehabPlusSlide2015.ashx" alt="Rehab Plus Staff" width="640" height="288" /></a>
             <div class="deets">
-                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_4" href="/en/RehabPlus.aspx">Rehab Plus</a></h2>
+                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_5" href="/en/RehabPlus.aspx">Rehab Plus</a></h2>
                 <strong>For your Health and Wellness!</strong>&nbsp;
 <p class="patient">Results-oriented services&nbsp;through appropriate, timely and personalized treatments! </p>
 <p class="quote"><a href="/en/RehabPlus.aspx"><strong>Find out more!</strong></a>&nbsp;</p>
@@ -288,9 +298,9 @@ pageTracker._trackPageview();
         </li>    
     
         <li>			
-            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_5"><img src="~/media/Images/General/Foundation/FHT Slide.ashx" alt="West Park Family Health Team" width="640" height="288" /></a>
+            <a id="body_1_maincontenttop_0_RptSlideshow_HypStoryLink_6"><img src="~/media/Images/General/Foundation/FHT Slide.ashx" alt="West Park Family Health Team" width="640" height="288" /></a>
             <div class="deets">
-                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_5">Services for the community</a></h2>
+                <h2><a id="body_1_maincontenttop_0_RptSlideshow_HypTitleLink_6">Services for the community</a></h2>
                 <p class="patient"><strong>Convenience and quality!</strong><br />
 <em>Everything you need is at West Park</em></p>
 <p class="quote"><a href="/en/FamilyHealthTeam.aspx"><strong>Family doctors</strong></a>, a <a href="/en/PatientsAndFamilies/AboutOurFacilities/RetailPharmacy.aspx"><strong>retail pharmacy</strong></a>, and&nbsp;<a href="/en/RehabPlus.aspx"><strong>wellness clinic</strong></a> are all at West Park. Check them out.</p>
@@ -363,35 +373,49 @@ realize their potential. In a park-like corner of West Toronto, we have created 
 		
         
         
-        <DIV id=homepageFeatures class=clearfix sizset="63" sizcache="6" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<DIV class=col sizset="53" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<H3 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">West Park&nbsp;Development</H3>
-<P IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Our&nbsp;approved development plans will help to redefine the boundaries of care.</P><A href="http://www.westpark.org//en/CampusDevelopment.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Learn more about the plan » </A><IMG alt="Artist rendering of the campus" src="http://www.westpark.org/common/images/promo-img-01.gif" width=260 height=98 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"> </DIV><!-- End col -->
-<DIV class="col news" sizset="54" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<H3 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">What's New</H3>
-<UL sizset="54" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<LI sizset="54" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><A href="https://youtu.be/-nVicAhAAg0" target=_blank>VIDEO: get your life back</A>&nbsp; </LI>
-<LI sizset="55" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><A href="http://issuu.com/hospitalnews/docs/043016_hn_editorial_final/24?e=8107642/35241076" target=_blank><SPAN style="TEXT-DECORATION: underline; COLOR: #0066cc">West Park RPN is a Hospital News Nursing Hero</SPAN></A>&nbsp; </LI>
-<LI sizset="56" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><A href="http://www.westpark.org/sitecore/shell/Controls/Rich%20Text%20Editor//en/AboutUs/QualityandAccountability/Performance/GreenHospitalScorecard.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Centre earns Green Hospital Silver Seal</A>&nbsp;&nbsp; </LI></UL>
-<H3 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">West Park in the news</H3>
-<UL sizset="57" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<LI sizset="57" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><A href="http://www.thestar.com/life/health_wellness/2016/04/18/rates-of-women-with-copd-skyrockets-as-more-women-take-up-smoking.html" target=_blank IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">COPD rates in women skyrocket- Toronto Star</A>&nbsp; </LI>
-<LI sizset="58" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><A href="http://www.cbc.ca/news/canada/toronto/patrick-doyle-achilles-run-1.3489660" target=_blank IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Man runs 5K race after losing leg - CBC News</A>&nbsp; </LI>
-<LI sizset="59" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><A href="https://youtu.be/q8deLGoKr1g" target=_blank IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">COPD may be linked to posture - CITYTV News</A>&nbsp; </LI>
-<LI sizset="60" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><A href="http://uk.reuters.com/article/2015/08/14/us-health-falls-copd-idUKKCN0QJ1QE20150814" target=_blank IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">COPD linked to falls risk - Reuters</A>&nbsp; </LI></UL></DIV><!-- End col -->
-<DIV class=col sizset="63" sizcache="6" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<H3 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Quality &amp; Accountablility</H3><A href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<H4 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><SPAN style="COLOR: #1f497d" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Quality</SPAN></H4></A>
-<P sizset="62" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">See West Park’s infection prevention rates and <A href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><STRONG IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">learn how</STRONG> </A>the Centre is striving to provide the best care and ensure the safest environment possible for patients.</P>
-<H4 sizset="63" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><SPAN style="COLOR: #1f497d" sizset="63" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><A href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><SPAN style="COLOR: #1f497d" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Accountability</SPAN></A></SPAN></H4>
-<P sizset="64" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Through our commitment to accountability, good financial stewardship and transparency, West Park is able to invest in our people, facilities, education and research, all for the benefit of patients. <A href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><STRONG IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Learn more</STRONG></A>.</P></DIV><!-- End col --></DIV><!-- End homepage features --><!-- Begin Awards and Honours -->
-<H2 class=clearfix IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">Awards &amp; Honours</H2>
-<P class=clearfix IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">&nbsp;</P>
-<BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr sizset="65" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<DIV class=clearfix sizset="65" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<UL sizset="65" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">
-<LI sizset="61" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">&nbsp;&nbsp; </LI>
-<LI sizset="65" sizcache="5" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<A href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><IMG alt="Quality Healthcare Workplace Award Platinum 2012" src="~/media/Images/General/QHA_Stamp_Platinum_2012.ashx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<A href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><IMG alt="RNAO Best Practice Spotlight Organization" src="~/media/Images/General/BPSO_CANADA_French_Web.ashx" width=200 height=49 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="http://www.westpark.org//en/AboutUs/QualityandAccountability/Performance/Accreditation.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><IMG alt="Accreditation Canada Exemplary Standard" src="~/media/Images/General/AClogoExemp.ashx" width=105 height=105 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"></A><A href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><IMG alt="Green Health Care Award" src="~/media/Images/green-hltcare-awardLOGO.ashx" width=105 height=130 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"></A>&nbsp; <A href="http://www.westpark.org//en/AboutUs/QualityandAccountability/Performance/GreenHospitalScorecard.aspx" IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"><IMG alt="OHA GHS Silver Seal" src="~/media/Images/General/OHA-GHS-seal-2015-silver.ashx" width=126 height=120 IXv7vGX016Q0="true" yjywtfnhryny="true" gvaqnnxbifix="true" dcYpDxS3DDR0="true"></A> </LI></UL></DIV></BLOCKQUOTE><!-- Begin Awards and Honours -->
+        <div id="homepageFeatures" class="clearfix" sizset="63" sizcache="6" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+<div class="col" sizset="53" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+<h3 dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">West Park&nbsp;Development</h3>
+<p dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Our&nbsp;approved development plans will help to redefine the boundaries of care.</p>
+<a href="http://www.westpark.org//en/CampusDevelopment.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Learn more about the plan &raquo; </a><img width="260" height="98" alt="Artist rendering of the campus" src="http://www.westpark.org/common/images/promo-img-01.gif" width="260" height="98" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true" /> </div>
+<!-- End col -->
+<div class="col news" sizset="54" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+<h3 dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">What's New</h3>
+<ul sizset="54" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+    <li sizset="54" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><a href="http://www.westpark.org//en/AboutUs/BoardCommunityRepresentation/PatientRepQualityCommittee.aspx">Quality Committee seeks patient representative</a>&nbsp;&nbsp; </li>
+    <li sizset="55" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><a href="https://youtu.be/-nVicAhAAg0" target="_blank">VIDEO: get your life back</a>&nbsp; </li>
+    <li sizset="56" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><a href="http://issuu.com/hospitalnews/docs/043016_hn_editorial_final/24?e=8107642/35241076" target="_blank">West Park RPN is a Hospital News Nursing Hero</a>&nbsp;&nbsp; </li>
+</ul>
+<h3 dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">West Park in the news</h3>
+<ul sizset="57" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+    <li sizset="57" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><a href="http://www.carlow-nationalist.ie/2016/09/01/tullow-amputee-will-run-new-york-marathon-three-years-after-losing-his-leg/" target="_blank" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Amputee to run in New York Marathon - Carlaw Nationalist</a>&nbsp; </li>
+    <li sizset="58" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><a href="http://www.insidetoronto.com/sports-story/6829820-canada-s-paralympic-women-s-sitting-volleyball-warms-up-for-rio-at-west-park-healthcare-centre/" target="_blank" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Paralympic Volleyball Team visit West Park - York Guardian</a>&nbsp; </li>
+    <li sizset="59" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><a href="http://www.thestar.com/life/health_wellness/2016/04/18/rates-of-women-with-copd-skyrockets-as-more-women-take-up-smoking.html" target="_blank" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">COPD rates in women skyrocket- Toronto Star</a>&nbsp; </li>
+    <li sizset="60" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><a href="http://www.cbc.ca/news/canada/toronto/patrick-doyle-achilles-run-1.3489660" target="_blank" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Man runs 5K race after losing leg - CBC News</a>&nbsp; </li>
+</ul>
+</div>
+<!-- End col -->
+<div class="col" sizset="63" sizcache="6" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+<h3 dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Quality &amp; Accountablility</h3>
+<a href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+<h4 dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><span style="color: #1f497d;" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Quality</span></h4>
+</a>
+<p sizset="62" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">See West Park&rsquo;s infection prevention rates and <a href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><strong dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">learn how</strong> </a>the Centre is striving to provide the best care and ensure the safest environment possible for patients.</p>
+<h4 sizset="63" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><span style="color: #1f497d;" sizset="63" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><a href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><span style="color: #1f497d;" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Accountability</span></a></span></h4>
+<p sizset="64" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Through our commitment to accountability, good financial stewardship and transparency, West Park is able to invest in our people, facilities, education and research, all for the benefit of patients. <a href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><strong dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Learn more</strong></a>.</p>
+</div>
+<!-- End col --></div>
+<!-- End homepage features --><!-- Begin Awards and Honours -->
+<h2 class="clearfix" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">Awards &amp; Honours</h2>
+<p class="clearfix" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">&nbsp;</p>
+<blockquote style="margin-right: 0px;" dir="ltr" sizset="65" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+<div class="clearfix" sizset="65" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+<ul sizset="65" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">
+    <li sizset="61" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">&nbsp;&nbsp; </li>
+    <li sizset="65" sizcache="5" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<a href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><img alt="Quality Healthcare Workplace Award Platinum 2012" src="~/media/Images/General/QHA_Stamp_Platinum_2012.ashx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><img width="200" height="49" alt="RNAO Best Practice Spotlight Organization" src="~/media/Images/General/BPSO_CANADA_French_Web.ashx" width="200" height="49" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.westpark.org//en/AboutUs/QualityandAccountability/Performance/Accreditation.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><img width="105" height="105" alt="Accreditation Canada Exemplary Standard" src="~/media/Images/General/AClogoExemp.ashx" width="105" height="105" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true" /></a><a href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><img width="105" height="130" alt="Green Health Care Award" src="~/media/Images/green-hltcare-awardLOGO.ashx" width="105" height="130" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true" /></a>&nbsp; <a href="http://www.westpark.org//en/AboutUs/QualityandAccountability/Performance/GreenHospitalScorecard.aspx" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true"><img width="126" height="120" alt="OHA GHS Silver Seal" src="~/media/Images/General/OHA-GHS-seal-2015-silver.ashx" width="126" height="120" dcYpDxS3DDR0="true" gvaqnnxbifix="true" yjywtfnhryny="true" IXv7vGX016Q0="true" /></a> </li>
+</ul>
+</div>
+</blockquote><!-- Begin Awards and Honours -->
         <p><a></a></p>
     
 	</div>
@@ -403,42 +427,59 @@ realize their potential. In a park-like corner of West Toronto, we have created 
         
 <!-- Begin footer -->
 <div id="footer" class="clearfix">
-    <DIV class=col sizcache="5" sizset="37">
-<H3>West Park Basics</H3>
-<UL sizcache="5" sizset="37">
-<LI sizcache="5" sizset="37"><A href="http://www.westpark.org//en/PatientsAndFamilies/VisitingWestPark.aspx">Visiting West Park</A>&nbsp; 
-<LI sizcache="5" sizset="38"><A href="http://www.westpark.org//en/AboutUs/ContactUs/TelephoneDirectory.aspx">Telephone Directory</A>&nbsp; 
-<LI sizcache="5" sizset="39"><A href="http://www.westpark.org//en/Services.aspx">List of Services</A>&nbsp; 
-<LI sizcache="5" sizset="40"><A href="http://www.westpark.org//en/AboutUs/Feedback.aspx">Feedback</A>&nbsp; </LI></UL>
-<H3>Foundation</H3>
-<UL sizcache="5" sizset="41">
-<LI sizcache="5" sizset="41"><A href="http://www.westpark.org//en/foundation/WaystoGive.aspx">Ways to give</A>&nbsp; 
-<LI sizcache="5" sizset="42"><A href="http://www.westpark.org//en/foundation/DonorCentre/YourGiftsAtWork.aspx">How your donation can help</A>&nbsp; </LI></UL></DIV><!-- End col -->
-<DIV class="col aboutUs" sizcache="5" sizset="43">
-<H3>About Us</H3>
-<UL sizcache="5" sizset="43">
-<LI sizcache="5" sizset="43"><A href="http://www.westpark.org//en/AboutUs/ContactUs.aspx">Contact Us</A>&nbsp; 
-<LI sizcache="5" sizset="44"><A href="http://www.westpark.org//en/AboutUs/VisionMissionValues.aspx">Vision, Mission and Values</A>&nbsp; 
-<LI sizcache="5" sizset="45"><A href="http://www.westpark.org//en/AboutUs/Events.aspx">Events</A>&nbsp; 
-<LI sizcache="5" sizset="46"><A href="http://www.westpark.org//en/AboutUs/NewsRoom.aspx">News Room</A>&nbsp; 
-<LI sizcache="5" sizset="47"><A href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx">Quality &amp; Accountability</A>&nbsp; 
-<LI sizcache="5" sizset="48"><A href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx">Awards and Honours</A>&nbsp; 
-<LI sizcache="5" sizset="49"><A href="http://www.westpark.org//en/AboutUs/BoardofDirectors.aspx">Board of Directors</A>&nbsp; 
-<LI sizcache="5" sizset="50"><A href="http://www.westpark.org//en/AboutUs/History.aspx">History</A>&nbsp; </LI></UL></DIV><!-- End col -->
-<DIV class="col socialMedia" sizcache="5" sizset="51">
-<H3>Social Media</H3>
-<UL sizcache="5" sizset="51">
-<LI sizcache="5" sizset="51"><A class=fb title=Facebook href="http://www.facebook.com/#!/pages/West-Park-Healthcare-Centre/376508217467" target=_blank>Facebook</A> 
-<LI sizcache="5" sizset="52"><A class=twitter title=Twitter href="https://twitter.com/#!/westparkhcc" target=_blank>Twitter</A> 
-<LI sizcache="5" sizset="53"><A class=youtube title=YouTube href="http://www.youtube.com/WestParkhealthcare" target=_blank>YouTube</A> 
-<LI sizcache="5" sizset="54"><A class=linkedin title=LinkedIn href="http://www.linkedin.com/company/218953?trk=tyah" target=_blank>LinkedIn</A> </LI></UL></DIV><!-- End col -->
-<DIV class="col siteInfo" sizcache="5" sizset="55"><IMG title="West Park Healthcare Centre" alt="West Park Healthcare Centre" src="http://www.westpark.org/common/images/footer-logo.gif"> 
-<P sizcache="5" sizset="55">West Park Healthcare Centre<BR>82 Buttonwood Ave.<BR>Toronto ON M6M 2J5<BR>416-243-3600<BR><A href="mailto:feedback@westpark.org?subject=Feedback">feedback@westpark.org</A></P>
-<UL class="footerNav clearfix" sizcache="5" sizset="56">
-<LI sizcache="5" sizset="56"><A href="http://www.westpark.org//en/AboutUs.aspx">Sitemap</A>&nbsp; </LI>
-<LI sizcache="5" sizset="57"><A href="http://www.westpark.org//en/AboutUs/QualityandAccountability/InformationandPrivacy/PrivacyatWestPark/WestParkPrivacyStatement.aspx">Privacy Statement</A>&nbsp; </LI>
-<LI sizcache="5" sizset="58"><A href="http://www.westpark.org//en/AboutUs/QualityandAccountability/InformationandPrivacy/PrivacyatWestPark/PrivacyandtheWeb.aspx">Terms and Conditions</A>&nbsp; </LI></UL>
-<P class=copyright>© West Park Healthcare Centre</P></DIV><!-- End col -->
+    <div class="col" sizset="37" sizcache="5">
+<h3>West Park Basics</h3>
+<ul sizset="37" sizcache="5">
+    <li sizset="37" sizcache="5"><a href="http://www.westpark.org//en/PatientsAndFamilies/VisitingWestPark.aspx">Visiting West Park</a>&nbsp; </li>
+    <li sizset="38" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/ContactUs/TelephoneDirectory.aspx">Telephone Directory</a>&nbsp; </li>
+    <li sizset="39" sizcache="5"><a href="http://www.westpark.org//en/Services.aspx">List of Services</a>&nbsp; </li>
+    <li sizset="40" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/Feedback.aspx">Feedback</a>&nbsp; </li>
+</ul>
+<h3>Foundation</h3>
+<ul sizset="41" sizcache="5">
+    <li sizset="41" sizcache="5"><a href="http://www.westpark.org//en/foundation/WaystoGive.aspx">Ways to give</a>&nbsp; </li>
+    <li sizset="42" sizcache="5"><a href="http://www.westpark.org//en/foundation/DonorCentre/YourGiftsAtWork.aspx">How your donation can help</a>&nbsp; </li>
+</ul>
+</div>
+<!-- End col -->
+<div class="col aboutUs" sizset="43" sizcache="5">
+<h3>About Us</h3>
+<ul sizset="43" sizcache="5">
+    <li sizset="43" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/ContactUs.aspx">Contact Us</a>&nbsp; </li>
+    <li sizset="44" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/VisionMissionValues.aspx">Vision, Mission and Values</a>&nbsp; </li>
+    <li sizset="45" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/Events.aspx">Events</a>&nbsp; </li>
+    <li sizset="46" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/NewsRoom.aspx">News Room</a>&nbsp; </li>
+    <li sizset="47" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/QualityandAccountability.aspx">Quality &amp; Accountability</a>&nbsp; </li>
+    <li sizset="48" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/AwardsandHonours.aspx">Awards and Honours</a>&nbsp; </li>
+    <li sizset="49" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/BoardofDirectors.aspx">Board of Directors</a>&nbsp; </li>
+    <li sizset="50" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/History.aspx">History</a>&nbsp; </li>
+</ul>
+</div>
+<!-- End col -->
+<div class="col socialMedia" sizset="51" sizcache="5">
+<h3>Social Media</h3>
+<ul sizset="51" sizcache="5">
+    <li sizset="51" sizcache="5"><a href="http://www.facebook.com/#!/pages/West-Park-Healthcare-Centre/376508217467" class="fb" title="Facebook" target="_blank">Facebook</a> </li>
+    <li sizset="52" sizcache="5"><a href="https://twitter.com/#!/westparkhcc" class="twitter" title="Twitter" target="_blank">Twitter</a> </li>
+    <li sizset="53" sizcache="5"><a href="http://www.youtube.com/WestParkhealthcare" class="youtube" title="YouTube" target="_blank">YouTube</a> </li>
+    <li sizset="54" sizcache="5"><a href="http://www.linkedin.com/company/218953?trk=tyah" class="linkedin" title="LinkedIn" target="_blank">LinkedIn</a> </li>
+</ul>
+</div>
+<!-- End col -->
+<div class="col siteInfo" sizset="55" sizcache="5"><img width="130" height="71" alt="West Park" src="~/media/Images/WPHC_LOGO_POSB.ashx?h=71&amp;w=130" />&nbsp;
+<p sizset="55" sizcache="5">West Park Healthcare Centre<br />
+82 Buttonwood Ave.<br />
+Toronto ON M6M 2J5<br />
+416-243-3600<br />
+<a href="mailto:feedback@westpark.org?subject=Feedback">feedback@westpark.org</a></p>
+<ul class="footerNav clearfix" sizset="56" sizcache="5">
+    <li sizset="56" sizcache="5"><a href="http://www.westpark.org//en/AboutUs.aspx">Sitemap</a>&nbsp; </li>
+    <li sizset="57" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/QualityandAccountability/InformationandPrivacy/PrivacyatWestPark/WestParkPrivacyStatement.aspx">Privacy Statement</a>&nbsp; </li>
+    <li sizset="58" sizcache="5"><a href="http://www.westpark.org//en/AboutUs/QualityandAccountability/InformationandPrivacy/PrivacyatWestPark/PrivacyandtheWeb.aspx">Terms and Conditions</a>&nbsp; </li>
+</ul>
+<p class="copyright">&copy; West Park Healthcare Centre</p>
+</div>
+<!-- End col -->
 </div>
 <!-- End footer -->
     </div>

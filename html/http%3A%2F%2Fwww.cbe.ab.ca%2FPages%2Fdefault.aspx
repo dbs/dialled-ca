@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html id="ctl00_Html1" xmlns:o="urn:schemas-microsoft-com:office:office" __expr-val-dir="ltr" lang="en-us" dir="ltr">
-<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=8" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta name="progid" content="SharePoint.WebPartPage.Document" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta name="viewport" content="user-scalable=yes, width=1100, height:1100 initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.25" /><title>
+<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta name="progid" content="SharePoint.WebPartPage.Document" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta name="viewport" content="user-scalable=yes, width=1100, height:1100 initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.25" /><title>
 	
 	Home
  	- CBE Home - CBE
@@ -83,7 +83,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=gwzu8a
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x7C1BAD0E60FBDBC273B2D63D778244321D4700177751B1D44A00EADAF642B6C30B9B176B8596EBD2AD79166FFA4A411FF780A2E5E37E61333D9CC83E6C9A75C8,09 May 2016 13:20:40 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x707D4A123A513D7197CA4A64613B8334EE3DD90C7BC39D5DDE1D05A31FF864E208BDD2924A7CFCF31E859CF0BA1A2A371D951CF1153EBD85D07F74A1C9587BDF,11 Sep 2016 15:51:11 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -126,11 +126,11 @@ var g_wsaEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaSiteTemplateId = 'BLANKINTERNET#0';
 var g_wsaListTemplateId = 850;
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{353632f2-e744-41af-8607-8a3fc39d7f9c}",pageItemId:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};function CallServer_21208280(arg, context) {WebForm_DoCallback('ctl00$ctl06',arg,SP.UI.MyLinksRibbon.MyLinksRibbonPageComponent.ribbonActionCallback,context,null,false); }function _myLinksRibbonLoad2()
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{353632f2-e744-41af-8607-8a3fc39d7f9c}",pageItemId:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};function CallServer_21824768(arg, context) {WebForm_DoCallback('ctl00$ctl06',arg,SP.UI.MyLinksRibbon.MyLinksRibbonPageComponent.ribbonActionCallback,context,null,false); }function _myLinksRibbonLoad2()
 {
     var fnd = function () {
         try {
-            mylinks_init.MyLinksInit('CallServer_21208280'); 
+            mylinks_init.MyLinksInit('CallServer_21824768'); 
         } 
         catch (Ex)
         { }
@@ -395,7 +395,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 
 <div class="cbe-globalnav s4-notdlg">        
     <div class="cbe-globalnavmenu">      
-        <div class='cbe-menu'><input id="ctl00_ctl14_CBECustomNavigation" type="hidden" name="ctl00$ctl14$hidDataSourceID" id="ctl00_ctl14_hidDataSourceID" value="topSiteMap" /><ul class='cbenav-top'><li class='cbenav-top-item'><a href='http://www.cbe.ab.ca'><span>[ cbe logo ]</span></a></li><li class='cbenav-top-item'><a href='/schools/Pages/default.aspx'><span>Schools</span><span class='cbenav-top-desc'>Spaces &amp; Busing</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/schools/find-a-school/Pages/default.aspx'><span>Find a School</span></a></li><li class='cbenav-mid-item'><a href='/schools/school-directory/Pages/default.aspx'><span>School Directory</span></a></li><li class='cbenav-mid-item'><a href='/schools/busing-and-transportation/Pages/default.aspx'><span>Busing &amp; Transportation</span></a></li><li class='cbenav-mid-item'><a href='/schools/events-sessions-open-houses/Pages/default.aspx'><span>Events, Sessions &amp; Open Houses</span></a></li><li class='cbenav-mid-item'><a href='/schools/building-and-modernizing-schools/Pages/default.aspx'><span>Building &amp; Modernizing Schools</span></a></li><li class='cbenav-mid-item'><a href='/schools/managing-space-students/Pages/default.aspx'><span>Managing Space For Students</span></a></li><li class='cbenav-mid-item'><a href='/schools/renting-cbe-space/Pages/default.aspx'><span>Renting CBE Space</span></a></li></ul></li><li class='cbenav-top-item'><a href='/programs/Pages/default.aspx'><span>Programs</span><span class='cbenav-top-desc'>Services &amp; Supports</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/programs/preschool/Pages/default.aspx'><span>Preschool</span></a></li><li class='cbenav-mid-item'><a href='/programs/kindergarten/Pages/default.aspx'><span>Kindergarten</span></a></li><li class='cbenav-mid-item'><a href='/programs/elementary/Pages/default.aspx'><span>Elementary</span></a></li><li class='cbenav-mid-item'><a href='/programs/middle-years/Pages/default.aspx'><span>Middle Years</span></a></li><li class='cbenav-mid-item'><a href='/programs/high-school/Pages/default.aspx'><span>High School</span></a></li><li class='cbenav-mid-item'><a href='/programs/adult-education/Pages/default.aspx'><span>Adult Education</span></a></li><li class='cbenav-mid-item'><a href='/programs/program-options/Pages/default.aspx'><span>Program Options</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/program-options/language-programs/Pages/default.aspx'><span>Language Programs</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/program-options/language-programs/language-credentialing/Pages/default.aspx'><span>Language Credentialing</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/program-options/language-programs/language-credentialing/Pages/language-credentialing-exams.aspx'><span>Language Credentialing Exams</span></a></li></ul></li></ul></li><li class='cbenav-sub-item'><a href='/programs/program-options/subject-matter/Pages/default.aspx'><span>Subject Matter</span></a></li><li class='cbenav-sub-item'><a href='/programs/program-options/teaching-philosopy/Pages/default.aspx'><span>Teaching Philosophy</span></a></li><li class='cbenav-sub-item'><a href='/programs/program-options/program-setting-and-delivery/Pages/default.aspx'><span>Program Setting &amp; Delivery</span></a></li><li class='cbenav-sub-item'><a href='/programs/program-options/exploring-career-choices/Pages/default.aspx'><span>Exploring Career Choices</span></a></li><li class='cbenav-sub-item'><a href='/programs/program-options/internationally-recognized-programs/Pages/default.aspx'><span>Internationally Recognized Programs</span></a></li></ul></li><li class='cbenav-mid-item'><a href='/programs/curriculum/Pages/default.aspx'><span>Curriculum</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/curriculum/assessment-and-reporting/Pages/default.aspx'><span>Assessment &amp; Reporting</span></a></li></ul></li><li class='cbenav-mid-item'><a href='/programs/noon-supervision/Pages/default.aspx'><span>Noon Supervision</span></a></li><li class='cbenav-mid-item'><a href='/programs/supports-for-students/Pages/default.aspx'><span>Supports for Students</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/supports-for-students/exceptional-and-special-needs/Pages/default.aspx'><span>Exceptional &amp; Special Needs</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/supports-for-students/exceptional-and-special-needs/complex-needs/Pages/default.aspx'><span>Complex Needs</span></a></li></ul></li></ul></li><li class='cbenav-mid-item'><a href='/programs/technology-for-learning/Pages/default.aspx'><span>Technology for Learning</span></a></li></ul></li><li class='cbenav-top-item'><a href='/registration/Pages/default.aspx'><span>Registration</span><span class='cbenav-top-desc'>Records &amp; Fees</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/registration/back-to-school/Pages/back-to-school.aspx'><span>Back to School</span></a></li><li class='cbenav-mid-item'><a href='/registration/registration/Pages/default.aspx'><span>Registration</span></a></li><li class='cbenav-mid-item'><a href='/registration/fees-and-waivers/Pages/default.aspx'><span>Fees &amp; Waivers</span></a></li><li class='cbenav-mid-item'><a href='/registration/records-and-transcripts/Pages/default.aspx'><span>Records &amp; Transcripts</span></a></li><li class='cbenav-mid-item'><a href='/registration/forms-you-need/Pages/default.aspx'><span>Forms You Need</span></a></li><li class='cbenav-mid-item'><a href='/registration/calendars/Pages/default.aspx'><span>Calendars</span></a></li></ul></li><li class='cbenav-top-item'><a href='/about-us/Pages/default.aspx'><span>About Us</span><span class='cbenav-top-desc'>Leadership &amp; Governance</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/about-us/about-the-cbe/Pages/default.aspx'><span>About the CBE</span></a></li><li class='cbenav-mid-item'><a href='/about-us/contact-us/Pages/default.aspx'><span>Contact Us</span></a></li><li class='cbenav-mid-item'><a href='/about-us/board-of-trustees/Pages/default.aspx'><span>Board of Trustees</span></a></li><li class='cbenav-mid-item'><a href='/about-us/leadership/Pages/default.aspx'><span>Leadership</span></a></li><li class='cbenav-mid-item'><a href='/about-us/policies-and-regulations/Pages/default.aspx'><span>Policies &amp; Regulations</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/about-us/policies-and-regulations/freedom-of-information-and-protection-of-privacy-foip/Pages/default.aspx'><span>Freedom of Information and Protection of Privacy (FOIP)</span></a></li></ul></li><li class='cbenav-mid-item'><a href='/about-us/budget-and-finance/Pages/default.aspx'><span>Budget &amp; Finance</span></a></li><li class='cbenav-mid-item'><a href='/about-us/provincial-tests-and-reports/Pages/default.aspx'><span>Provincial Assessment &amp; Reports</span></a></li><li class='cbenav-mid-item'><a href='/about-us/school-culture-and-environment/Pages/default.aspx'><span>School Culture &amp; Environment</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/about-us/school-culture-and-environment/health-and-wellness-in-school/Pages/default.aspx'><span>Health &amp; Wellness in School</span></a></li></ul></li><li class='cbenav-mid-item'><a href='/about-us/sustainability/Pages/default.aspx'><span>Sustainability</span></a></li><li class='cbenav-mid-item'><a href='/about-us/vendors/Pages/default.aspx'><span>Vendors</span></a></li></ul></li><li class='cbenav-top-item'><a href='/get-involved/Pages/Get-Involved.aspx'><span>Get Involved</span><span class='cbenav-top-desc'>Our Community</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/get-involved/public-engagement/Pages/default.aspx'><span>Public Engagement</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/school-councils/Pages/school-councils.aspx'><span>School Councils</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/parent-societies-and-associations/Pages/parent-societies-and-associations.aspx'><span>Parent Societies &amp; Associations</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/volunteer/Pages/volunteer.aspx'><span>Volunteer</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/partners/Pages/default.aspx'><span>Partners</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/donate/Pages/default.aspx'><span>Donate</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/artist-in-residence/Pages/default.aspx'><span>Artist in Residence</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/request-to-share-information-with-schools/Pages/request-to-share-information-with-schools.aspx'><span>Request to Share Information with Schools</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/conducting-research/Pages/default.aspx'><span>Conducting Research</span></a></li></ul></li></ul></div>
+        <div class='cbe-menu'><input id="ctl00_ctl14_CBECustomNavigation" type="hidden" name="ctl00$ctl14$hidDataSourceID" id="ctl00_ctl14_hidDataSourceID" value="topSiteMap" /><ul class='cbenav-top'><li class='cbenav-top-item'><a href='http://www.cbe.ab.ca'><span>[ cbe logo ]</span></a></li><li class='cbenav-top-item'><a href='/schools/Pages/default.aspx'><span>Schools</span><span class='cbenav-top-desc'>Spaces &amp; Busing</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/schools/find-a-school/Pages/default.aspx'><span>Find a School</span></a></li><li class='cbenav-mid-item'><a href='/schools/school-directory/Pages/default.aspx'><span>School Directory</span></a></li><li class='cbenav-mid-item'><a href='/schools/busing-and-transportation/Pages/default.aspx'><span>Busing &amp; Transportation</span></a></li><li class='cbenav-mid-item'><a href='/schools/events-sessions-open-houses/Pages/default.aspx'><span>Events, Sessions &amp; Open Houses</span></a></li><li class='cbenav-mid-item'><a href='/schools/building-and-modernizing-schools/Pages/default.aspx'><span>Building &amp; Modernizing Schools</span></a></li><li class='cbenav-mid-item'><a href='/schools/managing-space-students/Pages/default.aspx'><span>Managing Space For Students</span></a></li><li class='cbenav-mid-item'><a href='/schools/renting-cbe-space/Pages/default.aspx'><span>Renting CBE Space</span></a></li></ul></li><li class='cbenav-top-item'><a href='/programs/Pages/default.aspx'><span>Programs</span><span class='cbenav-top-desc'>Services &amp; Supports</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/programs/preschool/Pages/default.aspx'><span>Preschool</span></a></li><li class='cbenav-mid-item'><a href='/programs/kindergarten/Pages/default.aspx'><span>Kindergarten</span></a></li><li class='cbenav-mid-item'><a href='/programs/elementary/Pages/default.aspx'><span>Elementary</span></a></li><li class='cbenav-mid-item'><a href='/programs/middle-years/Pages/default.aspx'><span>Middle Years</span></a></li><li class='cbenav-mid-item'><a href='/programs/high-school/Pages/default.aspx'><span>High School</span></a></li><li class='cbenav-mid-item'><a href='/programs/adult-education/Pages/default.aspx'><span>Adult Education</span></a></li><li class='cbenav-mid-item'><a href='/programs/program-options/Pages/default.aspx'><span>Program Options</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/program-options/language-programs/Pages/default.aspx'><span>Language Programs</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/program-options/language-programs/language-credentialing/Pages/default.aspx'><span>Language Credentialing</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/program-options/language-programs/language-credentialing/Pages/language-credentialing-exams.aspx'><span>Language Credentialing Exams</span></a></li></ul></li></ul></li><li class='cbenav-sub-item'><a href='/programs/program-options/subject-matter/Pages/default.aspx'><span>Subject Matter</span></a></li><li class='cbenav-sub-item'><a href='/programs/program-options/teaching-philosopy/Pages/default.aspx'><span>Teaching Philosophy</span></a></li><li class='cbenav-sub-item'><a href='/programs/program-options/program-setting-and-delivery/Pages/default.aspx'><span>Program Setting &amp; Delivery</span></a></li><li class='cbenav-sub-item'><a href='/programs/program-options/exploring-career-choices/Pages/default.aspx'><span>Exploring Career Choices</span></a></li><li class='cbenav-sub-item'><a href='/programs/program-options/internationally-recognized-programs/Pages/default.aspx'><span>Internationally Recognized Programs</span></a></li></ul></li><li class='cbenav-mid-item'><a href='/programs/curriculum/Pages/default.aspx'><span>Curriculum</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/curriculum/assessment-and-reporting/Pages/default.aspx'><span>Assessment &amp; Reporting</span></a></li></ul></li><li class='cbenav-mid-item'><a href='/programs/noon-supervision/Pages/default.aspx'><span>Noon Supervision</span></a></li><li class='cbenav-mid-item'><a href='/programs/supports-for-students/Pages/default.aspx'><span>Supports for Students</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/supports-for-students/exceptional-and-special-needs/Pages/default.aspx'><span>Exceptional &amp; Special Needs</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/programs/supports-for-students/exceptional-and-special-needs/complex-needs/Pages/default.aspx'><span>Complex Needs</span></a></li></ul></li></ul></li><li class='cbenav-mid-item'><a href='/programs/technology-for-learning/Pages/default.aspx'><span>Technology for Learning</span></a></li></ul></li><li class='cbenav-top-item'><a href='/registration/Pages/default.aspx'><span>Registration</span><span class='cbenav-top-desc'>Records &amp; Fees</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/registration/back-to-school/Pages/back-to-school.aspx'><span>Back to School</span></a></li><li class='cbenav-mid-item'><a href='/registration/registration/Pages/default.aspx'><span>Registration</span></a></li><li class='cbenav-mid-item'><a href='/registration/fees-and-waivers/Pages/default.aspx'><span>Fees &amp; Waivers</span></a></li><li class='cbenav-mid-item'><a href='/registration/records-and-transcripts/Pages/default.aspx'><span>Records &amp; Transcripts</span></a></li><li class='cbenav-mid-item'><a href='/registration/forms-you-need/Pages/default.aspx'><span>Forms You Need</span></a></li><li class='cbenav-mid-item'><a href='/registration/calendars/Pages/default.aspx'><span>Calendars</span></a></li></ul></li><li class='cbenav-top-item'><a href='/about-us/Pages/default.aspx'><span>About Us</span><span class='cbenav-top-desc'>Leadership &amp; Governance</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/about-us/about-the-cbe/Pages/default.aspx'><span>About the CBE</span></a></li><li class='cbenav-mid-item'><a href='/about-us/contact-us/Pages/default.aspx'><span>Contact Us</span></a></li><li class='cbenav-mid-item'><a href='/about-us/board-of-trustees/Pages/default.aspx'><span>Board of Trustees</span></a></li><li class='cbenav-mid-item'><a href='/about-us/leadership/Pages/default.aspx'><span>Leadership</span></a></li><li class='cbenav-mid-item'><a href='/about-us/policies-and-regulations/Pages/default.aspx'><span>Policies &amp; Regulations</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/about-us/policies-and-regulations/freedom-of-information-and-protection-of-privacy-foip/Pages/default.aspx'><span>Freedom of Information and Protection of Privacy (FOIP)</span></a></li><li class='cbenav-sub-item'><a href='/about-us/policies-and-regulations/casl/Pages/default.aspx'><span>Canada&#39;s Anti-Spam Legislation (CASL)</span></a></li></ul></li><li class='cbenav-mid-item'><a href='/about-us/budget-and-finance/Pages/default.aspx'><span>Budget &amp; Finance</span></a></li><li class='cbenav-mid-item'><a href='/about-us/provincial-tests-and-reports/Pages/default.aspx'><span>Provincial Assessment &amp; Reports</span></a></li><li class='cbenav-mid-item'><a href='/about-us/school-culture-and-environment/Pages/default.aspx'><span>School Culture &amp; Environment</span></a><ul class='cbenav-sub'><li class='cbenav-sub-item'><a href='/about-us/school-culture-and-environment/health-and-wellness-in-school/Pages/default.aspx'><span>Health &amp; Wellness in School</span></a></li></ul></li><li class='cbenav-mid-item'><a href='/about-us/sustainability/Pages/default.aspx'><span>Sustainability</span></a></li><li class='cbenav-mid-item'><a href='/about-us/vendors/Pages/default.aspx'><span>Vendors</span></a></li></ul></li><li class='cbenav-top-item'><a href='/get-involved/Pages/Get-Involved.aspx'><span>Get Involved</span><span class='cbenav-top-desc'>Our Community</span></a><ul class='cbenav-mid'><li class='cbenav-mid-item'><a href='/get-involved/public-engagement/Pages/default.aspx'><span>Community Engagement</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/school-councils/Pages/school-councils.aspx'><span>School Councils</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/parent-societies-and-associations/Pages/parent-societies-and-associations.aspx'><span>Parent Societies &amp; Associations</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/volunteer/Pages/volunteer.aspx'><span>Volunteer</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/partners/Pages/default.aspx'><span>Partners</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/donate/Pages/default.aspx'><span>Donate</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/artist-in-schools/Pages/default.aspx'><span>Artists in Schools</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/request-to-share-information-with-schools/Pages/request-to-share-information-with-schools.aspx'><span>Request to Share Information with Schools</span></a></li><li class='cbenav-mid-item'><a href='/get-involved/conducting-research/Pages/default.aspx'><span>Conducting Research</span></a></li></ul></li></ul></div>
     		
 	</div>         
 </div>
@@ -553,8 +553,8 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 		<td id="MSOZoneCell_WebPartctl00_m_g_abe8e5c1_eef8_4aa1_9521_0c9ee052d90f" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td valign="top"><div WebPartID="abe8e5c1-eef8-4aa1-9521-0c9ee052d90f" HasPers="false" id="WebPartctl00_m_g_abe8e5c1_eef8_4aa1_9521_0c9ee052d90f" width="100%" class="ms-WPBody noindex" allowDelete="false" allowExport="false" style="" ><div id="ctl00_m_g_abe8e5c1_eef8_4aa1_9521_0c9ee052d90f">
-					<div class=AEBannerContainer style='position:relative; width:725px; height:275px'>  <div id='AERotatorAebr3' onmouseover='clearTimeout(timerAebr3);' onmouseout='timerAebr3=setTimeout("runBannerAebr3(0,0)", bannerSpeedAebr3)'>    <img class=AEBannerImage name='aebannerAebr3' src='/news-centre/Banners/20160429-register-community-forms-review-feedback.png' width=725 height=275 alt=' Public engagement | Transportation' border=0>  </div>  <div id='AEtransboxAebr3' onmouseover='clearTimeout(timerAebr3);' onmouseout='timerAebr3=setTimeout("runBannerAebr3(0,0)", bannerSpeedAebr3)' class=AEBannerTransbox style='padding:10px; width:0px; height:0px; position:absolute; top:0px; left:0px; background-color:transparent; '>  </div></div><script type="text/javascript">
-  function detailClickAebr3(detUrl) {
+					<div class=AEBannerContainer style='position:relative; width:725px; height:275px'>  <div id='AERotatorAebr8' onmouseover='clearTimeout(timerAebr8);' onmouseout='timerAebr8=setTimeout("runBannerAebr8(0,0)", bannerSpeedAebr8)'>    <img class=AEBannerImage name='aebannerAebr8' src='/news-centre/Banners/CASL-Banner.png' width=725 height=275 alt='Don’t miss out on school messages' border=0>  </div>  <div id='AEtransboxAebr8' onmouseover='clearTimeout(timerAebr8);' onmouseout='timerAebr8=setTimeout("runBannerAebr8(0,0)", bannerSpeedAebr8)' class=AEBannerTransbox style='padding:10px; width:0px; height:0px; position:absolute; top:0px; left:0px; background-color:transparent; '>  </div></div><script type="text/javascript">
+  function detailClickAebr8(detUrl) {
     var videoUrl = '/_layouts/AEMediaPlayerWebpart/AEVideo.aspx?movie=' + detUrl;
     videoUrl = videoUrl.replace('youtu.be', 'www.youtube.com/embed');
     detUrl = detUrl.replace('youtu.be', 'www.youtube.com/embed');
@@ -575,71 +575,79 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
     }
     event.cancelBubble=true;
   }
-  var bannerSpeedAebr3 = 7500;
-  var PicAebr3 = new Array();
-  PicAebr3[0] = '/news-centre/Banners/20160429-register-community-forms-review-feedback.png'
-PicAebr3[1] = '/news-centre/Banners/20160323-schools-impacted-by-new-school-openings.jpg'
-  var UrlAebr3 = new Array();
-  UrlAebr3[0] = 'http://www.cbe.ab.ca/get-involved/public-engagement/Pages/Transportation.aspx'
-UrlAebr3[1] = 'http://www.cbe.ab.ca/get-involved/public-engagement/Pages/Schools-Impacted-New-School-Openings.aspx'
-  var TexAebr3 = new Array();
-  TexAebr3[0] = ''
-TexAebr3[1] = ''
-  var AltAebr3 = new Array();
-  AltAebr3[0] = ' Public engagement | Transportation'
-AltAebr3[1] = ' Public Engagement | Schools impacted by new school opening'
-  var aeCurrBannerAebr3 = 0;
-  var aeNextBannerAebr3 = 1;
-  var aeCurrOpacityAebr3 = new Array();
-  var aebrFadeStepAebr3 = 10;
-  var aebrPauseAebr3 = false;
-  var picUrlAebr3;
-  var timerAebr3;
-  var countAebr3 = 0;
-  var jAebr3 = -1;
-  var pAebr3 = PicAebr3.length;
-  var popWidthAebr3;
-  var popHeightAebr3;
+  var bannerSpeedAebr8 = 7500;
+  var PicAebr8 = new Array();
+  PicAebr8[0] = '/news-centre/Banners/CASL-Banner.png'
+PicAebr8[1] = '/news-centre/Banners/20160829-welcome-to-the-2016-17-school-year2.jpg'
+PicAebr8[2] = '/news-centre/Banners/20160802-back-to-school.png'
+PicAebr8[3] = '/news-centre/Banners/20160725-school-bus-maps.jpg'
+  var UrlAebr8 = new Array();
+  UrlAebr8[0] = 'http://www.cbe.ab.ca/news-centre/Pages/dont-miss-out-on-school-messages.aspx'
+UrlAebr8[1] = 'http://www.cbe.ab.ca/news-centre/Pages/welcome-to-the-2016-17-school-year.aspx'
+UrlAebr8[2] = 'http://www.cbe.ab.ca/registration/back-to-school/Pages/back-to-school.aspx'
+UrlAebr8[3] = 'http://www.cbe.ab.ca/news-centre/Pages/find-your-2016-17-yellow-school-bus-stop.aspx'
+  var TexAebr8 = new Array();
+  TexAebr8[0] = ''
+TexAebr8[1] = ''
+TexAebr8[2] = ''
+TexAebr8[3] = ''
+  var AltAebr8 = new Array();
+  AltAebr8[0] = 'Don’t miss out on school messages'
+AltAebr8[1] = 'Welcome to the 2016-17 School Year'
+AltAebr8[2] = 'Get Ready! Back-to-School 2016-17'
+AltAebr8[3] = 'Find Your 2016-17 Yellow School Bus Map'
+  var aeCurrBannerAebr8 = 0;
+  var aeNextBannerAebr8 = 1;
+  var aeCurrOpacityAebr8 = new Array();
+  var aebrFadeStepAebr8 = 10;
+  var aebrPauseAebr8 = false;
+  var picUrlAebr8;
+  var timerAebr8;
+  var countAebr8 = 0;
+  var jAebr8 = -1;
+  var pAebr8 = PicAebr8.length;
+  var popWidthAebr8;
+  var popHeightAebr8;
   var aeNetscape = (navigator.appName=="Netscape");
   //if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) aeNetscape = false;
   var aeIE9 = (navigator.userAgent.toLowerCase().indexOf('msie 9.') > -1);
   var aeIE10 = (navigator.userAgent.toLowerCase().indexOf('msie 10.') > -1);
   if (navigator.userAgent.toLowerCase().indexOf('msie 10.') > -1) aeNetscape = true;
   if (aeNetscape) {
-    countAebr3 = 2;
-    document.getElementById('AEtransboxAebr3').style.width = -20;
-    document.getElementById('AEtransboxAebr3').style.height = -20;
-    document.getElementById('AEtransboxAebr3').onmouseout = function(){timerAebr3=setTimeout('aebrPauseAebr3=false',bannerSpeedAebr3)};
-    aeCurrOpacityAebr3[0]=99;
-    for (i=1;i<pAebr3;i++) aeCurrOpacityAebr3[i]=0;
-    mHTMLAebr3 = "";
-    for (i=0;i<pAebr3;i++) {
-      mHTMLAebr3+="<div id='photoDivAebr3' name='photoDivAebr3' style='position:absolute; top:0px; left:0px; -moz-opacity:0.0; opacity:0.0; filter:Alpha(opacity=0)'>";
-      mHTMLAebr3+="<img class=AEBannerImage width=725 height=275 border=0 src='" + PicAebr3[i] + "' alt='" + AltAebr3[i] + "'></div>";
+    countAebr8 = 2;
+    document.getElementById('AEtransboxAebr8').style.width = -20;
+    document.getElementById('AEtransboxAebr8').style.height = -20;
+    document.getElementById('AEtransboxAebr8').onmouseout = function(){timerAebr8=setTimeout('aebrPauseAebr8=false',bannerSpeedAebr8)};
+    aeCurrOpacityAebr8[0]=99;
+    for (i=1;i<pAebr8;i++) aeCurrOpacityAebr8[i]=0;
+    mHTMLAebr8 = "";
+    for (i=0;i<pAebr8;i++) {
+      mHTMLAebr8+="<div id='photoDivAebr8' name='photoDivAebr8' style='position:absolute; top:0px; left:0px; -moz-opacity:0.0; opacity:0.0; filter:Alpha(opacity=0)'>";
+      mHTMLAebr8+="<img class=AEBannerImage width=725 height=275 border=0 src='" + PicAebr8[i] + "' alt='" + AltAebr8[i] + "'></div>";
     }
-    document.getElementById('AERotatorAebr3').innerHTML = "<a id='imglinkAebr3' name='imglinkAebr3' href='" + UrlAebr3[0] + "' title='" + AltAebr3[0] + "'>" + mHTMLAebr3 + "</a>";
-    document.getElementById('AERotatorAebr3').onmouseout = function(){timerAebr3 = setTimeout('aebrPauseAebr3=false',bannerSpeedAebr3)};
-    document.getElementsByName('photoDivAebr3')[aeCurrBannerAebr3].style.opacity = .99;
-    aebrPauseAebr3 = true;
-    timerAebr3 = setTimeout('aebrPauseAebr3=false',bannerSpeedAebr3);
-    mInterval = setInterval('runBannerAebr3(0,0)',30);
+    document.getElementById('AERotatorAebr8').innerHTML = "<a id='imglinkAebr8' name='imglinkAebr8' href='" + UrlAebr8[0] + "' title='" + AltAebr8[0] + "'>" + mHTMLAebr8 + "</a>";
+    document.getElementById('AERotatorAebr8').onmouseout = function(){timerAebr8 = setTimeout('aebrPauseAebr8=false',bannerSpeedAebr8)};
+    document.getElementsByName('photoDivAebr8')[aeCurrBannerAebr8].style.opacity = .99;
+    aebrPauseAebr8 = true;
+    timerAebr8 = setTimeout('aebrPauseAebr8=false',bannerSpeedAebr8);
+    mInterval = setInterval('runBannerAebr8(0,0)',30);
   }
   else {
-    var preLoadAebr3 = new Array();
-    for (i = 0; i < pAebr3; i++) {
-      preLoadAebr3[i] = new Image();
-      preLoadAebr3[i].src = PicAebr3[i];
+    var preLoadAebr8 = new Array();
+    for (i = 0; i < pAebr8; i++) {
+      preLoadAebr8[i] = new Image();
+      preLoadAebr8[i].src = PicAebr8[i];
     }
   }
-  var picselectAebr3 = "";
-  picselectAebr3 += "<div style='position:absolute; width:100%; text-align:right; top:280px; left:605px'>";
-  for (i = 1; i <= pAebr3; i++) {
+  var picselectAebr8 = "";
+  picselectAebr8 += "<div style='position:absolute; width:100%; text-align:right; top:280px; left:605px'>";
+  for (i = 1; i <= pAebr8; i++) {
   var ch = i.toString();
-    picselectAebr3 += "<span>&nbsp;</span><span style='cursor:hand; cursor:pointer;menu:" + i + "' onClick='runBannerAebr3(" + i + ",0);'>&nbsp;" + ch + "&nbsp;</span><span>&nbsp;</span>";
+    picselectAebr8 += "<span>&nbsp;</span><span style='cursor:hand; cursor:pointer;menu:" + i + "' onClick='runBannerAebr8(" + i + ",0);'>&nbsp;" + ch + "&nbsp;</span><span>&nbsp;</span>";
   }
-  picselectAebr3 += "</div>";
-  var ps = picselectAebr3;
-  for (i = 1; i <= pAebr3; i++) {
+  picselectAebr8 += "</div>";
+  var ps = picselectAebr8;
+  for (i = 1; i <= pAebr8; i++) {
     if (i==1) {
       ps = ps.replace('menu:' + i, 'background-color:#0e73a1;font-size:7pt;font-family:Arial, Verdana;color:#0e73a1;padding:1px');
     }
@@ -647,35 +655,35 @@ AltAebr3[1] = ' Public Engagement | Schools impacted by new school opening'
       ps = ps.replace('menu:' + i, 'font-size:7pt;font-family:Arial, Verdana;color:#333;background-color:#333;padding:1px');
     }
   }
-  document.getElementById('AEtransboxAebr3').innerHTML = TexAebr3[0] + ps;
-  function setPicURLAebr3() {
-      var ss = picUrlAebr3.substr(0,4);
-      var pp = picUrlAebr3.indexOf('/popup=');
-      var videoUrl = '/_layouts/AEMediaPlayerWebpart/AEVideo.aspx?movie=' + picUrlAebr3;
-      picUrlAebr3 = picUrlAebr3.replace('youtu.be', 'www.youtube.com/embed');
+  document.getElementById('AEtransboxAebr8').innerHTML = TexAebr8[0] + ps;
+  function setPicURLAebr8() {
+      var ss = picUrlAebr8.substr(0,4);
+      var pp = picUrlAebr8.indexOf('/popup=');
+      var videoUrl = '/_layouts/AEMediaPlayerWebpart/AEVideo.aspx?movie=' + picUrlAebr8;
+      picUrlAebr8 = picUrlAebr8.replace('youtu.be', 'www.youtube.com/embed');
       if (ss=='java') {
-        window.location.href = picUrlAebr3
+        window.location.href = picUrlAebr8
       }
       else if (pp > 0) {
-        var popurl = picUrlAebr3.substr(0,pp);
-        var poppar = picUrlAebr3.substr(pp+7);
+        var popurl = picUrlAebr8.substr(0,pp);
+        var poppar = picUrlAebr8.substr(pp+7);
         poppar = poppar.replace(';',',');
         window.open(popurl,'popup',poppar)
       }
-      else if (picUrlAebr3.indexOf('.pdf') > 0) {
-        window.open(picUrlAebr3)
+      else if (picUrlAebr8.indexOf('.pdf') > 0) {
+        window.open(picUrlAebr8)
       }
-      else if (picUrlAebr3.indexOf('youtube.com') > 0) {
-        SP.UI.ModalDialog.showModalDialog({url:picUrlAebr3, title:'Video'});
+      else if (picUrlAebr8.indexOf('youtube.com') > 0) {
+        SP.UI.ModalDialog.showModalDialog({url:picUrlAebr8, title:'Video'});
       }
-      else if (picUrlAebr3.indexOf('.wmv') > 0) {
+      else if (picUrlAebr8.indexOf('.wmv') > 0) {
         SP.UI.ModalDialog.showModalDialog({url:videoUrl, width:600, height:400, title:'Video'});
       }
-      else if (picUrlAebr3.indexOf('.flv') > 0) {
+      else if (picUrlAebr8.indexOf('.flv') > 0) {
         SP.UI.ModalDialog.showModalDialog({url:videoUrl, width:600, height:400, title:'Video'});
       }
       else {
-    window.location.href = picUrlAebr3
+    window.location.href = picUrlAebr8
       }
   }
   function FixPNG(obj) {
@@ -683,13 +691,13 @@ AltAebr3[1] = ' Public Engagement | Schools impacted by new school opening'
     var bg = pngId.currentStyle.backgroundImage;
     var src = bg.substring(5,bg.length-2);
     pngId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + src + "', sizingMethod='scale')";
-    pngId.style.backgroundImage = "url(/WebResource.axd?d=vWNpKvh3SvaTGwI40d8T2vvgSCgcX96WD6LJtdoc6WU_hW9KJ7jPw3Pw4wWlRO8B3aYbMMuJ20Fu_I3jLiI4sUwKuP6uPmYl0C0toVv1WuNuzDzviSfg5zfDnv78oI3R7-qcErlOeEmZQs1cM0QG8-4UBBQ1&t=635725983870768714)";
+    pngId.style.backgroundImage = "url(/WebResource.axd?d=vWNpKvh3SvaTGwI40d8T2vvgSCgcX96WD6LJtdoc6WU_hW9KJ7jPw3Pw4wWlRO8B3aYbMMuJ20Fu_I3jLiI4sUwKuP6uPmYl0C0toVv1WuNuzDzviSfg5zfDnv78oI3R7-qcErlOeEmZQs1cM0QG8-4UBBQ1&t=635725983800497201)";
   }
-  function setTextPaneAebr3(n) {
-    var ps = picselectAebr3;
-    var k = jAebr3;
-    if (aeNetscape) k = aeNextBannerAebr3;
-    for (i = 1; i <= pAebr3; i++) {
+  function setTextPaneAebr8(n) {
+    var ps = picselectAebr8;
+    var k = jAebr8;
+    if (aeNetscape) k = aeNextBannerAebr8;
+    for (i = 1; i <= pAebr8; i++) {
       if (i==k+1) {
         ps = ps.replace('menu:'+i, 'background-color:#0e73a1;font-size:7pt;font-family:Arial, Verdana;color:#0e73a1;padding:1px');
       }
@@ -697,102 +705,102 @@ AltAebr3[1] = ' Public Engagement | Schools impacted by new school opening'
         ps = ps.replace('menu:'+i, 'font-size:7pt;font-family:Arial, Verdana;color:#333;background-color:#333;padding:1px');
       }
     }
-    document.getElementById('AEtransboxAebr3').innerHTML = TexAebr3[n] + ps;
-    if (UrlAebr3[n]!='' && UrlAebr3[n] !='#') {
-      picUrlAebr3 = UrlAebr3[n];
+    document.getElementById('AEtransboxAebr8').innerHTML = TexAebr8[n] + ps;
+    if (UrlAebr8[n]!='' && UrlAebr8[n] !='#') {
+      picUrlAebr8 = UrlAebr8[n];
       if (aeNetscape) {
-        document.getElementById("imglinkAebr3").title = picUrlAebr3;
-        document.getElementById("imglinkAebr3").href = picUrlAebr3;
+        document.getElementById("imglinkAebr8").title = picUrlAebr8;
+        document.getElementById("imglinkAebr8").href = picUrlAebr8;
       }
       else {
-        document.images.aebannerAebr3.title = picUrlAebr3;
-        document.images.aebannerAebr3.onclick = setPicURLAebr3;
-        document.images.aebannerAebr3.style.cursor = 'pointer';
+        document.images.aebannerAebr8.title = picUrlAebr8;
+        document.images.aebannerAebr8.onclick = setPicURLAebr8;
+        document.images.aebannerAebr8.style.cursor = 'pointer';
       }
     }
     else {
       if (aeNetscape) {
-        document.getElementById("imglinkAebr3").style.cursor = 'default';
-        document.getElementById("imglinkAebr3").title = '';
-        document.getElementById("imglinkAebr3").href = '';
-        if (aeIE10) document.getElementById("imglinkAebr3").href = UrlAebr3[n];
+        document.getElementById("imglinkAebr8").style.cursor = 'default';
+        document.getElementById("imglinkAebr8").title = '';
+        document.getElementById("imglinkAebr8").href = '';
+        if (aeIE10) document.getElementById("imglinkAebr8").href = UrlAebr8[n];
       }
       else {
-        document.images.aebannerAebr3.style.cursor = 'default';
-        document.images.aebannerAebr3.title = '';
-        document.images.aebannerAebr3.onclick = null;
+        document.images.aebannerAebr8.style.cursor = 'default';
+        document.images.aebannerAebr8.title = '';
+        document.images.aebannerAebr8.onclick = null;
       }
     }
-    if (AltAebr3[n]!='') {
+    if (AltAebr8[n]!='') {
       if (aeNetscape) {
-        document.getElementById("imglinkAebr3").title = AltAebr3[n];
+        document.getElementById("imglinkAebr8").title = AltAebr8[n];
       }
       else {
-        document.images.aebannerAebr3.title = AltAebr3[n];
+        document.images.aebannerAebr8.title = AltAebr8[n];
       }
     }
-    document.getElementById('AEtransboxAebr3').title = AltAebr3[n];
-    if (UrlAebr3[n]!='' && !aeNetscape && !aeIE9) {
-      document.getElementById('AEtransboxAebr3').onclick = setPicURLAebr3;
-      document.getElementById('AEtransboxAebr3').style.cursor = 'pointer';
+    document.getElementById('AEtransboxAebr8').title = AltAebr8[n];
+    if (UrlAebr8[n]!='' && !aeNetscape && !aeIE9) {
+      document.getElementById('AEtransboxAebr8').onclick = setPicURLAebr8;
+      document.getElementById('AEtransboxAebr8').style.cursor = 'pointer';
     }
     else {
-      document.getElementById('AEtransboxAebr3').onclick = null;
-      document.getElementById('AEtransboxAebr3').style.cursor = 'default';
+      document.getElementById('AEtransboxAebr8').onclick = null;
+      document.getElementById('AEtransboxAebr8').style.cursor = 'default';
     }
   }
- function runBannerAebr3(n,restart) {
+ function runBannerAebr8(n,restart) {
   if (aeNetscape) {
     if (n>0) {
-      aeNextBannerAebr3 = n-1;
-      clearTimeout(timerAebr3);
-      aebrPauseAebr3 = false;
+      aeNextBannerAebr8 = n-1;
+      clearTimeout(timerAebr8);
+      aebrPauseAebr8 = false;
     }
-    if(aebrPauseAebr3) return;
-    document.getElementById("imglinkAebr3").title = AltAebr3[jAebr3];
-    aeCurrOpacityAebr3[aeCurrBannerAebr3] -= aebrFadeStepAebr3;
-    aeCurrOpacityAebr3[aeNextBannerAebr3] += aebrFadeStepAebr3;
-    document.getElementsByName('photoDivAebr3')[aeCurrBannerAebr3].style.opacity = aeCurrOpacityAebr3[aeCurrBannerAebr3]/100;
-    document.getElementsByName('photoDivAebr3')[aeNextBannerAebr3].style.opacity = aeCurrOpacityAebr3[aeNextBannerAebr3]/100;
-    jAebr3 = aeNextBannerAebr3;
-    if (aeCurrOpacityAebr3[aeNextBannerAebr3]/100>=.98) {
-      setTextPaneAebr3(jAebr3);
-      aeCurrBannerAebr3 = aeNextBannerAebr3;
-      aeNextBannerAebr3++;
-      if (aeNextBannerAebr3 == pAebr3) aeNextBannerAebr3=0;
-      aebrPauseAebr3 = true;
-      countAebr3++;
-      if (countAebr3 > 65000 && n == 0) return;
-      if ((n==0 || restart==1) && bannerSpeedAebr3>0) timerAebr3 = setTimeout('aebrPauseAebr3=false',bannerSpeedAebr3);
+    if(aebrPauseAebr8) return;
+    document.getElementById("imglinkAebr8").title = AltAebr8[jAebr8];
+    aeCurrOpacityAebr8[aeCurrBannerAebr8] -= aebrFadeStepAebr8;
+    aeCurrOpacityAebr8[aeNextBannerAebr8] += aebrFadeStepAebr8;
+    document.getElementsByName('photoDivAebr8')[aeCurrBannerAebr8].style.opacity = aeCurrOpacityAebr8[aeCurrBannerAebr8]/100;
+    document.getElementsByName('photoDivAebr8')[aeNextBannerAebr8].style.opacity = aeCurrOpacityAebr8[aeNextBannerAebr8]/100;
+    jAebr8 = aeNextBannerAebr8;
+    if (aeCurrOpacityAebr8[aeNextBannerAebr8]/100>=.98) {
+      setTextPaneAebr8(jAebr8);
+      aeCurrBannerAebr8 = aeNextBannerAebr8;
+      aeNextBannerAebr8++;
+      if (aeNextBannerAebr8 == pAebr8) aeNextBannerAebr8=0;
+      aebrPauseAebr8 = true;
+      countAebr8++;
+      if (countAebr8 > 65000 && n == 0) return;
+      if ((n==0 || restart==1) && bannerSpeedAebr8>0) timerAebr8 = setTimeout('aebrPauseAebr8=false',bannerSpeedAebr8);
     }
   }
   else {
-    countAebr3++;
-    if (countAebr3 > 65000 && n == 0) return;
-    jAebr3 = jAebr3 + 1;
+    countAebr8++;
+    if (countAebr8 > 65000 && n == 0) return;
+    jAebr8 = jAebr8 + 1;
     if (n>0) {
-      jAebr3 = n-1;
-      clearTimeout(timerAebr3);
+      jAebr8 = n-1;
+      clearTimeout(timerAebr8);
     }
-    if (jAebr3 > (pAebr3 - 1)) jAebr3 = 0;
+    if (jAebr8 > (pAebr8 - 1)) jAebr8 = 0;
     if (document.all) {
-      document.images.aebannerAebr3.style.filter='blendTrans(duration=0.5)';
-      document.images.aebannerAebr3.filters.blendTrans.Apply();
+      document.images.aebannerAebr8.style.filter='blendTrans(duration=0.5)';
+      document.images.aebannerAebr8.filters.blendTrans.Apply();
     }
-    document.images.aebannerAebr3.src = preLoadAebr3[jAebr3].src;
-    document.images.aebannerAebr3.title = AltAebr3[jAebr3];
-    setTextPaneAebr3(jAebr3);
+    document.images.aebannerAebr8.src = preLoadAebr8[jAebr8].src;
+    document.images.aebannerAebr8.title = AltAebr8[jAebr8];
+    setTextPaneAebr8(jAebr8);
     if (document.all) {
-      document.images.aebannerAebr3.filters.blendTrans.Play();
+      document.images.aebannerAebr8.filters.blendTrans.Play();
     }
-    if ((n==0 || restart==1) && bannerSpeedAebr3>0) timerAebr3 = setTimeout('runBannerAebr3(0,0)', bannerSpeedAebr3);
+    if ((n==0 || restart==1) && bannerSpeedAebr8>0) timerAebr8 = setTimeout('runBannerAebr8(0,0)', bannerSpeedAebr8);
   }
  }
   var IE6 = navigator.userAgent.toLowerCase().indexOf('msie 6') != -1;
   if (IE6) {
-    FixPNG('AEtransboxAebr3');
+    FixPNG('AEtransboxAebr8');
   }
-  if (!aeNetscape) runBannerAebr3(0,0);
+  if (!aeNetscape) runBannerAebr8(0,0);
 </script>
 
 				</div></div></td>
@@ -806,7 +814,7 @@ AltAebr3[1] = ' Public Engagement | Schools impacted by new school opening'
 	<tr>
 		<td id="MSOZoneCell_WebPartWPQ8" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
-				<td valign="top"><div WebPartID="e9f7803c-5970-4010-81d3-fb4f2ae8a43d" HasPers="false" id="WebPartWPQ8" width="100%" class="ms-WPBody noindex" allowDelete="false" style="" ><span style="margin-bottom: 10px; color: rgb(0,173,218); font: 2em arial; font-stretch: normal">Welcome</span><p class="my-rteElement-P">The Calgary Board of Education (CBE) is the public school board in Calgary, Alberta, Canada. We believe every one of our students is unique and personalized learning is the key to their success. From kindergarten to Grade 12, the CBE operates a variety of programs and services to benefit each and every student.</p>
+				<td valign="top"><div WebPartID="e9f7803c-5970-4010-81d3-fb4f2ae8a43d" HasPers="false" id="WebPartWPQ8" width="100%" class="ms-WPBody noindex" allowDelete="false" style="" ><span style="margin-bottom: 10px; color: rgb(0,173,218); font: 2em arial">Welcome</span><p class="my-rteElement-P">The Calgary Board of Education (CBE) is the public school board in Calgary, Alberta, Canada. We believe every one of our students is unique and personalized learning is the key to their success. From kindergarten to Grade 12, the CBE operates a variety of programs and services to benefit each and every student.</p>
 <div class="languages-fp"><div class="new-to-canada"><a href="/welcome">New to Canada</a></div>
 <div class="international"><a href="/welcome/Pages/international-students.aspx">International Student Program</a></div>
 <div class="other-languages"><a lang="ar" href="/welcome/Pages/Arabic.aspx" hreflang="ar"><font color="#0072bc">عربي </font></a><span style="color: rgb(178,178,178)">|&#160;</span><a href="/welcome/Pages/Chinese.aspx?tab=1">中文简体</a> -&#160; <a href="/welcome/Pages/Chinese.aspx?tab=2">中文繁體</a> <span style="color: rgb(178,178,178)">|</span> <a lang="fr" href="/welcome/Pages/French.aspx" hreflang="fr">Français</a> <span style="color: rgb(178,178,178)">|</span> <a lang="ko" href="/welcome/Pages/Korean.aspx" hreflang="ko">한국어</a> <span style="color: rgb(178,178,178)">|</span> <a lang="pa" href="/welcome/Pages/Punjabi.aspx" hreflang="pa">ਪੰਜਾਬੀ</a> <span style="color: rgb(178,178,178)">|</span> <a lang="es" href="/welcome/Pages/Spanish.aspx" hreflang="es">Español</a> <span style="color: rgb(178,178,178)">|</span> <a lang="ur" href="/welcome/Pages/Urdu.aspx" hreflang="ur">اردو</a> <span style="color: rgb(178,178,178)">|</span> <a lang="vi" href="/welcome/Pages/Vietnamese.aspx" hreflang="vi">Việt</a> </div></div></div></td>
@@ -900,14 +908,14 @@ AltAebr3[1] = ' Public Engagement | Schools impacted by new school opening'
 	<tr>
 		<td id="MSOZoneCell_WebPartWPQ10" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
-				<td valign="top"><div WebPartID="e1f95e18-c5ee-4560-aaaa-8a106cdc9d22" HasPers="false" id="WebPartWPQ10" width="100%" class="ms-WPBody noindex" allowDelete="false" style="" ><div style="margin-bottom: -15px; border-top: rgb(178,178,178) 11px solid; width: 720px; margin-top: 25px"><h2 style="padding-top: 4px; font: 18pt arial; font-stretch: normal"><a href="/schools/events-sessions-open-houses/Pages/default.aspx" style="color: rgb(112,112,112)">Upcoming Events</a></h2></div></div></td>
+				<td valign="top"><div WebPartID="e1f95e18-c5ee-4560-aaaa-8a106cdc9d22" HasPers="false" id="WebPartWPQ10" width="100%" class="ms-WPBody noindex" allowDelete="false" style="" ><div style="margin-bottom: -15px; border-top: rgb(178,178,178) 11px solid; width: 720px; margin-top: 25px"><h2 style="padding-top: 4px; font: 18pt arial"><a href="/schools/events-sessions-open-houses/Pages/default.aspx" style="color: rgb(112,112,112)">Upcoming Events</a></h2></div></div></td>
 			</tr>
 		</table><div class="ms-PartSpacingVertical"></div></td>
 	</tr><tr>
 		<td id="MSOZoneCell_WebPartctl00_m_g_2b703356_064a_4aa8_b9db_2654e239994a" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td valign="top"><div WebPartID="2b703356-064a-4aa8-b9db-2654e239994a" HasPers="false" id="WebPartctl00_m_g_2b703356_064a_4aa8_b9db_2654e239994a" width="100%" class="ms-WPBody noindex" allowDelete="false" allowExport="false" style="" ><div id="ctl00_m_g_2b703356_064a_4aa8_b9db_2654e239994a">
-					<table cellpadding=3 class=aeue style="background-color:#fff"><tr><td style='font:11pt Arial;color:#666' class=aeuegroup colspan=100% >Tomorrow</td></tr><tr><td class=aeue style="background-color:#999;color:white;width:50px;min-height:50px;text-align:center">9:00 AM</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=446&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Provincial Achievement Test </a><br>Information</td></tr><tr><td class=aeue style="background-color:#999;color:white;width:50px;min-height:50px;text-align:center">9:00 AM</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=445&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Provincial Achievement Test </a><br>Information</td></tr><tr><td class=aeue style="background-color:#00adda;color:white;width:50px;min-height:50px;text-align:center">12:00 PM</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=252&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Board Meeting</a><br>Meeting</td></tr><tr><td style='font:11pt Arial;color:#666' class=aeuegroup colspan=100% >Wednesday, May 11, 2016</td></tr><tr><td class=aeue style="background-color:#f27726;color:white;width:50px;min-height:50px;text-align:center">7:00 PM</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=441&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Dr. Martha Cohen School Information Evening</a><br>Open House</td></tr></table><script type="text/javascript">
+					<table cellpadding=3 class=aeue style="background-color:#fff"><tr><td style='font:11pt Arial;color:#666' class=aeuegroup colspan=100% >Tuesday, September 13, 2016</td></tr><tr><td class=aeue style="background-color:#00adda;color:white;width:50px;min-height:50px;text-align:center">12:00 PM</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=526&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Board Meeting</a><br>Meeting</td></tr><tr><td style='font:11pt Arial;color:#666' class=aeuegroup colspan=100% >Tuesday, September 20, 2016</td></tr><tr><td class=aeue style="background-color:#00adda;color:white;width:50px;min-height:50px;text-align:center">12:00 PM</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=527&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Board Meeting</a><br>Meeting</td></tr><tr><td style='font:11pt Arial;color:#666' class=aeuegroup colspan=100% >Friday, September 23, 2016</td></tr><tr><td class=aeue style="background-color:#999;color:white;width:50px;min-height:50px;text-align:center">All Day</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=499&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Non-Instruction Day. No school for students.</a><br>Information</td></tr><tr><td style='font:11pt Arial;color:#666' class=aeuegroup colspan=100% >Tuesday, October 04, 2016</td></tr><tr><td class=aeue style="background-color:#00adda;color:white;width:50px;min-height:50px;text-align:center">12:00 PM</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=528&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Board Meeting</a><br>Meeting</td></tr><tr><td style='font:11pt Arial;color:#666' class=aeuegroup colspan=100% >Friday, October 07, 2016</td></tr><tr><td class=aeue style="background-color:#999;color:white;width:50px;min-height:50px;text-align:center">All Day</td><td style="color:#666;width:650px;padding-left:8px;border-bottom:1px solid #fff;"><a class=AEUElinkstyle onclick="javascript:function tdql1(){SP.UI.ModalDialog.showModalDialog({url:'http://www.cbe.ab.ca/schools/events-sessions-open-houses/Lists/KeyDates/DispForm.aspx?ID=500&Source=http://www.cbe.ab.ca/Pages/default.aspx', title:'Details'})}tdql1();" href="#">Non-Instruction Day. No school for students.</a><br>Information</td></tr></table><script type="text/javascript">
 function uewpRefreshCallback(dialogResult, returnValue) {
   if (returnValue != null && returnValue != '0') SP.UI.ModalDialog.RefreshPage(dialogResult);
 };
@@ -952,98 +960,98 @@ function uewpRefreshCallback(dialogResult, returnValue) {
                                             a.cbe-frontfeed-group-link:hover { color: #999; text-decoration:underline; border:none; }
                                            </style><div class='cbe-frontfeed-header'><a href='/news-centre' title='Stories'>CBE News ></a></div><div class='cbe-frontfeed-wp'><div class='cbe-frontfeed-content' style='min-height:780px'><ul><li class='cbe-frontfeed-priority'>
                 	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/cbe_news_jpg_jpg.jpg'/></li>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/board-of-trustees-april-2015-thumbnail_jpg.jpg'/></li>
                                                     <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-priority-link' href='/news-centre/Pages/registration-information-for-families-impacted-by-wildfires.aspx'>Wildfire Evacuee School Registration Information</a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
-                                                    </li>
-                                                </ul>
-                                            </li><li class='cbe-frontfeed-priority'>
-                	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20151005-students-are-at-the-centre-of-everything-we-do-thumb_jpg.jpg'/></li>
-                                                    <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/students-are-at-the-centre-of-everything-we-do-Our-budget-reflects-that-dec-4.aspx'>Students are at the centre of everything we do. Our budget reflects that.</a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
-                                                    </li>
-                                                </ul>
-                                            </li><li class='cbe-frontfeed-priority'>
-                	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20151005-students-are-at-the-centre-of-everything-we-do-thumb_jpg.jpg'/></li>
-                                                    <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/students-are-at-the-centre-of-everything-we-do-our-budget-reflects-that-we-do-nov-6.aspx'>Students are at the centre of everything we do. Our budget reflects that. </a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
-                                                    </li>
-                                                </ul>
-                                            </li><li class='cbe-frontfeed-priority'>
-                	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20151005-students-are-at-the-centre-of-everything-we-do-thumb_jpg.jpg'/></li>
-                                                    <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/students-are-at-the-centre-of-everything-we-do-our-budget-reflects-that-oct-20.aspx'>Students are at the centre of everything we do. Our budget reflects that. </a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
-                                                    </li>
-                                                </ul>
-                                            </li><li class='cbe-frontfeed-priority'>
-                	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20151006-get-involved-in-developing-our-public-engagement-framework-thumb_png.jpg'/></li>
-                                                    <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/get-involved-in-developing-our-public-engagement-framwork-oct-20.aspx'>Get Involved in Developing Our Public Engagement Framework</a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/community-get-involved.aspx'>Community | Get Involved</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
-                                                    </li>
-                                                </ul>
-                                            </li><li class='cbe-frontfeed-priority'>
-                	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20151006-get-involved-in-developing-our-public-engagement-framework-thumb_png.jpg'/></li>
-                                                    <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/get-involved-in-developing-our-public-engagement-framework.aspx'>Get Involved in Developing Our Public Engagement Framework</a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/community-get-involved.aspx'>Community | Get Involved</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
-                                                    </li>
-                                                </ul>
-                                            </li><li class='cbe-frontfeed-priority'>
-                	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20151005-students-are-at-the-centre-of-everything-we-do-thumb_jpg.jpg'/></li>
-                                                    <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/students-are-at-the-centre-of-everything-we-do-our-budget-reflects-that.aspx'>Students are at the centre of everything we do. Our budget reflects that. </a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
-                                                    </li>
-                                                </ul>
-                                            </li><li class='cbe-frontfeed-priority'>
-                	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/system-wide-technology-outage_png.jpg'/></li>
-                                                    <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/cbe-weekend-technology-outage-may-16-18-2015.aspx'>CBE weekend technology outage May 16-18</a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
-                                                    </li>
-                                                </ul>
-                                            </li><li class='cbe-frontfeed-priority'>
-                	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/thumbnail-vote_png.jpg'/></li>
-                                                    <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/cbe-trustee-byelection-in-wards-11-and-13-on-april-13.aspx'>CBE Trustee Byelection in Wards 11 & 13 on April 13</a></span>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/next-board-meeting-tuesday-september-13-2016.aspx'>Next Board Meeting Tuesday, September 13, 2016</a></span>
                                                         <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/board-of-trustees.aspx'>Board of Trustees</a>, </span>
                                                     </li>
                                                 </ul>
                                             </li><li class='cbe-frontfeed-priority'>
                 	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/system-wide-technology-outage_png.jpg'/></li>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/cbe_news.jpg'/></li>
                                                     <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/cbe-weekend-technology-outages-march-14-15.aspx'>CBE Weekend Technology Outages</a></span>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/compensation-disclosure-.aspx'>Compensation disclosure </a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
+                                                    </li>
+                                                </ul>
+                                            </li><li class='cbe-frontfeed-priority'>
+                	                	        <ul>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20160906-flags-lowered-to-honour-passing-of-the-honourable-norman-kwong_jpg.jpg'/></li>
+                                                    <li class='cbe-frontfeed-article'>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/flags-lowered-to-half-mast-to-honour-passing-of-the-honourable-norman-kwong.aspx'>Flags lowered to honour passing of the Honourable Norman L. Kwong</a></span>
                                                         <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
                                                     </li>
                                                 </ul>
                                             </li><li class='cbe-frontfeed-priority'>
                 	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/cbe_news_jpg.jpg'/></li>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/cbe_news_jpg_jpg.jpg'/></li>
                                                     <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/naming-the-new-schools.aspx'>Naming the New Schools</a></span>
-                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/board-of-trustees.aspx'>Board of Trustees</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/celebrate-the-first-day-of-school-with-the-cbe-media-advisory.aspx'>Celebrate the First Day of School with the CBE</a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
                                                     </li>
                                                 </ul>
                                             </li><li class='cbe-frontfeed-priority'>
                 	                	        <ul>
-                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/cbe_news_jpg.jpg'/></li>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20160831-cbe-opens-nelson-mandela-high-school-thumb_jpg.jpg'/></li>
                                                     <li class='cbe-frontfeed-article'>
-                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/cbe-prepares-for-2015-16-budget.aspx'>CBE Prepares for 2015-16 Budget (now with video)</a></span>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/cbe-opens-nelson-mandela-high-school.aspx'>CBE provides a "sneak peek" of the new Nelson Mandela High School</a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
+                                                    </li>
+                                                </ul>
+                                            </li><li class='cbe-frontfeed-priority'>
+                	                	        <ul>
+                    	                            <li class='cbe-frontfeed-img'><img src='/about-us/policies-and-regulations/casl/publishingimages/blue-mail-icon.png'/></li>
+                                                    <li class='cbe-frontfeed-article'>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/dont-miss-out-on-school-messages.aspx'>Don’t miss out on school messages</a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='#'>Technology</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
+                                                    </li>
+                                                </ul>
+                                            </li><li class='cbe-frontfeed-priority'>
+                	                	        <ul>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20160829-welcome-to-the-2016-17-school-year-thumb_jpg.jpg'/></li>
+                                                    <li class='cbe-frontfeed-article'>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/welcome-to-the-2016-17-school-year.aspx'>Welcome to the 2016-17 School Year</a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
+                                                    </li>
+                                                </ul>
+                                            </li><li class='cbe-frontfeed-priority'>
+                	                	        <ul>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20160823-crescent-heights-high-school-alumnus-takes-home-olympic-bronze-thumb_jpg.jpg'/></li>
+                                                    <li class='cbe-frontfeed-article'>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/crescent-heights-high-school-alumnus-takes-home-olympic-bronze.aspx'>Crescent Heights High School Alumnus takes home Olympic bronze (CBC News)</a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
+                                                    </li>
+                                                </ul>
+                                            </li><li class='cbe-frontfeed-priority'>
+                	                	        <ul>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/expense_reports_jpg.jpg'/></li>
+                                                    <li class='cbe-frontfeed-article'>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/may-june-2016-expense-reports.aspx'>May/June 2016 Expense Reports</a></span>
                                                         <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, </span>
+                                                    </li>
+                                                </ul>
+                                            </li><li class='cbe-frontfeed-priority'>
+                	                	        <ul>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/20160822-getting-to-know-your-school-resource-officers_jpg.jpg'/></li>
+                                                    <li class='cbe-frontfeed-article'>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/getting-to-know-your-school-resource-officers.aspx'>Getting to Know Your School Resource Officers</a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
+                                                    </li>
+                                                </ul>
+                                            </li><li class='cbe-frontfeed-priority'>
+                	                	        <ul>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/cbe_news_jpg_jpg.jpg'/></li>
+                                                    <li class='cbe-frontfeed-article'>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/cbe-new-schools-update-media-advisory.aspx'>CBE New Schools Update</a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
+                                                    </li>
+                                                </ul>
+                                            </li><li class='cbe-frontfeed-priority'>
+                	                	        <ul>
+                    	                            <li class='cbe-frontfeed-img'><img src='/news-centre/publishingimages/_t/cbe_news_jpg_jpg.jpg'/></li>
+                                                    <li class='cbe-frontfeed-article'>
+                                                        <span class='cbe-frontfeed-article-title'><a class='cbe-frontfeed-article-link' href='/news-centre/Pages/new-cbe-schools-opening-in-september-news-releases.aspx'>New CBE Schools Opening this September</a></span>
+                                                        <span class='cbe-frontfeed-article-section'><a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/system.aspx'>System</a>, <a class='cbe-frontfeed-group-link' href='/news-centre/news-stories/Pages/schools-and-programs.aspx'>Schools & Programs</a>, </span>
                                                     </li>
                                                 </ul>
                                             </li><li style='clear:both;'></li></ul></div><div style='clear:both;'></div></div>
@@ -1053,36 +1061,11 @@ function uewpRefreshCallback(dialogResult, returnValue) {
 	</tr><tr>
 		<td id="MSOZoneCell_WebPartWPQ9" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
-				<td valign="top"><div WebPartID="e68dd5cb-850d-47d4-bcb3-527dc736280d" HasPers="false" id="WebPartWPQ9" width="100%" class="ms-WPBody noindex" allowDelete="false" style="" ><!--Start of Brightcove Player-->
-
-<div style="display:none">
-
-</div>
-
-<!--By use of this code snippet, I agree to the Brightcove Publisher T and C 
-found at https://accounts.brightcove.com/en/terms-and-conditions/.-->
-
-<script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
-
-<object id="myExperience4136452804001" class="BrightcoveExperience">
-  <param name="bgcolor" value="#FFFFFF"/>
-  <param name="width" value="320"/>
-  <param name="height" value="180"/>
-  <param name="playerID" value="2180671914001"/>
-  <param name="playerKey" value="AQ~~,AAABPhvTOmE~,OCApyahQOXoFCT3rfJaXwh7ZNh4dag9f"/>
-  <param name="isVid" value="true"/>
-  <param name="isUI" value="true"/>
-  <param name="dynamicStreaming" value="true"/>
-  
-  <param name="@videoPlayer" value="4136452804001"/>
-</object>
-
-<!--This script tag will cause the Brightcove Players defined above it to be created as soon
-as the line is read by the browser. If you wish to have the player instantiated only after
-the rest of the HTML is processed and the page load is complete, remove the line.-->
-<script type="text/javascript">brightcove.createExperiences();</script>
-
-<!--End of Brightcove Player--></div></td>
+				<td valign="top"><div WebPartID="e68dd5cb-850d-47d4-bcb3-527dc736280d" HasPers="false" id="WebPartWPQ9" width="100%" class="ms-WPBody noindex" allowDelete="false" style="" ><iframe style="width: 320px; height: 180px;" 
+src="//players.brightcove.net/1366266428001/default_default/index.html?videoId=4136452804001" 
+allowfullscreen 
+webkitallowfullscreen 
+mozallowfullscreen></iframe></div></td>
 			</tr>
 		</table></td>
 	</tr>

@@ -25,7 +25,7 @@
 <link rel="alternate" type="application/rss+xml" title="New Brunswick Sports Hall of Fame &raquo; Feed" href="http://nbsportshalloffame.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="New Brunswick Sports Hall of Fame &raquo; Comments Feed" href="http://nbsportshalloffame.com/comments/feed/" />
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/nbsportshalloffame.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.3"}};
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/nbsportshalloffame.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.5"}};
 			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
@@ -42,14 +42,14 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='language-selector-css'  href='http://nbsportshalloffame.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector-click.css?ver=4.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='language-selector-css'  href='http://nbsportshalloffame.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector-click.css?ver=4.4.5' type='text/css' media='all' />
 <link rel='stylesheet' id='megamenu-css'  href='http://nbsportshalloffame.com/wp-content/uploads/maxmegamenu/style_en.css?ver=d42d11' type='text/css' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='http://nbsportshalloffame.com/wp-includes/css/dashicons.min.css?ver=4.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://nbsportshalloffame.com/wp-includes/css/dashicons.min.css?ver=4.4.5' type='text/css' media='all' />
 <link rel='stylesheet' id='wpml-cms-nav-css-css'  href='http://nbsportshalloffame.com/wp-content/plugins/wpml-cms-nav/res/css/navigation.css?ver=1.4.16' type='text/css' media='all' />
 <link rel='stylesheet' id='cms-navigation-style-base-css'  href='http://nbsportshalloffame.com/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation-base.css?ver=1.4.16' type='text/css' media='screen' />
 <link rel='stylesheet' id='cms-navigation-style-css'  href='http://nbsportshalloffame.com/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation.css?ver=1.4.16' type='text/css' media='screen' />
-<link rel='stylesheet' id='nbshf-style-css'  href='http://nbsportshalloffame.com/wp-content/themes/nbshf/style.css?ver=4.4.3' type='text/css' media='all' />
-<link rel='stylesheet' id='jetpack_css-css'  href='http://nbsportshalloffame.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='nbshf-style-css'  href='http://nbsportshalloffame.com/wp-content/themes/nbshf/style.css?ver=4.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://nbsportshalloffame.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.9.7' type='text/css' media='all' />
 <script type='text/javascript' src='http://nbsportshalloffame.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
 <script type='text/javascript' src='http://nbsportshalloffame.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 <script type='text/javascript' src='http://nbsportshalloffame.com/wp-content/plugins/sitepress-multilingual-cms/res/js/jquery.cookie.js?ver=3.3.6'></script>
@@ -62,7 +62,7 @@ var wpml_browser_redirect_params = {"pageLanguage":"en","languageUrls":{"en_US":
 <link rel='https://api.w.org/' href='http://nbsportshalloffame.com/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://nbsportshalloffame.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://nbsportshalloffame.com/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.4.3" />
+<meta name="generator" content="WordPress 4.4.5" />
 <meta name="generator" content="WPML ver:3.3.6 stt:1,4;" />
 
 <style type="text/css">#lang_sel a, #lang_sel a.lang_sel_sel{color:#444444;}#lang_sel a:hover, #lang_sel a.lang_sel_sel:hover{color:#000000;}#lang_sel a.lang_sel_sel, #lang_sel a.lang_sel_sel:visited{background-color:#ffffff;}#lang_sel a.lang_sel_sel:hover{background-color:#eeeeee;}#lang_sel li ul a, #lang_sel li ul a:visited{color:#444444;}#lang_sel li ul a:hover{color:#000000;}#lang_sel li ul a, #lang_sel li ul a:link, #lang_sel li ul a:visited{background-color:#ffffff;}#lang_sel li ul a:hover{background-color:#eeeeee;}#lang_sel a, #lang_sel a:visited{border-color:#cdcdcd;} #lang_sel ul ul{border-top:1px solid #cdcdcd;}</style>
@@ -161,14 +161,14 @@ var wpml_browser_redirect_params = {"pageLanguage":"en","languageUrls":{"en_US":
 	<div style="display:none">
 	</div>
 <script type='text/javascript' src='http://nbsportshalloffame.com/wp-content/plugins/sitepress-multilingual-cms/res/js/language-selector.js?ver=3.3.6'></script>
-<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201619'></script>
-<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2016Mayaa'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201636'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2016Sepaa'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var WPGroHo = {"my_hash":""};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://nbsportshalloffame.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.4.3'></script>
+<script type='text/javascript' src='http://nbsportshalloffame.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.4.5'></script>
 <script type='text/javascript' src='http://nbsportshalloffame.com/wp-includes/js/hoverIntent.min.js?ver=1.8.1'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
@@ -176,17 +176,17 @@ var megamenu = {"effect":{"fade":{"in":{"animate":{"opacity":"show"},"css":{"dis
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://nbsportshalloffame.com/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.0.1'></script>
-<script type='text/javascript' src='http://nbsportshalloffame.com/wp-includes/js/wp-embed.min.js?ver=4.4.3'></script>
+<script type='text/javascript' src='http://nbsportshalloffame.com/wp-includes/js/wp-embed.min.js?ver=4.4.5'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var icl_vars = {"current_language":"en","icl_home":"http:\/\/nbsportshalloffame.com\/","ajax_url":"http:\/\/nbsportshalloffame.com\/wp-admin\/admin-ajax.php","url_type":"1"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://nbsportshalloffame.com/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=4.4.3'></script>
-<script type='text/javascript' src='http://stats.wp.com/e-201619.js' async defer></script>
+<script type='text/javascript' src='http://nbsportshalloffame.com/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=4.4.5'></script>
+<script type='text/javascript' src='http://stats.wp.com/e-201636.js' async defer></script>
 <script type='text/javascript'>
 	_stq = window._stq || [];
-	_stq.push([ 'view', {v:'ext',j:'1:3.9.1',blog:'106343651',post:'0',tz:'0',srv:'nbsportshalloffame.com'} ]);
+	_stq.push([ 'view', {v:'ext',j:'1:3.9.7',blog:'106343651',post:'0',tz:'0',srv:'nbsportshalloffame.com'} ]);
 	_stq.push([ 'clickTrackerInit', '106343651', '0' ]);
 </script>
 </body>

@@ -34,7 +34,7 @@ function em(str,domain)
         <tr>
           <td height="25" valign="top" bgcolor="#FFFFFF"><img src="/images/header-bottom.jpg" width="391" height="25" /></td>
           <td height="31" bgcolor="#FFFFFF"><div align="right"><span class="datetime">
-              Monday May 09, 2016              </span></div></td>
+              Sunday September 11, 2016              </span></div></td>
         </tr>
       </table>
       <table width="980" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="body">

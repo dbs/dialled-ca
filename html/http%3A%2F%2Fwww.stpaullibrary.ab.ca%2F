@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name="description" content="St. Paul Municipal Library of St. Paul, Alberta, Canada" />
+<meta name="keywords" content="Library, Archives,St. Paul, Alberta, Canada" />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name="description" content="St. Paul Municipal Library of St. Paul, Alberta, Canada" />
-<meta name="keywords" content="Library, Archives,St. Paul, Alberta, Canada" />
 
 
 	<meta property="og:url" CONTENT="http://www.stpaullibrary.ab.ca/" />
@@ -34,10 +38,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=""/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=""/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -45,7 +47,7 @@
 	<meta itemprop="description" CONTENT="">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="St. Paul Municipal Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="St. Paul Municipal Library">
-	<meta name="twitter:text:description" CONTENT="">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT="">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -258,7 +260,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -266,6 +267,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -280,6 +293,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -300,9 +319,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -334,45 +352,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/149" class="blog_link active_page" title="Discussions">Discussions</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=149" class="blog_link active_page" title="Discussions"><span>Discussions</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/149" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/149" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=149" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/74" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -399,10 +397,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -417,9 +415,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.stpaullibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Catalogue" title="Catalogue"><span>Catalogue</span></a></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/Summer-Reading-Club-Forms" title="Summer reading club forms"><span>Summer Reading Club Forms</span></a></li></ul></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/Fees--Services" class="fees_services_link parent_link" title="Fees &amp; Services"><span>Fees & Services</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/Computer-Resources" title="Computer resources"><span>Computer Resources</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Crafts-and-Hobbies" title="Crafts and hobbies"><span>Crafts and Hobbies</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Genealogy" title="Genealogy"><span>Genealogy</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Interlibrary-Loans" title="Interlibrary loans"><span>Interlibrary Loans</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Internet-Search" title="Internet search"><span>Internet Search</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Reference-Resources" title="Reference resources"><span>Reference Resources</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Research-Help" title="Research help"><span>Research Help</span></a></li></ul></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/Kidszone" class="kidszone_link parent_link" title="Kidszone"><span>Kidszone</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/Funstuff" title="Funstuff"><span>Funstuff</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Grades-1-3" title="Grades 1-3"><span>Grades 1-3</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Grades-4-6" title="Grades 4-6"><span>Grades 4-6</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Language-Arts" title="Language arts"><span>Language Arts</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Math" title="Math"><span>Math</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Safe-Surfing" title="Safe surfing"><span>Safe Surfing</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Science" title="Science"><span>Science</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Social-Studies" title="Social studies"><span>Social Studies</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Speak-Read-Succeed-" target="_blank" title="Speak, read, succeed "><span>Speak, Read, Succeed </span></a></li></ul></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/About-us" class="about_us_link parent_link" title="About us"><span>About us</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/Friends-of-the-Library" title="Friends of the library"><span>Friends of the Library</span></a></li></ul></li><li><a href="http://www.stpaullibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/New-Books" class="new_books_link parent_link" title="New Books"><span>New Books</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/April" title="April"><span>April</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/August-" title="August "><span>August </span></a></li><li><a href="http://www.stpaullibrary.ab.ca/December-" title="December "><span>December </span></a></li><li><a href="http://www.stpaullibrary.ab.ca/February" title="February"><span>February</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/January" title="January"><span>January</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/July" title="July"><span>July</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/June" title="June"><span>June</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/March" title="March"><span>March</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/May" title="May"><span>May</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/November" title="November"><span>November</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/October" title="October"><span>October</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/September" title="September"><span>September</span></a></li></ul></li>
-  
 </ul>
 
 	</nav>
@@ -494,7 +490,57 @@ if (typeof jQuery != 'undefined') {
 				
 				
 				<div class="slideContent">
-					<img class="bigImg" alt="front view" src="http://files.townlife.com/public/uploads/photos/413909/002_xlarge.JPG" />
+					<img class="bigImg" alt="Front view" src="http://files.townlife.com/public/uploads/photos/500517/001_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="ASTP" src="http://files.townlife.com/public/uploads/photos/500528/002_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="ASTP" src="http://files.townlife.com/public/uploads/photos/500572/006_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Cozy area" src="http://files.townlife.com/public/uploads/photos/500550/002_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="Childeren's corner" src="http://files.townlife.com/public/uploads/photos/500561/002_xlarge.JPG" />
+					
+					
+					
+					
+						
+					
+				</div> <!-- slideContent -->
+			   
+				<div class="slideContent">
+					<img class="bigImg" alt="ASTP" src="http://files.townlife.com/public/uploads/photos/500539/006_xlarge.JPG" />
 					
 					
 					
@@ -505,76 +551,6 @@ if (typeof jQuery != 'undefined') {
 			   
 				<div class="slideContent">
 					<img class="bigImg" alt="north side flower plot " src="http://files.townlife.com/public/uploads/photos/413917/004_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="our Star Wars display" src="http://files.townlife.com/public/uploads/photos/476520/001_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="LEGO Challenge Apr 20/16" src="http://files.townlife.com/public/uploads/photos/475623/001_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="All Ready To Go....Apr 16/16" src="http://files.townlife.com/public/uploads/photos/475128/001_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="Royal Tea Party Apr 16/16" src="http://files.townlife.com/public/uploads/photos/475139/003_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="Our Beaks & Dolly " src="http://files.townlife.com/public/uploads/photos/474807/002_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="Cheers With A Kiss:)" src="http://files.townlife.com/public/uploads/photos/463811/006_xlarge.JPG" />
-					
-					
-					
-					
-						
-					
-				</div> <!-- slideContent -->
-			   
-				<div class="slideContent">
-					<img class="bigImg" alt="Just chilling" src="http://files.townlife.com/public/uploads/photos/474821/007_xlarge.JPG" />
 					
 					
 					
@@ -609,37 +585,34 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(2)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/6306"><img alt="001" src="http://files.townlife.com/public/asset_files/7341/thumb_400/001.JPG?1461253854" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/7721/xlarge/001.JPG?1471903125" class="image-popup-vertical-fit" target="_blank">
+              <img alt="001" src="http://files.townlife.com/public/asset_files/7721/thumb_400/001.JPG?1471903125" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6306">				
-	  MAY BOOK CLUB SELECTION!			 			
-        </a>
-        <p>Wednesday May 25 2016 @ 6:30pm, it will be &quot; Miss Peregrine's Home For Peculiar Children &quot;. Everyone welcome!
-        <!--  --></p>
+          <a class="post_title" href="/blogs/show_entry/6906">
+	    SEPTEMBER BOOK CLUB SELECTION!
+          </a>
+        <p>&nbsp;Wednesday, September 28/16 @ 6:30pm,selected book is &quot;The 100-Year-Old Man Who Climbed Out The Window And Disappeared&quot; by Jonas Jon...
+        <!-- <a href="/blogs/show_entry/6906">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
-          <div class="blogClip"><a href="/blogs/show_entry/3046"><img alt="Library logo clean" src="http://files.townlife.com/public/asset_files/6829/thumb_400/library logo clean.jpg?1452013189" /></a></div>
-        
+          <div class="blogClip">
+            <a href="http://files.townlife.com/public/asset_files/6829/xlarge/library%20logo%20clean.jpg?1452013189" class="image-popup-vertical-fit" target="_blank">
+              <img alt="Library%20logo%20clean" src="http://files.townlife.com/public/asset_files/6829/thumb_400/library%20logo%20clean.jpg?1452013189" />
+            </a>
+          </div>
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/3046">				
-	  St. Paul Municipal Library			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/3046">
+	    St. Paul Municipal Library
+          </a>
         <p>The St. Paul Municipal Library is located adjacent to the Recreation Centre, tourist office and swimming pool. The library serves the Town and Coun...
         <!-- <a href="/blogs/show_entry/3046">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/149">+ MORE</a></h6>
 </div>
@@ -650,172 +623,109 @@ if (typeof jQuery != 'undefined') {
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/149">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       <h4 class="latest_events_title">
         <a href="/calendars/table/149">Upcoming Events</a> 
         <span class="latest_events_count">(8)</span>
       </h4>
       <ul>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>10</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>15</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35313">Library-Storytime </a>
-            <span class="upcoming_time_frame">
-              (Tomorrow)
-              
-                &nbsp;from 10:30 AM
-                
-                  &nbsp;to 11:00 AM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>11</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35327">Library-Ladies Time Out </a>
-            <span class="upcoming_time_frame">
-              (in 2 days)
-              
-                &nbsp;from  6:15 PM
-                
-                  &nbsp;to  8:00 PM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>13</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35318">Library-Storytime </a>
+            <a href="/calendars/show_event/37166">Community Awareness Night ***Come Visit Our Table @ Rec Center  </a>
             <span class="upcoming_time_frame">
               (in 4 days)
-              
-                &nbsp;from 10:30 AM
-                
-                  &nbsp;to 11:00 AM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>17</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>16</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35314">Library-Storytime </a>
+            <a href="/calendars/show_event/37159">Library-Storytime </a>
             <span class="upcoming_time_frame">
-              (in 1 week)
-              
+              (in 5 days)
                 &nbsp;from 10:30 AM
-                
                   &nbsp;to 11:00 AM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>18</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>21</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35328">Library-Youth Night </a>
+            <a href="/calendars/show_event/37167">Youth Night ***LEGO</a>
             <span class="upcoming_time_frame">
               (in 1 week)
-              
                 &nbsp;from  6:15 PM
-                
                   &nbsp;to  7:45 PM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>19</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>23</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35413">Library-Rhyme Time</a>
+            <a href="/calendars/show_event/37160">Library-Storytime </a>
             <span class="upcoming_time_frame">
               (in 1 week)
-              
                 &nbsp;from 10:30 AM
-                
-                  &nbsp;to 11:30 AM
-                
-              
-            </span>
-          </li>
-        
-          <li class="recent_event">
-            <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>20</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
-            </span>
-            
-            <a href="/calendars/show_event/35319">Library-Storytime </a>
-            <span class="upcoming_time_frame">
-              (in 1 week)
-              
-                &nbsp;from 10:30 AM
-                
                   &nbsp;to 11:00 AM
-                
-              
             </span>
           </li>
-        
           <li class="recent_event">
             <span class="event_date">
-              
-                <span class='theMonth'>May</span> <span class='theDate'>24</span><span class='theComma'>,</span><span class='theYear'>2016</span>
-              
+                <span class='theMonth'>September</span> <span class='theDate'>23</span><span class='theComma'>,</span><span class='theYear'>2016</span>
             </span>
             
-            <a href="/calendars/show_event/35315">Library-Storytime </a>
+            <a href="/calendars/show_event/37163">Pokemon Play </a>
+            <span class="upcoming_time_frame">
+              (in 1 week)
+                &nbsp;from  3:30 PM
+                  &nbsp;to  5:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>28</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37164">Book Club!</a>
             <span class="upcoming_time_frame">
               (in 2 weeks)
-              
-                &nbsp;from 10:30 AM
-                
-                  &nbsp;to 11:00 AM
-                
-              
+                &nbsp;from  6:30 PM
+                  &nbsp;to  8:00 PM
             </span>
           </li>
-        
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>29</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37168">Unwind!</a>
+            <span class="upcoming_time_frame">
+              (in 2 weeks)
+                &nbsp;from  6:30 PM
+                  &nbsp;to  8:00 PM
+            </span>
+          </li>
+          <li class="recent_event">
+            <span class="event_date">
+                <span class='theMonth'>September</span> <span class='theDate'>30</span><span class='theComma'>,</span><span class='theYear'>2016</span>
+            </span>
+            
+            <a href="/calendars/show_event/37161">Library-Storytime </a>
+            <span class="upcoming_time_frame">
+              (in 2 weeks)
+                &nbsp;from 10:30 AM
+                  &nbsp;to 11:00 AM
+            </span>
+          </li>
       </ul>
       <h6 class="more"><a href="/calendars/table/149">+ MORE</a></h6>
-    
   </div>
-
 
 		
 
@@ -823,77 +733,40 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_729">
-	      
-              
-	      
+	    <dd id="action_729">
 	        <img alt="Call (780) 645-4904" class="action_steps_image" src="/images/icons/fff/phone.png?1445483283" title="Call (780) 645-4904" />
 		
 		Call (780) 645-4904
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_730">
-	      
-              
-	      
+		    <dd id="action_730">
 	        <img alt="Fax (780) 645-5198" class="action_steps_image" src="/images/icons/fff/printer.png?1445483283" title="Fax (780) 645-5198" />
 		
 		Fax (780) 645-5198
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/149" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=1467&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=1467&amp;return_url=http%3A%2F%2Fwww.stpaullibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=149" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.stpaullibrary.ab.ca%2F&amp;site_id=149" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -909,19 +782,13 @@ if (typeof jQuery != 'undefined') {
 			<nav id="resourceContent" class="rightItem">
 				<div class="inner">	
 					<h3>Quick Links</h3>
-					  
-    <dl class="resources">
+					    <dl class="resources">
       <dt>Quick Links</dt>
-      	
-	
-	  
-	
 	<dd>
 	  <img alt="Page_white_world" src="/images/resources/page_white_world.png?1445483283" />
 	  <a href="http://www.town.stpaul.ab.ca" class="action_steps_link" target="_blank">Town of St. Paul</a>
         </dd>
-          </dl>	
-  
+    </dl>	
 
 				</div>	
 			</nav>
@@ -938,16 +805,10 @@ if (typeof jQuery != 'undefined') {
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-
+  
 
 
 	</section>
@@ -959,16 +820,11 @@ if (typeof jQuery != 'undefined') {
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
     <div class="social_bookmark">
       <a target="_blank" href="https://www.instagram.com/stpaulablibrary/"><img width="168" height="168" title="instagram" alt="instagram" src="http://files.townlife.com/public/uploads/photos/468649/instagram_medium.png" /></a><br />
     </div>
-  
-  
-    
           <!-- LIQUID LAYOUT -->    
     <ul class="social">
-        
           <li id="facebook">
             <div id="fb-root"></div>
             <script>
@@ -1001,26 +857,17 @@ if (typeof jQuery != 'undefined') {
             </script>
             <div class="fb-like" data-href="http://www.stpaullibrary.ab.ca/" data-width="180" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
           </li>
-        
-        
           <li id="twitter">
             <a href="http://twitter.com/share" class="twitter-share-button" 
               data-count="horizontal">Tweet</a><script type="text/javascript" 
               src="http://platform.twitter.com/widgets.js"></script>
           </li>
-        
 
-        
 
-        
 
-        
     </ul>
 
-    
-    
 
-  
 </div>
 
  </span>
@@ -1047,8 +894,8 @@ if (typeof jQuery != 'undefined') {
 				
 					<div> <!-- start book group of 5 -->
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373608454 (large print : paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373608454.gif" />The SEAL's special mission / Sarah Mayberry.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062273451 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780062273451.gif" />Somewhere in France :</a>
 				
 				
 			
@@ -1059,8 +906,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399255373 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780399255373.gif" />The day the crayons quit / by Drew Daywalt ; pictures by Oliver Jeffers.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781101990261 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781101990261.gif" />The widow / Fiona Barton.</a>
 				
 				
 			
@@ -1071,8 +918,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316407076 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780316407076.gif" />15th affair / James Patterson and Maxine Paetro.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780735206045 (large print : softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780735206045.gif" />Ghosts of war / Brad Taylor.</a>
 				
 				
 			
@@ -1083,8 +930,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373608447 (paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373608447.gif" />The secrets of Bell River / Kathleen O'Brien.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781451627800 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781451627800.gif" />The big-ass book of crafts. 2 / by Mark Montano</a>
 				
 				
 			
@@ -1095,8 +942,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780765378484  (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780765378484.gif" />Ender's game / Orson Scott Card.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316269940 (large print : hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780316269940.gif" />Here's to Us :</a>
 				
 					
 					</div> <!-- end book group of 5 -->
@@ -1110,8 +957,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781443442992 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781443442992.gif" />TED talks : the official TED guide to public speaking / Chris Anderson.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143198116 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780143198116.gif" />Mind=blown : amazing facts about this weird, hilarious, insane world / Matthew Santoro with Jake Greene ; illustrations by Kagan McLeod.</a>
 				
 				
 			
@@ -1122,8 +969,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780425280300 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780425280300.gif" />The Man Who Fell from the Sky</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781742704555 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781742704555.gif" />Find & keep / Beci Orpin.</a>
 				
 				
 			
@@ -1134,8 +981,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780375723728  (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780375723728.gif" />The insider's guide to U.S. coin values / Scott A. Travers.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780451486158 (audiobook on CD)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780451486158.gif" />Star wars. Aftermath : life debt / Chuck Wendig.</a>
 				
 				
 			
@@ -1146,8 +993,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781442406209 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781442406209.gif" />Bloom / Doreen Cronin and David Small.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781401945879 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781401945879.gif" />The power of no : because one little word can bring health, abundance, and happiness / James Altucher and Claudia Azula Altucher.</a>
 				
 				
 			
@@ -1158,8 +1005,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780778321248 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780778321248.gif" />Treasured / Sherryl Woods.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250010124 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781250010124.gif" />Every fifteen minutes / Lisa Scottoline.</a>
 				
 					
 					</div> <!-- end book group of 5 -->
@@ -1173,8 +1020,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373608522 (paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373608522.gif" />All for a cowboy / Jeannie Watt.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781416937852 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781416937852.gif" />The big-ass book of crafts / by Mark Montano ; photographs by Auxy Espinoza.</a>
 				
 				
 			
@@ -1185,8 +1032,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062466815 (audiobook on cd)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780062466815.gif" />The bridge ladies : a memoir / Betsy Lerner.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781427272966 (audiobook on cd)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781427272966.gif" />Tom Clancy's Op-center : scorched earth / created by Tom Clancy and Steve Pieczenik ; written by Dick Couch and George Galdorisi.</a>
 				
 				
 			
@@ -1197,8 +1044,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781459810792 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781459810792.gif" />Are you seeing me? / Darren Groth.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781427261472 (audiobook on cd)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781427261472.gif" />Repo madness : a novel / W. Bruce Cameron.</a>
 				
 				
 			
@@ -1209,8 +1056,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781626250154 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9781626250154.gif" />The cognitive behavioral workbook for anxiety : a step-by-step program / William J. Knaus ; foreword by Jon Carlson.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385677424 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780385677424.gif" />She's not there : a novel / Joy Fielding.</a>
 				
 				
 			
@@ -1221,8 +1068,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399172823 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780399172823.gif" />15 things you should give up to be happy : an inspiring guide to discovering effortless joy / Luminita D. Saviuc ; foreword by Vishen Lakhiani.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781476790428 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781476790428.gif" />Still mine : a novel / Amy Stuart.</a>
 				
 					
 					</div> <!-- end book group of 5 -->
@@ -1236,8 +1083,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780545785242 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780545785242.gif" />Revenge of the Sith / by Ace Landers ; illustrated by David White.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399170867 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780399170867.gif" />The liar / Nora Roberts.</a>
 				
 				
 			
@@ -1248,8 +1095,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062443908 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780062443908.gif" />Kim / Sean Smith.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316126106 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780316126106.gif" />The diviners / Libba Bray.</a>
 				
 				
 			
@@ -1260,8 +1107,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373608386 (large print : paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373608386.gif" />Her kind of trouble / Sarah Mayberry.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399173806 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780399173806.gif" />The end game / Catherine Coulter and J. T. Ellison.</a>
 				
 				
 			
@@ -1272,8 +1119,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780804178778 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780804178778.gif" />Make me / Lee Child.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781451666793 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781451666793.gif" />The mindful diet : how to transform your relationship with food for lasting weight loss and vibrant health / Ruth Quillian Wolever, Ph.D. and Beth Reardon, M.S., R.D., L.D.N. ; with Tania Hannan.</a>
 				
 				
 			
@@ -1284,8 +1131,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373718252 (paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373718252.gif" />A hometown boy / Janice Kay Johnson.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781609611293 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781609611293.gif" />The biggest loser dessert cookbook : more than 80 healthy treats that satisfy your sweet tooth without breaking your calorie budget / Devin Alexander and the Biggest Loser experts and cast; with Melissa Roberson.</a>
 				
 					
 					</div> <!-- end book group of 5 -->
@@ -1299,8 +1146,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780809594726  (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780809594726.gif" />Under western eyes / by Joseph Conrad.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307119407 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780307119407.gif" />Just go to bed / by Mercer Mayer.</a>
 				
 				
 			
@@ -1311,8 +1158,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373608539 (paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373608539.gif" />Weekends in Carolina / Jennifer Lohmann.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062225481 (electronic bk.)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780062225481.gif" />Where they found her : a novel / Kimberly McCreight.</a>
 				
 				
 			
@@ -1323,8 +1170,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373608508 (paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373608508.gif" />Small-town redemption / Beth Andrews.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062418975 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780062418975.gif" />Troublemaker / Linda Howard.</a>
 				
 				
 			
@@ -1335,8 +1182,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373608478 (paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373608478.gif" />Always Emily / Mary Sullivan.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781510704787 (softcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9781510704787.gif" />The irresistible introvert : harness the power of quiet charisma in a loud world / Michaela Chung.</a>
 				
 				
 			
@@ -1347,8 +1194,8 @@ if (typeof jQuery != 'undefined') {
 					 
 					 
 				
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780373607549 (paperback)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
-			  <img src="/book_covers/9780373607549.gif" />Wild for the Sheriff / Kathleen O'Brien</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780802733979 (hardcover)&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank">
+			  <img src="/book_covers/9780802733979.gif" />Penguin on vacation / Salina Yoon.</a>
 				
 					
 						</div><!-- end book group of 5 -->
@@ -1382,7 +1229,7 @@ if (typeof jQuery != 'undefined') {
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1424,61 +1271,39 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li id="active"><a href="http://www.stpaullibrary.ab.ca/Home" title="Home"><span>Home</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Catalogue" title="Catalogue"><span>Catalogue</span></a></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/Programs" class="programs_link parent_link" title="Programs"><span>Programs</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/Summer-Reading-Club-Forms" title="Summer reading club forms"><span>Summer Reading Club Forms</span></a></li></ul></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/Fees--Services" class="fees_services_link parent_link" title="Fees &amp; Services"><span>Fees & Services</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/Computer-Resources" title="Computer resources"><span>Computer Resources</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Crafts-and-Hobbies" title="Crafts and hobbies"><span>Crafts and Hobbies</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Genealogy" title="Genealogy"><span>Genealogy</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Interlibrary-Loans" title="Interlibrary loans"><span>Interlibrary Loans</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Internet-Search" title="Internet search"><span>Internet Search</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Reference-Resources" title="Reference resources"><span>Reference Resources</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Research-Help" title="Research help"><span>Research Help</span></a></li></ul></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/Kidszone" class="kidszone_link parent_link" title="Kidszone"><span>Kidszone</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/Funstuff" title="Funstuff"><span>Funstuff</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Grades-1-3" title="Grades 1-3"><span>Grades 1-3</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Grades-4-6" title="Grades 4-6"><span>Grades 4-6</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Language-Arts" title="Language arts"><span>Language Arts</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Math" title="Math"><span>Math</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Safe-Surfing" title="Safe surfing"><span>Safe Surfing</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Science" title="Science"><span>Science</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Social-Studies" title="Social studies"><span>Social Studies</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/Speak-Read-Succeed-" target="_blank" title="Speak, read, succeed "><span>Speak, Read, Succeed </span></a></li></ul></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/About-us" class="about_us_link parent_link" title="About us"><span>About us</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/Friends-of-the-Library" title="Friends of the library"><span>Friends of the Library</span></a></li></ul></li><li><a href="http://www.stpaullibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li><li class="drop"><a href="http://www.stpaullibrary.ab.ca/New-Books" class="new_books_link parent_link" title="New Books"><span>New Books</span></a><ul><li><a href="http://www.stpaullibrary.ab.ca/April" title="April"><span>April</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/August-" title="August "><span>August </span></a></li><li><a href="http://www.stpaullibrary.ab.ca/December-" title="December "><span>December </span></a></li><li><a href="http://www.stpaullibrary.ab.ca/February" title="February"><span>February</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/January" title="January"><span>January</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/July" title="July"><span>July</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/June" title="June"><span>June</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/March" title="March"><span>March</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/May" title="May"><span>May</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/November" title="November"><span>November</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/October" title="October"><span>October</span></a></li><li><a href="http://www.stpaullibrary.ab.ca/September" title="September"><span>September</span></a></li></ul></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/149" class="blog_link active_page" title="Discussions">Discussions</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=149" class="blog_link active_page" title="Discussions"><span>Discussions</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/149" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/149" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=149" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/74" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1487,7 +1312,7 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1497,47 +1322,27 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/149" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>, 
-			
 			
     <a href="http://www.county.stpaul.ab.ca">County of St. Paul</a>, 
 			
-			
     <a href="http://www.town.stpaul.ab.ca">Town of St. Paul</a>, 
-			
 			
      and <a href="http://www.kalynacountry.com">Kalyna Country</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1674,6 +1479,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1700,3 +1530,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

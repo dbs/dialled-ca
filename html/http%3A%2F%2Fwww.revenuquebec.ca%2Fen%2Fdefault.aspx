@@ -119,16 +119,16 @@
     <div class="layer-background"></div>
     
     <div class="layer-image left">
-	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_Philippe_ordi.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
+	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_1st_september.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
     </div>
     
     <div class="layer-text">
 	<span class="align-middle"></span><!--
      --><div class="layer-text-content" data-animate="slideRightToLeft" data-delay="100" data-length="300">
-	    <div class="title"><em>Attestation de Revenu Québec</em>: <br />Do the New Obligations Affect You?</div>
+	    <div class="title">Make Sure You Meet Your Obligations Concerning the <em>Attestation de Revenu Québec</em>.</div>
 	    
 	    <div class="link" data-animate="slideRightToLeft" data-delay="600" data-length="300">
-		<a href="/en/salle-de-presse/actualites/2016/2016-04-19.aspx?Promoactu19avril=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran"><em>Attestation de Revenu Québec</em>: <br />Do the New Obligations Affect You?.</span> Learn more</a>
+		<a href="/en/salle-de-presse/actualites/2016/2016-08-09.aspx?Promoactu9sept=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Make Sure You Meet Your Obligations Concerning the <em>Attestation de Revenu Québec</em>..</span> Learn more</a>
 	    </div>
 	    
 	</div>
@@ -138,58 +138,43 @@
     <div class="layer-background"></div>
     
     <div class="layer-image left">
-	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_RenoVert.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
-    </div>
-    
-    <div class="layer-text">
-	<span class="align-middle"></span><!--
-     --><div class="layer-text-content" data-animate="slideRightToLeft" data-delay="100" data-length="300">
-	    <div class="title">New RénoVert Tax Credit</div>
-	    
-	    <div class="link" data-animate="slideRightToLeft" data-delay="600" data-length="300">
-		<a href="/en/citoyen/credits/renovert/default.aspx?PromoactuBudgetRenovert=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">New RénoVert Tax Credit.</span> Learn more!</a>
-	    </div>
-	    
-	</div>
-    </div>
-</li>
-<li class="item bcgPieceVide" id="caroulax-slide-2" aria-hidden="false" tabindex="-1">
-    <div class="layer-background"></div>
-    
-    <div class="layer-image left">
 	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_CIS_citoyen.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
     </div>
     
     <div class="layer-text">
 	<span class="align-middle"></span><!--
      --><div class="layer-text-content" data-animate="slideRightToLeft" data-delay="100" data-length="300">
-	    <div class="title">Tenants: <br />Have you received your RL-31 slips?</div>
+	    <div class="title">Solidarity Tax Credit</div>
+	    
+	    <div class="sub">
+		How many payments will you receive this year?
+	    </div>
 	    
 	    <div class="link" data-animate="slideRightToLeft" data-delay="600" data-length="300">
-		<a href="/en/citoyen/credits/solidarite/calcul_credit.aspx?PromoActu24mars2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Tenants: <br />Have you received your RL-31 slips?.</span> Learn more</a>
+		<a href="/en/salle-de-presse/actualites/2016/2016-07-11.aspx?Promoactu2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Solidarity Tax Credit.</span> Learn more</a>
 	    </div>
 	    
 	</div>
     </div>
 </li>
-<li class="item bcgSalon" id="caroulax-slide-3" aria-hidden="false" tabindex="-1">
+<li class="item bcgPapiers" id="caroulax-slide-2" aria-hidden="false" tabindex="-1">
     <div class="layer-background"></div>
     
     <div class="layer-image left">
-	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_Julia.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
+	<span class="align-middle"></span><img src="/aa__images/carroulax/imgBandeau_enveloppe.png" alt="" data-animate="slideRightToLeft" data-delay="100" data-length="400" />
     </div>
     
     <div class="layer-text">
 	<span class="align-middle"></span><!--
      --><div class="layer-text-content" data-animate="slideRightToLeft" data-delay="100" data-length="300">
-	    <div class="title">Subsidized Childcare</div>
+	    <div class="title">Have you received your instalment payment slip?</div>
 	    
 	    <div class="sub">
-		50% reduction in the additional contribution for a second child
+		Does it include your June payment?
 	    </div>
 	    
 	    <div class="link" data-animate="slideRightToLeft" data-delay="600" data-length="300">
-		<a href="/en/salle-de-presse/nouvelles-fiscales/2016/2016-03-17.aspx?PromoactuBudgetContribution17mars2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Subsidized Childcare.</span> Learn more!</a>
+		<a href="/en/salle-de-presse/actualites/2016/2016-07-27.aspx?Promoactu27juillet2016=BPAccueil" class="btn"><span class="rq-icon-chevronRight"></span><span class="horsecran">Have you received your instalment payment slip?.</span> Read more</a>
 	    </div>
 	    
 	</div>
@@ -198,7 +183,7 @@
 	    </ul>
 	</div>
 	
-		<div class="carousel-indicators-wrapper with4items">
+		<div class="carousel-indicators-wrapper with3items">
 		    <div class="carousel-pause-resume">
 			<button class="carousel-pause"><span class="horsecran">Pause</span></button>
 			<button class="carousel-resume" style="display:none;"><span class="horsecran">Play</span></button>
@@ -215,10 +200,6 @@
 	    <!--
 	    --><button type="button" data-target="#carousel-wrapper" data-slide-to="2" class="" aria-controls="caroulax" aria-labelledby="caroulax-slideto-2">
 		    <span class="title horsecran" id="caroulax-slideto-2">Go to promotional banner 3</span>
-		</button>
-	    <!--
-	    --><button type="button" data-target="#carousel-wrapper" data-slide-to="3" class="" aria-controls="caroulax" aria-labelledby="caroulax-slideto-3">
-		    <span class="title horsecran" id="caroulax-slideto-3">Go to promotional banner 4</span>
 		</button>
 	    
 		    </div>
@@ -385,11 +366,6 @@
 --><li>
 
     <a href="http://www.thebillplease.ca/" class="lafacturesvp" ><span>TheBillPlease</span></a>
-
-</li><!--
---><li>
-
-    <a href="http://eveneasier.ca" class="plusfacile" ><span>EvenEasier</span></a>
 
 </li><!--
 --><li>

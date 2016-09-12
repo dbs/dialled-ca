@@ -2,16 +2,19 @@
 
 
 
+
 <!doctype html>
-<html lang="en" ng-app="albertaeducationapp">
+<html lang="en" ng-app="albertaeducationapp" id="topHtml">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <link href="/Css/print.css" rel="stylesheet" media="print"/>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/Css/font/materialIcons.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="/Css/jsTree/themes/default/jsTree.min.css" rel="stylesheet" />
+    
+        <link href="/Css/font/materialIcons.css" rel="stylesheet" type="text/css">
+        <link href="/Css/jsTree/themes/default/jsTree.min.css" rel="stylesheet" />
         <link href="/css/MDL/material.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <link href="/css/magnific-popup.css" rel="stylesheet" />
@@ -21,6 +24,8 @@
         <link href="/css/calendar.css" rel="stylesheet" />
         <link href="/css/accordion.css" rel="stylesheet" />
         <link href="/css/mobile.css" rel="stylesheet" />
+        <link href="/css/jquery-ui/themes/base/all.css" rel="stylesheet" />
+        <link href="/Css/appConversions/appconversion.css" rel="stylesheet" />
         <script src="/Scripts/jquery.min.js"></script>
         <script src="/Scripts/angular.min.js"></script>
         <script src="/Scripts/jquery-ui.min.js"></script>
@@ -38,11 +43,11 @@
         <script src="/Scripts/angular-animate.min.js"></script>
         <script src="/Scripts/slick.js"></script>
         <script src="/Scripts/ng-infinite-scroll.min.js"></script>
-        <script src="/app/Search/main.js"></script>
-        <script src="/app/Search/controller.js"></script>
-        <script src="/app/Search/services.js"></script>
-        <script src="/app/Search/filters.js"></script>
-        <script src="/app/Search/directives.js"></script>
+        <script src="/Scripts/app/main.js"></script>
+        <script src="/Scripts/app/controller.js"></script>
+        <script src="/Scripts/app/services.js"></script>
+        <script src="/Scripts/app/filters.js"></script>
+        <script src="/Scripts/app/directives.js"></script>
         <script src="/Scripts/iscroll.js"></script>
         <script src="/Scripts/velocity.min.js"></script>
         <script src="/Scripts/project-timeline/timeline-locales.min.js"></script>
@@ -60,8 +65,20 @@
 	<meta name="google-site-verification" content="4U-PZBcvyaDGmCfRV1mgVH5tstvos8e8UQUl-3WoU0M" />
 </head>
     <body class="topicSearch" ng-controller="topicSearchController" scroll data-recaptcha-site-key="6LdivhITAAAAAPbj1y5pW04YBMh-0HfKwJHfu0fw">
-    <div id="templateContainer"
+    
+        <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MPJT2H" 
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MPJT2H');</script>
+<!-- End Google Tag Manager -->
         
+    <div id="templateContainer"
+
+
                     class="topicDetails-active"
 >
             <input type="hidden" value="1081" id="currentNodeId" />
@@ -89,6 +106,17 @@
 .lang-toggle-en.English{
     display:inline;
 }
+.ui-autocomplete.ui-menu.searchAutoCompleteDropDown {
+    z-index:1000;
+    font-size:14px;
+    overflow:hidden;
+    overflow-y: auto;
+}
+
+.ui-autocomplete.ui-menu.searchAutoCompleteDropDown .ui-menu-divider{
+    display:none;    
+}
+
 </style>
 
 <header>
@@ -110,9 +138,9 @@
                                 <span class="French">RECHERCHER</span>
                             </label>
                         </div>
-                        <label class="mdl-button mdl-js-button mdl-button--icon" for="search" ng-click="searchTrigger($event)" id="searchIcon">
+                        <button class="mdl-button mdl-js-button mdl-button--icon" for="search" ng-click="searchTrigger($event)" id="searchIcon">
                             <i class="material-icons">search</i>
-                        </label>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -129,19 +157,10 @@
         </div>
     </div>
 
-	
+    <div id="cardContainerLoading" class="cardContainerLoading">
+        <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+    </div>
 
-	<div style="background-color:#FFFFCC;padding:9px;width:100%;border-bottom:1px solid #eee;">
-					<div style="margin-left:20px;margin-right:20px;">					
-					<span style="">
-						<span style="font-weight:bold;color:#005983;font-size:120%;">Wildfire Information Update</span><br/> 
-					<a href='https://education.alberta.ca/wildfire-information-update/' style='color:#005983;'>Critical information for students affected by the Alberta wildfires.</a> 
-					</div>
-	</div>
-
-
-					
-					
     <div id="journey" class="journeyStick card-pos" ng-show="journeyList != null && journeyList.length > 0">
 
         <div class="journey-dd-container">
@@ -241,20 +260,21 @@
                 <div style="clear:both;"></div>
             </div>
             <div class="sort-options">
-                <span class="sort-by English">Sort:</span>
-                <span class="sort-by French">Sort:</span>
+                <label>
+                    <span class="sort-by English">Sort:</span>
+                    <span class="sort-by French">Sort:</span>
 
-                <select id="ddlSortCards" class="sort-select English" name="Sort_Cards">
-                    <option value='0'>Timeline</option>
-                    <option value='a-z'>A-Z</option>
-                    <option value='z-a'>Z-A</option>
-                </select>
-                <select id="ddlSortCards" class="sort-select French" name="Sort_Cards">
-                    <option value='0'>Timeline</option>
-                    <option value='a-z'>A-Z</option>
-                    <option value='z-a'>Z-A</option>
-                </select>
-
+                    <select class="ddlSortCards sort-select English" name="Sort_Cards">
+                        <option value='0'>Timeline</option>
+                        <option value='a-z'>A-Z</option>
+                        <option value='z-a'>Z-A</option>
+                    </select>
+                    <select class="ddlSortCards sort-select French" name="Sort_Cards">
+                        <option value='0'>Timeline</option>
+                        <option value='a-z'>A-Z</option>
+                        <option value='z-a'>Z-A</option>
+                    </select>
+                </label>
             </div>
                 <div class="search-total-results">
                     <span ng-show="searchResults.filter == null && searchResults.length > 0 && searchOpen == true">
@@ -284,6 +304,10 @@
             </div>
         </div>
     </div>
+
+    
+
+
     
 </header>
 
@@ -442,6 +466,16 @@ UserVoice.push(['autoprompt', {}]);
 
 
         </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {                
+                //Script for expand timeline card area height adjustments by Scott Johnston
+                $('#tl-footer').click(function () {
+            AlbertaEducationApp.ReCalculateHeight();
+        });
+    })
+        </script>
+
     </body>
 
 </html>

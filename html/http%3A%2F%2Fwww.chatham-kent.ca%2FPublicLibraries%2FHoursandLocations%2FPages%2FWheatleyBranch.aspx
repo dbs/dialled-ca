@@ -128,7 +128,7 @@ The Wheatley branch is located at 35 Talbot Road West in Wheatley, Ontario.
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x2CEF53891057D30F4BBEF6382D6BDD4943A897DDD585FB548A49337C0E13B058479C7D8EFC41AE798614982522576E023A5B3F1A3E900B0BE0F863011D95C9E1,09 May 2016 13:50:11 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x9D43CEB02F8921BF3271F8B7A4F5B93E3C9BDFAEC56E518D9F26C917E539F64A58ED2D8AC01D6D5FC1B1DCBCDA0D690EBBDDAA3BBFFBBEE420689214E974A239,11 Sep 2016 16:09:26 -0000" />
 <input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
 <input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
@@ -439,11 +439,8 @@ var L_Menu_SiteTheme="";
             <li>
               <a target="_blank" href="http://www.chatham-kent.ca/eservices/Pages/subscription.aspx">Subscription Service</a>
             </li>
-            <li>
-              <a target="_blank" href="http://chatham-kent.fitdv.com/new/mainpage.php">Wellness Magazine</a>
-            </li>
             <li style="border-bottom:none;">
-              <a target="_blank" href="http://www.staycoolchatham-kent.com/">Stay Cool Chatham-Kent</a>
+              <a target="_blank" href="http://chatham-kent.fitdv.com/new/mainpage.php">Wellness Magazine</a>
             </li>
           </ul>
         </div>
@@ -765,11 +762,11 @@ var L_Menu_SiteTheme="";
                     RSS
                   </a></td></tr><tr><td id="tdDelicious" class="tdShareIcons"><a title="Delicious" target="_blank" class="sprite-icons s-delicious_icon" href="http://delicious.com/save?jump=yes&amp;url=http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx&amp;title=Vertical" /></td><td id="tdDelicious" class="tdShareLinks"><a target="_blank" href="http://delicious.com/save?jump=yes&amp;url=http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx&amp;title=Vertical">
                     Delicious
-                  </a></td></tr><tr><td id="tdFacebook" class="tdShareIcons"><a title="Facebook" target="_blank" class="sprite-icons s-facebook_icon" href="http://www.facebook.com/sharer.php?u=http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx&amp;t=Vertical" /></td><td id="tdFacebook" class="tdShareLinks"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx&amp;t=Vertical">
+                  </a></td></tr><tr><td id="tdFacebook" class="tdShareIcons"><a title="Facebook" target="_blank" class="sprite-icons s-facebook_icon" href="https://www.facebook.com/MunicCK?u=http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx&amp;t=Vertical" /></td><td id="tdFacebook" class="tdShareLinks"><a target="_blank" href="https://www.facebook.com/MunicCK?u=http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx&amp;t=Vertical">
                     Facebook
                   </a></td></tr><tr><td id="tdLinkedIn" class="tdShareIcons"><a title="LinkedIn" target="_blank" class="sprite-icons s-LinkedIn_icon" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx&amp;title=Vertical" /></td><td id="tdLinkedIn" class="tdShareLinks"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx&amp;title=Vertical">
                     LinkedIn
-                  </a></td></tr><tr><td id="tdTwitter" class="tdShareIcons"><a title="Twitter" target="_blank" class="sprite-icons s-twitter_icon" href="http://twitter.com/home?status=Vertical: http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx" /></td><td id="tdTwitter" class="tdShareLinks"><a target="_blank" href="http://twitter.com/home?status=Vertical :http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx">
+                  </a></td></tr><tr><td id="tdTwitter" class="tdShareIcons"><a title="Twitter" target="_blank" class="sprite-icons s-twitter_icon" href="https://twitter.com/MunicCK?status=Vertical: http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx" /></td><td id="tdTwitter" class="tdShareLinks"><a target="_blank" href="https://twitter.com/MunicCK?status=Vertical :http://www.chatham-kent.ca/publiclibraries/hoursandlocations/pages/wheatleybranch.aspx">
                     Twitter
                   </a></td></tr><script type="text/javascript">
               function addborders()
@@ -1056,7 +1053,8 @@ var L_Menu_SiteTheme="";
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_4_9_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_4_10_2','CKFootprint_1_4_9_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_4_10_2','CKFootprint_1_4_9_2','2');" onclick="window.location=&quot;/news/Pages/default.aspx&quot;;"><a id="a_CKFootprint_1_4_9_2" href="/news/Pages/default.aspx">Media Centre</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_4_10_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_4_11_2','CKFootprint_1_4_10_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_4_11_2','CKFootprint_1_4_10_2','2');" onclick="window.location=&quot;/MunicipalElections/Pages/MunicipalElections.aspx&quot;;"><a id="a_CKFootprint_1_4_10_2" href="/MunicipalElections/Pages/MunicipalElections.aspx">Municipal Elections</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_4_11_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_4_12_2','CKFootprint_1_4_11_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_4_12_2','CKFootprint_1_4_11_2','2');" onclick="window.location=&quot;/ProvincialOffencesCourt/Pages/ProvincialOffencesCourt.aspx&quot;;"><a id="a_CKFootprint_1_4_11_2" href="/ProvincialOffencesCourt/Pages/ProvincialOffencesCourt.aspx">Provincial Offences Court</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_4_13_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','','CKFootprint_1_4_13_2','2');" onmouseout="changeBg('hidden','no','','CKFootprint_1_4_13_2','2');" onclick="window.location=&quot;/measuringourprogress/Pages/IntegratedStrategicPlanningProcess.aspx&quot;;"><a id="a_CKFootprint_1_4_13_2" href="/measuringourprogress/Pages/IntegratedStrategicPlanningProcess.aspx">Measuring Our Progress</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_4_12_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_4_13_2','CKFootprint_1_4_12_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_4_13_2','CKFootprint_1_4_12_2','2');" onclick="window.location=&quot;/CKPlan-2035/Pages/Home.aspx&quot;;"><a id="a_CKFootprint_1_4_12_2" href="/CKPlan-2035/Pages/Home.aspx">CK Plan 2035</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_4_14_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','','CKFootprint_1_4_14_2','2');" onmouseout="changeBg('hidden','no','','CKFootprint_1_4_14_2','2');" onclick="window.location=&quot;/measuringourprogress/Pages/IntegratedStrategicPlanningProcess.aspx&quot;;"><a id="a_CKFootprint_1_4_14_2" href="/measuringourprogress/Pages/IntegratedStrategicPlanningProcess.aspx">Measuring Our Progress</a></li>
         </ul><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/newbranding/flyout_bottom.png" border="0"></div>
     </li>
     <li class="LeftNavChildNodeContainer_1" id="li_CKFootprint_1_5_1" isBranchSelected="true" isPageSelected="true" onmouseover="changeBg('show','yes','CKFootprint_1_6_1','CKFootprint_1_5_1','1');" onmouseout="changeBg('hidden','yes','CKFootprint_1_6_1','CKFootprint_1_5_1','1');" onclick="window.location=&quot;&quot;;"><a id="a_CKFootprint_1_5_1" href="" class="withImg_1" style="cursor:default">Parks &amp; Recreation</a><div class="divSubmenu" style="z-index:-2" id="div_CKFootprint_1_5_1"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/newbranding/flyout_top.png" border="0"><ul class="ulFootprintSubmenu" style="z-index:-1" id="ul_CKFootprint_1_5_1">
@@ -1071,13 +1069,13 @@ var L_Menu_SiteTheme="";
     <li class="LeftNavChildNodeContainer_1" id="li_CKFootprint_1_6_1" isBranchSelected="true" isPageSelected="true" onmouseover="changeBg('show','yes','CKFootprint_1_7_1','CKFootprint_1_6_1','1');" onmouseout="changeBg('hidden','yes','CKFootprint_1_7_1','CKFootprint_1_6_1','1');" onclick="window.location=&quot;&quot;;"><a id="a_CKFootprint_1_6_1" href="" class="withImg_1" style="cursor:default">Residents</a><div class="divSubmenu" style="z-index:-2" id="div_CKFootprint_1_6_1"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/newbranding/flyout_top.png" border="0"><ul class="ulFootprintSubmenu" style="z-index:-1" id="ul_CKFootprint_1_6_1">
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_1_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_2_2','CKFootprint_1_6_1_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_2_2','CKFootprint_1_6_1_2','2');" onclick="window.location=&quot;/AnimalCareandControl/Pages/AnimalCareControl.aspx&quot;;"><a id="a_CKFootprint_1_6_1_2" href="/AnimalCareandControl/Pages/AnimalCareControl.aspx" style="border-top:none; padding-top:3px; padding-bottom:7px;">Animal Care &amp; Control</a></li>
           <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_2_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_3_2','CKFootprint_1_6_2_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_3_2','CKFootprint_1_6_2_2','2');" onclick="window.location=&quot;/Cemeteries/Pages/Cemeteries.aspx&quot;;"><a id="a_CKFootprint_1_6_2_2" href="/Cemeteries/Pages/Cemeteries.aspx">Cemeteries</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_4_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_5_2','CKFootprint_1_6_4_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_5_2','CKFootprint_1_6_4_2','2');" onclick="window.location=&quot;/CommunitiesinBloom/Pages/CommunitiesinBloom.aspx&quot;;"><a id="a_CKFootprint_1_6_4_2" href="/CommunitiesinBloom/Pages/CommunitiesinBloom.aspx">Communities in Bloom</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_5_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_6_2','CKFootprint_1_6_5_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_6_2','CKFootprint_1_6_5_2','2');" onclick="window.location=&quot;/CommunityFunding/Pages/CommunityFunding.aspx&quot;;"><a id="a_CKFootprint_1_6_5_2" href="/CommunityFunding/Pages/CommunityFunding.aspx">Community Funding</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_6_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_7_2','CKFootprint_1_6_6_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_7_2','CKFootprint_1_6_6_2','2');" onclick="window.location=&quot;/Drainage/Pages/Drainage.aspx&quot;;"><a id="a_CKFootprint_1_6_6_2" href="/Drainage/Pages/Drainage.aspx">Drainage</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_7_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_8_2','CKFootprint_1_6_7_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_8_2','CKFootprint_1_6_7_2','2');" onclick="window.location=&quot;/Maintenance/Pages/Maintenance.aspx&quot;;"><a id="a_CKFootprint_1_6_7_2" href="/Maintenance/Pages/Maintenance.aspx">Maintenance</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_8_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_9_2','CKFootprint_1_6_8_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_9_2','CKFootprint_1_6_8_2','2');" onclick="window.location=&quot;/Taxes/Pages/PropertyTaxes.aspx&quot;;"><a id="a_CKFootprint_1_6_8_2" href="/Taxes/Pages/PropertyTaxes.aspx">Taxes</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_10_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_11_2','CKFootprint_1_6_10_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_11_2','CKFootprint_1_6_10_2','2');" onclick="window.location=&quot;/eventsonmunicipalproperty/Pages/Home.aspx&quot;;"><a id="a_CKFootprint_1_6_10_2" href="/eventsonmunicipalproperty/Pages/Home.aspx">Events on Municipal Property</a></li>
-          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_11_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','','CKFootprint_1_6_11_2','2');" onmouseout="changeBg('hidden','no','','CKFootprint_1_6_11_2','2');" onclick="window.location=&quot;/Traffic/Pages/Traffic.aspx&quot;;"><a id="a_CKFootprint_1_6_11_2" href="/Traffic/Pages/Traffic.aspx">Traffic</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_3_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_4_2','CKFootprint_1_6_3_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_4_2','CKFootprint_1_6_3_2','2');" onclick="window.location=&quot;/CommunitiesinBloom/Pages/CommunitiesinBloom.aspx&quot;;"><a id="a_CKFootprint_1_6_3_2" href="/CommunitiesinBloom/Pages/CommunitiesinBloom.aspx">Communities in Bloom</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_4_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_5_2','CKFootprint_1_6_4_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_5_2','CKFootprint_1_6_4_2','2');" onclick="window.location=&quot;/CommunityFunding/Pages/CommunityFunding.aspx&quot;;"><a id="a_CKFootprint_1_6_4_2" href="/CommunityFunding/Pages/CommunityFunding.aspx">Community Funding</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_5_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_6_2','CKFootprint_1_6_5_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_6_2','CKFootprint_1_6_5_2','2');" onclick="window.location=&quot;/Drainage/Pages/Drainage.aspx&quot;;"><a id="a_CKFootprint_1_6_5_2" href="/Drainage/Pages/Drainage.aspx">Drainage</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_6_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_7_2','CKFootprint_1_6_6_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_7_2','CKFootprint_1_6_6_2','2');" onclick="window.location=&quot;/Maintenance/Pages/Maintenance.aspx&quot;;"><a id="a_CKFootprint_1_6_6_2" href="/Maintenance/Pages/Maintenance.aspx">Maintenance</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_7_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_8_2','CKFootprint_1_6_7_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_8_2','CKFootprint_1_6_7_2','2');" onclick="window.location=&quot;/Taxes/Pages/PropertyTaxes.aspx&quot;;"><a id="a_CKFootprint_1_6_7_2" href="/Taxes/Pages/PropertyTaxes.aspx">Taxes</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_9_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','CKFootprint_1_6_10_2','CKFootprint_1_6_9_2','2');" onmouseout="changeBg('hidden','no','CKFootprint_1_6_10_2','CKFootprint_1_6_9_2','2');" onclick="window.location=&quot;/eventsonmunicipalproperty/Pages/Home.aspx&quot;;"><a id="a_CKFootprint_1_6_9_2" href="/eventsonmunicipalproperty/Pages/Home.aspx">Events on Municipal Property</a></li>
+          <li class="LeftNavChildNodeContainer_2" id="li_CKFootprint_1_6_10_2" isBranchSelected="true" isPageSelected="false" onmouseover="changeBg('show','no','','CKFootprint_1_6_10_2','2');" onmouseout="changeBg('hidden','no','','CKFootprint_1_6_10_2','2');" onclick="window.location=&quot;/Traffic/Pages/Traffic.aspx&quot;;"><a id="a_CKFootprint_1_6_10_2" href="/Traffic/Pages/Traffic.aspx">Traffic</a></li>
         </ul><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/newbranding/flyout_bottom.png" border="0"></div>
     </li>
     <li class="LeftNavChildNodeContainer_1" id="li_CKFootprint_1_7_1" isBranchSelected="true" isPageSelected="true" onmouseover="changeBg('show','yes','CKFootprint_1_8_1','CKFootprint_1_7_1','1');" onmouseout="changeBg('hidden','yes','CKFootprint_1_8_1','CKFootprint_1_7_1','1');" onclick="window.location=&quot;&quot;;"><a id="a_CKFootprint_1_7_1" href="" class="withImg_1" style="cursor:default">Tourism &amp; Culture</a><div class="divSubmenu" style="z-index:-2" id="div_CKFootprint_1_7_1"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/newbranding/flyout_top.png" border="0"><ul class="ulFootprintSubmenu" style="z-index:-1" id="ul_CKFootprint_1_7_1">
@@ -1374,7 +1372,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/AboutTheLibrary/Pages/Strategicplanning.aspx">Strategic Planning Survey</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/AboutTheLibrary/Pages/Strategicplan.aspx">Strategic Plan</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1652,7 +1650,15 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/BookSale.aspx">Spring Book Sale</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/BookSale.aspx">Book Sale</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/EstatePlanning.aspx">Estate Planning Workshop: Living Well &amp; Leaving Well</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1668,22 +1674,6 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/GetGardening.aspx">Gardening Month at CKPL</a></td>
-              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
-            </tr>
-          </table>
-        </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
-          <table cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/HealthyEating.aspx">Healthy Eating Starts at CKPL!</a></td>
-              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
-            </tr>
-          </table>
-        </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
-          <table cellpadding="0" cellspacing="0" width="100%">
-            <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/TheLiteraryClassicsOnlineBookClub.aspx">The Literary Classics Online Book Club</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
@@ -1692,7 +1682,31 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/FightFraudWorkshop.aspx">Fight Fraud!</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/Gluten.aspx">Gluten Sensitivity Workshop</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/ReadLocalCKAuthorFestival.aspx">Read Local: CK Author Festival</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/PTSDOneCopsBattle.aspx">PTSD: One Cop's Battle</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/InvestorsApproachtoHomeownership.aspx">Investors Approach to Homeownership</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1700,7 +1714,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/MentalHealth.aspx">Mental Health Awareness Month</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/ProgramsandEvents/Pages/OutsidetheLines(OTL).aspx">Outside the Lines (OTL) How-To Festival</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1710,11 +1724,19 @@ var L_Menu_SiteTheme="";
     <li class="LeftNavChildNodeContainer_1" isBranchSelected="true" isPageSelected="false">
       <table cellpadding="0" cellspacing="0" width="100%">
         <tr>
-          <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Reading Resources.aspx">Reading</a></td>
-          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_6_1"></td>
+          <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/CKReads/Pages/CKReads.aspx">CK Reads</a></td>
+          <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
         </tr>
       </table>
-      <ul id="node__1_6_1_UL" style="display:none;">
+    </li>
+    <li class="LeftNavChildNodeContainer_1" isBranchSelected="true" isPageSelected="false">
+      <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Reading/Pages/Reading Resources.aspx">Reading</a></td>
+          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_7_1"></td>
+        </tr>
+      </table>
+      <ul id="node__1_7_1_UL" style="display:none;">
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
@@ -1817,10 +1839,10 @@ var L_Menu_SiteTheme="";
       <table cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Research/Pages/Research Resources.aspx">Research</a></td>
-          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_7_1"></td>
+          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_8_1"></td>
         </tr>
       </table>
-      <ul id="node__1_7_1_UL" style="display:none;">
+      <ul id="node__1_8_1_UL" style="display:none;">
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
@@ -1832,7 +1854,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Research/Pages/ArtArchitecture.aspx">Art &amp; Architecture</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Research/Pages/ArtDesign.aspx">Art &amp; Design</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1973,10 +1995,18 @@ var L_Menu_SiteTheme="";
             </tr>
           </table>
         </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Research/Pages/Writing.aspx">Writing</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Research/Pages/HouseHome.aspx">House &amp; Home</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -1987,10 +2017,10 @@ var L_Menu_SiteTheme="";
       <table cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/Genealogy/Pages/Genealogy.aspx">Genealogy</a></td>
-          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_8_1"></td>
+          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_9_1"></td>
         </tr>
       </table>
-      <ul id="node__1_8_1_UL" style="display:none;">
+      <ul id="node__1_9_1_UL" style="display:none;">
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
@@ -2061,10 +2091,10 @@ var L_Menu_SiteTheme="";
       <table cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/Services.aspx">Using Your Library</a></td>
-          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_9_1"></td>
+          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_10_1"></td>
         </tr>
       </table>
-      <ul id="node__1_9_1_UL" style="display:none;">
+      <ul id="node__1_10_1_UL" style="display:none;">
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
@@ -2116,7 +2146,7 @@ var L_Menu_SiteTheme="";
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/eReadersandDevices.aspx">eReaders</a></td>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/eReadersandDevices.aspx">eReaders &amp; Devices</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2217,10 +2247,18 @@ var L_Menu_SiteTheme="";
             </tr>
           </table>
         </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/CKPLGrowsSeedLibrary.aspx">CKPL Grows Seed Library</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/UsingYourLibrary/Pages/OnlinePayments.aspx">Online Payments</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2231,10 +2269,10 @@ var L_Menu_SiteTheme="";
       <table cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/SupportYourLibrary/Pages/Support Your Library.aspx">Support Your Library</a></td>
-          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_10_1"></td>
+          <td width="15"><img src="/_layouts/IMAGES/ConceptInc/ck/subsite/nav_arrow_black.gif" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" border="0" onclick="toggleChildren(this.id);" alt="Collapse Section" id="node__1_11_1"></td>
         </tr>
       </table>
-      <ul id="node__1_10_1_UL" style="display:none;">
+      <ul id="node__1_11_1_UL" style="display:none;">
         <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
@@ -2275,10 +2313,18 @@ var L_Menu_SiteTheme="";
             </tr>
           </table>
         </li>
-        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px;">
           <table cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/SupportYourLibrary/Pages/TellingOurStories.aspx">Telling Our Stories</a></td>
+              <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
+            </tr>
+          </table>
+        </li>
+        <li class="LeftNavChildNodeContainer_2" id="branchIsSelectedli" isBranchSelected="true" isPageSelected="false" style="border-top:0px; border-right:0px; padding-bottom:0px;">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td style="padding-right:5px;"><a class="LeftNavBranchSelectedA" href="/PublicLibraries/SupportYourLibrary/Pages/BlenheimBranchRevitalization.aspx">Blenheim Branch Revitalization</a></td>
               <td width="15"><img src="/_layouts/images/blank.gif" border="0" style="float:left;padding-right:3px;padding-top:4px;padding-bottom:4px" width="5px"></td>
             </tr>
           </table>
@@ -2553,4 +2599,4 @@ theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
 </script>
 </form>
  </body>
-</html><!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-05-09T09:50:15 -->
+</html><!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-09-11T12:09:32 -->

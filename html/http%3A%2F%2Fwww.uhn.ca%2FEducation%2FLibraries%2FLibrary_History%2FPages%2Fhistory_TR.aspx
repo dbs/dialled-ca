@@ -234,7 +234,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xE8B773E6B0CE136473788A2AC425920EC3F868F09CFC6E5FD677E6369B6552EA344081FD03FC122F01A0C213920A495AFE7ED753DA41764DFC294A9E31A0A69E,09 May 2016 14:06:32 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xC747F8B9050C86FA93D9C6ACBCB874D05982AB3581D2DCF89B5B7505A985E9A13D2768BC5D6B185994D03F34F9CD85A93D47115182B0B6DB0E621FC8DADB82AD,11 Sep 2016 16:23:27 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -278,7 +278,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fEducation\u002fLibraries\u002fLibrary_History", webAbsoluteUrl: "http:\u002f\u002fwww.uhn.ca\u002fEducation\u002fLibraries\u002fLibrary_History", siteAbsoluteUrl: "http:\u002f\u002fwww.uhn.ca", serverRequestPath: "\u002fEducation\u002fLibraries\u002fLibrary_History\u002fPages\u002fhistory_TR.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Library History", webTemplate: "53", tenantAppVersion: "4226893589", webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T14:06:32.0087059Z") - new Date(), siteClientTag: "25317$$15.0.4569.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{4e2db38e-96c4-4357-9f05-7ec4b0e63474}",pageItemId:5, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="/Education/Libraries/Library_History";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fEducation\u002fLibraries\u002fLibrary_History", webAbsoluteUrl: "http:\u002f\u002fwww.uhn.ca\u002fEducation\u002fLibraries\u002fLibrary_History", siteAbsoluteUrl: "http:\u002f\u002fwww.uhn.ca", serverRequestPath: "\u002fEducation\u002fLibraries\u002fLibrary_History\u002fPages\u002fhistory_TR.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Library History", webTemplate: "53", tenantAppVersion: "4226893589", webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-09-11T16:23:27.3438940Z") - new Date(), siteClientTag: "25454$$15.0.4569.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{4e2db38e-96c4-4357-9f05-7ec4b0e63474}",pageItemId:5, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="/Education/Libraries/Library_History";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};//]]>
@@ -378,7 +378,7 @@ document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){remo
             registerOverride(101);
             registerOverride(700);
         });
-    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 4, 9),showWeeks:0,timeZone:'-04:00:00.0007213',timeZoneInHours:-4,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
+    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 8, 11),showWeeks:0,timeZone:'-04:00:00.0009163',timeZoneInHours:-4,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
 UpdateFormDigest('\u002fEducation\u002fLibraries\u002fLibrary_History', 1440000);if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;};
 return true;
 }
@@ -435,125 +435,189 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             <div id="s4-bodyContainer">
                 <div id="main-eyebrowarea">
                     <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
-	<div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ1" width="100%" class="ms-WPBody " OnlyForMePart="true" allowDelete="false" style="" ><div class="ms-rtestate-field">				<div id="main-eyebrowarea">
-	             <nav class="navbar navbar-inverse">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <div class="navbar-logo">
-								<a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN']);" href="/" title="UHN Home">
-									<img class="img-responsive" src="/_catalogs/masterpage/UHN/img/logo-uhn.svg" title="UHN Logo">
-								</a>
-							</div>
-							<div class="navbar-button">
-								<button type="button" class="navbar-toggle collapsed" data-target="#top-navbar-1"> 
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>	
-										<div class="navbar-labelmenu">										
-											<span>Menu</span>
-										</div>
-								</button>
-							</div>                            
-                            <a class="navbar-brand visible-xs" href="#">University Health Network</a>
+	<div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ1" width="100%" class="ms-WPBody " OnlyForMePart="true" allowDelete="false" style="" ><div class="ms-rtestate-field"><style>
+    #temp-alert {
+        position: relative;
+        z-index: 100;
+        display: none;
+        background-color: #910000;
+        /*text-shadow: 2px 4px 3px #333333;*/
+    }
+
+    @media (min-width:768px) {
+        #s4-bodyContainer > #main-eyebrowarea {
+            height: auto;
+        }
+    }
+</style>
+<div id="temp-alert">
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-md-2">&nbsp;</div><div class="col-xs-12 col-md-8">
+                <div class="alert-content">
+                    <a  onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Campaign Smoking Cessation']);" href="http://www.uhn.ca/corporate/AboutUHN/Smoking_Cessation/" title="Link to Smoking Cessation" style="text-decoration: none;color: #ffffff;">
+                        <!--<span class="alert-icon glyphicon glyphicon-exclamation-sign"></span>--><p style="font-weight: 600; font-size: 14px; margin-top:10px;"><img class="hidden-xs img-responsive ms-rtePosition-1" alt="No smoking icon" src="/_catalogs/masterpage/UHN/img/icons/no_smoking_web_icon.png" style="margin-bottom:5px; margin-right:5px; ">&nbsp;
+                        <span style="padding-top:15px;">UHN is smoke-free. Learn how we are protecting your health and helping you quit »</span></p>
+                    </a>
+                </div>
+            </div><div class="hidden-xs col-md-2">&nbsp;</div>
+        </div>
+    </div>
+</div>
+<script>
+    if (window.sessionStorage.tempAlert)
+        document.getElementById("temp-alert").style.display = "block";
+    $(function () {
+        //if (!window.sessionStorage.tempAlert) {		
+			var startDate = new Date("2016/06/27 01:00:00"),
+				endDate = new Date("2016/07/18 23:59:59"),
+				today = new Date();
+			if (today > startDate && today < endDate) {
+				setTimeout(function () {
+					$("#temp-alert").slideDown(1000);
+					//window.sessionStorage.tempAlert = 0;
+				}, 200);
+			}
+        //}
+    });
+</script>
+
+<div id="main-eyebrowarea">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-logo">
+                    <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN']);" href="/" title="UHN Home">
+                        <img class="img-responsive" src="/_catalogs/masterpage/UHN/img/logo-uhn.svg" title="UHN Logo">
+                    </a>
+                </div>
+                <div class="navbar-button">
+                    <button type="button" class="navbar-toggle collapsed" data-target="#top-navbar-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <div class="navbar-labelmenu">
+                            <span>Menu</span>
                         </div>
-                        <div class="collapse navbar-collapse" id="top-navbar-1">
-                            <ul id="topNavmenu" class="nav navbar-nav">
-								<li class="hidden-xs"><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN']);" href="/" id="uhn-home" title="UHN Home"></a></li>
-                                <li class="dropdown">
-                                	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Programs']);" href="/PatientsFamilies/Pages/our_programs.aspx" title="Link to Our Programs">Our Programs ▼</a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Arthritis']);" title="Link to Arthritis Program" href="/Arthritis/Pages/default.aspx">Arthritis Program</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader JDMI']);" title="Link to Joint Department of Medical Imaging" href="/JDMI/Pages/default.aspx">Joint Department of Medical Imaging</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader KNC']);" title="Link to Krembil Neuroscience Centre" href="/KNC/Pages/default.aspx">Krembil Neuroscience Centre</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader LMP']);" title="Link to Laboratory Medicine Program" href="/LMP/Pages/default.aspx">Laboratory Medicine Program</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader MCC']);" title="Link to Medical and Community Care" href="/MCC/Pages/default.aspx">Medical and Community Care</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader MOT']);" title="Link to Multi-Organ Transplant" href="/MOT/Pages/default.aspx">Multi-Organ Transplant</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader PMCC']);" title="Link to Peter Munk Cardiac Centre" href="/PMCC/Pages/default.aspx">Peter Munk Cardiac Centre</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Programs PMH']);" href="/PrincessMargaret" title="Link to Princess Margaret Cancer Centre">Princess Margaret Cancer Centre</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Surgery']);" title="Link to Surgery and Critical Care Program" href="/Surgery/Pages/default.aspx">Surgery and Critical Care Program</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Program TR']);" title="Link to Toronto Rehab" href="/TorontoRehab/Pages/default.aspx">Toronto Rehab</a></li>
-                                    </ul></li>
-                                <li class="hidden-sm" style="width:5px;"></li>
-                                <li class="dropdown">
-                                	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals']);" href="/corporate/AboutUHN/OurHospitals" title="Link to Our Hospitals">Our Hospitals ▼</a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospital PMH']);" href="/PrincessMargaret" title="Link to Princess Margaret Cancer Centre">Princess Margaret Cancer Centre</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader TGH']);" href="/corporate/AboutUHN/OurHospitals/TGH" title="Link to Toronto General Hospital">Toronto General Hospital</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Landing']);" href="/TorontoRehab" title="Link to Rehabilitation Institute">Toronto Rehabilitation Institute</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Bickle']);" href="/corporate/AboutUHN/OurHospitals/TR_Bickle" title="Link to Toronto Rehab Bickle">Toronto Rehab - Bickle</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Lakeside']);" href="/corporate/AboutUHN/OurHospitals/TR_Lakeside" title="Link to Toronto Rehab Lakeside">Toronto Rehab - Lakeside</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Lyndhurst']);" href="/corporate/AboutUHN/OurHospitals/TR_Lyndhurst" title="Link to Toronto Rehab Lyndhurst">Toronto Rehab - Lyndhurst</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Rumsey']);" href="/corporate/AboutUHN/OurHospitals/TR_Rumsey" title="Link to Toronto Rehab Rumsey">Toronto Rehab - Rumsey</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR University']);" href="/corporate/AboutUHN/OurHospitals/TR_University" title="Link to Toronto Rehab University">Toronto Rehab - University</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader TWH']);" href="/corporate/AboutUHN/OurHospitals/TWH" title="Link to Toronto Western Hospital">Toronto Western Hospital</a></li>                                        
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Accessibility']);" href="/corporate/AboutUHN/Accessibility" title="Link to Accessibility">Accessibility</a></li>
-                                    </ul></li>
-                                <li class="hidden-sm" style="width:10px;"></li>
-                                <li class="dropdown">
-                                	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader About UHN']);" href="/corporate/AboutUHN" title="About UHN">About UHN</a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Updates from the CEO']);" href="/corporate/AboutUHN/Updates_from_Peter" title="Link to Updates from the CEO">Looking Ahead - Updates from the CEO</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN at a Glance']);" href="/corporate/AboutUHN/Pages/uhn_at_a_glance.aspx" title="Link to UHN at a Glance">UHN at a Glance</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Publications']);" href="/corporate/AboutUHN/Pages/publications.aspx" title="Link to Publications">Publications</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Our History']);" href="/corporate/AboutUHN/OurHistory" title="Link to Our History">Our History</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Corporate Information']);" href="/corporate/AboutUHN/CorporateInformation" title="Link to Corporate Information">Corporate Information</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Achieving Our Vision']);" href="/corporate/AboutUHN/AchievingOurVision" title="Link to Achieving Our Vision">Achieving Our Vision</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Quality and Patient Safety']);" href="/corporate/AboutUHN/Quality_Patient_Safety" title="Link to Quality and Patient Safety">Quality and Patient Safety</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Fiscal Accountability']);" href="/corporate/AboutUHN/Fiscal_Accountability" title="Link to Fiscal Accountability">Fiscal Accountability</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Privacy and Accessing Information']);" href="/PatientsFamilies/Patient_Safety_Advocacy/Privacy" title="Link to Privacy &amp; Accessing Information">Privacy &amp; Accessing Information</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Greening at UHN']);" href="/corporate/AboutUHN/Greening_UHN" title="Link to Greening at UHN">Greening at UHN</a></li>
-										<li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader General Services']);" href="/corporate/AboutUHN/General_Services" title="Link to General Services">General Services</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Accessibility at UHN']);" href="/corporate/AboutUHN/Accessibility" title="Link to Accessibility at UHN">Accessibility at UHN</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN International']);" href="/IHP" title="Link to UHN International">UHN International</a></li>
-                                    </ul></li>
-                                <li class="hidden-xs">|</li>
-                                <li class="dropdown">
-                                	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions']);" href="/corporate/Directions/Pages/default.aspx" title="Maps &amp; Directions"><span class="visible-sm">Directions</span><span class="hidden-sm">Maps &amp; Directions</span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions PM']);" href="/corporate/Directions/Pages/directions_PMH.aspx" title="Link to PM directions">Princess Margaret</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TGH']);" href="/corporate/Directions/Pages/directions_TGH.aspx" title="Link to TG directions">Toronto General</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR-Bickle']);" href="/corporate/Directions/Pages/directions_TRI_bickle.aspx" title="Link to TR Bickle Centre directions">TR – Bickle</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR–Lakeside']);" href="/corporate/Directions/Pages/directions_TRI_lakeside.aspx" title="Link to TR Bickle Centre directions">TR – Lakeside</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR–Lyndhurst']);" href="/corporate/Directions/Pages/directions_TRI_lyndhurst.aspx" title="Link to TR Lyndhurst Centre directions">TR – Lyndhurst</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR–Rumsey']);" href="/corporate/Directions/Pages/directions_TRI_Rumsey.aspx" title="Link to TR Rumsey Centre directions">TR – Rumsey</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR–University']);" href="/corporate/Directions/Pages/directions_TRI_university.aspx" title="Link to TR University Centre directions">TR – University</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TWH']);" href="/corporate/Directions/Pages/directions_TWH.aspx" title="Link to TWH Centre directions">Toronto Western</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions UHN Shuttle']);" href="/corporate/Directions/Pages/uhn_shuttle.aspx" title="Link to UHN Shuttle">UHN Shuttle</a></li>
-                                    </ul></li>
-                                <li class="hidden-xs">|</li>
-                                <li class="dropdown">
-                                	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Ways you can help']);" href="/corporate/ways-help/Pages/default.aspx" title="Ways You Can Help"><span class="visible-sm">Ways to Help</span><span class="hidden-sm">Ways You Can Help</span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Volunteer']);" href="/corporate/ways-help/Volunteering_UHN/Pages/default.aspx" title="Link to Volunteer">Volunteer</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Participate']);" href="/corporate/AboutUHN/Partners_In_Care/Pages/patient_focus_group.aspx" title="Link to Participate">Participate</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Donate']);" href="/corporate/ways-help/Pages/about_foundations.aspx" title="Link to Donate">Donate</a></li>
-                                    </ul></li>
-                                <li class="hidden-xs">|</li>
-                                <li class="dropdown">
-                                	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Newsroom']);" href="/corporate/News" title="Newsroom">Newsroom</a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader News Stories']);" href="/corporate/News/Pages/news_landing.aspx" title="Link to News Stories">News Stories</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Press Releases']);" href="/corporate/News/PressReleases/Pages/default.aspx" title="Link to Press Releases">Press Releases</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN Expert Centre']);" href="/corporate/News/Expert_centre" title="Link to UHN Expert Centre">UHN Expert Centre</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Social Media at UHN']);" href="/corporate/News/Pages/connect_uhn.aspx" title="Link to Social Media at UHN">Social Media at UHN</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Media Policies']);" href="/corporate/News/Pages/media_policies.aspx" title="Link to Media Policies">Media Policies</a></li>
-                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Contacts']);" href="/corporate/News/Pages/media_contacts.aspx" title="Link to Contacts">Contacts</a></li>
-                                    </ul></li>
-                                <li class="hidden-xs">|</li>
-                                <li><a href="/corporate/For_Staff/Pages/default.aspx" title="For Staff">For Staff</a></li>
-                                <li class="hidden-xs">|</li>
-                                <li><a href="/corporate/Careers/Pages/default.aspx" title="Careers">Careers</a></li>
-                                <li class="hidden-xs">|</li>
-                                <li><a href="/corporate/Pages/contact_us.aspx" title="Contact Us">Contact Us</a></li>
-                                <li class="textResizer hidden-sm hidden-xs"><span>Text Size</span></li>
-                                <li class="hidden-sm hidden-xs pad2"><a id="zoom-out" href="#" title="Zoom Out Instruction"></a></li>
-                                <li class="hidden-sm hidden-xs pad2"><a id="zoom-in" href="#" title="Zoom In Instruction"></a></li>
-                            </ul>
-                         </div>
-                      </div>
-                   </nav>
-                 </div><head><title></title></head></div><div class="ms-clear"></div></div>
+                    </button>
+                </div>
+                <a class="navbar-brand visible-xs" href="#">University Health Network</a>
+            </div>
+            <div class="collapse navbar-collapse" id="top-navbar-1">
+                <ul id="topNavmenu" class="nav navbar-nav">
+                    <li class="hidden-xs"><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN']);" href="/" id="uhn-home" title="UHN Home"></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Programs']);" href="/PatientsFamilies/Pages/our_programs.aspx" title="Link to Our Programs">Our Programs ▼</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="visible-xs"><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Programs']);" href="/PatientsFamilies/Pages/our_programs.aspx" title="Link to Our Programs"><b>Our Programs</b></a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Arthritis']);" title="Link to Arthritis Program" href="/Arthritis/Pages/default.aspx">Arthritis Program</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader JDMI']);" title="Link to Joint Department of Medical Imaging" href="/JDMI/Pages/default.aspx">Joint Department of Medical Imaging</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader KNC']);" title="Link to Krembil Neuroscience Centre" href="/KNC/Pages/default.aspx">Krembil Neuroscience Centre</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader LMP']);" title="Link to Laboratory Medicine Program" href="/LMP/Pages/default.aspx">Laboratory Medicine Program</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader MCC']);" title="Link to Medical and Community Care" href="/MCC/Pages/default.aspx">Medical and Community Care</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader MOT']);" title="Link to Multi-Organ Transplant" href="/MOT/Pages/default.aspx">Multi-Organ Transplant</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader PMCC']);" title="Link to Peter Munk Cardiac Centre" href="/PMCC/Pages/default.aspx">Peter Munk Cardiac Centre</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Programs PMH']);" href="/PrincessMargaret" title="Link to Princess Margaret Cancer Centre">Princess Margaret Cancer Centre</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Surgery']);" title="Link to Surgery and Critical Care Program" href="/Surgery/Pages/default.aspx">Surgery and Critical Care Program</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Program TR']);" title="Link to Toronto Rehab" href="/TorontoRehab/Pages/default.aspx">Toronto Rehab</a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden-sm" style="width:5px;"></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals']);" href="/corporate/AboutUHN/OurHospitals" title="Link to Our Hospitals">Our Hospitals ▼</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="visible-xs"><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals']);" href="/corporate/AboutUHN/OurHospitals" title="Link to Our Hospitals"><b>Our Hospitals</b></a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospital PMH']);" href="/PrincessMargaret" title="Link to Princess Margaret Cancer Centre">Princess Margaret Cancer Centre</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader TGH']);" href="/corporate/AboutUHN/OurHospitals/TGH" title="Link to Toronto General Hospital">Toronto General Hospital</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Landing']);" href="/TorontoRehab" title="Link to Rehabilitation Institute">Toronto Rehabilitation Institute</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Bickle']);" href="/corporate/AboutUHN/OurHospitals/TR_Bickle" title="Link to Toronto Rehab Bickle">Toronto Rehab - Bickle</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Lakeside']);" href="/corporate/AboutUHN/OurHospitals/TR_Lakeside" title="Link to Toronto Rehab Lakeside">Toronto Rehab - Lakeside</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Lyndhurst']);" href="/corporate/AboutUHN/OurHospitals/TR_Lyndhurst" title="Link to Toronto Rehab Lyndhurst">Toronto Rehab - Lyndhurst</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR Rumsey']);" href="/corporate/AboutUHN/OurHospitals/TR_Rumsey" title="Link to Toronto Rehab Rumsey">Toronto Rehab - Rumsey</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Hospitals TR University']);" href="/corporate/AboutUHN/OurHospitals/TR_University" title="Link to Toronto Rehab University">Toronto Rehab - University</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader TWH']);" href="/corporate/AboutUHN/OurHospitals/TWH" title="Link to Toronto Western Hospital">Toronto Western Hospital</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Accessibility']);" href="/corporate/AboutUHN/Accessibility" title="Link to Accessibility">Accessibility</a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden-sm" style="width:10px;"></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader About UHN']);" href="/corporate/AboutUHN" title="About UHN">About UHN</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="visible-xs"><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader About UHN']);" href="/corporate/AboutUHN" title="About UHN"><b>About UHN</b></a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Updates from the CEO']);" href="/corporate/AboutUHN/Updates_from_Peter" title="Link to Updates from the CEO">Looking Ahead - Updates from the CEO</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN at a Glance']);" href="/corporate/AboutUHN/Pages/uhn_at_a_glance.aspx" title="Link to UHN at a Glance">UHN at a Glance</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Publications']);" href="/corporate/AboutUHN/Pages/publications.aspx" title="Link to Publications">Publications</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Our History']);" href="/corporate/AboutUHN/OurHistory" title="Link to Our History">Our History</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Corporate Information']);" href="/corporate/AboutUHN/CorporateInformation" title="Link to Corporate Information">Corporate Information</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Achieving Our Vision']);" href="/corporate/AboutUHN/AchievingOurVision" title="Link to Achieving Our Vision">Achieving Our Vision</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Quality and Patient Safety']);" href="/corporate/AboutUHN/Quality_Patient_Safety" title="Link to Quality and Patient Safety">Quality and Patient Safety</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Fiscal Accountability']);" href="/corporate/AboutUHN/Fiscal_Accountability" title="Link to Fiscal Accountability">Fiscal Accountability</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Privacy and Accessing Information']);" href="/PatientsFamilies/Patient_Safety_Advocacy/Privacy" title="Link to Privacy &amp; Accessing Information">Privacy &amp; Accessing Information</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Greening at UHN']);" href="/corporate/AboutUHN/Greening_UHN" title="Link to Greening at UHN">Greening at UHN</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader General Services']);" href="/corporate/AboutUHN/General_Services" title="Link to General Services">General Services</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Accessibility at UHN']);" href="/corporate/AboutUHN/Accessibility" title="Link to Accessibility at UHN">Accessibility at UHN</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN International']);" href="/IHP" title="Link to UHN International">UHN International</a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs">|</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions']);" href="/corporate/Directions/Pages/default.aspx" title="Maps &amp; Directions"><span class="visible-sm">Directions</span><span class="hidden-sm">Maps &amp; Directions</span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="visible-xs"><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions']);" href="/corporate/Directions/Pages/default.aspx" title="Maps &amp; Directions"><b>Maps &amp; Directions</b></a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions PM']);" href="/corporate/Directions/Pages/directions_PMH.aspx" title="Link to PM directions">Princess Margaret</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TGH']);" href="/corporate/Directions/Pages/directions_TGH.aspx" title="Link to TG directions">Toronto General</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR-Bickle']);" href="/corporate/Directions/Pages/directions_TRI_bickle.aspx" title="Link to TR Bickle Centre directions">TR – Bickle</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR–Lakeside']);" href="/corporate/Directions/Pages/directions_TRI_lakeside.aspx" title="Link to TR Bickle Centre directions">TR – Lakeside</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR–Lyndhurst']);" href="/corporate/Directions/Pages/directions_TRI_lyndhurst.aspx" title="Link to TR Lyndhurst Centre directions">TR – Lyndhurst</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR–Rumsey']);" href="/corporate/Directions/Pages/directions_TRI_Rumsey.aspx" title="Link to TR Rumsey Centre directions">TR – Rumsey</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TR–University']);" href="/corporate/Directions/Pages/directions_TRI_university.aspx" title="Link to TR University Centre directions">TR – University</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions TWH']);" href="/corporate/Directions/Pages/directions_TWH.aspx" title="Link to TWH Centre directions">Toronto Western</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Maps and Directions UHN Shuttle']);" href="/corporate/Directions/Pages/uhn_shuttle.aspx" title="Link to UHN Shuttle">UHN Shuttle</a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs">|</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Ways you can help']);" href="/corporate/ways-help/Pages/default.aspx" title="Ways You Can Help"><span class="visible-sm">Ways to Help</span><span class="hidden-sm">Ways You Can Help</span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="visible-xs"><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Ways you can help']);" href="/corporate/ways-help/Pages/default.aspx" title="Ways You Can Help"><b>Ways You Can Help</b></a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Volunteer']);" href="/corporate/ways-help/Volunteering_UHN/Pages/default.aspx" title="Link to Volunteer">Volunteer</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Participate']);" href="/corporate/AboutUHN/Partners_In_Care/Pages/patient_focus_group.aspx" title="Link to Participate">Participate</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Donate']);" href="/corporate/ways-help/Pages/about_foundations.aspx" title="Link to Donate">Donate</a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs">|</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Newsroom']);" href="/corporate/News" title="Newsroom">Newsroom</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="visible-xs"><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Newsroom']);" href="/corporate/News" title="Newsroom"><b>Newsroom</b></a>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader News Stories']);" href="/corporate/News/Pages/news_landing.aspx" title="Link to News Stories">News Stories</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Press Releases']);" href="/corporate/News/PressReleases/Pages/default.aspx" title="Link to Press Releases">Press Releases</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader UHN Expert Centre']);" href="/corporate/News/Expert_centre" title="Link to UHN Expert Centre">UHN Expert Centre</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Social Media at UHN']);" href="/corporate/News/Pages/connect_uhn.aspx" title="Link to Social Media at UHN">Social Media at UHN</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Media Policies']);" href="/corporate/News/Pages/media_policies.aspx" title="Link to Media Policies">Media Policies</a></li>
+                            <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','TopHeader Contacts']);" href="/corporate/News/Pages/media_contacts.aspx" title="Link to Contacts">Contacts</a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs">|</li>
+                    <li><a href="/corporate/For_Staff/Pages/default.aspx" title="For Staff">For Staff</a></li>
+                    <li class="hidden-xs">|</li>
+                    <li><a href="/corporate/Careers/Pages/default.aspx" title="Careers">Careers</a></li>
+                    <li class="hidden-xs">|</li>
+                    <li><a href="/corporate/Pages/contact_us.aspx" title="Contact Us">Contact Us</a></li>
+                    <li class="textResizer hidden-sm hidden-xs"><span>Text Size</span></li>
+                    <li class="hidden-sm hidden-xs pad2"><a id="zoom-out" href="#" title="Zoom Out Instruction"></a></li>
+                    <li class="hidden-sm hidden-xs pad2"><a id="zoom-in" href="#" title="Zoom In Instruction"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<style>
+    #main-eyebrowarea .dropdown-menu > .visible-xs > a {
+        color: #fff;
+    }
+</style></div><div class="ms-clear"></div></div>
 </div>
                 </div>
                 <!--/main-eyebrowarea-->
@@ -569,7 +633,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                         <div class="ms-WPBody noindex col-xs-12 col-sm-6 main-srchbox">
                             <a href="/PatientsFamilies/myUHN" class="patientportal-sm" title="Sign in to myUHN">
                                 <svg preserveAspectRatio="xMidYMid" width="85" height="40" viewBox="0 0 85 40">
-                                    <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAoCAMAAAC4l0Z3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA8FBMVEX///+80elbj8ovcLwqbbqNsdq70elGgMOwyebv9PqwyeWqxePx9frU4vGcu99/p9Y4d79Wi8jG2O1VishjlMzj7PY0dL3q8fi4zuhxntGDqte1zOe0y+ehvuBYjMmpxOMrbrpcj8p4otM5d7+hv+H8/f48ecDP3vDp8Phzn9JJgsSEq9eVtt3D1uzo7/evyOVVi8ifveDR4PDQ3/AaYaru8/k5drV2oMyjwN3R3+5IgbuUtdfC1ejg6vQpbLBmlsbw9PmFq9Lp8PeHrNJXi8EbYqqGq9Ln7vazyuMbYqssbrOQs9hVisOOsdcqbLIAAAAeTcjZAAAAAWJLR0RPbmZBSQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAoJJREFUSMft1Nl22jAQANABpKipZexIdgJps+9Js7WKwxI7Jmuz/v/nVJIXMAKH9MBDz+k8CDEjXYQsGQAq1RqaXtSqFZCBp0gmgQHmpo4iNAfVGahVmOaeZlGDGaAI/VdNlXyZh/mvZCBjURsTuziq7uRddwJ1gaqrAXShDzDuESQvC+ccEcS14smuy3Xdlx+El6qLS5DE0mKuNmTDKWow2/eob1NPfm9gLru+/AVMqdOktk9K1GXIYjnPMVqXKqGKpk2ErVR1EXP077mUo7pVon7L1e/9JGeWnGvXrQaS83EjVVWrVdXV2XFqJVcHXxDYVjuAm2i06lJSvtaVXF3J99VntCnnMkptYqqIMQ/7rHRfV3N1tb8B6rETh3HewCQ9SiqTHaqPzwBaS9G14YLnY6uwoJIoqusbm1vbO9Lc2d7a3FgvDuXYcSdDi+ruHsD+weHRj6PDg32Avd2x09ysTRavNoMMFArqsf7vJ6f10xPdOx6HOn7aElCYai1o5oWCegbDcZYtTc91S1WqLtoI9dxQzzXpYwq2ZwPFyFYvFeaMUi3bGqn+NNRfetOAESKPLMHUrTP51IAPqNhxHKxVLm9zpop+XBjqhUoHcClEq606QQc6onslLkNVkG0AoQoIRKslumGUFMSgCmb01ZZWxVVXhJeDaiCSghrQbv2leh1ex1Gq9obVTtwy1RsDvTFUEbZlL4p7keiEvSFVdGNTvTXUW1PtwZ3M3YVxGGepvirapnr/8FgwHx/udV5NjKK002sng4Mgymq61QPStqBOEoF8Vh/H59QojH9PMu6za50s/in1aQboEzzPQH2GlxmoLwCvU0df1RV6e5+q+f4G8Aer4C9lZFIlaQAAAABJRU5ErkJggg==" width="85" height="40" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAoCAMAAAC4l0Z3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA8FBMVEX///+80elbj8ovcLwqbbqNsdq70elGgMOwyebv9PqwyeWqxePx9frU4vGcu99/p9Y4d79Wi8jG2O1VishjlMzj7PY0dL3q8fi4zuhx" width="85" height="40" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     </image>
                                 </svg>
                             </a>
@@ -605,7 +669,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Research/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Research</span></span></a><ul class="dynamic">
 				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Research/Research_Institutes/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Our Research Institutes</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Research/Clinical_Studies_Quality/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Clinical Studies Quality</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Research/Research_Commercialization/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Research Commercialization</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Research/research_ethics_board/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Research Ethics Board</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Research/Research_Trainees/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Research Trainees</span></span></a></li>
 			</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Education/Pages/default.aspx"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Education</span></span></a><ul class="dynamic">
-				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Education/Michener_Institute/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">The Michener Institute</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Education/conference_services/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Event Services</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/healthcareprofessionals/Observerships/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Observerships</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Education/eLearning/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">eLearning</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Education/Students/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Students</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Education/Libraries/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Our Libraries</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Education/ICE/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">UHN ICE</span></span></a></li>
+				<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Link to UHN Students" href="/Education/Students/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Students</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Link to The Michener Institute" href="/Education/Michener_Institute/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">The Michener Institute</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Link to the Conference &amp; Educational Technology Services" href="/Education/conference_services/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Event Services</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Link to the Observerships" href="/healthcareprofessionals/Observerships/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Observerships</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Link to the de Souza Institute" href="http://www.desouzainstitute.com/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">de Souza Institute</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Link to Our Libraries" href="/Education/Libraries/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Our Libraries</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="UHN International Centre for Education" href="/Education/ICE/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">UHN ICE</span></span></a></li>
 			</ul></li>
 		</ul>
 	</div>
@@ -765,74 +829,43 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             <!--/MSO_ContentTable-->
                             <div id="rightpanel" class="noindex col-xs-12 col-sm-3 sidebar-offcanvas">
                                 <div class="rightpanel-handle visible-xs" data-toggle="offcanvas">Quick Links                                    
-                                    
-                                    
-                                    
-                                    
                                     <span class="rightpanel-handle-icon">
                                     </span>
                                 </div>
                                 <div class="webpart">
-                                    <h3 class="quick-bar">Quick Links
-                                    
-                                    
-                                    
-                                    </h3>
+                                    <h3 class="quick-bar">Quick Links</h3>
                                     <ul id="quick-links">
                                         <li>
-                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED Patient Family Education']);" href="/PatientsFamilies/Health_Information/Patient_Family_Education/" title="Patient &amp; Family Education">Patient &amp; Family Education
-                                            
-                                            
-                                            
+                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED-LP IPE']);" href="/Education/IPE" title="Centre for IPE">Centre for IPE
                                             </a>
                                         </li>
                                         <li>
-                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED UHN ICE']);" href="/Education/ICE/" title="UHN International Centre for Education">UHN International Centre for Education
-                                            
-                                            
-                                            
+                                            <a onclick="_gaq.push(['_trackEvent','External Links','Click','QuickLinks ED de Souza Institute']);" href="http://www.desouzainstitute.com" target="_blank" title="Link to de Souza Institute">de Souza Institute
                                             </a>
                                         </li>
                                         <li>
-                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED Observerships']);" href="/healthcareprofessionals/Observerships/Pages/default.aspx" title="Observerships">Observerships
-                                            
-                                            
-                                            
+                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED eLearning Centre']);" href="/corporate/For_Staff/eLearning" target="_blank" title="MyLearning">eLearning Centre 
                                             </a>
                                         </li>
                                         <li>
-                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED Conference Educational Technology Services']);" href="/Education/conference_services/" title="Conference &amp; Educational Technology Services">Conference &amp; Educational Technology Services
-                                            
-                                            
-                                            
+                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED-LP Conference Educational Technology Services']);" href="/Education/conference_services" title="Conference &amp; Educational Technology Services">Event Services
                                             </a>
                                         </li>
                                         <li>
-                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED IPE']);" href="/Education/IPE/" title="Centre for IPE">Centre for IPE
-                                            
-                                            
-                                            
+                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED-LP Observerships']);" href="/healthcareprofessionals/Observerships/Pages/default.aspx" title="Observerships">Observerships
                                             </a>
                                         </li>
                                         <li>
-                                            <a onclick="_gaq.push(['_trackEvent','External Links','Click','QuickLinks ED Wilson Centre']);" href="http://www.thewilsoncentre.ca/" target="_blank" title="The Wilson Centre">Wilson Centre
-                                            
-                                            
-                                            
+                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED-LP Our Libraries']);" href="/Education/Libraries/Pages/default.aspx" title="Our Libraries">Our Libraries
+                                            </a>
+                                        </li>
+                                        <li><a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED-LP Michener Institute']);" href="/Education/Michener_Institute" title="Link to Michener Institute of Education at UHN">The Michener Institute</a></li>
+                                        <li>
+                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED-LP UHN ICE']);" href="/Education/ICE" title="UHN International Centre for Education">UHN ICE
                                             </a>
                                         </li>
                                         <li>
-                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED Our Libraries']);" href="/Education/Libraries/Pages/default.aspx" title="Our Libraries">Our Libraries
-                                            
-                                            
-                                            
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a onclick="_gaq.push(['_trackEvent','Internal Links','Click','QuickLinks ED eLearning Centre']);" href="/Education/eLearning/Pages/default.aspx" title="eLearning Centre">eLearning Centre
-                                            
-                                            
-                                            
+                                            <a onclick="_gaq.push(['_trackEvent','External Links','Click','QuickLinks ED-LP Wilson Centre']);" href="http://www.thewilsoncentre.ca/" target="_blank" title="The Wilson Centre">Wilson Centre
                                             </a>
                                         </li>
                                     </ul>
@@ -975,7 +1008,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                     </div>
                                     
                                     <div id="ctl00_g_08feb6a8_eaa4_4a3d_b440_83962954d77f" WebPart="true" IsClosed="false">
-	<script>var newsItems = {Rows:[{"FileRef":"/corporate/News/Pages/national_nursing_week_with_you_every_step_of_the_way.aspx","News_x0020_Teaser":"Completing the sentence “A UHN nurse is…” at centre of an array of activities underway for 2016 National Nursing Week.","Page_x0020_Title":"National Nursing Week: ‘With you every step of the way’","ArticleStartDate":"\/Date(1462766400000)\/"},{"FileRef":"/corporate/News/Pages/brain_cancer_at_26_how_cancer_changed_Brandon_life.aspx","News_x0020_Teaser":"Brandon Fong shares how the Adolescent and Young Adult Program at the Princess Margaret helped him cope with a brain cancer diagnosis at 26.","Page_x0020_Title":"Brain cancer at 26 –How cancer changed Brandon’s life","ArticleStartDate":"\/Date(1462766400000)\/"},{"FileRef":"/corporate/News/Pages/special_story_for_mother_day_life_after_mom_ovarian_cancer.aspx","News_x0020_Teaser":"Lee Pettersen, widow of CFL legend Leif Pettersen, marks Mother’s Day and World Ovarian Cancer Day by sharing how an ovarian cancer diagnosis brought her and her daughters closer together.","Page_x0020_Title":"A special story for Mother’s Day: life after mom’s ovarian cancer","ArticleStartDate":"\/Date(1462507200000)\/"}]}</script>
+	<script>var newsItems = {Rows:[{"FileRef":"/corporate/News/Pages/krembil_doctor_plays_supporting_role_in_production_of_TIFF_film.aspx","News_x0020_Teaser":"Dr. Alfonso Fasano of the Morton and Gloria Shulman Movement Disorders Centre at Toronto Western Hospital served as medical and scientific adviser on the Italian film Indivisible","Page_x0020_Title":"Krembil doctor plays supporting role in production of TIFF film ","ArticleStartDate":"\/Date(1473307200000)\/"},{"FileRef":"/corporate/News/Pages/Igor_Jurisica_talks_nutrigenomics.aspx","News_x0020_Teaser":"Princess Margaret Cancer Centre researcher explains his growing interest in nutrigenomics – the study of food at the molecular level – and how it can impact disease development.","Page_x0020_Title":"Dr. Igor Jurisica talks nutrigenomics","ArticleStartDate":"\/Date(1473307200000)\/"},{"FileRef":"/corporate/News/Pages/paralympic_games_what_is_on_for_Rio_2016.aspx","News_x0020_Teaser":"The quest for gold begins today at the 2016 Paralympic Games. Toronto Rehab’s Dr. Gaetan Tardif fills us in on what we can expect from this year’s games.","Page_x0020_Title":"The Paralympic Games: What’s on for Rio 2016","ArticleStartDate":"\/Date(1473220800000)\/"}]}</script>
 </div>
                                     <div id="whats-new">
                                     </div>
@@ -1157,7 +1190,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0xE8B773E6B0CE136473788A2AC425920EC3F868F09CFC6E5FD677E6369B6552EA344081FD03FC122F01A0C213920A495AFE7ED753DA41764DFC294A9E31A0A69E,09 May 2016 14:06:32 -0000';
+            formDigestElement.value = '0xC747F8B9050C86FA93D9C6ACBCB874D05982AB3581D2DCF89B5B7505A985E9A13D2768BC5D6B185994D03F34F9CD85A93D47115182B0B6DB0E621FC8DADB82AD,11 Sep 2016 16:23:27 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>

@@ -15,15 +15,8 @@
 			var addthis_config = {
 				data_ga_property: 'UA-11103250-1'
 			};
-
-			// JScript source code
-			var at_code;
-			if (document.location.protocol == "https:")
-				at_code = '<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ea58a3a7e8a615a"><\/script>';
-			else
-				at_code = '<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ea58a3a7e8a615a"><\/script>';
-			document.writeln(at_code);
 		</script>
+        <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ea58a3a7e8a615a"></script>
 
 		<!-- SWFObject - replaced the IE ActiveX activation script -->
 		<script type="text/javascript" src="/core/scripts/swfobject.js"></script><script type="text/javascript" src="/core/scripts/ow_util.js"></script><script type="text/javascript" src="/core/scripts/ow_emails.js"></script><link href="http://www.msvu.ca/en/error/404.print.aspx" type="text/html" rel="alternate" media="print" /></head>

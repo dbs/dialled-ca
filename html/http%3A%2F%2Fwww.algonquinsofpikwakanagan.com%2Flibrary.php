@@ -280,7 +280,7 @@ body {
       <li><a href="contact_daycare.php">Daycare</a></li>
       <li><a href="contact_health.php">Health Centre</a> </li>
       <li><a href="contact_makwa.php">Makwa Centre</a></li>
-      <li><span class="indent-bot"><a href="contact_op.php">OmÃ miwininÃ¬ PimÃ djwowin</a></span></li>
+      <li><span class="indent-bot"><a href="contact_op.php">Omàmiwininì Pimàdjwowin</a></span></li>
       <li><a href="contact_tennisco.php">Tennisco Manor</a></li>
     </ul>
   </li>
@@ -297,21 +297,21 @@ body {
            <div class="padding2">
              <div class="wrapper margin-bot">
                <article class="grid_8 alpha">
-                 <h3 class="prev-indent-bot"><strong>Library  NÃ bowÃ djigewigamig</strong></h3>
+                 <h3 class="prev-indent-bot"><strong>Library  Nàbowàdjigewigamig</strong></h3>
                  <p><img src="images/Education library books with first guest.jpg" alt="" width="177" height="123" class="pics"><br>
-                   Pikwakanagan&rsquo;s library (NÃ bowÃ djige-wigamig) is a public  library and is a member of the Southern Ontario Library Association.Â  <br>
+                   Pikwakanagan&rsquo;s library (Nàbowàdjige-wigamig) is a public  library and is a member of the Southern Ontario Library Association.  <br>
                    <br>
-The library offers hundreds of new books and resources for  all ages including a vast inventory of First Nation references. Resources for  school projects and research are available including encyclopedias and other  reference books. Â The library has  computer and Internet access for the public. </p>
+The library offers hundreds of new books and resources for  all ages including a vast inventory of First Nation references. Resources for  school projects and research are available including encyclopedias and other  reference books.  The library has  computer and Internet access for the public. </p>
 There is a section for youth and a section for  young children. For young children there are tiny tables and chairs. The  children's centre has a separate computer to help children with special phonics  programs. On occasion, the library has workshops for children and storytelling.<br>
 <p><br>
-                Hours of Operation:Â Â Â Â Â Â Â Tuesday-Wednesday  1:00 p.m. to 8:00 p.m.<br>
-Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Thursday  2:00 p.m. to 8:00 p.m.<br>
+                Hours of Operation:       Tuesday-Wednesday  1:00 p.m. to 8:00 p.m.<br>
+                                    Thursday  2:00 p.m. to 8:00 p.m.<br>
                 <br>
                 <strong>Contact:</strong><br>
                 <strong>Estelle Amikons,  Librarian</strong><br>
                 Tel: 613-625-2402<br>
-                Fax:Â 613-625-2332<br>
-E-mail:Â  <a href="mailto:library@pikwakanagan.ca">library@pikwakanagan.ca</a><br>
+                Fax: 613-625-2332<br>
+E-mail:  <a href="mailto:library@pikwakanagan.ca">library@pikwakanagan.ca</a><br>
                 </p>
                </article>
                <article class="grid_4">
@@ -392,7 +392,7 @@ E-mail:Â  <a href="mailto:library@pikwakanagan.ca">library@pikwakanagan.ca</a>
 <footer>
 <div class="main">
 <!-- {%FOOTER_LINK} -->
-Algonquins of PikwÃ kanagÃ n First Nation </span> &copy; 2012 <span class="line">| </span></span>1657A Mishomis Inamo <span class="spacer-1"> <span class="line">| </span></span> PikwÃ kanagÃ n, ON K0J 1X0 <span class="spacer-1"> <span class="line">| </span></span> tel: 613-625-2800 <span class="spacer-1"> <span class="line">| </span></span>fax: 613-625-2332</div>
+Algonquins of Pikwàkanagàn First Nation </span> &copy; 2012 <span class="line">| </span></span>1657A Mishomis Inamo <span class="spacer-1"> <span class="line">| </span></span> Pikwàkanagàn, ON K0J 1X0 <span class="spacer-1"> <span class="line">| </span></span> tel: 613-625-2800 <span class="spacer-1"> <span class="line">| </span></span>fax: 613-625-2332</div>
 </footer>
 <script type="text/javascript">
 Cufon.now();

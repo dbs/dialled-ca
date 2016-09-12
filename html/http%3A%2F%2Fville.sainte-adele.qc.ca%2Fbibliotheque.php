@@ -122,6 +122,7 @@ $(document).ready(function() {
 						<li><a href="/page-service-des-travaux-publics.php">PrÃ©sentation du service</a></li>
 						<li><a href="/page-collecte-a-trois-voies.php">Collecte Ã  trois voies</a></li>
 						<li><a href="/page-ecocentre.php">Ãcocentre</a></li>
+						<li><a href="/page-fleurons-du-quebec.php">Fleurons du QuÃ©bec</a></li>
 						<li><a href="/page-service-des-travaux-publics-notre-publics.php">Notre Ã©quipe</a></li>
 					</ul>
 				</li>
@@ -204,7 +205,7 @@ $(document).ready(function() {
 		data-cycle-timeout="4000"
 		data-cycle-slides=".slide">
 		
-					<a href="http://ville.sainte-adele.qc.ca/nouvelles-le-printemps-de-la-sculpture-572.php?s=accueil" target="_blank" title="Le printemps de la sculpture" class="slide"><img src="/upload/images/thumbs/WEB-Printemps-sculpture-2016-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Le printemps de la sculpture" /></a>					<a href="/upload/documents/2016-02-25-Communique-conte.pdf" target="_blank" title="Heure du conte" class="slide"><img src="/upload/images/thumbs/2016-02-25-WEB-biblio-MonsieurGuillaume-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Heure du conte" /></a>			<div class="cycle-pager"></div>
+					<a href="https://steadele.tuxedobillet.com/placedescitoyens/le-casino-du-maire" target="_blank" title="Casino du maire" class="slide"><img src="/upload/images/thumbs/Casino-du-maire-bandeau-web-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Casino du maire" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-albert-mondor-un-jardin-attrayant-en-toutes-saisons-63.php" target="_blank" title="Albert Mondor" class="slide"><img src="/upload/images/thumbs/Albert-Mondor-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Albert Mondor" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-le-guatemala-ugo-monticone-75.php" target="_blank" title="Ugo Monticone" class="slide"><img src="/upload/images/thumbs/Ugo-Monticone-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Ugo Monticone" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-cerbere-jazz-81.php" target="_blank" title="CerbÃ¨re Jazz" class="slide"><img src="/upload/images/thumbs/Cerbere-Jazz-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="CerbÃ¨re Jazz" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-moppi-decouvre-les-metiers-theatre-musical-3-a-8-ans-87.php" target="_blank" title="Moppi dÃ©couvre les mÃ©tiers" class="slide"><img src="/upload/images/thumbs/Moppi-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Moppi dÃ©couvre les mÃ©tiers" /></a>					<a href="http://ville.sainte-adele.qc.ca/calendrier-culturel-maud-palmearts-et-reinaldo-nino-la-renaissance-de-l-etre-94.php" target="_blank" title="Maud Palmaerts et Reinaldo Nino" class="slide"><img src="/upload/images/thumbs/Maud-Palmaerts-Reinaldo-Nino_1-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Maud Palmaerts et Reinaldo Nino" /></a>					<a href="https://docs.google.com/forms/d/e/1FAIpQLSc9Ho_srEY18olXwWZZ6_75SIkexBDGWhQ8mZOG6T85AIvM9w/viewform" target="_blank" title="Yoga en plein air" class="slide"><img src="/upload/images/thumbs/BanniereYoga-52f5e1568f2e0dce1480f2de6acd82ab.png" width="940" height="332" alt="Yoga en plein air" /></a>					<a href="http://ville.sainte-adele.qc.ca/upload/ckfinder/files/Progr%20activit%C3%A9s_automne%202016.pdf" target="_blank" title="Inscriptions loisirs" class="slide"><img src="/upload/images/thumbs/Inscriptions-activites-loisirs-bandeau-52f5e1568f2e0dce1480f2de6acd82ab.jpg" width="940" height="332" alt="Inscriptions loisirs" /></a>			<div class="cycle-pager"></div>
 	</div>
 	
 </div>
@@ -246,23 +247,7 @@ $(document).ready(function() {
 <div id="calendar">
     <p class="titlecalendar sideBarTitle">calendrier</p>
 	<ul>
-        
-                <li>
-            
-            <p class="titleDetails">01 Mars 2016</p>
-            <a href="/calendrier-club-du-rat-biboche-138.php?s=biblio" class="details">Club du Rat Biboche </a>
-        </li>
-                <li>
-            
-            <p class="titleDetails">21 Mai 2016</p>
-            <a href="/calendrier-heure-du-conte-avec-monsieur-guillaume-et-gros-ragout-404.php?s=biblio" class="details">Heure du conte avec Monsieur Guillaume et Gros RagoÃ»t</a>
-        </li>
-                <li>
-            
-            <p class="titleDetails">01 Juin 2016</p>
-            <a href="/calendrier-bibliotheque-grande-fete-des-ratons-club-du-rat-biboche-57.php?s=biblio" class="details">BIBLIOTHÃQUE  -Grande FÃªte des Ratons (Club du rat Biboche)</a>
-        </li>
-            
+    		<li>Aucun Ã©vÃ©nement</li>
 		</ul>
         <a class="nextEvent" href="calendrier.php?s=biblio">Voir tous les Ã©vÃ©nements</a>
         	</div>
@@ -329,17 +314,10 @@ $(document).ready(function() {
             
             <ul id="actualite">
                                 <li>
-                    <img src="/upload/images/thumbs/2016-02-10-Bandeau-Elections_1-e677801196c3f4d0013895d3d45e9dd4.jpg" width="141" height="50" alt="RÃ©sultats des Ã©lections partielles 2016" />                    <h2><a href="/nouvelles-resultats-des-elections-partielles-2016-571.php?s=biblio">RÃ©sultats des Ã©lections partielles 2016</a></h2>
-                    <p class="date"> 1 mai 2016</p>
-                    <div class="textActu">Voici les r&eacute;sultats des &eacute;lections partielles 2016
-Taux de participation&nbsp;:...</div>
-                    <a class="btn-suite" href="/nouvelles-resultats-des-elections-partielles-2016-571.php?s=biblio">Lire la suite</a>
-                </li>
-                                <li>
-                    <img src="/upload/images/thumbs/LogobibliCHG-CMYK_12-04d5d3d65765383b609957bf588e5c2e.jpg" width="141" height="56" alt="BibliothÃ¨que fermÃ©e - 2 mai" />                    <h2><a href="/nouvelles-bibliotheque-fermee-2-mai-566.php?s=biblio">BibliothÃ¨que fermÃ©e - 2 mai</a></h2>
-                    <p class="date">15 avril 2016</p>
-                    <div class="textActu">Prenez note que la biblioth&egrave;que est ferm&eacute;e le lundi 2 mai &agrave; l&#039;occasion de la...</div>
-                    <a class="btn-suite" href="/nouvelles-bibliotheque-fermee-2-mai-566.php?s=biblio">Lire la suite</a>
+                    <img src="/upload/images/thumbs/LogobibliCHG-CMYK_6-04d5d3d65765383b609957bf588e5c2e.jpg" width="141" height="56" alt="Service du prÃªt entre bibliothÃ¨ques (PEB)" />                    <h2><a href="/nouvelles-service-du-pret-entre-bibliotheques-peb-495.php?s=biblio">Service du prÃªt entre bibliothÃ¨ques (PEB)</a></h2>
+                    <p class="date"> 7 juin 2016</p>
+                    <div class="textActu">Veuillez prendre note que pendant la p&eacute;riode estivale, le service de PEB est...</div>
+                    <a class="btn-suite" href="/nouvelles-service-du-pret-entre-bibliotheques-peb-495.php?s=biblio">Lire la suite</a>
                 </li>
                                 <li>
                     <img src="/upload/images/thumbs/kalei-4-opti-9e4755b11a3c457e753326899675e2f1.png" width="141" height="147" alt="IdÃ©es de lecture - Vive la diffÃ©rence - KALÃIDOSCOPE" />                    <h2><a href="/nouvelles-idees-de-lecture-vive-la-difference-kaleidoscope-558.php?s=biblio">IdÃ©es de lecture - Vive la diffÃ©rence - KALÃIDOSCOPE</a></h2>
@@ -360,6 +338,12 @@ Taux de participation&nbsp;:...</div>
                     <div class="textActu">Jeudi 22 octobre 19 h 30
 Viens d&eacute;couvrir l&#039;univers des mangas et emprunter les...</div>
                     <a class="btn-suite" href="/nouvelles-atelier-mangas-510.php?s=biblio">Lire la suite</a>
+                </li>
+                                <li>
+                    <img src="/upload/images/thumbs/IMG-0645-2e8b96bae457f88b609ff923038bb2e6.JPG" width="141" height="106" alt="Des Ratons accomplis" />                    <h2><a href="/nouvelles-des-ratons-accomplis-486.php?s=biblio">Des Ratons accomplis</a></h2>
+                    <p class="date">18 juin 2015</p>
+                    <div class="textActu">La grande f&ecirc;te des Ratons a eu lieu le 17 juin en soir&eacute;e &agrave; la biblioth&egrave;que en...</div>
+                    <a class="btn-suite" href="/nouvelles-des-ratons-accomplis-486.php?s=biblio">Lire la suite</a>
                 </li>
                             </ul>
             
@@ -469,7 +453,7 @@ Viens d&eacute;couvrir l&#039;univers des mangas et emprunter les...</div>
 			<li><a href="/page-services-municipaux.php">Services municipaux</a></li>
 			<li><a href="/page-projets-residentiels.php">S'Ã©tablir Ã  Sainte-AdÃ¨le</a></li>
             <li><a href="/page-endroits-a-decouvrir.php">Tourisme</a></li>
-			<li><a href="/page-parc-affaire.php">Affaires</a></li>
+			<li><a href="/partners.php">Affaires</a></li>
 			<li><a target="_blank" href="http://www.jobillico.com/voir-entreprise/ville-de-sainte-adele.jSqoQp">Emplois</a></li>
 			<li><a href="/plan-du-site.php">Plan du site</a></li>
 		</ul>

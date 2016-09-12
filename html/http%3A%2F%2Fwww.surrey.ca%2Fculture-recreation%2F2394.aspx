@@ -16,8 +16,8 @@
         <meta name="robots" content="index,follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
 
-        <meta name="published" content="Mon, 09 May 2016 02:03:57" />
-        <meta name="modified" content="Wed, 27 Apr 2016 12:57:21" />
+        <meta name="published" content="Sun, 11 Sep 2016 01:57:58" />
+        <meta name="modified" content="Fri, 02 Sep 2016 04:22:43" />
         <meta name="guid" content="8CEC619F3AB343F0B15A72712E200313" />
         <meta name="id" content="2394" />
         <meta name="pageUrl" content="/culture-recreation/2394.aspx" />
@@ -59,8 +59,8 @@ var _prum = [['id', '51815090abe53d3064000000'],
 </script>
 
 
-        <link type="text/css" rel="stylesheet" href="/css/cos-master/styles.css?v=20160223" />
-<link type="text/css" rel="stylesheet" href="/css/cos-master/social-foundicons.css" />
+        <link type="text/css" rel="stylesheet" href="/css/cos-master/styles.css?v=20160815" />
+<link type="text/css" rel="stylesheet" href="/css/cos-master/social-foundicons.css?v=20160906" />
 <link rel="stylesheet" type="text/css" href="/css/cos-master/jquery.ui.css" />
         <link type="text/css" rel="stylesheet" href="/css/cos-master/artsHeritage.css" />
 
@@ -74,6 +74,7 @@ var switchTo5x = true;
 <script type="text/javascript" src="/js/cos-master/jQuery.js"></script>
 <script type="text/javascript" src="/js/cos-master/jQuery.ui.js"></script>
 <script type="text/javascript" src="/js/cos-master/jquery.watermarkinput.js"></script>
+<script type="text/javascript" src="/js/cos-master/jquery.fitvids.js"></script>
 <script type="text/javascript" src="/js/cos-master/hammer.js"></script>
 <script type="text/javascript" src="/js/cos-master/tweener.js"></script>
 <script type="text/javascript" src="/js/cos-master/ImageLoader.js"></script>
@@ -88,6 +89,42 @@ var switchTo5x = true;
                     </script>
                     
     <style>
+ul.bullet-checkmark li:before {
+        content: '✔';   
+        margin-left: -1em;
+        margin-right: .500em;
+}
+
+ul.bullet-x li:before {
+        content:'✖';
+        margin-left: -1em;
+        margin-right: .500em;
+}
+
+ul.bullet-checkmark, ul.bullet-x {
+        text-indent: 2px;
+        list-style: none;
+        list-style-position: outside;
+}
+
+ul.bullet-checkmark li:before {
+        content: '✔';   
+        margin-left: -1em;
+        margin-right: .500em;
+}
+
+ul.bullet-x li:before {
+        content:'✖';
+        margin-left: -1em;
+        margin-right: .500em;
+}
+
+ul.bullet-checkmark, ul.bullet-x {
+        text-indent: 2px;
+        list-style: none;
+        list-style-position: outside;
+}
+
  img.imageRight {
  	float: right;
  	margin: 0 0 8px 8px;
@@ -100,15 +137,7 @@ var switchTo5x = true;
  }
  /*Image Left*/
 
- 
- span.pdf {
- 	background: url(/images/cos-master/ui/pdf.gif) no-repeat transparent scroll 100% 0;
- 	padding: 0px 14px 0px 0;
- }
- span.link {
- 	background: url(/images/cos-master/ui/link.gif) no-repeat transparent scroll 100% 0;
- 	padding: 0px 14px 0px 0;
- }
+
  span.button-action {
  	background-color: #1ab394;
  	border: 1px solid #1ab394;
@@ -155,9 +184,47 @@ var switchTo5x = true;
  	color: #3d3d3d;
  	text-decoration: none;
  }
+
+ul.bullet-checkmark li:before {
+        content: '✔';   
+        margin-left: -1em;
+        margin-right: .500em;
+}
+
+ul.bullet-x li:before {
+        content:'✖';
+        margin-left: -1em;
+        margin-right: .500em;
+}
+
+ul.bullet-checkmark, ul.bullet-x {
+        text-indent: 2px;
+        list-style: none;
+        list-style-position: outside;
+}
 </style></head>
 
-    <body class="featuredlanding content culture-link">
+    <body class="featuredlanding content ">
+        
+                <script>
+                dataLayer = [{
+                    'guid': '8CEC619F3AB343F0B15A72712E200313',
+                    'department': 'Parks, Recreation & Culture',
+                    'title': 'Surrey Archives',
+                    'breadcrumb': '/Culture & Recreation/Arts & Heritage/Heritage/Surrey Archives'
+                }];
+                </script>
+
+                <!-- Google Tag Manager -->
+                <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-56CW3X"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-56CW3X');</script>
+                <!-- End Google Tag Manager -->
+            
 
         <!--[if lt IE 7]>    <div class="lt-ie9 lt-ie8 lt-ie7">  <![endif]-->
         <!--[if IE 7]>       <div class="lt-ie9 lt-ie8">         <![endif]-->
@@ -222,12 +289,12 @@ ypResponsive.settings({
                     <div class="nav-wrapper">
                         <h2 class="block-title">Navigation</h2>
                         <ul>
-                            <li class="isParent notSelected services-link"><a id="menu44933BF656974018853F52F5211679BC" href="/3462.aspx" tabindex="3">City Services</a></li>
-            <li class="isParent notSelected business-link"><a id="menu305B3387C2FF47E196D7D46606B19DE7" href="/3463.aspx" tabindex="4">Business &amp; Economic Development</a></li>
-            <li class="isParent notSelected culture-link"><a id="menu80DC727F00D3454C8E3B773ABCDBF207" href="/3464.aspx" tabindex="5">Culture &amp; Recreation</a></li>
-            <li class="isParent notSelected government-link"><a id="menu19F733797B69494286615A608AD18BA2" href="/3466.aspx" tabindex="6">City Government</a></li>
-            <li class="isParent notSelected community-link"><a id="menuFD318CE8EEFE4C2EB903FA8264EF846B" href="/3467.aspx" tabindex="7">Community</a></li>
-            <!-- /157.aspx --><!-- /sitemap.xml --><!--  --><!-- /404error.aspx --><!-- /3548.aspx --><!-- /events-xml-sfiis.xml --><!-- /search.aspx --><!--  --><!-- /city-of-surrey-people-finder.aspx --><!-- /preview.aspx --><!-- /eventsListing.json --><!-- /eventsListingCOSMOS.json --><!-- /eventsListing.csv --><!-- /478.aspx --><!-- /3547.aspx --><!-- /contact-sfiis.aspx --><!-- /culture-recreation/6900.aspx --><!-- /menuData.js --><!-- /search-results.aspx -->
+                            <li class="isParent notSelected "><a id="menu44933BF656974018853F52F5211679BC" href="/3462.aspx" tabindex="">City Services</a></li>
+            <li class="isParent notSelected "><a id="menu305B3387C2FF47E196D7D46606B19DE7" href="/3463.aspx" tabindex="">Business &amp; Economic Development</a></li>
+            <li class="isParent notSelected "><a id="menu80DC727F00D3454C8E3B773ABCDBF207" href="/3464.aspx" tabindex="">Culture &amp; Recreation</a></li>
+            <li class="isParent notSelected "><a id="menu19F733797B69494286615A608AD18BA2" href="/3466.aspx" tabindex="">City Government</a></li>
+            <li class="isParent notSelected "><a id="menuFD318CE8EEFE4C2EB903FA8264EF846B" href="/3467.aspx" tabindex="">Community</a></li>
+            <!-- /157.aspx --><!-- /sitemap.xml --><!--  --><!-- /404error.aspx --><!-- /3548.aspx --><!-- /events-xml-sfiis.xml --><!-- /search.aspx --><!--  --><!-- /city-of-surrey-people-finder.aspx --><!-- /preview.aspx --><!-- /eventsListing.json --><!-- /eventsListingCOSMOS.json --><!-- /eventsListing.csv --><!-- /478.aspx --><!-- /3547.aspx --><!-- /contact-sfiis.aspx --><!-- /culture-recreation/6900.aspx --><!-- /menuData.js --><!-- /search-results.aspx --><!-- /pageRedirect.aspx -->
                         </ul>
                     </div><!-- /nav-wrapper -->
                 </div><!-- /nav -->
@@ -235,7 +302,7 @@ ypResponsive.settings({
                 <div id="main-wrapper" class="main-wrapper content-page">
                     <div id="breadcrumbs" class="breadcrumbs">
                         <div class="breadcrumbs-wrapper">
-                            <p><a href="/default.aspx">Home</a> &gt; <a href="/3464.aspx">Culture &amp; Recreation</a> &gt; <a href="/culture-recreation/15764.aspx">Arts &amp; Heritage</a> &gt; <a href="/culture-recreation/2366.aspx">Heritage Services</a> &gt; <a href="/culture-recreation/2394.aspx">Surrey Archives</a></p>
+                            <p><a href="/default.aspx">Home</a> &gt; <a href="/3464.aspx">Culture &amp; Recreation</a> &gt; <a href="/culture-recreation/15764.aspx">Arts &amp; Heritage</a> &gt; <a href="/culture-recreation/2366.aspx">Heritage</a> &gt; <a href="/culture-recreation/2394.aspx">Surrey Archives</a></p>
                         </div><!-- /breadcrumbs-wrapper -->
                     </div><!-- /breadcrumbs -->
 
@@ -260,7 +327,8 @@ ypResponsive.settings({
 
 <p>17671 - 56 Avenue (in the 1912 Municipal Hall)<br />
 Surrey BC, Canada&nbsp; V3S 1C9<br />
-Phone: 604-502-6459.&nbsp;&nbsp; Email: <a href="mailto:archives@surrey.ca"><font color="#0066cc">archives@surrey.ca</font></a></p>
+Phone: 604-502-6459&nbsp;&nbsp;<br />
+Email: <a href="mailto:archives@surrey.ca"><font color="#0066cc">archives@surrey.ca</font></a></p>
 
 <h2>Hours of Operation</h2>
 
@@ -268,7 +336,7 @@ Phone: 604-502-6459.&nbsp;&nbsp; Email: <a href="mailto:archives@surrey.ca"><fon
 Saturday: 10:00am to 5:00pm</p>
                                                     
                                     </div>
-                                    <div class="exhibitions featuredlanding-item" 
+                                    <div class="exhibitions featuredlanding-item"
  style="display: none;" 
 >
     
@@ -276,8 +344,8 @@ Saturday: 10:00am to 5:00pm</p>
         <h2>Exhibitions</h2>
         <div class="articles">
             
-                   
-              
+            
+            
             <a class="btn transition" href="/culture-recreation/2396.aspx">view all Exhibitions<span>&raquo;</span></a>
         </div>
     </div>
@@ -286,15 +354,21 @@ Saturday: 10:00am to 5:00pm</p>
 
 
                                 
-                                <h2>About the Surrey Archives</h2>
+                                <h2>Surrey's Stories at Your Fingertips</h2>
 
-<p>Learn about the history of your community. The Archives houses incredible documents and photos about Surrey's past and its people. Visit the heritage facility itself or experience your search <a href="http://www.surrey.ca/culture-recreation/2397.aspx" target="_blank">online</a>. The Archives offers a number of <a href="/culture-recreation/9819.aspx">Resources</a>, <a href="/culture-recreation/2398.aspx">Programs</a> and <a href="/culture-recreation/2401.aspx">Services</a>.</p>
+<p>Explore Surrey's past through photographs and documents at the Surrey Archives. Fully accessible in the designated heritage 1912 Municipal Hall, friendly and knowledgable staff are here to assist. You can also conduct your search remotely with the <span style="display:inline !important; float:none"><a href="http://surrey.minisisinc.com/scripts/mwimain.dll/144/DESCRIPTION?DIRECTSEARCH" target="_blank">Surrey Archives&nbsp;and Museums Online Access</a> database.</span></p>
 
-<p><a href="http://www.surrey.ca/culture-recreation/2371.aspx" target="_blank"><span class="button-subscribe">Subscribe to Heritage ENews</span></a></p>
+<h3>Using the Archives</h3>
 
-<p><a href="https://twitter.com/surreyarchives" target="_blank"><span class="button-action">Follow Us on Twitter @SurreyArchives</span></a></p>
+<p>Reference staff are available in person or by phone or email at the contact information listed above. When visiting, please only bring pencils as pens risk damaging archival material.&nbsp;You are welcome to take photos of archives or staff can make copies for a fee.</p>
 
-<p><a href="https://www.youtube.com/user/SurreyArchives" target="_blank"><span class="button-subscribe">Visit Our YouTube Channel</span></a></p>
+<h3>Stay Connected</h3>
+
+<p><span style="display:inline !important; float:none">Get your copy of the new <a href="/files/Heritage/Surreys%20Stories%20Summer_Fall%202016.pdf" target="_blank">Summer/Fall 2016 Surrey's Stories eNewsletter</a> or <a href="http://www.surrey.ca/culture-recreation/2371.aspx" target="_blank">subscribe</a> to get it seasonally in your inbox.</span></p>
+
+<p><a href="http://surrey.minisisinc.com/scripts/mwimain.dll/144/DESCRIPTION?DIRECTSEARCH" target="_blank"><span class="button-action">Start Your Online Archival Search</span></a></p>
+
+<p><a href="https://www.facebook.com/HeritageSurreyBC/" target="_blank"><img height="32" src="/images/pageImages/facebookicon.png" width="32" /></a>&nbsp;&nbsp;&nbsp; <a href="https://twitter.com/SurreyArchives" target="_blank"><img height="32" src="/images/pageImages/Twitter.png" width="32" /></a>&nbsp;&nbsp; &nbsp;<a href="https://www.youtube.com/user/SurreyArchives" target="_blank"><img height="32" src="/images/pageImages/YouTube.png" width="32" /></a></p>
 
 <p><img alt="BC Arts Council logo" src="/images/pageImages/Heritage/BCAC_small_BW.jpg" /></p>
 <script id="twitter-wjs" src="//platform.twitter.com/widgets.js"></script><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -349,7 +423,7 @@ Saturday: 10:00am to 5:00pm</p>
         <fieldset class="prc_fieldset"><span id="filterClear" title="Clear Search Criteria" onclick="clearSearch();" style="cursor:pointer;">Clear Search Criteria</span></fieldset>
         <div id="filterset" style="display:none">
           <fieldset>
-            <legend>Date and Time</legend><br><label>Date Range</label><p><input id="startDate" name="startDate" type="text" readonly value="May-09-2016">
+            <legend>Date and Time</legend><br><label>Date Range</label><p><input id="startDate" name="startDate" type="text" readonly value="Sep-11-2016">
                               to  
                             <input id="endDate" name="endDate" type="text" readonly value=""></p><label>Time of Activity</label><p><select name="startTime" id="startTime"><option value="">Start Time...</option>
                 <option value="12:00 AM">12:00 AM</option>
@@ -747,7 +821,6 @@ Saturday: 10:00am to 5:00pm</p>
                   <option value="8">Health and Wellness</option>
                   <option value="47">Heritage</option>
                   <option value="355">Hockey</option>
-                  <option value="29">Martial Arts</option>
                   <option value="44">Music</option>
                   <option value="305">Nature Discovery</option>
                   <option value="49">Nutrition</option>
@@ -756,7 +829,6 @@ Saturday: 10:00am to 5:00pm</p>
                   <option value="357">Performing Arts-Arts Centre</option>
                   <option value="30">Personal Development</option>
                   <option value="363">Preschool</option>
-                  <option value="255">Seasonal Event</option>
                   <option value="365">Semiahmoo Arts</option>
                   <option value="33">Skating</option>
                   <option value="15">Social Recreation</option>
@@ -795,29 +867,27 @@ Saturday: 10:00am to 5:00pm</p>
                 <li><input type="checkbox" id="category8" name="categoryIDs" value="8"><label id="categoryLbl18" for="category8">Health and Wellness</label></li>
                 <li><input type="checkbox" id="category47" name="categoryIDs" value="47"><label id="categoryLbl19" for="category47">Heritage</label></li>
                 <li><input type="checkbox" id="category355" name="categoryIDs" value="355"><label id="categoryLbl20" for="category355">Hockey</label></li>
-                <li><input type="checkbox" id="category29" name="categoryIDs" value="29"><label id="categoryLbl21" for="category29">Martial Arts</label></li>
-                <li><input type="checkbox" id="category44" name="categoryIDs" value="44"><label id="categoryLbl22" for="category44">Music</label></li>
-                <li><input type="checkbox" id="category305" name="categoryIDs" value="305"><label id="categoryLbl23" for="category305">Nature Discovery</label></li>
-                <li><input type="checkbox" id="category49" name="categoryIDs" value="49"><label id="categoryLbl24" for="category49">Nutrition</label></li>
-                <li><input type="checkbox" id="category356" name="categoryIDs" value="356"><label id="categoryLbl25" for="category356">One Day Wonders</label></li>
-                <li><input type="checkbox" id="category10" name="categoryIDs" value="10"><label id="categoryLbl26" for="category10">Outdoor Recreation</label></li>
-                <li><input type="checkbox" id="category357" name="categoryIDs" value="357"><label id="categoryLbl27" for="category357">Performing Arts-Arts Centre</label></li>
-                <li><input type="checkbox" id="category30" name="categoryIDs" value="30"><label id="categoryLbl28" for="category30">Personal Development</label></li>
-                <li><input type="checkbox" id="category363" name="categoryIDs" value="363"><label id="categoryLbl29" for="category363">Preschool</label></li>
-                <li><input type="checkbox" id="category255" name="categoryIDs" value="255"><label id="categoryLbl30" for="category255">Seasonal Event</label></li>
-                <li><input type="checkbox" id="category365" name="categoryIDs" value="365"><label id="categoryLbl31" for="category365">Semiahmoo Arts</label></li>
-                <li><input type="checkbox" id="category33" name="categoryIDs" value="33"><label id="categoryLbl32" for="category33">Skating</label></li>
-                <li><input type="checkbox" id="category15" name="categoryIDs" value="15"><label id="categoryLbl33" for="category15">Social Recreation</label></li>
-                <li><input type="checkbox" id="category7" name="categoryIDs" value="7"><label id="categoryLbl34" for="category7">Special Events</label></li>
-                <li><input type="checkbox" id="category359" name="categoryIDs" value="359"><label id="categoryLbl35" for="category359">Sports - Active Start</label></li>
-                <li><input type="checkbox" id="category362" name="categoryIDs" value="362"><label id="categoryLbl36" for="category362">Sports - FUNdamental</label></li>
-                <li><input type="checkbox" id="category9" name="categoryIDs" value="9"><label id="categoryLbl37" for="category9">Sports - Learn to Play</label></li>
-                <li><input type="checkbox" id="category14" name="categoryIDs" value="14"><label id="categoryLbl38" for="category14">Sports For Life</label></li>
-                <li><input type="checkbox" id="category26" name="categoryIDs" value="26"><label id="categoryLbl39" for="category26">Theatre</label></li>
-                <li><input type="checkbox" id="category23" name="categoryIDs" value="23"><label id="categoryLbl40" for="category23">Tours and Travel</label></li>
-                <li><input type="checkbox" id="category12" name="categoryIDs" value="12"><label id="categoryLbl41" for="category12">Visual Arts</label></li>
-                <li><input type="checkbox" id="category205" name="categoryIDs" value="205"><label id="categoryLbl42" for="category205">Visual Arts - Arts Centre</label></li>
-                <li><input type="checkbox" id="category155" name="categoryIDs" value="155"><label id="categoryLbl43" for="category155">Volunteer Resources</label></li>
+                <li><input type="checkbox" id="category44" name="categoryIDs" value="44"><label id="categoryLbl21" for="category44">Music</label></li>
+                <li><input type="checkbox" id="category305" name="categoryIDs" value="305"><label id="categoryLbl22" for="category305">Nature Discovery</label></li>
+                <li><input type="checkbox" id="category49" name="categoryIDs" value="49"><label id="categoryLbl23" for="category49">Nutrition</label></li>
+                <li><input type="checkbox" id="category356" name="categoryIDs" value="356"><label id="categoryLbl24" for="category356">One Day Wonders</label></li>
+                <li><input type="checkbox" id="category10" name="categoryIDs" value="10"><label id="categoryLbl25" for="category10">Outdoor Recreation</label></li>
+                <li><input type="checkbox" id="category357" name="categoryIDs" value="357"><label id="categoryLbl26" for="category357">Performing Arts-Arts Centre</label></li>
+                <li><input type="checkbox" id="category30" name="categoryIDs" value="30"><label id="categoryLbl27" for="category30">Personal Development</label></li>
+                <li><input type="checkbox" id="category363" name="categoryIDs" value="363"><label id="categoryLbl28" for="category363">Preschool</label></li>
+                <li><input type="checkbox" id="category365" name="categoryIDs" value="365"><label id="categoryLbl29" for="category365">Semiahmoo Arts</label></li>
+                <li><input type="checkbox" id="category33" name="categoryIDs" value="33"><label id="categoryLbl30" for="category33">Skating</label></li>
+                <li><input type="checkbox" id="category15" name="categoryIDs" value="15"><label id="categoryLbl31" for="category15">Social Recreation</label></li>
+                <li><input type="checkbox" id="category7" name="categoryIDs" value="7"><label id="categoryLbl32" for="category7">Special Events</label></li>
+                <li><input type="checkbox" id="category359" name="categoryIDs" value="359"><label id="categoryLbl33" for="category359">Sports - Active Start</label></li>
+                <li><input type="checkbox" id="category362" name="categoryIDs" value="362"><label id="categoryLbl34" for="category362">Sports - FUNdamental</label></li>
+                <li><input type="checkbox" id="category9" name="categoryIDs" value="9"><label id="categoryLbl35" for="category9">Sports - Learn to Play</label></li>
+                <li><input type="checkbox" id="category14" name="categoryIDs" value="14"><label id="categoryLbl36" for="category14">Sports For Life</label></li>
+                <li><input type="checkbox" id="category26" name="categoryIDs" value="26"><label id="categoryLbl37" for="category26">Theatre</label></li>
+                <li><input type="checkbox" id="category23" name="categoryIDs" value="23"><label id="categoryLbl38" for="category23">Tours and Travel</label></li>
+                <li><input type="checkbox" id="category12" name="categoryIDs" value="12"><label id="categoryLbl39" for="category12">Visual Arts</label></li>
+                <li><input type="checkbox" id="category205" name="categoryIDs" value="205"><label id="categoryLbl40" for="category205">Visual Arts - Arts Centre</label></li>
+                <li><input type="checkbox" id="category155" name="categoryIDs" value="155"><label id="categoryLbl41" for="category155">Volunteer Resources</label></li>
               </ul>
             </div>
           </fieldset>
@@ -825,12 +895,10 @@ Saturday: 10:00am to 5:00pm</p>
             <legend>
                             Places to Go (<a href="#" id="facilitiesView" name="facilitiesView" title="View/Hide Places to Go" onclick="checkboxManager.showCheckBoxes('facilitiesCheck','facilitiesSelect','facilityID','facilitiesCheck','facilityIDs','facilitiesView',true);return false;">View All</a>)
                         </legend><br><label>Select a Place to Go</label><div id="facilitiesSelect"><select name="facilityID" id="facilityID"><option id="select" value="">Select a place to go...</option>
-                <option value="404">A &amp; T Equestrian Centre</option>
                 <option value="2">A.H.P. Matthew Elementary School</option>
                 <option value="2021">A.J. McLellan Elementary School</option>
+                <option value="4620">Adams Road Elementary School</option>
                 <option value="5">Bear Creek Elementary School</option>
-                <option value="4">Bear Creek Park</option>
-                <option value="343">Bear Creek Pavilion</option>
                 <option value="244">Betty Huff Elementary School</option>
                 <option value="3572">Boundary Park Elementary School</option>
                 <option value="349">Bridgeview Community Centre</option>
@@ -842,6 +910,7 @@ Saturday: 10:00am to 5:00pm</p>
                 <option value="3221">Clayton Hall</option>
                 <option value="396">Clayton Heights Secondary School</option>
                 <option value="13">Clayton Park</option>
+                <option value="69">Cloverdale Arena</option>
                 <option value="15">Cloverdale Athletic Park</option>
                 <option value="128">Cloverdale Library</option>
                 <option value="312">Cloverdale Mini Rec</option>
@@ -849,7 +918,6 @@ Saturday: 10:00am to 5:00pm</p>
                 <option value="771">Cloverdale Youth Park</option>
                 <option value="356">Cougar Creek Elementary School</option>
                 <option value="268">Coyote Creek Elementary School</option>
-                <option value="4600">Crescent Park Elementary School</option>
                 <option value="1871">David Brankin Elementary School</option>
                 <option value="47">Don Christian Recreation Centre</option>
                 <option value="71">Elgin Centre</option>
@@ -857,15 +925,12 @@ Saturday: 10:00am to 5:00pm</p>
                 <option value="30">Fleetwood Community Centre</option>
                 <option value="921">Forsyth Road Elementary School</option>
                 <option value="3472">Fraser Heights Recreation Centre</option>
-                <option value="4616">Goldstone Park Elementary School</option>
                 <option value="4619">Grandview Heights Aquatic Centre</option>
-                <option value="4550">Green Timbers Park</option>
                 <option value="85">Guildford Library</option>
                 <option value="471">Guildford Recreation Centre</option>
-                <option value="29">Hawthorne Park</option>
                 <option value="4486">Hazelgrove Elementary</option>
-                <option value="1921">Healthy Communities</option>
                 <option value="243">Historic Stewart Farm</option>
+                <option value="36">Jessie Lee Elementary School</option>
                 <option value="4614">Katzie Elementary School</option>
                 <option value="4472">Kensington Prairie Community Centre</option>
                 <option value="334">Kwantlen Polytechnic University</option>
@@ -880,107 +945,92 @@ Saturday: 10:00am to 5:00pm</p>
                 <option value="4497">North Surrey Arena</option>
                 <option value="74">North Surrey Recreation Centre</option>
                 <option value="347">Northview Golf &amp; Country Club</option>
-                <option value="205">Port Kells Community Hall</option>
+                <option value="254">Prince Charles Elementary School</option>
                 <option value="56">Princess Margaret Secondary School</option>
                 <option value="59">Redwood Park</option>
-                <option value="1821">Semiahmoo Library</option>
-                <option value="289">Semiahmoo Secondary School</option>
                 <option value="1671">Semiahmoo Stables</option>
                 <option value="82">South Surrey Arena</option>
-                <option value="66">South Surrey Athletic Park</option>
                 <option value="78">South Surrey Indoor Pool</option>
                 <option value="3171">South Surrey Recreation &amp; Arts Centre</option>
                 <option value="358">Sport &amp; Leisure Aquatics</option>
                 <option value="352">Sport &amp; Leisure Arenas</option>
-                <option value="1371">Strawberry Hill Library</option>
-                <option value="55">Sunnyside Hall</option>
                 <option value="3722">Surrey Archives</option>
                 <option value="10">Surrey Arts Centre</option>
                 <option value="3371">Surrey Museum</option>
                 <option value="4322">Surrey Nature Centre</option>
-                <option value="73">Unwin Park</option>
                 <option value="267">W.E. Kinvig Elementary School</option>
+                <option value="269">Walnut Road Elementary School</option>
                 <option value="398">Westerman Elementary School</option></select></div>
             <div id="facilitiesCheck" style="display:none">
               <div><a href="#" onclick="checkboxManager.setCheckBoxes('facilityIDs', true); return false;">Check All</a>  
                                 <a href="#" onclick="checkboxManager.setCheckBoxes('facilityIDs', false); return false;">Uncheck All</a></div>
               <ul class="checkboxes col_3">
-                <li><input type="checkbox" id="facility404" name="facilityIDs" value="404"><label id="facilityLbl1" for="facility404">A &amp; T Equestrian Centre</label></li>
-                <li><input type="checkbox" id="facility2" name="facilityIDs" value="2"><label id="facilityLbl2" for="facility2">A.H.P. Matthew Elementary School</label></li>
-                <li><input type="checkbox" id="facility2021" name="facilityIDs" value="2021"><label id="facilityLbl3" for="facility2021">A.J. McLellan Elementary School</label></li>
+                <li><input type="checkbox" id="facility2" name="facilityIDs" value="2"><label id="facilityLbl1" for="facility2">A.H.P. Matthew Elementary School</label></li>
+                <li><input type="checkbox" id="facility2021" name="facilityIDs" value="2021"><label id="facilityLbl2" for="facility2021">A.J. McLellan Elementary School</label></li>
+                <li><input type="checkbox" id="facility4620" name="facilityIDs" value="4620"><label id="facilityLbl3" for="facility4620">Adams Road Elementary School</label></li>
                 <li><input type="checkbox" id="facility5" name="facilityIDs" value="5"><label id="facilityLbl4" for="facility5">Bear Creek Elementary School</label></li>
-                <li><input type="checkbox" id="facility4" name="facilityIDs" value="4"><label id="facilityLbl5" for="facility4">Bear Creek Park</label></li>
-                <li><input type="checkbox" id="facility343" name="facilityIDs" value="343"><label id="facilityLbl6" for="facility343">Bear Creek Pavilion</label></li>
-                <li><input type="checkbox" id="facility244" name="facilityIDs" value="244"><label id="facilityLbl7" for="facility244">Betty Huff Elementary School</label></li>
-                <li><input type="checkbox" id="facility3572" name="facilityIDs" value="3572"><label id="facilityLbl8" for="facility3572">Boundary Park Elementary School</label></li>
-                <li><input type="checkbox" id="facility349" name="facilityIDs" value="349"><label id="facilityLbl9" for="facility349">Bridgeview Community Centre</label></li>
-                <li><input type="checkbox" id="facility246" name="facilityIDs" value="246"><label id="facilityLbl10" for="facility246">Cedar Hills Elementary School</label></li>
-                <li><input type="checkbox" id="facility4479" name="facilityIDs" value="4479"><label id="facilityLbl11" for="facility4479">Chuck Bailey Recreation Centre</label></li>
-                <li><input type="checkbox" id="facility4495" name="facilityIDs" value="4495"><label id="facilityLbl12" for="facility4495">City Centre Library</label></li>
-                <li><input type="checkbox" id="facility4608" name="facilityIDs" value="4608"><label id="facilityLbl13" for="facility4608">City Hall</label></li>
-                <li><input type="checkbox" id="facility291" name="facilityIDs" value="291"><label id="facilityLbl14" for="facility291">Clayton Elementary School</label></li>
-                <li><input type="checkbox" id="facility3221" name="facilityIDs" value="3221"><label id="facilityLbl15" for="facility3221">Clayton Hall</label></li>
-                <li><input type="checkbox" id="facility396" name="facilityIDs" value="396"><label id="facilityLbl16" for="facility396">Clayton Heights Secondary School</label></li>
-                <li><input type="checkbox" id="facility13" name="facilityIDs" value="13"><label id="facilityLbl17" for="facility13">Clayton Park</label></li>
-                <li><input type="checkbox" id="facility15" name="facilityIDs" value="15"><label id="facilityLbl18" for="facility15">Cloverdale Athletic Park</label></li>
-                <li><input type="checkbox" id="facility128" name="facilityIDs" value="128"><label id="facilityLbl19" for="facility128">Cloverdale Library</label></li>
-                <li><input type="checkbox" id="facility312" name="facilityIDs" value="312"><label id="facilityLbl20" for="facility312">Cloverdale Mini Rec</label></li>
-                <li><input type="checkbox" id="facility4490" name="facilityIDs" value="4490"><label id="facilityLbl21" for="facility4490">Cloverdale Recreation Centre</label></li>
-                <li><input type="checkbox" id="facility771" name="facilityIDs" value="771"><label id="facilityLbl22" for="facility771">Cloverdale Youth Park</label></li>
-                <li><input type="checkbox" id="facility356" name="facilityIDs" value="356"><label id="facilityLbl23" for="facility356">Cougar Creek Elementary School</label></li>
-                <li><input type="checkbox" id="facility268" name="facilityIDs" value="268"><label id="facilityLbl24" for="facility268">Coyote Creek Elementary School</label></li>
-                <li><input type="checkbox" id="facility4600" name="facilityIDs" value="4600"><label id="facilityLbl25" for="facility4600">Crescent Park Elementary School</label></li>
-                <li><input type="checkbox" id="facility1871" name="facilityIDs" value="1871"><label id="facilityLbl26" for="facility1871">David Brankin Elementary School</label></li>
-                <li><input type="checkbox" id="facility47" name="facilityIDs" value="47"><label id="facilityLbl27" for="facility47">Don Christian Recreation Centre</label></li>
-                <li><input type="checkbox" id="facility71" name="facilityIDs" value="71"><label id="facilityLbl28" for="facility71">Elgin Centre</label></li>
-                <li><input type="checkbox" id="facility45" name="facilityIDs" value="45"><label id="facilityLbl29" for="facility45">Elgin Hall</label></li>
-                <li><input type="checkbox" id="facility30" name="facilityIDs" value="30"><label id="facilityLbl30" for="facility30">Fleetwood Community Centre</label></li>
-                <li><input type="checkbox" id="facility921" name="facilityIDs" value="921"><label id="facilityLbl31" for="facility921">Forsyth Road Elementary School</label></li>
-                <li><input type="checkbox" id="facility3472" name="facilityIDs" value="3472"><label id="facilityLbl32" for="facility3472">Fraser Heights Recreation Centre</label></li>
-                <li><input type="checkbox" id="facility4616" name="facilityIDs" value="4616"><label id="facilityLbl33" for="facility4616">Goldstone Park Elementary School</label></li>
-                <li><input type="checkbox" id="facility4619" name="facilityIDs" value="4619"><label id="facilityLbl34" for="facility4619">Grandview Heights Aquatic Centre</label></li>
-                <li><input type="checkbox" id="facility4550" name="facilityIDs" value="4550"><label id="facilityLbl35" for="facility4550">Green Timbers Park</label></li>
-                <li><input type="checkbox" id="facility85" name="facilityIDs" value="85"><label id="facilityLbl36" for="facility85">Guildford Library</label></li>
-                <li><input type="checkbox" id="facility471" name="facilityIDs" value="471"><label id="facilityLbl37" for="facility471">Guildford Recreation Centre</label></li>
-                <li><input type="checkbox" id="facility29" name="facilityIDs" value="29"><label id="facilityLbl38" for="facility29">Hawthorne Park</label></li>
-                <li><input type="checkbox" id="facility4486" name="facilityIDs" value="4486"><label id="facilityLbl39" for="facility4486">Hazelgrove Elementary</label></li>
-                <li><input type="checkbox" id="facility1921" name="facilityIDs" value="1921"><label id="facilityLbl40" for="facility1921">Healthy Communities</label></li>
-                <li><input type="checkbox" id="facility243" name="facilityIDs" value="243"><label id="facilityLbl41" for="facility243">Historic Stewart Farm</label></li>
-                <li><input type="checkbox" id="facility4614" name="facilityIDs" value="4614"><label id="facilityLbl42" for="facility4614">Katzie Elementary School</label></li>
-                <li><input type="checkbox" id="facility4472" name="facilityIDs" value="4472"><label id="facilityLbl43" for="facility4472">Kensington Prairie Community Centre</label></li>
-                <li><input type="checkbox" id="facility334" name="facilityIDs" value="334"><label id="facilityLbl44" for="facility334">Kwantlen Polytechnic University</label></li>
-                <li><input type="checkbox" id="facility4473" name="facilityIDs" value="4473"><label id="facilityLbl45" for="facility4473">Kwomais Point Park</label></li>
-                <li><input type="checkbox" id="facility297" name="facilityIDs" value="297"><label id="facilityLbl46" for="facility297">Martha Currie Elementary School</label></li>
-                <li><input type="checkbox" id="facility64" name="facilityIDs" value="64"><label id="facilityLbl47" for="facility64">Meridian Centre</label></li>
-                <li><input type="checkbox" id="facility77" name="facilityIDs" value="77"><label id="facilityLbl48" for="facility77">Newton Arena</label></li>
-                <li><input type="checkbox" id="facility83" name="facilityIDs" value="83"><label id="facilityLbl49" for="facility83">Newton Athletic Pavilion</label></li>
-                <li><input type="checkbox" id="facility180" name="facilityIDs" value="180"><label id="facilityLbl50" for="facility180">Newton Library</label></li>
-                <li><input type="checkbox" id="facility80" name="facilityIDs" value="80"><label id="facilityLbl51" for="facility80">Newton Recreation Centre - Wave Pool</label></li>
-                <li><input type="checkbox" id="facility58" name="facilityIDs" value="58"><label id="facilityLbl52" for="facility58">Newton Seniors Centre</label></li>
-                <li><input type="checkbox" id="facility4497" name="facilityIDs" value="4497"><label id="facilityLbl53" for="facility4497">North Surrey Arena</label></li>
-                <li><input type="checkbox" id="facility74" name="facilityIDs" value="74"><label id="facilityLbl54" for="facility74">North Surrey Recreation Centre</label></li>
-                <li><input type="checkbox" id="facility347" name="facilityIDs" value="347"><label id="facilityLbl55" for="facility347">Northview Golf &amp; Country Club</label></li>
-                <li><input type="checkbox" id="facility205" name="facilityIDs" value="205"><label id="facilityLbl56" for="facility205">Port Kells Community Hall</label></li>
-                <li><input type="checkbox" id="facility56" name="facilityIDs" value="56"><label id="facilityLbl57" for="facility56">Princess Margaret Secondary School</label></li>
-                <li><input type="checkbox" id="facility59" name="facilityIDs" value="59"><label id="facilityLbl58" for="facility59">Redwood Park</label></li>
-                <li><input type="checkbox" id="facility1821" name="facilityIDs" value="1821"><label id="facilityLbl59" for="facility1821">Semiahmoo Library</label></li>
-                <li><input type="checkbox" id="facility289" name="facilityIDs" value="289"><label id="facilityLbl60" for="facility289">Semiahmoo Secondary School</label></li>
-                <li><input type="checkbox" id="facility1671" name="facilityIDs" value="1671"><label id="facilityLbl61" for="facility1671">Semiahmoo Stables</label></li>
-                <li><input type="checkbox" id="facility82" name="facilityIDs" value="82"><label id="facilityLbl62" for="facility82">South Surrey Arena</label></li>
-                <li><input type="checkbox" id="facility66" name="facilityIDs" value="66"><label id="facilityLbl63" for="facility66">South Surrey Athletic Park</label></li>
-                <li><input type="checkbox" id="facility78" name="facilityIDs" value="78"><label id="facilityLbl64" for="facility78">South Surrey Indoor Pool</label></li>
-                <li><input type="checkbox" id="facility3171" name="facilityIDs" value="3171"><label id="facilityLbl65" for="facility3171">South Surrey Recreation &amp; Arts Centre</label></li>
-                <li><input type="checkbox" id="facility358" name="facilityIDs" value="358"><label id="facilityLbl66" for="facility358">Sport &amp; Leisure Aquatics</label></li>
-                <li><input type="checkbox" id="facility352" name="facilityIDs" value="352"><label id="facilityLbl67" for="facility352">Sport &amp; Leisure Arenas</label></li>
-                <li><input type="checkbox" id="facility1371" name="facilityIDs" value="1371"><label id="facilityLbl68" for="facility1371">Strawberry Hill Library</label></li>
-                <li><input type="checkbox" id="facility55" name="facilityIDs" value="55"><label id="facilityLbl69" for="facility55">Sunnyside Hall</label></li>
-                <li><input type="checkbox" id="facility3722" name="facilityIDs" value="3722"><label id="facilityLbl70" for="facility3722">Surrey Archives</label></li>
-                <li><input type="checkbox" id="facility10" name="facilityIDs" value="10"><label id="facilityLbl71" for="facility10">Surrey Arts Centre</label></li>
-                <li><input type="checkbox" id="facility3371" name="facilityIDs" value="3371"><label id="facilityLbl72" for="facility3371">Surrey Museum</label></li>
-                <li><input type="checkbox" id="facility4322" name="facilityIDs" value="4322"><label id="facilityLbl73" for="facility4322">Surrey Nature Centre</label></li>
-                <li><input type="checkbox" id="facility73" name="facilityIDs" value="73"><label id="facilityLbl74" for="facility73">Unwin Park</label></li>
-                <li><input type="checkbox" id="facility267" name="facilityIDs" value="267"><label id="facilityLbl75" for="facility267">W.E. Kinvig Elementary School</label></li>
-                <li><input type="checkbox" id="facility398" name="facilityIDs" value="398"><label id="facilityLbl76" for="facility398">Westerman Elementary School</label></li>
+                <li><input type="checkbox" id="facility244" name="facilityIDs" value="244"><label id="facilityLbl5" for="facility244">Betty Huff Elementary School</label></li>
+                <li><input type="checkbox" id="facility3572" name="facilityIDs" value="3572"><label id="facilityLbl6" for="facility3572">Boundary Park Elementary School</label></li>
+                <li><input type="checkbox" id="facility349" name="facilityIDs" value="349"><label id="facilityLbl7" for="facility349">Bridgeview Community Centre</label></li>
+                <li><input type="checkbox" id="facility246" name="facilityIDs" value="246"><label id="facilityLbl8" for="facility246">Cedar Hills Elementary School</label></li>
+                <li><input type="checkbox" id="facility4479" name="facilityIDs" value="4479"><label id="facilityLbl9" for="facility4479">Chuck Bailey Recreation Centre</label></li>
+                <li><input type="checkbox" id="facility4495" name="facilityIDs" value="4495"><label id="facilityLbl10" for="facility4495">City Centre Library</label></li>
+                <li><input type="checkbox" id="facility4608" name="facilityIDs" value="4608"><label id="facilityLbl11" for="facility4608">City Hall</label></li>
+                <li><input type="checkbox" id="facility291" name="facilityIDs" value="291"><label id="facilityLbl12" for="facility291">Clayton Elementary School</label></li>
+                <li><input type="checkbox" id="facility3221" name="facilityIDs" value="3221"><label id="facilityLbl13" for="facility3221">Clayton Hall</label></li>
+                <li><input type="checkbox" id="facility396" name="facilityIDs" value="396"><label id="facilityLbl14" for="facility396">Clayton Heights Secondary School</label></li>
+                <li><input type="checkbox" id="facility13" name="facilityIDs" value="13"><label id="facilityLbl15" for="facility13">Clayton Park</label></li>
+                <li><input type="checkbox" id="facility69" name="facilityIDs" value="69"><label id="facilityLbl16" for="facility69">Cloverdale Arena</label></li>
+                <li><input type="checkbox" id="facility15" name="facilityIDs" value="15"><label id="facilityLbl17" for="facility15">Cloverdale Athletic Park</label></li>
+                <li><input type="checkbox" id="facility128" name="facilityIDs" value="128"><label id="facilityLbl18" for="facility128">Cloverdale Library</label></li>
+                <li><input type="checkbox" id="facility312" name="facilityIDs" value="312"><label id="facilityLbl19" for="facility312">Cloverdale Mini Rec</label></li>
+                <li><input type="checkbox" id="facility4490" name="facilityIDs" value="4490"><label id="facilityLbl20" for="facility4490">Cloverdale Recreation Centre</label></li>
+                <li><input type="checkbox" id="facility771" name="facilityIDs" value="771"><label id="facilityLbl21" for="facility771">Cloverdale Youth Park</label></li>
+                <li><input type="checkbox" id="facility356" name="facilityIDs" value="356"><label id="facilityLbl22" for="facility356">Cougar Creek Elementary School</label></li>
+                <li><input type="checkbox" id="facility268" name="facilityIDs" value="268"><label id="facilityLbl23" for="facility268">Coyote Creek Elementary School</label></li>
+                <li><input type="checkbox" id="facility1871" name="facilityIDs" value="1871"><label id="facilityLbl24" for="facility1871">David Brankin Elementary School</label></li>
+                <li><input type="checkbox" id="facility47" name="facilityIDs" value="47"><label id="facilityLbl25" for="facility47">Don Christian Recreation Centre</label></li>
+                <li><input type="checkbox" id="facility71" name="facilityIDs" value="71"><label id="facilityLbl26" for="facility71">Elgin Centre</label></li>
+                <li><input type="checkbox" id="facility45" name="facilityIDs" value="45"><label id="facilityLbl27" for="facility45">Elgin Hall</label></li>
+                <li><input type="checkbox" id="facility30" name="facilityIDs" value="30"><label id="facilityLbl28" for="facility30">Fleetwood Community Centre</label></li>
+                <li><input type="checkbox" id="facility921" name="facilityIDs" value="921"><label id="facilityLbl29" for="facility921">Forsyth Road Elementary School</label></li>
+                <li><input type="checkbox" id="facility3472" name="facilityIDs" value="3472"><label id="facilityLbl30" for="facility3472">Fraser Heights Recreation Centre</label></li>
+                <li><input type="checkbox" id="facility4619" name="facilityIDs" value="4619"><label id="facilityLbl31" for="facility4619">Grandview Heights Aquatic Centre</label></li>
+                <li><input type="checkbox" id="facility85" name="facilityIDs" value="85"><label id="facilityLbl32" for="facility85">Guildford Library</label></li>
+                <li><input type="checkbox" id="facility471" name="facilityIDs" value="471"><label id="facilityLbl33" for="facility471">Guildford Recreation Centre</label></li>
+                <li><input type="checkbox" id="facility4486" name="facilityIDs" value="4486"><label id="facilityLbl34" for="facility4486">Hazelgrove Elementary</label></li>
+                <li><input type="checkbox" id="facility243" name="facilityIDs" value="243"><label id="facilityLbl35" for="facility243">Historic Stewart Farm</label></li>
+                <li><input type="checkbox" id="facility36" name="facilityIDs" value="36"><label id="facilityLbl36" for="facility36">Jessie Lee Elementary School</label></li>
+                <li><input type="checkbox" id="facility4614" name="facilityIDs" value="4614"><label id="facilityLbl37" for="facility4614">Katzie Elementary School</label></li>
+                <li><input type="checkbox" id="facility4472" name="facilityIDs" value="4472"><label id="facilityLbl38" for="facility4472">Kensington Prairie Community Centre</label></li>
+                <li><input type="checkbox" id="facility334" name="facilityIDs" value="334"><label id="facilityLbl39" for="facility334">Kwantlen Polytechnic University</label></li>
+                <li><input type="checkbox" id="facility4473" name="facilityIDs" value="4473"><label id="facilityLbl40" for="facility4473">Kwomais Point Park</label></li>
+                <li><input type="checkbox" id="facility297" name="facilityIDs" value="297"><label id="facilityLbl41" for="facility297">Martha Currie Elementary School</label></li>
+                <li><input type="checkbox" id="facility64" name="facilityIDs" value="64"><label id="facilityLbl42" for="facility64">Meridian Centre</label></li>
+                <li><input type="checkbox" id="facility77" name="facilityIDs" value="77"><label id="facilityLbl43" for="facility77">Newton Arena</label></li>
+                <li><input type="checkbox" id="facility83" name="facilityIDs" value="83"><label id="facilityLbl44" for="facility83">Newton Athletic Pavilion</label></li>
+                <li><input type="checkbox" id="facility180" name="facilityIDs" value="180"><label id="facilityLbl45" for="facility180">Newton Library</label></li>
+                <li><input type="checkbox" id="facility80" name="facilityIDs" value="80"><label id="facilityLbl46" for="facility80">Newton Recreation Centre - Wave Pool</label></li>
+                <li><input type="checkbox" id="facility58" name="facilityIDs" value="58"><label id="facilityLbl47" for="facility58">Newton Seniors Centre</label></li>
+                <li><input type="checkbox" id="facility4497" name="facilityIDs" value="4497"><label id="facilityLbl48" for="facility4497">North Surrey Arena</label></li>
+                <li><input type="checkbox" id="facility74" name="facilityIDs" value="74"><label id="facilityLbl49" for="facility74">North Surrey Recreation Centre</label></li>
+                <li><input type="checkbox" id="facility347" name="facilityIDs" value="347"><label id="facilityLbl50" for="facility347">Northview Golf &amp; Country Club</label></li>
+                <li><input type="checkbox" id="facility254" name="facilityIDs" value="254"><label id="facilityLbl51" for="facility254">Prince Charles Elementary School</label></li>
+                <li><input type="checkbox" id="facility56" name="facilityIDs" value="56"><label id="facilityLbl52" for="facility56">Princess Margaret Secondary School</label></li>
+                <li><input type="checkbox" id="facility59" name="facilityIDs" value="59"><label id="facilityLbl53" for="facility59">Redwood Park</label></li>
+                <li><input type="checkbox" id="facility1671" name="facilityIDs" value="1671"><label id="facilityLbl54" for="facility1671">Semiahmoo Stables</label></li>
+                <li><input type="checkbox" id="facility82" name="facilityIDs" value="82"><label id="facilityLbl55" for="facility82">South Surrey Arena</label></li>
+                <li><input type="checkbox" id="facility78" name="facilityIDs" value="78"><label id="facilityLbl56" for="facility78">South Surrey Indoor Pool</label></li>
+                <li><input type="checkbox" id="facility3171" name="facilityIDs" value="3171"><label id="facilityLbl57" for="facility3171">South Surrey Recreation &amp; Arts Centre</label></li>
+                <li><input type="checkbox" id="facility358" name="facilityIDs" value="358"><label id="facilityLbl58" for="facility358">Sport &amp; Leisure Aquatics</label></li>
+                <li><input type="checkbox" id="facility352" name="facilityIDs" value="352"><label id="facilityLbl59" for="facility352">Sport &amp; Leisure Arenas</label></li>
+                <li><input type="checkbox" id="facility3722" name="facilityIDs" value="3722"><label id="facilityLbl60" for="facility3722">Surrey Archives</label></li>
+                <li><input type="checkbox" id="facility10" name="facilityIDs" value="10"><label id="facilityLbl61" for="facility10">Surrey Arts Centre</label></li>
+                <li><input type="checkbox" id="facility3371" name="facilityIDs" value="3371"><label id="facilityLbl62" for="facility3371">Surrey Museum</label></li>
+                <li><input type="checkbox" id="facility4322" name="facilityIDs" value="4322"><label id="facilityLbl63" for="facility4322">Surrey Nature Centre</label></li>
+                <li><input type="checkbox" id="facility267" name="facilityIDs" value="267"><label id="facilityLbl64" for="facility267">W.E. Kinvig Elementary School</label></li>
+                <li><input type="checkbox" id="facility269" name="facilityIDs" value="269"><label id="facilityLbl65" for="facility269">Walnut Road Elementary School</label></li>
+                <li><input type="checkbox" id="facility398" name="facilityIDs" value="398"><label id="facilityLbl66" for="facility398">Westerman Elementary School</label></li>
               </ul>
             </div>
           </fieldset>
@@ -1003,35 +1053,55 @@ Saturday: 10:00am to 5:00pm</p>
                 
 </div>
 <!-- PRC Search Module END -->
-    
+
 <div class="grid">
     
+
     
-     
-    
+
     
     
         <div class="item s1 l1">
             <div class="inner-wrapper">
                 
-                                    <a class="th" href="/culture-recreation/2401.aspx"><img src="/images/cos-master/pageImages/Archivists_examining_photo_rdax_495x278.jpg" alt="Surrey archivists examining photo" /></a>
+                                    <a class="th" href="/culture-recreation/9819.aspx"><img src="/images/cos-master/pageImages/Collections%20Overview%20Image_rdax_495x278.jpg" alt="Historic books" /></a>
                             
-                <h2><a href="/culture-recreation/2401.aspx">Using the Surrey Archives</a></h2>
-                <p>Learn how to use the Surrey Archives with our Reference Services.</p>
+                <h2><a href="/culture-recreation/9819.aspx">Archives Collection</a></h2>
+                <p>Explore your City's history through incredible photos, maps, oral histories and more.</p>
             </div>
         </div>
     
         <div class="item s2 l2">
             <div class="inner-wrapper">
                 
-                                    <a class="th" href="/culture-recreation/9819.aspx"><img src="/images/cos-master/pageImages/Heritage/SurreyArchives1892PreEmptionMap_rdax_495x278.jpg" alt="1892 PreEmption Map from the Surrey Archives" /></a>
+                                    <a class="th" href="/culture-recreation/2398.aspx"><img src="/images/cos-master/pageImages/NC219A,%20Newton%20Elementary,%20May%201951,%20corner%20of%20KGH%20and%2072nd_rdax_495x278.jpg" alt="Newton Elementary School 1951" /></a>
                             
-                <h2><a href="/culture-recreation/9819.aspx">Collections Overview at Surrey Archives</a></h2>
-                <p>Explore your City's history with the collections at Surrey Archives, including photos, city and community records, maps, oral history, and r [...]</p>
+                <h2><a href="/culture-recreation/2398.aspx">Public Programs at the Surrey Archives</a></h2>
+                <p>Learn more about your city's story with a Surrey Archives seasonal lecture series.</p>
             </div>
         </div>
     
         <div class="item s1 l3">
+            <div class="inner-wrapper">
+                
+                                    <a class="th" href="/culture-recreation/2399.aspx"><img src="/images/cos-master/pageImages/Archives%20School%20Programs%202_rdax_495x278.jpg" alt="The Surrey Archives building" /></a>
+                            
+                <h2><a href="/culture-recreation/2399.aspx">Surrey Archives School Programs</a></h2>
+                <p>Students travel back in time with Surrey Archives' school programs. </p>
+            </div>
+        </div>
+    
+        <div class="item s2 l4">
+            <div class="inner-wrapper">
+                
+                                    <a class="th" href="/culture-recreation/20771.aspx"><img src="/images/cos-master/pageImages/Outreach%20Image_rdax_495x278.jpg" alt="A vintage projector" /></a>
+                            
+                <h2><a href="/culture-recreation/20771.aspx">Outreach Presentations</a></h2>
+                <p>We'll come to you! Invite the Surrey Archives to deliver a multimedia presentation to your group.</p>
+            </div>
+        </div>
+    
+        <div class="item s1 l1">
             <div class="inner-wrapper">
                 
                                     <a class="th" href="/culture-recreation/2397.aspx"><img src="/images/cos-master/pageImages/SAMOA_rdax_495x278.jpg" alt="First McDonalds in Surrey" /></a>
@@ -1041,57 +1111,27 @@ Saturday: 10:00am to 5:00pm</p>
             </div>
         </div>
     
-        <div class="item s2 l4">
-            <div class="inner-wrapper">
-                
-                                    <a class="th" href="/culture-recreation/2398.aspx"><img src="/images/cos-master/pageImages/Heritage/Surrey_Archives_lecture_presentation_rdax_495x278.jpg" alt="Surrey Archives lecture" /></a>
-                            
-                <h2><a href="/culture-recreation/2398.aspx">Public Programs &amp; Outreach at Surrey Archives</a></h2>
-                <p>Learn more about your city's story with a Surrey Archives seasonal lecture series.</p>
-            </div>
-        </div>
-    
-        <div class="item s1 l1">
-            <div class="inner-wrapper">
-                
-                                    <a class="th" href="/culture-recreation/2396.aspx"><img src="/images/cos-master/pageImages/Surrey_Archives_digital_exhibit_rdax_495x278.jpg" alt="Surrey Archives digital exhibit" /></a>
-                            
-                <h2><a href="/culture-recreation/2396.aspx">Exhibitions at Surrey Archives</a></h2>
-                <p>Explore Surrey's history with the Surrey Archives' Digital Exhibitions.</p>
-            </div>
-        </div>
-    
         <div class="item s2 l2">
             <div class="inner-wrapper">
                 
-                                    <a class="th" href="/culture-recreation/2399.aspx"><img src="/images/cos-master/pageImages/Heritage/Surrey_Archives_school_program_rdax_495x278.jpg" alt="Students in a Surrey Archives school program" /></a>
+                                    <a class="th" href="/culture-recreation/2396.aspx"><img src="/images/cos-master/pageImages/Digital%20Exhibit%20Page_rdax_495x278.jpg" alt="Vintage Camera" /></a>
                             
-                <h2><a href="/culture-recreation/2399.aspx">Surrey Archives School Programs</a></h2>
-                <p>Students travel back in time with Surrey Archives' school programs. </p>
+                <h2><a href="/culture-recreation/2396.aspx">Digital Exhibits at Surrey Archives</a></h2>
+                <p>Explore Surrey's history with the Surrey Archives' Digital Exhibitions.</p>
             </div>
         </div>
     
         <div class="item s1 l3">
             <div class="inner-wrapper">
                 
-                                    <a class="th" href="/culture-recreation/2402.aspx"><img src="/images/cos-master/pageImages/180.1.17_Cloverdale_street_rdax_495x278.jpg" alt="Cloverdale Businesses, 1926" /></a>
+                                    <a class="th" href="/culture-recreation/20783.aspx"><img src="/images/cos-master/pageImages/gift_rdax_495x278.jpg" alt="Gift box" /></a>
                             
-                <h2><a href="/culture-recreation/2402.aspx">Community Profiles</a></h2>
-                <p>Find historical information on Surrey's many small communities.</p>
+                <h2><a href="/culture-recreation/20783.aspx">Gift Shop at Surrey Archives</a></h2>
+                <p>Find the perfect gift for the history buff in your life.</p>
             </div>
         </div>
     
         <div class="item s2 l4">
-            <div class="inner-wrapper">
-                
-                                    <a class="th" href="/culture-recreation/2395.aspx"><img src="/images/cos-master/pageImages/Heritage/Surrey_Archives_gifts_rdax_495x278.jpg" alt="Surrey Archives gifts" /></a>
-                            
-                <h2><a href="/culture-recreation/2395.aspx">Gift Shop at the Surrey Archives</a></h2>
-                <p>Visit the gift shop at the Surrey Archives to purchase local history books, postcards, DVDs and other unique items.</p>
-            </div>
-        </div>
-    
-        <div class="item s1 l1">
             <div class="inner-wrapper">
                 
                                     <a class="th" href="/culture-recreation/2400.aspx"><img src="/images/cos-master/pageImages/Heritage/Surrey_Archives_in_1912_Municipal_Hall_rdax_495x278.jpg" alt="Surrey Archives in 1912 Municipal Hall" /></a>
@@ -1113,15 +1153,15 @@ Saturday: 10:00am to 5:00pm</p>
                             <ul>
                                 <!-- /culture-recreation/13982.aspx --><li class="isParent notSelected"><a href="/culture-recreation/1697.aspx">Activities Search &amp; Registration</a></li><li class="isSelected isParent"><a href="/culture-recreation/15764.aspx">Arts &amp; Heritage</a>
                         <ul>
-                            <li class="isParent notSelected"><a href="/culture-recreation/1517.aspx">Arts</a></li><li class="isSelected isParent"><a href="/culture-recreation/2366.aspx">Heritage Services</a>
+                            <li class="isParent notSelected"><a href="/culture-recreation/1517.aspx">Arts</a></li><li class="isSelected isParent"><a href="/culture-recreation/2366.aspx">Heritage</a>
                         <ul>
                             <li class="isParent notSelected"><a href="/culture-recreation/2875.aspx">Historic Stewart Farm</a></li><li class="isParent notSelected"><a href="/culture-recreation/2372.aspx">Surrey Museum</a></li><li class="isCurrent isParent"><a href="/culture-recreation/2394.aspx">Surrey Archives</a>
                         <ul>
-                            <li class="isParent notSelected"><a href="/culture-recreation/9819.aspx">Collections Overview at Surrey Archives</a></li><li class="isLast notSelected"><a href="/culture-recreation/2401.aspx">Using the Surrey Archives</a></li><li class="isLast notSelected"><a href="/culture-recreation/2396.aspx">Exhibitions at Surrey Archives</a></li><li class="isLast notSelected"><a href="/culture-recreation/2397.aspx">Surrey Archives &amp; Museums Online Access</a></li><li class="isLast notSelected"><a href="/culture-recreation/2398.aspx">Public Programs &amp; Outreach at Surrey Archives</a></li><li class="isLast notSelected"><a href="/culture-recreation/2399.aspx">Surrey Archives School Programs</a></li><li class="isParent notSelected"><a href="/culture-recreation/2402.aspx">Community Profiles</a></li><li class="isLast notSelected"><a href="/culture-recreation/2395.aspx">Gift Shop at the Surrey Archives</a></li><li class="isLast notSelected"><a href="/culture-recreation/2400.aspx">About the Surrey Archives Building</a></li>
+                            <li class="isParent notSelected"><a href="/culture-recreation/9819.aspx">Archives Collection</a></li><li class="isLast notSelected"><a href="/culture-recreation/2396.aspx">Digital Exhibits at Surrey Archives</a></li><li class="isLast notSelected"><a href="/culture-recreation/2397.aspx">Surrey Archives &amp; Museums Online Access</a></li><li class="isLast notSelected"><a href="/culture-recreation/2398.aspx">Public Programs at the Surrey Archives</a></li><li class="isLast notSelected"><a href="/culture-recreation/2399.aspx">Surrey Archives School Programs</a></li><li class="isLast notSelected"><a href="/culture-recreation/20771.aspx">Outreach Presentations</a></li><li class="isLast notSelected"><a href="/culture-recreation/20783.aspx">Gift Shop at Surrey Archives</a></li><li class="isLast notSelected"><a href="/culture-recreation/2400.aspx">About the Surrey Archives Building</a></li>
                         </ul>
-                    </li><li class="isLast notSelected"><a href="/culture-recreation/11028.aspx">Heritage School Programs</a></li><li class="isParent notSelected"><a href="/culture-recreation/510.aspx">Heritage Volunteers</a></li><li class="isLast notSelected"><a href="/culture-recreation/4834.aspx">Surrey Archives &amp; Museums Online Access (SAMOA)</a></li><li class="isParent notSelected"><a href="/culture-recreation/2368.aspx">Collections</a></li><li class="isLast notSelected"><a href="/culture-recreation/2371.aspx">Heritage Newsletter</a></li><li class="isParent notSelected"><a href="/culture-recreation/11469.aspx">The Re-enactors</a></li><!-- /culture-recreation/8117.aspx --><!-- /culture-recreation/8225.aspx --><li class="isParent notSelected"><a href="/culture-recreation/2331.aspx">Heritage Storyboards &amp; Virtual Tours</a></li><li class="isLast notSelected"><a href="/culture-recreation/19212.aspx">What&#39;s New in Heritage</a></li><li class="isLast notSelected"><a href="/culture-recreation/19396.aspx">Heritage Summer Day Camps</a></li>
+                    </li><li class="isLast notSelected"><a href="/culture-recreation/11028.aspx">Heritage School Programs</a></li><li class="isParent notSelected"><a href="/culture-recreation/510.aspx">Heritage Volunteers</a></li><li class="isLast notSelected"><a href="/culture-recreation/4834.aspx">SAMOA Online Heritage Search</a></li><!-- /culture-recreation/2368.aspx --><li class="isLast notSelected"><a href="/culture-recreation/2371.aspx">Heritage Newsletter</a></li><li class="isParent notSelected"><a href="/culture-recreation/11469.aspx">The Re-enactors</a></li><!-- /culture-recreation/8117.aspx --><!-- /culture-recreation/8225.aspx --><li class="isParent notSelected"><a href="/culture-recreation/2331.aspx">Heritage Storyboards &amp; Virtual Tours</a></li><li class="isLast notSelected"><a href="/culture-recreation/19212.aspx">What&#39;s New in Heritage</a></li><li class="isLast notSelected"><a href="/culture-recreation/20156.aspx">Surrey Legacy Book Project</a></li>
                         </ul>
-                    </li><li class="isParent notSelected"><a href="/culture-recreation/15908.aspx">AH Exhibitions</a></li><li class="isLast notSelected"><a href="/culture-recreation/15923.aspx">AH Events</a></li><li class="isLast notSelected"><a href="/culture-recreation/15895.aspx">Get Involved with AH</a></li><!-- /culture-recreation/15913.aspx -->
+                    </li><li class="isParent notSelected"><a href="/culture-recreation/15908.aspx">AH Exhibitions</a></li><li class="isLast notSelected"><a href="/culture-recreation/15923.aspx">AH Events</a></li><li class="isLast notSelected"><a href="/culture-recreation/15895.aspx">Get Involved with AH</a></li><!-- /culture-recreation/15913.aspx --><li class="isLast notSelected"><a href="/culture-recreation/19911.aspx">Arts &amp; Culture Map</a></li>
                         </ul>
                     </li><li class="isParent notSelected"><a href="/culture-recreation/6138.aspx">Events</a></li><!-- /culture-recreation/5001.aspx --><li class="isParent notSelected"><a href="/culture-recreation/2015.aspx">Parks</a></li><!-- /culture-recreation/6886.aspx --><!-- /culture-recreation/7347.aspx --><li class="isParent notSelected"><a href="/culture-recreation/3113.aspx">Parks, Recreation &amp; Culture Plans</a></li><li class="isParent notSelected"><a href="/culture-recreation/17097.aspx">Recreation Surrey</a></li><!-- /culture-recreation/17084.aspx --><li class="isLast notSelected"><a href="/culture-recreation/13829.aspx">School Programs</a></li><li class="isParent notSelected"><a href="/culture-recreation/483.aspx">Volunteering</a></li><!-- /culture-recreation/15902.aspx -->
                             </ul>
@@ -1143,11 +1183,13 @@ Saturday: 10:00am to 5:00pm</p>
         <div id="footer" class="footer">
             <div class="footer-wrapper">
                 
-    
+
 <div class="column">
     <div class="inner-wrapper">
-        <h2>Find Surrey On</h2>
+        <h2>Get Connected</h2>
         <ul>
+            <li><i class="social-foundicon-enews"></i>
+                <a href="http://mypreferences.surrey.ca/subscribe?language=en" target="_blank">ENews</a></li>
             <li><i class="social-foundicon-facebook"></i>
                 <a href="https://www.facebook.com/TheCityofSurrey" target="_blank">Facebook</a></li>
             <li><i class="social-foundicon-twitter"></i>
@@ -1164,19 +1206,18 @@ Saturday: 10:00am to 5:00pm</p>
         </ul>
     </div>
 </div>
-    
+
 <div class="column">
     <div class="inner-wrapper">
         <h2>Our Websites</h2>
         <ul>
             <li class=""><a href="http://www.surreylibraries.ca" target="_blank">Surrey Libraries</a></li>
-            <li class=""><a href="http://www.surrey.ca/kids" target="_blank">Kids</a></li>
             <li class=""><a href="http://www.surrey.ca/youth" target="_blank">Youth</a></li>
             
         </ul>
     </div>
 </div>
-    
+
 <div class="column">
     <div class="inner-wrapper">
         <h2>Our Communities</h2>
@@ -1192,7 +1233,7 @@ Saturday: 10:00am to 5:00pm</p>
         </ul>
     </div>
 </div>
-    
+
 <div class="column">
     <div class="inner-wrapper">
         <h2>The City of Surrey</h2>
@@ -1205,29 +1246,13 @@ Saturday: 10:00am to 5:00pm</p>
         </ul>
     </div>
 </div>
-    
+
 <div id="copyright">
     <div class="inner-wrapper">
         <p><a href="/478.aspx">&copy; Copyright 2016</a> City of Surrey</p>
     </div>
 </div>
-    
 
-        <script type="text/javascript"> 
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-18760589-1']); 
-            _gaq.push(['_setCustomVar', 1, 'guid', '8CEC619F3AB343F0B15A72712E200313']);
-    
-                                _gaq.push(['_setCustomVar', 2, 'department', 'Parks, Recreation & Culture']);
-                            
-            _gaq.push(['_trackPageview']); 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
-    
 
             </div><!-- /footer-wrapper -->
         </div><!-- /footer -->
@@ -1242,7 +1267,7 @@ Saturday: 10:00am to 5:00pm</p>
         <!--[if IE 7]>       </div>  <![endif]-->
         <!--[if IE 8]>       </div>  <![endif]-->
 
-        <!-- /culture-recreation/9819.aspx/culture-recreation/2401.aspx/culture-recreation/2397.aspx/culture-recreation/2398.aspx/culture-recreation/2399.aspx/culture-recreation/2402.aspx/culture-recreation/2400.aspx/culture-recreation/2395.aspx/culture-recreation/2396.aspx -->
+        <!-- /culture-recreation/20783.aspx/culture-recreation/20771.aspx/culture-recreation/9819.aspx/culture-recreation/2397.aspx/culture-recreation/2398.aspx/culture-recreation/2399.aspx/culture-recreation/2400.aspx/culture-recreation/2396.aspx -->
     </body>
 </html>
 

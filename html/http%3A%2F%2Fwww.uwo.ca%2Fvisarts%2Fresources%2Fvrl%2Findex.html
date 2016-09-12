@@ -11,8 +11,10 @@
           <!--[if IE 8 ]> <html class="ie8"> <![endif]-->
           <!--[if IE 9 ]> <html class="ie9"> <![endif]-->
           <!--[if (gt IE 9)|!(IE)]><!--><!--<![endif]-->
-          <link href="https://www.uwo.ca/web_standards/css/styles.css" rel="stylesheet"/>
+          <link href="https://www.uwo.ca/web_standards/css/style-responsive.css" rel="stylesheet"/>
           <link href="https://www.uwo.ca/web_standards/css/standard-menu.css" rel="stylesheet"/>
+          <!--meta content="width=device-width, initial-scale=1" name="viewport"/-->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
           <link href="https://www.uwo.ca/web_standards/img/logo/apple-icon.png" rel="apple-touch-icon"/>
           <link href="https://www.uwo.ca/web_standards/img/logo/favicon.ico" rel="shortcut icon"/>
           <noscript>
@@ -43,13 +45,23 @@ iframe {
 }
 </style>
 </noscript>
+          <script language="javascript" src="//www.uwo.ca/web_standards/js/1.6.4.jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(document).ready(function($){
+$('img').each(function()
+{ $(this).removeAttr('width'); $(this).removeAttr('height'); }
+);
+});
+</script>
           
 </head>
 
 <body>
-
+    
     <!-- Ribbon include begins -->
         <script src="https://www.uwo.ca/web_standards/js/rbn/rbn-standardpage.js" type="text/javascript"></script>
+        
         
         <noscript>
   <div class="panelbck">
@@ -103,14 +115,31 @@ iframe {
     <!-- Ribbon include ends -->
      
    <div id="masthead">
-        <a href="http://www.uwo.ca/visarts/"><img alt="Visual Arts Department" src="https://www.uwo.ca/web_standards/img/logos-academic/Arts/Visual-Arts.png"/></a><a href="http://www.uwo.ca/arts/" target="_blank"><img alt="Western Arts and Humanities" class="stacked-logo-one" src="http://www.uwo.ca/web_standards/img/logos-faculties-stacked/Arts_Humanities.png"/></a>   
+        <a href="http://www.uwo.ca/visarts/"><img alt="Visual Arts Department" src="https://www.uwo.ca/web_standards/img/logos-academic/Arts/Visual-Arts.png"/></a><a href="http://www.uwo.ca/arts/" target="_blank"><img alt="Western Arts and Humanities" class="stacked-logo-one" src="http://www.uwo.ca/web_standards/img/logos-faculties-stacked/Arts_Humanities.png"/></a> 
+        <div class="lists-select"><label class="hidden" for="popular-list">Popular Links</label><select class="fields" id="popular-list" name="popular-list" onchange="location.href=this.options[this.selectedIndex].value;">
+<option selected="selected" value="#">Popular Links</option>
+<option value="http://www.uwo.ca/directory.html">Directory</option>
+<option value="http://mail.uwo.ca">WebMail</option>
+<option value="https://owl.uwo.ca/portal">OWL</option>
+<option value="https://studentservices.uwo.ca/secure/index.cfm">Student Services</option>
+<option value="http://www.uwo.ca/a-z.html">Websites A - Z</option>
+<option value="http://events.westernu.ca/">Events</option>
+<option value="http://www.lib.uwo.ca/">Libraries</option>
+<option value="http://www.uwo.ca/about/visit/maps.html">Maps</option>
+<option value="http://www.uwo.ca/parking/">Parking</option>
+<option value="http://www.uwo.ca/">WesternU</option>
+</select></div>
         
    </div> <!--end div masthead-->
 
     <div class="container_12">
            
         <div class="grid_12">
-            <ul class="clearfix" id="menu" style="margin-left: 0;"><li class="medium"><a class="drop" href="../../about/index.html">About</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../about/alumni.html">Visual Arts Alumni</a></li><li><a href="../../about/jobs.html">Job Opportunities</a></li><li><a href="../../about/fullfaculty.html">Full-Time Faculty</a></li><li><a href="../../about/facultypt.html">Part-Time Faculty</a></li><li><a href="../../about/staff.html">Technical Staff</a></li><li><a href="../../about/photo.html">Visual Arts Photos</a></li><li><a href="../../about/contact_us.html">Contact</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../news/index.html">News &amp; Events</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../news/2016/index.html">2016</a></li><li><a href="../../news/2015/index.html">2015</a></li><li><a href="../../news/2014/index.html">2014</a></li><li><a href="../../news/2013/index.html">2013</a></li><li><a class="ex-link" href="http://www.events.westernu.ca/events/visual-arts/" target="_blank">Events Calendar</a></li><li><a href="../../newsletters/index.html">Newsletters</a></li><li><a href="../../speakers.html">Speakers' Series</a></li><li><a href="../../va_makingnews/index.html">Making News</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../undergraduate/index.html">Undergraduate</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../undergraduate/future/index.html">Future Students</a></li><li><a href="../../undergraduate/current/index.html">Current Students</a></li><li><a href="../../undergraduate/degrees_offered/index.html">Degrees Offered</a></li><li><a href="../../undergraduate/courses.html">Undergraduate Courses</a></li><li><a class="ex-link" href="http://westerncalendar.uwo.ca/2015/pg965.html" target="_blank">Art History Course Descriptions</a></li><li><a class="ex-link" href="http://westerncalendar.uwo.ca/2015/pg966.html" target="_blank">Visual Arts Studio Course Descriptions</a></li><li><a class="ex-link" href="http://www.westerncalendar.uwo.ca/" target="_blank">Western Academic Calendar</a></li><li><a href="../../undergraduate/funding/index.html">Funding</a></li><li><a href="../../undergraduate/faq.html">Frequently Asked Questions</a></li><li><a href="../../undergraduate/vasa.html">VASA : Visual Art Supporters Association </a></li><li><a href="../../about/alumni.html">Visual Arts Alumni</a></li><li><a href="../../undergraduate/exams.html">Exam Schedule</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../grad/index.html">Graduate</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../grad/future/index.html">Future Students</a></li><li><a href="../../grad/current/index.html">Current Students</a></li><li><a href="../../grad/degrees.html">Degrees Offered</a></li><li><a href="../../grad/courses.html">Graduate Courses</a></li><li><a href="../../grad/funding.html">Funding</a></li><li><a href="../../grad/conference.html">Graduate Conference</a></li><li><a href="../../grad/meet_our_grads/index.html">Meet Our Grads</a></li><li><a class="ex-link" href="http://www.uwo.ca/visarts/about/alumni.html" target="_blank">Alumni</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../ourresearch/index.html">Research</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../ourresearch/undergraduate_research.html">Undergraduate Research</a></li><li><a href="../../ourresearch/graduate research.html">Graduate Research</a></li><li><a href="../../ourresearch/faculty_research.html">Faculty Research</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../index.html">Resources</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../cohenlab.html">Cohen Exploration Lab &amp; Cohen Commons</a></li><li><a href="../drawpaint.html">Drawing &amp; Painting</a></li><li><a href="../media.html">Media Lab &amp; Sound Booth</a></li><li><a href="../photography.html">Photography</a></li><li><a href="../printmaking.html">Printmaking</a></li><li><a href="../sculpture.html">Sculpture Studio</a></li><li><a href="../signout.html">Sign-Out Office</a></li><li><a href="../artinstall.html">Installing Artwork in the VAC</a></li><li><a href="index.html">Visual Resources Library</a></li><li><a href="../restricted/index.html">Faculty &amp; Staff Resources (requires login)</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../artlab/index.html">Artlab</a><div class="dropdown_1column align_right"><div class="col_1"><ul><li><a href="../../artlab/current.html">Current Exhibition &amp; Events</a></li><li><a href="../../artlab/upcoming/index.html">Upcoming Exhibitions</a></li><li><a href="../../artlab/exhibition_archive/index.html">Exhibition Archive</a></li></ul></div></div></li></ul>
+            <ul class="clearfix" id="menu" style="margin-left: 0;"><li class="medium"><a class="drop" href="../../about/index.html">About</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../about/chair.html">Message from the Chair</a></li><li><a href="../../about/alumni.html">Visual Arts Alumni</a></li><li><a href="../../about/jobs.html">Job Opportunities</a></li><li><a href="../../about/fullfaculty.html">Full-Time Faculty</a></li><li><a href="../../about/facultypt.html">Part-Time Faculty</a></li><li><a href="../../about/staff.html">Technical Staff</a></li><li><a href="../../about/photo.html">Visual Arts Photos</a></li><li><a href="../../about/contact_us.html">Contact</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../news/index.html">News &amp; Events</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../news/2016/index.html">2016</a></li><li><a href="../../news/2015/index.html">2015</a></li><li><a href="../../news/2014/index.html">2014</a></li><li><a href="../../news/2013/index.html">2013</a></li><li><a class="ex-link" href="http://www.events.westernu.ca/events/visual-arts/" target="_blank">Events Calendar</a></li><li><a href="../../newsletters/index.html">Newsletters</a></li><li><a href="../../speakers.html">Speakers' Series</a></li><li><a href="../../va_makingnews/index.html">Making News</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../undergraduate/index.html">Undergraduate</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../undergraduate/future/index.html">Future Students</a></li><li><a href="../../undergraduate/current/index.html">Current Students</a></li><li><a href="../../undergraduate/degrees_offered/index.html">Degrees Offered</a></li><li><a href="../../undergraduate/courses.html">Undergraduate Courses</a></li><li><a class="ex-link" href="http://westerncalendar.uwo.ca/2015/pg965.html" target="_blank">Art History Course Descriptions</a></li><li><a class="ex-link" href="http://westerncalendar.uwo.ca/2015/pg966.html" target="_blank">Visual Arts Studio Course Descriptions</a></li><li><a class="ex-link" href="http://www.westerncalendar.uwo.ca/" target="_blank">Western Academic Calendar</a></li><li><a href="../../undergraduate/funding/index.html">Funding</a></li><li><a href="../../undergraduate/faq.html">Frequently Asked Questions</a></li><li><a href="../../undergraduate/vasa.html">VASA : Visual Art Supporters Association </a></li><li><a href="../../about/alumni.html">Visual Arts Alumni</a></li><li><a href="../../undergraduate/exams.html">Exam Schedule</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../grad/index.html">Graduate</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../grad/future/index.html">Future Students</a></li><li><a href="../../grad/current/index.html">Current Students</a></li><li><a href="../../grad/degrees.html">Degrees Offered</a></li><li><a href="../../grad/courses.html">Graduate Courses</a></li><li><a href="../../grad/funding.html">Funding</a></li><li><a href="../../grad/conference.html">Graduate Conference</a></li><li><a href="../../grad/meet_our_grads/index.html">Meet Our Grads</a></li><li><a class="ex-link" href="http://www.uwo.ca/visarts/about/alumni.html" target="_blank">Alumni</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../ourresearch/index.html">Research</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../../ourresearch/undergraduate_research.html">Undergraduate Research</a></li><li><a href="../../ourresearch/graduate research.html">Graduate Research</a></li><li><a href="../../ourresearch/faculty_research.html">Faculty Research</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../index.html">Resources</a><div class="dropdown_1column"><div class="col_1"><ul><li><a href="../cohenlab.html">Cohen Exploration Lab &amp; Cohen Commons</a></li><li><a href="../drawpaint.html">Drawing &amp; Painting</a></li><li><a href="../media.html">Media Lab &amp; Sound Booth</a></li><li><a href="../photography.html">Photography</a></li><li><a href="../printmaking.html">Printmaking</a></li><li><a href="../sculpture.html">Sculpture Studio</a></li><li><a href="../signout.html">Sign-Out Office</a></li><li><a href="../artinstall.html">Installing Artwork in the VAC</a></li><li><a href="index.html">Visual Resources Library</a></li><li><a href="../restricted/index.html">Faculty &amp; Staff Resources (requires login)</a></li><li><a href="../roombooking.html">Room Booking</a></li></ul></div></div></li><li class="medium"><a class="drop" href="../../artlab/index.html">Artlab</a><div class="dropdown_1column align_right"><div class="col_1"><ul><li><a href="../../artlab/current.html">Current Exhibition &amp; Events</a></li><li><a href="../../artlab/upcoming/index.html">Upcoming Exhibitions</a></li><li><a href="../../artlab/exhibition_archive/index.html">Exhibition Archive</a></li></ul></div></div></li></ul>
+            <!-- BEGINNING OF MOBILE DROP-DOWN NAV -->
+            <ul id="nav"><li><a class="drop" href="#">MENU</a><ul><li><a href="../../about/index.html">About</a></li><li><a href="../../news/index.html">News &amp; Events</a></li><li><a href="../../undergraduate/index.html">Undergraduate</a></li><li><a href="../../grad/index.html">Graduate</a></li><li><a href="../../ourresearch/index.html">Research</a></li><li><a href="../index.html">Resources</a></li><li><a href="../../artlab/index.html">Artlab</a></li></ul><div class="clear"></div></li></ul><div class="clear"></div>
+            <!-- END OF MOBILE NAV -->
+
         </div> <!--end div grid_12-->    
         
         <div class="grid_12"> 
@@ -118,9 +147,9 @@ iframe {
             <form action="http://find.uwo.ca/search" class="department-search"><label class="obscure" for="department-searchfield">Department Search</label> <input class="entry" id="department-searchfield" maxlength="50" name="q" placeholder="Department Search" size="22" type="text"/> <input name="access" type="hidden" value="p"/> <input name="entqr" type="hidden" value="0"/> <input name="ud" type="hidden" value="1"/> <input name="sort" type="hidden" value="date:D:L:d1"/> <input name="output" type="hidden" value="xml_no_dtd"/> <input name="oe" type="hidden" value="UTF-8"/> <input name="ie" type="hidden" value="UTF-8"/> <input name="client" type="hidden" value="default_frontend"/> <input name="proxystylesheet" type="hidden" value="default_frontend"/> <input name="proxyreloadt" type="hidden" value="1"/> <input name="site" type="hidden" value="default_collection"/> <input name="as_sitesearch" type="hidden" value="www.uwo.ca/visarts"/> <input class="department-search_btn" type="submit" value="Go!"/></form>      
         </div> <!--end div grid_12--> 
                 
-        <div id="left-sidebar">
+        <div class="top" id="left-sidebar">
            
-            <h2><a href="../index.html">Resources</a></h2><div id="leftnav"><ul><li><a class="" href="../cohenlab.html">Cohen Exploration Lab &amp; Cohen Commons</a></li><li><a class="" href="../drawpaint.html">Drawing &amp; Painting</a></li><li><a class="" href="../media.html">Media Lab &amp; Sound Booth</a></li><li><a class="" href="../photography.html">Photography</a></li><li><a class="" href="../printmaking.html">Printmaking</a></li><li><a class="" href="../sculpture.html">Sculpture Studio</a></li><li><a class="" href="../signout.html">Sign-Out Office</a></li><li><a class="" href="../artinstall.html">Installing Artwork in the VAC</a></li><li><a class=" selected" href="index.html">Visual Resources Library</a><ul><li><a class="" href="mission.html">Mission</a></li><li><a class="" href="work.html">Work Opportunities</a></li><li><a class="" href="service.html">Service Offerings</a></li><li><a class="" href="requests.html">Requests</a></li><li><a class="" href="find_images.html">Find Images</a></li></ul></li><li><a class="" href="../restricted/index.html">Faculty &amp; Staff Resources (requires login)</a></li></ul></div>
+            <h2><a href="../index.html">Resources</a></h2><div id="leftnav"><ul><li><a class="" href="../cohenlab.html">Cohen Exploration Lab &amp; Cohen Commons</a></li><li><a class="" href="../drawpaint.html">Drawing &amp; Painting</a></li><li><a class="" href="../media.html">Media Lab &amp; Sound Booth</a></li><li><a class="" href="../photography.html">Photography</a></li><li><a class="" href="../printmaking.html">Printmaking</a></li><li><a class="" href="../sculpture.html">Sculpture Studio</a></li><li><a class="" href="../signout.html">Sign-Out Office</a></li><li><a class="" href="../artinstall.html">Installing Artwork in the VAC</a></li><li><a class=" selected" href="index.html">Visual Resources Library</a><ul><li><a class="" href="mission.html">Mission</a></li><li><a class="" href="work.html">Work Opportunities</a></li><li><a class="" href="service.html">Service Offerings</a></li><li><a class="" href="requests.html">Requests</a></li><li><a class="" href="find_images.html">Find Images</a></li></ul></li><li><a class="" href="../restricted/index.html">Faculty &amp; Staff Resources (requires login)</a></li><li><a class="" href="../roombooking.html">Room Booking</a></li></ul></div>
            
             <h3 class="sidebar-title">Connect with the VRL</h3>
 <p><a href="http://www.facebook.com/WesternVAlib" target="_blank" title="Facebook"><img alt="facebook" height="20" src="../../img/socmedia/facebook.png" width="20"/></a> <a href="http://www.flickr.com/photos/103286126@N08/collections/72157636624086794/" target="_blank" title="Flickr"><img alt="Flickr" height="20" src="../../img/socmedia/flickr.png" width="20"/></a> <a href="http://iveyvrl.wordpress.com/" target="_blank" title="Blog"><img alt="VRL Blog" height="20" src="../../img/socmedia/blog.png" width="20"/></a> <a href="https://twitter.com/WesternVAlib" target="_blank" title="Twitter "><img alt="Twitter" height="20" src="../../img/socmedia/twitter.png" width="20"/></a></p> 
@@ -179,9 +208,13 @@ Tuesday, Thursday, Friday:<br/>8:30 am - 5:00 pm
 // ]]></script>
 
         </div> <!--end div grid_9-->
+        <div class="bottom" id="left-sidebar">
+            <h2><a href="../index.html">Resources</a></h2><div id="leftnav"><ul><li><a class="" href="../cohenlab.html">Cohen Exploration Lab &amp; Cohen Commons</a></li><li><a class="" href="../drawpaint.html">Drawing &amp; Painting</a></li><li><a class="" href="../media.html">Media Lab &amp; Sound Booth</a></li><li><a class="" href="../photography.html">Photography</a></li><li><a class="" href="../printmaking.html">Printmaking</a></li><li><a class="" href="../sculpture.html">Sculpture Studio</a></li><li><a class="" href="../signout.html">Sign-Out Office</a></li><li><a class="" href="../artinstall.html">Installing Artwork in the VAC</a></li><li><a class=" selected" href="index.html">Visual Resources Library</a><ul><li><a class="" href="mission.html">Mission</a></li><li><a class="" href="work.html">Work Opportunities</a></li><li><a class="" href="service.html">Service Offerings</a></li><li><a class="" href="requests.html">Requests</a></li><li><a class="" href="find_images.html">Find Images</a></li></ul></li><li><a class="" href="../restricted/index.html">Faculty &amp; Staff Resources (requires login)</a></li><li><a class="" href="../roombooking.html">Room Booking</a></li></ul></div>
+            
+            
+        </div>
          
-            <br class="clear"/>
-            <br class="clear"/>
+            
 
             <div class="grid_12" id="footer">
            
@@ -202,7 +235,7 @@ Tuesday, Thursday, Friday:<br/>8:30 am - 5:00 pm
                 </div> <!--end div grid_2-->
                 
                 <div class="footer-logos">
-                    <a href="http://www.uwo.ca" target="_blank" title="Western Home Page"><img align="right" alt="Western University Crest" height="85" id="footer-logo" src="https://www.uwo.ca/web_standards/img/logo/crest-stack-3.png" width="80"/></a>
+                    <a href="http://www.uwo.ca" target="_blank" title="Western Home Page"> <img align="right" alt="Western University Crest" src="https://www.uwo.ca/web_standards/img/logo/crest-stack-3.png" width="80"/> </a>
                 </div> <!--end div grid_2-->
     
                
@@ -215,19 +248,16 @@ Tuesday, Thursday, Friday:<br/>8:30 am - 5:00 pm
         
     <div class="clear"></div>
     
-    <!-- Pulls Twitter w/o Twitter chrome -->
-        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-        <script language="javascript" src="https://www.uwo.ca/web_standards/js/1.6.4.jquery.min.js" type="text/javascript"></script>
-        <script language="javascript" src="https://www.uwo.ca/web_standards/js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
-        <script language="javascript" src="https://www.uwo.ca/web_standards/js/jquery.tweet.js" type="text/javascript"></script>
-        <script src="https://www.uwo.ca/web_standards/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
-        <script language="javascript" src="https://www.uwo.ca/web_standards/js/facebox.js" type="text/javascript"></script>
-    <!-- End Twitterpull -->
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/1.6.4.jquery.min.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/jquery.tweet.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/facebox.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/flexslider/jquery.flexslider.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/jquery.client.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+        <script language="javascript" src="//www.uwo.ca/web_standards/js/scripts-responsive.js" type="text/javascript"></script>
 
-    <script language="javascript" src="https://www.uwo.ca/web_standards/flexslider/jquery.flexslider.js" type="text/javascript"></script>
-     <script language="javascript" src="https://www.uwo.ca/web_standards/js/jquery.client.js" type="text/javascript"></script>
-     <script language="javascript" src="https://www.uwo.ca/web_standards/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
-    <script language="javascript" src="https://www.uwo.ca/web_standards/js/scripts.js" type="text/javascript"></script>
 
         
     <script src="https://www.uwo.ca/web_standards/js/jquery.validate.js" type="text/javascript"></script>

@@ -74,7 +74,7 @@ $(document).ready(function(){
 <li><a href="http://www.ville.saint-constant.qc.ca/05_calendrier/index.php">SÃ©ances du conseil municipal</a></li>
 <li><a href="http://www.ville.saint-constant.qc.ca/01_servicesmunicipaux/03_communications/agrile_frene.php">Agrile du frÃªne</a> </li>
 <li><a href="http://ville.saint-constant.qc.ca/01_servicesmunicipaux/02_affaires/index.php">Avis public</a></li>
-<li><a href="http://www.preparez-vous.gc.ca/index-fr.aspx">Plan dâurgence 72 hres</a></li> 
+<li><a href="http://www.ville.saint-constant.qc.ca/01_servicesmunicipaux/03_communications/plan-urgence-72h.php">Plan dâurgence 72 hres</a></li> 
 <li><a href="http://ville.saint-constant.qc.ca/07_decouvrez/statistiques.php">Nouveaux rÃ©sidents</a></li>
 <li><a href="../../01_servicesmunicipaux/05_loisir/index.php">Politiques municipales</a></li>
 <li><a href="/00_actualites/pdf/Plan_strategique_2015-2025_Presentation_publique.pdf">Plan stratÃ©gique 2015-2025</a></li>
@@ -155,7 +155,9 @@ $(document).ready(function(){
 </script>
 
 <ul id="menu">
-	    <a href="https://alertes.saint-constant.ca/fr/" class="alertescitoyennes" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/bouton_alertescitoyennes.jpg" width="172" height="41"></a>
+	    <a href="http://www.rendez-vous-pres-de-chez-vous.com/" class="logordv" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/logordv.png" width="150" ></a>
+        
+	    <a href="https://inscriptions.stcenligne.com/LudikIC2Prod_EnLigne/Pages/Anonyme/Recherche/Page.fr.aspx?m=1" class="alertescitoyennes" target="_blank"><img src="http://ville.saint-constant.qc.ca/00_actualites/images/eclipse_blanc.jpg" width="150" ></a>
 
     <li><a href="#" class="drop">Services municipaux</a>
        <div class="dropdown_4columns">
@@ -285,7 +287,19 @@ $(document).ready(function(){
 
 <div id="textsizer">
   Taille du texte
-    <a href="javascript:ts('body',-1)"><img src="../../imgs/btnminus.png" width="40" height="40" hspace="5" vspace="0" border="0" align="absmiddle"></a><a href="javascript:ts('body',1)"><img src="../../imgs/btnplus.png" width="40" height="40" hspace="0" vspace="0" border="0" align="absmiddle"></a></div>
+    <a href="javascript:ts('body',-1)"><img src="../../imgs/btnminus.png" width="40" height="40" hspace="5" vspace="0" border="0" align="absmiddle"></a><a href="javascript:ts('body',1)"><img src="../../imgs/btnplus.png" width="40" height="40" hspace="0" vspace="0" border="0" align="absmiddle"></a>
+</div>
+
+<!--<div>
+    <p class="h1"><a href="http://www.clubdelecturetd.ca/" target="_blank">Club de lecture TD 2016</a></p>
+    <p>Le <a href="http://www.clubdelecturetd.ca/" target="_blank">club de lecture</a> dÃ©bute le 25 juin 2016. <br>
+    Ã vos marques, prÃªts, lisez!</p>
+    <a href="http://www.clubdelecturetd.ca/" target="_blank">
+    	<p>Cliquez ici!</p>
+    	<img src="imgs/Club-de-lecture-TD-2016.jpg" width="614" height="752" >
+    </a>
+</div> -->
+
 
 <div id="sidebar">
 <table width="245" border="0" align="right" cellpadding="0" cellspacing="0">
@@ -335,14 +349,20 @@ Saint-Constant<br>
 
     <tr>
       <td align="left" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
-      <td width="224" align="left" valign="top" bgcolor="#FFFFFF"><p>&nbsp;</p>
-        <p><b>Horaire rÃ©gulier</b><br>
+      <td width="224" align="left" valign="top" bgcolor="#FFFFFF">
+      <p><b>Horaire estival :</b><br>
+Lundi au mercredi : 13 h Ã  20 h 30<br>
+Jeudi : 9 h 30 Ã  20 h 30 <br>
+Vendredi : 13 h Ã  20 h 30 <br>
+Samedi : 10 h 30 Ã  15 h 30 <br>
+Dimanche : FermÃ©</p>
+       <!--  <p><b>Horaire rÃ©gulier</b><br>
         Lundi au mercredi 13 h Ã  20 h 30<br>
           Jeudi 9 h 30 Ã  20 h 30<br>
           Vendredi 13 h Ã  17 h<br>
           Samedi 10 h 30 Ã  15 h 30<br>
-          Dimanche 12 h Ã  16 h</p>
-        <p>&nbsp;</p></td>
+          Dimanche 12 h Ã  16 h</p> -->
+        </td>
     </tr>
     <tr>
       <td align="left" valign="middle" bgcolor="#006E56" class="texte_blanc">&nbsp;</td>
@@ -391,9 +411,7 @@ Non rÃ©sident</strong><strong><br>
     
 <div id="textarea4">
   <p class="h1">Une bibliothÃ¨que branchÃ©e!</p>
-  <p class="h1">&nbsp;</p>
-	<!--<h3><a href="../../ouverture_bibli.html">Pour tout savoir Ã  propos de l'ouverture officielle de la bibliothÃ¨que</a></h3>-->
-  <p class="h1">&nbsp;</p>
+
   <p><strong><img src="imgs/biblio_regard.png" alt="Service Ã  distance" width="266" height="157"></strong></p>
   <h2>SERVICE Ã DISTANCE</h2>
   
@@ -432,22 +450,20 @@ Non rÃ©sident</strong><strong><br>
 <hr>
 <h2><strong>DÃ©couvrir, se divertir et rÃªver!</strong></h2>
 <p><br>
-  Pour connaitre les dÃ©tails et les dates de notre programmation, cliquez <a href="pdf/xxx_Stconstant_V4_LR.pdf" target="_blank">ici</a>&nbsp;<br>
-  </p>
-  
-<br>
-<img src="imgs/affichette1_040416.jpg" width="475">
-<img src="imgs/affichette2_040416.jpg" width="475">
+  <a href="pdf/St-Constant_Biblio_v3_VF.pdf" target="_blank">Pour la version PDF, cliquez ici<br>
+ <br>
+</br>
+<img src="imgs/St-Constant_Biblio_v3_VF-2-2.png" width="400"><br>
+<img src="imgs/St-Constant_Biblio_v3_VF-2-1.png" width="400">
+</a>
 
-<br>
-
-  <p style="margin-top:40px;">Pour en savoir davantage sur les prochaines activitÃ©s Ã  la biblio, <a target="_blank" href="pdf/xxx_Stconstant_V4_LR.pdf">cliquez ici.</a></p>
+ </p>
+  <p style="margin-top:40px;"><a target="_blank" href="pdf/St-Constant_Biblio_v3_VF.pdf">Pour la version PDF, cliquez ici.</a></p>
  <br>
  <hr>
- <h2><strong>Semaine de relÃ¢che !</strong></h2>
-  <a href="http://www.ville.saint-constant.qc.ca/01_servicesmunicipaux/03_communications/pdf/Saint-Constant_Relache-scolaire_20160222.pdf" target="_blank"><img src="imgs/Activites_bibliotheque_relache.jpg" width="475"></a>
+ <!-- <h2><strong>Semaine de relÃ¢che !</strong></h2>
 <h2><br>
-</h2>
+</h2> -->
 
 </div>
 	  </div>

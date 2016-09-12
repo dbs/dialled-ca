@@ -8,9 +8,15 @@
 <head>
 <!-- liquid shared header begins -->
 
-
-
-    <meta CHARSET="utf-8">
+	
+    
+    
+	<meta CHARSET="utf-8">
+	
+	<meta name=”description” content=”Kitscoty Public Library, Alberta, Canada” />
+<meta name=””keywords”” content=””Kitscoty,Archives,Library,Alberta,Canada”” />
+		
+	
 	
 	
 		<meta HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
@@ -21,8 +27,6 @@
 	
 	
     <meta name="viewport" CONTENT="width=1024">
-    <meta name=”description” content=”Kitscoty Public Library, Alberta, Canada” />
-<meta name=””keywords”” content=””Kitscoty,Archives,Library,Alberta,Canada”” />
 
 
 	<meta property="og:url" CONTENT="http://www.kitscotypubliclibrary.ab.ca/" />
@@ -34,10 +38,8 @@
 	<meta property="og:type" CONTENT="website" />
 
 	
-		
-			<meta property="og:description" CONTENT=" "/>
-			<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg" />
-		
+		<meta property="og:description" CONTENT=" "/>
+		<meta property="og:image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg" />
 	
 
 
@@ -45,7 +47,7 @@
 	<meta itemprop="description" CONTENT=" ">
 
 	
-	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta itemprop="image" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -53,10 +55,10 @@
 	<meta name="twitter:site" CONTENT="Kitscoty Public Library">
 	<meta name="twitter:title" CONTENT="Home">
 	<meta name="twitter:creator" CONTENT="Kitscoty Public Library">
-	<meta name="twitter:text:description" CONTENT=" ">
 
 	
-	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage.jpg">
+	<meta name="twitter:text:description" CONTENT=" ">
+	<meta name="twitter:image:src" CONTENT="http://cloud.townlife.ca/themes/Shared/img/logos/socialimage-townlife.jpg">
 	
 
 
@@ -258,7 +260,6 @@ if (typeof jQuery != 'undefined') {
 	
 </style>
 
-
 <!-- for mobile start -->
 <style media="only screen and (max-width: 767px)">
 	@import url('http://cloud.townlife.ca/themes/Shared/CSS/mobile.css');
@@ -266,6 +267,18 @@ if (typeof jQuery != 'undefined') {
 </style>
 <meta name="viewport" content="width=device-width">
 <!-- for mobile end -->
+
+
+<script type='text/javascript'>
+function searchOnTal(){
+    var keyword = document.getElementById("query_tal").value;
+    window.open("http://talonline.ca#query="+keyword);
+  }
+ </script> 
+
+
+
+	<link rel="stylesheet "type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
 
 
 	<style media="print">
@@ -280,6 +293,12 @@ if (typeof jQuery != 'undefined') {
 	
 	
 	
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/magnific-popup.css">
+	
+
 
 	<script src="http://cloud.townlife.ca/themes/Shared/Javascript/modernizr-2.5.3.min.js"></script>
     </head>
@@ -300,9 +319,8 @@ if (typeof jQuery != 'undefined') {
 
 
 
-	
 
-	
+    
 
 
 
@@ -334,45 +352,25 @@ if (typeof jQuery != 'undefined') {
 		<nav id="moduleNavigation" class="clearfix">
 		
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/246" class="blog_link active_page" title="Blog">Blog</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=246" class="blog_link active_page" title="Blog"><span>Blog</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/246" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/246" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=246" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/225" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
@@ -399,10 +397,10 @@ if (typeof jQuery != 'undefined') {
 					</form>
 				</div>
 				<div class="pane">
-					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank">
-						<input id="q"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
-						<input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
-					</form>
+					<form class="SearchBox clearfix" name="wcfn" id="wcfn" action="http://talonline.worldcat.org/search" target="_blank" onSubmit="searchOnTal();return false;">
+                        <input id="query_tal"  name="q" type="text" value="Search all Alberta Libraries" onFocus="if (this.value == 'Search all Alberta Libraries') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Search all Alberta Libraries';}" />
+                        <input id="search_btn" type="submit" name="SearchSubmit" value="Search" />
+                    </form>
 				</div>
 				<div class="pane">
 					<form class="SearchBox clearfix" name="searchform" onSubmit="return dosearch();">
@@ -417,9 +415,7 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="mainNavigation" class="clearfix">
 		<ul id="SiteNavBar">
-  
     <li class="MenuOpen" id="active"><a href="http://www.kitscotypubliclibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Employment--Careers" class="employment_careers_link parent_link" title="Employment &amp; careers"><span>Employment & Careers</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Position-2" title="Job ad for position #2"><span>Job Ad for Position #2</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Position-3" title="Job ad for position #3"><span>Job Ad for Position #3</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Postion-1" title="Job ad for postion #1"><span>Job Ad for Postion #1</span></a></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Hot-Reads" title="Hot reads"><span>Hot Reads</span></a></li><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Newsletter" class="newsletter_link parent_link" title="Newsletter"><span>Newsletter</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/April-2016-Newsletter" title="April 2016 newsletter"><span>April 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/August-2015-Newsletter" title="August 2015 newsletter"><span>August 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/December-2015-Newsletter" title="December 2015 newsletter"><span>December 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/February-2016-Newsletter" title="February 2016 newsletter"><span>February 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/January-2016-Newsletter" title="January 2016 newsletter"><span>January 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/July-2015-Newsletter-" title="July 2015 newsletter "><span>July 2015 Newsletter </span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/June-2015-Newsletter" title="June 2015 newsletter"><span>June 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/March-2016-Newsletter" title="March 2016 newsletter"><span>March 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/May-2016-Newsletter" title="May 2016 newsletter"><span>May 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/November-2014-Newsletter" title="November 2014 newsletter"><span>November 2014 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/October-2015-Newsletter" title="October 2015 newsletter"><span>October 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/September-2015-Newsletter" title="September 2015 newsletter"><span>September 2015 Newsletter</span></a></li></ul></li><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Programs--Activities" class="programs_activities_link parent_link" title="Programs &amp; activities"><span>Programs & Activities</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Books-for-Babies-Registra" title="Books for babies registra"><span>Books for Babies Registra</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/COW-Bus-2011" title="Cow bus 2011"><span>COW Bus 2011</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Cow-Bus-2013" title="Cow bus 2013"><span>Cow Bus 2013</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Knitting--Registrati" title="Knitting  registrati"><span>Knitting  Registrati</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Literacy-Month-2013" title="Literacy month 2013"><span>Literacy Month 2013</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Literacy-Month-2015" title="Literacy month 2015"><span>Literacy Month 2015</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Minecraft-Registration" title="Minecraft registration"><span>Minecraft Registration</span></a></li><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-2014" class="summer_2014_link parent_link" title="Summer 2014"><span>Summer 2014</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-Contest-2014" title="Summer contest 2014"><span>Summer Contest 2014</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-Entertainer-2014" title="Summer entertainer 2014"><span>Summer Entertainer 2014</span></a></li></ul></li><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Winter-Reading-" class="winter_reading__link parent_link" title="Winter reading "><span>Winter Reading </span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Adult-Reading-Log" title="Adult reading log"><span>Adult Reading Log</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Youth-Reading-Log" title="Youth reading log"><span>Youth Reading Log</span></a></li></ul></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Public-Survey" target="_blank" title="Public survey"><span>Public Survey</span></a></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.kitscotypubliclibrary.ab.ca/New-Titles-at-the-Library" class="new_titles_at_the_library_link parent_link" title="New Titles at the Library"><span>New Titles at the Library</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Adult" title="Adult"><span>Adult</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Children" title="Children"><span>Children</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Young-Adult" title="Young adult"><span>Young Adult</span></a></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
-  
 </ul>
 
 	</nav>
@@ -605,72 +601,51 @@ if (typeof jQuery != 'undefined') {
     <span class="latest_posts_count">(5)</span>
   </h4>
   <ul>
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/6401">				
-	  Summer Employment at the Library			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/6401">
+	    Summer Employment at the Library
+          </a>
         <p>&nbsp;The Public Library will be hiring 3 positions for the Summer. Please see the May Newsletter for all the details. Information will also be ava...
         <!-- <a href="/blogs/show_entry/6401">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5708">				
-	  Merry Christmas 2015			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5708">
+	    Merry Christmas 2015
+          </a>
         <p>&nbsp;Merry Christmas from the Board and Staff of the Kitscoty Hilltop Public Library! Our Gift to you .... Starting January 1, 2015 Membership Car...
         <!-- <a href="/blogs/show_entry/5708">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5701">				
-	  Winter Reading Contest			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5701">
+	    Winter Reading Contest
+          </a>
         <p>&nbsp;This is not just a children's contest .... it is for the WHOLE FAMILY. Read a minimum of 7 hours and get your name entered for prizes through...
         <!-- <a href="/blogs/show_entry/5701">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5700">				
-	  Book Talk			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5700">
+	    Book Talk
+          </a>
         <p>&nbsp;Be sure to mark your Calendar!!!! &nbsp;The Public Library is hosting local Author Billi J Miller to come and speak about her newly published...
         <!-- <a href="/blogs/show_entry/5700">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
-    
       <li class="new_post">
-        
 	<div class="rightNew_post">
-        <a class="post_title" href="/blogs/show_entry/5699">				
-	  Literacy Month			 			
-        </a>
+          <a class="post_title" href="/blogs/show_entry/5699">
+	    Literacy Month
+          </a>
         <p>&nbsp;Check out our event page to see all the events happening during Literacy Month - January 2016! There is something happening each Wednesday ev...
         <!-- <a href="/blogs/show_entry/5699">More...</a> --></p>
 	</div>      
 	</li>
-    
-  
   </ul>
   <h6 class="more"><a href="/blogs/show/246">+ MORE</a></h6>
 </div>
@@ -681,13 +656,9 @@ if (typeof jQuery != 'undefined') {
 	<section id="latestEvents">
 		<h3 class="headerBox">Upcoming Events <span><a href="/calendars/show/246">More</a></span></h3>
 				
-			
-  <div class="ResourceBox insite latest_events" id="latest_events_box">
-    
+			  <div class="ResourceBox insite latest_events" id="latest_events_box">
       There are currently no events in our calendar. Check back soon for updates.
-    
   </div>
-
 
 		
 
@@ -695,77 +666,40 @@ if (typeof jQuery != 'undefined') {
 	
 	<nav id="actionSteps" class="rightItem">
 		<h3 class="headerBox">Connect with Us</h3>
-		  
-    
-    
-      
-    
-    
-      <dl class="action_steps">
+		      <dl class="action_steps">
 	<dt>Action Steps</dt>
-		  	    <dd id="action_983">
-	      
-              
-	      
+	    <dd id="action_983">
 	        <img alt="Call (780) 846-2822" class="action_steps_image" src="/images/icons/fff_action_steps/user_go.png?1445483283" title="Call (780) 846-2822" />
 		
 		Call (780) 846-2822
 		
-	      
 	    </dd>
 	   
-		  	    <dd id="action_984">
-	      
-              
-	      
+		    <dd id="action_984">
 	        <img alt="Fax (780) 846-2215" class="action_steps_image" src="/images/icons/fff/printer.png?1445483283" title="Fax (780) 846-2215" />
 		
 		Fax (780) 846-2215
 		
-	      
 	    </dd>
 	   
 	 
-        
 	  <dd id="action_def_email">
-  	     
-	    
 	      <img alt="Email Us" class="action_steps_image" src="/images/icons/fff/email.png?1445483283" title="Email Us" />
   	      <a href="/page/contact/246" class="action_step_link">Email Us</a>
-	    
 	  </dd>
-        
-	
   	  <dd id="action_def_subscribe">
-  	    
-	    
 	      <img alt="Subscribe" class="action_steps_image" src="/images/icons/fff/newspaper.png?1445483283" title="Subscribe" />
-  	      <a href="/newsletters/subscribe?page=3742&amp;return_url=%2F" class="action_step_link">Subscribe</a>
-	    
+  	      <a href="/newsletters/subscribe?page=3742&amp;return_url=http%3A%2F%2Fwww.kitscotypubliclibrary.ab.ca%2F" class="action_step_link">Subscribe</a>
   	  </dd>
-	
-        
           <dd id="action_def_print">
-            
-	    
 	      <img alt="Print this Page" class="action_steps_image" src="/images/icons/fff/page.png?1445483283" title="Print this Page" />
     	      <a class="action_step_link" href="#" onclick="print(); return false;; return false;">Print this Page</a>
-	    
           </dd>
-        
-	
 	  <dd id="action_def_send_friend">
-	     
-	    
 	      <img alt="Send to a friend" class="action_steps_image" src="/images/icons/fff/user_go.png?1445483283" title="Send to a friend" />
-	      <a href="/page/email?page_url=%2F&amp;site_id=246" class="action_step_link">Send to a friend</a>
-	    
+	      <a href="/page/email?page_url=http%3A%2F%2Fwww.kitscotypubliclibrary.ab.ca%2F&amp;site_id=246" class="action_step_link">Send to a friend</a>
 	  </dd>
-        
-        
-        
       </dl>
-  
 
 
 	</nav>
@@ -776,12 +710,9 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="subNavigation" class="rightItem">
 			<h3>Links</h3>
-			
-
-<ul id="SubNav">
+			<ul id="SubNav">
   <li class="drop"><a href="http://www.kitscotypubliclibrary.ab.ca/Employment--Careers" class="employment_careers_link" target="" title="Employment &amp; careers"><span>Employment & Careers</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Position-2" class="job_ad_for_position_2_link123" target="" title="Job ad for position #2"><span>Job Ad for Position #2</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Position-3" class="job_ad_for_position_3_link123" target="" title="Job ad for position #3"><span>Job Ad for Position #3</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Postion-1" class="job_ad_for_postion_1_link123" target="" title="Job ad for postion #1"><span>Job Ad for Postion #1</span></a></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Hot-Reads" class="hot_reads_link123" target="" title="Hot reads"><span>Hot Reads</span></a></li><li class="drop"><a href="http://www.kitscotypubliclibrary.ab.ca/Newsletter" class="newsletter_link" target="" title="Newsletter"><span>Newsletter</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/April-2016-Newsletter" class="april_2016_newsletter_link123" target="" title="April 2016 newsletter"><span>April 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/August-2015-Newsletter" class="august_2015_newsletter_link123" target="" title="August 2015 newsletter"><span>August 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/December-2015-Newsletter" class="december_2015_newsletter_link123" target="" title="December 2015 newsletter"><span>December 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/February-2016-Newsletter" class="february_2016_newsletter_link123" target="" title="February 2016 newsletter"><span>February 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/January-2016-Newsletter" class="january_2016_newsletter_link123" target="" title="January 2016 newsletter"><span>January 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/July-2015-Newsletter-" class="july_2015_newsletter__link123" target="" title="July 2015 newsletter "><span>July 2015 Newsletter </span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/June-2015-Newsletter" class="june_2015_newsletter_link123" target="" title="June 2015 newsletter"><span>June 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/March-2016-Newsletter" class="march_2016_newsletter_link123" target="" title="March 2016 newsletter"><span>March 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/May-2016-Newsletter" class="may_2016_newsletter_link123" target="" title="May 2016 newsletter"><span>May 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/November-2014-Newsletter" class="november_2014_newsletter_link123" target="" title="November 2014 newsletter"><span>November 2014 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/October-2015-Newsletter" class="october_2015_newsletter_link123" target="" title="October 2015 newsletter"><span>October 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/September-2015-Newsletter" class="september_2015_newsletter_link123" target="" title="September 2015 newsletter"><span>September 2015 Newsletter</span></a></li></ul></li><li class="drop"><a href="http://www.kitscotypubliclibrary.ab.ca/Programs--Activities" class="programs_activities_link" target="" title="Programs &amp; activities"><span>Programs & Activities</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Books-for-Babies-Registra" class="books_for_babies_registra_link123" target="" title="Books for babies registra"><span>Books for Babies Registra</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/COW-Bus-2011" class="cow_bus_2011_link123" target="" title="Cow bus 2011"><span>COW Bus 2011</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Cow-Bus-2013" class="cow_bus_2013_link123" target="" title="Cow bus 2013"><span>Cow Bus 2013</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Knitting--Registrati" class="knitting_registrati_link123" target="" title="Knitting  registrati"><span>Knitting  Registrati</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Literacy-Month-2013" class="literacy_month_2013_link123" target="" title="Literacy month 2013"><span>Literacy Month 2013</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Literacy-Month-2015" class="literacy_month_2015_link123" target="" title="Literacy month 2015"><span>Literacy Month 2015</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Minecraft-Registration" class="minecraft_registration_link123" target="" title="Minecraft registration"><span>Minecraft Registration</span></a></li><li class="drop"><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-2014" class="summer_2014_link" target="" title="Summer 2014"><span>Summer 2014</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-Contest-2014" class="summer_contest_2014_link123" target="" title="Summer contest 2014"><span>Summer Contest 2014</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-Entertainer-2014" class="summer_entertainer_2014_link123" target="" title="Summer entertainer 2014"><span>Summer Entertainer 2014</span></a></li></ul></li><li class="drop"><a href="http://www.kitscotypubliclibrary.ab.ca/Winter-Reading-" class="winter_reading__link" target="" title="Winter reading "><span>Winter Reading </span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Adult-Reading-Log" class="adult_reading_log_link123" target="" title="Adult reading log"><span>Adult Reading Log</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Youth-Reading-Log" class="youth_reading_log_link123" target="" title="Youth reading log"><span>Youth Reading Log</span></a></li></ul></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Public-Survey" class="public_survey_link123" target="_blank " title="Public survey"><span>Public Survey</span></a></li>
 </ul>
-
 
 		</nav>
 		
@@ -801,16 +732,10 @@ if (typeof jQuery != 'undefined') {
 
 	<section id="userInput" class="fontOverride">
 		
-
 		
 
 
-
-
-
-
-
-<h2 style="text-align: center">&nbsp;</h2>
+  <h2 style="text-align: center">&nbsp;</h2>
 <h1 style="text-align: center">&nbsp;</h1>
 
 
@@ -823,8 +748,6 @@ if (typeof jQuery != 'undefined') {
       <a href="#top">BACK TO TOP</a>
     </h6>
   </div>
-  
-  
 </div>
 
  </span>
@@ -845,87 +768,7 @@ if (typeof jQuery != 'undefined') {
 			
 				<div> <!-- start book group of 5 -->
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399167324&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399167324.gif" />Piranha :<BR/>By </a>
-			
-				
-					</div> <!-- end book group of 5 -->
-					<div>
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
 			
 				
 			
@@ -947,7 +790,29 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781616203689&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781616203689.gif" />The Daylight Marriage : A Novel.<BR/>By Pitlor, Heidi.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -961,8 +826,55 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781250049582&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781250049582.gif" />Lord of the Wings : A Meg Langslow Mystery.<BR/>By Andrews, Donna.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781478985952&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781478985952.gif" />Miracle at Augusta<BR/>By Patterson, James.</a>
 			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780316408752&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780316408752.gif" />14th Deadly Sin<BR/>By Patterson, James.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062320131&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062320131.gif" />The English Spy<BR/>By Silva, Daniel.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780061655999&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780061655999.gif" />One mile under / Andrew Gross.<BR/>By Gross, Andrew, 1952- author</a>
+			
+				
+					</div> <!-- end book group of 5 -->
+					<div>
 				
 			
 			
@@ -983,7 +895,7 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9781409153375&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9781409153375.gif" />Sins of the father / Graham Hurley.<BR/>By Hurley, Graham, author</a>
 			
 				
 			
@@ -1005,7 +917,18 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780143175766&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780143175766.gif" />The Angel of Eden<BR/>By McIntosh, D.J.</a>
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780312583217&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780312583217.gif" />Badlands<BR/>By Box, C.J.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780062398925&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780062398925.gif" />Blood Infernal :<BR/>By Rollins, James.</a>
 			
 				
 					</div> <!-- end book group of 5 -->
@@ -1019,18 +942,18 @@ if (typeof jQuery != 'undefined') {
 				 
 				 
 			
+			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780307989901&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780307989901.gif" />Circling the Sun :<BR/>By McLain, Paula.</a>
+			
+				
+			
+			
+			
+				
+				 
+				 
+				 
+			
 			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780399175862&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780399175862.gif" />The liar / Nora Roberts.<BR/>By Roberts, Nora, author</a>
-			
-				
-			
-			
-			
-				
-				 
-				 
-				 
-			
-			  <a href="http://catalogue.tracpac.ab.ca/polaris/search/searchresults.aspx?ctx=1.1033.0.0.3&type=Keyword&term=9780385685078&by=ISBN&sort=RELEVANCE&limit=TOM=*&query=&page=0" target="_blank"><img src="/book_covers/9780385685078.gif" />In the Unlikely Event :<BR/>By </a>
 			
 				
 					</div><!-- end book group -->
@@ -1053,7 +976,7 @@ if (typeof jQuery != 'undefined') {
 
 <section id="logoBand">
 	<div class="pageInner">
-		<a href="http://ezproxy.aepnl.talonline.ca/login?url=http://library.pressdisplay.com"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
+		<a href="http://www.pressreader.com/"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/pressreader_icon1.jpg" alt="Library Press Display" title="Library Press Display"></a>
 		<a href="http://ebook.3m.com/library/trac/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/3M_Logo.jpg" title="3M" alt="3M"></a>
 		<a href="https://www.rbdigital.com/nllsab/service/zinio/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Zinio_logo.jpg" title="Zinio Newstand" alt="Zinio Newstand"></a>
 		<a href="https://melibraries.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/Melibraries logo.jpg" title="ME Library" alt="ME Libraries - Alberta Wide Borrowing"></a>	
@@ -1095,61 +1018,39 @@ if (typeof jQuery != 'undefined') {
 		
 		<nav id="footerNavigation">
 			<ul id="SiteNavBar">
-  
     <li class="MenuOpen" id="active"><a href="http://www.kitscotypubliclibrary.ab.ca/Home" class="home_link parent_link" title="Home"><span>Home</span></a><ul><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Employment--Careers" class="employment_careers_link parent_link" title="Employment &amp; careers"><span>Employment & Careers</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Position-2" title="Job ad for position #2"><span>Job Ad for Position #2</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Position-3" title="Job ad for position #3"><span>Job Ad for Position #3</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Job-Ad-for-Postion-1" title="Job ad for postion #1"><span>Job Ad for Postion #1</span></a></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Hot-Reads" title="Hot reads"><span>Hot Reads</span></a></li><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Newsletter" class="newsletter_link parent_link" title="Newsletter"><span>Newsletter</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/April-2016-Newsletter" title="April 2016 newsletter"><span>April 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/August-2015-Newsletter" title="August 2015 newsletter"><span>August 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/December-2015-Newsletter" title="December 2015 newsletter"><span>December 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/February-2016-Newsletter" title="February 2016 newsletter"><span>February 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/January-2016-Newsletter" title="January 2016 newsletter"><span>January 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/July-2015-Newsletter-" title="July 2015 newsletter "><span>July 2015 Newsletter </span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/June-2015-Newsletter" title="June 2015 newsletter"><span>June 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/March-2016-Newsletter" title="March 2016 newsletter"><span>March 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/May-2016-Newsletter" title="May 2016 newsletter"><span>May 2016 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/November-2014-Newsletter" title="November 2014 newsletter"><span>November 2014 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/October-2015-Newsletter" title="October 2015 newsletter"><span>October 2015 Newsletter</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/September-2015-Newsletter" title="September 2015 newsletter"><span>September 2015 Newsletter</span></a></li></ul></li><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Programs--Activities" class="programs_activities_link parent_link" title="Programs &amp; activities"><span>Programs & Activities</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Books-for-Babies-Registra" title="Books for babies registra"><span>Books for Babies Registra</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/COW-Bus-2011" title="Cow bus 2011"><span>COW Bus 2011</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Cow-Bus-2013" title="Cow bus 2013"><span>Cow Bus 2013</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Knitting--Registrati" title="Knitting  registrati"><span>Knitting  Registrati</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Literacy-Month-2013" title="Literacy month 2013"><span>Literacy Month 2013</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Literacy-Month-2015" title="Literacy month 2015"><span>Literacy Month 2015</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Minecraft-Registration" title="Minecraft registration"><span>Minecraft Registration</span></a></li><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-2014" class="summer_2014_link parent_link" title="Summer 2014"><span>Summer 2014</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-Contest-2014" title="Summer contest 2014"><span>Summer Contest 2014</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Summer-Entertainer-2014" title="Summer entertainer 2014"><span>Summer Entertainer 2014</span></a></li></ul></li><li class="drop MenuOpen"><a href="http://www.kitscotypubliclibrary.ab.ca/Winter-Reading-" class="winter_reading__link parent_link" title="Winter reading "><span>Winter Reading </span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Adult-Reading-Log" title="Adult reading log"><span>Adult Reading Log</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Youth-Reading-Log" title="Youth reading log"><span>Youth Reading Log</span></a></li></ul></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Public-Survey" target="_blank" title="Public survey"><span>Public Survey</span></a></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/About-Us" title="About us"><span>About Us</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Contact-Us" title="Contact us"><span>Contact Us</span></a></li><li class="drop"><a href="http://www.kitscotypubliclibrary.ab.ca/New-Titles-at-the-Library" class="new_titles_at_the_library_link parent_link" title="New Titles at the Library"><span>New Titles at the Library</span></a><ul><li><a href="http://www.kitscotypubliclibrary.ab.ca/Adult" title="Adult"><span>Adult</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Children" title="Children"><span>Children</span></a></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/Young-Adult" title="Young adult"><span>Young Adult</span></a></li></ul></li><li><a href="http://www.kitscotypubliclibrary.ab.ca/e-Resources" target="_blank" title="E-resources"><span>e-Resources</span></a></li>
-  
 </ul>
 
 		</nav>
 		
 		<nav id="footerModules">
 			
-
 <ul id="NavBar">
-  
     <li >
-      <a href="/blogs/show/246" class="blog_link active_page" title="Blog">Blog</a>
-    </li>
-  
-  
-    <li  >
       
+      <a href="/blogs/show?site=246" class="blog_link active_page" title="Blog"><span>Blog</span></a>
+    </li>
+    <li  >
       <a href="/calendars/table/246" class="events_link active_page" title="Events"><span>Events</span></a>
     </li>
-  
-  
     <li >
-      <a href="/galleries/show/246" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
+      <a href="/galleries/show?site=246" class="photos_link active_page" title="Photos"><span>Photo Gallery</span></a>
     </li>
-  
 
-  
-    
-      
 	<li >
           <a href="/map/show/225" class="map_link active_page" title="Map to Library"><span>Map To Library</span></a>
         </li>
-      
-    
-  
-  
 
-  
 
-  
 	
-  
 	
-  
-  
-  
 </ul>
 
 		</nav>
 		
 		<aside id="userInput">
 		
-			
+			<script src="https://my.nicheacademy.com/api/widget/nlls"></script>
 		</aside>
 	</div>
 </footer>
@@ -1158,7 +1059,7 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<a href="http://www.tracpac.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-trac.png" title="TRACpac" alt="TRACpac"></a>
 		<a href="http://www.nlls.ab.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-nlls.png" title="NLLS" alt="Northern Lights Library System"></a>
-		<a href="http://talonline.worldcat.org/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
+		<a href="http://talonline.ca/" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-alberta-lib.png" title="The Alberta Library" alt="The Alberta Library"></a>
 		<a href="http://www.nlls.ab.ca/eResources"  target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-databases.png" title="Databases" alt="Databases"></a>
 		<a href="http://www.econolution.com/Community-Partners" target="_blank"><img src="http://cloud.townlife.ca/themes/2Column/Yavin/Library101/img/logo-townlife.png" title="TownLife Community Partner" alt="TownLife Community Partner"></a>
 		</div>
@@ -1168,38 +1069,21 @@ if (typeof jQuery != 'undefined') {
 	<div class="pageInner">
 		<nav id="econoLution">
 			<p id="copyRight">All rights reserved.  &copy; Copyright <span id="year">2016</span>&nbsp;<a href="/rss/246" target="_blank">RSS</a></p>
-			
-  <ul>
-    
+			  <ul>
       <li class="NoBorder">	  	
         <a href="https://www.townlife.com/login"><img src='/images/icons/fff/lock.png' alt='Log In' /> Log In</a>	  	
       </li>
-    
   </ul>
 
-
-
   <p id="hoston">
-    
     	Powered by
-				
 		<a href="http://www.townlife.com">TownLife.com</a>	
-	
-    
   </p>
 
-
-
-  
-  
     <p>This site contributes to		
-    
     <a href="http://www.nlls.ab.ca">Northern Lights Library System</a>.
 			
-			
 		</p>
-	
-
 
 		</nav>
 	</div>
@@ -1336,6 +1220,31 @@ Modernizr.load([{
 
 
 
+<script src="http://cloud.townlife.ca/themes/Shared/jQuery/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function($) {
+
+		//Single Image Lightbox: for latest news thumb popup
+		$('.new_post .image-popup-vertical-fit').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-img-mobile',
+			image: {
+				verticalFit: true	
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});	
+		
+});
+</script>
+
+
+
 
 
 
@@ -1362,3 +1271,4 @@ Modernizr.load([{
 </div>
 </body>
 </html>
+

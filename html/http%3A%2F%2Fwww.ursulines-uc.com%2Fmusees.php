@@ -218,7 +218,7 @@
 <p>6 rue du Parloir, Vieux Québec<br />418 692-2523</p>
 <p>Responsable : <a href="mailto:dufferin49@yahoo.fr" target="_blank">Sr Lise Munro</a><a href="mailto:margueritechenard@yahoo.ca" target="_blank"><br /></a></p>
 <h4>Horaire </h4>
-<p>Ouvert de mai à octobre de 10h à 16h<br />et sur demande en d'autres temps.</p>
+<p>Ouvert de mai à octobre de 10h30 à 16h30<br />et sur demande en d'autres temps.</p>
 <p> </p>
 <p> </p>
                 </div>
@@ -289,57 +289,6 @@
     </div>
 </div>
 
-
-<div class="b-base b-base-blanc b-onecol b-lieu">
-    <div class="b-base-cell b-base-padding-all">
-        <div class="b-contenu-content rm-margin-first rm-margin-last">
-            <h2 class="b-base-title">Autres lieux et monast&#232;res</h2>
-            <div class="rte rm-margin-first">
-                
-            </div>
-        </div>
-<div class="info-map" data-type="coordonees" data-map-latitude="46.811727" data-map-longitude="-71.208244" data-map-title="Parloir Marie de l&#39;Icarnation" data-map-info="self" data-map-tag=" 1" data-map-picture="">
-    <div class="">
-
-        <h3>Parloir Marie de l&#39;Icarnation</h3>
-        <p>6, rue du parloir, Vieux Québec, G1R 4M5</p>
-<p>Ouvert du mardi au dimanche de 10h30 à 16h30</p>
-<p><strong>Directrice </strong>S. Marguerite Chénard</p>
-    </div>
-</div><div class="info-map" data-type="coordonees" data-map-latitude="48.466628" data-map-longitude="-67.424868" data-map-title="Maison d&#39;Ang&#232;le" data-map-info="self" data-map-tag=" 1" data-map-picture="">
-    <div class="">
-
-        <h3>Maison d&#39;Ang&#232;le</h3>
-        <p>2, rue Lelcerc, Amqui, Qc, G5J 1L7</p>
-<p><strong>Responsable</strong> Sœur Françoise Massé</p>
-<p>Tél. : (418) 629-6640</p>
-<p>Accompagnement et animation des « <em>Soirée des couples à La Maison d'Angèle</em> ».<br />Accompagnement, écoute, accueil, partage de prière.</p>
-    </div>
-</div><div class="info-map" data-type="coordonees" data-map-latitude="46.811742" data-map-longitude="-71.208133" data-map-title="Tombeau de Marie de l&#39;Incarnation" data-map-info="self" data-map-tag=" 1" data-map-picture="">
-    <div class="">
-
-        <h3>Tombeau de Marie de l&#39;Incarnation</h3>
-        <p>2, rue du parloir, Vieux Québec, G1R 4M5</p>
-<p>Ouvert de mai à octobre de 10h à 16h<br />Fermé de novembre à avril</p>
-    </div>
-</div><div class="info-map" data-type="coordonees" data-map-latitude="49.195690" data-map-longitude="-68.250344" data-map-title="Accueil Marie de l&#39;Incarnation" data-map-info="self" data-map-tag=" 1" data-map-picture="">
-    <div class="">
-
-        <h3>Accueil Marie de l&#39;Incarnation</h3>
-        <p>451, rue Marguerite, Baie-Comeau, Qc, G5C 1G9</p>
-<p><strong>Responsables </strong>Soeur Jeannette Lord et laïques</p>
-<p>Services auprès des mères célibataires.</p>
-<p>Tél. : (418) 589-6418</p>
-<a title="site web" href="http://centredejouramli.wix.com/centredejouramli#!halte-garderie-/cx22" target="_blank">site web</a>    </div>
-</div><div class="info-map" data-type="coordonees" data-map-latitude="46.852842" data-map-longitude="-71.352115" data-map-title="Centre de spiritualit&#233; des Ursulines" data-map-info="self" data-map-tag=" 1" data-map-picture="">
-    <div class="">
-
-        <h3>Centre de spiritualit&#233; des Ursulines</h3>
-        <p><span>20 Rue des Dames-Ursulines, Ville de Québec, QC G2B 2V1<br />418-842-1421<br /></span></p>
-    </div>
-</div>        <div id="map-canvas" class="b-lieu-carte-seule"></div>
-    </div>
-</div>
     </section>
 
 
@@ -392,7 +341,7 @@
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.7/jquery.placeholder.min.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa5JrE8nmVRY-_P7UJJzdshLRCH0Y9BPM&amp;sensor=FALSE" type="text/javascript"></script><script src="DependencyHandler.axd?s=L3NjcmlwdHMvcGx1Z2lucy9tYXJrZXJjbHVzdGVyZXIuanM7L3NjcmlwdHMvcGx1Z2lucy9pbmZvYm94LmpzOy9zY3JpcHRzL3BsdWdpbnMvc2lnbXVuZC5jYXJ0ZS5qczsvc2NyaXB0cy9wbHVnaW5zL3NpZ211bmQuY2FydGUubGlldXguc2V1bC5qczsvc2NyaXB0cy9wbHVnaW5zL3NpZ211bmQudHJhbnNpdGlvbi5kaXNhYmxlLmpzOy9zY3JpcHRzL3BsdWdpbnMvc2lnbXVuZC5mb3JtLmlucHV0dGV4dC5qczsvc2NyaXB0cy9wbHVnaW5zL3NpZ211bmQubmF2LmpzOy9zY3JpcHRzL3BsdWdpbnMvc2lnbXVuZC5nYWxlcmllLmpzOy9zY3JpcHRzL3BsdWdpbnMvc2lnbXVuZC5mYW5jeWJveC5qczs&amp;t=Javascript&amp;cdv=262362362" type="text/javascript"></script>
+    <script src="DependencyHandler.axd?s=L3NjcmlwdHMvcGx1Z2lucy9zaWdtdW5kLnRyYW5zaXRpb24uZGlzYWJsZS5qczsvc2NyaXB0cy9wbHVnaW5zL3NpZ211bmQuZm9ybS5pbnB1dHRleHQuanM7L3NjcmlwdHMvcGx1Z2lucy9zaWdtdW5kLm5hdi5qczsvc2NyaXB0cy9wbHVnaW5zL3NpZ211bmQuZ2FsZXJpZS5qczsvc2NyaXB0cy9wbHVnaW5zL3NpZ211bmQuZmFuY3lib3guanM7&amp;t=Javascript&amp;cdv=262362362" type="text/javascript"></script>
     
 
 </body>

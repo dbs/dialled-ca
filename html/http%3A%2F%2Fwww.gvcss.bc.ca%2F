@@ -2,30 +2,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head id="ctl00_Head1">
-		<script type="text/javascript">
-			//<![CDATA[
-			var PH = [];
-			function addPageLoad_Handler(_f) { PH.push(_f); }
-			function addPageLoad_Handler2(_f) { PH.unshift(_f); }
-			function runPageLoad_Handlers() { for (var i = 0; i < PH.length; i++) { PH[i](); } }
-			var ARSH = [];
-			function addAjaxOnRequestStart_Handler(_f) { ARSH.push(_f); }
-			function addAjaxOnRequestStart_Handler2(_f) { ARSH.unshift(_f); }
-			function runAjaxOnRequestStart_Handlers(_s, _a) { for (var i = 0; i < ARSH.length; i++) { ARSH[i](_s, _a); } }
-			var AREH = [];
-			function addAjaxOnResponseEnd_Handler(_f) { AREH.push(_f); }
-			function addAjaxOnResponseEnd_Handler2(_f) { AREH.unshift(_f); }
-			function runAjaxOnResponseEnd_Handlers(_s, _a) { for (var i = 0; i < AREH.length; i++) { AREH[i](_s, _a); } }
-			function getFormTag() { try { var f = $telerik.$("#aspnetForm"); if (f.length == 1) { return f[0]; } } catch (x) { } return null; }
-			//]]>
-		</script>
+			<script type="text/javascript">
+				//<![CDATA[
+				var PH = [];
+				function addPageLoad_Handler(_f, _r, _s) { PH.push(_f); if (typeof (_r) != "undefined" && _r) { addResize_Handler(_f); } if (typeof (_s) != "undefined" && _s) { addScroll_Handler(_f); } }
+				function addPageLoad_Handler2(_f, _r, _s) { PH.unshift(_f); if (typeof (_r) != "undefined" && _r) { addResize_Handler2(_f); } if (typeof (_s) != "undefined" && _s) { addScroll_Handler2(_f); } }
+				function runPageLoad_Handlers() { for (var i = 0; i < PH.length; i++) { PH[i](); } }
+				var RH = [];
+				var RHT = null;
+				function addResize_Handler(_f) { RH.push(_f); }
+				function addResize_Handler2(_f) { RH.unshift(_f); }
+				function runResize_Handlers() { window.clearTimeout(RHT); RHT = window.setTimeout(function () { for (var i = 0; i < RH.length; i++) { RH[i](); } }, 500); }
+				var SH = [];
+				function addScroll_Handler(_f) { SH.push(_f); }
+				function addScroll_Handler2(_f) { SH.unshift(_f); }
+				function runScroll_Handlers(_e) { for (var i = 0; i < SH.length; i++) { SH[i](_e); } }
+				var ARSH = [];
+				function addAjaxOnRequestStart_Handler(_f) { ARSH.push(_f); }
+				function addAjaxOnRequestStart_Handler2(_f) { ARSH.unshift(_f); }
+				function runAjaxOnRequestStart_Handlers(_s, _a) { for (var i = 0; i < ARSH.length; i++) { ARSH[i](_s, _a); } }
+				var AREH = [];
+				function addAjaxOnResponseEnd_Handler(_f) { AREH.push(_f); }
+				function addAjaxOnResponseEnd_Handler2(_f) { AREH.unshift(_f); }
+				function runAjaxOnResponseEnd_Handlers(_s, _a) { for (var i = 0; i < AREH.length; i++) { AREH[i](_s, _a); } }
+				function getFormTag() { try { var f = $telerik.$("#aspnetForm"); if (f.length == 1) { return f[0]; } } catch (x) { if (document.forms.length > 0) { return document.forms[0]; } else { var form = document.createElement("FORM"); form.method = 'POST'; document.appendChild(form); return form; } } }
+				function getAjaxManager() { return $find("ctl00_RadAjaxManager1"); }
+				//]]>
+			</script>
 		
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="canonical" href="http://www.gvcss.bc.ca/default.htm" />
 <meta name="generator" content="IdeaLever.CM" />
 <meta name="robots" content="ALL" />
-<link rel="stylesheet" type="text/css" href="/SiteCM3/CSS/Common.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="/RadControls/Skins/Menu.css" media="screen" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="canonical" href="http://www.gvcss.bc.ca/default.htm" />
+
+<link rel="stylesheet" type="text/css" href="/SiteCM3/CSS/Common.css" media="Screen" />
+<link rel="stylesheet" type="text/css" href="/RadControls/Skins/Menu.css" media="Screen" />
 <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="/css/structure.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="/css/topmenu/styles.css" media="screen" />
@@ -33,6 +45,8 @@
 <link rel="stylesheet" type="text/css" href="/CSS/SiteCM/BreadCrumb.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
 
+<script type="text/javascript" src="/cm/scripts/handlers/1.0.0/add_resize_event.js"></script>
+<script type="text/javascript" src="/cm/scripts/handlers/1.0.0/add_scroll_event.js"></script>
 <script type="text/javascript" src="/cm/scripts/common.js"></script>
 <script type="text/javascript" src="/cm/scripts/FadeSlideshow/2.0/fadeslideshow.js"></script>
 <script type="text/javascript">
@@ -41,13 +55,15 @@ function runDeferredLoading(){
 }
 </script>
 <title>
-	home support, community living, assisted living | Greater Vancouver Community Services Society
+	home support, community living, assisted living: | Greater Vancouver Community Services Society
 </title></head>
 	<body onload="runDeferredLoading();" class="Home is_home">
 	    
+
+
+
 <script type="text/javascript">
-	//<![CDATA[
-	
+    //<![CDATA[
     
 		var _gaq = _gaq || [];
 		var _gaqs = 0;
@@ -64,25 +80,25 @@ function runDeferredLoading(){
 			
     
     
-		(function() {
+            addPageLoad_Handler(function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';	
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-		if(typeof(addPageLoad_Handler) === "function" && typeof(updateLinksWithGoogleTracking) === "function"){
-			addPageLoad_Handler(updateLinksWithGoogleTracking);
-		}
+        document.documentElement.firstChild.appendChild(ga);
+    });
+    //if(typeof(updateLinksWithGoogleTracking) === "function"){
+    //	addPageLoad_Handler(updateLinksWithGoogleTracking);
+    //}
 	
 	
 //]]>
 </script>
-		<form method="post" action="/default.htm" id="aspnetForm">
+		<form method="post" action="/" id="aspnetForm">
 <div class="aspNetHidden">
 <input type="hidden" name="ctl00_RadScriptManager1_TSM" id="ctl00_RadScriptManager1_TSM" value="" />
 <input type="hidden" name="ctl00_RadStyleSheetManager1_TSSM" id="ctl00_RadStyleSheetManager1_TSSM" value="" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="BNNyobgse0YducBM0J6K98aFpwMeWQIveyhfrJ/o94i6LwmKY//QX5JrScvX9vDuygncWWvuIZzxlf+pM4hJ1jbJnp1tiER6xWbrr73drDBNpTYCce5R4ioloOT7tzyKGBPK0RPvzGFQLWuK6oGIjt3h716kGVWtPi/j6PG1SmbwOae40RkzlY4Edmgd29xpUVtlLF4yLy11mYCLju8t0RdDHgFe32xkKT7xQz9xCwnxkRidqQdBnRJ5P9r8tLf2iUsI4bbvJ72NWKh4Def430lm8zA=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="VR2fRLvV303uXBnuIvdE3A2BZAveVmSAeB5Sg1VDYYEwzLQEwoTOi2HE9zmJhNQgZar9/TeHS4WnBycokVGgdVfZzRTprndq5J640sL3/9RHJKy0Kffb/zu5XPjaBff8pIcShl4Wogw7O7rYMOspLSqGNKG5KG4z0/B1SRBgnz5ugZ8wjfVnIip/QOdsxiaiTsiZDsDLlest4btzbfTUGWDS+U3ruJHiHA3mwWXh0TBEdWdhVCrcYp6no7koaWoktwA4+Xiv0P250HutOnecUQa+jgA=" />
 </div>
 
 <script type="text/javascript">
@@ -105,7 +121,7 @@ function __doPostBack(eventTarget, eventArgument) {
 <script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZOzrDV3OpNBQ5Jts2Gb24O_9RcbwOq3ZSEdTaY1I0S28xKlkTA2&amp;t=635803038500000000" type="text/javascript"></script>
 
 
-<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3ad28568d3-e53e-4706-928f-3765912b66ca%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2014.2.618.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3ac2a18db7-86da-48b4-9f76-1abfbd0fdbd4%3a16e4e7cd%3aed16cbdc%3af7645509%3a24ee1bba%3ae330518b%3a2003d0b8%3ac128760b%3a1e771326%3a88144a7a%3ac8618e41%3a1a73651d%3a333f8d94" type="text/javascript"></script>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_RadScriptManager1_TSM&amp;compress=2&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3ad28568d3-e53e-4706-928f-3765912b66ca%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2015.2.826.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3aaeb4b824-3293-4ba4-94af-5c6d48e271a3%3a16e4e7cd%3aed16cbdc%3af7645509%3a24ee1bba%3ae330518b%3a2003d0b8%3ac128760b%3a88144a7a%3a1e771326%3ac8618e41%3a1a73651d%3a333f8d94" type="text/javascript"></script>
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="81EDE6D0" />
@@ -116,7 +132,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'aspnetFo
 //]]>
 </script>
 
-			<!-- 2014.2.618.45 --><div id="ctl00_RadAjaxManager1SU">
+			<!-- 2015.2.826.45 --><div id="ctl00_RadAjaxManager1SU">
 	<span id="ctl00_RadAjaxManager1" style="display:none;"></span>
 </div>
 			
@@ -200,18 +216,18 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'aspnetFo
 				</table>             
 			</div>
             <div class="rotator">
-<div id="fadeshow68b3c5d40" class="ImageRotator_Wrapper ImageRotator_Category12405"></div>
+<div id="fadeshowdfe4db965" class="ImageRotator_Wrapper ImageRotator_Category12405"></div>
 
 <script type="text/javascript">
 //<![CDATA[
-	var mygallery68b3c5d40;
+	var mygallerydfe4db965;
 	function loadFadeSlideShow_ctl00_HeaderPlaceholder1_ctl00_ImageRotator1(){
-		mygallery68b3c5d40 = new fadeSlideShow({
-			wrapperid: "fadeshow68b3c5d40", //ID of blank DIV on page to house Slideshow
+		mygallerydfe4db965 = new fadeSlideShow({
+			wrapperid: "fadeshowdfe4db965", //ID of blank DIV on page to house Slideshow
 			dimensions: [950, 214], //width/height of gallery in pixels. Should reflect dimensions of largest image
 			imagearray: [
-["/sitecm/i/banner_1.jpg?Width=950", "", "", ""]
-,["/sitecm/i/banner_2.jpg?Width=950", "", "", ""]
+["/sitecm/i/banner_2.jpg?Width=950", "", "", ""]
+,["/sitecm/i/banner_1.jpg?Width=950", "", "", ""]
 
 			],
 			displaymode: {type:'auto', pause:5000, cycles:0, wraparound:false},
@@ -241,26 +257,28 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'aspnetFo
 	
 <div class="SiteCM3 Menu2 Application1 Template515 Page45485">
 	<!-- page content -->
-	<br />
+	<br>
 <table cellspacing="0" cellpadding="10" border="0" style="width: 100%;">
     <tbody>
         <tr>
             <td style="width: 36%; text-align: left; vertical-align: top;">
             <h6>Greater Vancouver Community Services Society is one of BC's oldest and largest accredited community care service providers. <strong>GVCSS cares for 4,000 people each year</strong>, including the elderly, individuals with disabilities and those who require support to retain or regain their health and independence.</h6>
-            <br />
+            <br>
             </td>
-            <td style="text-align: center; vertical-align: top;"><a href="/communitylivingvans.htm"><img src="/sitecm/i/gvc-011_homepagebutton635163205898709269.jpg" width="247"  height="258" alt="GVC-011 homepageButton.jpg"  style="vertical-align: top;"  /></a>&nbsp;</td>
             <td style="text-align: center; vertical-align: top;">
-            <p><a href="https://www.facebook.com/pages/GVCSS/663576170366527" target="_TOP" title="GVCSS"><img alt="" src="https://badge.facebook.com/badge/663576170366527.2470.1430842449.png" style="border:0px none; vertical-align: top;" /></a><br />
-            <br />
+            <p><a href="/communitylivingvans.htm"><img src="/sitecm/i/gvc-011_homepagebutton635163205898709269.jpg" width="247"  height="258" alt="GVC-011 homepageButton.jpg"  style="vertical-align: top;"  /></a></p>
+            </td>
+            <td style="text-align: center; vertical-align: top;">
+            <p><a href="https://www.facebook.com/pages/GVCSS/663576170366527" target="_TOP" title="GVCSS"><img alt="" src="https://badge.facebook.com/badge/663576170366527.2470.1430842449.png" style="border:0px none; vertical-align: top;"></a><br>
+            <br>
             <iframe frameborder="0" scrolling="no" data-twttr-rendered="true" title="Twitter Follow Button" style="width: 112px; height: 20px;" class="twitter-follow-button twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.1363148939.html#_=1364509728744&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=GVCSS&amp;show_count=false&amp;show_screen_name=true&amp;size=m" allowtransparency="true"></iframe></p>
             <p>
             <script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            <br />
-            <a href="http://www.cdnhomecare.ca/" target="_blank"><img src="/sitecm/i/chca_member_logo.jpg?Width=110" width="110"  height="51" alt="CHCA Member logo.jpg"  style="vertical-align: middle;"  /></a><br />
-            <br />
-            <a href="http://www.bccare.ca/" target="_new" alt="BCCPA Member Badge Digital.png"><img src="/sitecm/i/bccpa_member_badge_digital.png?Width=75" width="75"  height="63" alt="BCCPA Member Badge Digital.png"  style="border-width: 0px;"  /></a><br />
+            <br>
+            <a href="http://www.cdnhomecare.ca/" target="_blank"><img src="/sitecm/i/chca_member_logo.jpg?Width=110" width="110"  height="51" alt="CHCA Member logo.jpg"  style="vertical-align: middle;"  /></a><br>
+            <br>
+            <a href="http://www.bccare.ca/" target="_new" alt="BCCPA Member Badge Digital.png"><img src="/sitecm/i/bccpa_member_badge_digital.png?Width=75" width="75"  height="63" alt="BCCPA Member Badge Digital.png"  style="border-width: 0px;"  /></a><br>
             <!-- Facebook Badge END--></p>
             </td>
         </tr>

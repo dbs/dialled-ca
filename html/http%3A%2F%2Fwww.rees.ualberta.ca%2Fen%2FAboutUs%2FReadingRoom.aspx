@@ -53,7 +53,7 @@ _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
 <input type="hidden" name="phcontent_0_scriptManager_HiddenField" id="phcontent_0_scriptManager_HiddenField" value="" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="9AuITzRGM0EiSdXAmETBOdFCNge0/AkybU8W1uoUhfoNej4a55Nt9kbRTOiFoOiruC9qhsE7D43Lxz+oqJD4REL8MOq/lXx1SWSNhWZUaHJGbiFwPgtNugMjFPH4pb4ius9aC0qO5oLUK6zxNHNBSgXMj6DWSKyLYlmJJoJAVQGThJWRRs33UQhi1P2VWPuUpeBDAhOPj5xOoxh7jW9JNOIvsfq+k42ZFNsWQrg8G1p4ZaUShrkmiFlfw2hlJMbaB/fvUDxzq3WYK8Rj3NwtC7PNTS54+rLoeGBhld3n1E8YGdKTdngS566/lWMUFpmA7exnTCozo/rVP6Pntz3Y94WM3CRRVUF0W3oQvBbdgHM5bE4Q4qgAfFq3TG6fMoBFko3esk7DJLD6nfH+tK+EI+EFepykMWEyxqGEzEPby5yFCUiOR5Bq+kKDVPjgNiCb0Wu5zGHU/UEWnpmle53S22P6K2iUjolRxU2SmO0HE+8Krrq7H0z2HWdzGO8S34IEr4f/aAZHDfGOizwkZ/RzBZHrBFw2GNvDM0ViIoD/Ohr65/zBqBAQuJyaSmesd0VFYYzKjUqgoe+ubYlo/dxFe72oc2IHJ+jLvVxSxWEja64pEpcU6h+u8OItxfsyRr6KMLO9cRt+Em8ztN8bzLBxTBLojJAJsO4hoopTH+kJRVxg6bRHslOohTUzlfTGB+TwJYDd2fYsyaCliXyI7APbY9D3ZiF7tRGpk5rgQH6L/A+xJaAv5lzG4J63Xf3vEUw9uMi81yc5bIDftHoUvnAH+2Y2EFEG7deAhEBec/buRAOA4IklXv/KlLI92tFjo1CoCeqdw9y4R8019VuWwhn4iTaSY9qCszsZ37ZzD7bzgh17CPVlHlHACRTRhSW1a6LXpywADL/AeJMVYZTW3QHtqoNp1og9ESoqiWLaT3h7QlOm+JTZPgrB8N19adCCb1UgIla+AiR2NnKl1zn84IjoKSLTSorcYz9+oaWExyMZisHBzOVv9PYYqEzC6iqIZlwuR7SY61kdBglkYBUkEMqSEUYsHT0=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="hhLDhLlZj7ysCG39xu3sUkybI4GYqgV65Y1HOmZaaSwXuk8NagigR/bcmuNN2OVE6ikvDo/0fu2/1kj9HjuFHzsNxmj8Mh53CIQSmYFHE37Lzv/Qil9qRfcFugrI6xul+rCsw8pEk3uZkn1Bbv9Zk5Pz4MrIowo04uRdP57+jFwGTTt9ih/CsIBM3Y8VdrzRiO03rflXd0a2PKpCCi+IP52cWZP5eMjIH4d5TgW9geR70O6Qzj2aFO1boFPelBQKW+UAPmEC2Wgc3UQ+7HgAEiYKdm1Y9GxLsXEXsRYbravD17oOllFFqXeAHmI8jXsQG3WJ89dy/BOzymrBD1Hcsk+KjxWrb7PJZFfmAF0Z5rzlkQjnokMPPERFjXUpblVkUN/Kv/zS1rOotgCWWNEPMqRjc8AOos3Xr86FMGLgr0uN8AaOvU3aJdM4jQBYQPB5mzs94gYtf+8zPqzHxCOSzbMkKmBdwtREsbyZIowCSthzc/Zfd2TsqpRaDx2wlHZhu9bHzp2jV8LhXU8Y1cNl5azvbD/wsnRU8RoJXkjlcnpcI0TuU8RvCWw0iyZ7rvDzbkt98NZHoliLqCjNI5g8Yar86PvkZQAMfNckVClHkPetGEz8DMDrlNPwyvY4Haa2J8ImlE3HPMMSj0x4bvDHpIExCWFiQx7UJNXX+AD3h29LqcIXTF29v1N4TAOSxvLy65XDuQguL2arr23Fuo26e0RJBJdxBOtR/TIJqJME1qmX0rNlOA9GtiTZps3MReXbodVSH8Sutv4UzqfEpGD5cnUzkfov0jc0TH9hLe9t5fqKjsr9mcNHlJNwpziHHh/QxvMIGWoaDa+wIfnoeDDbF0llBiR6TWKKkPdhAg/n3SXeA31BJWjVGrRkSdbXJSfRLj4034LipqzhaQkGiX34ccsmj+XuTFvJVOpWWu9yGP7EyL0uSsZVdz2h9kiAN0Y8ZoIoyXRoqGMY9i3mNP6ovnbp7pKeAZeW49grcgfOsZFbdx/cV3KCrKUi8fFoMzlaUiZBdhq3KpnixpwRepLD3eoPye4=" />
 </div>
 
 <script type="text/javascript">
@@ -73,11 +73,11 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="/WebResource.axd?d=W9xWNSE7UcGrI8wosn0al5n09b8Qv8VoDEdWptmApPun4XLHyNmPbWUn3VSguNukjCuwFIP4fbZjTQsx0&amp;t=635802997220000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=W9xWNSE7UcGrI8wosn0al5n09b8Qv8VoDEdWptmApPun4XLHyNmPbWUn3VSguNukjCuwFIP4fbZjTQsx0&amp;t=635802745220000000" type="text/javascript"></script>
 
 
-<script src="/WebResource.axd?d=LIaz6muHfdQFvaoobtbEBTmcD8SyLNVOxkxsHvvKQP9-gGWAnVNF9thI3FH3_SaoR092NabCz02J-QZj2aV9KhzzeSXxfsLYkbnhJ4TXvs6xa_3tZXjNdB08GcwkeQGhm6P8Cg2&amp;t=635633235504973864" type="text/javascript"></script>
-<script src="/WebResource.axd?d=mTivrJATYdbSkCduK3sPe2gFpIfHXUD2kkC_wQTSXo5L6kBsiPv5rxZezu1lGJEHWVqEmfQzo6iFJnFVsUaQstEbaSZ7fAHB2aF4az8KEKXZ0tgmL9T7xxDr1JheWw923ethhw2&amp;t=635633235504973864" type="text/javascript"></script>
+<script src="/WebResource.axd?d=LIaz6muHfdQFvaoobtbEBTmcD8SyLNVOxkxsHvvKQP9-gGWAnVNF9thI3FH3_SaoR092NabCz02J-QZj2aV9KhzzeSXxfsLYkbnhJ4TXvs6xa_3tZXjNdB08GcwkeQGhm6P8Cg2&amp;t=635632983520000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=mTivrJATYdbSkCduK3sPe2gFpIfHXUD2kkC_wQTSXo5L6kBsiPv5rxZezu1lGJEHWVqEmfQzo6iFJnFVsUaQstEbaSZ7fAHB2aF4az8KEKXZ0tgmL9T7xxDr1JheWw923ethhw2&amp;t=635632983520000000" type="text/javascript"></script>
 <script src="/ScriptResource.axd?d=yw32MZntRX_djr9R047k4DmY8_stG7qeIVLF40883KdtKSNajKAL9OQ9M9iJ-StEC6r859e3Z0jvuLJib_OuKgo7QQP6s0Srfnd9o76zsHO04-jDT2MZQpDi9HV0JE5vkE4Bbww5YxHqHpEn9eCZ4bUHy0c1&amp;t=5f9d5645" type="text/javascript"></script>
 <script src="/ScriptResource.axd?d=8i4gTyJKypaA-nZUJcpdVFOcanBrlu9YKZPhVjQCgTwN9AmgKcH6TriURX4QT0IpzZi7BndST3-zAvl3QoG75BGx_P6e4T56YOwuyOQS6ijzq7rSZa6vbb0vl03A5Njp0R1MUkue-dkDNvSbDgFpmViPm4V2L0tvspTVhg2&amp;t=5f9d5645" type="text/javascript"></script>
 <script type="text/javascript">
@@ -221,11 +221,6 @@ Sys.WebForms.PageRequestManager._initialize('phcontent_0$scriptManager', 'form1'
                     </li>
                 
                     <li>
-                        <a href="/en/AboutUs/AwardRecipients.aspx">Award Recipients</a>
-                        
-                    </li>
-                
-                    <li>
                         <a class="here" href="/en/AboutUs/ReadingRoom.aspx">Reading Room</a>
                         
                     </li>
@@ -235,12 +230,12 @@ Sys.WebForms.PageRequestManager._initialize('phcontent_0$scriptManager', 'form1'
                     </li>
                 
                     <li>
-                        <a href="/en/Undergraduate%20Students.aspx">Undergraduate Students</a>
+                        <a href="https://www.ualberta.ca/agriculture-life-environment-sciences/programs/undergraduate-programs">Undergraduate Students</a>
                         
                     </li>
                 
                     <li>
-                        <a href="/en/Courses.aspx">Course Catalogue</a>
+                        <a href="https://catalogue.ualberta.ca/Course/Faculty?facultyCode=AH">Course Catalogue</a>
                         
                     </li>
                 
@@ -325,7 +320,9 @@ Sys.WebForms.PageRequestManager._initialize('phcontent_0$scriptManager', 'form1'
 The REES Library serves primarily the academic staff and graduate students of the department.&nbsp; Other borrowers include undergraduate and graduate students of other departments and faculties, academic staff from across campus, government employees, former students, consultants and other libraries.
 <p>Close liaison is maintained with the University of Alberta Libraries System, most particularly with the Sci/Tech Library which has an extensive collection.</p>
 <p>
-<p>Should you wish to gain access to the library please contact Shannon Baker at 780.492.4225 or <a href="mailto:sbaker2@ualberta.ca" class="ApplyClass">sbaker2@ualberta.ca</a></p>
+</p>
+<p>Should you wish to gain access to the library please contact Amy Masand at 780.492.4225 or <a href="mailto:sbaker2@ualberta.ca" class="ApplyClass">amy.masand@ualberta.ca</a></p>
+<p><br />
 </p>
 
                         

@@ -63,6 +63,7 @@
         _gaq.push(['_setAllowLinker', true]);
         _gaq.push(['_trackPageview']);
     </script>
+    <script type="text/javascript" src="//static.websimages.com/active-static/lib/zendesk/zendesk-webwidget.js"></script>
 </head>
 <body>
 <div id="main">
@@ -71,29 +72,21 @@
         <h2>We're sorry, this site is frozen.</h2>
 			<span>
 				If you are the site owner, please<br />
-				<a href="#" onclick="javascript:Zenbox.show();return false;" title="Contact Us">click here to contact us</a><br />
+				<a href="#" onclick="javascript:if (window.zE !== undefined) { window.zE.activate({hideOnClose: true}); } return false;" title="Contact Us">click here to contact us</a><br />
 				regarding the status of your website.
 			</span>
     </div>
     <h4>Please do not contact us if you are not the owner of this site.</h4>
 </div>
-<script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
-<style type="text/css" media="screen, projection">
-    @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
-</style>
 <script type="text/javascript">
-    if (typeof(Zenbox) !== "undefined") {
-        Zenbox.init({
-            dropboxID:   "20278856",
-            url:         "https://webscom.zendesk.com",
-            tabTooltip:  "Support",
-            tabImageURL: "https://assets.zendesk.com/external/zenbox/images/tab_support.png",
-            tabColor:    "black",
-            tabPosition: "Left",
-            hide_tab:    "true",
-            request_description: "Your Site Address: %0AYour Question:"
-        });
-    }
+    zE(function() {
+        zE.hide();
+
+        var locale = 'en_US';
+        if (locale !== null) {
+            zE.setLocale(locale);
+        }
+    });
 </script>
 <script type="text/javascript">
     (function() {

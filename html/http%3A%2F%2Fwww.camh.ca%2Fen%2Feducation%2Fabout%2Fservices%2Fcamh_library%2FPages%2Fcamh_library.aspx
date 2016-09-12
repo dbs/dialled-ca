@@ -1,8 +1,7 @@
  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:o="urn:schemas-microsoft-com:office:office" __expr-val-dir="ltr" lang="en-us" dir="ltr">
-<head><meta http-equiv="X-UA-Compatible" content="IE=8" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta name="progid" content="SharePoint.WebPartPage.Document" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><title>
+<head><meta http-equiv="X-UA-Compatible" content="IE=8;IE=9;IE=10;IE=Edge" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta name="progid" content="SharePoint.WebPartPage.Document" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><title>
 	CAMH: Welcome to the CAMH Library & Archives
 </title><meta keywords="CAMH, Centre for Addiction and Mental Health" /><meta Modification Date="2/8/2016 3:19:25 PM" /><meta Creation Date="2/13/2012 12:06:53 PM" /><link rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/controls.css"/>
 <link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css?rev=iIikGkMuXBs8CWzKDAyjsQ%3D%3D"/>
@@ -108,7 +107,7 @@ document.write('<script type="text/javascript" src="/ScriptResource.axd?d=GM0FYd
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x71602E42E2CC016470917AD19F7728A60F8056228A314C91C79E1028A65422471C226281E3AE53267494ED480E30750714649F0F3385B274283B553176269C20,09 May 2016 14:04:25 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x42BF4815636EAA4380E729F6EE2E5D1AB9C2B8235CCC6007F27B372D9DD8FDF733CD4E2E3427098684BEE4E7B2F02C5F28539DAF22AC01F8E63B13F2E5C02EAD,11 Sep 2016 16:21:55 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -151,11 +150,11 @@ var g_wsaEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
 var g_wsaListTemplateId = 850;
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fen\u002feducation\u002fabout\u002fservices\u002fcamh_library", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{c1a6c5c8-eda7-47e5-8046-0f221c9f11ff}",pageItemId:2511, alertsEnabled:false, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};function CallServer_19983104(arg, context) {WebForm_DoCallback('ctl00$ctl15',arg,SP.UI.MyLinksRibbon.MyLinksRibbonPageComponent.ribbonActionCallback,context,null,false); }function _myLinksRibbonLoad2()
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fen\u002feducation\u002fabout\u002fservices\u002fcamh_library", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{c1a6c5c8-eda7-47e5-8046-0f221c9f11ff}",pageItemId:2511, alertsEnabled:false, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};function CallServer_20128592(arg, context) {WebForm_DoCallback('ctl00$ctl15',arg,SP.UI.MyLinksRibbon.MyLinksRibbonPageComponent.ribbonActionCallback,context,null,false); }function _myLinksRibbonLoad2()
 {
     var fnd = function () {
         try {
-            mylinks_init.MyLinksInit('CallServer_19983104'); 
+            mylinks_init.MyLinksInit('CallServer_20128592'); 
         } 
         catch (Ex)
         { }
@@ -316,9 +315,13 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 </div>
 				        </div>
 				         <div id="topSocialLinks" style="float:left;margin-bottom:6px;margin-left:5px;">
-				         
-				                    <script type="text/javascript">var _baLocale = 'us', _baUseCookies = true, _baMode = 'http://www.camh.ca/_layouts/camh/img/browsealoud.jpg', _baHiddenMode = false, _baHideOnLoad = false;</script>
-                                              <script type="text/javascript">
+				                  <div style="float:left;height:20px;width:20px">
+
+				                        <script type="text/javascript">var _baLocale = 'us', _baUseCookies = true, _baMode = 'http://www.camh.ca/_layouts/camh/img/browsealoud.jpg', _baHiddenMode = false, _baHideOnLoad = false;</script>
+                                         <script type="text/javascript" src='http://www.browsealoud.com/plus/scripts/ba.js'></script>
+                                         </div>
+				        				           <!--         <script type="text/javascript">var _baLocale = 'us', _baUseCookies = true, _baMode = 'http://www.camh.ca/_layouts/camh/img/browsealoud.jpg', _baHiddenMode = false, _baHideOnLoad = false;</script>
+                                          <script type="text/javascript">
                                               
 						var scripts = document.getElementsByTagName("script"),
     						hasBA = false;
@@ -342,14 +345,15 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 							}
 
 
-						</script>
+						</script>//-->
+						           <div style="float:left">
 				                <ul class="socialLinks">
                         <li><a href="http://www.facebook.com/CentreforAddictionandMentalHealth" target="_blank" title="facebook"><img src="/_layouts/camh/img/facebook.png" alt="facebook" height="18" width="18" /></a></li>
                         <li><a href="http://twitter.com/CAMHnews" target="_blank" title="twitter"><img src="/_layouts/camh/img/twitter.png" alt="twitter" height="18" width="18" /></a></li>
                         <li><a href="http://www.youtube.com/camhtv" target="_blank" title="youtube"><img src="/_layouts/camh/img/youtube.png" alt="youtube" height="18" width="18" /></a></li>
                         <li><a href="http://www.linkedin.com/company/camh" target="_blank" title="linkedin"><img src="/_layouts/camh/img/linkedin.png" alt="linkedin" height="18" width="18" /></a></li>
                        <li><a href="https://instagram.com/camhnews/" target="_blank" title="Instagram"><img src="/_layouts/camh/img/instagram.png" alt="linkedin" height="18" width="18" /></a></li>
-                    </ul>
+                    </ul></div>
 				        </div>
 					</div>
 					<div class="s4-title s4-lp">
@@ -472,7 +476,7 @@ var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 		<div class="menu vertical menu-vertical">
 			<ul class="root static">
 				<li class="static selected"><a class="static selected menu-item" href="/en/education/about/services/camh_library/Pages/camh_library.aspx"><span class="additional-background"><span class="menu-item-text">CAMH Library &amp; Archives</span><span class="ms-hidden">Currently selected</span></span></a><ul class="static">
-					<li class="static"><a class="static menu-item" href="http://555.sydneyplus.com/CAMH/Portal.aspx?lang=en-US"><span class="additional-background"><span class="menu-item-text">Library Catalogue</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/libraryaudiovisuals.aspx"><span class="additional-background"><span class="menu-item-text">Audio-Visuals</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/librarynewbooks.aspx"><span class="additional-background"><span class="menu-item-text">Browse New Titles</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/Library-Mission-and-Collections.aspx"><span class="additional-background"><span class="menu-item-text">Mission </span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/libraryservices.aspx"><span class="additional-background"><span class="menu-item-text">Services</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/librarycontactandhours.aspx"><span class="additional-background"><span class="menu-item-text">Contact Us</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/librarybibliographiesandguides.aspx"><span class="additional-background"><span class="menu-item-text">Research &amp; Subject Guides</span></span></a></li><li class="static"><a class="static menu-item" title="Repository of CAMH Documents" href="/en/education/about/services/camh_library/Pages/librarycamhrepository.aspx"><span class="additional-background"><span class="menu-item-text">CAMH Document Repository</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/camh_archives.aspx"><span class="additional-background"><span class="menu-item-text">CAMH Archives</span></span></a></li>
+					<li class="static"><a class="static menu-item" href="http://555.sydneyplus.com/CAMH/Portal.aspx?lang=en-US"><span class="additional-background"><span class="menu-item-text">Library Catalogue</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/libraryaudiovisuals.aspx"><span class="additional-background"><span class="menu-item-text">Audio-Visuals</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/librarynewbooks.aspx"><span class="additional-background"><span class="menu-item-text">Browse New Titles</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/Library-Mission-and-Collections.aspx"><span class="additional-background"><span class="menu-item-text">Mission </span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/libraryservices.aspx"><span class="additional-background"><span class="menu-item-text">Services</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/librarycontactandhours.aspx"><span class="additional-background"><span class="menu-item-text">Contact the CAMH Library</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/librarybibliographiesandguides.aspx"><span class="additional-background"><span class="menu-item-text">Research &amp; Subject Guides</span></span></a></li><li class="static"><a class="static menu-item" title="Repository of CAMH Documents" href="/en/education/about/services/camh_library/Pages/librarycamhrepository.aspx"><span class="additional-background"><span class="menu-item-text">CAMH Document Repository</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/camh_library/Pages/camh_archives.aspx"><span class="additional-background"><span class="menu-item-text">CAMH Archives</span></span></a></li>
 				</ul></li><li class="static"><a class="static menu-item" href="/en/education/about/services/Education%20services/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Education services</span></span></a></li><li class="static"><a class="static menu-item" href="/en/education/about/services/Pages/camh_bookstore.aspx"><span class="additional-background"><span class="menu-item-text">CAMH Online Store</span></span></a></li>
 			</ul>
 		</div>
@@ -700,7 +704,7 @@ M5T 1R8<br>
 <div class="mapTitle"><a href="/en/hospital/about_camh/provincial_systems_support_program/Pages/default.aspx" >Regional Teams</a></div>
 <div class="mapLink"></div>
 </div>
-<div class="mapText">Eight offices across Ontario
+<div class="mapText">Ten offices across Ontario
 </div></div>
                     </div>
                 </div>
@@ -916,9 +920,18 @@ function init_zz2_V4QuickLaunchMenu() {$create(SP.UI.AspMenu, null, null, null, 
 	
 	<script language="javascript">
 //IE11 Fix for SP2010
-if (typeof UserAgentInfo.strBrowser !== 'undefined' && !window.addEventListener) {
+if (typeof UserAgentInfo.strBrowser != 'undefined' && !window.addEventListener) {
      UserAgentInfo.strBrowser=1;
 }
+</script>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_20926.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
 </script>
 </body>
 </html>

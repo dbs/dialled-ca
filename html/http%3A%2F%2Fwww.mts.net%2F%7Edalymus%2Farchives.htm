@@ -1,2 +1,59 @@
-<HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=ISO-8859-1"><TITLE>Not Found</TITLE></HEAD>
-<H1>Not Found</H1> The requested object does not exist on this server. The link you followed is either outdated, inaccurate, or the server has been instructed not to let you have it. 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Redirecting...</title>
+		<script type="text/javascript">
+			if(typeof String.prototype.trim !== 'function') {
+				String.prototype.trim = function() {
+					return this.replace(/^\s+|\s+$/g, '');
+				};
+			}
+
+			function getCookie(cname) {
+				var name = cname + "=";
+				var ca = document.cookie.split(';');
+				for(var i=0; i<ca.length; i++) {
+					var c = ca[i].trim();
+					if (c.indexOf(name)==0) return decodeURIComponent(c.substring(name.length,c.length));
+				}
+				return "";
+			}
+			function getHistoryDiff(id) {
+				var cookie_val = getCookie('bbp');
+				if (cookie_val) {
+					id_parts = cookie_val.split(",")
+					for (var i in id_parts) {
+						var id_part_arr = id_parts[i].split(":");
+						if (id_part_arr[0] == id) {
+							return parseInt(id_part_arr[1]);
+						}
+					}
+				}
+				return "";
+			}
+			function process() {
+				var history_diff = getHistoryDiff("8252cabe5a");
+				if (history_diff !== "") {
+					// We've returned and are going forward
+					var diff = (history_diff + 0 + 2);
+					if (history_diff != 0 && diff != 0) {
+						window.history.go(diff);
+					}
+				} else {
+					// We are here the first time
+					document.getElementById("history_val").value = window.history.length
+					document.getElementById("history_form").submit();
+				}
+			}
+		</script>
+	</head>
+	<body onload="process()">
+		<form method="get" id="history_form">
+			<input type="hidden" name="AuthState" value="_fa6f100603a4bb06e0bfef75197c57919c82e07235:https://auth.mtsmail.ca/saml/saml2/idp/SSOService.php?spentityid=https%3A%2F%2Fmtsmail.ca%2F&amp;cookieTime=1473609572" />
+			<input type="hidden" name="id" value="8252cabe5a" />
+			<input type="hidden" name="coeff" value="0" />
+			<input type="hidden" name="history" id="history_val" value="" />
+		</form>
+	</body>
+</html>

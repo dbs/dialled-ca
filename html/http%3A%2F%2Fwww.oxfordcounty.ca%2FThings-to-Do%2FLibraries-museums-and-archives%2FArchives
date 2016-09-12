@@ -1,15 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><meta http-equiv="X-UA-Compatible" content="IE=10">
 <html  xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head"><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+<head id="Head">
+<!--*********************************************-->
+<!-- DNN Platform - http://www.dnnsoftware.com   -->
+<!-- Copyright (c) 2002-2016, by DNN Corporation -->
+<!--*********************************************-->
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta name="REVISIT-AFTER" content="1 DAYS" />
+<meta name="RATING" content="GENERAL" />
+<meta name="RESOURCE-TYPE" content="DOCUMENT" />
+<meta content="text/javascript" http-equiv="Content-Script-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<title>
 	Oxford County > Things to Do > Libraries, museums, and archives > Archives
-</title><meta id="MetaDescription" name="DESCRIPTION" content="Oxford County" /><meta id="MetaKeywords" name="KEYWORDS" content="Oxford, County, Ontario, Canada" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright Oxford County" />
-        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-        <meta content="text/javascript" http-equiv="Content-Script-Type" />
-        <meta content="text/css" http-equiv="Content-Style-Type" />
-        <meta name="RESOURCE-TYPE" content="DOCUMENT" />
-        <meta name="REVISIT-AFTER" content="1 DAYS" />
-        <meta name="RATING" content="GENERAL" />
-    <link href="/Portals/_default/default.css?cdv=311" type="text/css" rel="stylesheet"/><link href="/DesktopModules/HTML/module.css?cdv=311" type="text/css" rel="stylesheet"/><link href="/DesktopModules/Links/module.css?cdv=311" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/OxfordCounty/skin.css?cdv=311" type="text/css" rel="stylesheet"/><link href="/Portals/15/Containers/Oxford/Green Title.css?cdv=311" type="text/css" rel="stylesheet"/><link href="/Portals/15/portal.css?cdv=311" type="text/css" rel="stylesheet"/><link href="/Resources/Search/SearchSkinObjectPreview.css?cdv=311" type="text/css" rel="stylesheet"/><link href="/Portals/_default/skins/oxfordcounty/megamenu/megamenu.css?cdv=311" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/OxfordCounty/Themes/default/theme.css?cdv=311" type="text/css" rel="stylesheet"/><link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css?cdv=311" type="text/css" rel="stylesheet"/><script src="/Resources/libraries/jQuery/01_09_01/jquery.js?cdv=311" type="text/javascript"></script><script src="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js?cdv=311" type="text/javascript"></script><script src="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js?cdv=311" type="text/javascript"></script><link rel='SHORTCUT ICON' href='/Portals/15/images/oxford-swirl.ico' type='image/x-icon' />
+</title><meta id="MetaDescription" name="DESCRIPTION" content="Oxford County" /><meta id="MetaKeywords" name="KEYWORDS" content="Oxford, County, Ontario, Canada,DotNetNuke,DNN" /><meta id="MetaGenerator" name="GENERATOR" content="DotNetNuke " /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><link href="/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?cdv=567" type="text/css" rel="stylesheet"/><link href="/DesktopModules/Links/module.css?cdv=567" type="text/css" rel="stylesheet"/><link href="/Resources/Search/SearchSkinObjectPreview.css?cdv=567" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/OxfordCounty/skin.css?cdv=567" type="text/css" rel="stylesheet"/><link href="/Portals/15/Containers/Oxford/Green Title.css?cdv=567" type="text/css" rel="stylesheet"/><link href="/Portals/15/portal.css?cdv=567" type="text/css" rel="stylesheet"/><link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css?cdv=567" type="text/css" rel="stylesheet"/><link href="/Portals/_default/skins/oxfordcounty/megamenu/megamenu.css?cdv=567" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/OxfordCounty/Themes/default/theme.css?cdv=567" type="text/css" rel="stylesheet"/><script src="/Resources/libraries/jQuery/01_09_01/jquery.js?cdv=567" type="text/javascript"></script><script src="/Resources/libraries/jQuery-UI/01_11_03/jquery-ui.js?cdv=567" type="text/javascript"></script><script type='text/javascript'>
+//<![CDATA[
+    var analytics_page_startTime = (new Date()).getTime();
+//]]>
+</script>
+
 
           <script type="text/javascript">
             var _gaq = _gaq || [];
@@ -27,7 +36,36 @@
             })();
           </script>
 
-        </head>
+	<script>
+		$(function(){
+			$('.dnnEditState .DnnModule-DNN_HTML').each(function() {
+				var c = $(this).attr('class').split(' ')[2];
+				var mod = $(this).attr('class').split(' ')[2].split('-')[1];
+				var url      = window.location.href.split('#')[0]; // split on # to remove it
+				var pn = window.location.pathname;
+				editUrl = "javascript:dnnModal.show('" + url + (pn=="/"?"Home/":"") + "/ctl/Edit/mid/" + mod + "?popUp=true',/*showReturn*/false,550,950,true,'')";
+				$('div.DnnModule-' + mod).off();
+				$(".DnnModule-" + mod + ":not(.DnnModule-Admin)").prepend("<a class='upe' href=\"" + editUrl + "\"><i class=\"fa fa-pencil\"></i> Edit</a>");
+			});
+		});
+	</script>
+
+	<style>
+		a.upe {
+			position: absolute;	
+			left: 0px;
+			top: 5px;
+			color: black!important;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		a:hover.upe {
+			text-decoration: underline;
+		}
+	</style>
+
+        <link rel='SHORTCUT ICON' href='/Portals/15/images/oxford-swirl.ico?ver=2012-05-31-130703-597' type='image/x-icon' /></head>
 <body id="Body">
     
     <form method="post" action="/Things-to-Do/Libraries-museums-and-archives/Archives" id="Form" enctype="multipart/form-data">
@@ -36,7 +74,7 @@
 <input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTQyMDU2MDYzD2QWAgIGD2QWAgIBD2QWAgIHD2QWAmYPZBYEAgIPZBYCZg9kFgICAQ9kFgJmD2QWAgIBD2QWAgIBD2QWBGYPZBYCAgEPFgIeC18hSXRlbUNvdW50AgQWCmYPZBYCZg8VAQpIb3Jpem9udGFsZAIBD2QWDmYPFQIKSG9yaXpvbnRhbBtzdHlsZT0id2hpdGUtc3BhY2U6IG5vd3JhcCJkAgEPDxYEHgtOYXZpZ2F0ZVVybAVsaHR0cDovL3d3dy5veGZvcmRjb3VudHkuY2EvVGhpbmdzLXRvLURvL0xpYnJhcmllcy1tdXNldW1zLWFuZC1hcmNoaXZlcy9BcmNoaXZlcy9jdGwvRWRpdC9taWQvNDI2MS9JdGVtSUQvMzAwHgdWaXNpYmxlaGQWAmYPDxYCHwJoZGQCAw8PFgQeCEltYWdlVXJsBTUvTGlua0NsaWNrLmFzcHg/bGluaz0mdGFiaWQ9MjY5MyZwb3J0YWxpZD0xNSZtaWQ9NDI2MR8CaGRkAgUPFgYeBGhyZWYFG2h0dHA6Ly93d3cub3hmb3JkY291bnR5LmNhLx4DYWx0ZR4GdGFyZ2V0BQVfc2VsZhYCZg8VAQRIb21lZAIGDxYCHwJoFgICAQ8PZBYEHgdvbmNsaWNrBT90b2dnbGVWaXNpYmlsaXR5KCdkbm5fY3RyNDI2MV9MaW5rc19sc3RMaW5rc19wbmxEZXNjcmlwdGlvbl8wJykeBXN0eWxlBRBjdXJzb3I6IHBvaW50ZXI7ZAIID2QWAgIBDw8WAh4EVGV4dGVkZAIKDw8WAh8CaGQWAmYPFQEAZAICD2QWDmYPFQIKSG9yaXpvbnRhbBtzdHlsZT0id2hpdGUtc3BhY2U6IG5vd3JhcCJkAgEPDxYEHwEFbGh0dHA6Ly93d3cub3hmb3JkY291bnR5LmNhL1RoaW5ncy10by1Eby9MaWJyYXJpZXMtbXVzZXVtcy1hbmQtYXJjaGl2ZXMvQXJjaGl2ZXMvY3RsL0VkaXQvbWlkLzQyNjEvSXRlbUlELzI5NB8CaGQWAmYPDxYCHwJoZGQCAw8PFgQfAwU1L0xpbmtDbGljay5hc3B4P2xpbms9JnRhYmlkPTI2OTMmcG9ydGFsaWQ9MTUmbWlkPTQyNjEfAmhkZAIFDxYGHwQFKGh0dHA6Ly93d3cub3hmb3JkY291bnR5LmNhL0hvbWUvTmV3c3Jvb20fBWUfBgUFX3NlbGYWAmYPFQEITmV3c3Jvb21kAgYPFgIfAmgWAgIBDw9kFgQfBwU/dG9nZ2xlVmlzaWJpbGl0eSgnZG5uX2N0cjQyNjFfTGlua3NfbHN0TGlua3NfcG5sRGVzY3JpcHRpb25fMScpHwgFEGN1cnNvcjogcG9pbnRlcjtkAggPZBYCAgEPDxYCHwllZGQCCg8PFgIfAmhkFgJmDxUBAGQCAw9kFg5mDxUCCkhvcml6b250YWwbc3R5bGU9IndoaXRlLXNwYWNlOiBub3dyYXAiZAIBDw8WBB8BBWxodHRwOi8vd3d3Lm94Zm9yZGNvdW50eS5jYS9UaGluZ3MtdG8tRG8vTGlicmFyaWVzLW11c2V1bXMtYW5kLWFyY2hpdmVzL0FyY2hpdmVzL2N0bC9FZGl0L21pZC80MjYxL0l0ZW1JRC8yOTIfAmhkFgJmDw8WAh8CaGRkAgMPDxYEHwMFNS9MaW5rQ2xpY2suYXNweD9saW5rPSZ0YWJpZD0yNjkzJnBvcnRhbGlkPTE1Jm1pZD00MjYxHwJoZGQCBQ8WBh8EBStodHRwOi8vd3d3Lm94Zm9yZGNvdW50eS5jYS9NeS1TdWJzY3JpcHRpb25zHwVlHwYFBV9zZWxmFgJmDxUBB2VBbGVydHNkAgYPFgIfAmgWAgIBDw9kFgQfBwU/dG9nZ2xlVmlzaWJpbGl0eSgnZG5uX2N0cjQyNjFfTGlua3NfbHN0TGlua3NfcG5sRGVzY3JpcHRpb25fMicpHwgFEGN1cnNvcjogcG9pbnRlcjtkAggPZBYCAgEPDxYCHwllZGQCCg8PFgIfAmhkFgJmDxUBAGQCBA9kFg5mDxUCCkhvcml6b250YWwbc3R5bGU9IndoaXRlLXNwYWNlOiBub3dyYXAiZAIBDw8WBB8BBWxodHRwOi8vd3d3Lm94Zm9yZGNvdW50eS5jYS9UaGluZ3MtdG8tRG8vTGlicmFyaWVzLW11c2V1bXMtYW5kLWFyY2hpdmVzL0FyY2hpdmVzL2N0bC9FZGl0L21pZC80MjYxL0l0ZW1JRC8zNDAfAmhkFgJmDw8WAh8CaGRkAgMPDxYEHwMFNS9MaW5rQ2xpY2suYXNweD9saW5rPSZ0YWJpZD0yNjkzJnBvcnRhbGlkPTE1Jm1pZD00MjYxHwJoZGQCBQ8WBh8EBSVodHRwOi8vd3d3Lm94Zm9yZGNvdW50eS5jYS9Db250YWN0LVVzHwVlHwYFBV9zZWxmFgJmDxUBCkNvbnRhY3QgdXNkAgYPFgIfAmgWAgIBDw9kFgQfBwU/dG9nZ2xlVmlzaWJpbGl0eSgnZG5uX2N0cjQyNjFfTGlua3NfbHN0TGlua3NfcG5sRGVzY3JpcHRpb25fMycpHwgFEGN1cnNvcjogcG9pbnRlcjtkAggPZBYCAgEPDxYCHwllZGQCCg8PFgIfAmhkFgJmDxUBAGQCAg8PFgIfAmhkFgICAQ8QZGQWAGQCAw9kFgJmD2QWAgIBD2QWAgIBD2QWAgIBD2QWAgIBD2QWBGYPZBYCAgEPFgIfAAIDFghmD2QWAmYPFQEKSG9yaXpvbnRhbGQCAQ9kFg5mDxUCCkhvcml6b250YWwbc3R5bGU9IndoaXRlLXNwYWNlOiBub3dyYXAiZAIBDw8WBB8BBWxodHRwOi8vd3d3Lm94Zm9yZGNvdW50eS5jYS9UaGluZ3MtdG8tRG8vTGlicmFyaWVzLW11c2V1bXMtYW5kLWFyY2hpdmVzL0FyY2hpdmVzL2N0bC9FZGl0L21pZC80MzAxL0l0ZW1JRC8zMzYfAmhkFgJmDw8WAh8CaGRkAgMPDxYEHwMFNS9MaW5rQ2xpY2suYXNweD9saW5rPSZ0YWJpZD0yNjkzJnBvcnRhbGlkPTE1Jm1pZD00MzAxHwJoZGQCBQ8WBh8EBRtodHRwOi8vd3d3Lm94Zm9yZGNvdW50eS5jYS8fBWUfBgUFX3NlbGYWAmYPFQEVQ291bnR5IG9mIE94Zm9yZCBob21lZAIGDxYCHwJoFgICAQ8PZBYEHwcFP3RvZ2dsZVZpc2liaWxpdHkoJ2Rubl9jdHI0MzAxX0xpbmtzX2xzdExpbmtzX3BubERlc2NyaXB0aW9uXzAnKR8IBRBjdXJzb3I6IHBvaW50ZXI7ZAIID2QWAgIBDw8WAh8JZWRkAgoPDxYCHwJoZBYCZg8VAQBkAgIPZBYOZg8VAgpIb3Jpem9udGFsG3N0eWxlPSJ3aGl0ZS1zcGFjZTogbm93cmFwImQCAQ8PFgQfAQVsaHR0cDovL3d3dy5veGZvcmRjb3VudHkuY2EvVGhpbmdzLXRvLURvL0xpYnJhcmllcy1tdXNldW1zLWFuZC1hcmNoaXZlcy9BcmNoaXZlcy9jdGwvRWRpdC9taWQvNDMwMS9JdGVtSUQvMzM3HwJoZBYCZg8PFgIfAmhkZAIDDw8WBB8DBTUvTGlua0NsaWNrLmFzcHg/bGluaz0mdGFiaWQ9MjY5MyZwb3J0YWxpZD0xNSZtaWQ9NDMwMR8CaGRkAgUPFgYfBAUoaHR0cDovL3d3dy5veGZvcmRjb3VudHkuY2EvSG9tZS9OZXdzcm9vbR8FZR8GBQVfc2VsZhYCZg8VAQhOZXdzcm9vbWQCBg8WAh8CaBYCAgEPD2QWBB8HBT90b2dnbGVWaXNpYmlsaXR5KCdkbm5fY3RyNDMwMV9MaW5rc19sc3RMaW5rc19wbmxEZXNjcmlwdGlvbl8xJykfCAUQY3Vyc29yOiBwb2ludGVyO2QCCA9kFgICAQ8PFgIfCWVkZAIKDw8WAh8CaGQWAmYPFQEAZAIDD2QWDmYPFQIKSG9yaXpvbnRhbBtzdHlsZT0id2hpdGUtc3BhY2U6IG5vd3JhcCJkAgEPDxYEHwEFbGh0dHA6Ly93d3cub3hmb3JkY291bnR5LmNhL1RoaW5ncy10by1Eby9MaWJyYXJpZXMtbXVzZXVtcy1hbmQtYXJjaGl2ZXMvQXJjaGl2ZXMvY3RsL0VkaXQvbWlkLzQzMDEvSXRlbUlELzMzOB8CaGQWAmYPDxYCHwJoZGQCAw8PFgQfAwU1L0xpbmtDbGljay5hc3B4P2xpbms9JnRhYmlkPTI2OTMmcG9ydGFsaWQ9MTUmbWlkPTQzMDEfAmhkZAIFDxYGHwQFK2h0dHA6Ly93d3cub3hmb3JkY291bnR5LmNhL015LVN1YnNjcmlwdGlvbnMfBWUfBgUFX3NlbGYWAmYPFQEOU3RheSBDb25uZWN0ZWRkAgYPFgIfAmgWAgIBDw9kFgQfBwU/dG9nZ2xlVmlzaWJpbGl0eSgnZG5uX2N0cjQzMDFfTGlua3NfbHN0TGlua3NfcG5sRGVzY3JpcHRpb25fMicpHwgFEGN1cnNvcjogcG9pbnRlcjtkAggPZBYCAgEPDxYCHwllZGQCCg8PFgIfAmhkFgJmDxUBAGQCAg8PFgIfAmhkFgICAQ8QZGQWAGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFHGRubiRkbm5TRUFSQ0gkV2ViUmFkaW9CdXR0b24FHWRubiRkbm5TRUFSQ0gkU2l0ZVJhZGlvQnV0dG9u3cd4g6q4U+EZBrmotg78uUe2NwU=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <script type="text/javascript">
@@ -56,17 +94,23 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="/WebResource.axd?d=LPD7Tk5ccZgh_Rgifm2zlpHVE-rfFb_Z7etdYKoPwYqzaATKrr1wd4j3jA4kJGe2eqKyQCRyzSvfap1U0&amp;t=635802997220000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=pynGkmcFUV2TB0CXK1WLvAl4w-wEE0eoiQ4Fq-6TPDxPUBuY3mzuiRscN4A1&amp;t=635802997220000000" type="text/javascript"></script>
 
 
 <script src="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" type="text/javascript"></script>
 <script src="/DesktopModules/Links/js/toggle.js" type="text/javascript"></script>
 <script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3ad28568d3-e53e-4706-928f-3765912b66ca%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAfvgcR4+7J5o3Aou+TN8nMA//c7PsqmuTnEFQI7odDR3WwwN58EmkZeYVfe5uNDEljiNx9aiHsyVt43JPA19HY69g7WIPfzT65Doh/GL2XrAFfJ82cLYuNHga3Vmj3QvawglYTgmyD61+C5CtBsuVtAOso5Q4HzfY3z4osjvij5wwxwR6U=" />
-</div><script src="/js/dnn.js?cdv=311" type="text/javascript"></script><script src="/js/dnn.modalpopup.js?cdv=311" type="text/javascript"></script><script src="/js/dnn.servicesframework.js?cdv=311" type="text/javascript"></script><script src="/Resources/Search/SearchSkinObjectPreview.js?cdv=311" type="text/javascript"></script><script src="/js/dnncore.js?cdv=311" type="text/javascript"></script><script type="text/javascript">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="L4q36ZevmIF5bplsHgAhMYPagRdaos4L67LdQHN9rzV8ZFNVdVMM7LnvKjzdnuy2ngaJbihknPnCYIUUQVCMSv7OyoCulm5uz3igYc6W2WmQUQjz5/GlxrY9jnn5kZpnjsnIhn30LxOX1ctQosUFXr9JGPLPI24nR+BbJaFCpr4PVv6Pixl4BAIN6m1sXAjG/zchYw==" />
+</div><script src="/js/dnn.js?cdv=567" type="text/javascript"></script><script src="/js/Debug/dnn.modalpopup.js?cdv=567" type="text/javascript"></script><script src="/js/Debug/dnncore.js?cdv=567" type="text/javascript"></script><script src="/Resources/Search/SearchSkinObjectPreview.js?cdv=567" type="text/javascript"></script><script src="/DesktopModules/DNNCorp/EvoqContentLibrary/ClientScripts/dnn.analytics.Injected.js?cdv=567" type="text/javascript"></script><script src="/js/Debug/dnn.servicesframework.js?cdv=567" type="text/javascript"></script><script type="text/javascript">
 //<![CDATA[
 Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 90, '');
 //]]>
@@ -74,7 +118,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [],
 
         
         
-        <!--CDF(Javascript|/js/dnn.js?cdv=311)-->
+        <!--CDF(Javascript|/js/dnn.js?cdv=567)-->
 
 <style>
 
@@ -124,7 +168,7 @@ left: -80px; position: relative; top: 0px;
 
                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                      <td class="dnn_logo"><a id="dnn_dnnLOGO_hypLogo" title="Oxford County" href="http://www.oxfordcounty.ca/"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/15/Oxford-Logo.png" alt="Oxford County" /></a></td>
+                      <td class="dnn_logo"><a id="dnn_dnnLOGO_hypLogo" title="Oxford County" href="http://www.oxfordcounty.ca/"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/15/Oxford-Logo.png?ver=2011-10-13-160255-350" alt="Oxford County" /></a></td>
                       <td width="100%" valign="top">
 
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -271,7 +315,6 @@ left: -80px; position: relative; top: 0px;
 </table>
 
 <div class="c_footer">
-    
 
     
     
@@ -343,7 +386,7 @@ left: -80px; position: relative; top: 0px;
     <span class="search" title="Site Search"><input id="dnn_dnnSEARCH_SiteRadioButton" type="radio" name="dnn$dnnSEARCH$Search" value="SiteRadioButton" checked="checked" /><label for="dnn_dnnSEARCH_SiteRadioButton">Site</label></span>
     <span class="searchInputContainer" data-moreresults="See More Results" data-noresult="No Results Found">
         <input name="dnn$dnnSEARCH$txtSearch" type="text" maxlength="255" size="20" id="dnn_dnnSEARCH_txtSearch" class="NormalTextBox" autocomplete="off" placeholder="Search..." />
-        <a class="dnnSearchBoxClearText"></a>
+        <a class="dnnSearchBoxClearText" title="Clear search text"></a>
     </span>
     <a id="dnn_dnnSEARCH_cmdSearch" class="search" href="javascript:__doPostBack(&#39;dnn$dnnSEARCH$cmdSearch&#39;,&#39;&#39;)">Search</a>
 </span>
@@ -397,9 +440,9 @@ left: -80px; position: relative; top: 0px;
 
 
 		<td width="100%">
-			<!--CDF(Css|//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css?cdv=311)-->
-			<!--CDF(Css|/Portals/_default/skins/oxfordcounty/megamenu/megamenu.css?cdv=311)-->
-			<!--CDF(Css|/Portals/_default/Skins/OxfordCounty/Themes/default/theme.css?cdv=311)-->
+			<!--CDF(Css|http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css?cdv=567)-->
+			<!--CDF(Css|/Portals/_default/skins/oxfordcounty/megamenu/megamenu.css?cdv=567)-->
+			<!--CDF(Css|/Portals/_default/Skins/OxfordCounty/Themes/default/theme.css?cdv=567)-->
 			<section id="navigation">
 				<div class="main" style="padding: 0px 15px;">
 					<div class="row">
@@ -647,7 +690,6 @@ left: -80px; position: relative; top: 0px;
                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
   	              <td id="dnn_TwoColumnLeftPane" valign="top" class="two_column_left_pane">
-
 <div id="dnn_SideNavigation_pnlCopyright">
 	 
 <!-- 
@@ -710,15 +752,12 @@ left: -80px; position: relative; top: 0px;
 
 		      <td valign="top">
  <div style="background-color:#f5f5f5; padding-left:10px;">
-<span id="dnn_dnnBreadcrumb_lblBreadCrumb"><a href='http://www.oxfordcounty.ca' class='bread'>Home</a> <img src=/images/breadcrumb_b.gif> <a href="http://www.oxfordcounty.ca/Things-to-Do" class="bread">Things to Do</a> <img src=/images/breadcrumb_b.gif> <a href="http://www.oxfordcounty.ca/Things-to-Do/Libraries-museums-and-archives" class="bread">Libraries, museums, and archives</a> <img src=/images/breadcrumb_b.gif> <a href="http://www.oxfordcounty.ca/Things-to-Do/Libraries-museums-and-archives/Archives" class="bread">Archives</a></span>
-</div>
+<span id="dnn_dnnBreadcrumb_lblBreadCrumb" itemprop="breadcrumb" itemscope="" itemtype="https://schema.org/breadcrumb"><span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="http://www.oxfordcounty.ca/" class="bread" itemprop="item" ><span itemprop="name">Home</span></a><meta itemprop="position" content="1" /></span> <img src=/images/breadcrumb_b.gif> <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="http://www.oxfordcounty.ca/Things-to-Do" class="bread" itemprop="item"><span itemprop="name">Things to Do</span></a><meta itemprop="position" content="2" /></span> <img src=/images/breadcrumb_b.gif> <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="http://www.oxfordcounty.ca/Things-to-Do/Libraries-museums-and-archives" class="bread" itemprop="item"><span itemprop="name">Libraries, museums, and archives</span></a><meta itemprop="position" content="3" /></span> <img src=/images/breadcrumb_b.gif> <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="http://www.oxfordcounty.ca/Things-to-Do/Libraries-museums-and-archives/Archives" class="bread" itemprop="item"><span itemprop="name">Archives</span></a><meta itemprop="position" content="4" /></span></span></span></div>
 
 		        <table width="100%" border="0" cellspacing="0" cellpadding="0"   id="content">
 		          <tr>
-                            <td id="dnn_TwoColumnRightPane" colspan="3" valign="top" class="two_column_right_pane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5110"><a name="5110"></a><div id="dnn_ctr5110_ContentPane"><!-- Start_Module_5110 --><div id="dnn_ctr5110_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
-	
-<div id="dnn_ctr5110_HtmlModule_lblContent" class="Normal">
-	<table>
+                            <td id="dnn_TwoColumnRightPane" colspan="3" valign="top" class="two_column_right_pane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5110 DnnVersionableControl"><a name="5110"></a><div id="dnn_ctr5110_ContentPane"><!-- Start_Module_5110 --><div id="dnn_ctr5110_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr5110_HtmlModule_lblContent"><table>
     <tbody>
         <tr>
             <td><img alt="" width="400" height="221" style="width: 400px; height: 221px;" src="http://www.oxfordcounty.ca/portals/15/Documents/Articles/Governor's%20House%20165%20(800x441).jpg" />&nbsp;</td>
@@ -733,27 +772,26 @@ left: -80px; position: relative; top: 0px;
             &nbsp;</td>
         </tr>
     </tbody>
-</table>
-</div>
+</table></div>
+
+
+
 
 </div><!-- End_Module_5110 --></div>
 </div></td>
 
                           </tr>
 		          <tr>
- 		            <td id="dnn_ContentPane" valign="top" class="content_pane" width="100%" colspan="2"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5100"><a name="5100"></a>
+ 		            <td id="dnn_ContentPane" valign="top" class="content_pane" width="100%" colspan="2"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5100 DnnVersionableControl"><a name="5100"></a>
 <div class="green_title">
 	<div class="header_box">
-		<div class="action"></div>
 		<div class="title_box"><span id="dnn_ctr5100_dnnTITLE_titleLabel" class="title_txt">Welcome to Oxford County Archives</span>
 
 
 </div>
 	</div>
 	<div id="dnn_ctr5100_ContentPane" class="cnt_body"><!-- Start_Module_5100 --><div id="dnn_ctr5100_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
-	
-<div id="dnn_ctr5100_HtmlModule_lblContent" class="Normal">
-	<h2>We are committed to preserving the County's total archival heritage and making it available to the public.</h2>
+	<div id="dnn_ctr5100_HtmlModule_lblContent"><h2>We are committed to preserving the County's total archival heritage and making it available to the public.</h2>
 <p>
 </p>
 <h3>Who we are</h3>
@@ -783,8 +821,10 @@ The County of Oxford Archives also endeavours to increase public awareness of th
 <br>
 <a href="http://www.oxfordcounty.ca/Portals/15/Documents/archives/ArchivesMap.pdf" title="Map" target="_blank"><img alt="" src="http://www.oxfordcounty.ca/Portals/15/Documents/Images/archives/ArchivesMap.png"></a><br>
 <br>
-</p>
-</div>
+</p></div>
+
+
+
 
 </div><!-- End_Module_5100 --></div>
 </div>
@@ -890,8 +930,8 @@ The County of Oxford Archives also endeavours to increase public awareness of th
 </td>
                   <td width="1" nowrap="nowrap" style="color: white; padding-right: 10px;"  valign="middle">
 
-<a href="/feedback.aspx" class="login">Feedback</a>&nbsp;|&nbsp;<a id="dnn_dnnLOGIN_loginLink" title="Login" class="login" onclick="return dnnModal.show(&#39;http://www.oxfordcounty.ca/Login?returnurl=/Things-to-Do/Libraries-museums-and-archives/Archives&amp;popUp=true&#39;,/*showReturn*/true,300,650,true,&#39;&#39;)" href="http://www.oxfordcounty.ca/Login?returnurl=%2fThings-to-Do%2fLibraries-museums-and-archives%2fArchives">Login</a>
-&nbsp;|&nbsp;<a id="dnn_topuser_registerLink" title="Register" class="login" href="http://www.oxfordcounty.ca/General/registration?returnurl=http%3a%2f%2fwww.oxfordcounty.ca%2fThings-to-Do%2fLibraries-museums-and-archives%2fArchives">Register</a>
+<a href="/feedback.aspx" class="login">Feedback</a>&nbsp;|&nbsp;<a id="dnn_dnnLOGIN_loginLink" title="Login" class="login" rel="nofollow" onclick="return dnnModal.show(&#39;http://www.oxfordcounty.ca/Login?returnurl=/Things-to-Do/Libraries-museums-and-archives/Archives&amp;popUp=true&#39;,/*showReturn*/true,300,650,true,&#39;&#39;)" href="http://www.oxfordcounty.ca/Login?returnurl=%2fThings-to-Do%2fLibraries-museums-and-archives%2fArchives">Login</a>
+&nbsp;|&nbsp;<a id="dnn_topuser_registerLink" title="Register" class="login" rel="nofollow" href="https://www.oxfordcounty.ca/General/registration?returnurl=http%3a%2f%2fwww.oxfordcounty.ca%2fThings-to-Do%2fLibraries-museums-and-archives%2fArchives">Register</a>
 &nbsp;&nbsp;
 
 
@@ -938,11 +978,48 @@ The County of Oxford Archives also endeavours to increase public awareness of th
 
 
         <input name="ScrollTop" type="hidden" id="ScrollTop" />
-        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`,`sf_siteRoot`:`/`,`sf_tabId`:`2693`}" />
-        <input name="__RequestVerificationToken" type="hidden" value="XzSC3xvR0LD3K_ko6BzUikeFuKsDXPt3SK34Y29Xp6Wrb9wquNOb1Z-pM9YKCTCnhM8wQqX1e7EbJxfh2NCQG1Kvgz5SMjdkWzI3Ic3HFP0qXHF1_-k17rIdTEI1" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`,`sf_siteRoot`:`/`,`sf_tabId`:`2693`,`evoq_TabId`:`2693`,`evoq_PageLanguage`:`en-US`,`evoq_ContentItemId`:`-1`,`evoq_UrlReferrer`:``,`evoq_UrlPath`:`http%3a%2f%2fwww.oxfordcounty.ca%2fThings-to-Do%2fLibraries-museums-and-archives%2fArchives`,`evoq_UrlQuery`:`%3fTabId%3d2693%26language%3den-US`,`evoq_ContentItemReferrer`:`-1`,`evoq_PersonalizedUrlReferrer`:`-1`,`evoq_DisableAnalytics`:`False`}" />
+        <input name="__RequestVerificationToken" type="hidden" value="lVjdUAapiRD3B7A5uwF4Uz80KLCtJn8ev5Ok9YL9_Sil_SZDXekjbtzzbGxIOrr3Hl384w2" />
     
-<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script></form>
-    
+<script type='text/javascript'>
+//<![CDATA[
+(function() {
+
+  var analyticsSettings;
+  var initAnalyticsSettings = function (e) {
+    analyticsSettings = {
+      pageStart: analytics_page_startTime,
+      servicesFramework: $.ServicesFramework(-1)
+    };
+  };
+  if(window.addEventListener) {
+    window.addEventListener('load', initAnalyticsSettings, false);
+  } else {
+    window.attachEvent('onload', initAnalyticsSettings);
+  };
+
+  var eventName = (window.onpagehide || window.onpagehide === null) ? 'pagehide' : 'unload';
+  if (window.addEventListener) {
+    window.addEventListener(eventName, function (e) {
+      if (analyticsSettings) {
+        analyticsSettings.eventSource = 'pagehide';
+        if(dnn && dnn.analytics) { dnn.analytics.clientUnloading(e,analyticsSettings); }
+      }
+    }, false);
+  } else {
+    window.attachEvent('on' + eventName, function (e) {
+      if (analyticsSettings) {
+        analyticsSettings.eventSource = 'pagehide';
+        if(dnn && dnn.analytics) { dnn.analytics.clientUnloading(e,analyticsSettings); }
+      }
+    });
+  }
+
+})();
+//]]>
+</script>
+</form>
+    <!--CDF(Javascript|/js/Debug/dnncore.js?cdv=567)--><!--CDF(Javascript|/js/Debug/dnn.modalpopup.js?cdv=567)--><!--CDF(Css|/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?cdv=567)--><!--CDF(Css|/Portals/_default/Skins/OxfordCounty/skin.css?cdv=567)--><!--CDF(Css|/Portals/15/Containers/Oxford/Green Title.css?cdv=567)--><!--CDF(Css|/DesktopModules/Links/module.css?cdv=567)--><!--CDF(Css|/DesktopModules/Links/module.css?cdv=567)--><!--CDF(Css|/DesktopModules/Links/module.css?cdv=567)--><!--CDF(Css|/DesktopModules/Links/module.css?cdv=567)--><!--CDF(Css|/Portals/15/portal.css?cdv=567)--><!--CDF(Css|/Resources/Search/SearchSkinObjectPreview.css?cdv=567)--><!--CDF(Javascript|/Resources/Search/SearchSkinObjectPreview.js?cdv=567)--><!--CDF(Javascript|/DesktopModules/DNNCorp/EvoqContentLibrary/ClientScripts/dnn.analytics.Injected.js?cdv=567)--><!--CDF(Javascript|/js/dnn.js?cdv=567)--><!--CDF(Javascript|/js/Debug/dnn.servicesframework.js?cdv=567)--><!--CDF(Javascript|/Resources/libraries/jQuery/01_09_01/jquery.js?cdv=567)--><!--CDF(Javascript|/Resources/libraries/jQuery-UI/01_11_03/jquery-ui.js?cdv=567)-->
     
 </body>
 </html>

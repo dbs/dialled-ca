@@ -8,17 +8,16 @@
 <head>
 
 	<title>Vaughan Public Libraries - Libraries</title>
-	
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=10" >
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="keywords" content="vaughan, public, library, ontario, canada" />
-	<meta name="description" content="Vaughan Public Libraries website" />
 	<meta name="description" content="Enrich Inspire Transform - Vaughan Public Libraries offer welcoming destinations that educate, excite and empower our community. " />
 
 	<link rel="shortcut icon" href="http://www.vaughanpl.info/favicon.ico" type="image/x-icon" />
 
 <!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="/css/fullcalendar.css" />	<link rel="stylesheet" type="text/css" href="/css/default.css" />	<link rel="stylesheet" type="text/css" href="/css/zebra_datepicker.css" />	<link rel="stylesheet" href="/css/jquery-ui.css" type="text/css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/default.css" />	<link rel="stylesheet" type="text/css" href="/css/zebra_datepicker.css" />	<link rel="stylesheet" href="/css/jquery-ui.css" type="text/css" media="screen" />
 	<!--
 	<link rel="stylesheet" href="/css/jquery.twitter.css">
 	<link rel="stylesheet" href="/css/jquery.tweet.css">
@@ -43,17 +42,18 @@
 
 <!-- scripts -->
 <!-- for calendar -->
-	<script type="text/javascript" src="/js/jquery-1.3.2.js"></script>	<script type="text/javascript" src="/js/fullcalendar.min.js"></script>
+		
 
 
 <!-- for slideshow -->
 	<script type="text/javascript" src="/js/slideMenus.js"></script>
-	<script type="text/javascript" src="/js/jquery/jquery-1.5.2.min.js"></script><script type="text/javascript" src="/js/jquery.animate-colors-min.js"></script><script type="text/javascript" src="/js/jquery.easing.1.3.js"></script><script type="text/javascript" src="/js/jquery.skitter.min.js"></script><link rel="stylesheet" type="text/css" href="/css/skitter.styles.css" />
+	<script type="text/javascript" src="/js/jquery/jquery-1.5.2.min.js"></script><script type="text/javascript" src="/js/jquery.animate-colors-min.js"></script><script type="text/javascript" src="/js/jquery.easing.1.3.js"></script><script type="text/javascript" src="/js/jquery.skitter.js"></script><link rel="stylesheet" type="text/css" href="/css/skitter.styles.css" />
 	<script  type="text/javascript" >AC_FL_RunContent = 0;</script>
 	<script src="/js/AC_RunActiveContent.js" type="text/javascript" ></script>
 
 <!-- for calendar select -->
 	<script type="text/javascript" src="/js/zebra_datepicker.js"></script>
+	
 <!-- google analysis -->
 	<script type="text/javascript">
 
@@ -115,10 +115,6 @@
    });
 </script>
 
-<script language="javascript" type="text/javascript">
-	
-</script>
-
 <script type="text/javascript">
 <!--
 function goto_URL(){
@@ -133,7 +129,7 @@ function goto_URL(){
 		var style = document.getElementById(id).style;
 		style.display = (style.display=="block") ? "none":"block";
 	}
-	
+
 	function externalLinks() {
 		 if (!document.getElementsByTagName) return;
 		 var anchors = document.getElementsByTagName("a");
@@ -146,9 +142,9 @@ function goto_URL(){
 	}
 
 	function confirmMobile(isMobile) {
-		
+
 		var ref = document.referrer;
-		
+
 		var isMobile = {
 		    Android: function() {
 		        return navigator.userAgent.match(/Android/i);
@@ -169,12 +165,12 @@ function goto_URL(){
 		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 		    }
 		};
-		
+
 		if (isMobile.any() && (document.URL == 'http://www.vaughanpl.info/' || document.URL == 'http://www.vaughanpl.info/index.php') && ref.indexOf("vaughanpl.info/") == -1) {
-						
-				window.location = "http://www.vaughanpl.info/mobile.html";	
-						
-			
+
+				window.location = "http://www.vaughanpl.info/mobile.html";
+
+
 		}
 	}
 
@@ -188,7 +184,7 @@ function goto_URL(){
 	function do_on_load() {
 		try {onLoad();}
 		catch (ex) {}
-		externalLinks();		
+		externalLinks();
 		confirmMobile('');
 
 
@@ -230,6 +226,7 @@ function goto_URL(){
 <div class="opening"></div>
 <div class="details">
 <div class='site_menu_item'><a href="http://www.vaughanpl.info/programs" >Programs &amp; Events</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/events_calendars/calendar" >Events Calendar</a></div>
 <div class='site_menu_item'><a href="http://www.vaughanpl.info/news_and_events/publications_media" >Publications &amp; Media Room</a></div>
 <div class='site_menu_item'><a href="http://www.vaughanpl.info/newsletters/subscribe" >eNewsletter</a></div>
 </div><div class='closing'></div></div></div>
@@ -241,7 +238,7 @@ function goto_URL(){
 <div id="menu_option_borrowing" class="site_menu_item" onmouseover="showMenu('borrowing');" onmouseout="hideMenu('borrowing');" onblur="hideMenu('borrowing');" onfocus="showMenu('borrowing');" ><a href="http://www.vaughanpl.info/services/borrowing" >Borrowing Materials ...</a></div>
 <div id="menu_option_library_services" class="site_menu_item" onmouseover="showMenu('library_services');" onmouseout="hideMenu('library_services');" onblur="hideMenu('library_services');" onfocus="showMenu('library_services');" ><a href="http://www.vaughanpl.info/library_services" >Library Services</a></div>
 <div class='site_menu_item'><a href="http://www.vaughanpl.info/library_notification_requests" >Library Notification</a></div>
-<div class='site_menu_item'><a href="http://www.vaughanpl.info/services/maker_kit" >Maker Kits</a></div>
+<div class='site_menu_item'><a href="http://www.vaughanpl.info/creation_spaces" >Creation Spaces</a></div>
 </div><div class='closing'></div></div></div>
 <div id="menu_container_borrowing" class="site_menu_container site_menu_level_3">
 <div id="menu_borrowing" class="site_menu" onmouseover="showMenu('borrowing');showMenu('services');" onmouseout="hideMenu('borrowing');hideMenu('services');" onblur="hideMenu('borrowing');hideMenu('services');" onfocus="showMenu('borrowing');showMenu('services');" >
@@ -361,18 +358,19 @@ function goto_URL(){
 					<div class="section">
 
 							<div class="box_skitter box_skitter_small info_slide">
-							
-							<script  type="text/javascript">
+
+							<script type="text/javascript">
 								$(document).ready(function(){
 									$('.box_skitter_large').skitter({numbers: true, navigation: false, label: false, preview: 1, hideTools: true, interval: 5000, show_randomly: false, numbers_align: "center", animateNumberOver: {backgroundColor:"#999", color:"#fff"}, animateNumberActive: {backgroundColor:"#004499", color:"#fff"}});
-									
-									$('.box_skitter_small').skitter({numbers: false, navigation: true, label: false, preview: 1, hideTools: true, auto_play: false, interval: 30000, show_randomly: true, });	
-									
-							
+
+									$('.box_skitter_small').skitter({numbers: false, navigation: true, label: false, preview: 1, hideTools: true, auto_play: false, interval: 30000, show_randomly: true, });
+
+
 								});
 							</script>
 							<ul>
 							<li><a href="https://www.hoopladigital.com" target="_blank"><img src="/img/slides/hoopla_btn.png" class="fade" alt="hoopla button" /></a></li>
+              <li><a href="https://lynda.com/portal/sip?org=vaughanpl.info"><img src="/img/slides/lynda132x185.jpg" class="fade" alt="lynda button" /></a></li>
 							<li><a href="http://eproducts.vaughanpl.info:81/login/zinio"><img src="/img/slides/zinio_btn.png" class="fade" alt="zinio button" /></a></li>
 							<li><a href="http://ebooks.vaughanpl.info/"><img src="/img/slides/overdrive_btn.png" class="fade" alt="OverDrive" /></a></li>
 							<li><a href="http://eproducts.vaughanpl.info:81/login/one_click"><img src="/img/slides/oneclick_btn.png" class="fade" alt="OneClickdigital" /></a></li>
@@ -382,9 +380,9 @@ function goto_URL(){
 							<li><a href="https://ebook.3m.com/library/vaughanpl/"><img src="/img/slides/3m_btn.png" class="fade" alt="3M Library" /></a></li>
 							</ul>
 							</div>
-						    
+
 						</div><br/>
-						
+
 						<div class="section">
 							<a id="link_teen_vortex" href="http://www.vaughanpl.info/vortex" title="Teen vortex"><span class="graphic_link_caption">Teen Vortex</span></a>
 						</div>
@@ -403,12 +401,12 @@ function goto_URL(){
 						<div class="section">
 							<a id="link_building" href="http://www.vaughanpl.info/building" title="Building Blog"><span class="graphic_link_caption">Building Blog</span></a>
 						</div>
-				
+
 
 						<div id="nav_bar_spacer"></div>
 
 					</div>
-						
+
 
 					<div id="nav_bar_bottom"></div>
 				</div>
@@ -442,7 +440,7 @@ function goto_URL(){
 				<div id="bread_crumb_area">
 					<div class="opening"></div>
 					<div class="details"><a href="/" >Home</a>&nbsp;&gt;&nbsp;<a href="/about" >About Vaughan Public Libraries</a></div>
-					<div class="closing"><a id="skip_target" name="skip">-</a></div>
+					<div class="closing" id="skip"></div>
 				</div>
 
 
@@ -511,7 +509,9 @@ function goto_URL(){
 				<div class="summary">
 											2191 Major MacKenzie Drive<br />
 						Vaughan, Ontario L6A 4W2<br />
-																				<a href="/libraries/view/11" >more ...</a>				</div>
+																Telephone: (905) 653-READ (7323)<br />
+																Fax: (905) 832-8527<br />
+										<a href="/libraries/view/11" >more ...</a>				</div>
 			</div>
 			
 		
@@ -726,7 +726,7 @@ function goto_URL(){
 
 																												<div class="excerpt">
 
-	<b>VPL's Vision Statement:</b><br/>Enrich&nbsp;&nbsp;&nbsp;Inspire&nbsp;&nbsp;&nbsp;Transform<b><br/><br/>VPL's Mission:</b><br/>Vaughan Public Libraries offer welcoming destinations that educate, excite and empower our community.	<div class="section_end">&nbsp;</div>
+	<strong>VPL's Vision Statement:</strong><br/>Enrich&nbsp;&nbsp;&nbsp;Inspire&nbsp;&nbsp;&nbsp;Transform<strong><br/><br/>VPL's Mission:</strong><br/>Vaughan Public Libraries offer welcoming destinations that educate, excite and empower our community.	<div class="section_end">&nbsp;</div>
 </div>
 
 <br />
@@ -748,15 +748,14 @@ function goto_URL(){
 			<td class="page_frame_content_bar">
 				<div id="content_area_bottom">
 					<div class="opening"></div>
-					<div class="details"><center>
+					<div class="details">
 					<a class="shortcut_footer" href="http://www.vaughanpl.info/services/website_map">Site Map</a>  |
 					<a class="shortcut_footer" href="http://www.vaughanpl.info/services/website_search">Site Search</a>  |
 					<a class="shortcut_footer" href="http://www.vaughanpl.info/about/faqs">FAQs</a> |
 					<a class="shortcut_footer" href="http://www.vaughanpl.info/about/website_privacy">Privacy</a>  |
 					<a class="shortcut_footer" href="http://www.vaughanpl.info/contact">Contact</a> |
 					<a class="shortcut_footer" href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d11680" rel="external">Donate to VPL</a>
-			&copy; Vaughan Public Libraries 2016					</center>
-
+			&copy; Vaughan Public Libraries 2016
 					</div>
 					<div class="closing"></div>
 				</div>

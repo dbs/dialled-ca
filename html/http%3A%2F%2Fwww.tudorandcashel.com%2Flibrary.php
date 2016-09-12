@@ -46,7 +46,7 @@ function em(str,domain) {document.write("<a href=\"ma"+"il"+"to:" + str + "@" + 
   </div>
   <div id="mainImageContainer">
     
-	<img src="/images/header/003.jpg">  </div>
+	<img src="/images/header/014.jpg">  </div>
   <div id="contentWrap">
       <div id="contentNav">
   

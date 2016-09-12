@@ -11,7 +11,7 @@
 <meta name="services" content="your government" />
 <meta name="content" content="general" />
 <meta name="rating" content="general" />
-<meta name="robots" content="all" />
+
 <meta name="revisit-after" content="90 days" />
 <meta name="author" content="City of Winnipeg : Water and Waste Department" />
 
@@ -36,15 +36,15 @@
 
 
 <!-- JQUERY SCRIPTS -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!--script src="http://code.jquery.com/jquery-1.10.2.min.js"></script-->
 
 <!-- This is calling the jquery UI - user interface -->
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <!--script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script-->
 
 <!-- This is calling the jquery theme SMOOTHNESS -->
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
 
 <!--This is everything you need for the new SMART left nav-->
 <script type="text/javascript" src="/shared/js/LtNavTree.js"></script>
@@ -81,7 +81,7 @@
 <!-- top navigation -->
 <!-- access key #1 to top nav is in the top-nav.htm include file -->
 <!--The first link on the page is supposed to be an Accessibility link-->
-<a href="http://www.winnipeg.ca/interhom/help/access.stm" tabindex="1" title="Site Accessibility Information"><img alt="Site Accessibility Information" src="/shared/images/pxl_trans.gif" width="1" height="1" border="0" style="position:absolute; top:0px; left:0px; z-index:0; visibility:hidden;" /></a>
+<a tabindex="1" title="Site Accessibility Information"><img alt="Site Accessibility Information" src="/shared/images/pxl_trans.gif" width="1" height="1" border="0" style="position:absolute; top:0px; left:0px; z-index:0; visibility:hidden;" /></a>
 
 <a href="#skipToTopNav" accesskey="1" title="Access Key 1 to Skip to Top Navigation"><img alt="Access Key 1 to Skip to Top Navigation" src="/shared/images/pxl_trans.gif" width="1" height="1" border="0" style="position:absolute; top:0px; left:0px; z-index:0; visibility:hidden;" /></a>
 
@@ -216,6 +216,7 @@ document.write(d_names[curr_day] + "," + " " + m_names[curr_month] + " " + curr_
 <!-- END DATE -->
 
 
+<!-- Top Nav Search Box Code BEGINS-->
 <!-- Search Box CSS -->
 
 <!--[if lte IE 8]>
@@ -254,40 +255,43 @@ display:none;
 </style>
 <!-- <![endif]-->
 
-
-
-
 <style>
 
 #searchbar {
-	padding: 0 !important;
-	padding-bottom: 0px !important;
-	margin-left: 10px !important;
+	padding-top: 0 !important;
+	margin-left: 20px !important;
 	border: none !important;	
+	float: right;
 }
 
 .searchbarbox {
 	margin: 0 !important;
-	border-top: 1px solid #999;
+	border-top: 1px solid #fff;
 	border-right: 0;
-	border-bottom: 1px solid #999;
-	border-left: 1px solid #999;
-	color: #999999 !important;
+	border-bottom: 1px solid #fff;
+	border-left: 1px solid #fff;
+	/*color: #000;*/
 	display: inline-block;
 	padding: 3px 3px;
 	box-sizing: border-box;	
 	padding-bottom: 0px !important;
+	width:150px;
+	height:30px;
 }
 
 input.wpgsearchbox.fa-input {
-	float:right;
+	float: right;
 	font-family: FontAwesome, Verdana, Helvetica, Arial, sans-serif;
 	color: #000;
 	height: 30px;
 	width: 30px;
 	padding: 0 !important;
 	margin: 0 !important;
-	border: 1px solid #999;
+	border-top: 1px solid #f0f0f0;
+	border-right: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	border-left: 1px solid #A9A9A9;
+	background-color: #f0f0f0;
 }
 
 
@@ -295,24 +299,22 @@ input.wpgsearchbox.fa-input {
 
 <!-- The word Search displays in IE8 and older -->
 <!--[if lte IE 8]><div id="searchtextonly"><strong> | </strong><a href="http://cowapp02.winnipeg.ca/search">Search Winnipeg.ca</a></div><![endif]-->
-
-<div id='searchbar' style="float:right;">
-<form method="get" action="http://cowapp02.winnipeg.ca/search" style="display:inline;">
-<input type="text" id="top_nav_wpgsearchtxt" name="q" class="searchbarbox" onFocus="if (this.value == ' Search Winnipeg.ca') {this.value = '';}" value=" Search Winnipeg.ca" onBlur="if (this.value == '') {this.value = ' Search Winnipeg.ca';}" style="width:150px; height:30px;" /><input type="submit" value="&#xf002;" class="wpgsearchbox fa-input" style="float:right;">
-
-		<input type="hidden" name="site" value="default_collection"/>
-		<input type="hidden" name="client" value="SearchFrontend"/>
-		<input type="hidden" name="proxystylesheet" value="SearchFrontend"/>
-		<input type="hidden" name="output" value="xml_no_dtd"/>
+<!-- OPEN top nav search box div -->
+<div id="searchbar">
+<!-- Google v1 Search Box Begins -->
+<form id="cse-search-box" style="display:inline;" title="Search" action="http://www.winnipeg.ca/search/default.stm">
+<input name="q" title="Search" type="text" id="top_nav_wpgsearchtxt" class="searchbarbox" lang="en" placeholder="Search Winnipeg.ca" /><input type="submit" name="sa" value="&#xf002;" class="wpgsearchbox fa-input">
 </form>
+<!-- Google v1 Search Box Ends -->
 </div>
-<!-- END SEARCH BOX -->
+<!-- CLOSE Top Nav search box div -->
+<!-- Top Nav Search Box Code ENDS-->
 
 <div id="top-menu">
 
   <ul class="top-menu">
 
-<a name="skipTo311Link" id="skipTo311Link" accesskey="5" title="Access Key 5 to Skip to Content area"><img alt="Accessibility" src="/shared/images/pxl_trans.gif" width="1" height="1" border="0" style="position:absolute; top:0px; left:0px; z-index:0; visibility:hidden;" /></a>
+<a name="skipTo311Link"></a>
 
 
 <!--[if lte IE 8]>
@@ -374,18 +376,22 @@ Self Service</a></li>
 </div>   
 
 <!-- START KNOW YOUR ZONE AD -->
+<!-- START KNOW YOUR ZONE AD -->
 <style>
+
+div#kyz-leaderboard {
+	padding-top:17px; /* space below leaderboard is added via #page margin-top in cow.css to  */
+	}
+
 div.floating-menu {
   clear: both;
   width: 952px;
-  height:67px;
   margin: 0 auto;
   border: 1px solid white;
   	}
 	
 div.floating-menu .container {
   width: 952px;
-  height:67px;
   margin: 0 auto;
   background-image: url(/shared/images/KYZ_TopNavBG.jpg);
   background-repeat:no-repeat;
@@ -396,11 +402,9 @@ div.floating-menu .container .alert {
   width: 300px;
   height:53px;
   color: #000;
-  float:left;
   font-weight:bold;
   font-size: 80%;
   /*background-color: #DA891E;*/
-
 	}
 	
 div.floating-menu .container .alert a:link{
@@ -419,52 +423,19 @@ div.floating-menu .container .alert a:active{
 div.floating-menu .container .alert a:visited{
   color: #cc0000;
   font-weight:bold;
-	}					
+	}
+	
 </style>
 
 
 
-<!--div class="floating-menu" id="float">
-	<a href="http://winnipeg.ca/publicworks/snow/parkingBans/parkingbans.asp" title="Parking Ban information, Know Your Zone dot winnipeg dot ca">
-    <div class="container">
-		<div class="alert">
-                <include virtual="/shared/socks_KYZ/includes/KYZ.htm"> 
-        </div>
-    </div>
-    </a>
-</div-->
+
+<!-- END KNOW YOUR ZONE AD -->
 <!-- END KNOW YOUR ZONE AD -->
 
-<div style="padding-top:8px;padding-bottom:8px">
+<!-- Start Alert -->
 
-
-</div><!--This closes space between top and bottom of banner -->
-
-<!-- START JAVASCRIPT IS DISABLED -->
-
-<style type="text/css">
-	.hidden {display:none;}
-</style>
-<script type="text/javascript">
-	$('html').addClass('hidden');
-	$(document).ready(function() {
-		$('#nojavascript').addClass('hidden');
-		$('html').removeClass('hidden');
-	});
-</script>
-
-<div class="floating-menu" id="nojavascript" style="height:100px;margin-bottom:18px;">
-      <div style="padding: 0px 10px; background-color:#eeeeee; border: 2px solid #cc0000;">
-      	<table border="0" cellspacing="0" cellpadding="5" style="height:100px;">
-      	  <tr style="vertical-align:top;">
-      	    <td style="width:33px; text-align:center;"><h5 style="margin-top:0.8em; margin-bottom:0.2em; font-size:0.95em;"><i class="fa fa-exclamation-triangle" style="color:#CC0000; font-size: 1.6em; vertical-align:text-top;"></i></h5></td>
-      	    <td><h5 style="margin-top:0.8em; margin-bottom:0.2em; font-size:0.95em;">JavaScript is Disabled</h5><p class="k80">JavaScript is required to use some parts of the Winnipeg.ca website. Your browser currently has JavaScript disabled. Please enable JavaScript in order to proceed. <a href="http://www.enable-javascript.com/" target="_blank" class="http">How to enable JavaScript in your browser</a></p></td>
-      	  </tr>
-      	</table>
-      </div>
-</div>
-
-<!-- END JAVASCRIPT IS DISABLED -->
+<!-- End Alert -->
 <div id="page">
 <div id="left-bar">
 
@@ -473,9 +444,8 @@ div.floating-menu .container .alert a:visited{
 <!-- *** EDITABLE: left sidebar content -->
 <a name="skipToLeftNav"></a>
 
-<!-- ALL Department Search Box Code BEGINS-->
-
-<!-- Department Search Box CSS starts-->
+<!-- Department Search Box Code BEGINS-->
+<!-- Department Search Box IE 7 target starts-->
 <!--[if lte IE 7]>
 <style>
 .searchbarboxDEPT{
@@ -489,31 +459,22 @@ font-weight:bold;
 }
 </style>
 <![endif]-->
-<!-- Department Search Box CSS ends-->
-
+<!-- Department Search Box IE 7 target ends-->
 <!-- OPEN Department search box div -->
-<div class="searchBox">
-	Search
+<div class="searchBox">Search
     <div class="left_menu_search">
-
-<!-- Google CSE Search Box Begins -->
-<form method="get" action="http://cowapp02.winnipeg.ca/search" style="display:inline;">
-    <input type="text" name="q" class="searchbarboxDEPT" onfocus="if (this.value == 'Water and Waste') {this.value = '';}" value="Water and Waste" onBlur="if (this.value == '') {this.value = 'Water and Waste';}" />
-    
-    <input type="submit" value="&#xf002;" class="wpgsearchboxDEPT fa-input">
-    
-    <input type="hidden" name="site" value="default_collection"/>
-    <input type="hidden" name="client" value="SearchFrontend"/>
-    <input type="hidden" name="proxystylesheet" value="SearchFrontend"/>
-    <input type="hidden" name="as_dt" value="i" />
-    <input type="hidden" name="as_sitesearch" value="winnipeg.ca/waterandwaste" />
-    <input type="hidden" name="output" value="xml_no_dtd"/>
+<!-- Google v1 Search Box Begins -->
+<form method="get" action="/search/waterandwaste.stm" title="Search Water and Waste">
+   <input name="q" title="Enter the terms you wish to search for" type="text" lang="en" placeholder="Water and Waste" class="searchbarboxDEPT" >
+    <input type="submit" name="sa" value="&#xf002;" class="wpgsearchboxDEPT fa-input" title="Search">
 </form>
-    <!-- Google CSE Search Box Ends -->
-    
+<!-- Google v1 Search Box Ends -->
     </div>
 </div> 
 <!-- CLOSE Department search box div -->
+<!-- Department Search Box Code ENDS-->
+
+
 
 
 <div id="leftNav">
@@ -845,7 +806,7 @@ from September 16 - 19, 2002</a> <span class="k75I"> (pdf - 36kb)</span><br />
 
 <li><a href="/waterandwaste/drainageFlooding/floodForecast2006.stm">2006 flood forecast</a></li>
 
-<li><a href="/Services/CityLife/HistoryOfWinnipeg/Flood/">Remembering the 1997 &quot;flood of the century&quot;</a></li>
+<li><a href="/history/Flood/">Remembering the 1997 &quot;flood of the century&quot;</a></li>
 
 <li><a href="/waterandwaste/drainageFlooding/lotGrading/sumpPumpDischargePhase1QA.stm">Sump pump hose inspection program - Phase one questions and answers</a> (2007 program)</li>
 
@@ -857,6 +818,8 @@ from September 16 - 19, 2002</a> <span class="k75I"> (pdf - 36kb)</span><br />
 <h3>Billing</h3>
 
 <ul>
+<li><a href="/waterandwaste/billing/rates2014.stm">2013 - 2015 Utility Charges</a></li>
+
 <li><a class="pdf" href="/waterandwaste/pdfs/billing/2012_rates_en.pdf" target="_blank" title="Selecting this link will open the pdf file in a new browser window. Close the new window to return to this page.">2012 water and sewer rates</a> <span class="k75I">(pdf - 1,198kb)</span> 
 <!--<a class="pdf" href="http://winnipeg.ca/clkdmis/ViewPdf.asp?SectionId=282142" target="_blank">City Council approves 2012 water and sewer utility rates</a>--></li>
 
@@ -929,14 +892,10 @@ from September 16 - 19, 2002</a> <span class="k75I"> (pdf - 36kb)</span><br />
 
 <li><a href="/waterandwaste/pdfs/billing/inserts/epostContest_Fall06.pdf" target="_blank" class="pdf" title="Selecting this link will open the english and french version of the pdf file in a new browser window. Close the new window to return to this page.">Live free with epostEn Fran&ccedil;ais</a>  <span class="k75I">(pdf - 581kb)</span></li>
 
-<li><a href="/waterandwaste/pdfs/billing/inserts/mosquito_insert06.pdf" target="_blank" class="pdf" title="Selecting this link will open the pdf file in a new browser window. Close the new window to return to this page.">Don't give mosquitoes a place to grow in your yard</a>  <span class="k75I">(pdf - 66kb)</span>
-<a href="/waterandwaste/pdfs/billing/inserts/mosquito_insert_fr06.pdf" target="_blank" class="pdf" title="Selecting this link will open the french version of this pdf file in a new browser window. Close the new window to return to this page.">En Fran&ccedil;ais</a>  <span class="k75I">(pdf - 65kb)</span></li>
 
 <li><a href="/waterandwaste/pdfs/billing/2006_rates_en.pdf" target="_blank" class="pdf" title="Selecting this link will open the pdf file in a new browser window. Close the new window to return to this page.">2006 water and sewer rates</a>  <span class="k75I">(pdf - 69kb)</span> <a href="/waterandwaste/pdfs/billing/2006_rates_fr.pdf" target="_blank" class="pdf" title="Selecting this link will open the french version of this pdf file in a new browser window. Close the new window to return to this page.">En Fran&ccedil;ais</a>  <span class="k75I">(pdf - 67kb)</span></li>
 
 <li><a href="/waterandwaste/pdfs/billing/inserts/late_payment_insert.pdf" target="_blank" class="pdf" title="Selecting this link will open the pdf file in a new browser window. Close the new window to return to this page.">Late payment charges are now in effect</a> <span class="k75I">(pdf - 31kb)</span> <a href="/waterandwaste/pdfs/billing/inserts/late_payment_insert_fr.pdf" target="_blank" class="pdf" title="Selecting this link will open the french version of this pdf file in a new browser window. Close the new window to return to this page.">En Fran&ccedil;ais</a>  <span class="k75I">(pdf - 32kb)</span></li>
-
-<li><a href="/waterandwaste/pdfs/billing/inserts/mosquito_insert.pdf" target="_blank" class="pdf" title="Selecting this link will open the pdf file in a new browser window. Close the new window to return to this page.">Fight the Bite!En Fran&ccedil;ais</a>  <span class="k75I">(pdf - 45kb)</span></li>
 
 <li><a href="/waterandwaste/pdfs/water/2004_water_quality_insert.pdf" target="_blank" class="pdf" title="Selecting this link will open the pdf file in a new browser window. Close the new window to return to this page.">Winnipeg's drinking water qualityEn Fran&ccedil;ais</a>  <span class="k75I">(pdf - 44kb)</span></li>
 
@@ -975,7 +934,7 @@ from September 16 - 19, 2002</a> <span class="k75I"> (pdf - 36kb)</span><br />
  <!-- InstanceEndEditable --> 
  <!-- BEGIN Nav Path and Last Updated module -->
  <div id="lutopContainer">
-	<div id="lastUpdateDate">Last updated: <!-- #BeginDate format:Am1 -->April 20, 2016<!-- #EndDate --></div>
+	<div id="lastUpdateDate">Last updated: <!-- #BeginDate format:Am1 -->June 6, 2016<!-- #EndDate --></div>
 	<div id="topOfPage"><a href="javascript:window.scrollTo(0, 0)">Top of page</a></div>
 </div>
  <!-- END Nav Path and Last Updated module -->
@@ -1074,8 +1033,18 @@ color:#333;
 /*--------------------END Footer Styles------------------------------------------*/
 </style>
 
-<a name="skipToFooter"></a>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-80593478-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<a name="skipToFooter"></a>
 
 
 <div id="footer">

@@ -1,237 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Centre de recherche du CHU de Québec</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <link href="/stylesheets/scaffold.css?1358341710" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/default2.css?1402927291" media="screen" rel="stylesheet" type="text/css" />
+<script src="/javascripts/prototype.js?1358783174" type="text/javascript"></script>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<script src="/javascripts/util-functions.js?1358341700" type="text/javascript"></script>
 
-<HTML>
-	<HEAD>
-		
-<TITLE>CHUQ - La recherche</TITLE>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="verify-v1" content="iXmvYozozMz/Rtf1X8QqPJQsD6c2YnoAbmJkHF1BPz8=" />
-<meta name="Author" content="CHUQ">
-<meta name="Keywords" content="Recherche, sites de recherche, chercheurs, centre de recherche, axes de recherche, SOVAR, valorisation">
-<meta name="description" content="">
-<meta name="language" content="fr">
+<script src="/javascripts/application2.js?1409840124" type="text/javascript"></script>
 
-<meta content="Microsoft Visual Studio .NET 7.1" name=GENERATOR>
-<meta content="Visual Basic .NET 7.1" name=CODE_LANGUAGE>
-<meta content=JavaScript name=vs_defaultClientScript>
-<meta content=http://schemas.microsoft.com/intellisense/ie5 name=vs_targetSchema><meta name="ROBOTS" content="FOLLOW,INDEX">
-<base href="http://www.chuq.qc.ca/CHUQ.Web/Gabarits/infoGeneral.aspx?NRMODE=Published&NRNODEGUID=%7bFAA5AC94-79F8-4040-B364-538CA8EE5714%7d&NRORIGINALURL=%2ffr%2fla_recherche%2f&NRCACHEHINT=Guest">
+<link href="/stylesheets/calendar/red/style.css?1358341708" media="screen" rel="stylesheet" type="text/css" />
+<script src="/javascripts/calendar_date_select/calendar_date_select.js?1397664092" type="text/javascript"></script>
+<script src="/javascripts/calendar_date_select/locale/fr.js?1358341698" type="text/javascript"></script>
+<script src="/javascripts/calendar_date_select/format_db.js?1358341698" type="text/javascript"></script>
 
-<script src="http://www.chuq.qc.ca/CHUQ.Web/CsScripts/entourage.js"></script>
-<script type="text/javascript" src="../CSScripts/Function.js"></script>
-<script type="text/javascript" src="../jwplayer/jwplayer.js"></script>
+<link href="/stylesheets/calendar_date_select/silver.css?1358341708" media="screen" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="../_static/neutral/CssJs/dhtml.js"></script>
-	<script type="text/javascript" src="../_static/neutral/CssJs/getanchorXY.js"></script>
-	<script type="text/javascript" src="../_static/neutral/CssJs/main.js"></script>
+<!--[if lt IE 10]>
+	<link href="/stylesheets/iecss.css?1389885151" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+	<link href="/stylesheets/iecss7.css?1358341710" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript"></script>
+<script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/ie7-squish.js" type="text/javascript"></script>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
+
 	<script type="text/javascript">
-		// Some Global JS variable for the site from the .NET MCMS
-		var cultureID = '<!-- %=CultureID% -->';
-		var webSiteUrl = '<!-- %=NonSecureSiteUrl% -->';
-		var webSiteCMSUrl= '<!-- %=CmsNonSecureSiteUrl% -->';		
+		function change_act() {
+			var act_actif = 1
+						if (document.getElementById('act_1').style.display == 'block') { act_actif = 1 }
+									document.getElementById('act_1').style.display = 'none'
+			
+			if (act_actif < 1) { num_act = act_actif + 1 }
+			else { num_act = 1 }
+
+			document.getElementById('act_'+num_act).style.display = 'block'
+		}
+
+		function change_job() {
+			var job_actif = 1
+						if (document.getElementById('job_1').style.display == 'block') { job_actif = 1 }
+						if (document.getElementById('job_2').style.display == 'block') { job_actif = 2 }
+						if (document.getElementById('job_3').style.display == 'block') { job_actif = 3 }
+						if (document.getElementById('job_4').style.display == 'block') { job_actif = 4 }
+						if (document.getElementById('job_5').style.display == 'block') { job_actif = 5 }
+						if (document.getElementById('job_6').style.display == 'block') { job_actif = 6 }
+						if (document.getElementById('job_7').style.display == 'block') { job_actif = 7 }
+						if (document.getElementById('job_8').style.display == 'block') { job_actif = 8 }
+						if (document.getElementById('job_9').style.display == 'block') { job_actif = 9 }
+						if (document.getElementById('job_10').style.display == 'block') { job_actif = 10 }
+						if (document.getElementById('job_11').style.display == 'block') { job_actif = 11 }
+						if (document.getElementById('job_12').style.display == 'block') { job_actif = 12 }
+						if (document.getElementById('job_13').style.display == 'block') { job_actif = 13 }
+						if (document.getElementById('job_14').style.display == 'block') { job_actif = 14 }
+						if (document.getElementById('job_15').style.display == 'block') { job_actif = 15 }
+						if (document.getElementById('job_16').style.display == 'block') { job_actif = 16 }
+									document.getElementById('job_1').style.display = 'none'
+						document.getElementById('job_2').style.display = 'none'
+						document.getElementById('job_3').style.display = 'none'
+						document.getElementById('job_4').style.display = 'none'
+						document.getElementById('job_5').style.display = 'none'
+						document.getElementById('job_6').style.display = 'none'
+						document.getElementById('job_7').style.display = 'none'
+						document.getElementById('job_8').style.display = 'none'
+						document.getElementById('job_9').style.display = 'none'
+						document.getElementById('job_10').style.display = 'none'
+						document.getElementById('job_11').style.display = 'none'
+						document.getElementById('job_12').style.display = 'none'
+						document.getElementById('job_13').style.display = 'none'
+						document.getElementById('job_14').style.display = 'none'
+						document.getElementById('job_15').style.display = 'none'
+						document.getElementById('job_16').style.display = 'none'
+			
+			if (job_actif < 16) { num_job = job_actif + 1 }
+			else { num_job = 1 }
+
+			document.getElementById('job_'+num_job).style.display = 'block'
+		}
+		
+		actIntervalId = setInterval('change_act()', 5000)
+		jobIntervalId = setInterval('change_job()', 5000)
+
 	</script>
 
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<link href="../Styles/chuq.css" rel="stylesheet" type="text/css" media="all" title="normal" /> 
-<link href="../Styles/gros.css" rel="alternate stylesheet" type="text/css" media="all" title="gros" /> 
-<style type="text/css" media="print">@import URL("../Styles/impression.css");</style>
+	  ga('create', 'UA-6645916-2', 'auto');
+	  ga('send', 'pageview');
 
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
-	</HEAD>
-	<body onload="main();">
-		<form name="infoGeneral" method="post" action="infoGeneral.aspx?NRMODE=Published&amp;NRNODEGUID=%7bFAA5AC94-79F8-4040-B364-538CA8EE5714%7d&amp;NRORIGINALURL=%2ffr%2fla_recherche%2f&amp;NRCACHEHINT=Guest" id="infoGeneral">
-<input type="hidden" name="__VIEWSTATE" value="dDwtMTIwNTUwMDQwMzt0PDtsPGk8MT47aTwzPjs+O2w8dDw7bDxpPDE+O2k8Mz47PjtsPHQ8cDxsPFRleHQ7PjtsPExhIHJlY2hlcmNoZTs+Pjs7Pjt0PHA8bDxUZXh0Oz47bDxcPG1ldGEgbmFtZT0iQXV0aG9yIiBjb250ZW50PSJDSFVRIlw+Clw8bWV0YSBuYW1lPSJLZXl3b3JkcyIgY29udGVudD0iUmVjaGVyY2hlLCBzaXRlcyBkZSByZWNoZXJjaGUsIGNoZXJjaGV1cnMsIGNlbnRyZSBkZSByZWNoZXJjaGUsIGF4ZXMgZGUgcmVjaGVyY2hlLCBTT1ZBUiwgdmFsb3Jpc2F0aW9uIlw+Clw8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iIlw+Clw8bWV0YSBuYW1lPSJsYW5ndWFnZSIgY29udGVudD0iZnIiXD4KOz4+Ozs+Oz4+O3Q8O2w8aTwxPjtpPDM+O2k8NT47PjtsPHQ8O2w8aTwwPjtpPDE+Oz47bDx0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+O2w8aTwxPjtpPDM+O2k8NT47aTw3PjtpPDk+O2k8MTE+Oz47bDx0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+O2w8aTwxPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+O2w8aTwxPjtpPDM+O2k8NT47aTw3PjtpPDk+O2k8MTE+O2k8MTM+O2k8MTU+O2k8MTc+O2k8MTk+O2k8MjE+O2k8MjM+O2k8MjU+O2k8Mjc+O2k8Mjk+O2k8MzE+O2k8MzM+O2k8MzU+O2k8Mzc+O2k8Mzk+O2k8NDE+O2k8NDM+Oz47bDx0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+Oz4+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47bDxpPDE+Oz47bDx0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+Oz4+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47bDxpPDE+Oz47bDx0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+Oz4+O3Q8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47bDxpPDE+O2k8Mz47PjtsPHQ8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+O2w8aTwxPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+Oz4+O3Q8O2w8aTwwPjtpPDE+O2k8Nj47PjtsPHQ8cDxsPGhyZWY7PjtsPC9mci87Pj47Oz47dDxwPDtwPGw8b25rZXlwcmVzczs+O2w8cmV0dXJuIGxhbmNlclJlY2hlcmNoZSgnQmFuZGVhdTFfaW1hZ2VTZWFyY2gnLCBldmVudClcOzs+Pj47Oz47dDxwPGw8Y2xhc3M7PjtsPG1lbnVhY3RpZjs+Pjs7Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8O2w8aTwzPjtpPDY+O2k8OT47aTwxMj47aTwxNT47PjtsPHQ8O2w8aTwwPjs+O2w8dDxAPC9mci9sYV9yZWNoZXJjaGUvcmVjaGVyY2hlX2NsaW5pcXVlLzs7UmVjaGVyY2hlIGNsaW5pcXVlOz47Oz47Pj47dDw7bDxpPDA+Oz47bDx0PEA8L2ZyL2xhX3JlY2hlcmNoZS9wcmVzZW50ZV9wcm9qZXQvOztQcsOpc2VudGVyIHVuIHByb2pldCBkZSByZWNoZXJjaGU7Pjs7Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8QDwvZnIvbGFfcmVjaGVyY2hlL2NvbWl0ZV9jb252ZW5hbmNlLzs7Q29taXTDqSBkZSBjb252ZW5hbmNlOz47Oz47Pj47dDw7bDxpPDA+Oz47bDx0PEA8L2ZyL2xhX3JlY2hlcmNoZS9ldGhpcXVlX3JlY2hlcmNoZS87O8OJdGhpcXVlIGRlIGxhIHJlY2hlcmNoZTs+Ozs+Oz4+O3Q8O2w8aTwwPjs+O2w8dDxAPC9mci9sYV9yZWNoZXJjaGUvZG9jdW1lbnRhdGlvbl9yZWNoZXJjaGUvOztEb2N1bWVudGF0aW9uOz47Oz47Pj47Pj47Pj47Pj47Pj47bDxCYW5kZWF1MTppbWFnZVNlYXJjaDs+PrUCujYXdH1/X+mjQLmnaPBxtjzG" />
-
-<input type="hidden" name="__VIEWSTATEGENERATOR" value="D3A24F25" />
-	<script language="javascript" type="text/javascript">
-<!--
- var __CMS_PostbackForm = document.infoGeneral;
- var __CMS_CurrentUrl = "/fr/la_recherche/recherche.htm";
- __CMS_PostbackForm.action = __CMS_CurrentUrl;
-// -->
-</script>
-
-
-
-			<TABLE border="0" cellSpacing="0" cellPadding="0">
-				<TR>
-					<TD vAlign="top">
-</TD>
-					<TD vAlign="top">
-						<a name="haut"></a>
-						<TABLE id="conteneur" cellSpacing="0" cellPadding="0" width="100%" border="0">
-							<TR>
-								<TD colSpan="2">
-<table id="entete" cellSpacing="0" cellPadding="0" border="0">
-	<tr>
-		<td width="186" rowSpan="4" valign="top">
-			<a href="/fr/" ><IMG height="105" alt="Centre hospitalier universitaire de Québec" src="../images/logo.gif" width="186" border="0"></a>
-		</td>
-		<td id="liens" align="right" colSpan="2">
-			<a href="/fr/" id="Bandeau1_linkHome">Accueil</a><span>|</span> <A href="/fr/liens/" >
-				Liens</a><span>|</span> <A href="http://www2.chudequebec.ca/accueil/nouvelles/index.html" target="_blank">Actualités</a><span>|</span>
-			<a href="/fr/carrieres/" >Carrières</a><span>|</span>
-			<a href="/fr/nous_joindre/" >Nous joindre</a>
-		</td>
-	</tr>
-	<tr>
-		<td id="recherche" style="background-image: url(../Images/bandeauRECHERCHE.jpg)" vAlign="top" colSpan="2" height="69">
-			<p>Pour trouver<br />
-				<input name="Bandeau1:textSearch" type="text" id="Bandeau1_textSearch" onkeypress="return lancerRecherche('Bandeau1_imageSearch', event);" />&nbsp;
-				<input type="image" name="Bandeau1:imageSearch" id="Bandeau1_imageSearch" src="../images/bt_recherche.gif" alt="Rechercher" border="0" />
-			</p>
-		</td>
-	</tr>
-	<tr>
-		<td id="menu" colSpan="2" height="22">
-			<table cellSpacing="0" cellPadding="0" width="100%" border="0">
-				<tr align="center">
-					<td id="Bandeau1_le_chuq" width="20%"><A href="/fr/le_chuq/" title="Le CHUQ">Le CHUQ</a></td>
-
-					<td id="Bandeau1_les_soins" width="20%"><A href="/fr/les_soins/" title="Les soins">Les soins</a></td>
-
-					<td id="Bandeau1_l_enseignement" width="20%"><A href="/fr/l_enseignement/" title="L'enseignement">L'enseignement</a></td>
-
-					<td id="Bandeau1_la_recherche" width="20%" class="menuactif"><A href="/fr/la_recherche/" title="La recherche">La recherche</a></td>
-
-					<td id="Bandeau1_uetmis" width="20%"><A href="/fr/evaluation/" title="L'évaluation des technologies et des modes d'intervention en santé">L'évaluation</a></td>
-
-				</tr>
-				<tr><td id="Bandeau1_les_services" style="text-align:left;" colspan="5"><A href="/fr/les_services/" title="Les services" style="padding-left:28px;">Les services</a></td>
-</tr>
-			</table>
-		</td>
-	</tr>
-	<tr id="Bandeau1_rowBreadcrumb">
-	<td id="Bandeau1_filariane" width="486">
-			<table class="filariane" border="0">
-		<tr>
-			<td nowrap="nowrap"><a href="/fr/" class="filariane">Accueil</a></td><td nowrap="nowrap">&nbsp;&gt;&nbsp;</td><td nowrap="nowrap"><a href="/fr/la_recherche/" class="filariane">La recherche</a></td>
-		</tr>
-	</table>
-		</td>
-	<td width="122">
-			<div align="right">
-				<span id="txt_agrandir"><a onclick="setActiveStyleSheet('gros'); return false;" href="#">
-						<IMG height="15" alt="Agrandir le texte" src="../images/texteplusgrand.gif" width="18"
-							border="0"></a></span><span id="txt_reduire"><a onclick="setActiveStyleSheet('normal'); return false;" href="#"><IMG height="15" alt="Réduire le texte" src="../images/textepluspetit.gif" width="18"
-							border="0"></a></span> <a href="javascript:print();"><IMG height="15" alt="Imprimer" src="../images/b_imprimer.gif" width="18" border="0"></a>
-			</div>
-		</td>
-</tr>
-
-</table></TD>
-							</TR>
-							<TR>
-								<TD id="colgauche" vAlign="top">
-
-<div id="imgmenu" style="background-image:url(../Images/menuRECHERCHE.jpg);"></div>
-<div id="sousmenu">
-	<ul><li>
-				<a href="/fr/la_recherche/recherche_clinique/" Class="">Recherche clinique</a>
-		</li><li>
-				<a href="/fr/la_recherche/presente_projet/" Class="">Présenter un projet de recherche</a>
-		</li><li>
-				<a href="/fr/la_recherche/comite_convenance/" Class="">Comité de convenance</a>
-		</li><li>
-				<a href="/fr/la_recherche/ethique_recherche/" Class="">Éthique de la recherche</a>
-		</li><li>
-				<a href="/fr/la_recherche/documentation_recherche/" Class="">Documentation</a>
-		</li></ul>
-</div>
-</TD>
-								<TD id="collarge" vAlign="top">
-									<h1><span id="plhInfoGeneralTitre">La recherche</span></h1>
-									<span id="plhInfoGeneral" AllowScripts="True"><P align=left>La recherche fait partie intégrante de la mission du CHU de Québec - Université Laval. Le Centre de recherche du CHU de Québec - Université Laval&nbsp;compte quelque 550 chercheurs travaillant quotidiennement à faire avancer les connaissances dans le domaine de la santé. Les membres du centre explorent sans relâche de nouvelles approches dans la prévention et la lutte aux maladies et aux souffrances humaines, dans une démarche hautement scientifique et intègre. Les recherches réalisées au CHU de Québec - Université Laval se distinguent tant par leur grande diversité que par leur haute qualité.&nbsp;&nbsp;&nbsp; <BR><BR>L'ensemble des chercheurs adhère au <A href="/NR/rdonlyres/E0D4510B-F73D-4AFA-9236-691CDB1CBD1B/0/941_00_REG_Cadre_reglem_orgrecherche_CHUdeQbc_RECUEIL.pdf" target=_blank>cadre réglementaire sur l'organisation et les bonnes pratiques de la recherche au CHU de Québec - Université Laval&nbsp;(PDF)</A> favorisant ainsi les plus hauts critères de qualité et d’excellence en recherche.<BR><BR>Consultez le site Internet du Centre de recherche du CHU de Québec - Université Laval&nbsp;(CR CHU de Québec) : <A href="http://www.crchudequebec.ulaval.ca" target=_blank>www.crchudequebec.ulaval.ca</A>&nbsp; <BR><BR><BR><BR><STRONG>La recherche multicentrique<BR><BR></STRONG>Les projets de recherche multicentriques doivent se conformer aux modalités prévues au <A href="/NR/rdonlyres/299BF818-41BC-4314-8575-CC221AD0907A/0/Cadre_de_reference_Novembre_2014.pdf">Cadre de référence multicentrique 2014</A> du Ministère de la Santé et des Services sociaux. Ces projets seront soumis selon le <A href="/NR/rdonlyres/D7C04E13-A963-4073-9EDC-5EE9011CED4C/0/multichercheurjanvier2015.pdf">mode de fonctionnement</A> en vigueur au CHU de Québec.<BR><BR></P>
-<P align=left>&nbsp;</P></span></TD>
-							</TR>
-						</TABLE>
-						<!--<div style="display:none;">-->
-<div id="notice">©
-	2016
-	CHUQ Tous droits réservés.<br>
-	Ce site est sous la responsabilité de la Direction des communications<br>
-	Commentaires ou suggestions : <a href="mailto:edimestre@chuq.qc.ca">edimestre@chuq.qc.ca</a></div>
-<div id="basinfo"><a href="http://www.chuq.qc.ca/fr/politique/">Politique d'utilisation et de confidentialité</a>&nbsp;&nbsp;|&nbsp;&nbsp;Grâce 
-	à l'infolettre, restez informé des nouvelles du CHU de Québec&nbsp;&nbsp;<input type="button" class="boutonrecherche" value="Abonnez-vous" onclick="document.location.href='http://www.chuq.qc.ca/fr/actualites/infolettre/'"></div>
-<!--</div>-->
-
-					</TD>
-				</TR>
-			</TABLE>
-		
-<!-- Generated by Microsoft.ContentManagement.WebControls.Console to reset form.action -->
-<SCRIPT type="text/javascript">
-<!--
-
-    var __CMS_PostbackFormBeenReset = false;
-
-    function __cmsRestFormAction()
-    {
-        if ( !__CMS_PostbackFormBeenReset )
-        {
-            // set form postback Url to be current translated CMS Url
-            __CMS_PostbackForm.action = __CMS_CurrentUrl;
-        }
-    }
-
-    var __cmsResetFormCachedPostBack = null;
-    if( typeof window.__doPostBack != "undefined" )
-    {
-        __cmsResetFormCachedPostBack = __doPostBack;
-        __doPostBack = __cmsResetFormOverridePostBack;
-    }
-
-    var __cmsResetFormCachedOnSubmit = null;
-    if( typeof __CMS_PostbackForm.onsubmit != "undefined" )
-    {
-        __cmsResetFormCachedOnSubmit = __CMS_PostbackForm.onsubmit;
-        __CMS_PostbackForm.onsubmit = __cmsResetFormOverrideOnSubmit;
-    }
-    else
-    {
-        __cmsResetFormCachedOnSubmit = null;
-        __CMS_PostbackForm.onsubmit = __cmsResetFormOverrideOnSubmit;
-    }
-
-    function __cmsResetFormOverridePostBack( eventTarget, eventArgument )
-    {
-        __cmsRestFormAction();
-        __cmsResetFormCachedPostBack( eventTarget, eventArgument );
-    }
-
-    function __cmsResetFormOverrideOnSubmit()
-    {
-        __cmsRestFormAction();
-        if (__cmsResetFormCachedOnSubmit != null)
-            return __cmsResetFormCachedOnSubmit();
-        else
-            return true;
-    }
-// -->
-</SCRIPT>
-
-
-
-
-</form>
-	</body>
+	</script>
 	
-<script type="text/javascript">setPageStyle();</script>
-<script type="text/javascript">
-var loc_var=this.location.href;
-if (loc_var.indexOf('?addr=') !=-1) {
-	var loc_arr=loc_var.split('?addr=');
-	document.getElementById('myiframe').src='http://' + loc_arr[1];
-} 
-</script>
-<script type="text/javascript">
-	var _gaq=[['_setAccount','UA-4545597-1'],['_trackPageview']];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-<script type="text/javascript">if (window.location.port == ''){ window.onload = entourage.initialize; }</script>	
-</HTML>
-<!-- Page non cache -->
+			<script type="text/javascript">
+			function change_site() {
+				var site_actif = 1
+								if (document.getElementById('site1').style.display == 'block') { site_actif = 1 }
+								if (document.getElementById('site2').style.display == 'block') { site_actif = 2 }
+								if (document.getElementById('site3').style.display == 'block') { site_actif = 3 }
+								if (document.getElementById('site4').style.display == 'block') { site_actif = 4 }
+								if (document.getElementById('site5').style.display == 'block') { site_actif = 5 }
+												document.getElementById('site1').style.display = 'none'
+								document.getElementById('site2').style.display = 'none'
+								document.getElementById('site3').style.display = 'none'
+								document.getElementById('site4').style.display = 'none'
+								document.getElementById('site5').style.display = 'none'
+				
+				if (site_actif < 5) { num_site = site_actif + 1 }
+				else { num_site = 1 }
+
+				document.getElementById('site'+num_site).style.display = 'block'
+			}
+			
+			publIntervalId = setInterval('change_publ()', 5000)
+			siteIntervalId = setInterval('change_site()', 5000)
+		</script>
+			
+</head>
+<body>
+<div id="et">
+	<div id="outils">
+					<div id="login">Vous n'êtes pas identifié (<a href="javascript:NewWindow=window.open('/login','Connexion','width=504,height=204,left=0,top=0,toolbar=No,location=No,scrollbars=No,status=No,resizable=No,fullscreen=No');  NewWindow.focus(); void(0);">connexion</a>)</div>
+				<div id="form">
+		<form action=" http://www.crchuq.ca/search" id="cse-search-box">
+		  <div>
+		    <input type="hidden" name="cx" value="018439508118878146213:jctxjhbmlka" />
+		    <input type="hidden" name="cof" value="FORID:10" />
+		    <input type="hidden" name="ie" value="UTF-8" />
+		    <input type="text" name="q" size="31" />
+			<input type="button" name="sa" onClick="javascript:submit();" id="button" />
+		  </div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=fr"></script>
+		</div>
+		<div id="liens">| <a href="/liens">Liens</a> &#149; <a href="/etudes_cliniques">Participants recherchés</a> &#149; <a href="/coordonnees">Pour nous joindre</a> &#149; <a href="/don_a_la_recherche">Don à la recherche</a> &#149; <a href="https://www.cha.quebec.qc.ca/recherche/classeur-de-la-recherche/index.html?no_cache=1" target="_blank">Classeur de la recherche</a> &#149; <a href="/extranet" id="lien_extranet">Extranet</a> &#149; <a href="/en">English</a> | </div>
+	</div>
+	<div id="img_et"><a href="/"><img id="logo" src="/images/logo.png" /><img src="/images/ET/ET12.jpg" /><h1>Centre de recherche</h1></a></div>
+	<ul id="menu">
+		<li id="accueil"><a href="#" id="link_accueil" class="menu_link" onClick="open_menu('accueil');">Le Centre</a></li>
+		<li id="recherche"><a href="#" id="link_recherche" class="menu_link" onClick="open_menu('recherche');">La recherche</a></li>
+		<li id="services"><a href="#" id="link_services" class="menu_link" onClick="open_menu('services');">Les services</a></li>
+		<li id="formation"><a href="#" id="link_formation" class="menu_link" onClick="open_menu('formation');">La formation</a></li>
+		<li id="carriere"><a href="#" id="link_carriere" class="menu_link" onClick="open_menu('carriere');">Les carrières</a></li>
+	</ul>
+</div>
+<div id="middle">
+	<div id="col_gauche">		
+		<div id="activite">
+			<h1>MERCREDI <B>14 SEP</B></h1>
+				<div id="act_1">
+				<h2>Pierre J. Durand, M.D., M.Sc., FRCPC, CSPQ, CMFC</h2>
+				<h3>Conférence</h3>
+				<p><a href="/activites/1640">Démence, un problème de santé publique: que penser du dépistage pré...</a></p>
+			</div>
+				<a id="calendrier" href="/activites">Calendrier &gt;</a>
+		</div>
+
+		<div id="carriere">
+			<h1>CARRIÈRES</h1>
+				<div id="job_1" >
+				<h2><a href="/carriere/offres/1029">Étudiant à la maitrise ou au doctorat</a></h2>
+				<h3>Denis Soulet</h3>
+			</div>
+				<div id="job_2" style="display: none;">
+				<h2><a href="/carriere/offres/1027">Étudiant à la maitrise</a></h2>
+				<h3>Denis Soulet</h3>
+			</div>
+				<div id="job_3" style="display: none;">
+				<h2><a href="/carriere/offres/1036">Professionnel de recherche spécialisé en bioinformatique</a></h2>
+				<h3>Arnaud Droit</h3>
+			</div>
+				<div id="job_4" style="display: none;">
+				<h2><a href="/carriere/offres/1037">Étudiant M.Sc.</a></h2>
+				<h3>Jérome Estaquier</h3>
+			</div>
+				<div id="job_5" style="display: none;">
+				<h2><a href="/carriere/offres/1038">Stagiaire postdoct</a></h2>
+				<h3>Jérome Estaquier</h3>
+			</div>
+				<div id="job_6" style="display: none;">
+				<h2><a href="/carriere/offres/937">Étudiant au doctorat - Physiopathologie de la maladie de Paget</a></h2>
+				<h3>Laëtitia Michou</h3>
+			</div>
+				<div id="job_7" style="display: none;">
+				<h2><a href="/carriere/offres/1040">Technicien de recherche</a></h2>
+				<h3>Eric Boilard</h3>
+			</div>
+				<div id="job_8" style="display: none;">
+				<h2><a href="/carriere/offres/1035">Étudiant à la maîtrise ou au doctorat</a></h2>
+				<h3>Samer Hussein</h3>
+			</div>
+				<div id="job_9" style="display: none;">
+				<h2><a href="/carriere/offres/977">2 postes pour étudiants au MSc et/ou PhD en biologie cellulaire/pharmacologie/immunolog...</a></h2>
+				<h3>Jean Sévigny</h3>
+			</div>
+				<div id="job_10" style="display: none;">
+				<h2><a href="/carriere/offres/966">Stagiaires postdoctoral(e)s en génomique transcriptionnelle</a></h2>
+				<h3>Steve Bilodeau</h3>
+			</div>
+				<div id="job_11" style="display: none;">
+				<h2><a href="/carriere/offres/965">Postes d’étudiant(e)s au doctorat en génomique transcriptionnelle</a></h2>
+				<h3>Steve Bilodeau</h3>
+			</div>
+				<div id="job_12" style="display: none;">
+				<h2><a href="/carriere/offres/964">Postes d’étudiant(e)s à la maitrise en génomique transcriptionnelle</a></h2>
+				<h3>Steve Bilodeau</h3>
+			</div>
+				<div id="job_13" style="display: none;">
+				<h2><a href="/carriere/offres/984">Étudiant(e) au doctorat</a></h2>
+				<h3>Abid Oueslati</h3>
+			</div>
+				<div id="job_14" style="display: none;">
+				<h2><a href="/carriere/offres/985">Étudiant(e) au Doctorat</a></h2>
+				<h3>Dimcho Bachvarov</h3>
+			</div>
+				<div id="job_15" style="display: none;">
+				<h2><a href="/carriere/offres/1030">Étudiant(e) au doctorat en immunologie.</a></h2>
+				<h3>Fawzi Aoudjit</h3>
+			</div>
+				<div id="job_16" style="display: none;">
+				<h2><a href="/carriere/offres/1031">Trois postes – Étudiant à la maîtrise et/ou au doctorat</a></h2>
+				<h3>Jacques J. Tremblay</h3>
+			</div>
+					<a href="/carriere/offres" id="liste">Liste des opportunités &gt;</a>
+		</div>
+		
+		<div id="postit">
+			<form action="/bottin" method="post">
+			<h1>BOTTIN</h1>
+				<input type="text" name="lastname" placeholder="Nom" class="cleardefault" />
+				<input type="text" name="firstname" placeholder="Prénom" class="cleardefault" />
+				<select name="axe_id">
+					<option value="0">Axe</option>
+								<option value="20">Endocrinologie et néphrologie</option>
+								<option value="21">Maladies infectieuses et immunitaires</option>
+								<option value="12">Médecine régénératrice</option>
+								<option value="5">Neurosciences</option>
+								<option value="22">Oncologie</option>
+								<option value="23">Reproduction, santé de la mère et de l'enfant</option>
+								<option value="13">Santé des populations et pratiques optimales en santé</option>
+							</select>
+				<select name="service_id"><option>Service</option>
+								<option value="10">Bibliothèque</option>
+								<option value="25">Direction de la recherche scientifique</option>
+								<option value="11">Graphisme</option>
+								<option value="48">IRSC-Institut des maladies infectieuses et immunitaires</option>
+								<option value="13">Laveries et stérilisation</option>
+								<option value="65">Plateforme de recherche clinique</option>
+								<option value="9">Service de l'animalerie</option>
+								<option value="6">Société de gestion du personnel</option>
+							</select>
+				<select name="researchsite_id"><option>Site</option>
+								<option value="1">CHUL</option>
+								<option value="9">CRCHU de Québec</option>
+								<option value="2">L'Hôtel-Dieu de Québec</option>
+								<option value="7">Hôpital de l'Enfant-Jésus</option>
+								<option value="6">Hôpital du Saint-Sacrement</option>
+								<option value="3">Hôpital Saint-François d'Assise</option>
+							</select>
+				<input type="button" onClick="javascript:submit();" id="button" />
+				<input type="submit" style="width:0px;height:0px;border:none" />
+			</form>
+		</div>
+	</div>
+	<div id="main">
+		<div id="menu_accueil" class="sec_menu">
+			<ul>
+				<li>Le Centre
+					<ul>
+							<li><a href="/crchudequebec/centre/historique">Historique</a></li>
+							<li><a href="/crchudequebec/centre/mot_du_directeur">Message du directeur</a></li>
+							<li><a href="/crchudequebec/centre/rayonnement_international">Rayonnement international</a></li>
+							<li><a href="/crchudequebec/centre/structures">Structures</a></li>
+						</ul></li>
+				<li><a href="/crchudequebec/mission_et_vision">Mission et vision</a></li>
+				<li><a href="/crchudequebec/ressources">Ressources</a></li>
+				<li><a href="/crchudequebec/ethique">Éthique</a></li>
+				<li><a href="/crchudequebec/partenaires">Partenaires</a></li>
+				<li>Valorisation
+					<ul>
+							<li><a href="/crchudequebec/valorisation/propriete_intellectuelle">Propriété intellectuelle</a></li>
+							<li><a href="http://www.sovar.com" target="_blank">Société de valorisation des applications de la recherche (SOVAR)</a></li>
+							<li><a href="http://www.vrr.ulaval.ca" target="_blank">Vice-rectorat à la recherche et à la création de l'université Laval</a></li>
+						</ul></li>
+				<li><a href="/crchudequebec/publications">Publications corporatives</a></li>
+				<li><a href="/crchudequebec/ccsi">Comité consultatif scientifique international</a></li>
+			</ul>
+		</div>
+		<div id="menu_recherche" class="sec_menu">
+			<ul>
+				<li>Axes
+					<ul>
+						<li><a href="/recherche/axes/endocrinologie">Endocrinologie et néphrologie</a></li>
+						<li><a href="/recherche/axes/amii">Maladies infectieuses et immunitaires</a></li>
+						<li><a href="/recherche/axes/medecineregeneratrice">Médecine régénératrice</a></li>
+						<li><a href="/recherche/axes/neurosciences">Neurosciences</a></li>
+						<li><a href="/recherche/axes/oncologie">Oncologie</a></li>
+						<li><a href="/recherche/axes/reproduction">Reproduction, santé de la mère et de l'enfant</a></li>
+						<li><a href="/recherche/axes/sante">Santé des populations et pratiques optimales en santé</a></li>
+					</ul></li>
+				<li><a href="http://rce.crchudequebec.ulaval.ca" target="_blank">Recherche clinique et évaluative</a></li>
+				<li><a href="/recherche/chercheurs">Chercheurs</a></li>
+				<li><a href="/recherche/publications">Publications scientifiques</a></li>
+			</ul>
+		</div>
+		<div id="menu_services" class="sec_menu">
+			<ul>
+				<li>Plateformes technologiques
+					<ul>
+						<li><a href="/plateformes/genomique">Centre de génomique</a>
+							<ul>
+								<li><a href="/plateformes/genomique">Bioinformatique</a></li>
+								<li><a href="/plateformes/genomique">Expression génique</a></li>
+								<li><a href="/plateformes/genomique">Protéomique</a></li>
+								<li><a href="/plateformes/genomique">Séquençage</a></li>
+							</ul>
+						</li>
+						<li><a href="/plateformes/cmgt">Centre multidisciplinaire de génie tissulaire</a></li>
+						<li><a href="/plateformes/chimie">Chimie analytique et médicinale</a>
+							<ul>
+								<li><a href="/plateformes/chimie">Chimie médicinale</a></li>
+								<li><a href="/plateformes/chimie">Services bioanalytiques</a></li>
+							</ul>
+						</li>
+						<li><a href="/plateformes/imagerie">Imagerie et cytométrie</a>
+							<ul>
+								<li><a href="/plateformes/imagerie">Bioimagerie et microscopie</a></li>
+								<li><a href="/plateformes/imagerie">Histologie</a></li>
+								<li><a href="/plateformes/imagerie">Cytométrie</a></li>
+								<li><a href="/plateformes/imagerie">Analyse d'image</a></li>
+							</ul>
+						</li>
+						<li><a href="/plateformes/modelesanimaux">Modèles animaux</a>
+							<ul>
+								<li><a href="/plateformes/modelesanimaux">Analyse fonctionnelle du comportement animal</a></li>
+								<li><a href="/plateformes/modelesanimaux">Service de l'animalerie</a></li>
+								<li><a href="/plateformes/modelesanimaux">Imagerie du petit animal</a></li>
+								<li><a href="/plateformes/modelesanimaux">Service d'irradiation</a></li>
+							</ul>
+						</li>
+						<li><a href="http://rce.crchudequebec.ulaval.ca/nos-services" target="_blank">Recherche clinique et évaluative</a></li>
+					</ul>
+				</li>
+				<li>Services techniques
+					<ul>
+						<li><a href="http://www.epsebe.ca" target="_blank">Environnement pour la promotion de la santé et du bien-être (EPSEBE)</a></li>
+						<li><a href="http://www.atlantis.ulaval.ca" target="_blank">Laboratoire mobile Atlantis</a></li>
+						<li><a href="http://services.crchudequebec.ca/services/syntheseadn/" target="_blank">Synthèse d'ADN</a></li>
+					</ul>
+				</li>
+				<li>Autres services
+					<ul>
+						<li><a href="http://services.crchudequebec.ca/services/bibliotheque" target="_blank">Bibliothèque - Publications</a></li>
+						<li><a href="http://services.crchudequebec.ca/services/graphisme" target="_blank">Graphisme</a></li>
+						<li><a href="http://services.crchudequebec.ca/services/laveries" target="_blank">Laveries et stérilisations</a></li>
+						<li><a href="/services_communs/salles">Réservation de salles et matériel audio-visuel</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="menu_formation" class="sec_menu">
+			<ul>
+				<li><a href="/formation/etudiants">Étudiants</a></li>
+				<li><a href="http://www.ulaval.ca" target="_blank">Université Laval</a></li>
+			</ul>
+		</div>
+		<div id="menu_carriere" class="sec_menu">
+			<ul>
+				<li><a href="/carriere/offres">Postes offerts</a></li>
+				<li><a href="/carriere/bourses">Bourses</a></li>
+			</ul>
+		</div>
+		<div id="contenu"><div id="col_centre">
+	<div id="text_accueil">
+		<h1>Bienvenue</h1>
+		<p>Le <b>Centre de recherche du CHU de Québec</b> est une composante du <a href="http://www.chudequebec.ca" target="_blank" style="color: #036; text-decoration: underline">CHU de Québec</a> et est affilié à l'<a href="http://www.ulaval.ca" target="_blank" style="color: #036; text-decoration: underline">Université Laval</a>.</p>
+		<p>Le Centre regroupe les activités de recherche des hôpitaux du CHUL, de l'Hôtel-Dieu de Québec, de l'Enfant-Jésus, de Saint-François d'Assise et de Saint-Sacrement.</p>
+	</div>
+	
+	<div id="actualites">
+		<h1 id="titre_news">Actualités</h1>
+		<a href="/nouvelles" id="archive">Archives &gt;</a>
+		<div id="actualite">
+			<h1>[2016-09-02] <a href="/nouvelles/528" title=" Une première étude clinique sur un vaccin contre le virus Zika au Canada"> Une première étude clinique sur un vaccin contre le virus Zika au Canada</a></h1><br />
+			<p><a href="/nouvelles/528">Québec, le 19 juillet 2016 – Le Centre de recherche en infectiologie de l’Université Laval (CRI) et du Centre de recherche du CHU de Québec-Université Laval (CHU), est fier d’annoncer la réalisation au Canada d’une première étude clinique sur un vaccin contre le virus Zika.</a></p>
+		</div>
+		<div id="actualite">
+			<h1>[2016-09-02] <a href="/nouvelles/530" title="Cinq chercheurs du Centre de recherche du CHU reçoivent 9 millions de dollars en octrois des IRSC">Cinq chercheurs du Centre de recherche du CHU reçoivent 9 millions de dollars en octrois des IRSC</a></h1><br />
+			<p><a href="/nouvelles/530">Québec, le 10 août 2016 – Cinq chercheurs du Centre de recherche du CHU de Québec-Université Laval (CHU) et de l’Université Laval figurent parmi les lauréats des subventions d’envergure octroyées par les Instituts de recherche en santé du Canada (IRSC) pour un montant total de 9 052 591 dollars.</a></p>
+		</div>
+		<div id="actualite">
+			<h1>[2016-09-02] <a href="/nouvelles/531" title="Découverte d’une nouvelle bactérie nommée Criibacterium bergeronii en l’honneur du Dr Michel G. Bergeron et du Centre de recherche en infectiologie (CRI) qu’il a fondé">Découverte d’une nouvelle bactérie nommée Criibacterium bergeronii en l’honneur du Dr Michel G. Bergeron et du Centre de recherche en infectiologie (CRI) qu’il a fondé</a></h1><br />
+			<p><a href="/nouvelles/531">Une étude de génomique bactérienne menée récemment par une équipe du Centre de recherche du CHU de Québec-Université Laval vient d'être publiée dans le numéro de Septembre 2016 de Genome Announcements. Elle décrit une nouvelle espèce de bactérie isolée d'une femme ayant une flore microbienne vagi...</a></p>
+		</div>
+	</div>
+	
+	<div id="publications">
+		<h1>Publications récentes</h1>
+		<a href="/recherche/publications" id="publ_rech">Recherche avancée &gt;</a>
+		<div id="publ_cont">
+								<div id="publ_1" ><a href="http://www.ncbi.nlm.nih.gov/pubmed/27587833?dopt=Abstract" target="_blank" title="Lien vers PubMed"><span id="auteurs">Maheux AF, Berube E, Boudreau DK, Raymond F, Corbeil J, Roy PH, Boissinot M, Omar RF.</span><br/>Draft Genome Sequence of Criibacterium bergeronii gen. nov., sp. nov., Strain CCRI-22567T, Isolated from a Vaginal Sample from a Woman with Bacterial Vaginosis.<br/><b>Genome Announc</b>,&nbsp;
+					
+					2016. 4: 
+					</a></div>
+								<div id="publ_2" style="display: none;"><a href="http://www.ncbi.nlm.nih.gov/pubmed/27588697?dopt=Abstract" target="_blank" title="Lien vers PubMed"><span id="auteurs">Achouba A, Dumas P, Ouellet N, Lemire M, Ayotte P.</span><br/>Plasma levels of selenium-containing proteins in Inuit adults from Nunavik.<br/><b>Environ Int</b>,&nbsp;
+					
+					2016. Epub
+					</a></div>
+								<div id="publ_3" style="display: none;"><a href="http://www.ncbi.nlm.nih.gov/pubmed/27587835?dopt=Abstract" target="_blank" title="Lien vers PubMed"><span id="auteurs">MacAuley D, Bauman A, Fremont P.</span><br/>Exercise: not a miracle cure, just good medicine.<br/><b>Br J Sports Med</b>,&nbsp;
+					
+					2016. 50: 1107-8
+					</a></div>
+								<div id="publ_4" style="display: none;"><a href="http://www.ncbi.nlm.nih.gov/pubmed/27583999?dopt=Abstract" target="_blank" title="Lien vers PubMed"><span id="auteurs">Valois P, Blouin P, Ouellet C, Renaud JS, Belanger D, Gosselin P.</span><br/>The Health Impacts of Climate Change: A Continuing Medical Education Needs Assessment Framework.<br/><b>J Contin Educ Health Prof</b>,&nbsp;
+					
+					2016. 36: 218-25
+					</a></div>
+								<div id="publ_5" style="display: none;"><a href="http://www.ncbi.nlm.nih.gov/pubmed/27585687?dopt=Abstract" target="_blank" title="Lien vers PubMed"><span id="auteurs">Fortin PR, Cloutier N, Bissonnette V, Aghdassi E, Eder L, Simonyan D, Laflamme N, Boilard E.</span><br/>Distinct Subtypes of Microparticle-containing Immune Complexes Are Associated with Disease Activity, Damage, and Carotid Intima-media Thickness in Systemic Lupus Erythematosus.<br/><b>J Rheumatol</b>,&nbsp;
+					
+					2016. Epub
+					</a></div>
+					</div>
+		<div id="publ_ctl"><a href="#" id="publ_ctl_1" style="background-image: url('/images/Cercle-turquoise.png'); color: #ffffff;" onClick="change_publ('1');">1</a><a href="#" id="publ_ctl_2" onClick="change_publ('2');">2</a><a href="#" id="publ_ctl_3" onClick="change_publ('3');">3</a><a href="#" id="publ_ctl_4" onClick="change_publ('4');">4</a><a href="#" id="publ_ctl_5" onClick="change_publ('5');">5</a><a href="#" id="publ_ctl_play" onClick="play_publ();" style="display: none;">&nbsp;</a><a href="#" id="publ_ctl_pause" onClick="pause_publ();">&nbsp;</a></div>
+	</div>
+</div>
+<div id="col_droite">
+	<div id="sites">
+		<div id="site1" class="site200_tmp"><img src="/images/sites/CHUL200.jpg" /><h1>Centre de génomique du CHUL</h1></div>
+		<div id="site2" class="site200_tmp" style="display: none;"><img src="/images/sites/HEJ200.jpg" /><h1>CMDGT à l'hôpital de l'Enfant-Jésus</h1></div>
+		<div id="site3" class="site200_tmp" style="display: none;"><img src="/images/sites/HDQ200.jpg" /><h1>CRCEO à<br/>l'Hôtel-Dieu de Québec</h1></div>
+		<div id="site4" class="site200_tmp" style="display: none;"><img src="/images/sites/HSS200.jpg" /><h1>Hôpital du Saint-Sacrement</h1></div>
+		<div id="site5" class="site200_tmp" style="display: none;"><img src="/images/sites/HSFA200.jpg" /><h1>Hôpital Saint-François d'Assise</h1></div>
+	</div>
+	<div id="pubimage" style="border: none;">
+		<a href="/conferences" target="_blank"><img src="/images/Pub_web_conf_GrandPublic.jpg" style="width: 200px;" /></a>
+	</div>
+</div>
+</div>
+	</div>
+</div>
+<div id="pdp">
+	<a href="http://www.ulaval.ca" target="_blank"><img src="/images/logoulaval.png" id="logoulaval" /></a>
+	<a href="http://www.chudequebec.ca" target="_blank"><img src="/images/logo.png" id="logochuq" style="height: 40px;" /></a>
+	<div id="copy">&copy; 2016 Tous droits réservés Centre de recherche du CHU de Québec</div>
+</div>
+<script src="/javascripts/Placeholders.min.js"></script>
+</body>
+</html>

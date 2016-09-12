@@ -13,7 +13,7 @@
 <meta http-equiv="Expires" content="0" />
 
 
-<meta property="og:image" content="http://www.7oaks.org/_layouts/15/Images/Scholantis/Web/Wave 4/ogImage.png" />
+<meta property="og:image" content="http://www.7oaks.org/_layouts/15/Images/Scholantis/Shared/Wave%204/ogImage.png" />
 
 
 
@@ -27,6 +27,8 @@
 
 <link rel="apple-touch-icon-precomposed" href="/_layouts/15/Images/Scholantis/Web/Wave 4/Icons/apple-touch-icon.png" />
 
+
+<script type="text/javascript">window.SL=window.SL||{};SL.Context=SL.Context||{};SL.Context.CorrelationId="74c2a29d-8890-f03c-a87a-209cc502e364";</script>
 
 
 
@@ -72,7 +74,7 @@
 
 <link type="text/xml" rel="alternate" href="/_vti_bin/spsdisco.aspx" />
 		
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.min.js?sha1=2439711705752FAC5DD1A6A8D6B1BE63FFCBC76D"></script>
+<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.flexslider.min.js?sha1=55973533EB2F6C1E65FDFA5B9B1D447676511E85"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.cycle2.min.js?sha1=A3DE9AF2595FA644D2EF62FF622E7035A7DAA593"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.lightbox.min.js?sha1=864063D2D0AB92BB6B62F01D8609DDE8D97300EE"></script>
@@ -80,15 +82,18 @@
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.oembed.min.js?sha1=EA5DE084FF0EC7B09D3E98C9D3D771F025821CE4"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.masonry.min.js?sha1=4EFC58E52FED3DA8C6504511D680A322BCE2D4E3"></script>
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/bootstrap/bootstrap.min.js?sha1=7ABDF3D60ADAB756D9B8D84022E5C9A6B59877EE"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/selectivizr.min.js?sha1=65DE9F570BF7FDFF1B496CA80AB5FD90599D9E39"></script>
+<!--[if IE 8]><script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/selectivizr.min.js?sha1=65DE9F570BF7FDFF1B496CA80AB5FD90599D9E39"></script><![endif]-->
 <script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/lodash-fp.min.js?sha1=BB369F268163101BC64663ECDED1414BE9CD756F"></script>
 		
 <!--[if lt IE 9]><script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/html5shiv.min.js?sha1=3C9649A10A16AD02EC92F1C020C3F9D1A9E6A0E6"></script><![endif]-->
        
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/respond.js&sha1=04CFC662C9E679D25C1AAD8C72AC7CF83F6E1BDA"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/shared.core.js&sha1=55778A078ED17E3C66540D461C0D1DA9668083D2"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.core.js&sha1=8E41684CF14F6CF2F8DD08224F0AEACA837C95B1"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.custom.js&sha1=150BD287F02F28422C937B5502912268A9F0F0A8"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/respond.js&sha1=B400DCF2982D9DD280EC60CD11705486CCF2B015"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/shared.core.js&sha1=1C149FA6A2059369A2C22EA3C8120D1FFF76AC37"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.core.js&sha1=A0F2804E63D372C025BABC965BB74B19A8BDD78E"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/yui.ashx?url=/_layouts/Scholantis/Scripts/Wave 4/web.custom.js&sha1=91C257B9F57178E30BE77FC64B4A2FB5B253DCEA"></script>
+
+
+
 <script type="text/javascript">function ProcessImn() { };function ProcessImnMarkers() { }</script>
 
 
@@ -184,8 +189,8 @@
 </title><link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=OqAycmyMLoQIDkAlzHdMhQ%3D%3D"/>
 <link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/searchv15.css?rev=qarmmE3eURu3ZS2Wsbpf2w%3D%3D"/>
 
-            <link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.core.less&sha1=621037944A28C62EE8A4E638F3D12EF43B7FEE92&theme=web.District"></link>
-            <!--[if IE]><link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.ie.less&sha1=B63A2F0E3D09BC98E56B76417801B8176394A02E&theme=web.District"></link><![endif]-->
+            <link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.core.less&sha1=385648A1C72590D33C8B45B5C900DDCFF3D9D6B1&theme=web.District"></link>
+            <!--[if IE]><link rel="stylesheet" type="text/css" href="/_LAYOUTS/15/scholantis/styles/dotless.ashx?url=/_layouts/Scholantis/Styles/Wave 4/web.ie.less&sha1=EE467BFD8C954BFB3CE3710A1AFE807702CA3B31&theme=web.District"></link><![endif]-->
         <link rel="canonical" href="http://www.7oaks.org:80/Pages/default.aspx" />
 
         <a id="sl-Skiptocontent" href="#sl-ContentMain">Skip to main content</a> 
@@ -228,7 +233,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x02A0D039598FBB8FB82EEA9281941BDD1FC1F338DA06028ECD7785F454351A205BD680A8BD498663F6E15EBC245990AD8F82F36A609FFEB6E3CE6D0AAC0FBFE8,09 May 2016 13:34:25 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x80F8F415EDF089F95C291EE651970B46D53046E7F511BEFF475F5FD05AF0F51466230CB29648EA88F8147E19719358897088E4DE33BD8B088FAF687C813C0D0A,11 Sep 2016 16:00:25 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -239,7 +244,7 @@
 <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTU2NTYzMDc2NA9kFgJmD2QWAgIDD2QWBAIBD2QWCAIBD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgYPZBYCZg9kFgJmDzwrAAYAZAIHDw8WAh4HVmlzaWJsZWhkZAIIDw8WAh8BaGRkAhsPZBYGAgEPZBYIBSZnX2NlZjhjODU4X2M1N2RfNDc5NF84MzBlXzA5MzkzN2RkZjMwMQ9kFgRmDxYCHwFoZAIBDxYCHwFoZAUmZ18wNDIyYTE1Yl9iNmVmXzQ5MTBfOTVhOV84OGEzMGYzYTVhMTAPZBYCZg9kFgICAg8WBB4FY2xhc3MFGnNsLUZlYXR1cmVkU3Rvcmllc0Rpc3RyaWN0HwFnFgQCAQ8WAh8BaGQCAg8WAh4LXyFJdGVtQ291bnQCAxYGZg9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQeC05hdmlnYXRlVXJsBWtodHRwOi8vd3d3LjdvYWtzLm9yZy9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXthN2QwNmM5Zi1kNzc5LTQxYTItYWE4OC05NmZiNDNlYzc2NDF9JklEPTEwMB8BaBYCHgdvbmNsaWNrBY0BTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LjdvYWtzLm9yZy9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXthN2QwNmM5Zi1kNzc5LTQxYTItYWE4OC05NmZiNDNlYzc2NDF9JklEPTEwMCcpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHgZzcmNzZXQFR2h0dHA6Ly93d3cuN29ha3Mub3JnL0ZlYXR1cmVkU3Rvcmllcy9fdy9HcmFkJTIwUG93JTIwV293JTIwMjAxNl9wbmcuanBnZAIFDxYEHgNzcmMFQGh0dHA6Ly93d3cuN29ha3Mub3JnL0ZlYXR1cmVkU3Rvcmllcy9HcmFkJTIwUG93JTIwV293JTIwMjAxNi5wbmceA2FsdAUaSW4gSG9ub3VyIG9mIE91ciBHcmFkdWF0ZXNkAgcPFgIfAgUOZmVhdHVyZWQtZW50cnkWBgIBD2QWAgIBDw8WBh8EBTNodHRwOi8vd3d3LjdvYWtzLm9yZy9Eb2N1bWVudHMvUG93JTIwV293JTIwMjAxNi5wZGYeBlRhcmdldAUGX2JsYW5rHgRUZXh0BRpJbiBIb25vdXIgb2YgT3VyIEdyYWR1YXRlcxYCHgV0aXRsZQUaSW4gSG9ub3VyIG9mIE91ciBHcmFkdWF0ZXNkAgUPFgIfAgUNZW50cnktc3VtbWFyeRYCAgEPFgIeCWlubmVyaHRtbAVgIDxwPuKAi0FsbCBhcmUgd2VsY29tZSB0byBhdHRlbmQgb3VyIDd0aCBhbm51YWwgR3JhZCBQb3cgV293IEp1bmUgMm5kIGF0IE1hcGxlcyBDb2xsZWdpYXRlLjwvcD4gZAIHD2QWAgIBDw8WBB8EBTNodHRwOi8vd3d3LjdvYWtzLm9yZy9Eb2N1bWVudHMvUG93JTIwV293JTIwMjAxNi5wZGYfCQUGX2JsYW5rZGQCAQ9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVqaHR0cDovL3d3dy43b2Frcy5vcmcvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17YTdkMDZjOWYtZDc3OS00MWEyLWFhODgtOTZmYjQzZWM3NjQxfSZJRD02MR8BaBYCHwUFjAFOZXdJdGVtMihldmVudCwgJ2h0dHA6Ly93d3cuN29ha3Mub3JnL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9e2E3ZDA2YzlmLWQ3NzktNDFhMi1hYTg4LTk2ZmI0M2VjNzY0MX0mSUQ9NjEnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh8GBT1odHRwOi8vd3d3LjdvYWtzLm9yZy9GZWF0dXJlZFN0b3JpZXMvX3cvQmV5b25kR3JhZGUxMl9qcGcuanBnZAIFDxYEHwcFNmh0dHA6Ly93d3cuN29ha3Mub3JnL0ZlYXR1cmVkU3Rvcmllcy9CZXlvbmRHcmFkZTEyLmpwZx8IBSZFYXJuIFVuaXZlcnNpdHkgJiBDb2xsZWdlIENyZWRpdHMgTm93IWQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPZBYCAgEPDxYGHwQFQWh0dHA6Ly93d3cuN29ha3Mub3JnL1Byb2dyYW1zL0JleW9uZEdyYWRlMTJOb3cvUGFnZXMvZGVmYXVsdC5hc3B4HwkFBl9ibGFuax8KBSZFYXJuIFVuaXZlcnNpdHkgJiBDb2xsZWdlIENyZWRpdHMgTm93IRYCHwsFJkVhcm4gVW5pdmVyc2l0eSAmIENvbGxlZ2UgQ3JlZGl0cyBOb3chZAIFDxYCHwIFDWVudHJ5LXN1bW1hcnkWAgIBDxYCHwwFKSDigItTdGFydCBwbGFubmluZyBmb3IgbmV4dCB5ZWFyIeKAizxicj4gZAIHD2QWAgIBDw8WBB8EBUFodHRwOi8vd3d3LjdvYWtzLm9yZy9Qcm9ncmFtcy9CZXlvbmRHcmFkZTEyTm93L1BhZ2VzL2RlZmF1bHQuYXNweB8JBQZfYmxhbmtkZAICD2QWAgIBDxYCHwIFEGZlYXR1cmVkLWFydGljbGUWCAIBDw8WBB8EBWpodHRwOi8vd3d3LjdvYWtzLm9yZy9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXthN2QwNmM5Zi1kNzc5LTQxYTItYWE4OC05NmZiNDNlYzc2NDF9JklEPTk4HwFoFgIfBQWMAU5ld0l0ZW0yKGV2ZW50LCAnaHR0cDovL3d3dy43b2Frcy5vcmcvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17YTdkMDZjOWYtZDc3OS00MWEyLWFhODgtOTZmYjQzZWM3NjQxfSZJRD05OCcpOyByZXR1cm4gZmFsc2U7ZAIDDxYCHwYFSGh0dHA6Ly93d3cuN29ha3Mub3JnL0ZlYXR1cmVkU3Rvcmllcy9fdy9TaXN0ZW1hJTIwQ29uY2VydCUyMDIwMTZfanBnLmpwZ2QCBQ8WBB8HBUFodHRwOi8vd3d3LjdvYWtzLm9yZy9GZWF0dXJlZFN0b3JpZXMvU2lzdGVtYSUyMENvbmNlcnQlMjAyMDE2LmpwZx8IBS9TaXN0ZW1hIEZ1bmRyYWlzZXIgaXMgTWF5IDEyIGF0IE1hcGxlcyBDb21tb25zIWQCBw8WAh8CBQ5mZWF0dXJlZC1lbnRyeRYGAgEPZBYCAgEPDxYGHwQFZmh0dHA6Ly9jYW1wYWlnbi5yMjAuY29uc3RhbnRjb250YWN0LmNvbS9yZW5kZXI/bT0xMTEwMDgxODQ4MjM3JmNhPWFmZjNmYjZmLWMxZTQtNGJiNy04MjkyLTNhYjM2Zjc0Y2RjNx8JBQZfYmxhbmsfCgUvU2lzdGVtYSBGdW5kcmFpc2VyIGlzIE1heSAxMiBhdCBNYXBsZXMgQ29tbW9ucyEWAh8LBS9TaXN0ZW1hIEZ1bmRyYWlzZXIgaXMgTWF5IDEyIGF0IE1hcGxlcyBDb21tb25zIWQCBQ8WAh8CBQ1lbnRyeS1zdW1tYXJ5FgICAQ8WAh8MBXQgPHA+4oCLVGlja2V0cyBhcmUgJDIwIGFuZCBkaXJlY3RseSBzdXBwb3J0IFNpc3RlbWEgV2lubmlwZWcmIzE2MDstIHRvIHB1cmNoYXNlIHlvdXIgdGlja2V0cyBjYWxsIDIwNC05NDktMzk5OS48L3A+IGQCBw9kFgICAQ8PFgQfBAVmaHR0cDovL2NhbXBhaWduLnIyMC5jb25zdGFudGNvbnRhY3QuY29tL3JlbmRlcj9tPTExMTAwODE4NDgyMzcmY2E9YWZmM2ZiNmYtYzFlNC00YmI3LTgyOTItM2FiMzZmNzRjZGM3HwkFBl9ibGFua2RkBSZnXzgzMmJkMDEzX2QwOTVfNGE5Nl9hODUwXzYzY2I3YjZkNmRiMA9kFgJmD2QWAgICD2QWAmYPFCsAAg8WBB4LXyFEYXRhQm91bmRnHwMCAmRkFgRmD2QWCGYPFQYON09ha3NTY2hvb2xEaXYON09ha3NTY2hvb2xEaXZKaHR0cHM6Ly9wYnMudHdpbWcuY29tL3Byb2ZpbGVfaW1hZ2VzLzEyNzYxMDYxOTcvU2V2ZW5fT2Frc19Mb2dvX25vcm1hbC5wbmcON09ha3NTY2hvb2xEaXYRNyBPYWtzIFNjaG9vbCBEaXYUNS81LzIwMTYgMTA6NTE6MTkgQU1kAgEPFgIfCgXnAkNvbmdyYXRzIHRvIFRvbSBDbGFzcGVyIDxhIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vd2tjMTAxIj5Ad2tjMTAxPC9hPiB3aG8gd29uIFNwb3J0IE1CJ3MgTWFsZSBDb2FjaCBvZiB0aGUgWWVhciAmYW1wOyBQZXRlciBXaWxsaWFtc29uIE1lbW9yaWFsIEF3YXJkISA8YSBocmVmPSJodHRwczovL3R3aXR0ZXIuY29tL3NlYXJjaD9xPSUyMzdvYWtzIj4jN29ha3M8L2E+IDxhIGhyZWY9Imh0dHA6Ly93d3cud2lubmlwZWdmcmVlcHJlc3MuY29tL291ci1jb21tdW5pdGllcy90aW1lcy9Db2FjaC1DbGFzcGVyLXdpbnMtYmlnLTM3NzgxNTU3MS5odG1sIj53aW5uaXBlZ2ZyZWVwcmVzcy5jb20vb3VyLWNvbW11bml0aWXigKY8L2E+ZAIDDxYCHwFoZAIEDxUEEjcyODI1MDczMDMyNzM0MzEwNBI3MjgyNTA3MzAzMjczNDMxMDQSNzI4MjUwNzMwMzI3MzQzMTA0DjdPYWtzU2Nob29sRGl2ZAIBD2QWCGYPFQYON09ha3NTY2hvb2xEaXYON09ha3NTY2hvb2xEaXZKaHR0cHM6Ly9wYnMudHdpbWcuY29tL3Byb2ZpbGVfaW1hZ2VzLzEyNzYxMDYxOTcvU2V2ZW5fT2Frc19Mb2dvX25vcm1hbC5wbmcON09ha3NTY2hvb2xEaXYRNyBPYWtzIFNjaG9vbCBEaXYUNS81LzIwMTYgMTA6NDU6NDUgQU1kAgEPFgIfCgX/AkNvbmdyYXQgdG8gPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9NYXBsZXMxMzMwIj5ATWFwbGVzMTMzMDwvYT4gUmljbyBNYWNlZGEgJmFtcDsgQ2hhcml1cyBSYXltdW5kbyB3aG8gd29uIGdvbGQgJmFtcDsgYnJvbnplIGF0IHRoZSBTa2lsbHMgTUIgQ29tcGV0aXRpb24hIDxhIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vc2VhcmNoP3E9JTIzN29ha3MiPiM3b2FrczwvYT4gPGEgaHJlZj0iaHR0cDovL3d3dy53aW5uaXBlZ2ZyZWVwcmVzcy5jb20vb3VyLWNvbW11bml0aWVzL3RpbWVzL01hcGxlcy1zdHVkZW50cy1oYXZlLXNlcmlvdXMtc2hvcHMtc2tpbGxzLTM3NzgzNDE0MS5odG1sIj53aW5uaXBlZ2ZyZWVwcmVzcy5jb20vb3VyLWNvbW11bml0aWXigKY8L2E+ZAIDDxYCHwFoZAIEDxUEEjcyODI0OTMyOTY5ODI0NjY1NhI3MjgyNDkzMjk2OTgyNDY2NTYSNzI4MjQ5MzI5Njk4MjQ2NjU2DjdPYWtzU2Nob29sRGl2ZAUmZ185ZjNlMjU2YV82MDliXzQ1MzNfYjVhMl81ZWY1MmYxMzViODUPZBYEZg8WAh8BaGQCAQ8WAh8BaGQCBQ9kFgICAg9kFgICAQ9kFgICAw9kFgICAQ9kFgICFQ9kFgICAQ8WAh8BaBYCZg9kFgQCAg9kFgQCAQ8WAh8BaGQCAw8WAh8BaGQCAw8PFgIeCUFjY2Vzc0tleQUBL2RkAjcPZBYCAgIPDxYCHwFoZGQYAgUpY3RsMDAkUGxhY2VIb2xkZXJUb3BOYXYkVG9wTmF2aWdhdGlvbk1lbnUPD2QFBEhvbWVkBU5jdGwwMCRTUFdlYlBhcnRNYW5hZ2VyMSRnXzgzMmJkMDEzX2QwOTVfNGE5Nl9hODUwXzYzY2I3YjZkNmRiMCRjdGwwMCRUd2VldExpc3QPFCsADmRkZGRkZGQUKwACZGQCAmRkZGYC/////w9kZtYU3NQQW8eXL3RBa3IgQ/3l868MLqqiiOyA78yj2bc=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTU2NTYzMDc2NA9kFgJmD2QWAgIDD2QWBAIBD2QWCAIBD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgYPZBYCZg9kFgJmDzwrAAYAZAIHDw8WAh4HVmlzaWJsZWhkZAIIDw8WAh8BaGRkAhsPZBYGAgEPZBYIBSZnX2NlZjhjODU4X2M1N2RfNDc5NF84MzBlXzA5MzkzN2RkZjMwMQ9kFgRmDxYCHwFoZAIBDxYCHwFoZAUmZ18wNDIyYTE1Yl9iNmVmXzQ5MTBfOTVhOV84OGEzMGYzYTVhMTAPZBYCZg9kFgICAg8WBB4FY2xhc3MFGnNsLUZlYXR1cmVkU3Rvcmllc0Rpc3RyaWN0HwFnFgQCAQ8WAh8BaGQCAg8WAh4LXyFJdGVtQ291bnQCBBYIZg9kFgICAQ8WAh8CBRZmZWF0dXJlZC1hcnRpY2xlIGVtcHR5FggCAQ8PFgQeC05hdmlnYXRlVXJsBWpodHRwOi8vd3d3LjdvYWtzLm9yZy9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs0NTk0MDdjMC0zY2ViLTQ5YTItODI2Ni04MGJiYTg1MzgyOGJ9JklEPTE0HwFoFgIeB29uY2xpY2sFjAFOZXdJdGVtMihldmVudCwgJ2h0dHA6Ly93d3cuN29ha3Mub3JnL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezQ1OTQwN2MwLTNjZWItNDlhMi04MjY2LTgwYmJhODUzODI4Yn0mSUQ9MTQnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh4Gc3Jjc2V0BT5odHRwOi8vd3d3LjdvYWtzLm9yZy9GZWF0dXJlZFN0b3JpZXMvX3cvV2VsY29tZSUyMEJhY2tfanBnLmpwZ2QCBQ8WBB4Dc3JjBTdodHRwOi8vd3d3LjdvYWtzLm9yZy9GZWF0dXJlZFN0b3JpZXMvV2VsY29tZSUyMEJhY2suanBnHgNhbHQFDkZlYXR1cmVkIFN0b3J5ZAIHDxYCHwIFFGZlYXR1cmVkLWVudHJ5IGVtcHR5FggCAQ8WAh8BaGQCAw8WAh8BaGQCBQ8WAh8BaGQCBw8WAh8BaGQCAQ9kFgICAQ8WAh8CBRBmZWF0dXJlZC1hcnRpY2xlFggCAQ8PFgQfBAVqaHR0cDovL3d3dy43b2Frcy5vcmcvX2xheW91dHMvbGlzdGZvcm0uYXNweD9QYWdlVHlwZT02Jkxpc3RJZD17NDU5NDA3YzAtM2NlYi00OWEyLTgyNjYtODBiYmE4NTM4MjhifSZJRD0zNB8BaBYCHwUFjAFOZXdJdGVtMihldmVudCwgJ2h0dHA6Ly93d3cuN29ha3Mub3JnL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezQ1OTQwN2MwLTNjZWItNDlhMi04MjY2LTgwYmJhODUzODI4Yn0mSUQ9MzQnKTsgcmV0dXJuIGZhbHNlO2QCAw8WAh8GBTpodHRwOi8vd3d3LjdvYWtzLm9yZy9GZWF0dXJlZFN0b3JpZXMvX3cvUHJlLVNjaG9vbF9wbmcuanBnZAIFDxYEHwcFM2h0dHA6Ly93d3cuN29ha3Mub3JnL0ZlYXR1cmVkU3Rvcmllcy9QcmUtU2Nob29sLnBuZx8IBSRGUkVFIFBhcmVudC1DaGlsZCBQcmVzY2hvb2wgUHJvZ3JhbXNkAgcPFgIfAgUOZmVhdHVyZWQtZW50cnkWBgIBD2QWAgIBDw8WBh8EBUFodHRwczovL3d3dy43b2Frcy5vcmcvUHJvZ3JhbXMvd2VsY29tZWZhbWlsaWVzL1BhZ2VzL2RlZmF1bHQuYXNweB4GVGFyZ2V0BQZfYmxhbmseBFRleHQFJEZSRUUgUGFyZW50LUNoaWxkIFByZXNjaG9vbCBQcm9ncmFtcxYCHgV0aXRsZQUkRlJFRSBQYXJlbnQtQ2hpbGQgUHJlc2Nob29sIFByb2dyYW1zZAIFDxYCHwIFDWVudHJ5LXN1bW1hcnkWAgIBDxYCHglpbm5lcmh0bWwFTFByb2dyYW1taW5nIGJlZ2lucyBlbmQgb2YgU2VwdGVtYmVyL2JlZ2lubm5nIG9mIE9jdG9iZXIgYW5kIHJ1bnMgdW50aWwgSnVuZSFkAgcPZBYCAgEPDxYEHwQFQWh0dHBzOi8vd3d3LjdvYWtzLm9yZy9Qcm9ncmFtcy93ZWxjb21lZmFtaWxpZXMvUGFnZXMvZGVmYXVsdC5hc3B4HwkFBl9ibGFua2RkAgIPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHwQFamh0dHA6Ly93d3cuN29ha3Mub3JnL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezQ1OTQwN2MwLTNjZWItNDlhMi04MjY2LTgwYmJhODUzODI4Yn0mSUQ9MjIfAWgWAh8FBYwBTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LjdvYWtzLm9yZy9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs0NTk0MDdjMC0zY2ViLTQ5YTItODI2Ni04MGJiYTg1MzgyOGJ9JklEPTIyJyk7IHJldHVybiBmYWxzZTtkAgMPFgIfBgVHaHR0cDovL3d3dy43b2Frcy5vcmcvRmVhdHVyZWRTdG9yaWVzL193L0NvbnRpbnVpbmclMjBFZCUyMEJsYW5rX2pwZy5qcGdkAgUPFgQfBwVAaHR0cDovL3d3dy43b2Frcy5vcmcvRmVhdHVyZWRTdG9yaWVzL0NvbnRpbnVpbmclMjBFZCUyMEJsYW5rLmpwZx8IBSpGYWxsIFJlZ2lzdHJhdGlvbiBPcGVucyBTZXB0ZW1iZXIgMiwgMjAxNiFkAgcPFgIfAgUOZmVhdHVyZWQtZW50cnkWBgIBD2QWAgIBDw8WBh8EBUJodHRwOi8vd3d3LjdvYWtzLm9yZy9zY2hvb2wvY29udGludWluZ2VkdWNhdGlvbi9QYWdlcy9kZWZhdWx0LmFzcHgfCQUGX2JsYW5rHwoFKkZhbGwgUmVnaXN0cmF0aW9uIE9wZW5zIFNlcHRlbWJlciAyLCAyMDE2IRYCHwsFKkZhbGwgUmVnaXN0cmF0aW9uIE9wZW5zIFNlcHRlbWJlciAyLCAyMDE2IWQCBQ8WAh8CBQ1lbnRyeS1zdW1tYXJ5FgICAQ8WAh8MBT7igItWaXNpdCBvdXIgd2Vic2l0ZSBmb3IgY291cnNlcywgZGF0ZXMsIGxvY2F0aW9ucywgYW5kIGNvc3RzLmQCBw9kFgICAQ8PFgQfBAVCaHR0cDovL3d3dy43b2Frcy5vcmcvc2Nob29sL2NvbnRpbnVpbmdlZHVjYXRpb24vUGFnZXMvZGVmYXVsdC5hc3B4HwkFBl9ibGFua2RkAgMPZBYCAgEPFgIfAgUQZmVhdHVyZWQtYXJ0aWNsZRYIAgEPDxYEHwQFamh0dHA6Ly93d3cuN29ha3Mub3JnL19sYXlvdXRzL2xpc3Rmb3JtLmFzcHg/UGFnZVR5cGU9NiZMaXN0SWQ9ezQ1OTQwN2MwLTNjZWItNDlhMi04MjY2LTgwYmJhODUzODI4Yn0mSUQ9MTUfAWgWAh8FBYwBTmV3SXRlbTIoZXZlbnQsICdodHRwOi8vd3d3LjdvYWtzLm9yZy9fbGF5b3V0cy9saXN0Zm9ybS5hc3B4P1BhZ2VUeXBlPTYmTGlzdElkPXs0NTk0MDdjMC0zY2ViLTQ5YTItODI2Ni04MGJiYTg1MzgyOGJ9JklEPTE1Jyk7IHJldHVybiBmYWxzZTtkAgMPFgIfBgU9aHR0cDovL3d3dy43b2Frcy5vcmcvRmVhdHVyZWRTdG9yaWVzL193L0JleW9uZEdyYWRlMTJfanBnLmpwZ2QCBQ8WBB8HBTZodHRwOi8vd3d3LjdvYWtzLm9yZy9GZWF0dXJlZFN0b3JpZXMvQmV5b25kR3JhZGUxMi5qcGcfCAUmRWFybiBVbml2ZXJzaXR5ICYgQ29sbGVnZSBDcmVkaXRzIE5vdyFkAgcPFgIfAgUOZmVhdHVyZWQtZW50cnkWBgIBD2QWAgIBDw8WBh8EBUFodHRwOi8vd3d3LjdvYWtzLm9yZy9Qcm9ncmFtcy9CZXlvbmRHcmFkZTEyTm93L1BhZ2VzL2RlZmF1bHQuYXNweB8JBQZfYmxhbmsfCgUmRWFybiBVbml2ZXJzaXR5ICYgQ29sbGVnZSBDcmVkaXRzIE5vdyEWAh8LBSZFYXJuIFVuaXZlcnNpdHkgJiBDb2xsZWdlIENyZWRpdHMgTm93IWQCBQ8WAh8CBQ1lbnRyeS1zdW1tYXJ5FgICAQ8WAh8MBSkg4oCLU3RhcnQgcGxhbm5pbmcgZm9yIG5leHQgeWVhciHigIs8YnI+IGQCBw9kFgICAQ8PFgQfBAVBaHR0cDovL3d3dy43b2Frcy5vcmcvUHJvZ3JhbXMvQmV5b25kR3JhZGUxMk5vdy9QYWdlcy9kZWZhdWx0LmFzcHgfCQUGX2JsYW5rZGQFJmdfODMyYmQwMTNfZDA5NV80YTk2X2E4NTBfNjNjYjdiNmQ2ZGIwD2QWAmYPZBYCAgIPZBYCZg9kFgJmDxQrAAIPFgQeC18hRGF0YUJvdW5kZx8DAgVkZBYKZg9kFghmDxUGDjdPYWtzU2Nob29sRGl2DjdPYWtzU2Nob29sRGl2Smh0dHBzOi8vcGJzLnR3aW1nLmNvbS9wcm9maWxlX2ltYWdlcy8xMjc2MTA2MTk3L1NldmVuX09ha3NfTG9nb19ub3JtYWwucG5nDjdPYWtzU2Nob29sRGl2ETcgT2FrcyBTY2hvb2wgRGl2FDkvMTAvMjAxNiA5OjI1OjE1IEFNZAIBDxYCHwoF6QNSVCA8YSBocmVmPSJodHRwczovL3R3aXR0ZXIuY29tLzdvaHNhIj5AN29oc2E8L2E+OiBXZSB3ZXJlIGJhY2sgaW4gaWNlIHRvZGF5IGZvciBhbm90aGVyIHNlYXNvbi4gT3VyIDE1dGggYXMgYSA8YSBocmVmPSJodHRwczovL3R3aXR0ZXIuY29tL0hvY2tleUNhbmFkYSI+QEhvY2tleUNhbmFkYTwvYT4gU2tpbGxzIEFjYWRlbXkgPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9zZWFyY2g/cT0lMjNoY3NhIj4jaGNzYTwvYT4gPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS83T2Frc1NjaG9vbERpdiI+QDdPYWtzU2Nob29sRGl2PC9hPiA8YSBjbGFzcz0nbWVkaWEtcGhvdG8naHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS83b2hzYS9zdGF0dXMvNzc0MzUxMzg2MDIwNDI1NzI4L3Bob3RvLzEiIGRhdGEtcGhvdG89Imh0dHBzOi8vcGJzLnR3aW1nLmNvbS9tZWRpYS9DcjhNZUpBVXNBQU9oNGouanBnIj5waWMudHdpdHRlci5jb20vSVhlc1IxMVJkcDwvYT5kAgMPFgIfAWhkAgQPFQQSNzc0NjE0NzIwNTI3NDc4Nzg0Ejc3NDYxNDcyMDUyNzQ3ODc4NBI3NzQ2MTQ3MjA1Mjc0Nzg3ODQON09ha3NTY2hvb2xEaXZkAgEPZBYIZg8VBg43T2Frc1NjaG9vbERpdg43T2Frc1NjaG9vbERpdkpodHRwczovL3Bicy50d2ltZy5jb20vcHJvZmlsZV9pbWFnZXMvMTI3NjEwNjE5Ny9TZXZlbl9PYWtzX0xvZ29fbm9ybWFsLnBuZw43T2Frc1NjaG9vbERpdhE3IE9ha3MgU2Nob29sIERpdhM5LzkvMjAxNiAzOjE4OjUyIFBNZAIBDxYCHwoF0wFSZXR3ZWV0ZWQgS1lBQyAoPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9reWFjN29ha3MiPkBreWFjN29ha3M8L2E+KToKCkp1c3QgYSByZW1pbmRlciBLWUFDJ3MgZHJvcCBpbiBwcm9ncmFtIHN0YXJ0cyB1cCBhZ2FpbiBvbiBNb25kYXkgU2VwdC4gMTJ0aC4gQ29tZS4uLiA8YSBocmVmPSJodHRwOi8vZmIubWUvMW5QbzBScW9RIj5mYi5tZS8xblBvMFJxb1E8L2E+ZAIDDxYCHwFoZAIEDxUEEjc3NDM0MTMyMTY4MzMwODU0NBI3NzQzNDEzMjE2ODMzMDg1NDQSNzc0MzQxMzIxNjgzMzA4NTQ0DjdPYWtzU2Nob29sRGl2ZAICD2QWCGYPFQYON09ha3NTY2hvb2xEaXYON09ha3NTY2hvb2xEaXZKaHR0cHM6Ly9wYnMudHdpbWcuY29tL3Byb2ZpbGVfaW1hZ2VzLzEyNzYxMDYxOTcvU2V2ZW5fT2Frc19Mb2dvX25vcm1hbC5wbmcON09ha3NTY2hvb2xEaXYRNyBPYWtzIFNjaG9vbCBEaXYTOS85LzIwMTYgMzoxODo1MSBQTWQCAQ8WAh8KBfQBUlQgPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9reWFjN29ha3MiPkBreWFjN29ha3M8L2E+OiBKdXN0IGEgcmVtaW5kZXIgS1lBQydzIGRyb3AgaW4gcHJvZ3JhbSBzdGFydHMgdXAgYWdhaW4gb24gTW9uZGF5IFNlcHQuIDEydGguIENvbWUgYnkgRWRtdW5kIFBhcnRyaWRnZSBhbmQgaGF2ZSBzb21lIGZ1biEgPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS83T2Frc1NjaG9vbERpdiI+QDdPYWtzU2Nob29sRGl2PC9hPmQCAw8WAh8BaGQCBA8VBBI3NzQzNDEzMTgyODE2MDUxMjASNzc0MzQxMzE4MjgxNjA1MTIwEjc3NDM0MTMxODI4MTYwNTEyMA43T2Frc1NjaG9vbERpdmQCAw9kFghmDxUGDjdPYWtzU2Nob29sRGl2DjdPYWtzU2Nob29sRGl2Smh0dHBzOi8vcGJzLnR3aW1nLmNvbS9wcm9maWxlX2ltYWdlcy8xMjc2MTA2MTk3L1NldmVuX09ha3NfTG9nb19ub3JtYWwucG5nDjdPYWtzU2Nob29sRGl2ETcgT2FrcyBTY2hvb2wgRGl2EzkvOC8yMDE2IDI6MzE6MzEgUE1kAgEPFgIfCgXXAlJUIDxhIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vN29ha09MZWFyeSI+QDdvYWtPTGVhcnk8L2E+OiBFY29sZSBSaXZpw6hyZSBSb3VnZSBpcyBvcGVuIGFuZCBmdWxsISBUaGFua3MgdG8gUFNGQiwgUHJhaXJpZSBBcmNoaXRlY3RzIGFuZCBQYXJrd2VzdCBCdWlsZGVycyEgPGEgY2xhc3M9J21lZGlhLXBob3RvJ2hyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vN29ha09MZWFyeS9zdGF0dXMvNzczODg4NDAxMTM3Mjc4OTc4L3Bob3RvLzEiIGRhdGEtcGhvdG89Imh0dHBzOi8vcGJzLnR3aW1nLmNvbS9tZWRpYS9DcjFuWmhZVXNBQXN3YlUuanBnIj5waWMudHdpdHRlci5jb20vV01wSkhTU1IxcTwvYT5kAgMPFgIfAWhkAgQPFQQSNzczOTY3MDE5MTUwNDIyMDE2Ejc3Mzk2NzAxOTE1MDQyMjAxNhI3NzM5NjcwMTkxNTA0MjIwMTYON09ha3NTY2hvb2xEaXZkAgQPZBYIZg8VBg43T2Frc1NjaG9vbERpdg43T2Frc1NjaG9vbERpdkpodHRwczovL3Bicy50d2ltZy5jb20vcHJvZmlsZV9pbWFnZXMvMTI3NjEwNjE5Ny9TZXZlbl9PYWtzX0xvZ29fbm9ybWFsLnBuZw43T2Frc1NjaG9vbERpdhE3IE9ha3MgU2Nob29sIERpdhM5LzgvMjAxNiAyOjMxOjAwIFBNZAIBDxYCHwoFjANSVCA8YSBocmVmPSJodHRwczovL3R3aXR0ZXIuY29tL1dheWZpbmRlcnNNQiI+QFdheWZpbmRlcnNNQjwvYT46IEZpcnN0IGZ1bGwgZGF5IG9mIHNjaG9vbCwgaXQncyBzdW5ueSBhbmQgd2UncmUgcmVhZHkgZm9yIHlvdSBzdHVkZW50cyEgPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9zZWFyY2g/cT0lMjNzb21hbnlzbmFja3MiPiNzb21hbnlzbmFja3M8L2E+IDxhIGNsYXNzPSdtZWRpYS1waG90bydocmVmPSJodHRwczovL3R3aXR0ZXIuY29tL1dheWZpbmRlcnNNQi9zdGF0dXMvNzczOTI0MDc5MTcwNjg2OTc2L3Bob3RvLzEiIGRhdGEtcGhvdG89Imh0dHBzOi8vcGJzLnR3aW1nLmNvbS9tZWRpYS9DcjJIMTNQWGdBRTEtclYuanBnIj5waWMudHdpdHRlci5jb20vdTZ3d2I2SDhjRTwvYT5kAgMPFgIfAWhkAgQPFQQSNzczOTY2ODkwNTkwODcxNTUzEjc3Mzk2Njg5MDU5MDg3MTU1MxI3NzM5NjY4OTA1OTA4NzE1NTMON09ha3NTY2hvb2xEaXZkBSZnXzlmM2UyNTZhXzYwOWJfNDUzM19iNWEyXzVlZjUyZjEzNWI4NQ9kFgRmDxYCHwFoZAIBDxYCHwFoZAIFD2QWAgICD2QWAgIBD2QWAgIDD2QWAgIBD2QWAgIZD2QWAgIBDxYCHwFoFgJmD2QWBAICD2QWBAIBDxYCHwFoZAIDDxYCHwFoZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCNw9kFgICAg8PFgIfAWhkZBgCBU5jdGwwMCRTUFdlYlBhcnRNYW5hZ2VyMSRnXzgzMmJkMDEzX2QwOTVfNGE5Nl9hODUwXzYzY2I3YjZkNmRiMCRjdGwwMCRUd2VldExpc3QPFCsADmRkZGRkZGQ8KwAFAAIFZGRkZgL/////D2QFKWN0bDAwJFBsYWNlSG9sZGVyVG9wTmF2JFRvcE5hdmlnYXRpb25NZW51Dw9kBQRIb21lZFDzIZmqEtOAhChxkTi5NEr5U6Vi5smCJXA1uhMJ9yUm" />
 </div>
 
 <script type="text/javascript">
@@ -272,7 +277,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'SCHOLANTISPUBLISHING#10';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.7oaks.org", siteAbsoluteUrl: "http:\u002f\u002fwww.7oaks.org", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Seven Oaks School Division", webTemplate: "2010", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "\u002f_layouts\u002fimages\u002ftitlegraphic.gif", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-05-09T13:34:25.3148950Z") - new Date(), siteClientTag: "8$$15.0.4719.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:200769},pageListId:"{b361d69a-b213-4fd4-aa99-a20a8cd67b12}",pageItemId:1, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fwww.7oaks.org", siteAbsoluteUrl: "http:\u002f\u002fwww.7oaks.org", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Seven Oaks School Division", webTemplate: "2010", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "\u002f_layouts\u002fimages\u002ftitlegraphic.gif", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2016-09-11T16:00:25.9586381Z") - new Date(), siteClientTag: "8$$15.0.4719.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:200769},pageListId:"{b361d69a-b213-4fd4-aa99-a20a8cd67b12}",pageItemId:1, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var _spWebPartComponents = new Object();//]]>
@@ -372,7 +377,7 @@ document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){remo
             registerOverride(101);
             registerOverride(700);
         });
-    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 4, 9),showWeeks:0,timeZone:'-05:00:00.0002695',timeZoneInHours:-5,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
+    })();var _spRegionalSettings={adjustHijriDays:0,calendarType:1,firstDayOfWeek:0,firstWeekOfYear:0,localeId:1033,currentDateInLocalCalendar: new Date(2016, 8, 11),showWeeks:0,timeZone:'-05:00:00.0005105',timeZoneInHours:-5,workDayEnd:1020,workDayStart:480,workDays:'0111110',time24:0};Sys.CultureInfo.CurrentCulture = (function(a){return new Sys.CultureInfo(a.name,a.numberFormat,a.dateTimeFormat)})({"dateTimeFormat":{"AMDesignator":"AM","AbbreviatedDayNames":["S","M","T","W","T","F","S"],"AbbreviatedLeapMonthNames":null,"AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"Calendar":{"AlgorithmType":1,"CalendarType":1,"Eras":[1],"IsReadOnly":false,"MaxSupportedDateTime":"\/Date(253402300799999)\/","MinSupportedDateTime":"\/Date(-62135596800000)\/","TwoDigitYearMax":2029},"CalendarWeekRule":0,"DateSeparator":"\/","DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"FirstDayOfWeek":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","IsReadOnly":true,"LeapMonthNames":null,"LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"NativeCalendarName":"Gregorian Calendar","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"M\/d\/yyyy","ShortTimePattern":"h:mm tt","ShortestDayNames":["S","M","T","W","T","F","S"],"SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","eras":[1,"A.D.","AD",0]},"name":"en-US","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","CurrencyGroupSeparator":",","CurrencyGroupSizes":[3],"CurrencyNegativePattern":0,"CurrencyPositivePattern":0,"CurrencySymbol":"$","DigitSubstitution":1,"IsReadOnly":true,"NaNSymbol":"NaN","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","NumberGroupSizes":[3],"NumberNegativePattern":1,"PerMilleSymbol":"‰","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentGroupSizes":[3],"PercentNegativePattern":0,"PercentPositivePattern":0,"PercentSymbol":"%","PositiveInfinitySymbol":"Infinity","PositiveSign":"+"}});if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
 UpdateFormDigest('\u002f', 1440000);if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;};
 return true;
 }
@@ -442,7 +447,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 <div class="sl-UtilityLinksDropDown">
                                     <a href="https://portal.7oaks.org/">Portal</a><a href="https://webmail.7oaks.org/">Webmail</a>
 							        
-                                            <a class="sl-SignIn" href="http://www.7oaks.org/_LAYOUTS/15/Authenticate.aspx?Source=http%3A%2F%2Fwww%2E7oaks%2Eorg%2FPages%2Fdefault%2Easpx%3Flogin%3D%2D1297208594">Sign In</a>
+                                            <a class="sl-SignIn" href="https://www.7oaks.org/_LAYOUTS/15/Authenticate.aspx?Source=https%3A%2F%2Fwww%2E7oaks%2Eorg%2FPages%2Fdefault%2Easpx%3Flogin%3D%2D586850167">Sign In</a>
                                                                         
                                 </div> 
 
@@ -501,9 +506,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                     <script language="javascript">var ctx = new ContextInfo();ctx.listName = "{89df3e6c-e914-4f50-9134-3d1cc9058cf6}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_89df3e6c-e914-4f50-9134-3d1cc9058cf6'] = ctx;</script><div class="sl-SchooldaySummary">
 	  
 	 <div class="SchoolDayContainer">
-	<div class="Date">May 09, 2016</div>
-	<div class="SchoolDay 6">School Day 6</div>
-	<div class="noSchoolDay 6">No School Today</div>
+	<div class="Date">Sep 11, 2016</div>
+	<div class="SchoolDay hidden">School Day 0</div>
+	<div class="noSchoolDay show">No School Today</div>
 </div></div>
                                     <div class="sl-AudienceLinks">
                                         <a href = "/Pages/Community.aspx" target="blank">Community</a><a href = "/Pages/Parents.aspx" target="blank">Parents</a><a href = "/Pages/Staff.aspx" target="blank">Staff</a>
@@ -544,7 +549,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 				<li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">CVE Home Page</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/Aviation.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Aviation Trades & Technology</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/Automotive.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Automotive Trades & Technology</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/CulinaryServices.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Culinary Services</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/EarlyChildhoodEducator.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Early Childhood Educator</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/Electrical-Trades.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Electrical Trades</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/HealthCareAideProgram.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Health Care Aide</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/HospitalityServices.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Hospitality Services</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/PlumbingPipeTrades.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Plumbing & Pipe Trades</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/Refrigeration-and-Air-Conditioning-Technician.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Refrigeration & Air Conditioning Technician</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/CooperativeVocationalEducation/Pages/Sustainable-Energy.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Sustainable Energy</span></span></a></li>
 			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/BeyondGrade12Now/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Beyond Grade 12 Now</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/7OaksHockeySkills Academy/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">7 Oaks Hockey Skills Academy</span></span></a><ul class="static">
 				<li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/7OaksHockeySkills Academy/term3/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Term 3 Schedule</span></span></a></li>
-			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/YouthPreschool/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Youth & Preschool Programs</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/school/adulteducation/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Adult Learning Centre</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.wayfindersmanitoba.com" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Wayfinders Program</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/DivisionalLanguages/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Divisional Languages</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/school/adulteducation/ProgramsServices/Pages/English-as-Additional-Language-(EAL).aspx" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">English as Additional Language (EAL)</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/SpecialLanguageCreditExams/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Special Language Credit Exams</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/summerschool/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Summer School</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/Settlement/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Immigrant Settlement Services</span></span></a></li>
+			</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/YouthPreschool/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Youth & Preschool Programs</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/school/adulteducation/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Adult Learning Centre</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="http://www.wayfindersmanitoba.com" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Wayfinders Program</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/DivisionalLanguages/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Divisional Languages</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline new-window ms-navedit-linkNode" tabindex="0" href="/school/adulteducation/ProgramsServices/Pages/English-as-a-Second-Language.aspx" target="_blank"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">English as a Second Language (ESL)</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/SpecialLanguageCreditExams/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Special Language Credit Exams</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/summerschool/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Summer School</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Programs/Settlement/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Immigrant Settlement Services</span></span></a></li>
 		</ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Resources/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Resources</span></span></a><ul class="static">
 			<li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Resources/aboriginaleducation/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Aboriginal Education</span></span></a><ul class="static">
 				<li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Resources/aboriginaleducation"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Aboriginal Education</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="CATEP" href="/Resources/aboriginaleducation/CATEP/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Community Aboriginal Teacher Education Program</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="CAEM" href="/Resources/aboriginaleducation/CAEM/Pages/default.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Council for Aboriginal Education in Manitoba</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/Resources/aboriginaleducation/Pages/Indigenous-Bilingual-Program.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Indigenous Language Program</span></span></a></li>
@@ -627,7 +632,18 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div class="col-lg-12"><div class="ms-webpart-zone ms-fullWidth">
 	<div id="MSOZoneCell_WebPartWPQ6" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="193f9b4d-4b58-40b1-b188-a988459f18e7" HasPers="false" id="WebPartWPQ6" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{4334735d-bb43-4d47-a679-14f450c68b42}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_4334735d-bb43-4d47-a679-14f450c68b42'] = ctx;</script><div class="sl-SpecialAnnouncementsSummary sl-CLVSummary">
+			<div WebPartID="193f9b4d-4b58-40b1-b188-a988459f18e7" HasPers="false" id="WebPartWPQ6" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{4334735d-bb43-4d47-a679-14f450c68b42}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_4334735d-bb43-4d47-a679-14f450c68b42'] = ctx;</script><div class="sl-SpecialAnnouncementsSummary sl-CLVSummary" id="g_193f9b4d_4b58_40b1_b188_a988459f18e7">
+	<script type="text/javascript">
+		$(document).ready(function () {	
+			$('#g_193f9b4d_4b58_40b1_b188_a988459f18e7.sl-SpecialAnnouncementsSummary .sl-Items').magnificPopup({  
+				type:'inline',
+				midClick: true,
+				mainClass: 'mfp-fade',
+				delegate: '.sl-saTitle', 
+				removalDelay: 300,
+			});				
+		});
+	</script>
 	
 	
 	<div class="sl-Items"></div></div><div class="ms-clear"></div></div>
@@ -635,7 +651,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</div>
 </div></div>
 
-    <div class="bgLight">        
+    <div class="bgLight feautredStoriesContainer">        
 	<section class="row">
 		<div class="col-lg-12"><div class="ms-webpart-zone ms-fullWidth">
 	<div id="MSOZoneCell_WebPartWPQ10" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
@@ -692,37 +708,31 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
     
     
-    <div class="featured-slideshowContainer flexslider" sl-dialog-context="a7d06c9f-d779-41a2-aa88-96fb43ec7641">
+    <div class="featured-slideshowContainer flexslider" sl-dialog-context="459407c0-3ceb-49a2-8266-80bba853828b">
         <ul class="featured-slideshow slideshow_ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10">
 
             
                     <li class="featured-item"> 
-                        <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_featureDiv" class="featured-article">
+                        <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_featureDiv" class="featured-article empty">
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_itemImgSmall" srcset="http://www.7oaks.org/FeaturedStories/_w/Grad%20Pow%20Wow%202016_png.jpg" media="(max-width: 640px)" alt=""></source> 
-                                    <img src="http://www.7oaks.org/FeaturedStories/Grad%20Pow%20Wow%202016.png" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_itemImg" alt="In Honour of Our Graduates" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_itemImgSmall" srcset="http://www.7oaks.org/FeaturedStories/_w/Welcome%20Back_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.7oaks.org/FeaturedStories/Welcome%20Back.jpg" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_itemImg" alt="Featured Story" /> 
                                 </picture>       
                             </div>                         
 
-                            <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_entryDiv" class="featured-entry">
+                            <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_entryDiv" class="featured-entry empty">
                                 <div class="entry-title-container">
-                                <h2 id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_entryHeader" class="entry-title">
-                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_entryAnchor" title="In Honour of Our Graduates" href="http://www.7oaks.org/Documents/Pow%20Wow%202016.pdf" target="_blank">In Honour of Our Graduates</a>
-                                </h2>
                                 
-                                <a href="javascript:" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
+                                
+                                
 
                                 </div>
 
-                                <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_summaryDiv" class="entry-summary" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_summarySpan" class="entry-summary-body"> <p>​All are welcome to attend our 7th annual Grad Pow Wow June 2nd at Maples Collegiate.</p> </span>                         
-                                </div>
+                                
 
-                                <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_summaryButtonDiv" class="sl-buttons">
-                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl00_summaryButtonAnchor" class="sl-button entry-more-link" title="Click to read the rest of this article" href="http://www.7oaks.org/Documents/Pow%20Wow%202016.pdf" target="_blank">Read more</a>
-                                </div>  
+                                  
                             </div>  
                         
                             <div class="entry-title-bg"></div>     
@@ -734,15 +744,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_itemImgSmall" srcset="http://www.7oaks.org/FeaturedStories/_w/BeyondGrade12_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
-                                    <img src="http://www.7oaks.org/FeaturedStories/BeyondGrade12.jpg" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_itemImg" alt="Earn University &amp; College Credits Now!" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_itemImgSmall" srcset="http://www.7oaks.org/FeaturedStories/_w/Pre-School_png.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.7oaks.org/FeaturedStories/Pre-School.png" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_itemImg" alt="FREE Parent-Child Preschool Programs" /> 
                                 </picture>       
                             </div>                         
 
                             <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_entryDiv" class="featured-entry">
                                 <div class="entry-title-container">
                                 <h2 id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_entryHeader" class="entry-title">
-                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_entryAnchor" title="Earn University &amp; College Credits Now!" href="http://www.7oaks.org/Programs/BeyondGrade12Now/Pages/default.aspx" target="_blank">Earn University & College Credits Now!</a>
+                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_entryAnchor" title="FREE Parent-Child Preschool Programs" href="https://www.7oaks.org/Programs/welcomefamilies/Pages/default.aspx" target="_blank">FREE Parent-Child Preschool Programs</a>
                                 </h2>
                                 
                                 <a href="javascript:" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
@@ -750,11 +760,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_summaryDiv" class="entry-summary" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_summarySpan" class="entry-summary-body"> ​Start planning for next year!​<br> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_summarySpan" class="entry-summary-body">Programming begins end of September/beginnng of October and runs until June!</span>                         
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_summaryButtonDiv" class="sl-buttons">
-                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_summaryButtonAnchor" class="sl-button entry-more-link" title="Click to read the rest of this article" href="http://www.7oaks.org/Programs/BeyondGrade12Now/Pages/default.aspx" target="_blank">Read more</a>
+                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl01_summaryButtonAnchor" class="sl-button entry-more-link" title="Click to read the rest of this article" href="https://www.7oaks.org/Programs/welcomefamilies/Pages/default.aspx" target="_blank">Read more</a>
                                 </div>  
                             </div>  
                         
@@ -767,15 +777,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             
                             <div class="featuredImgContainer">
                                 <picture>
-                                    <source id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_itemImgSmall" srcset="http://www.7oaks.org/FeaturedStories/_w/Sistema%20Concert%202016_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
-                                    <img src="http://www.7oaks.org/FeaturedStories/Sistema%20Concert%202016.jpg" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_itemImg" alt="Sistema Fundraiser is May 12 at Maples Commons!" /> 
+                                    <source id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_itemImgSmall" srcset="http://www.7oaks.org/FeaturedStories/_w/Continuing%20Ed%20Blank_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.7oaks.org/FeaturedStories/Continuing%20Ed%20Blank.jpg" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_itemImg" alt="Fall Registration Opens September 2, 2016!" /> 
                                 </picture>       
                             </div>                         
 
                             <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_entryDiv" class="featured-entry">
                                 <div class="entry-title-container">
                                 <h2 id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_entryHeader" class="entry-title">
-                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_entryAnchor" title="Sistema Fundraiser is May 12 at Maples Commons!" href="http://campaign.r20.constantcontact.com/render?m=1110081848237&amp;ca=aff3fb6f-c1e4-4bb7-8292-3ab36f74cdc7" target="_blank">Sistema Fundraiser is May 12 at Maples Commons!</a>
+                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_entryAnchor" title="Fall Registration Opens September 2, 2016!" href="http://www.7oaks.org/school/continuingeducation/Pages/default.aspx" target="_blank">Fall Registration Opens September 2, 2016!</a>
                                 </h2>
                                 
                                 <a href="javascript:" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
@@ -783,11 +793,44 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_summaryDiv" class="entry-summary" tabindex="-1">
-                                    <span id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_summarySpan" class="entry-summary-body"> <p>​Tickets are $20 and directly support Sistema Winnipeg&#160;- to purchase your tickets call 204-949-3999.</p> </span>                         
+                                    <span id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_summarySpan" class="entry-summary-body">​Visit our website for courses, dates, locations, and costs.</span>                         
                                 </div>
 
                                 <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_summaryButtonDiv" class="sl-buttons">
-                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_summaryButtonAnchor" class="sl-button entry-more-link" title="Click to read the rest of this article" href="http://campaign.r20.constantcontact.com/render?m=1110081848237&amp;ca=aff3fb6f-c1e4-4bb7-8292-3ab36f74cdc7" target="_blank">Read more</a>
+                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl02_summaryButtonAnchor" class="sl-button entry-more-link" title="Click to read the rest of this article" href="http://www.7oaks.org/school/continuingeducation/Pages/default.aspx" target="_blank">Read more</a>
+                                </div>  
+                            </div>  
+                        
+                            <div class="entry-title-bg"></div>     
+                        </div>                                            
+                    </li>
+                
+                    <li class="featured-item"> 
+                        <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_featureDiv" class="featured-article">
+                            
+                            <div class="featuredImgContainer">
+                                <picture>
+                                    <source id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_itemImgSmall" srcset="http://www.7oaks.org/FeaturedStories/_w/BeyondGrade12_jpg.jpg" media="(max-width: 640px)" alt=""></source> 
+                                    <img src="http://www.7oaks.org/FeaturedStories/BeyondGrade12.jpg" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_itemImg" alt="Earn University &amp; College Credits Now!" /> 
+                                </picture>       
+                            </div>                         
+
+                            <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_entryDiv" class="featured-entry">
+                                <div class="entry-title-container">
+                                <h2 id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_entryHeader" class="entry-title">
+                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_entryAnchor" title="Earn University &amp; College Credits Now!" href="http://www.7oaks.org/Programs/BeyondGrade12Now/Pages/default.aspx" target="_blank">Earn University & College Credits Now!</a>
+                                </h2>
+                                
+                                <a href="javascript:" id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_entryButton" class="sl-entry-buttons sl-More" tabindex="-1" aria-hidden="true">Read More</a>
+
+                                </div>
+
+                                <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_summaryDiv" class="entry-summary" tabindex="-1">
+                                    <span id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_summarySpan" class="entry-summary-body"> ​Start planning for next year!​<br> </span>                         
+                                </div>
+
+                                <div id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_summaryButtonDiv" class="sl-buttons">
+                                    <a id="ctl00_SPWebPartManager1_g_0422a15b_b6ef_4910_95a9_88a30f3a5a10_ctl00_FeaturedRepeater_ctl03_summaryButtonAnchor" class="sl-button entry-more-link" title="Click to read the rest of this article" href="http://www.7oaks.org/Programs/BeyondGrade12Now/Pages/default.aspx" target="_blank">Read more</a>
                                 </div>  
                             </div>  
                         
@@ -832,64 +875,34 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 	<div class="sl-Items">
 	<div class="sl-Item">
-	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=234&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
+	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=250&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
           <div class="sl-imgFrame">
-            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/234/The Learning Program logo.png" alt=""/>
+            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/250/Dreamcatcher.png" alt=""/>
             <span class="hide"><img class="sl-CLVFieldImage default" src="_layouts/15/Images/Scholantis/Shared/wave%204/AnnouncementsImgStock.jpg" alt="AnnouncementsImgStock.jpg"/></span>
           </div>
-          <div class="sl-Title">Congratulations! Margaret Park has been Nationally Recognized!</div>
-		  <div class="sl-Date">May 05, 2016</div>
-          <div class="sl-Body">  The Learning Partnership's Welcome to Kindergarten Awards for Partnership Excellence for their commitment to...</div>
+          <div class="sl-Title">H.C. Avery is our Featured School<span class="sl-AttachmentIcon"></span></div>
+		  <div class="sl-Date">September 02, 2016</div>
+          <div class="sl-Body">   Click here  to see what H.C. Avery is doing to incorporate aboriginal teaching in...</div>
 	</a>
 </div><div class="sl-Item">
-	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=233&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
+	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=248&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
           <div class="sl-imgFrame">
-            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/233/Dreamcatcher.png" alt=""/>
+            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/248/Kevin Lamoureux.jpg" alt=""/>
             <span class="hide"><img class="sl-CLVFieldImage default" src="_layouts/15/Images/Scholantis/Shared/wave%204/AnnouncementsImgStock.jpg" alt="AnnouncementsImgStock.jpg"/></span>
           </div>
-          <div class="sl-Title">Garden City is our Featured School</div>
-		  <div class="sl-Date">May 02, 2016</div>
-          <div class="sl-Body">    Click here   to see what GC is doing to incorporate aboriginal teaching in their...</div>
+          <div class="sl-Title">Congratulations to Kevin Lamoureux!<span class="sl-AttachmentIcon"></span></div>
+		  <div class="sl-Date">August 08, 2016</div>
+          <div class="sl-Body">  ​Our Seven Oaks School Division Scholar in Residence was recently appointed the Associate Vice-President...</div>
 	</a>
 </div><div class="sl-Item">
-	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=232&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
+	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=247&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
           <div class="sl-imgFrame">
-            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/232/Elwick Bike Drive.jpg" alt=""/>
+            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/247/Report to the Community.jpg" alt=""/>
             <span class="hide"><img class="sl-CLVFieldImage default" src="_layouts/15/Images/Scholantis/Shared/wave%204/AnnouncementsImgStock.jpg" alt="AnnouncementsImgStock.jpg"/></span>
           </div>
-          <div class="sl-Title">Do you have an old bike you could donate?</div>
-		  <div class="sl-Date">May 02, 2016</div>
-          <div class="sl-Body">  Elwick is once again ​having their bike drive!&#160;  Click here   to learn more about...</div>
-	</a>
-</div><div class="sl-Item">
-	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=231&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame">
-            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/231/What Kind of Citizen.jpg" alt=""/>
-            <span class="hide"><img class="sl-CLVFieldImage default" src="_layouts/15/Images/Scholantis/Shared/wave%204/AnnouncementsImgStock.jpg" alt="AnnouncementsImgStock.jpg"/></span>
-          </div>
-          <div class="sl-Title">Dr. Joel Westheimer Presents May 11 from 7:00-9:00 at GC</div>
-		  <div class="sl-Date">April 28, 2016</div>
-          <div class="sl-Body">  Please join us at Dr. Joel Westheimer presents &quot;What Kind of Citizen&#58; Educating Our...</div>
-	</a>
-</div><div class="sl-Item">
-	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=230&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame">
-            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/230/Early Years Coalition.jpg" alt=""/>
-            <span class="hide"><img class="sl-CLVFieldImage default" src="_layouts/15/Images/Scholantis/Shared/wave%204/AnnouncementsImgStock.jpg" alt="AnnouncementsImgStock.jpg"/></span>
-          </div>
-          <div class="sl-Title">FREE Community Supper & AGM</div>
-		  <div class="sl-Date">April 28, 2016</div>
-          <div class="sl-Body">  ​The Seven Oaks Early Years Coalition is hosting a Community Family Event on May...</div>
-	</a>
-</div><div class="sl-Item">
-	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=229&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame">
-            <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/229/MyCampLogo.jpg" alt=""/>
-            <span class="hide"><img class="sl-CLVFieldImage default" src="_layouts/15/Images/Scholantis/Shared/wave%204/AnnouncementsImgStock.jpg" alt="AnnouncementsImgStock.jpg"/></span>
-          </div>
-          <div class="sl-Title">MY Camp - spots still available!</div>
-		  <div class="sl-Date">April 15, 2016</div>
-          <div class="sl-Body">  There is still room in Sessions 1, 3, 4, and 5!&#160; Please call or...</div>
+          <div class="sl-Title">The Report to the Community is Available!<span class="sl-AttachmentIcon"></span></div>
+		  <div class="sl-Date">July 06, 2016</div>
+          <div class="sl-Body">  ​  Click here   to view the Divisional Report to the Community or any of...</div>
 	</a>
 </div><div class="sl-Item">
 	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=223&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
@@ -897,19 +910,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             <img class="sl-CLVFieldImage content" src="/Announcements/Attachments/223/WSP Tax Increase.jpg" alt=""/>
             <span class="hide"><img class="sl-CLVFieldImage default" src="_layouts/15/Images/Scholantis/Shared/wave%204/AnnouncementsImgStock.jpg" alt="AnnouncementsImgStock.jpg"/></span>
           </div>
-          <div class="sl-Title">West St. Paul Tax Increase Explained</div>
+          <div class="sl-Title">West St. Paul Tax Increase Explained<span class="sl-AttachmentIcon"></span></div>
 		  <div class="sl-Date">March 22, 2016</div>
           <div class="sl-Body">    Click here   for information regarding the West St. Paul tax increase.​  </div>
-	</a>
-</div><div class="sl-Item">
-	<a href="//www.7oaks.org/Pages/newsitem.aspx?ItemID=215&ListID=056640c2-8e80-41d2-a325-635a6ca908ff&TemplateID=Announcement_Item">
-          <div class="sl-imgFrame">
-            
-            <span class="display"><img class="sl-CLVFieldImage content" src="/Resources/FundDevelopment/PublishingImages/Lists/Announcements/NewForm/Gala%20icon.jpg" alt="Gala%20icon.jpg"/></span>
-          </div>
-          <div class="sl-Title">Rhythm & Roots "Dine Around" Gala</div>
-		  <div class="sl-Date">February 16, 2016</div>
-          <div class="sl-Body">   ​In support of Wayfinders - June 4, 2016 in the beautiful Maples Collegiate Judy...</div>
 	</a>
 </div></div>                                                                                                                                                                                           
 	
@@ -963,11 +966,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	
 			<div class="sl-ItemsContainer">
 			<div class="sl-Items EventsSummary_g_784e2a29_d0d9_459c_b2c8_8b6f572a65f2">
-			<a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8901" data-event-start="May 10, 2016 18:00:00 -500" data-event-end="May 10, 2016 19:30:00 -500" data-event-type="single">
+			<a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8814" data-event-start="September 12, 2016 19:30:00 -500" data-event-end="September 12, 2016 21:30:00 -500" data-event-type="single">
 	<script type="text/javascript">
 		$(document).ready(function () {
-			var startDate = new Date("5/10/2016 6:00:00 PM");
-			var endDate = new Date("5/10/2016 7:30:00 PM");
+			var startDate = new Date("9/12/2016 7:30:00 PM");
+			var endDate = new Date("9/12/2016 9:30:00 PM");
 			var type = "time";
 			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
 			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
@@ -976,325 +979,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 				startDate = startDate.substring(0, startDate.indexOf('T'));
 				endDate = endDate.substring(0, endDate.indexOf('T'));
 			}
-			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8901 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Governor+Semple+Kindergarten+Open+House&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eHand-in-Hand+-+parents+and+guardians+with+the+child.%3c%2fdiv%3e&location=150+Hartford+Ave.&trp=false&sprop=&sprop=name:");
-		});		
-	</script>  
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">10</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-EventTimeicon">
-		<div class="spinner">		  
-			<span class="side sp_left"><span class="fill"></span></span>
-			<span class="side sp_right"><span class="fill"></span></span>
-			&#160;
-		</div>
-		<div class="sl-Hour">06</div>:<div class="sl-Minutes">00</div><div class="sl-AMPM">PM</div>
-	</div>
-	<div class="PM"></div>
-	<div class="sl-Title">Governor Semple Kindergarten Open House</div>
-	
-	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8901">
-		  			
-	
-		<div class="sl-Title">Governor Semple Kindergarten Open House</div>	 
-		<div class="sl-Date">May 10, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">06:00 PM -  07:30 PM</div>
-		</div>		
-		<div class="sl-Location">150 Hartford Ave. </div>				
-		<div class="sl-Body"><div>Hand-in-Hand - parents and guardians with the child.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Governor Semple Kindergarten Open House" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=901&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=901&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Governor Semple Kindergarten Open House&Body=Governor Semple Kindergarten Open House http://www.7oaks.org/Pages/newsitem.aspx?ItemID=901&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8903" data-event-start="May 11, 2016 16:00:00 -500" data-event-end="May 11, 2016 17:00:00 -500" data-event-type="single">
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/11/2016 4:00:00 PM");
-			var endDate = new Date("5/11/2016 5:00:00 PM");
-			var type = "time";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8903 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=James+Nisbet+Kindergarten+Open+House&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eParents+and+guardians+and+children+welcome.%3c%2fdiv%3e&location=70+Doubleday+Dr.&trp=false&sprop=&sprop=name:");
-		});		
-	</script>  
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">11</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-EventTimeicon">
-		<div class="spinner">		  
-			<span class="side sp_left"><span class="fill"></span></span>
-			<span class="side sp_right"><span class="fill"></span></span>
-			&#160;
-		</div>
-		<div class="sl-Hour">04</div>:<div class="sl-Minutes">00</div><div class="sl-AMPM">PM</div>
-	</div>
-	<div class="PM"></div>
-	<div class="sl-Title">James Nisbet Kindergarten Open House</div>
-	
-	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8903">
-		  			
-	
-		<div class="sl-Title">James Nisbet Kindergarten Open House</div>	 
-		<div class="sl-Date">May 11, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">04:00 PM -  05:00 PM</div>
-		</div>		
-		<div class="sl-Location">70 Doubleday Dr. </div>				
-		<div class="sl-Body"><div>Parents and guardians and children welcome.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="James Nisbet Kindergarten Open House" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=903&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=903&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=James Nisbet Kindergarten Open House&Body=James Nisbet Kindergarten Open House http://www.7oaks.org/Pages/newsitem.aspx?ItemID=903&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8904" data-event-start="May 11, 2016 17:30:00 -500" data-event-end="May 11, 2016 18:30:00 -500" data-event-type="single">
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/11/2016 5:30:00 PM");
-			var endDate = new Date("5/11/2016 6:30:00 PM");
-			var type = "time";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8904 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=James+Nisbet+Kindergarten+Open+House&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eParents+and+guardians+and+children+welcome.%3c%2fdiv%3e&location=70+Doubleday+Dr.&trp=false&sprop=&sprop=name:");
-		});		
-	</script>  
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">11</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-EventTimeicon">
-		<div class="spinner">		  
-			<span class="side sp_left"><span class="fill"></span></span>
-			<span class="side sp_right"><span class="fill"></span></span>
-			&#160;
-		</div>
-		<div class="sl-Hour">05</div>:<div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>
-	<div class="PM"></div>
-	<div class="sl-Title">James Nisbet Kindergarten Open House</div>
-	
-	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8904">
-		  			
-	
-		<div class="sl-Title">James Nisbet Kindergarten Open House</div>	 
-		<div class="sl-Date">May 11, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">05:30 PM -  06:30 PM</div>
-		</div>		
-		<div class="sl-Location">70 Doubleday Dr. </div>				
-		<div class="sl-Body"><div>Parents and guardians and children welcome.</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="James Nisbet Kindergarten Open House" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=904&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=904&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=James Nisbet Kindergarten Open House&Body=James Nisbet Kindergarten Open House http://www.7oaks.org/Pages/newsitem.aspx?ItemID=904&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8917" data-event-start="May 11, 2016 18:00:00 -500" data-event-end="May 11, 2016 19:00:00 -500" data-event-type="single">
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/11/2016 6:00:00 PM");
-			var endDate = new Date("5/11/2016 7:00:00 PM");
-			var type = "time";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8917 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Margaret+Park+Welcome+to+Kindergarten&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
-		});		
-	</script>  
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">11</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-EventTimeicon">
-		<div class="spinner">		  
-			<span class="side sp_left"><span class="fill"></span></span>
-			<span class="side sp_right"><span class="fill"></span></span>
-			&#160;
-		</div>
-		<div class="sl-Hour">06</div>:<div class="sl-Minutes">00</div><div class="sl-AMPM">PM</div>
-	</div>
-	<div class="PM"></div>
-	<div class="sl-Title">Margaret Park Welcome to Kindergarten</div>
-	
-	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8917">
-		  			
-	
-		<div class="sl-Title">Margaret Park Welcome to Kindergarten</div>	 
-		<div class="sl-Date">May 11, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">06:00 PM -  07:00 PM</div>
-		</div>		
-		<div class="sl-Location"> </div>				
-		<div class="sl-Body"><div></div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Margaret Park Welcome to Kindergarten" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=917&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=917&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Margaret Park Welcome to Kindergarten&Body=Margaret Park Welcome to Kindergarten http://www.7oaks.org/Pages/newsitem.aspx?ItemID=917&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8918" data-event-start="May 11, 2016 18:00:00 -500" data-event-end="May 11, 2016 19:00:00 -500" data-event-type="single">
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/11/2016 6:00:00 PM");
-			var endDate = new Date("5/11/2016 7:00:00 PM");
-			var type = "time";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8918 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Margaret+Park+Kindergarten+Open+House&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=Margaret+Park+School&trp=false&sprop=&sprop=name:");
-		});		
-	</script>  
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">11</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-EventTimeicon">
-		<div class="spinner">		  
-			<span class="side sp_left"><span class="fill"></span></span>
-			<span class="side sp_right"><span class="fill"></span></span>
-			&#160;
-		</div>
-		<div class="sl-Hour">06</div>:<div class="sl-Minutes">00</div><div class="sl-AMPM">PM</div>
-	</div>
-	<div class="PM"></div>
-	<div class="sl-Title">Margaret Park Kindergarten Open House</div>
-	
-	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8918">
-		  			
-	
-		<div class="sl-Title">Margaret Park Kindergarten Open House</div>	 
-		<div class="sl-Date">May 11, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">06:00 PM -  07:00 PM</div>
-		</div>		
-		<div class="sl-Location">Margaret Park School </div>				
-		<div class="sl-Body"><div></div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Margaret Park Kindergarten Open House" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=918&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=918&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Margaret Park Kindergarten Open House&Body=Margaret Park Kindergarten Open House http://www.7oaks.org/Pages/newsitem.aspx?ItemID=918&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8910" data-event-start="May 11, 2016 18:30:00 -500" data-event-end="May 11, 2016 19:30:00 -500" data-event-type="single">
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/11/2016 6:30:00 PM");
-			var endDate = new Date("5/11/2016 7:30:00 PM");
-			var type = "time";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8910 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Victory+Kindergarten+Activity+Night&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%26%23160%3b%3c%2fdiv%3e&location=395+Jefferson+Ave.&trp=false&sprop=&sprop=name:");
-		});		
-	</script>  
-   
-   <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">11</div>
-		<div class="sl-dateiconMonth">May</div>
-	</div>
-	<div class="sl-EventTimeicon">
-		<div class="spinner">		  
-			<span class="side sp_left"><span class="fill"></span></span>
-			<span class="side sp_right"><span class="fill"></span></span>
-			&#160;
-		</div>
-		<div class="sl-Hour">06</div>:<div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
-	</div>
-	<div class="PM"></div>
-	<div class="sl-Title">Victory Kindergarten Activity Night</div>
-	
-	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8910">
-		  			
-	
-		<div class="sl-Title">Victory Kindergarten Activity Night</div>	 
-		<div class="sl-Date">May 11, 2016 </div>	
-		<div class="sl-Time"><div class="sl-EventType">06:30 PM -  07:30 PM</div>
-		</div>		
-		<div class="sl-Location">395 Jefferson Ave. </div>				
-		<div class="sl-Body"><div>&#160;</div></div>
-		<div class="sl-Attachment"></div>
-		
-		<div class="sl-Share" data-title="Victory Kindergarten Activity Night" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=910&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
-			<a href="#" class="sl-Icon facebook" title="facebook"></a>
-			<a href="#" class="sl-Icon twitter" title="twitter"></a>
-			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=910&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Victory Kindergarten Activity Night&Body=Victory Kindergarten Activity Night http://www.7oaks.org/Pages/newsitem.aspx?ItemID=910&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
-			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
-		</div>				
-	</div>		
-</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8951" data-event-start="May 12, 2016 0:00:00 -500" data-event-end="May 12, 2016 23:59:00 -500" data-event-type="allday">
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var startDate = new Date("5/12/2016 12:00:00 AM");
-			var endDate = new Date("5/12/2016 11:59:00 PM");
-			var type = "all";
-			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
-			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
-			
-			if (type == "all") {
-				startDate = startDate.substring(0, startDate.indexOf('T'));
-				endDate = endDate.substring(0, endDate.indexOf('T'));
-			}
-			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8951 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Sistema%2fWSO+Fundraiser+Concert&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3eFurther+information+to+follow.%3c%2fdiv%3e&location=Maples+Commons&trp=false&sprop=&sprop=name:");
+			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8814 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Regular+Board+Meeting&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
 		});		
 	</script>  
    
    <div class="sl-Eventdateicon">
 		<div class="sl-dateiconDate">12</div>
-		<div class="sl-dateiconMonth">May</div>
+		<div class="sl-dateiconMonth">Sep</div>
 	</div>
 	<div class="sl-EventTimeicon">
 		<div class="spinner">		  
@@ -1302,36 +993,36 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			<span class="side sp_right"><span class="fill"></span></span>
 			&#160;
 		</div>
-		<div class='sl-EventType'>All Day</div>
+		<div class="sl-Hour">07</div>:<div class="sl-Minutes">30</div><div class="sl-AMPM">PM</div>
 	</div>
-	<div class="AM"></div>
-	<div class="sl-Title">Sistema/WSO Fundraiser Concert</div>
+	<div class="PM"></div>
+	<div class="sl-Title">Regular Board Meeting</div>
 	
-	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8951">
+	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8814">
 		  			
 	
-		<div class="sl-Title">Sistema/WSO Fundraiser Concert</div>	 
-		<div class="sl-Date">May 12, 2016 </div>	
-		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		<div class="sl-Title">Regular Board Meeting</div>	 
+		<div class="sl-Date">Sep 12, 2016 </div>	
+		<div class="sl-Time"><div class="sl-EventType">07:30 PM -  09:30 PM</div>
 		</div>		
-		<div class="sl-Location">Maples Commons </div>				
-		<div class="sl-Body"><div>Further information to follow.</div></div>
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
 		<div class="sl-Attachment"></div>
 		
-		<div class="sl-Share" data-title="Sistema/WSO Fundraiser Concert" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=951&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
+		<div class="sl-Share" data-title="Regular Board Meeting" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=814&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
 			<a href="#" class="sl-Icon facebook" title="facebook"></a>
 			<a href="#" class="sl-Icon twitter" title="twitter"></a>
 			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=951&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=Sistema/WSO Fundraiser Concert&Body=Sistema/WSO Fundraiser Concert http://www.7oaks.org/Pages/newsitem.aspx?ItemID=951&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=814&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Regular Board Meeting&Body=Regular Board Meeting http://www.7oaks.org/Pages/newsitem.aspx?ItemID=814&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
 			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
 		</div>				
 	</div>		
-</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8787" data-event-start="May 16, 2016 0:00:00 -500" data-event-end="May 16, 2016 23:59:00 -500" data-event-type="allday">
+</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8876" data-event-start="September 21, 2016 0:00:00 -500" data-event-end="September 21, 2016 23:59:00 -500" data-event-type="allday">
 	<script type="text/javascript">
 		$(document).ready(function () {
-			var startDate = new Date("5/16/2016 12:00:00 AM");
-			var endDate = new Date("5/16/2016 11:59:00 PM");
+			var startDate = new Date("9/21/2016 12:00:00 AM");
+			var endDate = new Date("9/21/2016 11:59:00 PM");
 			var type = "all";
 			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
 			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
@@ -1340,13 +1031,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 				startDate = startDate.substring(0, startDate.indexOf('T'));
 				endDate = endDate.substring(0, endDate.indexOf('T'));
 			}
-			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8787 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=School+Based+PD&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8876 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Divisional+Day+-+No+Classes&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
 		});		
 	</script>  
    
    <div class="sl-Eventdateicon">
-		<div class="sl-dateiconDate">16</div>
-		<div class="sl-dateiconMonth">May</div>
+		<div class="sl-dateiconDate">21</div>
+		<div class="sl-dateiconMonth">Sep</div>
 	</div>
 	<div class="sl-EventTimeicon">
 		<div class="spinner">		  
@@ -1357,25 +1048,337 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		<div class='sl-EventType'>All Day</div>
 	</div>
 	<div class="AM"></div>
-	<div class="sl-Title">School Based PD</div>
+	<div class="sl-Title">Divisional Day - No Classes</div>
 	
-	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8787">
+	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8876">
 		  			
 	
-		<div class="sl-Title">School Based PD</div>	 
-		<div class="sl-Date">May 16, 2016 </div>	
+		<div class="sl-Title">Divisional Day - No Classes</div>	 
+		<div class="sl-Date">Sep 21, 2016 </div>	
 		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
 		</div>		
 		<div class="sl-Location"> </div>				
 		<div class="sl-Body"><div></div></div>
 		<div class="sl-Attachment"></div>
 		
-		<div class="sl-Share" data-title="School Based PD" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=787&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
+		<div class="sl-Share" data-title="Divisional Day - No Classes" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=876&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
 			<a href="#" class="sl-Icon facebook" title="facebook"></a>
 			<a href="#" class="sl-Icon twitter" title="twitter"></a>
 			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
-			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=787&Using=event.ics"></a> 
-			<a class="sl-Icon email" title="email" href="mailto:?Subject=School Based PD&Body=School Based PD http://www.7oaks.org/Pages/newsitem.aspx?ItemID=787&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=876&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Divisional Day - No Classes&Body=Divisional Day - No Classes http://www.7oaks.org/Pages/newsitem.aspx?ItemID=876&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8924" data-event-start="October 02, 2016 0:00:00 -500" data-event-end="October 02, 2016 23:59:00 -500" data-event-type="allday">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("10/2/2016 12:00:00 AM");
+			var endDate = new Date("10/2/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8924 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Rosh+Hashanah&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">02</div>
+		<div class="sl-dateiconMonth">Oct</div>
+	</div>
+	<div class="sl-EventTimeicon">
+		<div class="spinner">		  
+			<span class="side sp_left"><span class="fill"></span></span>
+			<span class="side sp_right"><span class="fill"></span></span>
+			&#160;
+		</div>
+		<div class='sl-EventType'>All Day</div>
+	</div>
+	<div class="AM"></div>
+	<div class="sl-Title">Rosh Hashanah</div>
+	
+	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8924">
+		  			
+	
+		<div class="sl-Title">Rosh Hashanah</div>	 
+		<div class="sl-Date">Oct 02, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Rosh Hashanah" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=924&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=924&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Rosh Hashanah&Body=Rosh Hashanah http://www.7oaks.org/Pages/newsitem.aspx?ItemID=924&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8923" data-event-start="October 10, 2016 0:00:00 -500" data-event-end="October 10, 2016 23:59:00 -500" data-event-type="allday">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("10/10/2016 12:00:00 AM");
+			var endDate = new Date("10/10/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8923 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Thanksgiving&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">10</div>
+		<div class="sl-dateiconMonth">Oct</div>
+	</div>
+	<div class="sl-EventTimeicon">
+		<div class="spinner">		  
+			<span class="side sp_left"><span class="fill"></span></span>
+			<span class="side sp_right"><span class="fill"></span></span>
+			&#160;
+		</div>
+		<div class='sl-EventType'>All Day</div>
+	</div>
+	<div class="AM"></div>
+	<div class="sl-Title">Thanksgiving</div>
+	
+	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8923">
+		  			
+	
+		<div class="sl-Title">Thanksgiving</div>	 
+		<div class="sl-Date">Oct 10, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Thanksgiving" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=923&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=923&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Thanksgiving&Body=Thanksgiving http://www.7oaks.org/Pages/newsitem.aspx?ItemID=923&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8925" data-event-start="October 11, 2016 0:00:00 -500" data-event-end="October 11, 2016 23:59:00 -500" data-event-type="allday">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("10/11/2016 12:00:00 AM");
+			var endDate = new Date("10/11/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8925 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Yom+Kippur&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">11</div>
+		<div class="sl-dateiconMonth">Oct</div>
+	</div>
+	<div class="sl-EventTimeicon">
+		<div class="spinner">		  
+			<span class="side sp_left"><span class="fill"></span></span>
+			<span class="side sp_right"><span class="fill"></span></span>
+			&#160;
+		</div>
+		<div class='sl-EventType'>All Day</div>
+	</div>
+	<div class="AM"></div>
+	<div class="sl-Title">Yom Kippur</div>
+	
+	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8925">
+		  			
+	
+		<div class="sl-Title">Yom Kippur</div>	 
+		<div class="sl-Date">Oct 11, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Yom Kippur" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=925&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=925&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Yom Kippur&Body=Yom Kippur http://www.7oaks.org/Pages/newsitem.aspx?ItemID=925&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8926" data-event-start="October 21, 2016 0:00:00 -500" data-event-end="October 21, 2016 23:59:00 -500" data-event-type="allday">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("10/21/2016 12:00:00 AM");
+			var endDate = new Date("10/21/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8926 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=MTS+PD+Day+-+No+Classes&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">21</div>
+		<div class="sl-dateiconMonth">Oct</div>
+	</div>
+	<div class="sl-EventTimeicon">
+		<div class="spinner">		  
+			<span class="side sp_left"><span class="fill"></span></span>
+			<span class="side sp_right"><span class="fill"></span></span>
+			&#160;
+		</div>
+		<div class='sl-EventType'>All Day</div>
+	</div>
+	<div class="AM"></div>
+	<div class="sl-Title">MTS PD Day - No Classes</div>
+	
+	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8926">
+		  			
+	
+		<div class="sl-Title">MTS PD Day - No Classes</div>	 
+		<div class="sl-Date">Oct 21, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="MTS PD Day - No Classes" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=926&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=926&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=MTS PD Day - No Classes&Body=MTS PD Day - No Classes http://www.7oaks.org/Pages/newsitem.aspx?ItemID=926&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8987" data-event-start="November 04, 2016 0:00:00 -500" data-event-end="November 04, 2016 23:59:00 -500" data-event-type="allday">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("11/4/2016 12:00:00 AM");
+			var endDate = new Date("11/4/2016 11:59:00 PM");
+			var type = "all";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8987 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=O.V.+Jewitt+Inservice+-+No+Classes&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">04</div>
+		<div class="sl-dateiconMonth">Nov</div>
+	</div>
+	<div class="sl-EventTimeicon">
+		<div class="spinner">		  
+			<span class="side sp_left"><span class="fill"></span></span>
+			<span class="side sp_right"><span class="fill"></span></span>
+			&#160;
+		</div>
+		<div class='sl-EventType'>All Day</div>
+	</div>
+	<div class="AM"></div>
+	<div class="sl-Title">O.V. Jewitt Inservice - No Classes</div>
+	
+	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8987">
+		  			
+	
+		<div class="sl-Title">O.V. Jewitt Inservice - No Classes</div>	 
+		<div class="sl-Date">Nov 04, 2016 </div>	
+		<div class="sl-Time"><div class='sl-EventType'>All Day</div> 
+		</div>		
+		<div class="sl-Location"> </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="O.V. Jewitt Inservice - No Classes" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=987&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=987&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=O.V. Jewitt Inservice - No Classes&Body=O.V. Jewitt Inservice - No Classes http://www.7oaks.org/Pages/newsitem.aspx?ItemID=987&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
+			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
+		</div>				
+	</div>		
+</a><a class="sl-Item" href="#7886ed8e-6d54-4f66-912a-9bcd2775ebb8956" data-event-start="November 09, 2016 9:30:00 -600" data-event-end="November 09, 2016 12:00:00 -600" data-event-type="single">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var startDate = new Date("11/9/2016 9:30:00 AM");
+			var endDate = new Date("11/9/2016 12:00:00 PM");
+			var type = "time";
+			startDate = startDate.toISOString().replace(/\-|\:|\.000/g, '');
+			endDate = endDate.toISOString().replace(/\-|\:|\.000/g, '');
+			
+			if (type == "all") {
+				startDate = startDate.substring(0, startDate.indexOf('T'));
+				endDate = endDate.substring(0, endDate.indexOf('T'));
+			}
+			$("#7886ed8e-6d54-4f66-912a-9bcd2775ebb8956 .sl-IconGoogle").attr("href", "http://www.google.com/calendar/event?action=TEMPLATE&text=Divisional+GSA+Gathering&dates="+ startDate +"/"+ endDate +"&details=%3cdiv%3e%3c%2fdiv%3e&location=Judy+Silver+Commons&trp=false&sprop=&sprop=name:");
+		});		
+	</script>  
+   
+   <div class="sl-Eventdateicon">
+		<div class="sl-dateiconDate">09</div>
+		<div class="sl-dateiconMonth">Nov</div>
+	</div>
+	<div class="sl-EventTimeicon">
+		<div class="spinner">		  
+			<span class="side sp_left"><span class="fill"></span></span>
+			<span class="side sp_right"><span class="fill"></span></span>
+			&#160;
+		</div>
+		<div class="sl-Hour">09</div>:<div class="sl-Minutes">30</div><div class="sl-AMPM">AM</div>
+	</div>
+	<div class="AM"></div>
+	<div class="sl-Title">Divisional GSA Gathering</div>
+	
+	<div class="mfp-hide modalPopup" id="7886ed8e-6d54-4f66-912a-9bcd2775ebb8956">
+		  			
+	
+		<div class="sl-Title">Divisional GSA Gathering</div>	 
+		<div class="sl-Date">Nov 09, 2016 </div>	
+		<div class="sl-Time"><div class="sl-EventType">09:30 AM -  12:00 PM</div>
+		</div>		
+		<div class="sl-Location">Judy Silver Commons </div>				
+		<div class="sl-Body"><div></div></div>
+		<div class="sl-Attachment"></div>
+		
+		<div class="sl-Share" data-title="Divisional GSA Gathering" data-url="//www.7oaks.org/Pages/eventitem.aspx?ItemID=956&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item">
+			<a href="#" class="sl-Icon facebook" title="facebook"></a>
+			<a href="#" class="sl-Icon twitter" title="twitter"></a>
+			<a class="sl-Icon sl-IconGoogle" title="Add to Google Calendar" name="Subscribe to Google Calendar" target="_blank" rel="nofollow"></a>   
+			<a class="sl-Icon sl-IconCalendar" title="Add to iCal" href="//www.7oaks.org/_vti_bin/owssvr.dll?CS=109&Cmd=Display&List=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&CacheControl=1&ID=956&Using=event.ics"></a> 
+			<a class="sl-Icon email" title="email" href="mailto:?Subject=Divisional GSA Gathering&Body=Divisional GSA Gathering http://www.7oaks.org/Pages/newsitem.aspx?ItemID=956&ListID=7886ed8e-6d54-4f66-912a-9bcd2775ebb8&TemplateID=Announcement_Item"></a>
 			<a class="sl-Icon print" title="print" onclick="SL.Util.printContents('.mfp-content')" ></a>			       
 		</div>				
 	</div>		
@@ -1390,12 +1393,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</section>
     </div>
 
+	<section class="row">
+		<div class="bottomLeft col-xs-12 col-sm-6 col-md-6"><menu class="ms-hide">
+	<ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/15/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
+
+	</ie:menuitem>
+</menu></div>
+		<div class="bottomRight col-xs-12 col-sm-6 col-md-6"></div>
+	</section>
+
     <div class="bgDark">
         <section class="row">
 			<div class="col-xs-12 col-md-5 col-lg-4"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ11" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	<div id="MSOZoneCell_WebPartWPQ12" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="79576a83-b3ad-4acb-a859-e53c9f605db2" HasPers="false" id="WebPartWPQ11" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{e0f78b6e-1a68-4e66-aa0e-0ed7922b0659}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_e0f78b6e-1a68-4e66-aa0e-0ed7922b0659'] = ctx;</script><div class="sl-SchoolSearch sl-CLVSummary"> 
+			<div WebPartID="79576a83-b3ad-4acb-a859-e53c9f605db2" HasPers="false" id="WebPartWPQ12" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{e0f78b6e-1a68-4e66-aa0e-0ed7922b0659}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_e0f78b6e-1a68-4e66-aa0e-0ed7922b0659'] = ctx;</script><div class="sl-SchoolSearch sl-CLVSummary"> 
       <div class="sl-SchoolSearchWrapper"> <div class="sl-WPHeader">
          <h2><label for="sl-SchoolSearchfilter">Find A School</label></h2><a class="sl-More top" href="//www.7oaks.org/schools/Pages/default.aspx">View schools</a></div>
          <div class="SearchField">
@@ -1406,25 +1418,26 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             <li><a href="http://www.7oaks.org/school/wayfinders/Pages/default.aspx">Wayfinders</a></li>
             <li><a href="/school/victory">Victory School</a></li>
             <li><a href="/school/themet">Seven Oaks MET School</a></li>
+            <li><a href="/school/riverbend">Riverbend Community School</a></li>
             <li><a href="/school/rfmorrison">R.F. Morrison School</a></li>
             <li><a href="/school/ovjewitt">O.V. Jewitt Community School</a></li>
             <li><a href="/school/margaretpark">Margaret Park School</a></li>
+            <li><a href="http://www.7oaks.org/school/maplesmet/Pages/default.aspx">Maples Met School</a></li>
             <li><a href="/school/maples">Maples Collegiate</a></li>
             <li><a href="/school/hcavery">H.C. Avery Middle School</a></li>
             <li><a href="/school/governorsemple">Governor Semple School</a></li>
-            <li><a href="/school/gardencity">Garden City Collegiate</a></li>
             <li><a href="/school/forestpark">Forest Park School</a></li>
             <li><a href="/school/elwick">Elwick Community School</a></li>
             <li><a href="/school/edmundpartridge">Edmund Partridge Community School</a></li>
             <li><a href="/school/sevenoaksmiddle">École Seven Oaks Middle School</a></li>
             <li><a href="/school/RiviereRouge/Pages/default.aspx">École Rivière-Rouge</a></li>
-            <li><a href="/school/riverbend">École Riverbend Community School</a></li>
             <li><a href="/school/leilanorth">École Leila North Community School</a></li>
             <li><a href="/school/jamesnisbet">École James Nisbet Community School</a></li>
             <li><a href="/school/constablefinney">École Constable Edward Finney School</a></li>
             <li><a href="/school/belmont">École Belmont</a></li>
             <li><a href="/school/continuingeducation">Continuing Education</a></li>
             <li><a href="/school/collicutt">Collicutt School</a></li>
+            <li><a href="/school/gardencity">Collège Garden City Collegiate</a></li>
             <li><a href="/school/ambertrails">Amber Trails School</a></li>
             <li><a href="/school/adulteducation">Adult Learning Centre</a></li>
             <li><a href="/school/aewright">A.E. Wright Community School</a></li>
@@ -1439,11 +1452,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</div>
 </div></div>
 			<div class="col-xs-12 col-md-7 col-lg-8"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	<div id="MSOZoneCell_WebPartWPQ11" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="832bd013-d095-4a96-a850-63cb7b6d6db0" HasPers="false" id="WebPartctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0" width="100%" class="ms-WPBody noindex " allowDelete="false" allowExport="false" style="" ><div id="ctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0">
-				<script type="text/javascript" src="//twemoji.maxcdn.com/twemoji.min.js"></script>
-<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/moment.min.js?sha1=A895868D27F57E0C1EF4DDF4E50C1055FF66EB15"></script>
+			<div WebPartID="832bd013-d095-4a96-a850-63cb7b6d6db0" HasPers="false" id="WebPartWPQ11" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0">
+				<script type="text/javascript" src="//twemoji.maxcdn.com/2/twemoji.min.js?2.1.2"></script>
+<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/moment.min.js?sha1=05487A16A5D727B72B0595194EA1BD4A993C614B"></script>
 
 <script type="text/javascript">      
     $(document).ready(function () {
@@ -1468,8 +1481,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             $(this).html(nowTime);
         });
         
-        //twitter flexslider for web
-        if ($(".sl-Web").length) {
+        //twitter flexslider 
+         
             $wp.find(".sl-Twitter").flexslider({
                 animation: "fade",
                 animationLoop: false,
@@ -1482,6 +1495,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                 controlNav: false,
                 selector: ".Twitter_ctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0 > li",
                 controlsContainer: "#ctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0 .sl-TwitterSliderControl",
+                itemWidth: 0,
+                itemMargin: 0,
                 minItems: 0,
                 maxItems: 0,
             }).find(".popup").click(function(event) {
@@ -1500,34 +1515,37 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
                 return false;
             });
-        }
-
+         
     });
 </script>
 
 <div id="ctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0_ctl00_containerDiv" class="sl-Twitter">
 
     <div class="sl-WPHeader"><h2>Twitter</h2></div>
-    <ul class="sl-TwitterItemList Twitter_ctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0">
+    
+    
+        <div class="sl-TwitterSliderControl sl-SliderControl"></div>
+    <div id="ctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0_ctl00_bodyContainer" class="sl-WPBody">
+        <ul class="sl-TwitterItemList Twitter_ctl00_SPWebPartManager1_g_832bd013_d095_4a96_a850_63cb7b6d6db0">
     
             <li>
                 <div class="sl-Title">         
                     <a href="https://twitter.com/7OaksSchoolDiv" class="sl-ProfileImg"><img alt="7OaksSchoolDiv" src="https://pbs.twimg.com/profile_images/1276106197/Seven_Oaks_Logo_normal.png"/></a>       
                 	<span class="sl-Name"><a href="https://twitter.com/7OaksSchoolDiv">7 Oaks School Div</a></span> 
-					<span class="sl-Date">5/5/2016 10:51:19 AM</span>
+					<span class="sl-Date">9/10/2016 9:25:15 AM</span>
                 </div>                
                 <div class="sl-TweetContainer">                    
                     <div class="sl-Details">
                         <div class="sl-Tweet">
-                            Congrats to Tom Clasper <a href="https://twitter.com/wkc101">@wkc101</a> who won Sport MB's Male Coach of the Year &amp; Peter Williamson Memorial Award! <a href="https://twitter.com/search?q=%237oaks">#7oaks</a> <a href="http://www.winnipegfreepress.com/our-communities/times/Coach-Clasper-wins-big-377815571.html">winnipegfreepress.com/our-communitie…</a>
+                            RT <a href="https://twitter.com/7ohsa">@7ohsa</a>: We were back in ice today for another season. Our 15th as a <a href="https://twitter.com/HockeyCanada">@HockeyCanada</a> Skills Academy <a href="https://twitter.com/search?q=%23hcsa">#hcsa</a> <a href="https://twitter.com/7OaksSchoolDiv">@7OaksSchoolDiv</a> <a class='media-photo'href="https://twitter.com/7ohsa/status/774351386020425728/photo/1" data-photo="https://pbs.twimg.com/media/Cr8MeJAUsAAOh4j.jpg">pic.twitter.com/IXesR11Rdp</a>
                             
                         </div>
                     </div>
                     
                     <div class="sl-TwitterIntents">
-                        <a class="TwitterReply popup" href="https://twitter.com/intent/tweet?in_reply_to=728250730327343104"><b>Reply</b></a>
-                        <a class="TwitterRetweet popup" target="_blank" href="https://twitter.com/intent/retweet?tweet_id=728250730327343104"><b>Retweet</b></a>
-                        <a class="TwitterFavourite popup" target="_blank" href="https://twitter.com/intent/favorite?tweet_id=728250730327343104"><b>Favourite</b></a>
+                        <a class="TwitterReply popup" href="https://twitter.com/intent/tweet?in_reply_to=774614720527478784"><b>Reply</b></a>
+                        <a class="TwitterRetweet popup" target="_blank" href="https://twitter.com/intent/retweet?tweet_id=774614720527478784"><b>Retweet</b></a>
+                        <a class="TwitterFavourite popup" target="_blank" href="https://twitter.com/intent/favorite?tweet_id=774614720527478784"><b>Favourite</b></a>
                         <a class="TwitterFollow popup" target="_blank" href="https://twitter.com/intent/user?screen_name=7OaksSchoolDiv"><b>Follow</b></a>                        
                     </div>
                 </div>
@@ -1537,31 +1555,101 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                 <div class="sl-Title">         
                     <a href="https://twitter.com/7OaksSchoolDiv" class="sl-ProfileImg"><img alt="7OaksSchoolDiv" src="https://pbs.twimg.com/profile_images/1276106197/Seven_Oaks_Logo_normal.png"/></a>       
                 	<span class="sl-Name"><a href="https://twitter.com/7OaksSchoolDiv">7 Oaks School Div</a></span> 
-					<span class="sl-Date">5/5/2016 10:45:45 AM</span>
+					<span class="sl-Date">9/9/2016 3:18:52 PM</span>
                 </div>                
                 <div class="sl-TweetContainer">                    
                     <div class="sl-Details">
                         <div class="sl-Tweet">
-                            Congrat to <a href="https://twitter.com/Maples1330">@Maples1330</a> Rico Maceda &amp; Charius Raymundo who won gold &amp; bronze at the Skills MB Competition! <a href="https://twitter.com/search?q=%237oaks">#7oaks</a> <a href="http://www.winnipegfreepress.com/our-communities/times/Maples-students-have-serious-shops-skills-377834141.html">winnipegfreepress.com/our-communitie…</a>
+                            Retweeted KYAC (<a href="https://twitter.com/kyac7oaks">@kyac7oaks</a>):
+
+Just a reminder KYAC's drop in program starts up again on Monday Sept. 12th. Come... <a href="http://fb.me/1nPo0RqoQ">fb.me/1nPo0RqoQ</a>
                             
                         </div>
                     </div>
                     
                     <div class="sl-TwitterIntents">
-                        <a class="TwitterReply popup" href="https://twitter.com/intent/tweet?in_reply_to=728249329698246656"><b>Reply</b></a>
-                        <a class="TwitterRetweet popup" target="_blank" href="https://twitter.com/intent/retweet?tweet_id=728249329698246656"><b>Retweet</b></a>
-                        <a class="TwitterFavourite popup" target="_blank" href="https://twitter.com/intent/favorite?tweet_id=728249329698246656"><b>Favourite</b></a>
+                        <a class="TwitterReply popup" href="https://twitter.com/intent/tweet?in_reply_to=774341321683308544"><b>Reply</b></a>
+                        <a class="TwitterRetweet popup" target="_blank" href="https://twitter.com/intent/retweet?tweet_id=774341321683308544"><b>Retweet</b></a>
+                        <a class="TwitterFavourite popup" target="_blank" href="https://twitter.com/intent/favorite?tweet_id=774341321683308544"><b>Favourite</b></a>
+                        <a class="TwitterFollow popup" target="_blank" href="https://twitter.com/intent/user?screen_name=7OaksSchoolDiv"><b>Follow</b></a>                        
+                    </div>
+                </div>
+            </li>
+        
+            <li>
+                <div class="sl-Title">         
+                    <a href="https://twitter.com/7OaksSchoolDiv" class="sl-ProfileImg"><img alt="7OaksSchoolDiv" src="https://pbs.twimg.com/profile_images/1276106197/Seven_Oaks_Logo_normal.png"/></a>       
+                	<span class="sl-Name"><a href="https://twitter.com/7OaksSchoolDiv">7 Oaks School Div</a></span> 
+					<span class="sl-Date">9/9/2016 3:18:51 PM</span>
+                </div>                
+                <div class="sl-TweetContainer">                    
+                    <div class="sl-Details">
+                        <div class="sl-Tweet">
+                            RT <a href="https://twitter.com/kyac7oaks">@kyac7oaks</a>: Just a reminder KYAC's drop in program starts up again on Monday Sept. 12th. Come by Edmund Partridge and have some fun! <a href="https://twitter.com/7OaksSchoolDiv">@7OaksSchoolDiv</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="sl-TwitterIntents">
+                        <a class="TwitterReply popup" href="https://twitter.com/intent/tweet?in_reply_to=774341318281605120"><b>Reply</b></a>
+                        <a class="TwitterRetweet popup" target="_blank" href="https://twitter.com/intent/retweet?tweet_id=774341318281605120"><b>Retweet</b></a>
+                        <a class="TwitterFavourite popup" target="_blank" href="https://twitter.com/intent/favorite?tweet_id=774341318281605120"><b>Favourite</b></a>
+                        <a class="TwitterFollow popup" target="_blank" href="https://twitter.com/intent/user?screen_name=7OaksSchoolDiv"><b>Follow</b></a>                        
+                    </div>
+                </div>
+            </li>
+        
+            <li>
+                <div class="sl-Title">         
+                    <a href="https://twitter.com/7OaksSchoolDiv" class="sl-ProfileImg"><img alt="7OaksSchoolDiv" src="https://pbs.twimg.com/profile_images/1276106197/Seven_Oaks_Logo_normal.png"/></a>       
+                	<span class="sl-Name"><a href="https://twitter.com/7OaksSchoolDiv">7 Oaks School Div</a></span> 
+					<span class="sl-Date">9/8/2016 2:31:31 PM</span>
+                </div>                
+                <div class="sl-TweetContainer">                    
+                    <div class="sl-Details">
+                        <div class="sl-Tweet">
+                            RT <a href="https://twitter.com/7oakOLeary">@7oakOLeary</a>: Ecole Rivière Rouge is open and full! Thanks to PSFB, Prairie Architects and Parkwest Builders! <a class='media-photo'href="https://twitter.com/7oakOLeary/status/773888401137278978/photo/1" data-photo="https://pbs.twimg.com/media/Cr1nZhYUsAAswbU.jpg">pic.twitter.com/WMpJHSSR1q</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="sl-TwitterIntents">
+                        <a class="TwitterReply popup" href="https://twitter.com/intent/tweet?in_reply_to=773967019150422016"><b>Reply</b></a>
+                        <a class="TwitterRetweet popup" target="_blank" href="https://twitter.com/intent/retweet?tweet_id=773967019150422016"><b>Retweet</b></a>
+                        <a class="TwitterFavourite popup" target="_blank" href="https://twitter.com/intent/favorite?tweet_id=773967019150422016"><b>Favourite</b></a>
+                        <a class="TwitterFollow popup" target="_blank" href="https://twitter.com/intent/user?screen_name=7OaksSchoolDiv"><b>Follow</b></a>                        
+                    </div>
+                </div>
+            </li>
+        
+            <li>
+                <div class="sl-Title">         
+                    <a href="https://twitter.com/7OaksSchoolDiv" class="sl-ProfileImg"><img alt="7OaksSchoolDiv" src="https://pbs.twimg.com/profile_images/1276106197/Seven_Oaks_Logo_normal.png"/></a>       
+                	<span class="sl-Name"><a href="https://twitter.com/7OaksSchoolDiv">7 Oaks School Div</a></span> 
+					<span class="sl-Date">9/8/2016 2:31:00 PM</span>
+                </div>                
+                <div class="sl-TweetContainer">                    
+                    <div class="sl-Details">
+                        <div class="sl-Tweet">
+                            RT <a href="https://twitter.com/WayfindersMB">@WayfindersMB</a>: First full day of school, it's sunny and we're ready for you students! <a href="https://twitter.com/search?q=%23somanysnacks">#somanysnacks</a> <a class='media-photo'href="https://twitter.com/WayfindersMB/status/773924079170686976/photo/1" data-photo="https://pbs.twimg.com/media/Cr2H13PXgAE1-rV.jpg">pic.twitter.com/u6wwb6H8cE</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="sl-TwitterIntents">
+                        <a class="TwitterReply popup" href="https://twitter.com/intent/tweet?in_reply_to=773966890590871553"><b>Reply</b></a>
+                        <a class="TwitterRetweet popup" target="_blank" href="https://twitter.com/intent/retweet?tweet_id=773966890590871553"><b>Retweet</b></a>
+                        <a class="TwitterFavourite popup" target="_blank" href="https://twitter.com/intent/favorite?tweet_id=773966890590871553"><b>Favourite</b></a>
                         <a class="TwitterFollow popup" target="_blank" href="https://twitter.com/intent/user?screen_name=7OaksSchoolDiv"><b>Follow</b></a>                        
                     </div>
                 </div>
             </li>
         
     </ul>
-    
-    <div class="sl-TwitterSliderControl"> 
     </div>
 
-    <div style="text-align: center;"> 
+    <div class="sl-Error"> 
+        
         
     </div>
 
@@ -1575,11 +1663,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
     </div>
 
 	<section class="row">
-		<div class="bottomLeft col-xs-12 col-sm-6 col-md-6"><menu class="ms-hide">
-	<ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/15/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
-
-	</ie:menuitem>
-</menu></div>
+		<div class="bottomLeft col-xs-12 col-sm-6 col-md-6"></div>
 		<div class="bottomRight col-xs-12 col-sm-6 col-md-6"></div>
 	</section>
 
@@ -1598,8 +1682,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div id="MSOZoneCell_WebPartWPQ15" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 			<div class="ms-webpart-chrome-title" id="WebPartWPQ15_ChromeTitle">
-				<span title="7Oaks 2016-17 Draft Budget - Allows authors to enter rich text content." id="WebPartTitleWPQ15" class="js-webpart-titleCell"><h2 style="text-align:justify;" class="ms-webpart-titleText"><nobr><span>7Oaks 2016-17 Draft Budget</span><span id="WebPartCaptionWPQ15"></span></nobr></h2></span>
-			</div><div WebPartID="9f3e256a-609b-4533-b5a2-5ef52f135b85" HasPers="false" id="WebPartWPQ15" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace " allowDelete="false" style="" ><div class="ms-rtestate-field"><iframe width="400" height="500" id="iframe_container" src="https://prezi.com/embed/kj-kmfvuu6f1/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0VDI1Z2VPNmIwdnJGZVJDSW5SdUgyZVR3PT0&amp;landing_sign=p5CGweHHmgWdOd6QkXfvnaw3rI9_yi7Jgja_FnoPqww" frameborder="0"></iframe></div><div class="ms-clear"></div></div>
+				<span title="Advancing Community Schools - Allows authors to enter rich text content." id="WebPartTitleWPQ15" class="js-webpart-titleCell"><h2 style="text-align:justify;" class="ms-webpart-titleText"><nobr><span>Advancing Community Schools</span><span id="WebPartCaptionWPQ15"></span></nobr></h2></span>
+			</div><div WebPartID="9f3e256a-609b-4533-b5a2-5ef52f135b85" HasPers="false" id="WebPartWPQ15" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace " allowDelete="false" style="" ><div class="ms-rtestate-field"><iframe width="400" height="315" src="https://www.youtube.com/embed/_fxJKJ4cbww?wmode=transparent&amp;wmode=transparent&amp;wmode=transparent&amp;wmode=transparent" frameborder="0"></iframe></div><div class="ms-clear"></div></div>
 		</div><div class="ms-PartSpacingVertical"></div>
 	</div><div id="MSOZoneCell_WebPartWPQ13" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-hide ">
@@ -1697,12 +1781,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</a>
 </div><div class="hasIcon sl-FeaturedLinks ">
 		
-	<a href="/Documents/2015-2016%20Divisional%20Calendar.pdf" target="">
-		<img class="sl-CLVFieldImage content" src="/Lists/ImageFeaturedLinks/Attachments/3/Divisional Calendar 2015-2016.jpg" alt=""/>
-		<div class="sl-Title">Divisional Calendar</div>
-	</a>
-</div><div class="hasIcon sl-FeaturedLinks ">
-		
 	<a href="http://www.7oaks.org/Documents/2016-2017%20Divisional%20Calendar.pdf" target="">
 		<img class="sl-CLVFieldImage content" src="/Lists/ImageFeaturedLinks/Attachments/7/Divisional Calendar 2016-2017.jpg" alt=""/>
 		<div class="sl-Title">Divisional Calendar</div>
@@ -1719,6 +1797,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		<img class="sl-CLVFieldImage content" src="/Lists/ImageFeaturedLinks/Attachments/6/MYAC.jpg" alt=""/>
 		<div class="sl-Title">MYAC</div>
 	</a>
+</div><div class="hasIcon sl-FeaturedLinks ">
+		
+	<a href="http://www.7oaks.org/school/continuingeducation/Pages/default.aspx" target="">
+		<img class="sl-CLVFieldImage content" src="/Lists/ImageFeaturedLinks/Attachments/8/Continuing Education.jpg" alt=""/>
+		<div class="sl-Title">Continuing Education</div>
+	</a>
 </div></div>
            <div class="sl-WPFooter"><a class="sl-More bottom" href="/Lists/ImageFeaturedLinks/AllItems.aspx">View links</a>
 </div>
@@ -1727,65 +1811,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</div>
 </div></div>
 		<div class="bottomRight col-xs-12 col-sm-6 col-md-6"><div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ12" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div WebPartID="89cb0cfc-7e21-4993-88c5-96ac062771da" HasPers="false" id="WebPartWPQ12" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{a7bce80d-e6d9-450c-9253-d8e055858754}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_a7bce80d-e6d9-450c-9253-d8e055858754'] = ctx;</script><div class="sl-FeaturedLinksSummary sl-CLVSummary">
-    <div class="sl-WPHeader">    
-		 <h2>K-3 Class Sizes</h2>		 <a class="sl-Icon sl-IconRss" href="//www.7oaks.org/_layouts/listfeed.aspx?List=a7bce80d-e6d9-450c-9253-d8e055858754"></a>
-		 <a class="sl-Icon sl-IconAlert" href="//www.7oaks.org/_layouts/SubNew.aspx?List=a7bce80d-e6d9-450c-9253-d8e055858754&Source=http%3a%2f%2fwww.7oaks.org%2fPages%2fdefault.aspx"></a>
-	</div>	  
-	 
-			  <div class="sl-FeaturedLinksWrapper"><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="/Documents/Class%20Size%20Report%20with%20language%20-%20Sept%2030%202012.pdf" target="_blank">
-		September 2012
-	</a>
-</div><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="/Documents/Class%20Size%20Report%20-%20February%2028%202013.pdf" target="_blank">
-		February 2013
-	</a>
-</div><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="/Documents/Class%20Size%20with%20language%20Sept%202013.pdf" target="_blank">
-		September 2013
-	</a>
-</div><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="/Documents/Class%20Size%20with%20language%20Feb%202014.pdf" target="_blank">
-		February 2014
-	</a>
-</div><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="/Documents/Class%20Size%20with%20language%20Sept%202014.pdf" target="_blank">
-		September 2014
-	</a>
-</div><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="/Documents/Class%20Size%20with%20language%20Feb%202015.pdf" target="_blank">
-		February 2015
-	</a>
-</div><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="/Documents/Class%20Size%20with%20language%20Sept%202015.pdf" target="_blank">
-		September 2015
-	</a>
-</div><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="http://www.7oaks.org/Documents/Class%20Size%20with%20language%20Feb%202016.pdf" target="_blank">
-		February 2016
-	</a>
-</div><div class="display sl-FeaturedLinks sl-Highlight">
-		
-	<a href="/Documents/Class%20Size%20Percentage%20Report.pdf" target="_blank">
-		Class Percentages
-	</a>
-</div></div>
-           <div class="sl-WPFooter"><a class="sl-More bottom" href="/Lists/K3 Class Sizes/AllItems.aspx">View links</a>
-</div>
-          </div><div class="ms-clear"></div></div>
-		</div><div class="ms-PartSpacingVertical"></div>
-	</div><div id="MSOZoneCell_WebPartWPQ7" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+	<div id="MSOZoneCell_WebPartWPQ7" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 			<div WebPartID="aa84a943-ea89-4ecc-b3c7-ec3dd11fc5cc" HasPers="false" id="WebPartWPQ7" width="100%" class="ms-WPBody noindex " allowMinimize="false" allowRemove="false" allowDelete="false" style="" ><script language="javascript">var ctx = new ContextInfo();ctx.listName = "{77808a41-5c86-4a92-972a-88265890445f}";ctx.NavigateForFormsPages = false;g_ctxDict['clv-ctx_77808a41-5c86-4a92-972a-88265890445f'] = ctx;</script><div class="sl-FeaturedLinksSummary sl-CLVSummary">
     <div class="sl-WPHeader">    
@@ -1794,6 +1820,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</div>	  
 	 
 			  <div class="sl-FeaturedLinksWrapper"><div class="display sl-FeaturedLinks sl-Highlight">
+		
+	<a href="http://www.7oaks.org/Pages/K-3-Class-Sizes.aspx" target="">
+		K-3 Class Sizes
+	</a>
+</div><div class="display sl-FeaturedLinks sl-Highlight">
 		
 	<a href="http://www.safeschoolsmanitoba.ca/" target="_blank">
 		Safe Schools Manitoba
@@ -1926,29 +1957,184 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 								                                            
                                         </div>
 							            
-                                        <div id="sl-Weather"></div>
-                                        <script type="text/javascript" src="/_layouts/15/Scholantis/Scripts/Wave 4/jquery.simpleWeather.min.js"></script>
-                                        <script type="text/javascript">
-                                            $(document).ready(function() {
-                                                $.simpleWeather({
-                                                    location: 'R2V 4E7',
-                                                    woeid: '',
-                                                    unit: 'c',
-                                                    success: function (weather) {
-                                                        html = '<h2>Current Weather</h2>';
-                                                        html += '<div class="sl-WeatherLogo"><i class="icon-' + weather.code + '"></i></div>';
-                                                        html += '<div class="sl-WeatherInfo"><span class="sl-WeatherTemp">' + weather.temp + ' &deg;' + weather.units.temp + '</span>';
-                                                        html += '<span class="sl-WeatherLocation">'+weather.city+', '+weather.region+'</span>';
-                                                        html += '<div class="sl-WatherStatus">'+weather.currently+'</div></div>';
-  
-                                                        $("#sl-Weather").html(html);
-                                                    },
-                                                    error: function(error) {
-                                                        $("#sl-Weather").html('<p>'+error+'</p>');
-                                                    }
-                                                });
-                                            });
-                                        </script>                                        
+                                        <div class="sl-WeatherContainer">
+                                            <h2>Current Weather</h2>
+                                            <div>
+	<script type="text/javascript" src="/_LAYOUTS/15/scholantis/scripts/libraries/jquery/jquery.simpleWeather.min.js?sha1=227BEAF91890B0320DF7D1BC08056E9B31366504"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var options = {
+            includeForecast: false,
+            lightFg: true,
+            location: 'R2V 4E7',
+            locationOverride: "",
+            cityName: 'Winnipeg'
+        };
+
+        var codeIcons = {
+            '0': ':',
+            '1': 'p',
+            '2': 'S',
+            '3': 'Q',
+            '4': 'S',
+            '5': 'W',
+            '6': 'W',
+            '7': 'W',
+            '8': 'W',
+            '9': 'I',
+            '10': 'W',
+            '11': 'I',
+            '12': 'I',
+            '13': 'I',
+            '14': 'I',
+            '15': 'W',
+            '16': 'I',
+            '17': 'W',
+            '18': 'U',
+            '19': 'Z',
+            '20': 'Z',
+            '21': 'Z',
+            '22': 'Z',
+            '23': 'Z',
+            '24': 'E',
+            '25': 'E',
+            '26': '3',
+            '27': 'a',
+            '28': 'A',
+            '29': 'a',
+            '30': 'A',
+            '31': '6',
+            '32': '1',
+            '33': '6',
+            '34': '1',
+            '35': 'W',
+            '36': '1',
+            '37': 'S',
+            '38': 'S',
+            '39': 'S',
+            '40': 'M',
+            '41': 'W',
+            '42': 'I',
+            '43': 'W',
+            '44': 'a',
+            '45': 'S',
+            '46': 'U',
+            '47': 'S'
+        };
+
+        var element = $('#sl-Weather');
+
+        if (options.lightFg) element.addClass('sl-LightFg');
+
+        $.simpleWeather({
+            location: options.locationOverride || options.location,
+            unit: 'c',
+            success: function (weather) {
+
+                var formatTemp = function (temp) {
+                    return $('<div/>').html(temp + '&deg;' + weather.units.temp).text();
+                };
+
+                var weatherCode = codeIcons[(weather.code || '').toString()];
+                if (!weatherCode) {
+                    element.find('.sl-WeatherLogo').css('font-family', 'WebSymbols').text('\uf128');
+                } else {
+                    element.find('.sl-WeatherLogo').text(weatherCode);
+                }
+                element.find('.sl-WeatherLogo').attr('title', weather.currently);
+
+                element.find('.sl-Temp').text(formatTemp(weather.temp));
+                element.find('.sl-Status').text(weather.currently);
+                
+                element.find('.sl-HighTemp').text('High: ' + formatTemp(weather.high));
+                element.find('.sl-LowTemp').text('Low: ' + formatTemp(weather.low));
+
+                element.find('.sl-WeatherLocation').text(options.locationOverride || [(options.cityName || weather.city), weather.region].join(', '));
+
+                var forecast = element.find('.sl-Forecast');
+
+                if (!options.includeForecast) {
+                    forecast.hide();
+                } else {
+                    forecast.each(function (index) {
+
+                        // index + 1 because weather.forecast[0] is today
+                        var forecast = weather.forecast[index + 1];
+
+                        $(this).find('.sl-Date .sl-Day').text(forecast.day);
+                        $(this).find('.sl-Date .sl-Number').text(new Date(forecast.date).getDate());
+
+                        $(this).find('.sl-Temps').text(formatTemp(forecast.high) + ' | ' + formatTemp(forecast.low));
+                    });
+                }
+            },
+            error: function (error) {
+                element.addClass('sl-WeatherError');
+                element.find('.sl-WeatherLogo').css('font-family', 'WebSymbols').text('\uf128');
+                element.find('.sl-Status').text(error.error || 'Could not connect to weather API.');
+                element.find('.sl-Forecast, .sl-Chiclets').hide();
+            }
+        });
+    });
+</script>
+<div id="sl-Weather">
+    <div class="sl-WeatherLogo"></div>
+    <div class="sl-WeatherInfo">
+        <div class="sl-Current">
+            <div class="sl-Temp"></div>
+            <div class="sl-Status"></div>
+        </div>
+    </div>
+    <div class="sl-Chiclets">
+        <div class="sl-Chiclet sl-HighTemp"></div>
+        <div class="sl-Chiclet sl-LowTemp"></div>
+        <div class="sl-Clearfix"></div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="sl-WeatherLocation"></div>
+    <div style="clear: both;"></div>
+    <div class="sl-Forecasts">
+        
+            <div class="sl-Forecast">
+                <div class="sl-Date">
+                    <div class="sl-Day"></div>
+                    <div class="sl-Number"></div>
+                </div>
+                <div class="sl-WeatherLogo"></div>
+                <div class="sl-TempsWrapper">
+                    <div class="sl-Temps"></div>
+                </div>
+            </div>
+        
+            <div class="sl-Forecast">
+                <div class="sl-Date">
+                    <div class="sl-Day"></div>
+                    <div class="sl-Number"></div>
+                </div>
+                <div class="sl-WeatherLogo"></div>
+                <div class="sl-TempsWrapper">
+                    <div class="sl-Temps"></div>
+                </div>
+            </div>
+        
+            <div class="sl-Forecast">
+                <div class="sl-Date">
+                    <div class="sl-Day"></div>
+                    <div class="sl-Number"></div>
+                </div>
+                <div class="sl-WeatherLogo"></div>
+                <div class="sl-TempsWrapper">
+                    <div class="sl-Temps"></div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+</div>
+                                        </div>
+                                                                  
                                     </div>                                   
                                                                                                                  
                             </section>
@@ -1967,7 +2153,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                         <a href="https://portal.7oaks.org/">Portal</a><a href="https://webmail.7oaks.org/">Webmail</a>
                                         <span class = "sl-ContactLinks "><a id="ctl00_HyperLink2" href="/Contact/Pages/default.aspx">Contact Us</a></span>
 							            
-                                                <a class="sl-SignIn" href="http://www.7oaks.org/_LAYOUTS/15/Authenticate.aspx?Source=http%3A%2F%2Fwww%2E7oaks%2Eorg%2FPages%2Fdefault%2Easpx%3Flogin%3D%2D1301855022">Sign In</a>
+                                                <a class="sl-SignIn" href="https://www.7oaks.org/_LAYOUTS/15/Authenticate.aspx?Source=https%3A%2F%2Fwww%2E7oaks%2Eorg%2FPages%2Fdefault%2Easpx%3Flogin%3D%2D364257631">Sign In</a>
                                                                             
                                     </div>         
                                    
@@ -1991,7 +2177,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
             (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
         {
-            formDigestElement.value = '0x02A0D039598FBB8FB82EEA9281941BDD1FC1F338DA06028ECD7785F454351A205BD680A8BD498663F6E15EBC245990AD8F82F36A609FFEB6E3CE6D0AAC0FBFE8,09 May 2016 13:34:25 -0000';
+            formDigestElement.value = '0x0DF48420931E414992B679ADF9C2D191C08DC3F07495B340F03088EE695179AD31C6E6191ED9A2EC49166EB2C594DCFB7A4BD260E072A8D274BFAF8365291ED9,11 Sep 2016 16:00:47 -0000';
             g_updateFormDigestPageLoaded = new Date();
         }
         //]]>
@@ -2060,8 +2246,8 @@ var varPartWPQ7 = WPSC.WebPartPage.Parts.Register('WPQ7','aa84a943-ea89-4ecc-b3c
 var varPartWPQ8 = WPSC.WebPartPage.Parts.Register('WPQ8','784e2a29-d0d9-459c-b2c8-8b6f572a65f2',document.getElementById('WebPartWPQ8'));
 var varPartWPQ9 = WPSC.WebPartPage.Parts.Register('WPQ9','74e91e8a-0380-4369-903c-e93870faafd3',document.getElementById('WebPartWPQ9'));
 var varPartWPQ10 = WPSC.WebPartPage.Parts.Register('WPQ10','0422a15b-b6ef-4910-95a9-88a30f3a5a10',document.getElementById('WebPartWPQ10'));
-var varPartWPQ11 = WPSC.WebPartPage.Parts.Register('WPQ11','79576a83-b3ad-4acb-a859-e53c9f605db2',document.getElementById('WebPartWPQ11'));
-var varPartWPQ12 = WPSC.WebPartPage.Parts.Register('WPQ12','89cb0cfc-7e21-4993-88c5-96ac062771da',document.getElementById('WebPartWPQ12'));
+var varPartWPQ11 = WPSC.WebPartPage.Parts.Register('WPQ11','832bd013-d095-4a96-a850-63cb7b6d6db0',document.getElementById('WebPartWPQ11'));
+var varPartWPQ12 = WPSC.WebPartPage.Parts.Register('WPQ12','79576a83-b3ad-4acb-a859-e53c9f605db2',document.getElementById('WebPartWPQ12'));
 var varPartWPQ13 = WPSC.WebPartPage.Parts.Register('WPQ13','8f4ef230-c029-4044-ad79-0a1be79e9c69',document.getElementById('WebPartWPQ13'));
 var varPartWPQ14 = WPSC.WebPartPage.Parts.Register('WPQ14','1ded3dfa-a817-456b-8c1d-7d9d0ed8a29f',document.getElementById('WebPartWPQ14'));
 var varPartWPQ2 = WPSC.WebPartPage.Parts.Register('WPQ2','00000000-0000-0000-0000-000000000000',document.getElementById('WebPartWPQ2'));
