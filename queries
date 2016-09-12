@@ -2,14 +2,21 @@
 
 import argparse
 import datetime
+import json
 import os
 import rdflib
 
 today = datetime.date.today().isoformat()
 source = os.path.join("datadumps", "dialled_%s" % (today), "dialled.ttl")
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument("--libraries", help="JSON list of libraries", default="libraries_all.json")
 parser.add_argument("--source", help="Source file containing library LOD", default=source)
 args = parser.parse_args()
+
+# count the number of libraries we know about
+with open(args.libraries, 'r') as f:
+    j = json.loads(f.read())
+    print("COUNT: Total number of libraries crawled: %d" % (len(j)))
 
 g = rdflib.ConjunctiveGraph()
 g.parse(args.source, format='turtle')
@@ -18,6 +25,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX md: <http://www.w3.org/ns/md#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX schema: <http://schema.org/>
+PREFIX twitter: <twitter:>
 """
 
 libraries = g.query("""
@@ -185,3 +193,19 @@ WHERE {
 print("COUNT: creator = %d" % (len(libs)))
 for lib in libs:
     print("%s %s" % lib)
+
+# Query for "required" properties of common vocabularies
+for ont in ('schema:name', 'ogp:title', 'twitter:card'):
+    res = g.query("""
+    %s
+    SELECT DISTINCT ?lib
+    WHERE {
+        ?lib %s ?name .
+        FILTER (isIRI(?lib))
+    }
+    ORDER BY ?lib
+    """ % (prefixes, ont))
+
+    print("COUNT: %s = %d" % (ont, len(res)))
+    for row in res:
+        print("%s %s" % (ont, row))
